@@ -203,8 +203,6 @@ causal_graphs:
   - node_id: supplied-acceptor-galactosylation
     label: Qualitative galactosylation of the supplied glycopeptide
     node_type: ACTIVITY
-    grounding:
-    - UniProtKB:O16374
   edges:
   - edge_id: mmf6-decreases-conversion-versus-gngnf6
     subject: gngnf6-to-mmf6

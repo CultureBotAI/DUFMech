@@ -1043,8 +1043,6 @@ causal_graphs:
   - node_id: output
     label: Measured Cby-assigned activity in the corresponding assay
     node_type: PHENOTYPE
-    grounding:
-    - UniProtKB:Q3J3R7
   edges:
   - edge_id: buffer7-to10-output
     subject: buffer7_to10
@@ -2046,13 +2044,5 @@ curation_events:
   outcome: needs_followup
   summary: Retain corrected PF01955 review with restored Git provenance
   history_record: history/records/PF01955/2026-10-12T130719Z-codex-69e11f.yaml
-  event_index: 0
-  llm_assisted: true
-- timestamp: '2026-10-18T02:54:46Z'
-  curator: Antigravity
-  action: EDIT
-  outcome: changed
-  summary: Ground causal graph gene and protein nodes in PF01955 with verified UniProtKB accessions (UniProtKB:Q3J3R7)
-  history_record: history/records/PF01955/2026-10-18T025446Z-antigravity-f94f67.yaml
   event_index: 0
   llm_assisted: true

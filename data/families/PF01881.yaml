@@ -163,8 +163,6 @@ causal_graphs:
   - node_id: product-yield
     label: Repeat-RNA cleavage product yield
     node_type: ACTIVITY
-    grounding:
-    - UniProtKB:Q8U1S4
   edges:
   - edge_id: y31a-decreases-cleavage
     subject: y31a
@@ -241,8 +239,6 @@ causal_graphs:
   - node_id: cleavage-signal
     label: Cas6-dependent repeat-RNA cleavage signal
     node_type: ACTIVITY
-    grounding:
-    - UniProtKB:Q8U1S4
   edges:
   - edge_id: four-glycine-mutant-decreases-cleavage
     subject: four-glycine-mutant
@@ -445,8 +441,6 @@ causal_graphs:
   - node_id: cleavage-output
     label: Repeat-RNA cleavage output
     node_type: ACTIVITY
-    grounding:
-    - UniProtKB:Q8U1S4
   edges:
   - edge_id: distal-deletion-decreases-cleavage
     subject: delete25-30

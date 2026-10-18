@@ -17,16 +17,10 @@ events:
   summary: Ground causal graph gene and protein nodes in PF01982 with verified UniProtKB
     accessions (UniProtKB:Q60365)
   details: 'Reviewed PF01982 causal_graphs and grounded gene/protein PERTURBATION,
-    ACTIVITY, and protein-complex STATE nodes across 4 causal graph(s) using verified
+    ACTIVITY, and protein-complex STATE nodes across 1 causal graph(s) using verified
     UniProtKB accessions from family_mapping:
 
-    - `mjribk-donor-comparison-2008`: grounded activity -> UniProtKB:Q60365
 
-    - `mjribk-metal-additions-2008`: grounded activity -> UniProtKB:Q60365
-
-    - `mjribk-acid-treatment-2008`: grounded acid -> UniProtKB:Q60365; residual ->
-    UniProtKB:Q60365
-
-    - `mjribk-donor-comparison-thesis2011`: grounded fmn -> UniProtKB:Q60365'
+    - `mjribk-acid-treatment-2008`: grounded acid -> UniProtKB:Q60365'
   sections:
   - causal_graphs

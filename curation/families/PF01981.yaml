@@ -324,8 +324,6 @@ causal_graphs:
   - node_id: rate
     label: Defined diacetyl-Lys-tRNA deacylation specific activity
     node_type: ACTIVITY
-    grounding:
-    - UniProtKB:Q980V1
   edges:
   - edge_id: magnesium-increases-rate
     subject: magnesium
@@ -398,8 +396,6 @@ causal_graphs:
   - node_id: rate
     label: Diacetyl-Lys-tRNA initial deacylation rate
     node_type: ACTIVITY
-    grounding:
-    - UniProtKB:Q980V1
   edges:
   - edge_id: lys-trna-inhibits
     subject: lys_trna

@@ -201,8 +201,6 @@ causal_graphs:
   - node_id: activity
     label: RibK activity relative to CTP condition
     node_type: ACTIVITY
-    grounding:
-    - UniProtKB:Q60365
   edges:
   - edge_id: atp-lowers-activity
     subject: atp
@@ -266,8 +264,6 @@ causal_graphs:
   - node_id: activity
     label: FMN-producing specific activity
     node_type: ACTIVITY
-    grounding:
-    - UniProtKB:Q60365
   edges:
   - edge_id: manganese-lowers-activity
     subject: mn
@@ -367,8 +363,6 @@ causal_graphs:
   - node_id: residual
     label: Residual kinase activity after dilution
     node_type: ACTIVITY
-    grounding:
-    - UniProtKB:Q60365
   edges:
   - edge_id: lowers-residual-activity
     subject: acid
@@ -896,8 +890,6 @@ causal_graphs:
   - node_id: fmn
     label: Reported FMN formation relative to the CTP condition
     node_type: ACTIVITY
-    grounding:
-    - UniProtKB:Q60365
   edges:
   - edge_id: atp-lowers-product
     subject: atp

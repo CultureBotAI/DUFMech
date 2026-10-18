@@ -492,8 +492,6 @@ causal_graphs:
   - node_id: signal
     label: Methyl incorporation relative to WT Thr3
     node_type: PHENOTYPE
-    grounding:
-    - UniProtKB:P28634
   edges:
   - edge_id: as4-lowers-incorporation
     subject: as4
@@ -613,8 +611,6 @@ causal_graphs:
   - node_id: signal
     label: Methyl incorporation versus WT Thr4
     node_type: PHENOTYPE
-    grounding:
-    - UniProtKB:P28634
   edges:
   - edge_id: triple-increases-incorporation
     subject: triple

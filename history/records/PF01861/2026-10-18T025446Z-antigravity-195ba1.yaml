@@ -20,15 +20,15 @@ events:
     ACTIVITY, and protein-complex STATE nodes across 7 causal graph(s) using verified
     UniProtKB accessions from family_mapping:
 
+
     - `tkbpsa-acceptor-specific-products`: grounded tk-branched-reaction -> UniProtKB:Q5JIZ3;
     d159a-preparation -> UniProtKB:Q5JIZ3; d160a-preparation -> UniProtKB:Q5JIZ3
 
     - `tkbpsa-terminal-quadruple-kinetics`: grounded terminal-quadruple-preparation
-    -> UniProtKB:Q5JIZ3; spermidine-kcat -> UniProtKB:Q5JIZ3; spermidine-efficiency
     -> UniProtKB:Q5JIZ3
 
     - `tthbpsa-c9-acceptor-specificity`: grounded replace-tth-terminal-segment ->
-    UniProtKB:Q72L89; branched-norspermidine-efficiency -> UniProtKB:Q72L89
+    UniProtKB:Q72L89
 
     - `tkbpsa-candidate-carrier-transfer`: grounded putative-preloaded-carrier-with-acceptor
     -> UniProtKB:Q5JIZ3

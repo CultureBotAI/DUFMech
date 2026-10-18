@@ -289,8 +289,6 @@ causal_graphs:
   - node_id: gnk2-dependent-delay
     label: Gnk2-dependent delay relative to each strain's untreated control
     node_type: PHENOTYPE
-    grounding:
-    - UniProtKB:A4ZDL6
   edges:
   - edge_id: mnn2-deletion-decreases-delay-response
     subject: mnn2-deletion-background

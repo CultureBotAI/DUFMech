@@ -20,6 +20,7 @@ events:
     ACTIVITY, and protein-complex STATE nodes across 6 causal graph(s) using verified
     UniProtKB accessions from family_mapping:
 
+
     - `thermococcus-pair-heterologous-cfu-2020`: grounded pair -> UniProtKB:I3ZRF2;
     y82f -> UniProtKB:I3ZRF2
 
@@ -28,8 +29,7 @@ events:
     - `fhepta-modification-variants-2026`: grounded donor-mutant -> UniProtKB:Q8EGZ7;
     acceptor-mutant -> UniProtKB:Q8EGZ7
 
-    - `fhepta-fragment-rna-redox-2026`: grounded reaction -> UniProtKB:Q8EGZ7; cleavage
-    -> UniProtKB:Q8EGZ7
+    - `fhepta-fragment-rna-redox-2026`: grounded reaction -> UniProtKB:Q8EGZ7
 
     - `fhepta-cysteine-oxidative-cfu-2026`: grounded mutant -> UniProtKB:Q8EGZ7
 

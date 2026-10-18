@@ -2,344 +2,258 @@ pfam_id: PF01169
 curation_status: IN_PROGRESS
 curation_history: history/records/PF01169
 causal_graphs:
-- graph_id: gdt1-dml1-alkaline-pulse
-  title: GDT1 expression increases the alkaline-pulse pH response
-  scope: Yeast GDT1 expressed with sfpHluorin in Lactococcus lactis DML1, compared with the sensor-only
-    control in Deschamps 2023 Figure 2A. This is a whole-cell response, not an isolated transporter assay.
-  context: Two-hour nisin induction; 2 ml cells at OD600 10 in 100 mM KCl, 1 mM EGTA, 1 mM MgCl2 and 20
-    mM MOPS pH 7.4, 28 C, 300-rpm stirring. Pre-treat control with 10 mM HCl for 4 min to match initial
-    intracellular pH, then add 20 mM NaOH to control or 10 mM to GDT1 cells. Blank-corrected 390/470-nm
-    sfpHluorin ratio, emission 507 nm; N=5-7 biological replicates.
-  family_mapping: P38301/GDT1_YEAST is the 280-aa S288c reference, sequence version 1, with PF01169 repeats
-    at 42-127 and 193-277. UniProt and InterPro sequences match. The 2023 operon has a reported silent
-    NcoI-site change; full clone/junction sequences are unresolved. DML1 is the expression host, not the
-    Gdt1 source species.
-  scope_status: PHENOTYPIC
-  taxon: NCBITaxon:4932
-  limitations: Directness is UNRESOLVED for expression-to-pH attribution because endogenous transport
-    or altered membrane integrity can contribute. Counterion experiments support the exchange model but
-    do not measure single-protein stoichiometry or orientation. Figure 1's calibration caption says digitonin
-    while Methods and supplement S1 specify nigericin. The distinct tagged delta23 construct from 2016
-    is not silently assigned to this experiment.
-  nodes:
-  - node_id: express-gdt1-alkaline-protocol
-    label: Express GDT1 during the matched-baseline alkaline-pulse protocol
-    node_type: PERTURBATION
-    grounding:
-    - UniProtKB:P38301
-  - node_id: final-intracellular-ph-alkaline
-    label: Final intracellular pH after the alkaline pulse
-    node_type: STATE
-  edges:
-  - edge_id: gdt1-increases-alkaline-final-ph
-    subject: express-gdt1-alkaline-protocol
-    predicate: increases
-    object: final-intracellular-ph-alkaline
-    mechanism: GDT1-expressing cells reach a higher intracellular pH than the matched-baseline control
-      after alkalinization. This is an observed net pH response consistent with increased proton efflux,
-      not proof that all of that efflux crosses Gdt1 alone.
-    directness: UNRESOLVED
-    support: OBSERVED
-    evidence_kind: EXPERIMENTAL
-    evidence:
-    - reference: PMID:36963491
-      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC10148156/
-      snippet: faster
-      explanation: Figure 2A and matched-baseline Results/Methods; Figure 1 and supplement S1 supply expression
-        and calibration controls. Distinct pretreatments are retained.
-      cache_path: evidence/PF01169/deschamps-2023-gdt1.txt
-      cache_sha256: b93aec048eef14a0a097d5f6a028788037ae54389c15b9d35804e64a12a814d7
-    - reference: https://www.ebi.ac.uk/interpro/api/protein/uniprot/P38301/entry/pfam/PF01169/
-      source_url: https://www.ebi.ac.uk/interpro/api/protein/uniprot/P38301/entry/pfam/PF01169/
-      snippet: 'P38301 Pfam:PF01169 intervals: 42-127 and 193-277, inclusive.'
-      explanation: Exact two-repeat reference mapping, not isolated-repeat transport evidence or a reconstructed
-        experimental clone.
-      cache_path: evidence/PF01169/Gdt1-identity.txt
-      cache_sha256: 86f0658e0a8cd7b73aae3853fc2e4e8e1b5079c219462356dc84da18d3d4fbae
-- graph_id: gdt1-dml1-acidic-pulse
-  title: GDT1 expression lowers final pH after an acidic pulse
-  scope: The separate DML1/sfpHluorin matched-baseline experiment in Figure 2B, not reversal of the same
-    molecules measured in Figure 2A.
-  context: GDT1/sfpHluorin versus sfpHluorin-only cells at 28 C. Pre-treat control with 10 mM HCl for
-    4 min, then add MES pH 6.0 to 50 mM in both suspensions. Intracellular pH is derived from blank-corrected
-    390/470-nm excitation, 507-nm emission. N=5-7 biological replicates.
-  family_mapping: P38301 GDT1, PF01169 repeats 42-127 and 193-277, is expressed through the 2023 pNZ8048
-    operon in DML1. Complete clone and tag/junction details remain unverified.
-  scope_status: PHENOTYPIC
-  taxon: NCBITaxon:4932
-  limitations: Opposite population responses do not prove bidirectional motion by one oriented protein.
-    Membrane leakage and endogenous transport remain alternative contributors; directness is UNRESOLVED.
-    Absolute calibration has the digitonin/nigericin description discrepancy, and the uncorrected supplement
-    S2 comparison is not substituted for Figure 2B.
-  nodes:
-  - node_id: express-gdt1-acidic-protocol
-    label: Express GDT1 during the matched-baseline acidic-pulse protocol
-    node_type: PERTURBATION
-    grounding:
-    - UniProtKB:P38301
-  - node_id: final-intracellular-ph-acidic
-    label: Final intracellular pH after MES pH 6.0 addition
-    node_type: STATE
-  edges:
-  - edge_id: gdt1-decreases-acidic-final-ph
-    subject: express-gdt1-acidic-protocol
-    predicate: decreases
-    object: final-intracellular-ph-acidic
-    mechanism: GDT1 cells acidify to a lower final pH than the control after initial pH matching. The
-      result supports a net proton-entry-associated effect, not a resolved single-transporter trajectory.
-    directness: UNRESOLVED
-    support: OBSERVED
-    evidence_kind: EXPERIMENTAL
-    evidence:
-    - reference: PMID:36963491
-      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC10148156/
-      snippet: lower final intracellular pH
-      explanation: Figure 2B, caption and Results; preserve the control-only HCl pretreatment and shared
-        MES challenge.
-      cache_path: evidence/PF01169/deschamps-2023-gdt1.txt
-      cache_sha256: b93aec048eef14a0a097d5f6a028788037ae54389c15b9d35804e64a12a814d7
-- graph_id: gdt1-dml1-ph-dependent-cation-uptake
-  title: Higher external pH increases calcium and manganese uptake readouts
-  scope: Separate Fura-2 calcium and manganese assays in GDT1-expressing DML1 cells, comparing pH 8.0
-    with 6.8 in Figure 3. DIRECT describes the gradient intervention on the transport readout, not exclusive
-    attribution to purified Gdt1.
-  context: Load 10 uM Fura-2/AM with 1.7 mM probenecid for 2 h at 28 C. Wash in 100 mM KCl, 1 mM MgCl2,
-    1 mM EGTA and 50 mM Tris at the chosen pH; resuspend in corresponding EGTA-free, calcium-sponge-treated
-    buffer. Add 25 uM CaCl2 or, separately, 10 uM MnCl2. Measure Ca-associated 340/380 ratio or Mn-associated
-    360-nm quenching, with 510-nm emission; N=3 biological replicates.
-  family_mapping: Yeast P38301-associated GDT1 expressed from pNZ8048 in DML1; both PF01169 repeats, 42-127
-    and 193-277, belong to the tested protein. Exact 2023 clone/junction sequence is not independently
-    resolved.
-  scope_status: MECHANISTIC
-  taxon: NCBITaxon:4932
-  limitations: Empty-vector controls lack pH dependence; 0.5 ug/ml nigericin added 2 min before cations
-    removes significant between-pH differences without abolishing uptake. Neither every adjacent pH comparison
-    nor an absolute transport stoichiometry is established. Fura-2 reports accumulation-associated fluorescence,
-    not single-channel current. Exact recording temperature and membrane orientation remain unverified;
-    28 C is explicitly the loading temperature.
-  nodes:
-  - node_id: ph8-calcium-assay
-    label: Set external pH to 8.0 rather than 6.8 during the calcium assay
-    node_type: PERTURBATION
-  - node_id: calcium-uptake-response
-    label: Calcium-uptake-associated Fura-2 ratio increase
-    node_type: ACTIVITY
-    grounding:
-    - UniProtKB:P38301
-  - node_id: ph8-manganese-assay
-    label: Set external pH to 8.0 rather than 6.8 during the manganese assay
-    node_type: PERTURBATION
-  - node_id: manganese-uptake-response
-    label: Manganese-uptake-associated Fura-2 quenching magnitude
-    node_type: ACTIVITY
-    grounding:
-    - UniProtKB:P38301
-  edges:
-  - edge_id: alkaline-gradient-increases-calcium-response
-    subject: ph8-calcium-assay
-    predicate: increases
-    object: calcium-uptake-response
-    mechanism: pH 8.0 produces a larger uptake-associated ratio response than pH 6.8. The empty-vector
-      and nigericin comparisons support gradient-dependent transport in this system, not a direct measurement
-      of each Gdt1 exchange cycle.
-    directness: DIRECT
-    support: OBSERVED
-    evidence_kind: EXPERIMENTAL
-    evidence:
-    - reference: PMID:36963491
-      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC10148156/
-      snippet: larger uptake
-      explanation: Figure 3A/B, transport Methods and Table S1; selected pH 8.0 versus 6.8 comparison,
-        not all successive pH increments.
-      cache_path: evidence/PF01169/deschamps-2023-gdt1.txt
-      cache_sha256: b93aec048eef14a0a097d5f6a028788037ae54389c15b9d35804e64a12a814d7
-  - edge_id: alkaline-gradient-increases-manganese-response
-    subject: ph8-manganese-assay
-    predicate: increases
-    object: manganese-uptake-response
-    mechanism: Higher external pH increases the magnitude of manganese-dependent fluorescence quenching.
-      Quenching lowers the raw signal but indicates increased uptake, so the edge concerns uptake-response
-      magnitude rather than fluorescence intensity.
-    directness: DIRECT
-    support: OBSERVED
-    evidence_kind: EXPERIMENTAL
-    evidence:
-    - reference: PMID:36963491
-      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC10148156/
-      snippet: larger uptake
-      explanation: Figure 3C/D and Table S1 support the selected 8.0-versus-6.8 contrast with no significant
-        remaining pH contrast after nigericin.
-      cache_path: evidence/PF01169/deschamps-2023-gdt1.txt
-      cache_sha256: b93aec048eef14a0a097d5f6a028788037ae54389c15b9d35804e64a12a814d7
-- graph_id: gdt1-dml1-calcium-external-acidification
-  title: GDT1 expression increases acidification after calcium addition
-  scope: DML1 expressing GDT1 alone versus empty vector in Figure 4A/B. No intracellular pH sensor is
-    used in this experiment.
-  context: 100 OD600 units of induced cells washed twice in 50 mM Tris pH 7 and once in 1 mM Tris pH 7,
-    resuspended in 20 ml weak buffer. After 2 min baseline add 20 mM CaCl2; pH-meter recording with stirring.
-    Compare acidification slopes during recording minutes 5-10; N=3-7 biological replicates for slope
-    comparisons.
-  family_mapping: P38301-associated yeast GDT1 expressed via the 2023 SphI/HindIII pNZ8048 construct.
-    Both PF01169 repeats map to the reference; exact cloned termini remain unresolved.
-  scope_status: PHENOTYPIC
-  taxon: NCBITaxon:4932
-  limitations: The immediate salt-associated pH drop occurs in both strains and is not the GDT1-specific
-    endpoint. Whole-cell net acidification does not isolate protein-specific H+ transport, buffering,
-    metabolism or membrane leakage, so directness remains UNRESOLVED. Temperature, exact clone and transport
-    stoichiometry are open.
-  nodes:
-  - node_id: gdt1-expression-calcium-challenge
-    label: Express GDT1 rather than empty vector under calcium challenge
-    node_type: PERTURBATION
-    grounding:
-    - UniProtKB:P38301
-  - node_id: calcium-challenge-acidification-rate
-    label: Magnitude of subsequent extracellular acidification rate
-    node_type: ACTIVITY
-  edges:
-  - edge_id: gdt1-increases-calcium-associated-acidification
-    subject: gdt1-expression-calcium-challenge
-    predicate: increases
-    object: calcium-challenge-acidification-rate
-    mechanism: The later external pH decrease is faster with GDT1 than empty vector. This supports the
-      exchange interpretation jointly with other assays, but does not directly count simultaneous calcium
-      and proton flux through Gdt1.
-    directness: UNRESOLVED
-    support: OBSERVED
-    evidence_kind: EXPERIMENTAL
-    evidence:
-    - reference: PMID:36963491
-      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC10148156/
-      snippet: faster
-      explanation: Figure 4A/B and extracellular-pH Methods; the 5-10 min interval excludes the initial
-        common salt jump.
-      cache_path: evidence/PF01169/deschamps-2023-gdt1.txt
-      cache_sha256: b93aec048eef14a0a097d5f6a028788037ae54389c15b9d35804e64a12a814d7
-- graph_id: gdt1-dml1-manganese-external-acidification
-  title: GDT1 expression increases acidification after manganese addition
-  scope: The separate manganese challenge of GDT1-expressing and empty-vector DML1 cells in Figure 4C/D,
-    not a calcium-plus-manganese mixture.
-  context: 100 OD600 units in 20 ml 1 mM Tris pH 7 after the stated washes. Add 20 mM MnCl2 after 2 min
-    baseline; pH-meter measurement with stirring. Compare subsequent acidification slopes in recording
-    minutes 5-10; N=3-7 for slope comparisons across Figure 4.
-  family_mapping: P38301-associated GDT1 and PF01169 repeats 42-127/193-277, with the 2023 GDT1-only plasmid.
-    DML1 is a heterologous host, and complete cloned termini remain unverified.
-  scope_status: PHENOTYPIC
-  taxon: NCBITaxon:4932
-  limitations: The initial common salt effect is excluded. Whole-cell net acidification does not establish
-    transporter-exclusive flux or stoichiometry; directness is UNRESOLVED. No universal manganese response
-    or native Golgi direction is transferred from these cells.
-  nodes:
-  - node_id: gdt1-expression-manganese-challenge
-    label: Express GDT1 rather than empty vector under manganese challenge
-    node_type: PERTURBATION
-    grounding:
-    - UniProtKB:P38301
-  - node_id: manganese-challenge-acidification-rate
-    label: Magnitude of subsequent extracellular acidification rate
-    node_type: ACTIVITY
-  edges:
-  - edge_id: gdt1-increases-manganese-associated-acidification
-    subject: gdt1-expression-manganese-challenge
-    predicate: increases
-    object: manganese-challenge-acidification-rate
-    mechanism: GDT1-expressing cells acidify the medium faster after the initial manganese-salt jump than
-      the empty-vector control. The causal claim is the measured system response, with exclusive molecular
-      attribution unresolved.
-    directness: UNRESOLVED
-    support: OBSERVED
-    evidence_kind: EXPERIMENTAL
-    evidence:
-    - reference: PMID:36963491
-      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC10148156/
-      snippet: faster
-      explanation: Figure 4C/D and Methods, separate from calcium panels A/B; pH-rate magnitude is not
-        a molar proton flux.
-      cache_path: evidence/PF01169/deschamps-2023-gdt1.txt
-      cache_sha256: b93aec048eef14a0a097d5f6a028788037ae54389c15b9d35804e64a12a814d7
-- graph_id: gdt1-yeast-glucose-pulse-ph
-  title: GDT1 deletion changes compartment pH after glucose re-addition
-  scope: BY4742-derived gdt1::KanMX4 versus WT in Figure 6, with separate cytosolic and Golgi pH-probe
-    cultures. This is whole-gene physiology, not an isolated repeat or directly measured reverse transport.
-  context: Low-fluorescence defined medium with 50 mM MES pH 5.0. Wash three times, deprive glucose for
-    60 min at 28 C, record 2 min baseline and add glucose to 2%. Compare cytosolic pH at +120 s (N=3)
-    and Golgi pH at +720 s (N=5). Yeast pHluorin readout uses the cited 400/480-nm excitation, 507-nm
-    emission protocol, distinct from bacterial sfpHluorin.
-  family_mapping: Native S. cerevisiae GDT1/YBR187W, represented by P38301 and its two PF01169 repeats,
-    is deleted as a whole gene. BY4742 is distinct from the S288c reference annotation; full strain resequencing
-    is not claimed.
-  scope_status: PHENOTYPIC
-  taxon: NCBITaxon:4932
-  limitations: Cytosolic final pH at +720 s is not different; steady-state Figure 5 shows no significant
-    GDT1-deletion pH effect. The +120 s Golgi comparison is borderline and not an adopted edge. Calcium
-    signaling and other pumps can mediate the effects; no Figure 6 complementation or simultaneous ion-gradient
-    measurements establish the proposed reverse-transport model.
-  nodes:
-  - node_id: delete-gdt1-glucose-protocol
-    label: Delete GDT1 during glucose deprivation and re-addition
-    node_type: PERTURBATION
-    grounding:
-    - UniProtKB:P38301
-  - node_id: cytosolic-ph-120s
-    label: Cytosolic pH 120 s after glucose addition
-    node_type: PHENOTYPE
-  - node_id: golgi-ph-720s
-    label: Golgi pH 720 s after glucose addition
-    node_type: PHENOTYPE
-  edges:
-  - edge_id: gdt1-deletion-lowers-early-cytosolic-ph
-    subject: delete-gdt1-glucose-protocol
-    predicate: decreases
-    object: cytosolic-ph-120s
-    mechanism: The deletion strain has a lower early recovery pH in the cytosolic assay. This is an indirect
-      physiological effect, not a resolved chemical step or proof of a permanent pH defect.
-    directness: INDIRECT
-    support: OBSERVED
-    evidence_kind: EXPERIMENTAL
-    evidence:
-    - reference: PMID:36963491
-      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC10148156/
-      snippet: later recovery
-      explanation: Figure 6A/B and the cytosolic recovery Results support the lower +120-s value; the
-        late Golgi endpoint remains a separate edge.
-      cache_path: evidence/PF01169/deschamps-2023-gdt1.txt
-      cache_sha256: b93aec048eef14a0a097d5f6a028788037ae54389c15b9d35804e64a12a814d7
-  - edge_id: gdt1-deletion-raises-late-golgi-ph
-    subject: delete-gdt1-glucose-protocol
-    predicate: increases
-    object: golgi-ph-720s
-    mechanism: The deletion strain reaches a higher late Golgi pH than WT. This does not establish that
-      a reversed Gdt1 cycle is the sole physiological explanation.
-    directness: INDIRECT
-    support: OBSERVED
-    evidence_kind: EXPERIMENTAL
-    evidence:
-    - reference: PMID:36963491
-      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC10148156/
-      snippet: higher value
-      explanation: Figure 6C/D late +720-s contrast, bounded by Figure 5 steady-state negatives and the
-        separate cytosolic recovery result.
-      cache_path: evidence/PF01169/deschamps-2023-gdt1.txt
-      cache_sha256: b93aec048eef14a0a097d5f6a028788037ae54389c15b9d35804e64a12a814d7
+  - graph_id: gdt1-dml1-alkaline-pulse
+    title: GDT1 expression increases the alkaline-pulse pH response
+    scope: Yeast GDT1 expressed with sfpHluorin in Lactococcus lactis DML1, compared with the sensor-only control in Deschamps 2023 Figure 2A. This is a whole-cell response, not an isolated transporter assay.
+    context: Two-hour nisin induction; 2 ml cells at OD600 10 in 100 mM KCl, 1 mM EGTA, 1 mM MgCl2 and 20 mM MOPS pH 7.4, 28 C, 300-rpm stirring. Pre-treat control with 10 mM HCl for 4 min to match initial intracellular pH, then add 20 mM NaOH to control or 10 mM to GDT1 cells. Blank-corrected 390/470-nm sfpHluorin ratio, emission 507 nm; N=5-7 biological replicates.
+    family_mapping: P38301/GDT1_YEAST is the 280-aa S288c reference, sequence version 1, with PF01169 repeats at 42-127 and 193-277. UniProt and InterPro sequences match. The 2023 operon has a reported silent NcoI-site change; full clone/junction sequences are unresolved. DML1 is the expression host, not the Gdt1 source species.
+    scope_status: PHENOTYPIC
+    taxon: NCBITaxon:4932
+    limitations: Directness is UNRESOLVED for expression-to-pH attribution because endogenous transport or altered membrane integrity can contribute. Counterion experiments support the exchange model but do not measure single-protein stoichiometry or orientation. Figure 1's calibration caption says digitonin while Methods and supplement S1 specify nigericin. The distinct tagged delta23 construct from 2016 is not silently assigned to this experiment.
+    nodes:
+      - node_id: express-gdt1-alkaline-protocol
+        label: Express GDT1 during the matched-baseline alkaline-pulse protocol
+        node_type: PERTURBATION
+        grounding:
+          - UniProtKB:P38301
+      - node_id: final-intracellular-ph-alkaline
+        label: Final intracellular pH after the alkaline pulse
+        node_type: STATE
+    edges:
+      - edge_id: gdt1-increases-alkaline-final-ph
+        subject: express-gdt1-alkaline-protocol
+        predicate: increases
+        object: final-intracellular-ph-alkaline
+        mechanism: GDT1-expressing cells reach a higher intracellular pH than the matched-baseline control after alkalinization. This is an observed net pH response consistent with increased proton efflux, not proof that all of that efflux crosses Gdt1 alone.
+        directness: UNRESOLVED
+        support: OBSERVED
+        evidence_kind: EXPERIMENTAL
+        evidence:
+          - reference: PMID:36963491
+            source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC10148156/
+            snippet: faster
+            explanation: Figure 2A and matched-baseline Results/Methods; Figure 1 and supplement S1 supply expression and calibration controls. Distinct pretreatments are retained.
+            cache_path: evidence/PF01169/deschamps-2023-gdt1.txt
+            cache_sha256: b93aec048eef14a0a097d5f6a028788037ae54389c15b9d35804e64a12a814d7
+          - reference: https://www.ebi.ac.uk/interpro/api/protein/uniprot/P38301/entry/pfam/PF01169/
+            source_url: https://www.ebi.ac.uk/interpro/api/protein/uniprot/P38301/entry/pfam/PF01169/
+            snippet: 'P38301 Pfam:PF01169 intervals: 42-127 and 193-277, inclusive.'
+            explanation: Exact two-repeat reference mapping, not isolated-repeat transport evidence or a reconstructed experimental clone.
+            cache_path: evidence/PF01169/Gdt1-identity.txt
+            cache_sha256: 86f0658e0a8cd7b73aae3853fc2e4e8e1b5079c219462356dc84da18d3d4fbae
+  - graph_id: gdt1-dml1-acidic-pulse
+    title: GDT1 expression lowers final pH after an acidic pulse
+    scope: The separate DML1/sfpHluorin matched-baseline experiment in Figure 2B, not reversal of the same molecules measured in Figure 2A.
+    context: GDT1/sfpHluorin versus sfpHluorin-only cells at 28 C. Pre-treat control with 10 mM HCl for 4 min, then add MES pH 6.0 to 50 mM in both suspensions. Intracellular pH is derived from blank-corrected 390/470-nm excitation, 507-nm emission. N=5-7 biological replicates.
+    family_mapping: P38301 GDT1, PF01169 repeats 42-127 and 193-277, is expressed through the 2023 pNZ8048 operon in DML1. Complete clone and tag/junction details remain unverified.
+    scope_status: PHENOTYPIC
+    taxon: NCBITaxon:4932
+    limitations: Opposite population responses do not prove bidirectional motion by one oriented protein. Membrane leakage and endogenous transport remain alternative contributors; directness is UNRESOLVED. Absolute calibration has the digitonin/nigericin description discrepancy, and the uncorrected supplement S2 comparison is not substituted for Figure 2B.
+    nodes:
+      - node_id: express-gdt1-acidic-protocol
+        label: Express GDT1 during the matched-baseline acidic-pulse protocol
+        node_type: PERTURBATION
+        grounding:
+          - UniProtKB:P38301
+      - node_id: final-intracellular-ph-acidic
+        label: Final intracellular pH after MES pH 6.0 addition
+        node_type: STATE
+    edges:
+      - edge_id: gdt1-decreases-acidic-final-ph
+        subject: express-gdt1-acidic-protocol
+        predicate: decreases
+        object: final-intracellular-ph-acidic
+        mechanism: GDT1 cells acidify to a lower final pH than the control after initial pH matching. The result supports a net proton-entry-associated effect, not a resolved single-transporter trajectory.
+        directness: UNRESOLVED
+        support: OBSERVED
+        evidence_kind: EXPERIMENTAL
+        evidence:
+          - reference: PMID:36963491
+            source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC10148156/
+            snippet: lower final intracellular pH
+            explanation: Figure 2B, caption and Results; preserve the control-only HCl pretreatment and shared MES challenge.
+            cache_path: evidence/PF01169/deschamps-2023-gdt1.txt
+            cache_sha256: b93aec048eef14a0a097d5f6a028788037ae54389c15b9d35804e64a12a814d7
+  - graph_id: gdt1-dml1-ph-dependent-cation-uptake
+    title: Higher external pH increases calcium and manganese uptake readouts
+    scope: Separate Fura-2 calcium and manganese assays in GDT1-expressing DML1 cells, comparing pH 8.0 with 6.8 in Figure 3. DIRECT describes the gradient intervention on the transport readout, not exclusive attribution to purified Gdt1.
+    context: Load 10 uM Fura-2/AM with 1.7 mM probenecid for 2 h at 28 C. Wash in 100 mM KCl, 1 mM MgCl2, 1 mM EGTA and 50 mM Tris at the chosen pH; resuspend in corresponding EGTA-free, calcium-sponge-treated buffer. Add 25 uM CaCl2 or, separately, 10 uM MnCl2. Measure Ca-associated 340/380 ratio or Mn-associated 360-nm quenching, with 510-nm emission; N=3 biological replicates.
+    family_mapping: Yeast P38301-associated GDT1 expressed from pNZ8048 in DML1; both PF01169 repeats, 42-127 and 193-277, belong to the tested protein. Exact 2023 clone/junction sequence is not independently resolved.
+    scope_status: MECHANISTIC
+    taxon: NCBITaxon:4932
+    limitations: Empty-vector controls lack pH dependence; 0.5 ug/ml nigericin added 2 min before cations removes significant between-pH differences without abolishing uptake. Neither every adjacent pH comparison nor an absolute transport stoichiometry is established. Fura-2 reports accumulation-associated fluorescence, not single-channel current. Exact recording temperature and membrane orientation remain unverified; 28 C is explicitly the loading temperature.
+    nodes:
+      - node_id: ph8-calcium-assay
+        label: Set external pH to 8.0 rather than 6.8 during the calcium assay
+        node_type: PERTURBATION
+      - node_id: calcium-uptake-response
+        label: Calcium-uptake-associated Fura-2 ratio increase
+        node_type: ACTIVITY
+      - node_id: ph8-manganese-assay
+        label: Set external pH to 8.0 rather than 6.8 during the manganese assay
+        node_type: PERTURBATION
+      - node_id: manganese-uptake-response
+        label: Manganese-uptake-associated Fura-2 quenching magnitude
+        node_type: ACTIVITY
+    edges:
+      - edge_id: alkaline-gradient-increases-calcium-response
+        subject: ph8-calcium-assay
+        predicate: increases
+        object: calcium-uptake-response
+        mechanism: pH 8.0 produces a larger uptake-associated ratio response than pH 6.8. The empty-vector and nigericin comparisons support gradient-dependent transport in this system, not a direct measurement of each Gdt1 exchange cycle.
+        directness: DIRECT
+        support: OBSERVED
+        evidence_kind: EXPERIMENTAL
+        evidence:
+          - reference: PMID:36963491
+            source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC10148156/
+            snippet: larger uptake
+            explanation: Figure 3A/B, transport Methods and Table S1; selected pH 8.0 versus 6.8 comparison, not all successive pH increments.
+            cache_path: evidence/PF01169/deschamps-2023-gdt1.txt
+            cache_sha256: b93aec048eef14a0a097d5f6a028788037ae54389c15b9d35804e64a12a814d7
+      - edge_id: alkaline-gradient-increases-manganese-response
+        subject: ph8-manganese-assay
+        predicate: increases
+        object: manganese-uptake-response
+        mechanism: Higher external pH increases the magnitude of manganese-dependent fluorescence quenching. Quenching lowers the raw signal but indicates increased uptake, so the edge concerns uptake-response magnitude rather than fluorescence intensity.
+        directness: DIRECT
+        support: OBSERVED
+        evidence_kind: EXPERIMENTAL
+        evidence:
+          - reference: PMID:36963491
+            source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC10148156/
+            snippet: larger uptake
+            explanation: Figure 3C/D and Table S1 support the selected 8.0-versus-6.8 contrast with no significant remaining pH contrast after nigericin.
+            cache_path: evidence/PF01169/deschamps-2023-gdt1.txt
+            cache_sha256: b93aec048eef14a0a097d5f6a028788037ae54389c15b9d35804e64a12a814d7
+  - graph_id: gdt1-dml1-calcium-external-acidification
+    title: GDT1 expression increases acidification after calcium addition
+    scope: DML1 expressing GDT1 alone versus empty vector in Figure 4A/B. No intracellular pH sensor is used in this experiment.
+    context: 100 OD600 units of induced cells washed twice in 50 mM Tris pH 7 and once in 1 mM Tris pH 7, resuspended in 20 ml weak buffer. After 2 min baseline add 20 mM CaCl2; pH-meter recording with stirring. Compare acidification slopes during recording minutes 5-10; N=3-7 biological replicates for slope comparisons.
+    family_mapping: P38301-associated yeast GDT1 expressed via the 2023 SphI/HindIII pNZ8048 construct. Both PF01169 repeats map to the reference; exact cloned termini remain unresolved.
+    scope_status: PHENOTYPIC
+    taxon: NCBITaxon:4932
+    limitations: The immediate salt-associated pH drop occurs in both strains and is not the GDT1-specific endpoint. Whole-cell net acidification does not isolate protein-specific H+ transport, buffering, metabolism or membrane leakage, so directness remains UNRESOLVED. Temperature, exact clone and transport stoichiometry are open.
+    nodes:
+      - node_id: gdt1-expression-calcium-challenge
+        label: Express GDT1 rather than empty vector under calcium challenge
+        node_type: PERTURBATION
+        grounding:
+          - UniProtKB:P38301
+      - node_id: calcium-challenge-acidification-rate
+        label: Magnitude of subsequent extracellular acidification rate
+        node_type: ACTIVITY
+    edges:
+      - edge_id: gdt1-increases-calcium-associated-acidification
+        subject: gdt1-expression-calcium-challenge
+        predicate: increases
+        object: calcium-challenge-acidification-rate
+        mechanism: The later external pH decrease is faster with GDT1 than empty vector. This supports the exchange interpretation jointly with other assays, but does not directly count simultaneous calcium and proton flux through Gdt1.
+        directness: UNRESOLVED
+        support: OBSERVED
+        evidence_kind: EXPERIMENTAL
+        evidence:
+          - reference: PMID:36963491
+            source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC10148156/
+            snippet: faster
+            explanation: Figure 4A/B and extracellular-pH Methods; the 5-10 min interval excludes the initial common salt jump.
+            cache_path: evidence/PF01169/deschamps-2023-gdt1.txt
+            cache_sha256: b93aec048eef14a0a097d5f6a028788037ae54389c15b9d35804e64a12a814d7
+  - graph_id: gdt1-dml1-manganese-external-acidification
+    title: GDT1 expression increases acidification after manganese addition
+    scope: The separate manganese challenge of GDT1-expressing and empty-vector DML1 cells in Figure 4C/D, not a calcium-plus-manganese mixture.
+    context: 100 OD600 units in 20 ml 1 mM Tris pH 7 after the stated washes. Add 20 mM MnCl2 after 2 min baseline; pH-meter measurement with stirring. Compare subsequent acidification slopes in recording minutes 5-10; N=3-7 for slope comparisons across Figure 4.
+    family_mapping: P38301-associated GDT1 and PF01169 repeats 42-127/193-277, with the 2023 GDT1-only plasmid. DML1 is a heterologous host, and complete cloned termini remain unverified.
+    scope_status: PHENOTYPIC
+    taxon: NCBITaxon:4932
+    limitations: The initial common salt effect is excluded. Whole-cell net acidification does not establish transporter-exclusive flux or stoichiometry; directness is UNRESOLVED. No universal manganese response or native Golgi direction is transferred from these cells.
+    nodes:
+      - node_id: gdt1-expression-manganese-challenge
+        label: Express GDT1 rather than empty vector under manganese challenge
+        node_type: PERTURBATION
+        grounding:
+          - UniProtKB:P38301
+      - node_id: manganese-challenge-acidification-rate
+        label: Magnitude of subsequent extracellular acidification rate
+        node_type: ACTIVITY
+    edges:
+      - edge_id: gdt1-increases-manganese-associated-acidification
+        subject: gdt1-expression-manganese-challenge
+        predicate: increases
+        object: manganese-challenge-acidification-rate
+        mechanism: GDT1-expressing cells acidify the medium faster after the initial manganese-salt jump than the empty-vector control. The causal claim is the measured system response, with exclusive molecular attribution unresolved.
+        directness: UNRESOLVED
+        support: OBSERVED
+        evidence_kind: EXPERIMENTAL
+        evidence:
+          - reference: PMID:36963491
+            source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC10148156/
+            snippet: faster
+            explanation: Figure 4C/D and Methods, separate from calcium panels A/B; pH-rate magnitude is not a molar proton flux.
+            cache_path: evidence/PF01169/deschamps-2023-gdt1.txt
+            cache_sha256: b93aec048eef14a0a097d5f6a028788037ae54389c15b9d35804e64a12a814d7
+  - graph_id: gdt1-yeast-glucose-pulse-ph
+    title: GDT1 deletion changes compartment pH after glucose re-addition
+    scope: BY4742-derived gdt1::KanMX4 versus WT in Figure 6, with separate cytosolic and Golgi pH-probe cultures. This is whole-gene physiology, not an isolated repeat or directly measured reverse transport.
+    context: Low-fluorescence defined medium with 50 mM MES pH 5.0. Wash three times, deprive glucose for 60 min at 28 C, record 2 min baseline and add glucose to 2%. Compare cytosolic pH at +120 s (N=3) and Golgi pH at +720 s (N=5). Yeast pHluorin readout uses the cited 400/480-nm excitation, 507-nm emission protocol, distinct from bacterial sfpHluorin.
+    family_mapping: Native S. cerevisiae GDT1/YBR187W, represented by P38301 and its two PF01169 repeats, is deleted as a whole gene. BY4742 is distinct from the S288c reference annotation; full strain resequencing is not claimed.
+    scope_status: PHENOTYPIC
+    taxon: NCBITaxon:4932
+    limitations: Cytosolic final pH at +720 s is not different; steady-state Figure 5 shows no significant GDT1-deletion pH effect. The +120 s Golgi comparison is borderline and not an adopted edge. Calcium signaling and other pumps can mediate the effects; no Figure 6 complementation or simultaneous ion-gradient measurements establish the proposed reverse-transport model.
+    nodes:
+      - node_id: delete-gdt1-glucose-protocol
+        label: Delete GDT1 during glucose deprivation and re-addition
+        node_type: PERTURBATION
+        grounding:
+          - UniProtKB:P38301
+      - node_id: cytosolic-ph-120s
+        label: Cytosolic pH 120 s after glucose addition
+        node_type: PHENOTYPE
+      - node_id: golgi-ph-720s
+        label: Golgi pH 720 s after glucose addition
+        node_type: PHENOTYPE
+    edges:
+      - edge_id: gdt1-deletion-lowers-early-cytosolic-ph
+        subject: delete-gdt1-glucose-protocol
+        predicate: decreases
+        object: cytosolic-ph-120s
+        mechanism: The deletion strain has a lower early recovery pH in the cytosolic assay. This is an indirect physiological effect, not a resolved chemical step or proof of a permanent pH defect.
+        directness: INDIRECT
+        support: OBSERVED
+        evidence_kind: EXPERIMENTAL
+        evidence:
+          - reference: PMID:36963491
+            source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC10148156/
+            snippet: later recovery
+            explanation: Figure 6A/B and the cytosolic recovery Results support the lower +120-s value; the late Golgi endpoint remains a separate edge.
+            cache_path: evidence/PF01169/deschamps-2023-gdt1.txt
+            cache_sha256: b93aec048eef14a0a097d5f6a028788037ae54389c15b9d35804e64a12a814d7
+      - edge_id: gdt1-deletion-raises-late-golgi-ph
+        subject: delete-gdt1-glucose-protocol
+        predicate: increases
+        object: golgi-ph-720s
+        mechanism: The deletion strain reaches a higher late Golgi pH than WT. This does not establish that a reversed Gdt1 cycle is the sole physiological explanation.
+        directness: INDIRECT
+        support: OBSERVED
+        evidence_kind: EXPERIMENTAL
+        evidence:
+          - reference: PMID:36963491
+            source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC10148156/
+            snippet: higher value
+            explanation: Figure 6C/D late +720-s contrast, bounded by Figure 5 steady-state negatives and the separate cytosolic recovery result.
+            cache_path: evidence/PF01169/deschamps-2023-gdt1.txt
+            cache_sha256: b93aec048eef14a0a097d5f6a028788037ae54389c15b9d35804e64a12a814d7
 discussions:
-- discussion_id: gdt1-clones-coupling-and-other-members
-  prompt: Resolve exact Gdt1 constructs and coupling before extending native transport and family-wide
-    conclusions.
-  kind: CURATION_TODO
-  status: OPEN
-  rationale: Eight observed effects retain gradient interventions, unresolved expression-associated pH
-    responses and indirect native-cell outcomes. No isolated-repeat sufficiency, single-protein stoichiometry
-    or universally reversible Golgi cycle is established.
-  evidence:
-  - reference: PMID:36963491
-    supports: PARTIAL
-    evidence_source: primary_main_text_and_supplement
-    explanation: Figures 1-6 and supplement were assessed; topology, endogenous-transport and native reversal
-      alternatives remain explicit.
-  notes: Obtain complete 2023 clone sequences, reconcile calibration wording and establish direct protein-specific
-    flux with orientation and coupling controls. Extend 2016/2018, mutant, TMEM165, bacterial and plant-member
-    evidence through separate mapping and primary assessment. Do not transfer the 2016 tagged delta23
-    preparation, the 2020 ice-starvation protocol, or one member's substrate range to another experiment.
-    Partial same-agent scientific review; remain IN_PROGRESS.
-  posed_by: Codex
-  posed_date: '2026-10-11'
+  - discussion_id: gdt1-clones-coupling-and-other-members
+    prompt: Resolve exact Gdt1 constructs and coupling before extending native transport and family-wide conclusions.
+    kind: CURATION_TODO
+    status: OPEN
+    rationale: Eight observed effects retain gradient interventions, unresolved expression-associated pH responses and indirect native-cell outcomes. No isolated-repeat sufficiency, single-protein stoichiometry or universally reversible Golgi cycle is established.
+    evidence:
+      - reference: PMID:36963491
+        supports: PARTIAL
+        evidence_source: primary_main_text_and_supplement
+        explanation: Figures 1-6 and supplement were assessed; topology, endogenous-transport and native reversal alternatives remain explicit.
+    notes: Obtain complete 2023 clone sequences, reconcile calibration wording and establish direct protein-specific flux with orientation and coupling controls. Extend 2016/2018, mutant, TMEM165, bacterial and plant-member evidence through separate mapping and primary assessment. Do not transfer the 2016 tagged delta23 preparation, the 2020 ice-starvation protocol, or one member's substrate range to another experiment. Partial same-agent scientific review; remain IN_PROGRESS.
+    posed_by: Codex
+    posed_date: '2026-10-11'

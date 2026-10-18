@@ -16,10 +16,11 @@ events:
   outcome: changed
   summary: Ground causal graph gene and protein nodes in PF01918 with verified UniProtKB
     accessions (UniProtKB:P60849, UniProtKB:Q97ZF4, UniProtKB:F0NHH1, UniProtKB:Q9BUL9,
-    UniProtKB:O75817...)
+    UniProtKB:O75817, UniProtKB:Q8IJX8)
   details: 'Reviewed PF01918 causal_graphs and grounded gene/protein PERTURBATION,
-    ACTIVITY, and protein-complex STATE nodes across 16 causal graph(s) using verified
+    ACTIVITY, and protein-complex STATE nodes across 15 causal graph(s) using verified
     UniProtKB accessions from family_mapping:
+
 
     - `ssoalba-dna-binding-2002`: grounded complex -> UniProtKB:P60849; k16a -> UniProtKB:P60849;
     k16e -> UniProtKB:P60849; k17a -> UniProtKB:P60849; k17e -> UniProtKB:P60849
@@ -68,9 +69,6 @@ events:
     k23r -> UniProtKB:Q8IJX8; k22-23r -> UniProtKB:Q8IJX8
 
     - `pfalba3-pat-sir2-assays-2023`: grounded pat -> UniProtKB:Q8IJX8; acetylated
-    -> UniProtKB:Q8IJX8; pretreatment -> UniProtKB:Q8IJX8; signal -> UniProtKB:Q8IJX8
-
-    - `pfalba3-peptide-deacetylation-2012`: grounded k22-reaction -> UniProtKB:Q8IJX8;
-    k23-reaction -> UniProtKB:Q8IJX8'
+    -> UniProtKB:Q8IJX8; pretreatment -> UniProtKB:Q8IJX8; signal -> UniProtKB:Q8IJX8'
   sections:
   - causal_graphs

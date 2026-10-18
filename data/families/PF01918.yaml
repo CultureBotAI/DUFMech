@@ -1535,13 +1535,9 @@ causal_graphs:
   - node_id: k22-reaction
     label: K22-acetylated peptide with PfSir2A and NAD
     node_type: ACTIVITY
-    grounding:
-    - UniProtKB:Q8IJX8
   - node_id: k23-reaction
     label: K23-acetylated peptide with PfSir2A and NAD
     node_type: ACTIVITY
-    grounding:
-    - UniProtKB:Q8IJX8
   - node_id: k22-product
     label: Deacetylated product from the K22-acetylated substrate
     node_type: STATE
@@ -1619,7 +1615,7 @@ curation_events:
   action: EDIT
   outcome: changed
   summary: Ground causal graph gene and protein nodes in PF01918 with verified UniProtKB accessions (UniProtKB:P60849,
-    UniProtKB:Q97ZF4, UniProtKB:F0NHH1, UniProtKB:Q9BUL9, UniProtKB:O75817...)
+    UniProtKB:Q97ZF4, UniProtKB:F0NHH1, UniProtKB:Q9BUL9, UniProtKB:O75817, UniProtKB:Q8IJX8)
   history_record: history/records/PF01918/2026-10-18T025446Z-antigravity-965f18.yaml
   event_index: 0
   llm_assisted: true

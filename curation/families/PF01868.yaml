@@ -66,8 +66,6 @@ causal_graphs:
   - node_id: cleavage-kobs
     label: Reported pH5.8-equivalent cleavage kobs
     node_type: ACTIVITY
-    grounding:
-    - UniProtKB:O26119
   edges:
   - edge_id: pair-protocol-increases-normalized-rate
     subject: add-pair-normalized-protocol
@@ -179,8 +177,6 @@ causal_graphs:
   - node_id: processing-activity
     label: Relative pre-tRNATyr processing activity
     node_type: ACTIVITY
-    grounding:
-    - UniProtKB:Q8U007
   edges:
   - edge_id: delta24-decreases-processing
     subject: delta24
@@ -242,8 +238,6 @@ causal_graphs:
   - node_id: processing-activity
     label: Relative pre-tRNATyr processing activity
     node_type: ACTIVITY
-    grounding:
-    - UniProtKB:Q8U007
   edges:
   - edge_id: delta24-decreases-processing
     subject: delta24

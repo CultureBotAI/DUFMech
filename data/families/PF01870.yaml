@@ -183,8 +183,6 @@ causal_graphs:
   - node_id: extract-cleavage
     label: Extract-dependent junction cleavage product
     node_type: ACTIVITY
-    grounding:
-    - UniProtKB:E7FHX4
   edges:
   - edge_id: depletion-decreases-cleavage
     subject: anti-hjc
@@ -260,8 +258,6 @@ causal_graphs:
   - node_id: cleavage-product
     label: Junction cleavage product yield
     node_type: ACTIVITY
-    grounding:
-    - UniProtKB:E7FHX4
   edges:
   - edge_id: magnesium-increases-cleavage
     subject: add-magnesium
@@ -466,8 +462,6 @@ causal_graphs:
   - node_id: cleaved-fraction
     label: Junction substrate fraction cleaved after30 min
     node_type: ACTIVITY
-    grounding:
-    - UniProtKB:F0NID3
   edges:
   - edge_id: s9e-decreases-cleavage
     subject: s9e

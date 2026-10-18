@@ -17,14 +17,13 @@ events:
   summary: Ground causal graph gene and protein nodes in PF01657 with verified UniProtKB
     accessions (UniProtKB:A4ZDL6)
   details: 'Reviewed PF01657 causal_graphs and grounded gene/protein PERTURBATION,
-    ACTIVITY, and protein-complex STATE nodes across 6 causal graph(s) using verified
+    ACTIVITY, and protein-complex STATE nodes across 5 causal graph(s) using verified
     UniProtKB accessions from family_mapping:
+
 
     - `gnk2-mannobiose-spr`: grounded r93a -> UniProtKB:A4ZDL6; e104a -> UniProtKB:A4ZDL6
 
     - `gnk2-by4741-growth-delay`: grounded r93a-treatment -> UniProtKB:A4ZDL6
-
-    - `gnk2-mnn2-dependent-growth-response`: grounded gnk2-dependent-delay -> UniProtKB:A4ZDL6
 
     - `gnk2-fculmorum-liquid-growth`: grounded r93a-liquid-treatment -> UniProtKB:A4ZDL6
 

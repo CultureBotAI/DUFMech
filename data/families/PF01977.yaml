@@ -606,13 +606,9 @@ causal_graphs:
   - node_id: e277d_activity
     label: E277D cinnamate-decarboxylation activity
     node_type: ACTIVITY
-    grounding:
-    - UniProtKB:A2QHE5
   - node_id: e282d_activity
     label: E282D cinnamate-decarboxylation activity
     node_type: ACTIVITY
-    grounding:
-    - UniProtKB:A2QHE5
   edges:
   - edge_id: light-reduces-wt
     subject: wt_light
@@ -1603,9 +1599,6 @@ causal_graphs:
   - node_id: activity
     label: PHB decarboxylation activity
     node_type: ACTIVITY
-    grounding:
-    - UniProtKB:Q9S4M7
-    - UniProtKB:Q4R102
   edges:
   - edge_id: air-lowers-activity
     subject: air_time
@@ -1665,9 +1658,6 @@ causal_graphs:
   - node_id: kcat_app
     label: Apparent PHB turnover constant
     node_type: ACTIVITY
-    grounding:
-    - UniProtKB:Q9S4M7
-    - UniProtKB:Q4R102
   edges:
   - edge_id: glycerol-lowers-kcat-app
     subject: glycerol
@@ -1789,8 +1779,6 @@ causal_graphs:
   - node_id: syr_yield
     label: Reported syringic-acid endpoint turnover
     node_type: ACTIVITY
-    grounding:
-    - UniProtKB:Q9S4M7
   edges:
   - edge_id: l182v-increases-syringate-turnover
     subject: l182v
@@ -2044,8 +2032,6 @@ causal_graphs:
   - node_id: isolated_activity
     label: Activity relative to undialyzed isolated FDC
     node_type: ACTIVITY
-    grounding:
-    - UniProtKB:Q03034
   - node_id: fresh_donor
     label: Adding fresh WT lysate to dialyzed FDC and cinnamate
     node_type: PERTURBATION
@@ -2054,8 +2040,6 @@ causal_graphs:
   - node_id: rescue_activity
     label: Styrene-producing activity of the dialyzed-FDC assay
     node_type: ACTIVITY
-    grounding:
-    - UniProtKB:Q03034
   - node_id: dialyzed_donor
     label: Substituting predialyzed lysate for fresh lysate in the rescue assay
     node_type: PERTURBATION
@@ -2140,8 +2124,6 @@ causal_graphs:
   - node_id: isolated_activity
     label: Isolated FDC preparation activity
     node_type: ACTIVITY
-    grounding:
-    - UniProtKB:Q03034
   - node_id: tpad
     label: Adding purified tPAD1 to apo-FDC and cinnamate
     node_type: PERTURBATION
@@ -2154,8 +2136,6 @@ causal_graphs:
   - node_id: output
     label: Apo-FDC assay styrene-producing activity
     node_type: ACTIVITY
-    grounding:
-    - UniProtKB:Q03034
   edges:
   - edge_id: delta-host-preparation-lowers-activity
     subject: delta_host
@@ -2340,8 +2320,6 @@ causal_graphs:
   - node_id: activity
     label: Purified FDC styrene-specific activity per total protein
     node_type: ACTIVITY
-    grounding:
-    - UniProtKB:Q03034
   edges:
   - edge_id: joint-preparation-change-raises-activity
     subject: preparation_change
@@ -2480,8 +2458,6 @@ causal_graphs:
   - node_id: activity
     label: Apo-FDC assay activity
     node_type: ACTIVITY
-    grounding:
-    - UniProtKB:Q03034
   edges:
   - edge_id: fraction-restores-activity
     subject: fraction_addition
@@ -2528,8 +2504,6 @@ causal_graphs:
   - node_id: activation
     label: Fraction-dependent activation of an apo-FDC assay
     node_type: ACTIVITY
-    grounding:
-    - UniProtKB:Q03034
   edges:
   - edge_id: acid-pretreatment-lowers-activation
     subject: acid
@@ -3822,7 +3796,7 @@ curation_events:
   action: EDIT
   outcome: changed
   summary: Ground causal graph gene and protein nodes in PF01977 with verified UniProtKB accessions (UniProtKB:A2QHE5,
-    UniProtKB:P94405, UniProtKB:C0H3U9, UniProtKB:Q9S4M7, UniProtKB:Q4R102...)
+    UniProtKB:P94405, UniProtKB:C0H3U9, UniProtKB:Q9S4M7, UniProtKB:Q4R102, UniProtKB:Q03034)
   history_record: history/records/PF01977/2026-10-18T025446Z-antigravity-cc031b.yaml
   event_index: 0
   llm_assisted: true

@@ -253,8 +253,6 @@ causal_graphs:
   - node_id: simemo1
     label: Apply the Memo1 siRNA pool
     node_type: PERTURBATION
-    grounding:
-    - UniProtKB:Q9Y316
   - node_id: wound-closure
     label: Recovered wound area at 24 hours
     node_type: PHENOTYPE

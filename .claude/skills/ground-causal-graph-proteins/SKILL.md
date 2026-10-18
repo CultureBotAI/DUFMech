@@ -73,6 +73,20 @@ against the graph's exact experimental system:
    - Pure chemical entities (`CHEBI:...`), generic cellular processes (`GO:...`),
      and organismal/clinical phenotypes without a specific single-protein identity
      should retain their ontology groundings without forcing a protein accession.
+   - Do not ground downstream non-protein assay readouts, fluorescent dye signals
+     (such as Fura-2 fluorescence ratios or quenching), spectrophotometric absorbance
+     endpoints, fitted kinetic constants ($k_{\text{cat}}$, $k_{\text{obs}}$, or
+     catalytic efficiency), nucleic-acid cleavage product yields, filter-retained RNA
+     fractions, metabolite formation yields, or cellular growth delay `PHENOTYPE`
+     nodes with `UniProtKB:...` accessions merely because the readout label or
+     description mentions the assayed enzyme or gene. Reserve sink-node `UniProtKB:...`
+     grounding for genuine protein states, modified protein substrates, or
+     protein-containing complexes.
+   - Do not ground oligonucleotide knockdown reagent nodes (such as siRNA pools)
+     as `UniProtKB:...` proteins when the node represents the nucleic-acid reagent
+     perturbation itself rather than the protein, and do not ground synthetic peptide
+     reactions catalyzed by a partner enzyme solely with the peptide's parent protein
+     accession.
 
 ## 3. Authoring, History, and Projection Workflow
 

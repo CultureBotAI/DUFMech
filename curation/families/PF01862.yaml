@@ -120,8 +120,6 @@ causal_graphs:
   - node_id: n47a-preparation-activity
     label: N47A decarboxylation activity per unit total protein
     node_type: ACTIVITY
-    grounding:
-    - UniProtKB:Q57764
   edges:
   - edge_id: incomplete-maturation-may-decrease-activity
     subject: reduced-mature-active-fraction

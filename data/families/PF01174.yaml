@@ -256,8 +256,6 @@ causal_graphs:
   - node_id: residual-glutamine-plp-signal
     label: Residual glutamine-supported A414 synthesis activity
     node_type: ACTIVITY
-    grounding:
-    - UniProtKB:P37528
   edges:
   - edge_id: acivicin-decreases-glutamine-plp-signal
     subject: acivicin-pretreat-plp-mixture
@@ -292,13 +290,5 @@ curation_events:
   outcome: needs_followup
   summary: Retain partial scientific self-review of PdxT partner and substrate contexts.
   history_record: history/records/PF01174/2026-10-11T100228Z-codex-196448.yaml
-  event_index: 0
-  llm_assisted: true
-- timestamp: '2026-10-18T02:54:46Z'
-  curator: Antigravity
-  action: EDIT
-  outcome: changed
-  summary: Ground causal graph gene and protein nodes in PF01174 with verified UniProtKB accessions (UniProtKB:P37528)
-  history_record: history/records/PF01174/2026-10-18T025446Z-antigravity-b8c681.yaml
   event_index: 0
   llm_assisted: true

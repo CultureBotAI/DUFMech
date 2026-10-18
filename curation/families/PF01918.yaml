@@ -1455,13 +1455,9 @@ causal_graphs:
   - node_id: k22-reaction
     label: K22-acetylated peptide with PfSir2A and NAD
     node_type: ACTIVITY
-    grounding:
-    - UniProtKB:Q8IJX8
   - node_id: k23-reaction
     label: K23-acetylated peptide with PfSir2A and NAD
     node_type: ACTIVITY
-    grounding:
-    - UniProtKB:Q8IJX8
   - node_id: k22-product
     label: Deacetylated product from the K22-acetylated substrate
     node_type: STATE

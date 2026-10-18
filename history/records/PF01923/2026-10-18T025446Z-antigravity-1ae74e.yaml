@@ -18,8 +18,9 @@ events:
     accessions (UniProtKB:Q8ZNR5, UniProtKB:Q50EJ2, UniProtKB:Q9ZFV4, UniProtKB:A0A0H3GFM5,
     UniProtKB:Q96EY8)
   details: 'Reviewed PF01923 causal_graphs and grounded gene/protein PERTURBATION,
-    ACTIVITY, and protein-complex STATE nodes across 21 causal graph(s) using verified
+    ACTIVITY, and protein-complex STATE nodes across 18 causal graph(s) using verified
     UniProtKB accessions from family_mapping:
+
 
     - `sepduo-growth-2001`: grounded pduo -> UniProtKB:Q8ZNR5; double -> UniProtKB:Q8ZNR5;
     rescue -> UniProtKB:Q8ZNR5; overexpression -> UniProtKB:Q8ZNR5
@@ -28,10 +29,6 @@ events:
     UniProtKB:Q8ZNR5; c293 -> UniProtKB:Q8ZNR5; c90 -> UniProtKB:Q8ZNR5
 
     - `sepduo-triphosphate-2004`: grounded reaction -> UniProtKB:Q8ZNR5
-
-    - `sepduo-inhibition-2004`: grounded activity -> UniProtKB:Q8ZNR5
-
-    - `sepduo-metal-additions-2004`: grounded activity -> UniProtKB:Q8ZNR5
 
     - `sepduo-truncation-complementation-2004`: grounded c185 -> UniProtKB:Q8ZNR5;
     c230 -> UniProtKB:Q8ZNR5; c293 -> UniProtKB:Q8ZNR5
@@ -46,8 +43,6 @@ events:
     f112y -> UniProtKB:Q50EJ2; f112w -> UniProtKB:Q50EJ2; f163a -> UniProtKB:Q50EJ2
 
     - `lrpduo-variant-growth-2009`: grounded variants -> UniProtKB:Q50EJ2
-
-    - `seeutt-metal-oxygen-2014`: grounded activity -> UniProtKB:Q9ZFV4
 
     - `seeutt-variant-activity-2014`: grounded h67a -> UniProtKB:Q9ZFV4; c79a -> UniProtKB:Q9ZFV4;
     c80a -> UniProtKB:Q9ZFV4; c83a -> UniProtKB:Q9ZFV4

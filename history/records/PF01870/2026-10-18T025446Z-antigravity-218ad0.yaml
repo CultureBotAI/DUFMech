@@ -17,15 +17,13 @@ events:
   summary: Ground causal graph gene and protein nodes in PF01870 with verified UniProtKB
     accessions (UniProtKB:E7FHX4, UniProtKB:F0NID3)
   details: 'Reviewed PF01870 causal_graphs and grounded gene/protein PERTURBATION,
-    ACTIVITY, and protein-complex STATE nodes across 7 causal graph(s) using verified
+    ACTIVITY, and protein-complex STATE nodes across 6 causal graph(s) using verified
     UniProtKB accessions from family_mapping:
+
 
     - `pfu-reca-intermediate-resolution`: grounded add-hjc -> UniProtKB:E7FHX4
 
-    - `pfu-extract-immunodepletion`: grounded anti-hjc -> UniProtKB:E7FHX4; extract-cleavage
-    -> UniProtKB:E7FHX4
-
-    - `pfu-magnesium-dependent-cleavage`: grounded cleavage-product -> UniProtKB:E7FHX4
+    - `pfu-extract-immunodepletion`: grounded anti-hjc -> UniProtKB:E7FHX4
 
     - `pfu-junction-binding-competition`: grounded labeled-complex -> UniProtKB:E7FHX4
 
@@ -34,7 +32,7 @@ events:
     UniProtKB:F0NID3
 
     - `sire-cleavage-substitution-effects`: grounded s9e -> UniProtKB:F0NID3; s34e
-    -> UniProtKB:F0NID3; d42n -> UniProtKB:F0NID3; cleaved-fraction -> UniProtKB:F0NID3
+    -> UniProtKB:F0NID3; d42n -> UniProtKB:F0NID3
 
     - `sire-s34e-damage-tolerance`: grounded s34e-uv -> UniProtKB:F0NID3; s34e-cisplatin
     -> UniProtKB:F0NID3'

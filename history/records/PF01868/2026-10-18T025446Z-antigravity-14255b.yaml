@@ -20,18 +20,19 @@ events:
     ACTIVITY, and protein-complex STATE nodes across 7 causal graph(s) using verified
     UniProtKB accessions from family_mapping:
 
+
     - `mth-optimized-protocol-km`: grounded pair-and-buffer -> UniProtKB:O26119
 
     - `mth-low-magnesium-normalized-rate`: grounded add-pair-normalized-protocol ->
-    UniProtKB:O26119; cleavage-kobs -> UniProtKB:O26119
+    UniProtKB:O26119
 
     - `pfu-delta24-partner-association-readouts`: grounded delta24 -> UniProtKB:Q8U007
 
     - `pfu-two-rpp-truncation-activity`: grounded delta24 -> UniProtKB:Q8U007; delta31
-    -> UniProtKB:Q8U007; processing-activity -> UniProtKB:Q8U007
+    -> UniProtKB:Q8U007
 
     - `pfu-four-rpp-truncation-activity`: grounded delta24 -> UniProtKB:Q8U007; delta31
-    -> UniProtKB:Q8U007; processing-activity -> UniProtKB:Q8U007
+    -> UniProtKB:Q8U007
 
     - `pfu-trans-cleavage-fidelity-protocols`: grounded pair-protocol -> UniProtKB:Q8U007;
     four-rpp-protocol -> UniProtKB:Q8U007

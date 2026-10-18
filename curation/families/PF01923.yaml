@@ -335,8 +335,6 @@ causal_graphs:
   - node_id: activity
     label: AdoCbl-forming activity
     node_type: STATE
-    grounding:
-    - UniProtKB:Q8ZNR5
   edges:
   - edge_id: adp-decreases-activity
     subject: adp
@@ -422,8 +420,6 @@ causal_graphs:
   - node_id: activity
     label: AdoCbl-forming activity
     node_type: STATE
-    grounding:
-    - UniProtKB:Q8ZNR5
   edges:
   - edge_id: mg-increases-activity
     subject: mg
@@ -1147,8 +1143,6 @@ causal_graphs:
   - node_id: activity
     label: Coupled AdoCbl-forming activity
     node_type: STATE
-    grounding:
-    - UniProtKB:Q9ZFV4
   edges:
   - edge_id: fe-increases-activity
     subject: fe

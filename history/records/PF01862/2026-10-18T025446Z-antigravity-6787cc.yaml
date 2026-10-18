@@ -20,10 +20,11 @@ events:
     ACTIVITY, and protein-complex STATE nodes across 2 causal graph(s) using verified
     UniProtKB accessions from family_mapping:
 
+
     - `mjpdad-radiolabeled-decarboxylation`: grounded e109q-preparation -> UniProtKB:Q57764;
     n47a-preparation -> UniProtKB:Q57764
 
     - `mjpdad-processing-contribution-hypothesis`: grounded reduced-mature-active-fraction
-    -> UniProtKB:Q57764; n47a-preparation-activity -> UniProtKB:Q57764'
+    -> UniProtKB:Q57764'
   sections:
   - causal_graphs

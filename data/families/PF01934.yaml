@@ -781,8 +781,6 @@ causal_graphs:
   - node_id: cleavage
     label: MS2 RNA fragmentation by the isolated HEPN fragment
     node_type: ACTIVITY
-    grounding:
-    - UniProtKB:Q8EGZ7
   edges:
   - edge_id: ms2-degradation
     subject: reaction
