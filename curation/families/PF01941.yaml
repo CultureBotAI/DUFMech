@@ -3,240 +3,443 @@ curation_status: IN_PROGRESS
 curation_history: history/records/PF01941
 discussions:
 - discussion_id: pf01941-mechanism-and-construct-limits
-  prompt: Resolve assay-specific mechanisms and exact constructs without transferring whole-enzyme evidence to every PF01941 member.
+  prompt: Resolve assay-specific mechanisms and exact constructs without transferring whole-enzyme evidence
+    to every PF01941 member.
   kind: CURATION_TODO
   status: OPEN
-  rationale: Denaturation, double-mutant kinetic effects, surrogate products and coupled reactions do not resolve every microscopic catalytic step.
+  rationale: Denaturation, double-mutant kinetic effects, surrogate products and coupled reactions do
+    not resolve every microscopic catalytic step.
   evidence:
   - reference: PMID:34606675
     supports: PARTIAL
     evidence_source: primary_publication
-    explanation: The 308-fold result is an ONB-TA endpoint comparison; cascade products require Ecm1 and MTAN in addition to engineered MAT.
+    explanation: The 308-fold result is an ONB-TA endpoint comparison; cascade products require Ecm1 and
+      MTAN in addition to engineered MAT.
   posed_by: Codex
   posed_date: '2026-10-12'
-  notes: Preserve TkMAT gene-length conflict and assay-specific MjMAT hydrodynamic discrepancies. See evidence/PF01941/identity.txt and coverage.txt.
+  notes: Preserve TkMAT gene-length conflict and assay-specific MjMAT hydrodynamic discrepancies. See
+    evidence/PF01941/identity.txt and coverage.txt.
 - discussion_id: pf01941-member-and-source-coverage
   prompt: Extend primary evidence coverage to SsoMAT, PfMAT, bacterial members and remaining MjMAT contexts.
   kind: CURATION_TODO
   status: OPEN
-  rationale: The 57 reviewed UniProt hits are not exhaustive family coverage; key kinetic and analog papers remain partly or wholly unreviewed.
+  rationale: The 57 reviewed UniProt hits are not exhaustive family coverage; key kinetic and analog papers
+    remain partly or wholly unreviewed.
   evidence:
   - reference: PMID:34655277
     supports: PARTIAL
     evidence_source: primary_publication
-    explanation: Recheck the sequence set and reconstructed ancestors because the Methods paragraph misassigns Q58868 and Q58605.
+    explanation: Recheck the sequence set and reconstructed ancestors because the Methods paragraph misassigns
+      Q58868 and Q58605.
   posed_by: Codex
   posed_date: '2026-10-12'
-  notes: Full-text access failures for PMID11872742 and PMID24649856 are not negative evidence. All corpus records and prior follow-ups remain in scope.
+  notes: Full-text access failures for PMID11872742 and PMID24649856 are not negative evidence. All corpus
+    records and prior follow-ups remain in scope.
 causal_graphs:
 - graph_id: tkmat-sam-synthesis-2013
   title: TkMAT preparation produces SAM from joint substrates
   scope: Schlesier 2013 Figure 3 recombinant whole-enzyme reaction.
-  context: His-tagged TkMAT expressed in E. coli; 0.5 mg/ml, 10 mM ATP and L-methionine, 20 mM MgCl2, 200 mM KCl, 100 mM Tris-HCl pH8, 37 C for 3 min, acid-quench SCX-HPLC.
-  family_mapping: Q5JF22 v1, TK0545, T. kodakarensis KOD1, 405 aa; PF01941 6-401. Cited YP_182958.1 exactly matches current sequence. Not an isolated-domain assay.
+  context: His-tagged TkMAT expressed in E. coli; 0.5 mg/ml, 10 mM ATP and L-methionine, 20 mM MgCl2,
+    200 mM KCl, 100 mM Tris-HCl pH8, 37 C for 3 min, acid-quench SCX-HPLC.
+  family_mapping: Q5JF22 v1, TK0545, T. kodakarensis KOD1, 405 aa; PF01941 6-401. Cited YP_182958.1 exactly
+    matches current sequence. Not an isolated-domain assay.
   taxon: NCBITaxon:69014
   scope_status: MECHANISTIC
-  limitations: The paper's 1155-bp gene length conflicts with the mapped 405-aa sequence; clone termini remain unverified. No direct phosphate-product assay or residue-specific catalytic test is supplied here. Crystal loop states are not observed motion.
+  limitations: The paper's 1155-bp gene length conflicts with the mapped 405-aa sequence; clone termini
+    remain unverified. No direct phosphate-product assay or residue-specific catalytic test is supplied
+    here. Crystal loop states are not observed motion.
   nodes:
-  - {node_id: reaction, label: TkMAT plus ATP and L-methionine under assay conditions, node_type: ACTIVITY, grounding: ['UniProtKB:Q5JF22']}
-  - {node_id: sam, label: HPLC-detected SAM product, node_type: STATE}
+  - node_id: reaction
+    label: TkMAT plus ATP and L-methionine under assay conditions
+    node_type: ACTIVITY
+    grounding:
+    - UniProtKB:Q5JF22
+  - node_id: sam
+    label: HPLC-detected SAM product
+    node_type: STATE
   edges:
   - edge_id: joint-input-sam
     subject: reaction
     predicate: produces
     object: sam
-    mechanism: The complete enzyme reaction yields a peak matching the SAM reference that is absent from the no-enzyme control.
+    mechanism: The complete enzyme reaction yields a peak matching the SAM reference that is absent from
+      the no-enzyme control.
     directness: DIRECT
     support: OBSERVED
     evidence_kind: EXPERIMENTAL
-    evidence: [{reference: 'PMID:24134203', source_url: 'https://pmc.ncbi.nlm.nih.gov/articles/PMC3853416/', snippet: 'Activity assay of TkMAT.', explanation: 'Figure 3, HPLC Methods and supplement S3; ATP and methionine are joint inputs, not independent sufficient causes.', cache_path: evidence/PF01941/tkmat-2013.txt, cache_sha256: 814fed8f116e1e9b458346da370f2b1cefb127fa7c336ebf18efa28d8928c45e}]
+    evidence:
+    - reference: PMID:24134203
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC3853416/
+      snippet: Activity assay of TkMAT.
+      explanation: Figure 3, HPLC Methods and supplement S3; ATP and methionine are joint inputs, not
+        independent sufficient causes.
+      cache_path: evidence/PF01941/tkmat-2013.txt
+      cache_sha256: 814fed8f116e1e9b458346da370f2b1cefb127fa7c336ebf18efa28d8928c45e
 - graph_id: mjmat-sam-assay-2009
   title: Recombinant MjMAT supports SAM formation
   scope: Garrido 2009 Methods 2.3-2.4 and Table 3 wild-type enzyme.
-  context: E. coli BL21(DE3)-expressed MJ1208; radiolabeled methyl-L-methionine plus ATP at 55 C. Methionine titration 0.05-1 mM with 2.5 mM ATP; reciprocal titration uses 0.5 mM methionine.
-  family_mapping: Q58605 v1, MJ1208, M. jannaschii JAL-1, 406 aa; PF01941 2-402. Whole recombinant enzyme, not an isolated Pfam fragment.
+  context: E. coli BL21(DE3)-expressed MJ1208; radiolabeled methyl-L-methionine plus ATP at 55 C. Methionine
+    titration 0.05-1 mM with 2.5 mM ATP; reciprocal titration uses 0.5 mM methionine.
+  family_mapping: Q58605 v1, MJ1208, M. jannaschii JAL-1, 406 aa; PF01941 2-402. Whole recombinant enzyme,
+    not an isolated Pfam fragment.
   taxon: NCBITaxon:243232
   scope_status: MECHANISTIC
-  limitations: The radiolabeled SAM assay does not independently resolve phosphate origin, product-release order or every specificity claim in the earlier kinetic paper. Complete assay protocol partly refers to prior work.
+  limitations: The radiolabeled SAM assay does not independently resolve phosphate origin, product-release
+    order or every specificity claim in the earlier kinetic paper. Complete assay protocol partly refers
+    to prior work.
   nodes:
-  - {node_id: reaction, label: WT MjMAT plus labeled methionine and ATP, node_type: ACTIVITY, grounding: ['UniProtKB:Q58605']}
-  - {node_id: sam, label: Radiolabeled SAM formation, node_type: STATE}
+  - node_id: reaction
+    label: WT MjMAT plus labeled methionine and ATP
+    node_type: ACTIVITY
+    grounding:
+    - UniProtKB:Q58605
+  - node_id: sam
+    label: Radiolabeled SAM formation
+    node_type: STATE
   edges:
   - edge_id: sam-formation
     subject: reaction
     predicate: produces
     object: sam
-    mechanism: Purified recombinant wild-type enzyme supports the measured substrate-to-SAM reaction; Table 3 reports turnover under the specified kinetic assay.
+    mechanism: Purified recombinant wild-type enzyme supports the measured substrate-to-SAM reaction;
+      Table 3 reports turnover under the specified kinetic assay.
     directness: DIRECT
     support: OBSERVED
     evidence_kind: EXPERIMENTAL
-    evidence: [{reference: 'PMID:19348969', source_url: 'https://pmc.ncbi.nlm.nih.gov/articles/PMC2704562/', snippet: 'Denaturation followed by MAT activity', explanation: 'Methods 2.3-2.4 and Table 3, WT kcat 1.46 +/-0.05 s^-1; native molecular microsteps are not resolved by this assay.', cache_path: evidence/PF01941/mjmat-2009.txt, cache_sha256: c21109c952beba99de2cbe102b7ec3fbe8aa3ae4e723b8619cb6af79941ff0fb}]
+    evidence:
+    - reference: PMID:19348969
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC2704562/
+      snippet: Denaturation followed by MAT activity
+      explanation: Methods 2.3-2.4 and Table 3, WT kcat 1.46 +/-0.05 s^-1; native molecular microsteps
+        are not resolved by this assay.
+      cache_path: evidence/PF01941/mjmat-2009.txt
+      cache_sha256: c21109c952beba99de2cbe102b7ec3fbe8aa3ae4e723b8619cb6af79941ff0fb
 - graph_id: mjmat-urea-activity-2009
   title: Urea exposure reduces MjMAT assay activity
   scope: Garrido 2009 Figure 3 whole-enzyme perturbation.
-  context: Overnight equilibration at 23 C in 50 mM Tris-HCl pH8, 50 mM KCl and 10 mM MgSO4; 0-8 M urea remains in the 55 C activity assay, 0.05 mg/ml enzyme.
+  context: Overnight equilibration at 23 C in 50 mM Tris-HCl pH8, 50 mM KCl and 10 mM MgSO4; 0-8 M urea
+    remains in the 55 C activity assay, 0.05 mg/ml enzyme.
   family_mapping: Q58605 v1, MJ1208, 406 aa; PF01941 2-402. Protein-level denaturant response.
   taxon: NCBITaxon:243232
   scope_status: PHENOTYPIC
-  limitations: Inhibition, unfolding and altered association are not uniquely separated. Different structural assays use different protein concentrations; their readouts are not joined into an observed dissociation-causes-inactivation chain.
+  limitations: Inhibition, unfolding and altered association are not uniquely separated. Different structural
+    assays use different protein concentrations; their readouts are not joined into an observed dissociation-causes-inactivation
+    chain.
   nodes:
-  - {node_id: urea, label: Increasing urea exposure in the activity assay, node_type: PERTURBATION}
-  - {node_id: activity, label: Relative SAM-forming activity, node_type: ACTIVITY, grounding: ['UniProtKB:Q58605']}
+  - node_id: urea
+    label: Increasing urea exposure in the activity assay
+    node_type: PERTURBATION
+  - node_id: activity
+    label: Relative SAM-forming activity
+    node_type: ACTIVITY
+    grounding:
+    - UniProtKB:Q58605
   edges:
   - edge_id: urea-activity-loss
     subject: urea
     predicate: decreases
     object: activity
-    mechanism: Activity falls in two fitted transitions as denaturant concentration increases, with residual activity at intermediate urea concentrations.
+    mechanism: Activity falls in two fitted transitions as denaturant concentration increases, with residual
+      activity at intermediate urea concentrations.
     directness: UNRESOLVED
     support: OBSERVED
     evidence_kind: EXPERIMENTAL
-    evidence: [{reference: 'PMID:19348969', source_url: 'https://pmc.ncbi.nlm.nih.gov/articles/PMC2704562/', snippet: 'Denaturation followed by MAT activity', explanation: 'Figure 3 visually inspected; Methods 2.5.1 and Table 2. Fitted midpoints 2.01 +/-0.13 and 5.79 +/-0.07 M are assay-specific.', cache_path: evidence/PF01941/mjmat-2009.txt, cache_sha256: c21109c952beba99de2cbe102b7ec3fbe8aa3ae4e723b8619cb6af79941ff0fb}]
+    evidence:
+    - reference: PMID:19348969
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC2704562/
+      snippet: Denaturation followed by MAT activity
+      explanation: Figure 3 visually inspected; Methods 2.5.1 and Table 2. Fitted midpoints 2.01 +/-0.13
+        and 5.79 +/-0.07 M are assay-specific.
+      cache_path: evidence/PF01941/mjmat-2009.txt
+      cache_sha256: c21109c952beba99de2cbe102b7ec3fbe8aa3ae4e723b8619cb6af79941ff0fb
 - graph_id: mjmat-urea-sedimentation-2009
   title: Urea shifts the MjMAT sedimentation distribution
   scope: Garrido 2009 Figure 4 sedimentation experiment, not the activity assay.
-  context: Urea-equilibrated MjMAT, 0.3-0.4 mg/ml; analytical ultracentrifugation at 188000 g and 18 C, corrected sedimentation coefficients.
+  context: Urea-equilibrated MjMAT, 0.3-0.4 mg/ml; analytical ultracentrifugation at 188000 g and 18 C,
+    corrected sedimentation coefficients.
   family_mapping: Q58605 v1, MJ1208, 406 aa; PF01941 2-402. Whole-protein hydrodynamic experiment.
   taxon: NCBITaxon:243232
   scope_status: PHENOTYPIC
-  limitations: Monomer assignment is a hydrodynamic interpretation. Gel filtration remains dimer-like to about 3 M urea and indicates later aggregation; centrifugal force, concentration and shape affect interpretation. This is not proof of obligatory monomerization before activity loss.
+  limitations: Monomer assignment is a hydrodynamic interpretation. Gel filtration remains dimer-like
+    to about 3 M urea and indicates later aggregation; centrifugal force, concentration and shape affect
+    interpretation. This is not proof of obligatory monomerization before activity loss.
   nodes:
-  - {node_id: urea, label: Increasing urea in sedimentation samples, node_type: PERTURBATION}
-  - {node_id: monomer, label: Fraction assigned as monomer-like by sedimentation, node_type: STATE, grounding: ['UniProtKB:Q58605']}
+  - node_id: urea
+    label: Increasing urea in sedimentation samples
+    node_type: PERTURBATION
+  - node_id: monomer
+    label: Fraction assigned as monomer-like by sedimentation
+    node_type: STATE
+    grounding:
+    - UniProtKB:Q58605
   edges:
   - edge_id: urea-monomer-like-fraction
     subject: urea
     predicate: increases
     object: monomer
-    mechanism: Figure 4B assigns an increasing fraction to monomer-like sedimentation species during the titration.
+    mechanism: Figure 4B assigns an increasing fraction to monomer-like sedimentation species during the
+      titration.
     directness: UNRESOLVED
     support: OBSERVED
     evidence_kind: EXPERIMENTAL
-    evidence: [{reference: 'PMID:19348969', source_url: 'https://pmc.ncbi.nlm.nih.gov/articles/PMC2704562/', snippet: 'Denaturation followed by MAT activity', explanation: 'Figure 4A-B visually inspected and Methods 2.5.5-2.5.6; the gel-filtration discrepancy is retained, not averaged away.', cache_path: evidence/PF01941/mjmat-2009.txt, cache_sha256: c21109c952beba99de2cbe102b7ec3fbe8aa3ae4e723b8619cb6af79941ff0fb}]
+    evidence:
+    - reference: PMID:19348969
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC2704562/
+      snippet: Denaturation followed by MAT activity
+      explanation: Figure 4A-B visually inspected and Methods 2.5.5-2.5.6; the gel-filtration discrepancy
+        is retained, not averaged away.
+      cache_path: evidence/PF01941/mjmat-2009.txt
+      cache_sha256: c21109c952beba99de2cbe102b7ec3fbe8aa3ae4e723b8619cb6af79941ff0fb
 - graph_id: mjmat-double-mutant-turnover-2009
   title: Two MjMAT double mutants have higher reported turnover
   scope: Garrido 2009 Table 3, separate double-mutant versus WT comparisons.
-  context: Recombinant W387F-Y226W or W387F-Y233W assayed with methionine and ATP at 55 C. The tyrosine substitutions were made on a W387F background, with sequencing verification reported.
-  family_mapping: Q58605 v1, PF01941 2-402; current sequence independently verifies Y226, Y233 and W387. No tag-adjusted residue renumbering is applied.
+  context: Recombinant W387F-Y226W or W387F-Y233W assayed with methionine and ATP at 55 C. The tyrosine
+    substitutions were made on a W387F background, with sequencing verification reported.
+  family_mapping: Q58605 v1, PF01941 2-402; current sequence independently verifies Y226, Y233 and W387.
+    No tag-adjusted residue renumbering is applied.
   taxon: NCBITaxon:243232
   scope_status: PHENOTYPIC
-  limitations: Not single-mutant effects. W387F alone also alters reported kcat; the two substitutions' independent contributions and microscopic rate-limiting steps are unresolved. Similar far-UV CD and sedimentation constrain gross changes but do not exclude local rearrangements.
+  limitations: Not single-mutant effects. W387F alone also alters reported kcat; the two substitutions'
+    independent contributions and microscopic rate-limiting steps are unresolved. Similar far-UV CD and
+    sedimentation constrain gross changes but do not exclude local rearrangements.
   nodes:
-  - {node_id: y226, label: W387F-Y226W instead of WT MjMAT, node_type: PERTURBATION, grounding: ['UniProtKB:Q58605']}
-  - {node_id: y233, label: W387F-Y233W instead of WT MjMAT, node_type: PERTURBATION, grounding: ['UniProtKB:Q58605']}
-  - {node_id: kcat, label: Reported SAM-forming kcat, node_type: ACTIVITY}
+  - node_id: y226
+    label: W387F-Y226W instead of WT MjMAT
+    node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q58605
+  - node_id: y233
+    label: W387F-Y233W instead of WT MjMAT
+    node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q58605
+  - node_id: kcat
+    label: Reported SAM-forming kcat
+    node_type: ACTIVITY
   edges:
   - edge_id: double-y226-turnover
     subject: y226
     predicate: increases
     object: kcat
-    mechanism: The double mutant has reported kcat 5.08 +/-0.06 s^-1 compared with WT 1.46 +/-0.05 s^-1 under the study conditions.
+    mechanism: The double mutant has reported kcat 5.08 +/-0.06 s^-1 compared with WT 1.46 +/-0.05 s^-1
+      under the study conditions.
     directness: UNRESOLVED
     support: OBSERVED
     evidence_kind: EXPERIMENTAL
-    evidence: [{reference: 'PMID:19348969', source_url: 'https://pmc.ncbi.nlm.nih.gov/articles/PMC2704562/', snippet: 'Denaturation followed by MAT activity', explanation: 'Table 3 and mutagenesis Methods; W387F alone is 1.85 +/-0.08 s^-1. Do not report Y226W alone as this contrast.', cache_path: evidence/PF01941/mjmat-2009.txt, cache_sha256: c21109c952beba99de2cbe102b7ec3fbe8aa3ae4e723b8619cb6af79941ff0fb}]
+    evidence:
+    - reference: PMID:19348969
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC2704562/
+      snippet: Denaturation followed by MAT activity
+      explanation: Table 3 and mutagenesis Methods; W387F alone is 1.85 +/-0.08 s^-1. Do not report Y226W
+        alone as this contrast.
+      cache_path: evidence/PF01941/mjmat-2009.txt
+      cache_sha256: c21109c952beba99de2cbe102b7ec3fbe8aa3ae4e723b8619cb6af79941ff0fb
   - edge_id: double-y233-turnover
     subject: y233
     predicate: increases
     object: kcat
-    mechanism: The double mutant has reported kcat 7.24 +/-0.08 s^-1 compared with WT 1.46 +/-0.05 s^-1 under the study conditions.
+    mechanism: The double mutant has reported kcat 7.24 +/-0.08 s^-1 compared with WT 1.46 +/-0.05 s^-1
+      under the study conditions.
     directness: UNRESOLVED
     support: OBSERVED
     evidence_kind: EXPERIMENTAL
-    evidence: [{reference: 'PMID:19348969', source_url: 'https://pmc.ncbi.nlm.nih.gov/articles/PMC2704562/', snippet: 'Denaturation followed by MAT activity', explanation: 'Table 3; the approximately 4.9-fold comparison is versus WT and concerns the W387F-Y233W double mutant.', cache_path: evidence/PF01941/mjmat-2009.txt, cache_sha256: c21109c952beba99de2cbe102b7ec3fbe8aa3ae4e723b8619cb6af79941ff0fb}]
+    evidence:
+    - reference: PMID:19348969
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC2704562/
+      snippet: Denaturation followed by MAT activity
+      explanation: Table 3; the approximately 4.9-fold comparison is versus WT and concerns the W387F-Y233W
+        double mutant.
+      cache_path: evidence/PF01941/mjmat-2009.txt
+      cache_sha256: c21109c952beba99de2cbe102b7ec3fbe8aa3ae4e723b8619cb6af79941ff0fb
 - graph_id: pc-mjmat-surrogate-product-2021
   title: Engineered MjMAT reaction and heat yield an ONB-TA readout
   scope: Peters 2021 Figure 3B and supplement S6/S8-S9 preparation-level assay.
-  context: L147A/I351A MjMAT, 10 uM enzyme, 10 mM ATP, variable ONB-Hcy, 80 C for 3 min; HPLC detects ONB-TA after AdoONB heat degradation.
-  family_mapping: Q58605 v1, PF01941 2-402. PDB 7P82 has a 20-residue His-tag prefix plus the exact 406-aa core with L147A/I351A; numbering is native-core numbering.
+  context: L147A/I351A MjMAT, 10 uM enzyme, 10 mM ATP, variable ONB-Hcy, 80 C for 3 min; HPLC detects
+    ONB-TA after AdoONB heat degradation.
+  family_mapping: Q58605 v1, PF01941 2-402. PDB 7P82 has a 20-residue His-tag prefix plus the exact 406-aa
+    core with L147A/I351A; numbering is native-core numbering.
   taxon: NCBITaxon:243232
   scope_status: MECHANISTIC
-  limitations: DIRECT describes the combined preparation-level output, not direct enzymatic formation of ONB-TA. Calibration assumes complete conversion after 2 h and half of D/L-ONB-Hcy is L; fitted kinetics inherit those assumptions. Exact prior assay-production methods remain a follow-up.
+  limitations: DIRECT describes the combined preparation-level output, not direct enzymatic formation
+    of ONB-TA. Calibration assumes complete conversion after 2 h and half of D/L-ONB-Hcy is L; fitted
+    kinetics inherit those assumptions. Exact prior assay-production methods remain a follow-up.
   nodes:
-  - {node_id: joint, label: PC-MjMAT plus ATP and ONB-Hcy with heat degradation, node_type: ACTIVITY, grounding: ['UniProtKB:Q58605']}
-  - {node_id: onbta, label: HPLC-detected ONB-TA breakdown product, node_type: STATE}
+  - node_id: joint
+    label: PC-MjMAT plus ATP and ONB-Hcy with heat degradation
+    node_type: ACTIVITY
+    grounding:
+    - UniProtKB:Q58605
+  - node_id: onbta
+    label: HPLC-detected ONB-TA breakdown product
+    node_type: STATE
   edges:
   - edge_id: joint-surrogate-product
     subject: joint
     predicate: produces
     object: onbta
-    mechanism: Enzymatic AdoONB generation followed by thermal breakdown yields the measured ONB-TA signal in the complete assay.
+    mechanism: Enzymatic AdoONB generation followed by thermal breakdown yields the measured ONB-TA signal
+      in the complete assay.
     directness: DIRECT
     support: OBSERVED
     evidence_kind: EXPERIMENTAL
-    evidence: [{reference: 'PMID:34606675', source_url: 'https://pmc.ncbi.nlm.nih.gov/articles/PMC9298006/', snippet: 'Temperature profile and kinetic studies of PC-MjMAT', explanation: 'Figure 3B; supplement PDF pp3,6-7, S6 and S8-S9. Enzyme and chemical degradation form a joint preparation, not separately proven sufficient causes.', cache_path: evidence/PF01941/pc-mjmat-2021.txt, cache_sha256: 08f9d75c567b1299a2cf6ef72a8349a4e45a96f38f1ea2fc9cab0f7b10b42683}]
+    evidence:
+    - reference: PMID:34606675
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC9298006/
+      snippet: Temperature profile and kinetic studies of PC-MjMAT
+      explanation: Figure 3B; supplement PDF pp3,6-7, S6 and S8-S9. Enzyme and chemical degradation form
+        a joint preparation, not separately proven sufficient causes.
+      cache_path: evidence/PF01941/pc-mjmat-2021.txt
+      cache_sha256: 08f9d75c567b1299a2cf6ef72a8349a4e45a96f38f1ea2fc9cab0f7b10b42683
 - graph_id: pc-mjmat-variant-comparison-2021
   title: L147A/I351A raises the one-hour ONB-TA assay signal
   scope: Peters 2021 Figure 3C and supplement S10, engineered versus WT enzyme.
-  context: 50 uM enzyme, 5 mM D/L-ONB-Hcy and 5 mM ATP, 50 mM HEPES pH7.4, 10 mM MgCl2, 5 mM KCl, 65 C for 1 h; HPLC with AdoHcy internal standard.
-  family_mapping: Q58605 v1, PF01941 2-402. PDB 7P82 independently verifies the L147A/I351A core; both native-core residue identities match current UniProt.
+  context: 50 uM enzyme, 5 mM D/L-ONB-Hcy and 5 mM ATP, 50 mM HEPES pH7.4, 10 mM MgCl2, 5 mM KCl, 65 C
+    for 1 h; HPLC with AdoHcy internal standard.
+  family_mapping: Q58605 v1, PF01941 2-402. PDB 7P82 independently verifies the L147A/I351A core; both
+    native-core residue identities match current UniProt.
   taxon: NCBITaxon:243232
   scope_status: PHENOTYPIC
-  limitations: The approximately 308-fold result is an endpoint ONB-TA peak comparison, not kcat/Km and not either single mutant. Breakdown chemistry, product accumulation and inhibition can influence the readout; no separate causal attribution to pocket volume is made.
+  limitations: The approximately 308-fold result is an endpoint ONB-TA peak comparison, not kcat/Km and
+    not either single mutant. Breakdown chemistry, product accumulation and inhibition can influence the
+    readout; no separate causal attribution to pocket volume is made.
   nodes:
-  - {node_id: variant, label: L147A/I351A PC-MjMAT instead of WT, node_type: PERTURBATION, grounding: ['UniProtKB:Q58605']}
-  - {node_id: signal, label: One-hour ONB-TA HPLC peak signal, node_type: STATE}
+  - node_id: variant
+    label: L147A/I351A PC-MjMAT instead of WT
+    node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q58605
+  - node_id: signal
+    label: One-hour ONB-TA HPLC peak signal
+    node_type: STATE
   edges:
   - edge_id: variant-higher-surrogate-signal
     subject: variant
     predicate: increases
     object: signal
-    mechanism: Under matched endpoint conditions PC-MjMAT yields much more ONB-TA signal than WT; the paper reports approximately 308-fold.
+    mechanism: Under matched endpoint conditions PC-MjMAT yields much more ONB-TA signal than WT; the
+      paper reports approximately 308-fold.
     directness: UNRESOLVED
     support: OBSERVED
     evidence_kind: EXPERIMENTAL
-    evidence: [{reference: 'PMID:34606675', source_url: 'https://pmc.ncbi.nlm.nih.gov/articles/PMC9298006/', snippet: 'Temperature profile and kinetic studies of PC-MjMAT', explanation: 'Figure 3C and supplement S10 visually inspected; supplement PDF p3 provides the assay conditions. The WT signal is near the detection baseline.', cache_path: evidence/PF01941/pc-mjmat-2021.txt, cache_sha256: 08f9d75c567b1299a2cf6ef72a8349a4e45a96f38f1ea2fc9cab0f7b10b42683}]
+    evidence:
+    - reference: PMID:34606675
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC9298006/
+      snippet: Temperature profile and kinetic studies of PC-MjMAT
+      explanation: Figure 3C and supplement S10 visually inspected; supplement PDF p3 provides the assay
+        conditions. The WT signal is near the detection baseline.
+      cache_path: evidence/PF01941/pc-mjmat-2021.txt
+      cache_sha256: 08f9d75c567b1299a2cf6ef72a8349a4e45a96f38f1ea2fc9cab0f7b10b42683
 - graph_id: pc-mjmat-ecm1-cascades-2021
   title: Joint PC-MjMAT and Ecm1 reactions modify a cap analog
   scope: Peters 2021 Figure 1C-D and supplement S3-S4; four separate donor reactions.
-  context: 50 uM PC-MjMAT, 50-100 uM Ecm1, 5 uM MTAN, 300 uM GpppA, 2.5 mM ATP and 5 mM indicated donor, 37 C for 90 min. Buffer and production methods partly refer to prior work.
-  family_mapping: PF01941 2-402 of Q58605 v1 in L147A/I351A MjMAT. The MAT is archaeal; Ecm1 is from Encephalitozoon cuniculi. Partner enzymes are not assigned PF01941 by this graph.
+  context: 50 uM PC-MjMAT, 50-100 uM Ecm1, 5 uM MTAN, 300 uM GpppA, 2.5 mM ATP and 5 mM indicated donor,
+    37 C for 90 min. Buffer and production methods partly refer to prior work.
+  family_mapping: PF01941 2-402 of Q58605 v1 in L147A/I351A MjMAT. The MAT is archaeal; Ecm1 is from Encephalitozoon
+    cuniculi. Partner enzymes are not assigned PF01941 by this graph.
   taxon: NCBITaxon:243232
   scope_status: MECHANISTIC
-  limitations: DIRECT refers to each complete multienzyme preparation, not direct RNA methylation by MAT. GpppA is a cap analog, not full-length RNA or a cell. Do not join the four alternative donors into one simultaneous pathway or infer a measured product-inhibition constant.
+  limitations: DIRECT refers to each complete multienzyme preparation, not direct RNA methylation by MAT.
+    GpppA is a cap analog, not full-length RNA or a cell. Do not join the four alternative donors into
+    one simultaneous pathway or infer a measured product-inhibition constant.
   nodes:
-  - {node_id: met, label: Complete cascade plus L-methionine, node_type: ACTIVITY}
-  - {node_id: onb, label: Complete cascade plus ONB-Hcy, node_type: ACTIVITY}
-  - {node_id: dmnb, label: Complete cascade plus DMNB-Hcy, node_type: ACTIVITY}
-  - {node_id: brom, label: Complete cascade plus pBrONB-Hcy, node_type: ACTIVITY}
-  - {node_id: capmet, label: N7-methylated GpppA product 4a, node_type: STATE}
-  - {node_id: caponb, label: N7-ONB GpppA product 4b, node_type: STATE}
-  - {node_id: capdmnb, label: N7-DMNB GpppA product 4c, node_type: STATE}
-  - {node_id: capbrom, label: N7-pBrONB GpppA product 4d, node_type: STATE}
+  - node_id: met
+    label: Complete cascade plus L-methionine
+    node_type: ACTIVITY
+    grounding:
+    - UniProtKB:Q58605
+  - node_id: onb
+    label: Complete cascade plus ONB-Hcy
+    node_type: ACTIVITY
+    grounding:
+    - UniProtKB:Q58605
+  - node_id: dmnb
+    label: Complete cascade plus DMNB-Hcy
+    node_type: ACTIVITY
+    grounding:
+    - UniProtKB:Q58605
+  - node_id: brom
+    label: Complete cascade plus pBrONB-Hcy
+    node_type: ACTIVITY
+    grounding:
+    - UniProtKB:Q58605
+  - node_id: capmet
+    label: N7-methylated GpppA product 4a
+    node_type: STATE
+  - node_id: caponb
+    label: N7-ONB GpppA product 4b
+    node_type: STATE
+  - node_id: capdmnb
+    label: N7-DMNB GpppA product 4c
+    node_type: STATE
+  - node_id: capbrom
+    label: N7-pBrONB GpppA product 4d
+    node_type: STATE
   edges:
   - edge_id: methyl-cap-product
     subject: met
     predicate: produces
     object: capmet
-    mechanism: The complete L-methionine cascade produces the methylated cap analog, reported as complete conversion at 90 min.
+    mechanism: The complete L-methionine cascade produces the methylated cap analog, reported as complete
+      conversion at 90 min.
     directness: DIRECT
     support: OBSERVED
     evidence_kind: EXPERIMENTAL
-    evidence: [{reference: 'PMID:34606675', source_url: 'https://pmc.ncbi.nlm.nih.gov/articles/PMC9298006/', snippet: 'Temperature profile and kinetic studies of PC-MjMAT', explanation: 'Figure 1C-D and supplement S3-S4; Methods PDF p3 includes MTAN, not merely MAT and Ecm1.', cache_path: evidence/PF01941/pc-mjmat-2021.txt, cache_sha256: 08f9d75c567b1299a2cf6ef72a8349a4e45a96f38f1ea2fc9cab0f7b10b42683}]
+    evidence:
+    - reference: PMID:34606675
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC9298006/
+      snippet: Temperature profile and kinetic studies of PC-MjMAT
+      explanation: Figure 1C-D and supplement S3-S4; Methods PDF p3 includes MTAN, not merely MAT and
+        Ecm1.
+      cache_path: evidence/PF01941/pc-mjmat-2021.txt
+      cache_sha256: 08f9d75c567b1299a2cf6ef72a8349a4e45a96f38f1ea2fc9cab0f7b10b42683
   - edge_id: onb-cap-product
     subject: onb
     predicate: produces
     object: caponb
-    mechanism: The complete ONB-Hcy cascade produces the ONB cap analog, reported at 97 percent conversion at 90 min.
+    mechanism: The complete ONB-Hcy cascade produces the ONB cap analog, reported at 97 percent conversion
+      at 90 min.
     directness: DIRECT
     support: OBSERVED
     evidence_kind: EXPERIMENTAL
-    evidence: [{reference: 'PMID:34606675', source_url: 'https://pmc.ncbi.nlm.nih.gov/articles/PMC9298006/', snippet: 'Temperature profile and kinetic studies of PC-MjMAT', explanation: 'Figure 1C-D and supplement S3-S4; this is a coupled donor-generation and methyltransferase reaction.', cache_path: evidence/PF01941/pc-mjmat-2021.txt, cache_sha256: 08f9d75c567b1299a2cf6ef72a8349a4e45a96f38f1ea2fc9cab0f7b10b42683}]
+    evidence:
+    - reference: PMID:34606675
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC9298006/
+      snippet: Temperature profile and kinetic studies of PC-MjMAT
+      explanation: Figure 1C-D and supplement S3-S4; this is a coupled donor-generation and methyltransferase
+        reaction.
+      cache_path: evidence/PF01941/pc-mjmat-2021.txt
+      cache_sha256: 08f9d75c567b1299a2cf6ef72a8349a4e45a96f38f1ea2fc9cab0f7b10b42683
   - edge_id: dmnb-cap-product
     subject: dmnb
     predicate: produces
     object: capdmnb
-    mechanism: The complete DMNB-Hcy cascade produces the DMNB cap analog, reported at 28 percent conversion at 90 min.
+    mechanism: The complete DMNB-Hcy cascade produces the DMNB cap analog, reported at 28 percent conversion
+      at 90 min.
     directness: DIRECT
     support: OBSERVED
     evidence_kind: EXPERIMENTAL
-    evidence: [{reference: 'PMID:34606675', source_url: 'https://pmc.ncbi.nlm.nih.gov/articles/PMC9298006/', snippet: 'Temperature profile and kinetic studies of PC-MjMAT', explanation: 'Figure 1C-D and supplement S3-S4; lower endpoint yield is not a measured MAT-only specificity constant.', cache_path: evidence/PF01941/pc-mjmat-2021.txt, cache_sha256: 08f9d75c567b1299a2cf6ef72a8349a4e45a96f38f1ea2fc9cab0f7b10b42683}]
+    evidence:
+    - reference: PMID:34606675
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC9298006/
+      snippet: Temperature profile and kinetic studies of PC-MjMAT
+      explanation: Figure 1C-D and supplement S3-S4; lower endpoint yield is not a measured MAT-only specificity
+        constant.
+      cache_path: evidence/PF01941/pc-mjmat-2021.txt
+      cache_sha256: 08f9d75c567b1299a2cf6ef72a8349a4e45a96f38f1ea2fc9cab0f7b10b42683
   - edge_id: brom-cap-product
     subject: brom
     predicate: produces
     object: capbrom
-    mechanism: The complete pBrONB-Hcy cascade produces the brominated ONB cap analog, reported at 56 percent conversion at 90 min.
+    mechanism: The complete pBrONB-Hcy cascade produces the brominated ONB cap analog, reported at 56
+      percent conversion at 90 min.
     directness: DIRECT
     support: OBSERVED
     evidence_kind: EXPERIMENTAL
-    evidence: [{reference: 'PMID:34606675', source_url: 'https://pmc.ncbi.nlm.nih.gov/articles/PMC9298006/', snippet: 'Temperature profile and kinetic studies of PC-MjMAT', explanation: 'Figure 1C-D and supplement S3-S4; no DNA photolysis or cellular effect is inferred from this cap-analog assay.', cache_path: evidence/PF01941/pc-mjmat-2021.txt, cache_sha256: 08f9d75c567b1299a2cf6ef72a8349a4e45a96f38f1ea2fc9cab0f7b10b42683}]
+    evidence:
+    - reference: PMID:34606675
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC9298006/
+      snippet: Temperature profile and kinetic studies of PC-MjMAT
+      explanation: Figure 1C-D and supplement S3-S4; no DNA photolysis or cellular effect is inferred
+        from this cap-analog assay.
+      cache_path: evidence/PF01941/pc-mjmat-2021.txt
+      cache_sha256: 08f9d75c567b1299a2cf6ef72a8349a4e45a96f38f1ea2fc9cab0f7b10b42683

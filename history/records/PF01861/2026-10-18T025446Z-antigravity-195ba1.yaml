@@ -1,0 +1,44 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01861
+  path: curation/families/PF01861.yaml
+session:
+  id: 2026-10-18T025446Z-antigravity-195ba1
+  timestamp: '2026-10-18T02:54:46Z'
+  actors:
+  - type: ai_agent
+    name: Antigravity
+    model: Claude Opus 4.6
+    agent_tool: Antigravity
+events:
+- type: EDIT
+  outcome: changed
+  summary: Ground causal graph gene and protein nodes in PF01861 with verified UniProtKB
+    accessions (UniProtKB:Q5JIZ3, UniProtKB:Q72L89)
+  details: 'Reviewed PF01861 causal_graphs and grounded gene/protein PERTURBATION,
+    ACTIVITY, and protein-complex STATE nodes across 7 causal graph(s) using verified
+    UniProtKB accessions from family_mapping:
+
+    - `tkbpsa-acceptor-specific-products`: grounded tk-branched-reaction -> UniProtKB:Q5JIZ3;
+    d159a-preparation -> UniProtKB:Q5JIZ3; d160a-preparation -> UniProtKB:Q5JIZ3
+
+    - `tkbpsa-terminal-quadruple-kinetics`: grounded terminal-quadruple-preparation
+    -> UniProtKB:Q5JIZ3; spermidine-kcat -> UniProtKB:Q5JIZ3; spermidine-efficiency
+    -> UniProtKB:Q5JIZ3
+
+    - `tthbpsa-c9-acceptor-specificity`: grounded replace-tth-terminal-segment ->
+    UniProtKB:Q72L89; branched-norspermidine-efficiency -> UniProtKB:Q72L89
+
+    - `tkbpsa-candidate-carrier-transfer`: grounded putative-preloaded-carrier-with-acceptor
+    -> UniProtKB:Q5JIZ3
+
+    - `tkbpsa-2014-sulfur-growth`: grounded dbp1-versus-ku216-sulfur -> UniProtKB:Q5JIZ3
+
+    - `tkbpsa-2025-pyruvate-growth`: grounded dbp1-pyruvate-genotype -> UniProtKB:Q5JIZ3;
+    kps-versus-dbp1-genotype -> UniProtKB:Q5JIZ3
+
+    - `tkbpsa-cold-cycle-survival`: grounded dbp1-cold-genotype -> UniProtKB:Q5JIZ3;
+    kps-cold-genotype -> UniProtKB:Q5JIZ3'
+  sections:
+  - causal_graphs

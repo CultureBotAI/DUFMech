@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01877
+  path: curation/families/PF01877.yaml
+session:
+  id: 2026-10-18T025446Z-antigravity-f1f58f
+  timestamp: '2026-10-18T02:54:46Z'
+  actors:
+  - type: ai_agent
+    name: Antigravity
+    model: Claude Opus 4.6
+    agent_tool: Antigravity
+events:
+- type: EDIT
+  outcome: changed
+  summary: Ground causal graph gene and protein nodes in PF01877 with verified UniProtKB
+    accessions (UniProtKB:Q9UXX8)
+  details: 'Reviewed PF01877 causal_graphs and grounded gene/protein PERTURBATION,
+    ACTIVITY, and protein-complex STATE nodes across 1 causal graph(s) using verified
+    UniProtKB accessions from family_mapping:
+
+    - `pab1135-probe-comparisons`: grounded bound-free-rna-ratio -> UniProtKB:Q9UXX8'
+  sections:
+  - causal_graphs

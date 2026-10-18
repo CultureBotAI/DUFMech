@@ -1,0 +1,37 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01657
+  path: curation/families/PF01657.yaml
+session:
+  id: 2026-10-18T025446Z-antigravity-ccacab
+  timestamp: '2026-10-18T02:54:46Z'
+  actors:
+  - type: ai_agent
+    name: Antigravity
+    model: Claude Opus 4.6
+    agent_tool: Antigravity
+events:
+- type: EDIT
+  outcome: changed
+  summary: Ground causal graph gene and protein nodes in PF01657 with verified UniProtKB
+    accessions (UniProtKB:A4ZDL6)
+  details: 'Reviewed PF01657 causal_graphs and grounded gene/protein PERTURBATION,
+    ACTIVITY, and protein-complex STATE nodes across 6 causal graph(s) using verified
+    UniProtKB accessions from family_mapping:
+
+    - `gnk2-mannobiose-spr`: grounded r93a -> UniProtKB:A4ZDL6; e104a -> UniProtKB:A4ZDL6
+
+    - `gnk2-by4741-growth-delay`: grounded r93a-treatment -> UniProtKB:A4ZDL6
+
+    - `gnk2-mnn2-dependent-growth-response`: grounded gnk2-dependent-delay -> UniProtKB:A4ZDL6
+
+    - `gnk2-fculmorum-liquid-growth`: grounded r93a-liquid-treatment -> UniProtKB:A4ZDL6
+
+    - `gnk2-foxysporum-disc-growth`: grounded wt-disc -> UniProtKB:A4ZDL6; r93a-disc
+    -> UniProtKB:A4ZDL6
+
+    - `gnk2-fculmorum-disc-growth`: grounded wt-disc -> UniProtKB:A4ZDL6; r93a-disc
+    -> UniProtKB:A4ZDL6'
+  sections:
+  - causal_graphs

@@ -1,0 +1,39 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01934
+  path: curation/families/PF01934.yaml
+session:
+  id: 2026-10-18T025446Z-antigravity-c6d9f2
+  timestamp: '2026-10-18T02:54:46Z'
+  actors:
+  - type: ai_agent
+    name: Antigravity
+    model: Claude Opus 4.6
+    agent_tool: Antigravity
+events:
+- type: EDIT
+  outcome: changed
+  summary: Ground causal graph gene and protein nodes in PF01934 with verified UniProtKB
+    accessions (UniProtKB:I3ZRF2, UniProtKB:Q8EGZ7)
+  details: 'Reviewed PF01934 causal_graphs and grounded gene/protein PERTURBATION,
+    ACTIVITY, and protein-complex STATE nodes across 6 causal graph(s) using verified
+    UniProtKB accessions from family_mapping:
+
+    - `thermococcus-pair-heterologous-cfu-2020`: grounded pair -> UniProtKB:I3ZRF2;
+    y82f -> UniProtKB:I3ZRF2
+
+    - `fhepta-fragment-ecoli-cfu-2026`: grounded fragment -> UniProtKB:Q8EGZ7
+
+    - `fhepta-modification-variants-2026`: grounded donor-mutant -> UniProtKB:Q8EGZ7;
+    acceptor-mutant -> UniProtKB:Q8EGZ7
+
+    - `fhepta-fragment-rna-redox-2026`: grounded reaction -> UniProtKB:Q8EGZ7; cleavage
+    -> UniProtKB:Q8EGZ7
+
+    - `fhepta-cysteine-oxidative-cfu-2026`: grounded mutant -> UniProtKB:Q8EGZ7
+
+    - `fhepta-redox-band-states-2026`: grounded reducing -> UniProtKB:Q8EGZ7; mutant
+    -> UniProtKB:Q8EGZ7'
+  sections:
+  - causal_graphs

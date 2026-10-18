@@ -127,6 +127,8 @@ causal_graphs:
   - node_id: memo1-with-copper-and-ascorbate
     label: Add Memo1 to copper and ascorbate in air
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q9Y316
   - node_id: ascorbate-consumption
     label: Ascorbate consumption inferred from A265 loss
     node_type: PROCESS
@@ -165,6 +167,8 @@ causal_graphs:
   - node_id: memo1-in-coupled-reaction
     label: Add Memo1 to the copper/ascorbate/HRP/Amplex mixture
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q9Y316
   - node_id: resorufin-signal
     label: H2O2-linked resorufin fluorescence
     node_type: STATE
@@ -206,6 +210,8 @@ causal_graphs:
   - node_id: h192a
     label: Replace WT Memo with H192A in the copper-containing assay
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q9Y316
   - node_id: luminol-response
     label: Blank-corrected luminol response
     node_type: STATE
@@ -247,6 +253,8 @@ causal_graphs:
   - node_id: simemo1
     label: Apply the Memo1 siRNA pool
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q9Y316
   - node_id: wound-closure
     label: Recovered wound area at 24 hours
     node_type: PHENOTYPE
@@ -286,6 +294,8 @@ causal_graphs:
   - node_id: simemo1-with-copper
     label: Knock down Memo1 during 350-uM CuCl2 exposure
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q9Y316
   - node_id: mtt-signal
     label: MTT absorbance at 570 nm
     node_type: PHENOTYPE
@@ -325,6 +335,8 @@ causal_graphs:
   - node_id: simemo1-with-copper
     label: Knock down Memo1 during 350-uM CuCl2 exposure
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q9Y316
   - node_id: ros-glo-signal
     label: ROS-Glo H2O2-linked luminescence
     node_type: STATE
@@ -406,9 +418,13 @@ causal_graphs:
   - node_id: h49a
     label: Substitute H49A in the purified protein
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q9Y316
   - node_id: c244s
     label: Substitute C244S in the purified protein
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q9Y316
   - node_id: iron-binding-response
     label: WT-like iron-binding calorimetric response
     node_type: STATE
@@ -466,6 +482,8 @@ causal_graphs:
   - node_id: memo1-knockout
     label: M67-9 MEMO1 knockout instead of parental MDA-MB-231
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q9Y316
   - node_id: cytosolic-iron
     label: Iron per protein in the cytosolic fraction
     node_type: STATE
@@ -544,6 +562,8 @@ causal_graphs:
   - node_id: knockout-with-rsl3
     label: Use M67-9 knockout cells during matched RSL3 exposure
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q9Y316
   - node_id: normalized-resazurin
     label: Normalized resazurin fluorescence
     node_type: PHENOTYPE
@@ -582,6 +602,8 @@ causal_graphs:
   - node_id: knockout-with-dfx
     label: M67-9 knockout with1-uM overnight deferoxamine
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q9Y316
   - node_id: perinuclear-clustering
     label: Perinuclear mitochondrial clustering
     node_type: PHENOTYPE
@@ -619,5 +641,13 @@ curation_events:
   outcome: needs_followup
   summary: Review Memo metal binding redox and cellular causal contexts
   history_record: history/records/PF01875/2026-10-11T185106Z-codex-5de1fa.yaml
+  event_index: 0
+  llm_assisted: true
+- timestamp: '2026-10-18T02:54:46Z'
+  curator: Antigravity
+  action: EDIT
+  outcome: changed
+  summary: Ground causal graph gene and protein nodes in PF01875 with verified UniProtKB accessions (UniProtKB:Q9Y316)
+  history_record: history/records/PF01875/2026-10-18T025446Z-antigravity-2dc42c.yaml
   event_index: 0
   llm_assisted: true

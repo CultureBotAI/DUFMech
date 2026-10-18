@@ -111,15 +111,23 @@ causal_graphs:
   - node_id: wt-gm-reaction
     label: Full-length WT SaOatA plus acetyl-CoA and GM oligomers
     node_type: ACTIVITY
+    grounding:
+    - UniProtKB:Q2FV54
   - node_id: substitute-s453a-g5
     label: Substitute the published S453A preparation in the G5 assay
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q2FV54
   - node_id: substitute-s453a-gm
     label: Substitute the published S453A preparation in the GM assay
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q2FV54
   - node_id: substitute-c-domain-gm
     label: Substitute isolated C-domain in the GM assay
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q2FV54
   - node_id: acetyl-g5-product
     label: Detected acetyl-G5 product
     node_type: STATE
@@ -236,24 +244,38 @@ causal_graphs:
   - node_id: r25a-preparation
     label: Substitute R25A for WT in the matched assay
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q2FV54
   - node_id: r25k-preparation
     label: Substitute R25K for WT in the matched assay
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q2FV54
   - node_id: h36a-preparation
     label: Substitute H36A for WT in the matched assay
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q2FV54
   - node_id: r86a-preparation
     label: Substitute R86A for WT in the matched assay
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q2FV54
   - node_id: y136a-preparation
     label: Substitute Y136A for WT in the matched assay
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q2FV54
   - node_id: e154a-preparation
     label: Substitute E154A for WT in the matched assay
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q2FV54
   - node_id: y206a-preparation
     label: Substitute Y206A for WT in the matched assay
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q2FV54
   - node_id: coash-release
     label: DTDP-detected CoASH release from acetyl-CoA
     node_type: PROCESS
@@ -458,12 +480,18 @@ causal_graphs:
   - node_id: complement-wt
     label: Add WT pACCJ3 to the oatA deletion strain
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:A0A0H2XFE4
   - node_id: complement-h36a
     label: Replace WT complement with H36A pACCJ3
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:A0A0H2XFE4
   - node_id: complement-y206a
     label: Replace WT complement with Y206A pACCJ3
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:A0A0H2XFE4
   - node_id: pg-acetyl-fraction
     label: PG base-labile acetyl groups per muramic acid
     node_type: PHENOTYPE
@@ -549,9 +577,13 @@ causal_graphs:
   - node_id: delete-oata
     label: Delete oatA relative to WT under matched exposure
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:A0A0H2XFE4
   - node_id: restore-wt-oata
     label: Complement the deletion with WT pACCJ3
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:A0A0H2XFE4
   - node_id: twelve-hour-growth
     label: Relative delta-OD600 after 12 h with lysozyme and tunicamycin
     node_type: PHENOTYPE
@@ -610,12 +642,18 @@ causal_graphs:
   - node_id: donor-and-unmodified-oata
     label: Acetyl-CoA with full-length OatA carrying unacetylated Tyr206
     node_type: STATE
+    grounding:
+    - UniProtKB:Q2FV54
   - node_id: tyr206-acetylated-oata
     label: Full-length OatA carrying O-acetyl-Tyr206 and available Ser453
     node_type: STATE
+    grounding:
+    - UniProtKB:Q2FV54
   - node_id: ser453-acetylated-oata
     label: OatA carrying acetyl-Ser453 after release of the Tyr206 acetyl group
     node_type: STATE
+    grounding:
+    - UniProtKB:Q2FV54
   edges:
   - edge_id: proposed-donor-to-tyr206
     subject: donor-and-unmodified-oata
@@ -676,5 +714,14 @@ curation_events:
   outcome: needs_followup
   summary: Retain partial scientific review of SaOatA causal effects and proposed relay
   history_record: history/records/PF01757/2026-10-11T145601Z-codex-f6258e.yaml
+  event_index: 0
+  llm_assisted: true
+- timestamp: '2026-10-18T02:54:46Z'
+  curator: Antigravity
+  action: EDIT
+  outcome: changed
+  summary: Ground causal graph gene and protein nodes in PF01757 with verified UniProtKB accessions (UniProtKB:Q2FV54,
+    UniProtKB:A0A0H2XFE4)
+  history_record: history/records/PF01757/2026-10-18T025446Z-antigravity-45e4e1.yaml
   event_index: 0
   llm_assisted: true

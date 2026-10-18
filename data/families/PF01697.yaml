@@ -203,6 +203,8 @@ causal_graphs:
   - node_id: supplied-acceptor-galactosylation
     label: Qualitative galactosylation of the supplied glycopeptide
     node_type: ACTIVITY
+    grounding:
+    - UniProtKB:O16374
   edges:
   - edge_id: mmf6-decreases-conversion-versus-gngnf6
     subject: gngnf6-to-mmf6
@@ -359,6 +361,7 @@ causal_graphs:
     node_type: PERTURBATION
     grounding:
     - WormBase:WBGene00019763
+    - UniProtKB:O16374
   - node_id: unc119-cgl2-l4-fraction
     label: Fraction reaching L4 at72h on CGL2 food in the unc-119 comparison
     node_type: PHENOTYPE
@@ -399,9 +402,13 @@ causal_graphs:
   - node_id: integrate-opis444
     label: Introduce joint galt-1-mCherry and unc-119 marker array opIs444
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:O16374
   - node_id: integrate-opis445
     label: Introduce joint galt-1-mCherry and unc-119 marker array opIs445
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:O16374
   - node_id: rescued-cgl2-l4-fraction
     label: L4 fraction after72h on CGL2 food relative to the double mutant
     node_type: PHENOTYPE
@@ -461,6 +468,7 @@ causal_graphs:
     node_type: PERTURBATION
     grounding:
     - WormBase:WBGene00019763
+    - UniProtKB:O16374
   - node_id: pmk1-cgl2-l4-fraction
     label: Fraction reaching L4 at72h on CGL2 food in the pmk-1 comparison
     node_type: PHENOTYPE
@@ -504,6 +512,7 @@ causal_graphs:
     node_type: PERTURBATION
     grounding:
     - WormBase:WBGene00019763
+    - UniProtKB:O16374
   - node_id: selected-core-galactosylated-peak
     label: Selected core-galactosylated Hex5dHex2HexNAc2-PA peakA
     node_type: STATE
@@ -541,5 +550,13 @@ curation_events:
   outcome: needs_followup
   summary: Retain partial scientific self-review of GALT-1 causal contexts
   history_record: history/records/PF01697/2026-10-11T140145Z-codex-383347.yaml
+  event_index: 0
+  llm_assisted: true
+- timestamp: '2026-10-18T02:54:46Z'
+  curator: Antigravity
+  action: EDIT
+  outcome: changed
+  summary: Ground causal graph gene and protein nodes in PF01697 with verified UniProtKB accessions (UniProtKB:O16374)
+  history_record: history/records/PF01697/2026-10-18T025446Z-antigravity-8a4173.yaml
   event_index: 0
   llm_assisted: true

@@ -444,15 +444,23 @@ causal_graphs:
   - node_id: b2058
     label: B2058 MarC S140SS serine insertion relative to B1950
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:P0AEY1
   - node_id: b2059
     label: B2059 MarC V145E plus ydbD I155I and insO R20W relative to B1950
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:P0AEY1
   - node_id: b2063
     label: B2063 MarC L10Q relative to B1950
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:P0AEY1
   - node_id: b2068
     label: B2068 MarC G11E relative to B1950
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:P0AEY1
   - node_id: growth
     label: Spot growth at limiting threonine
     node_type: PHENOTYPE
@@ -545,15 +553,23 @@ causal_graphs:
   - node_id: b2058
     label: B2058 MarC S140SS serine insertion relative to B1950
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:P0AEY1
   - node_id: b2059
     label: B2059 MarC V145E plus ydbD I155I and insO R20W relative to B1950
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:P0AEY1
   - node_id: b2063
     label: B2063 MarC L10Q relative to B1950
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:P0AEY1
   - node_id: b2068
     label: B2068 MarC G11E relative to B1950
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:P0AEY1
   - node_id: uptake
     label: One-minute cellular 14C-threonine uptake
     node_type: PROCESS
@@ -642,6 +658,8 @@ causal_graphs:
   - node_id: pbr-yche
     label: B1895 carrying pBRychE relative to empty pBR322
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:P25743
   - node_id: growth
     label: Spot growth at 1.25 mM threonine
     node_type: PHENOTYPE
@@ -682,9 +700,13 @@ causal_graphs:
   - node_id: no-solvent
     label: Reported marC::kan strain versus EcNR1 in glucose, 0% isobutanol
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:P0AEY1
   - node_id: isobutanol
     label: Reported marC::kan strain versus EcNR1 in glucose, 0.5% isobutanol
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:P0AEY1
   - node_id: no-solvent-growth-value
     label: 0% isobutanol maximum specific growth rate
     node_type: PHENOTYPE
@@ -789,9 +811,13 @@ causal_graphs:
   - node_id: no-solvent
     label: Reported marC::kan strain versus EcNR1 in xylose, 0% isobutanol
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:P0AEY1
   - node_id: isobutanol
     label: Reported marC::kan strain versus EcNR1 in xylose, 0.5% isobutanol
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:P0AEY1
   - node_id: no-solvent-growth-value
     label: 0% isobutanol maximum specific growth rate
     node_type: PHENOTYPE
@@ -897,9 +923,13 @@ causal_graphs:
   - node_id: deletion-isoprenol
     label: MarC deletion background under 50 mM isoprenol
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:P0AEY1
   - node_id: deletion-butanol
     label: MarC deletion under 5 g/L butanol
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:P0AEY1
   - node_id: isoprenol-growth
     label: Relative growth rate under isoprenol
     node_type: PHENOTYPE
@@ -1151,5 +1181,14 @@ curation_events:
   outcome: needs_followup
   summary: Review corrected YchE p-value and preserve all PF01914 cellular contexts
   history_record: history/records/PF01914/2026-10-12T005437Z-codex-8e306d.yaml
+  event_index: 0
+  llm_assisted: true
+- timestamp: '2026-10-18T02:54:46Z'
+  curator: Antigravity
+  action: EDIT
+  outcome: changed
+  summary: Ground causal graph gene and protein nodes in PF01914 with verified UniProtKB accessions (UniProtKB:P0AEY1,
+    UniProtKB:P25743)
+  history_record: history/records/PF01914/2026-10-18T025446Z-antigravity-b11c19.yaml
   event_index: 0
   llm_assisted: true

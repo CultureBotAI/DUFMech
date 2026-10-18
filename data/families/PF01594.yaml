@@ -127,6 +127,8 @@ causal_graphs:
   - node_id: tqsa-deletion-lbglu
     label: Complete ydgG::KmR replacement rather than WT in LBglu
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:P0AFS5
   - node_id: extracellular-bb170-lbglu
     label: BB170 luminescence activity elicited by LBglu supernatant
     node_type: ACTIVITY
@@ -168,9 +170,13 @@ causal_graphs:
   - node_id: tqsa-deletion-exponential
     label: ydgG::KmR rather than WT at OD600 0.6 in LBglu
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:P0AFS5
   - node_id: tqsa-deletion-stationary
     label: ydgG::KmR rather than WT at OD600 6 in LBglu
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:P0AFS5
   - node_id: lsr-exponential-output
     label: Exponential-phase lsrACDBFG::lacZ beta-galactosidase output
     node_type: ACTIVITY
@@ -232,6 +238,8 @@ causal_graphs:
   - node_id: induce-tqsa-complement
     label: Induce pCA24NydgG+ in the deletion background with 1.5 mM IPTG
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:P0AFS5
   - node_id: complemented-extracellular-output
     label: Extracellular BB170 activity after antibiotic removal and regrowth
     node_type: ACTIVITY
@@ -275,6 +283,8 @@ causal_graphs:
   - node_id: tqsa-deletion-biofilm-lbglu
     label: ydgG::KmR rather than WT in LB plus glucose
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:P0AFS5
   - node_id: stained-mass-lbglu
     label: Crystal-violet-stained attached material in LBglu wells
     node_type: STATE
@@ -314,6 +324,8 @@ causal_graphs:
   - node_id: tqsa-deletion-m9cglu
     label: ydgG::KmR rather than WT in M9Cglu wells
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:P0AFS5
   - node_id: stained-mass-m9cglu
     label: Crystal-violet-stained attached material in M9Cglu wells
     node_type: STATE
@@ -354,6 +366,8 @@ causal_graphs:
   - node_id: tqsa-deletion-biofilm-lb
     label: ydgG::KmR rather than WT in LB without added glucose
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:P0AFS5
   - node_id: stained-mass-lb
     label: Crystal-violet-stained attached material in LB wells
     node_type: STATE
@@ -391,5 +405,13 @@ curation_events:
   outcome: needs_followup
   summary: Retain partial scientific self-review of scoped causal effects and unresolved mechanism coverage.
   history_record: history/records/PF01594/2026-10-11T115026Z-codex-671105.yaml
+  event_index: 0
+  llm_assisted: true
+- timestamp: '2026-10-18T02:54:46Z'
+  curator: Antigravity
+  action: EDIT
+  outcome: changed
+  summary: Ground causal graph gene and protein nodes in PF01594 with verified UniProtKB accessions (UniProtKB:P0AFS5)
+  history_record: history/records/PF01594/2026-10-18T025446Z-antigravity-f8cc90.yaml
   event_index: 0
   llm_assisted: true

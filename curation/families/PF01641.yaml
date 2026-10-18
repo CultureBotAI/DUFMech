@@ -2,217 +2,308 @@ pfam_id: PF01641
 curation_status: IN_PROGRESS
 curation_history: history/records/PF01641
 causal_graphs:
-  - graph_id: selr-fly-dabsyl-r-sulfoxide-reduction
-    title: Purified Drosophila SelR produces dabsyl methionine from the R-sulfoxide
-    scope: N-terminal His6-tagged Drosophila melanogaster SelR, 155-aa native insert, Kryukov 2002 Figure 3B; separate from mouse U95C and the yeast deletions.
-    context: Experimental cDNA AF486578.1 encodes AAM10931.1; pET28a expression in E. coli BL21(DE3), Talon affinity purification. Separate dabsyl-L-methionine R- and S-sulfoxides tested with and without enzyme in the DTT assay context. HPLC detection at 436 nm. This paper refers to an earlier protocol without restating all enzyme/substrate/reductant doses or reaction duration; later JBC assay numbers are not retroactively assigned.
-    family_mapping: AAM10931.1 exactly matches UniProt Q8INK9-2, 155-aa isoform A/I, not the current 208-aa canonical protein. Canonical PF01641 61-186 projects to isoform 19-133 after annotated deletions of canonical 1-42 and 134-144. This is coordinate transfer, not a fresh isoform HMM hit. The 166-aa predicted ORF in the paper's alignment retains the internal 11 residues absent from the tested clone. His6/vector residues are outside this mapping.
-    scope_status: MECHANISTIC
-    taxon: NCBITaxon:7227
-    limitations: Product formation in a purified assay is observed; it does not measure reduction of an intact oxidized protein, physiological electron-donor specificity, free-methionine utilization or a complete catalytic cycle. The S substrate is negative under the displayed conditions. The 1.5-min impurity peak is not product. C124 sulfenic-acid and C69 disulfide steps from later work remain unadopted pending inspection of its Results and figures.
-    nodes:
-      - node_id: fly-selr-r-substrate-dtt
-        label: Incubate dabsyl R-sulfoxide with tagged 155-aa SelR and DTT
-        node_type: PERTURBATION
-        grounding: [UniProtKB:Q8INK9-2]
-      - node_id: dabsyl-methionine-product
-        label: HPLC-detected dabsyl methionine product
-        node_type: STATE
-    edges:
-      - edge_id: fly-selr-produces-dabsyl-methionine
-        subject: fly-selr-r-substrate-dtt
-        predicate: produces
-        object: dabsyl-methionine-product
-        mechanism: Adding purified tagged SelR to the R-substrate assay yields the assigned dabsyl-methionine peak relative to the substrate-only trace. The matched S-substrate series lacks the product response. The joint substrate/enzyme/reductant condition is not split into independently sufficient causes or unobserved redox intermediates.
-        directness: DIRECT
-        support: OBSERVED
-        evidence_kind: EXPERIMENTAL
-        evidence:
-          - reference: PMID:11929995
-            source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC123633/
-            snippet: reduced a dabsyl derivative
-            explanation: Figure 3B was visually inspected with Methods and the Drosophila biochemical Results. The four traces distinguish enzyme addition, substrate stereochemistry and product from impurity.
-            cache_path: evidence/PF01641/kryukov-2002-selr.txt
-            cache_sha256: 8e22edaff613090cd537117fd3121930bf815b3d417c6f35e1d890eea5497fbd
-          - reference: https://www.ncbi.nlm.nih.gov/nuccore/AF486578.1
-            source_url: https://www.ncbi.nlm.nih.gov/nuccore/AF486578.1
-            snippet: AF486578.1 CDS245..712 encodes AAM10931.1, exactly matching 155-aa Q8INK9-2
-            explanation: Deposited CDS translation and UniProt isoform FASTA match exactly. Annotated isoform deletions explain the transferred Pfam interval and prevent using the canonical 208-aa protein as the tested construct.
-            cache_path: evidence/PF01641/SelR-identities.txt
-            cache_sha256: c8ab51aa3e970b77c34b406fd10c945d6b7b72ac3654828670d6b0e09648efea
-  - graph_id: selr-mouse-u95c-dabsyl-r-sulfoxide-reduction
-    title: The mouse SelR Cys-for-Sec construct produces dabsyl methionine
-    scope: Purified mouse SelR U95C construct, Kryukov 2002 Figure 3A; this is not an assay of native Sec-containing mouse MsrB1.
-    context: Full SelR coding region cloned into pET21d(+), expressed in E. coli BL21(DE3), purified by DEAE flow-through and heparin HPLC. Dabsyl R- or S-sulfoxide assays in the presence of DTT, HPLC at 436 nm. Exact assay doses and duration are not restated in this paper. Complete vector-derived termini were not independently determined; tag-free native sequence is not asserted.
-    family_mapping: Current Q9JLC3 is 116 aa with Sec95 and PF01641 12-105. The 2001 archived sequence uses C95 with explicit SE_CYS95 annotation and otherwise exactly matches today's reference, supporting the historical numbering but not a natural cysteine allele. The tested Cys-for-Sec protein maps to U95C within the domain. Terminal PCR coding sequences are consistent with this reference.
-    scope_status: MECHANISTIC
-    taxon: NCBITaxon:10090
-    limitations: Figure 3A shows product with R substrate and not S, but does not display a matched mouse R-substrate/no-enzyme trace; Figure 3B's controls use the separate fly preparation. No native-Sec versus U95C rate ratio, selenium requirement, physiological substrate, isolated-domain sufficiency or resolved catalytic intermediate is measured. Methionine sulfone is also reported negative.
-    nodes:
-      - node_id: mouse-u95c-r-substrate-dtt
-        label: Incubate dabsyl R-sulfoxide with mouse SelR U95C and DTT
-        node_type: PERTURBATION
-        grounding: [UniProtKB:Q9JLC3]
-      - node_id: mouse-dabsyl-methionine-product
-        label: HPLC-detected dabsyl methionine product
-        node_type: STATE
-    edges:
-      - edge_id: mouse-u95c-produces-dabsyl-methionine
-        subject: mouse-u95c-r-substrate-dtt
-        predicate: produces
-        object: mouse-dabsyl-methionine-product
-        mechanism: The purified U95C preparation produces the assigned dabsyl-methionine peak with R-sulfoxide, unlike the S-substrate assay. This retains the directly observed chemical product without claiming that the native selenoprotein was tested or that a specific transient intermediate was captured.
-        directness: DIRECT
-        support: OBSERVED
-        evidence_kind: EXPERIMENTAL
-        evidence:
-          - reference: PMID:11929995
-            source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC123633/
-            snippet: reduced a dabsyl derivative
-            explanation: Figure 3A and mouse expression/assay Methods were inspected; the absence of a displayed panel-A no-enzyme control and the Cys-for-Sec construct are explicit.
-            cache_path: evidence/PF01641/kryukov-2002-selr.txt
-            cache_sha256: 8e22edaff613090cd537117fd3121930bf815b3d417c6f35e1d890eea5497fbd
-          - reference: https://www.ebi.ac.uk/interpro/api/protein/uniprot/Q9JLC3/entry/pfam/PF01641/
-            source_url: https://www.ebi.ac.uk/interpro/api/protein/uniprot/Q9JLC3/entry/pfam/PF01641/
-            snippet: Q9JLC3 Pfam:PF01641; interval 12-105 inclusive.
-            explanation: Current sequence/domain mapping, archived entry8 and primer comparison distinguish natural Sec95 from the tested U95C construct while retaining unresolved vector termini.
-            cache_path: evidence/PF01641/SelR-identities.txt
-            cache_sha256: c8ab51aa3e970b77c34b406fd10c945d6b7b72ac3654828670d6b0e09648efea
-  - graph_id: selr-yeast-msra-background-basal-growth
-    title: SelR loss reduces basal yeast growth in an MsrA-deleted background
-    scope: BY4741-derived MsrA deletion GY4 versus SelR/MsrA double deletion GY5, Kryukov 2002 Figure 2A; this is an additional SelR-loss effect conditional on MsrA absence.
-    context: Stationary overnight cultures diluted to OD600 0.05 in supplemented YNB, 30 C, 250 rpm, no added peroxide, observed for about 14 h. SelR/YCL033C is replaced by KAN-R and MsrA by URA3; MsrA deletion is PCR checked. Methods prints MAT-alpha for BY4741, an unresolved historical notation; exact supplement composition is not enumerated in the caption.
-    family_mapping: Deleted YCL033C corresponds to MXR2/MSRB reference P25566, 168 aa, with PF01641 47-166. P25566 is S288c reference grounding, not a resequenced experimental BY4741 isolate. Whole-gene loss does not establish isolated-domain activity or the molecular cause of the growth effect.
-    scope_status: PHENOTYPIC
-    limitations: The double mutant accumulates biomass more slowly, whereas SelR-only and MsrA-only deletions approximately track WT without peroxide. No target-gene complementation, replicate/error bars, fitted growth rate or direct intracellular repair measurement is shown. The conditional effect is not evidence that SelR alone is universally essential for growth.
-    nodes:
-      - node_id: selr-loss-msra-background
-        label: Additional SelR deletion in the MsrA-deleted yeast background
-        node_type: PERTURBATION
-        grounding: [UniProtKB:P25566]
-      - node_id: basal-od-accumulation
-        label: Liquid-culture OD600 accumulation over the displayed 14 h
-        node_type: PHENOTYPE
-    edges:
-      - edge_id: selr-loss-decreases-msra-background-growth
-        subject: selr-loss-msra-background
-        predicate: decreases
-        object: basal-od-accumulation
-        mechanism: GY5 accumulates OD600 more slowly than GY4 in the zero-peroxide series. The directly manipulated genotype has an observed indirect growth effect, without assigning the entire two-gene phenotype to a particular biochemical intermediate.
-        directness: INDIRECT
-        support: OBSERVED
-        evidence_kind: EXPERIMENTAL
-        evidence:
-          - reference: PMID:11929995
-            source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC123633/
-            snippet: double knockout strain grew slower
-            explanation: Figure 2A was visually inspected with strain-construction Methods and the common liquid-growth caption. The comparator is MsrA-only deletion, not an assumed rescue strain.
-            cache_path: evidence/PF01641/kryukov-2002-selr.txt
-            cache_sha256: 8e22edaff613090cd537117fd3121930bf815b3d417c6f35e1d890eea5497fbd
-          - reference: https://www.ebi.ac.uk/interpro/api/protein/uniprot/P25566/entry/pfam/PF01641/
-            source_url: https://www.ebi.ac.uk/interpro/api/protein/uniprot/P25566/entry/pfam/PF01641/
-            snippet: P25566 Pfam:PF01641; interval 47-166 inclusive.
-            explanation: The paper's YCL033C locus maps to the S288c MXR2 reference and domain, with the experimental-isolate sequence and domain-specific contribution left unproven.
-            cache_path: evidence/PF01641/SelR-identities.txt
-            cache_sha256: c8ab51aa3e970b77c34b406fd10c945d6b7b72ac3654828670d6b0e09648efea
-  - graph_id: selr-yeast-two-mm-peroxide-growth
-    title: SelR deletion delays growth at 2 mM peroxide and strongly worsens MsrA loss
-    scope: BY4741 WT, SelR deletion, MsrA deletion GY4 and double deletion GY5, Kryukov 2002 Figure 2B; separate from zero/0.5-mM liquid assays and 0.7-mM plate spots.
-    context: Supplemented YNB, initial OD600 0.05, 30 C, 250 rpm, 2 mM hydrogen peroxide, about 14 h. Compare SelR deletion with WT and additional SelR loss with the MsrA-only mutant. The original BY4741 MAT-alpha notation and unspecified detailed supplement recipe remain unresolved.
-    family_mapping: YCL033C/MXR2 corresponds to S288c P25566, PF01641 47-166 of 168 aa. The assay deletes the whole gene in BY4741 derivatives, not the isolated domain, the mouse selenoprotein or the fly isoform.
-    scope_status: PHENOTYPIC
-    limitations: SelR-only deletion mainly delays early/mid growth and approaches the final WT OD600; it is not a demonstrated lower eventual yield. The double mutant lacks substantial OD600 increase within the displayed window, not proof of permanent inability to grow or cell death. No SelR rescue, quantitative statistical test or direct repair-flux measurement is shown.
-    nodes:
-      - node_id: selr-single-loss
-        label: SelR deletion instead of WT yeast at 2 mM peroxide
-        node_type: PERTURBATION
-        grounding: [UniProtKB:P25566]
-      - node_id: early-mid-od-accumulation
-        label: Early and middle liquid-culture OD600 accumulation
-        node_type: PHENOTYPE
-      - node_id: selr-loss-msra-background
-        label: Additional SelR deletion in the MsrA-deleted background
-        node_type: PERTURBATION
-      - node_id: interval-od-increase
-        label: OD600 increase during the displayed 14-h interval
-        node_type: PHENOTYPE
-    edges:
-      - edge_id: selr-single-loss-decreases-early-growth
-        subject: selr-single-loss
-        predicate: decreases
-        object: early-mid-od-accumulation
-        mechanism: The SelR-only deletion curve rises later than WT in the 2-mM-peroxide series but approaches WT later. This is a condition- and time-window-specific physiological effect, not an observed intracellular sulfoxide-reduction step.
-        directness: INDIRECT
-        support: OBSERVED
-        evidence_kind: EXPERIMENTAL
-        evidence:
-          - reference: PMID:11929995
-            source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC123633/
-            snippet: single mutant strains
-            explanation: Figure 2B SelR-only/WT curves and common caption were visually inspected; later convergence prevents an unconditional lower-yield claim.
-            cache_path: evidence/PF01641/kryukov-2002-selr.txt
-            cache_sha256: 8e22edaff613090cd537117fd3121930bf815b3d417c6f35e1d890eea5497fbd
-      - edge_id: selr-loss-decreases-msra-background-peroxide-growth
-        subject: selr-loss-msra-background
-        predicate: decreases
-        object: interval-od-increase
-        mechanism: GY5 remains near its starting turbidity while GY4 grows substantially at the same peroxide concentration. The comparison isolates an additional genotype-dependent loss of growth, but without rescue or direct chemistry it does not identify a unique molecular lesion.
-        directness: INDIRECT
-        support: OBSERVED
-        evidence_kind: EXPERIMENTAL
-        evidence:
-          - reference: PMID:11929995
-            source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC123633/
-            snippet: single mutant strains
-            explanation: Figure 2B GY4/double-mutant comparison supports the conditional effect over the plotted interval; no permanent lethality or unmeasured complementation is inferred.
-            cache_path: evidence/PF01641/kryukov-2002-selr.txt
-            cache_sha256: 8e22edaff613090cd537117fd3121930bf815b3d417c6f35e1d890eea5497fbd
-  - graph_id: selr-yeast-half-mm-peroxide-growth
-    title: Additional SelR loss impairs the MsrA mutant at 0.5 mM peroxide
-    scope: BY4741-derived MsrA deletion GY4 versus double deletion GY5, Kryukov 2002 Figure 2C; separate from the higher-dose peroxide series.
-    context: Supplemented YNB, initial OD600 0.05, 30 C, 250 rpm, 0.5 mM hydrogen peroxide, about 14 h. SelR-only and MsrA-only strains approximately track WT in this series. Detailed medium supplements and the Methods' BY4741 mating-type notation remain unresolved.
-    family_mapping: Whole YCL033C/MXR2 deletion, reference P25566 with PF01641 47-166; protein-source grounding is S288c, while tested backgrounds are BY4741 derivatives. This does not establish a domain-only perturbation or a newly verified isolate sequence.
-    scope_status: PHENOTYPIC
-    limitations: The double mutant shows residual growth, so complete inactivity and death are not asserted. No within-strain peroxide dose-response edge is inferred by combining separate series, and no rescue or direct intracellular repair measurement is supplied. The lack of a clear SelR-only effect at 0.5 mM is retained rather than transferring the 2-mM result.
-    nodes:
-      - node_id: selr-loss-msra-background
-        label: Additional SelR deletion in the MsrA-deleted background at 0.5 mM peroxide
-        node_type: PERTURBATION
-        grounding: [UniProtKB:P25566]
-      - node_id: half-mm-od-accumulation
-        label: OD600 accumulation during the displayed 14 h
-        node_type: PHENOTYPE
-    edges:
-      - edge_id: selr-loss-decreases-half-mm-growth
-        subject: selr-loss-msra-background
-        predicate: decreases
-        object: half-mm-od-accumulation
-        mechanism: The double mutant accumulates substantially less OD600 than the MsrA-only strain at 0.5 mM peroxide, retaining a small nonzero rise. This is a conditional cellular phenotype and is not joined to the purified fly or mouse product assays as an observed cross-species pathway.
-        directness: INDIRECT
-        support: OBSERVED
-        evidence_kind: EXPERIMENTAL
-        evidence:
-          - reference: PMID:11929995
-            source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC123633/
-            snippet: 0.5 mM
-            explanation: Figure 2C and its caption were visually inspected; single-mutant near-WT curves and double-mutant residual growth qualify the effect.
-            cache_path: evidence/PF01641/kryukov-2002-selr.txt
-            cache_sha256: 8e22edaff613090cd537117fd3121930bf815b3d417c6f35e1d890eea5497fbd
-discussions:
-  - discussion_id: pf01641-selr-causal-coverage
-    prompt: Retrieve the remaining SelR mutagenesis and intermediate-trapping results, resolve assay and construct details, and extend member-specific causal coverage.
-    kind: CURATION_TODO
-    status: OPEN
-    rationale: Two direct product assays and four indirect yeast-growth effects do not establish a complete catalytic cycle or universal PF01641 mechanism. Species, isoform, reductant, substrate derivatization and genotype backgrounds are distinct.
+- graph_id: selr-fly-dabsyl-r-sulfoxide-reduction
+  title: Purified Drosophila SelR produces dabsyl methionine from the R-sulfoxide
+  scope: N-terminal His6-tagged Drosophila melanogaster SelR, 155-aa native insert, Kryukov 2002 Figure
+    3B; separate from mouse U95C and the yeast deletions.
+  context: Experimental cDNA AF486578.1 encodes AAM10931.1; pET28a expression in E. coli BL21(DE3), Talon
+    affinity purification. Separate dabsyl-L-methionine R- and S-sulfoxides tested with and without enzyme
+    in the DTT assay context. HPLC detection at 436 nm. This paper refers to an earlier protocol without
+    restating all enzyme/substrate/reductant doses or reaction duration; later JBC assay numbers are not
+    retroactively assigned.
+  family_mapping: AAM10931.1 exactly matches UniProt Q8INK9-2, 155-aa isoform A/I, not the current 208-aa
+    canonical protein. Canonical PF01641 61-186 projects to isoform 19-133 after annotated deletions of
+    canonical 1-42 and 134-144. This is coordinate transfer, not a fresh isoform HMM hit. The 166-aa predicted
+    ORF in the paper's alignment retains the internal 11 residues absent from the tested clone. His6/vector
+    residues are outside this mapping.
+  scope_status: MECHANISTIC
+  taxon: NCBITaxon:7227
+  limitations: Product formation in a purified assay is observed; it does not measure reduction of an
+    intact oxidized protein, physiological electron-donor specificity, free-methionine utilization or
+    a complete catalytic cycle. The S substrate is negative under the displayed conditions. The 1.5-min
+    impurity peak is not product. C124 sulfenic-acid and C69 disulfide steps from later work remain unadopted
+    pending inspection of its Results and figures.
+  nodes:
+  - node_id: fly-selr-r-substrate-dtt
+    label: Incubate dabsyl R-sulfoxide with tagged 155-aa SelR and DTT
+    node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q8INK9-2
+  - node_id: dabsyl-methionine-product
+    label: HPLC-detected dabsyl methionine product
+    node_type: STATE
+  edges:
+  - edge_id: fly-selr-produces-dabsyl-methionine
+    subject: fly-selr-r-substrate-dtt
+    predicate: produces
+    object: dabsyl-methionine-product
+    mechanism: Adding purified tagged SelR to the R-substrate assay yields the assigned dabsyl-methionine
+      peak relative to the substrate-only trace. The matched S-substrate series lacks the product response.
+      The joint substrate/enzyme/reductant condition is not split into independently sufficient causes
+      or unobserved redox intermediates.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
     evidence:
-      - reference: PMID:11929995
-        supports: PARTIAL
-        evidence_source: full_text_and_visually_inspected_figures_1_2_3_4
-        explanation: Experimental 155-aa fly isoform differs from the predicted alignment sequence. Mouse U95C is not native Sec-containing enzyme. Growth with both sulfoxide isomers is not direct stereospecific chemistry, metal stoichiometry is not proof of zinc necessity, and no SelR rescue is shown. Retain unreported exact biochemical doses/timing, unresolved mouse vector tails, BY4741 mating-type notation and incomplete medium recipe.
-      - reference: PMID:12145281
-        supports: PARTIAL
-        evidence_source: abstract_methods_and_initial_results_only
-        explanation: Later JBC paper describes C124/C69 intermediates, zinc-site mutants and heterologous yeast rescue. Remaining Results and figures were inaccessible after partial indexed-PDF text; those claims are follow-up targets, not adopted causal edges. Its 10-versus-20-mM DTT Methods discrepancy also remains unresolved and is not assigned to the PNAS assay.
-    posed_by: Codex
-    posed_date: '2026-10-11'
-    notes: Current canonical fly61-186 maps to isoform19-133 by annotated deletions, not a new HMM test. Native selenium is part of Sec, not established as a bound ligand. Basal/0.5-mM SelR-only near-WT growth and separate plate-utilization effects remain visible in retained evidence. Partial scientific self-review; IN_PROGRESS.
+    - reference: PMID:11929995
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC123633/
+      snippet: reduced a dabsyl derivative
+      explanation: Figure 3B was visually inspected with Methods and the Drosophila biochemical Results.
+        The four traces distinguish enzyme addition, substrate stereochemistry and product from impurity.
+      cache_path: evidence/PF01641/kryukov-2002-selr.txt
+      cache_sha256: 8e22edaff613090cd537117fd3121930bf815b3d417c6f35e1d890eea5497fbd
+    - reference: https://www.ncbi.nlm.nih.gov/nuccore/AF486578.1
+      source_url: https://www.ncbi.nlm.nih.gov/nuccore/AF486578.1
+      snippet: AF486578.1 CDS245..712 encodes AAM10931.1, exactly matching 155-aa Q8INK9-2
+      explanation: Deposited CDS translation and UniProt isoform FASTA match exactly. Annotated isoform
+        deletions explain the transferred Pfam interval and prevent using the canonical 208-aa protein
+        as the tested construct.
+      cache_path: evidence/PF01641/SelR-identities.txt
+      cache_sha256: c8ab51aa3e970b77c34b406fd10c945d6b7b72ac3654828670d6b0e09648efea
+- graph_id: selr-mouse-u95c-dabsyl-r-sulfoxide-reduction
+  title: The mouse SelR Cys-for-Sec construct produces dabsyl methionine
+  scope: Purified mouse SelR U95C construct, Kryukov 2002 Figure 3A; this is not an assay of native Sec-containing
+    mouse MsrB1.
+  context: Full SelR coding region cloned into pET21d(+), expressed in E. coli BL21(DE3), purified by
+    DEAE flow-through and heparin HPLC. Dabsyl R- or S-sulfoxide assays in the presence of DTT, HPLC at
+    436 nm. Exact assay doses and duration are not restated in this paper. Complete vector-derived termini
+    were not independently determined; tag-free native sequence is not asserted.
+  family_mapping: Current Q9JLC3 is 116 aa with Sec95 and PF01641 12-105. The 2001 archived sequence uses
+    C95 with explicit SE_CYS95 annotation and otherwise exactly matches today's reference, supporting
+    the historical numbering but not a natural cysteine allele. The tested Cys-for-Sec protein maps to
+    U95C within the domain. Terminal PCR coding sequences are consistent with this reference.
+  scope_status: MECHANISTIC
+  taxon: NCBITaxon:10090
+  limitations: Figure 3A shows product with R substrate and not S, but does not display a matched mouse
+    R-substrate/no-enzyme trace; Figure 3B's controls use the separate fly preparation. No native-Sec
+    versus U95C rate ratio, selenium requirement, physiological substrate, isolated-domain sufficiency
+    or resolved catalytic intermediate is measured. Methionine sulfone is also reported negative.
+  nodes:
+  - node_id: mouse-u95c-r-substrate-dtt
+    label: Incubate dabsyl R-sulfoxide with mouse SelR U95C and DTT
+    node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q9JLC3
+  - node_id: mouse-dabsyl-methionine-product
+    label: HPLC-detected dabsyl methionine product
+    node_type: STATE
+  edges:
+  - edge_id: mouse-u95c-produces-dabsyl-methionine
+    subject: mouse-u95c-r-substrate-dtt
+    predicate: produces
+    object: mouse-dabsyl-methionine-product
+    mechanism: The purified U95C preparation produces the assigned dabsyl-methionine peak with R-sulfoxide,
+      unlike the S-substrate assay. This retains the directly observed chemical product without claiming
+      that the native selenoprotein was tested or that a specific transient intermediate was captured.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:11929995
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC123633/
+      snippet: reduced a dabsyl derivative
+      explanation: Figure 3A and mouse expression/assay Methods were inspected; the absence of a displayed
+        panel-A no-enzyme control and the Cys-for-Sec construct are explicit.
+      cache_path: evidence/PF01641/kryukov-2002-selr.txt
+      cache_sha256: 8e22edaff613090cd537117fd3121930bf815b3d417c6f35e1d890eea5497fbd
+    - reference: https://www.ebi.ac.uk/interpro/api/protein/uniprot/Q9JLC3/entry/pfam/PF01641/
+      source_url: https://www.ebi.ac.uk/interpro/api/protein/uniprot/Q9JLC3/entry/pfam/PF01641/
+      snippet: Q9JLC3 Pfam:PF01641; interval 12-105 inclusive.
+      explanation: Current sequence/domain mapping, archived entry8 and primer comparison distinguish
+        natural Sec95 from the tested U95C construct while retaining unresolved vector termini.
+      cache_path: evidence/PF01641/SelR-identities.txt
+      cache_sha256: c8ab51aa3e970b77c34b406fd10c945d6b7b72ac3654828670d6b0e09648efea
+- graph_id: selr-yeast-msra-background-basal-growth
+  title: SelR loss reduces basal yeast growth in an MsrA-deleted background
+  scope: BY4741-derived MsrA deletion GY4 versus SelR/MsrA double deletion GY5, Kryukov 2002 Figure 2A;
+    this is an additional SelR-loss effect conditional on MsrA absence.
+  context: Stationary overnight cultures diluted to OD600 0.05 in supplemented YNB, 30 C, 250 rpm, no
+    added peroxide, observed for about 14 h. SelR/YCL033C is replaced by KAN-R and MsrA by URA3; MsrA
+    deletion is PCR checked. Methods prints MAT-alpha for BY4741, an unresolved historical notation; exact
+    supplement composition is not enumerated in the caption.
+  family_mapping: Deleted YCL033C corresponds to MXR2/MSRB reference P25566, 168 aa, with PF01641 47-166.
+    P25566 is S288c reference grounding, not a resequenced experimental BY4741 isolate. Whole-gene loss
+    does not establish isolated-domain activity or the molecular cause of the growth effect.
+  scope_status: PHENOTYPIC
+  limitations: The double mutant accumulates biomass more slowly, whereas SelR-only and MsrA-only deletions
+    approximately track WT without peroxide. No target-gene complementation, replicate/error bars, fitted
+    growth rate or direct intracellular repair measurement is shown. The conditional effect is not evidence
+    that SelR alone is universally essential for growth.
+  nodes:
+  - node_id: selr-loss-msra-background
+    label: Additional SelR deletion in the MsrA-deleted yeast background
+    node_type: PERTURBATION
+    grounding:
+    - UniProtKB:P25566
+  - node_id: basal-od-accumulation
+    label: Liquid-culture OD600 accumulation over the displayed 14 h
+    node_type: PHENOTYPE
+  edges:
+  - edge_id: selr-loss-decreases-msra-background-growth
+    subject: selr-loss-msra-background
+    predicate: decreases
+    object: basal-od-accumulation
+    mechanism: GY5 accumulates OD600 more slowly than GY4 in the zero-peroxide series. The directly manipulated
+      genotype has an observed indirect growth effect, without assigning the entire two-gene phenotype
+      to a particular biochemical intermediate.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:11929995
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC123633/
+      snippet: double knockout strain grew slower
+      explanation: Figure 2A was visually inspected with strain-construction Methods and the common liquid-growth
+        caption. The comparator is MsrA-only deletion, not an assumed rescue strain.
+      cache_path: evidence/PF01641/kryukov-2002-selr.txt
+      cache_sha256: 8e22edaff613090cd537117fd3121930bf815b3d417c6f35e1d890eea5497fbd
+    - reference: https://www.ebi.ac.uk/interpro/api/protein/uniprot/P25566/entry/pfam/PF01641/
+      source_url: https://www.ebi.ac.uk/interpro/api/protein/uniprot/P25566/entry/pfam/PF01641/
+      snippet: P25566 Pfam:PF01641; interval 47-166 inclusive.
+      explanation: The paper's YCL033C locus maps to the S288c MXR2 reference and domain, with the experimental-isolate
+        sequence and domain-specific contribution left unproven.
+      cache_path: evidence/PF01641/SelR-identities.txt
+      cache_sha256: c8ab51aa3e970b77c34b406fd10c945d6b7b72ac3654828670d6b0e09648efea
+- graph_id: selr-yeast-two-mm-peroxide-growth
+  title: SelR deletion delays growth at 2 mM peroxide and strongly worsens MsrA loss
+  scope: BY4741 WT, SelR deletion, MsrA deletion GY4 and double deletion GY5, Kryukov 2002 Figure 2B;
+    separate from zero/0.5-mM liquid assays and 0.7-mM plate spots.
+  context: Supplemented YNB, initial OD600 0.05, 30 C, 250 rpm, 2 mM hydrogen peroxide, about 14 h. Compare
+    SelR deletion with WT and additional SelR loss with the MsrA-only mutant. The original BY4741 MAT-alpha
+    notation and unspecified detailed supplement recipe remain unresolved.
+  family_mapping: YCL033C/MXR2 corresponds to S288c P25566, PF01641 47-166 of 168 aa. The assay deletes
+    the whole gene in BY4741 derivatives, not the isolated domain, the mouse selenoprotein or the fly
+    isoform.
+  scope_status: PHENOTYPIC
+  limitations: SelR-only deletion mainly delays early/mid growth and approaches the final WT OD600; it
+    is not a demonstrated lower eventual yield. The double mutant lacks substantial OD600 increase within
+    the displayed window, not proof of permanent inability to grow or cell death. No SelR rescue, quantitative
+    statistical test or direct repair-flux measurement is shown.
+  nodes:
+  - node_id: selr-single-loss
+    label: SelR deletion instead of WT yeast at 2 mM peroxide
+    node_type: PERTURBATION
+    grounding:
+    - UniProtKB:P25566
+  - node_id: early-mid-od-accumulation
+    label: Early and middle liquid-culture OD600 accumulation
+    node_type: PHENOTYPE
+  - node_id: selr-loss-msra-background
+    label: Additional SelR deletion in the MsrA-deleted background
+    node_type: PERTURBATION
+    grounding:
+    - UniProtKB:P25566
+  - node_id: interval-od-increase
+    label: OD600 increase during the displayed 14-h interval
+    node_type: PHENOTYPE
+  edges:
+  - edge_id: selr-single-loss-decreases-early-growth
+    subject: selr-single-loss
+    predicate: decreases
+    object: early-mid-od-accumulation
+    mechanism: The SelR-only deletion curve rises later than WT in the 2-mM-peroxide series but approaches
+      WT later. This is a condition- and time-window-specific physiological effect, not an observed intracellular
+      sulfoxide-reduction step.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:11929995
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC123633/
+      snippet: single mutant strains
+      explanation: Figure 2B SelR-only/WT curves and common caption were visually inspected; later convergence
+        prevents an unconditional lower-yield claim.
+      cache_path: evidence/PF01641/kryukov-2002-selr.txt
+      cache_sha256: 8e22edaff613090cd537117fd3121930bf815b3d417c6f35e1d890eea5497fbd
+  - edge_id: selr-loss-decreases-msra-background-peroxide-growth
+    subject: selr-loss-msra-background
+    predicate: decreases
+    object: interval-od-increase
+    mechanism: GY5 remains near its starting turbidity while GY4 grows substantially at the same peroxide
+      concentration. The comparison isolates an additional genotype-dependent loss of growth, but without
+      rescue or direct chemistry it does not identify a unique molecular lesion.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:11929995
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC123633/
+      snippet: single mutant strains
+      explanation: Figure 2B GY4/double-mutant comparison supports the conditional effect over the plotted
+        interval; no permanent lethality or unmeasured complementation is inferred.
+      cache_path: evidence/PF01641/kryukov-2002-selr.txt
+      cache_sha256: 8e22edaff613090cd537117fd3121930bf815b3d417c6f35e1d890eea5497fbd
+- graph_id: selr-yeast-half-mm-peroxide-growth
+  title: Additional SelR loss impairs the MsrA mutant at 0.5 mM peroxide
+  scope: BY4741-derived MsrA deletion GY4 versus double deletion GY5, Kryukov 2002 Figure 2C; separate
+    from the higher-dose peroxide series.
+  context: Supplemented YNB, initial OD600 0.05, 30 C, 250 rpm, 0.5 mM hydrogen peroxide, about 14 h.
+    SelR-only and MsrA-only strains approximately track WT in this series. Detailed medium supplements
+    and the Methods' BY4741 mating-type notation remain unresolved.
+  family_mapping: Whole YCL033C/MXR2 deletion, reference P25566 with PF01641 47-166; protein-source grounding
+    is S288c, while tested backgrounds are BY4741 derivatives. This does not establish a domain-only perturbation
+    or a newly verified isolate sequence.
+  scope_status: PHENOTYPIC
+  limitations: The double mutant shows residual growth, so complete inactivity and death are not asserted.
+    No within-strain peroxide dose-response edge is inferred by combining separate series, and no rescue
+    or direct intracellular repair measurement is supplied. The lack of a clear SelR-only effect at 0.5
+    mM is retained rather than transferring the 2-mM result.
+  nodes:
+  - node_id: selr-loss-msra-background
+    label: Additional SelR deletion in the MsrA-deleted background at 0.5 mM peroxide
+    node_type: PERTURBATION
+    grounding:
+    - UniProtKB:P25566
+  - node_id: half-mm-od-accumulation
+    label: OD600 accumulation during the displayed 14 h
+    node_type: PHENOTYPE
+  edges:
+  - edge_id: selr-loss-decreases-half-mm-growth
+    subject: selr-loss-msra-background
+    predicate: decreases
+    object: half-mm-od-accumulation
+    mechanism: The double mutant accumulates substantially less OD600 than the MsrA-only strain at 0.5
+      mM peroxide, retaining a small nonzero rise. This is a conditional cellular phenotype and is not
+      joined to the purified fly or mouse product assays as an observed cross-species pathway.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:11929995
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC123633/
+      snippet: 0.5 mM
+      explanation: Figure 2C and its caption were visually inspected; single-mutant near-WT curves and
+        double-mutant residual growth qualify the effect.
+      cache_path: evidence/PF01641/kryukov-2002-selr.txt
+      cache_sha256: 8e22edaff613090cd537117fd3121930bf815b3d417c6f35e1d890eea5497fbd
+discussions:
+- discussion_id: pf01641-selr-causal-coverage
+  prompt: Retrieve the remaining SelR mutagenesis and intermediate-trapping results, resolve assay and
+    construct details, and extend member-specific causal coverage.
+  kind: CURATION_TODO
+  status: OPEN
+  rationale: Two direct product assays and four indirect yeast-growth effects do not establish a complete
+    catalytic cycle or universal PF01641 mechanism. Species, isoform, reductant, substrate derivatization
+    and genotype backgrounds are distinct.
+  evidence:
+  - reference: PMID:11929995
+    supports: PARTIAL
+    evidence_source: full_text_and_visually_inspected_figures_1_2_3_4
+    explanation: Experimental 155-aa fly isoform differs from the predicted alignment sequence. Mouse
+      U95C is not native Sec-containing enzyme. Growth with both sulfoxide isomers is not direct stereospecific
+      chemistry, metal stoichiometry is not proof of zinc necessity, and no SelR rescue is shown. Retain
+      unreported exact biochemical doses/timing, unresolved mouse vector tails, BY4741 mating-type notation
+      and incomplete medium recipe.
+  - reference: PMID:12145281
+    supports: PARTIAL
+    evidence_source: abstract_methods_and_initial_results_only
+    explanation: Later JBC paper describes C124/C69 intermediates, zinc-site mutants and heterologous
+      yeast rescue. Remaining Results and figures were inaccessible after partial indexed-PDF text; those
+      claims are follow-up targets, not adopted causal edges. Its 10-versus-20-mM DTT Methods discrepancy
+      also remains unresolved and is not assigned to the PNAS assay.
+  posed_by: Codex
+  posed_date: '2026-10-11'
+  notes: Current canonical fly61-186 maps to isoform19-133 by annotated deletions, not a new HMM test.
+    Native selenium is part of Sec, not established as a bound ligand. Basal/0.5-mM SelR-only near-WT
+    growth and separate plate-utilization effects remain visible in retained evidence. Partial scientific
+    self-review; IN_PROGRESS.

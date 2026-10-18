@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF04149
+  path: curation/families/PF04149.yaml
+session:
+  id: 2026-10-18T025446Z-antigravity-414223
+  timestamp: '2026-10-18T02:54:46Z'
+  actors:
+  - type: ai_agent
+    name: Antigravity
+    model: Claude Opus 4.6
+    agent_tool: Antigravity
+events:
+- type: EDIT
+  outcome: changed
+  summary: Ground causal graph gene and protein nodes in PF04149 with verified UniProtKB
+    accessions (UniProtKB:Q9F3E1)
+  details: 'Reviewed PF04149 causal_graphs and grounded gene/protein PERTURBATION,
+    ACTIVITY, and protein-complex STATE nodes across 2 causal graph(s) using verified
+    UniProtKB accessions from family_mapping:
+
+    - `sco7615-7616-deletion-r2ye`: grounded pair-deletion -> UniProtKB:Q9F3E1
+
+    - `sco7615-7616-deletion-nmmp`: grounded pair-deletion -> UniProtKB:Q9F3E1'
+  sections:
+  - causal_graphs

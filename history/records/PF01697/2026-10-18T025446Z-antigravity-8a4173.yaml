@@ -1,0 +1,38 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01697
+  path: curation/families/PF01697.yaml
+session:
+  id: 2026-10-18T025446Z-antigravity-8a4173
+  timestamp: '2026-10-18T02:54:46Z'
+  actors:
+  - type: ai_agent
+    name: Antigravity
+    model: Claude Opus 4.6
+    agent_tool: Antigravity
+events:
+- type: EDIT
+  outcome: changed
+  summary: Ground causal graph gene and protein nodes in PF01697 with verified UniProtKB
+    accessions (UniProtKB:O16374)
+  details: 'Reviewed PF01697 causal_graphs and grounded gene/protein PERTURBATION,
+    ACTIVITY, and protein-complex STATE nodes across 5 causal graph(s) using verified
+    UniProtKB accessions from family_mapping:
+
+    - `galt1-extract-acceptor-substitutions`: grounded supplied-acceptor-galactosylation
+    -> UniProtKB:O16374
+
+    - `galt1-unc119-cgl2-development`: grounded op497-in-unc119 -> WormBase:WBGene00019763,
+    UniProtKB:O16374
+
+    - `galt1-joint-construct-cgl2-rescue`: grounded integrate-opis444 -> UniProtKB:O16374;
+    integrate-opis445 -> UniProtKB:O16374
+
+    - `galt1-pmk1-cgl2-development`: grounded op497-in-pmk1 -> WormBase:WBGene00019763,
+    UniProtKB:O16374
+
+    - `galt1-pmk1-selected-glycan-peak`: grounded op497-pmk1-glycome-preparation ->
+    WormBase:WBGene00019763, UniProtKB:O16374'
+  sections:
+  - causal_graphs

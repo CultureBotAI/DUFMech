@@ -206,6 +206,8 @@ causal_graphs:
   - node_id: truncated
     label: Historical pGR87L versus empty vector
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:P34222
   - node_id: growth
     label: C600 pth-ts growth at 42 C
     node_type: PHENOTYPE
@@ -253,12 +255,16 @@ causal_graphs:
   - node_id: fmet_assay
     label: Purified SSO0175 plus formyl-Met-tRNA-fMet
     node_type: ACTIVITY
+    grounding:
+    - UniProtKB:Q980V1
   - node_id: fmet_cleavage
     label: Formyl-Met-tRNA-fMet deacylation
     node_type: PROCESS
   - node_id: his_assay
     label: Purified SSO0175 plus acetyl-His-tRNA-His
     node_type: ACTIVITY
+    grounding:
+    - UniProtKB:Q980V1
   - node_id: his_cleavage
     label: Acetyl-His-tRNA-His deacylation
     node_type: PROCESS
@@ -340,6 +346,8 @@ causal_graphs:
   - node_id: rate
     label: Defined diacetyl-Lys-tRNA deacylation specific activity
     node_type: ACTIVITY
+    grounding:
+    - UniProtKB:Q980V1
   edges:
   - edge_id: magnesium-increases-rate
     subject: magnesium
@@ -412,6 +420,8 @@ causal_graphs:
   - node_id: rate
     label: Diacetyl-Lys-tRNA initial deacylation rate
     node_type: ACTIVITY
+    grounding:
+    - UniProtKB:Q980V1
   edges:
   - edge_id: lys-trna-inhibits
     subject: lys_trna
@@ -499,6 +509,8 @@ causal_graphs:
   - node_id: gene
     label: Full-length YBL057c supplied by pKKpthY2
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:P34222
   - node_id: growth
     label: K37delta-pthTr growth at 42 C
     node_type: PHENOTYPE
@@ -606,5 +618,14 @@ curation_events:
   summary: Self-review of nine PF01981 graphs and sixteen scoped experimental edges; three scientific
     follow-ups remain open.
   history_record: history/records/PF01981/2026-10-15T233126Z-codex-34d6da.yaml
+  event_index: 0
+  llm_assisted: true
+- timestamp: '2026-10-18T02:54:46Z'
+  curator: Antigravity
+  action: EDIT
+  outcome: changed
+  summary: Ground causal graph gene and protein nodes in PF01981 with verified UniProtKB accessions (UniProtKB:P34222,
+    UniProtKB:Q980V1)
+  history_record: history/records/PF01981/2026-10-18T025446Z-antigravity-217e74.yaml
   event_index: 0
   llm_assisted: true

@@ -25,21 +25,31 @@ causal_graphs:
   - node_id: complex
     label: Alba-DNA complex formation
     node_type: STATE
+    grounding:
+    - UniProtKB:P60849
   - node_id: affinity
     label: Apparent DNA-binding affinity
     node_type: STATE
   - node_id: k16a
     label: K16A substitution in full-length Alba
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:P60849
   - node_id: k16e
     label: K16E substitution in full-length Alba
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:P60849
   - node_id: k17a
     label: K17A substitution in full-length Alba
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:P60849
   - node_id: k17e
     label: K17E substitution in full-length Alba
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:P60849
   edges:
   - edge_id: wt-produces-complex
     subject: wt-dna
@@ -139,9 +149,13 @@ causal_graphs:
   - node_id: recombinant
     label: Add recombinant Alba to the T6 transcription reaction
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:P60849
   - node_id: native-sir2-nad
     label: Joint native Alba, WT Sir2 and NAD treatment
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:P60849
   - node_id: rna
     label: Full-length T6 transcript output
     node_type: STATE
@@ -198,18 +212,24 @@ causal_graphs:
   - node_id: pat-reaction
     label: Alba plus Pat and acetyl-CoA under the assay conditions
     node_type: ACTIVITY
+    grounding:
+    - UniProtKB:P60849
   - node_id: k16-ac
     label: K16-acetylated Alba product
     node_type: STATE
   - node_id: k16e
     label: K16E substitution in the Pat labeling reaction
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:P60849
   - node_id: label
     label: Acetyl-label incorporation into Alba
     node_type: STATE
   - node_id: acetyl-treatment
     label: Pat/acetyl-CoA treatment versus Pat-only mock treatment
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:P60849
   - node_id: dna-affinity
     label: 20-bp DNA-binding affinity
     node_type: STATE
@@ -300,15 +320,24 @@ causal_graphs:
   - node_id: wt-low
     label: Alba1 with DNA at 1:30 dimer:bp
     node_type: ACTIVITY
+    grounding:
+    - UniProtKB:P60849
   - node_id: wt-mid
     label: Alba1 with DNA at 1:15 dimer:bp
     node_type: ACTIVITY
+    grounding:
+    - UniProtKB:P60849
   - node_id: hetero-high
     label: Alba1:Alba2 mixture with DNA at 1:7.5 dimer:bp
     node_type: ACTIVITY
+    grounding:
+    - UniProtKB:P60849
+    - UniProtKB:Q97ZF4
   - node_id: f60a
     label: Alba1 F60A with DNA at 1:30 dimer:bp
     node_type: ACTIVITY
+    grounding:
+    - UniProtKB:P60849
   - node_id: bridges
     label: Bridged DNA segments
     node_type: STATE
@@ -400,12 +429,19 @@ causal_graphs:
   - node_id: wt
     label: Add 2 uM Alba1 to lambda DNA
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:P60849
   - node_id: f60a
     label: Replace Alba1 with F60A at matched 1 uM
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:P60849
   - node_id: hetero
     label: Replace Alba1 with Alba1:Alba2 mixture at matched 1 uM
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:P60849
+    - UniProtKB:Q97ZF4
   - node_id: stiffness
     label: Fitted DNA persistence length
     node_type: STATE
@@ -481,18 +517,28 @@ causal_graphs:
   - node_id: wt-ss
     label: WT Sis10b with 44-nt ssRNA
     node_type: ACTIVITY
+    grounding:
+    - UniProtKB:F0NHH1
   - node_id: ds-complex
     label: Sis10b-dsRNA complexes
     node_type: STATE
+    grounding:
+    - UniProtKB:F0NHH1
   - node_id: ss-complex
     label: Sis10b-ssRNA complexes
     node_type: STATE
+    grounding:
+    - UniProtKB:F0NHH1
   - node_id: k16a
     label: K16A substitution under the dsRNA protocol
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:F0NHH1
   - node_id: k17a
     label: K17A substitution under the ssRNA protocol
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:F0NHH1
   - node_id: ds-affinity
     label: dsRNA-binding affinity
     node_type: STATE
@@ -579,15 +625,23 @@ causal_graphs:
   - node_id: wt
     label: Add WT Sis10b to the annealed RNA beacon
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:F0NHH1
   - node_id: k17a
     label: Replace WT with K17A
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:F0NHH1
   - node_id: dn12
     label: Replace WT with deltaN12
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:F0NHH1
   - node_id: quad
     label: Replace WT with M20E/L24E/L27E/F60E
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:F0NHH1
   - node_id: signal
     label: Normalized RNA-beacon fluorescence
     node_type: STATE
@@ -673,15 +727,23 @@ causal_graphs:
   - node_id: wt
     label: WT Sis10b with labeled duplex and excess unlabeled SA
     node_type: ACTIVITY
+    grounding:
+    - UniProtKB:F0NHH1
   - node_id: k17a
     label: Replace WT with K17A at matched protein concentration
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:F0NHH1
   - node_id: dn12
     label: Replace WT with deltaN12
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:F0NHH1
   - node_id: quad
     label: Replace WT with the quadruple mutant
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:F0NHH1
   - node_id: exchange
     label: Release of labeled SA through strand exchange
     node_type: PROCESS
@@ -771,18 +833,28 @@ causal_graphs:
   - node_id: knockdown
     label: Replace the native sis10b promoter to produce NZ1
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:F0NHH1
   - node_id: rescue
     label: Add WT pSeSD-sis10b to NZ1
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:F0NHH1
   - node_id: k17a
     label: Use K17A instead of WT in NZ1 complementation
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:F0NHH1
   - node_id: dn12
     label: Use deltaN12 instead of WT in NZ1 complementation
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:F0NHH1
   - node_id: quad
     label: Use the quadruple mutant instead of WT in NZ1 complementation
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:F0NHH1
   - node_id: growth
     label: Liquid-culture OD600 trajectory
     node_type: PROCESS
@@ -885,15 +957,27 @@ causal_graphs:
   - node_id: full
     label: Full Rpp25 and full Rpp20 together
     node_type: ACTIVITY
+    grounding:
+    - UniProtKB:Q9BUL9
+    - UniProtKB:O75817
   - node_id: trunc
     label: Rpp25(25-170) and Rpp20(35-140) together
     node_type: ACTIVITY
+    grounding:
+    - UniProtKB:Q9BUL9
+    - UniProtKB:O75817
   - node_id: full-complex
     label: Full-length protein heterocomplex
     node_type: STATE
+    grounding:
+    - UniProtKB:Q9BUL9
+    - UniProtKB:O75817
   - node_id: trunc-complex
     label: Double-truncated protein heterocomplex
     node_type: STATE
+    grounding:
+    - UniProtKB:Q9BUL9
+    - UniProtKB:O75817
   edges:
   - edge_id: full-produces-complex
     subject: full
@@ -945,15 +1029,27 @@ causal_graphs:
   - node_id: full-rna
     label: Full Rpp25-Rpp20 complex with P3 RNA
     node_type: ACTIVITY
+    grounding:
+    - UniProtKB:Q9BUL9
+    - UniProtKB:O75817
   - node_id: trunc-rna
     label: Double-truncated complex with P3 RNA
     node_type: ACTIVITY
+    grounding:
+    - UniProtKB:Q9BUL9
+    - UniProtKB:O75817
   - node_id: full-bound
     label: Full complex bound to P3 RNA
     node_type: STATE
+    grounding:
+    - UniProtKB:Q9BUL9
+    - UniProtKB:O75817
   - node_id: trunc-bound
     label: Truncated complex bound to P3 RNA
     node_type: STATE
+    grounding:
+    - UniProtKB:Q9BUL9
+    - UniProtKB:O75817
   edges:
   - edge_id: full-binds-p3
     subject: full-rna
@@ -1009,9 +1105,13 @@ causal_graphs:
   - node_id: bound
     label: PfAlba3-TARE6 complex
     node_type: STATE
+    grounding:
+    - UniProtKB:Q8IJX8
   - node_id: double
     label: K22/23R double substitution
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q8IJX8
   - node_id: affinity
     label: Apparent TARE6-binding affinity
     node_type: STATE
@@ -1066,9 +1166,13 @@ causal_graphs:
   - node_id: ap-reaction
     label: WT PfAlba3 with AP28 and divalent-ion buffer
     node_type: ACTIVITY
+    grounding:
+    - UniProtKB:Q8IJX8
   - node_id: thf-reaction
     label: WT PfAlba3 with THF28 and divalent-ion buffer
     node_type: ACTIVITY
+    grounding:
+    - UniProtKB:Q8IJX8
   - node_id: ap-product
     label: Shorter AP28 cleavage products
     node_type: STATE
@@ -1078,6 +1182,8 @@ causal_graphs:
   - node_id: double
     label: Replace WT with K22/23R under the THF28 protocol
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q8IJX8
   - node_id: cleavage
     label: THF28 cleavage extent
     node_type: PROCESS
@@ -1133,9 +1239,9 @@ causal_graphs:
 - graph_id: pfalba3-plasmid-cleavage-2023
   title: PfAlba3 lysine variants reduce extensive plasmid cleavage
   scope: Banerjee2023 WT, K22R, K23R and K22/23R tested separately on pBR322.
-  context: Original Figures4A/B:0.5 ug pBR322 and5 ug enzyme; WT appears in Figure4A and the lysine
-    variants in Figure4B. Standard DNase buffer10 mM Tris pH7.5,2.5 mM MgCl2,0.5 mM CaCl2,37 C/1h.
-    Agarose-gel DNA degradation endpoint; qualitative comparison across the separate panels.
+  context: Original Figures4A/B:0.5 ug pBR322 and5 ug enzyme; WT appears in Figure4A and the lysine variants
+    in Figure4B. Standard DNase buffer10 mM Tris pH7.5,2.5 mM MgCl2,0.5 mM CaCl2,37 C/1h. Agarose-gel
+    DNA degradation endpoint; qualitative comparison across the separate panels.
   family_mapping: P. falciparum 3D7 PfAlba3 Q8IJX8 sequence version 1, PF3D7_1006200 (older Pf10_0063),
     107 aa, PF01918 14-83. K22/K23/K32 lie within the match. Whole-protein effects do not establish isolated-domain
     sufficiency or catalytic microsteps.
@@ -1149,18 +1255,26 @@ causal_graphs:
   - node_id: wt
     label: WT PfAlba3 with plasmid and metal-ion buffer
     node_type: ACTIVITY
+    grounding:
+    - UniProtKB:Q8IJX8
   - node_id: fragments
     label: Extensive pBR322 fragmentation
     node_type: STATE
   - node_id: k22r
     label: K22R substitution in the plasmid assay
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q8IJX8
   - node_id: k23r
     label: K23R substitution in the plasmid assay
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q8IJX8
   - node_id: k22-23r
     label: K22/23R substitution in the plasmid assay
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q8IJX8
   edges:
   - edge_id: wt-fragments-plasmid
     subject: wt
@@ -1175,8 +1289,8 @@ causal_graphs:
     - reference: PMID:36947546
       source_url: https://doi.org/10.1016/j.celrep.2023.112292
       snippet: PfAlba3 exhibits hydrolytic cleavage mechanism
-      explanation: Original Figure4A WT lane, Figure4B plasmid-only lane1, and Figure2F WT/refolding
-        controls; nuclease Methods. WT is not a labeled lane in Figure4B.
+      explanation: Original Figure4A WT lane, Figure4B plasmid-only lane1, and Figure2F WT/refolding controls;
+        nuclease Methods. WT is not a labeled lane in Figure4B.
       cache_path: evidence/PF01918/banerjee-2023.txt
       cache_sha256: a34b731777e7104df3e69578f689b8437a905a0268a3d7bf9243d883e8e3958b
   - edge_id: k22r-lowers-fragmentation
@@ -1248,12 +1362,18 @@ causal_graphs:
   - node_id: pat
     label: PfAlba3 plus Pat and acetyl-CoA
     node_type: ACTIVITY
+    grounding:
+    - UniProtKB:Q8IJX8
   - node_id: acetylated
     label: PfAlba3 bearing K23 and/or K32 acetylation
     node_type: STATE
+    grounding:
+    - UniProtKB:Q8IJX8
   - node_id: pretreatment
     label: Use the acetylation-treated preparation in the AP28 assay
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q8IJX8
   - node_id: cleavage
     label: AP28 cleavage extent
     node_type: PROCESS
@@ -1263,6 +1383,8 @@ causal_graphs:
   - node_id: signal
     label: K23-acetylated-PfAlba3 immunoblot signal
     node_type: STATE
+    grounding:
+    - UniProtKB:Q8IJX8
   edges:
   - edge_id: pat-produces-acetylated-protein
     subject: pat
@@ -1333,9 +1455,13 @@ causal_graphs:
   - node_id: k22-reaction
     label: K22-acetylated peptide with PfSir2A and NAD
     node_type: ACTIVITY
+    grounding:
+    - UniProtKB:Q8IJX8
   - node_id: k23-reaction
     label: K23-acetylated peptide with PfSir2A and NAD
     node_type: ACTIVITY
+    grounding:
+    - UniProtKB:Q8IJX8
   - node_id: k22-product
     label: Deacetylated product from the K22-acetylated substrate
     node_type: STATE

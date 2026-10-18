@@ -128,12 +128,18 @@ causal_graphs:
   - node_id: e91a-substitution
     label: E91A substitution in tagged TatD
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:P27859
   - node_id: e201a-substitution
     label: E201A substitution in tagged TatD
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:P27859
   - node_id: d203a-substitution
     label: D203A substitution in tagged TatD
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:P27859
   - node_id: mutant-assay-ssdna-digestion
     label: Digestion of 20-nt ssDNA relative to the WT preparation
     node_type: ACTIVITY
@@ -314,5 +320,13 @@ curation_events:
   outcome: needs_followup
   summary: Retain partial same-agent scientific review of seven TatD causal effects
   history_record: history/records/PF01026/2026-10-11T083337Z-codex-996c16.yaml
+  event_index: 0
+  llm_assisted: true
+- timestamp: '2026-10-18T02:54:46Z'
+  curator: Antigravity
+  action: EDIT
+  outcome: changed
+  summary: Ground causal graph gene and protein nodes in PF01026 with verified UniProtKB accessions (UniProtKB:P27859)
+  history_record: history/records/PF01026/2026-10-18T025446Z-antigravity-d8f462.yaml
   event_index: 0
   llm_assisted: true

@@ -486,9 +486,13 @@ causal_graphs:
   - node_id: pair
     label: Add cognate MntA coexpression to HepT
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:I3ZRF2
   - node_id: y82f
     label: Use HepT Y82F instead of wild-type HepT in the pair
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:I3ZRF2
   - node_id: gs-mutant
     label: Use MntA G33A/S34T instead of wild-type MntA in the pair
     node_type: PERTURBATION
@@ -574,6 +578,7 @@ causal_graphs:
     node_type: PERTURBATION
     grounding:
     - RefSeq:WP_164925653.1
+    - UniProtKB:Q8EGZ7
   - node_id: colonies
     label: Recoverable BW25113 colonies
     node_type: PHENOTYPE
@@ -648,9 +653,13 @@ causal_graphs:
   - node_id: donor-mutant
     label: FhepTA D41E/D43E instead of wild type
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q8EGZ7
   - node_id: acceptor-mutant
     label: FhepTA Y240F instead of wild type
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q8EGZ7
   - node_id: modified
     label: Detectable AMP-modified fusion protein
     node_type: STATE
@@ -762,6 +771,7 @@ causal_graphs:
     node_type: ACTIVITY
     grounding:
     - RefSeq:WP_164925653.1
+    - UniProtKB:Q8EGZ7
   - node_id: substrate
     label: Intact MS2 RNA
     node_type: STATE
@@ -771,6 +781,8 @@ causal_graphs:
   - node_id: cleavage
     label: MS2 RNA fragmentation by the isolated HEPN fragment
     node_type: ACTIVITY
+    grounding:
+    - UniProtKB:Q8EGZ7
   edges:
   - edge_id: ms2-degradation
     subject: reaction
@@ -821,6 +833,8 @@ causal_graphs:
   - node_id: mutant
     label: C163T/C270W fragment instead of wild type during peroxide exposure
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q8EGZ7
   - node_id: colonies
     label: Recoverable MR-1 colonies under the specified exposure
     node_type: PHENOTYPE
@@ -859,9 +873,13 @@ causal_graphs:
   - node_id: reducing
     label: Reducing rather than nonreducing fragment preparation
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q8EGZ7
   - node_id: mutant
     label: C163T/C270W fragment rather than wild type without reducing agent
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q8EGZ7
   - node_id: bands
     label: High-molecular-weight fragment bands on SDS-PAGE
     node_type: STATE
@@ -921,5 +939,14 @@ curation_events:
   outcome: needs_followup
   summary: Retain partial scientific review of PF01934 HepT and fusion causal graphs.
   history_record: history/records/PF01934/2026-10-12T042108Z-codex-00bb97.yaml
+  event_index: 0
+  llm_assisted: true
+- timestamp: '2026-10-18T02:54:46Z'
+  curator: Antigravity
+  action: EDIT
+  outcome: changed
+  summary: Ground causal graph gene and protein nodes in PF01934 with verified UniProtKB accessions (UniProtKB:I3ZRF2,
+    UniProtKB:Q8EGZ7)
+  history_record: history/records/PF01934/2026-10-18T025446Z-antigravity-c6d9f2.yaml
   event_index: 0
   llm_assisted: true

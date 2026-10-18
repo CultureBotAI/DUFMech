@@ -148,6 +148,8 @@ causal_graphs:
   - node_id: bound-free-rna-ratio
     label: Protein-bound/free RNA band ratio for the supplied probe
     node_type: STATE
+    grounding:
+    - UniProtKB:Q9UXX8
   edges:
   - edge_id: cg-versus-uc-increases-binding-readout
     subject: replace-uc-probe
@@ -200,5 +202,13 @@ curation_events:
   outcome: needs_followup
   summary: Review PAB1135 assay scope and family-transfer limits
   history_record: history/records/PF01877/2026-10-11T192015Z-codex-0df2c3.yaml
+  event_index: 0
+  llm_assisted: true
+- timestamp: '2026-10-18T02:54:46Z'
+  curator: Antigravity
+  action: EDIT
+  outcome: changed
+  summary: Ground causal graph gene and protein nodes in PF01877 with verified UniProtKB accessions (UniProtKB:Q9UXX8)
+  history_record: history/records/PF01877/2026-10-18T025446Z-antigravity-f1f58f.yaml
   event_index: 0
   llm_assisted: true

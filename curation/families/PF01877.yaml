@@ -2,119 +2,157 @@ pfam_id: PF01877
 curation_status: IN_PROGRESS
 curation_history: history/records/PF01877
 causal_graphs:
-  - graph_id: pab1135-protein-dose
-    title: Increasing PAB1135 preparation increases the structured-probe binding readout
-    scope: Luz2010 Figure3A lanes7-10 and Figure3B, C8U5G8 probe titration.
-    context: Trypsin-treated GE5 PAB1135, 50-400 pmol protein and 1 pmol labeled RNA in 20 ul, 30 min at 37 C. Tris-HCl pH8, 20 mM KCl, 5 mM MnCl2, 1 mM DTT, BSA and RNasin; 8% native PAGE. Tris concentration is not stated.
-    family_mapping: Q9UXX8 sequence version1 equals CAB50635.1 and WP_010868849.1, 154 residues; PF01877 maps 9-132. GE5 genomic PCR in pET28a, expressed in BL21-CodonPlus(DE3)-RIL. Trypsin removes the His-tag and unspecified native N-terminal residues; the assayed termini are not sequence-verified.
-    scope_status: MECHANISTIC
-    taxon: NCBITaxon:272844
-    limitations: Preparation-level binding assay, not isolated-domain sufficiency or an RNA-processing reaction. High nominal protein excess, no fitted KD or saturation, and no replicate/error-bar information in Figure3. Native RNA conformers and exact active-protein concentration remain unresolved.
-    nodes:
-      - node_id: increased-protein-dose
-        label: Increase trypsin-treated PAB1135 from 50 to 400 pmol
-        node_type: PERTURBATION
-        grounding: [UniProtKB:Q9UXX8]
-      - node_id: bound-free-rna-ratio
-        label: C8U5G8 protein-bound/free RNA band ratio
-        node_type: STATE
-    edges:
-      - edge_id: protein-dose-increases-binding-readout
-        subject: increased-protein-dose
-        predicate: increases
-        object: bound-free-rna-ratio
-        mechanism: Increasing nominal protein from 2.5 to 20 uM raises the plotted bound/free ratio from approximately 0.17 to 0.74 and strengthens shifted bands. The denominator is free RNA, so 0.74 does not mean 74% of RNA is bound. This does not establish catalytic activation, binding stoichiometry or an equilibrium KD.
-        directness: DIRECT
-        support: OBSERVED
-        evidence_kind: EXPERIMENTAL
-        evidence:
-          - reference: PMID:20380716
-            source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC2872656/
-            snippet: ratio of protein-bound RNA over free RNA
-            explanation: Original Figure3A/B and RNA-binding Methods distinguish the nominal protein titration, no-protein control and actual plotted denominator. Approximate endpoints are read from the bars, not raw-data fits.
-            cache_path: evidence/PF01877/luz-2010-binding.txt
-            cache_sha256: 2577d51ca6608bc9edcc5f6b0e087fbd33f920e18045033d8f7ad76fec1094e8
-  - graph_id: pab1135-probe-comparisons
-    title: Changing the RNA probe changes the PAB1135 binding readout
-    scope: Luz2010 Figure3, matched protein doses across the three synthetic probes.
-    context: Each probe is supplied at 1 pmol with 50, 100, 200 or 400 pmol trypsin-treated PAB1135; 20 ul, 30 min at 37 C in the same reported Mn-containing buffer. Compare C8U5G8 separately with U8C5A8 and UUA/C.
-    family_mapping: Full-length reference Q9UXX8/CAB50635.1 maps PF01877 at 9-132; the experimental preparation is proteolytically processed with unresolved exact termini. No PAB1135 residue mutation or isolated Pfam construct is tested.
-    scope_status: MECHANISTIC
-    taxon: NCBITaxon:272844
-    limitations: RNA sequence and predicted secondary structure change together. Reported folding energies are -15.9 versus -1.9 kcal/mol for C8U5G8 versus U8C5A8; these are not measured binding free energies. Three probes do not prove universal sequence independence, and the weaker probes have nonzero shifts.
-    nodes:
-      - node_id: replace-uc-probe
-        label: Replace U8C5A8 with C8U5G8 at matched protein dose
-        node_type: PERTURBATION
-      - node_id: replace-uua-probe
-        label: Replace UUA/C with C8U5G8 at matched protein dose
-        node_type: PERTURBATION
-      - node_id: bound-free-rna-ratio
-        label: Protein-bound/free RNA band ratio for the supplied probe
-        node_type: STATE
-    edges:
-      - edge_id: cg-versus-uc-increases-binding-readout
-        subject: replace-uc-probe
-        predicate: increases
-        object: bound-free-rna-ratio
-        mechanism: C8U5G8 gives a larger shifted/free ratio than U8C5A8 at each plotted protein amount. This supports a probe-dependent association readout, not a clean causal isolation of RNA structure from sequence or a measured affinity constant.
-        directness: DIRECT
-        support: OBSERVED
-        evidence_kind: EXPERIMENTAL
-        evidence:
-          - reference: PMID:20380716
-            source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC2872656/
-            snippet: RNA binding assays
-            explanation: Original Figure3A lanes2-5 versus7-10 and Figure3B retain matched nominal dose and weak but nonzero U8C5A8 binding.
-            cache_path: evidence/PF01877/luz-2010-binding.txt
-            cache_sha256: 2577d51ca6608bc9edcc5f6b0e087fbd33f920e18045033d8f7ad76fec1094e8
-      - edge_id: cg-versus-uua-increases-binding-readout
-        subject: replace-uua-probe
-        predicate: increases
-        object: bound-free-rna-ratio
-        mechanism: C8U5G8 gives a larger shifted/free ratio than UUA/C under the same nominal doses. The UUA/C signal is weak, not strictly absent. This comparison is part of the same experiment, not independent replication or evidence that every single-stranded RNA is excluded.
-        directness: DIRECT
-        support: OBSERVED
-        evidence_kind: EXPERIMENTAL
-        evidence:
-          - reference: PMID:20380716
-            source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC2872656/
-            snippet: RNA binding assays
-            explanation: Original Figure3A lanes7-10 versus12-15 and Figure3B; preserve the observed weak signal rather than adopting the earlier unpublished no-binding assertion.
-            cache_path: evidence/PF01877/luz-2010-binding.txt
-            cache_sha256: 2577d51ca6608bc9edcc5f6b0e087fbd33f920e18045033d8f7ad76fec1094e8
+- graph_id: pab1135-protein-dose
+  title: Increasing PAB1135 preparation increases the structured-probe binding readout
+  scope: Luz2010 Figure3A lanes7-10 and Figure3B, C8U5G8 probe titration.
+  context: Trypsin-treated GE5 PAB1135, 50-400 pmol protein and 1 pmol labeled RNA in 20 ul, 30 min at
+    37 C. Tris-HCl pH8, 20 mM KCl, 5 mM MnCl2, 1 mM DTT, BSA and RNasin; 8% native PAGE. Tris concentration
+    is not stated.
+  family_mapping: Q9UXX8 sequence version1 equals CAB50635.1 and WP_010868849.1, 154 residues; PF01877
+    maps 9-132. GE5 genomic PCR in pET28a, expressed in BL21-CodonPlus(DE3)-RIL. Trypsin removes the His-tag
+    and unspecified native N-terminal residues; the assayed termini are not sequence-verified.
+  scope_status: MECHANISTIC
+  taxon: NCBITaxon:272844
+  limitations: Preparation-level binding assay, not isolated-domain sufficiency or an RNA-processing reaction.
+    High nominal protein excess, no fitted KD or saturation, and no replicate/error-bar information in
+    Figure3. Native RNA conformers and exact active-protein concentration remain unresolved.
+  nodes:
+  - node_id: increased-protein-dose
+    label: Increase trypsin-treated PAB1135 from 50 to 400 pmol
+    node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q9UXX8
+  - node_id: bound-free-rna-ratio
+    label: C8U5G8 protein-bound/free RNA band ratio
+    node_type: STATE
+  edges:
+  - edge_id: protein-dose-increases-binding-readout
+    subject: increased-protein-dose
+    predicate: increases
+    object: bound-free-rna-ratio
+    mechanism: Increasing nominal protein from 2.5 to 20 uM raises the plotted bound/free ratio from approximately
+      0.17 to 0.74 and strengthens shifted bands. The denominator is free RNA, so 0.74 does not mean 74%
+      of RNA is bound. This does not establish catalytic activation, binding stoichiometry or an equilibrium
+      KD.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:20380716
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC2872656/
+      snippet: ratio of protein-bound RNA over free RNA
+      explanation: Original Figure3A/B and RNA-binding Methods distinguish the nominal protein titration,
+        no-protein control and actual plotted denominator. Approximate endpoints are read from the bars,
+        not raw-data fits.
+      cache_path: evidence/PF01877/luz-2010-binding.txt
+      cache_sha256: 2577d51ca6608bc9edcc5f6b0e087fbd33f920e18045033d8f7ad76fec1094e8
+- graph_id: pab1135-probe-comparisons
+  title: Changing the RNA probe changes the PAB1135 binding readout
+  scope: Luz2010 Figure3, matched protein doses across the three synthetic probes.
+  context: Each probe is supplied at 1 pmol with 50, 100, 200 or 400 pmol trypsin-treated PAB1135; 20
+    ul, 30 min at 37 C in the same reported Mn-containing buffer. Compare C8U5G8 separately with U8C5A8
+    and UUA/C.
+  family_mapping: Full-length reference Q9UXX8/CAB50635.1 maps PF01877 at 9-132; the experimental preparation
+    is proteolytically processed with unresolved exact termini. No PAB1135 residue mutation or isolated
+    Pfam construct is tested.
+  scope_status: MECHANISTIC
+  taxon: NCBITaxon:272844
+  limitations: RNA sequence and predicted secondary structure change together. Reported folding energies
+    are -15.9 versus -1.9 kcal/mol for C8U5G8 versus U8C5A8; these are not measured binding free energies.
+    Three probes do not prove universal sequence independence, and the weaker probes have nonzero shifts.
+  nodes:
+  - node_id: replace-uc-probe
+    label: Replace U8C5A8 with C8U5G8 at matched protein dose
+    node_type: PERTURBATION
+  - node_id: replace-uua-probe
+    label: Replace UUA/C with C8U5G8 at matched protein dose
+    node_type: PERTURBATION
+  - node_id: bound-free-rna-ratio
+    label: Protein-bound/free RNA band ratio for the supplied probe
+    node_type: STATE
+    grounding:
+    - UniProtKB:Q9UXX8
+  edges:
+  - edge_id: cg-versus-uc-increases-binding-readout
+    subject: replace-uc-probe
+    predicate: increases
+    object: bound-free-rna-ratio
+    mechanism: C8U5G8 gives a larger shifted/free ratio than U8C5A8 at each plotted protein amount. This
+      supports a probe-dependent association readout, not a clean causal isolation of RNA structure from
+      sequence or a measured affinity constant.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:20380716
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC2872656/
+      snippet: RNA binding assays
+      explanation: Original Figure3A lanes2-5 versus7-10 and Figure3B retain matched nominal dose and
+        weak but nonzero U8C5A8 binding.
+      cache_path: evidence/PF01877/luz-2010-binding.txt
+      cache_sha256: 2577d51ca6608bc9edcc5f6b0e087fbd33f920e18045033d8f7ad76fec1094e8
+  - edge_id: cg-versus-uua-increases-binding-readout
+    subject: replace-uua-probe
+    predicate: increases
+    object: bound-free-rna-ratio
+    mechanism: C8U5G8 gives a larger shifted/free ratio than UUA/C under the same nominal doses. The UUA/C
+      signal is weak, not strictly absent. This comparison is part of the same experiment, not independent
+      replication or evidence that every single-stranded RNA is excluded.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:20380716
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC2872656/
+      snippet: RNA binding assays
+      explanation: Original Figure3A lanes7-10 versus12-15 and Figure3B; preserve the observed weak signal
+        rather than adopting the earlier unpublished no-binding assertion.
+      cache_path: evidence/PF01877/luz-2010-binding.txt
+      cache_sha256: 2577d51ca6608bc9edcc5f6b0e087fbd33f920e18045033d8f7ad76fec1094e8
 discussions:
-  - discussion_id: pab1135-construct-and-specificity
-    prompt: Resolve the assayed protein termini and RNA-recognition determinants.
-    kind: CURATION_TODO
-    status: OPEN
-    rationale: Reference identity is exact, but trypsin removes unspecified native residues and its printed concentration is inconsistent. RNA sequence and folding change together in the three-probe comparison.
-    evidence:
-      - reference: PMID:20380716
-        supports: PARTIAL
-        evidence_source: primary_methods_and_original_figures
-        explanation: Figures1-3 support preparation integrity and probe-dependent binding, without exact termini, a fitted KD, replication statistics or matched sequence/structure controls.
-    notes: Verify cleavage sites and preparation-specific controls; quantify orthogonal binding with saturation and replication. Test model-suggested R11/R13/K65/R106/H127/R129/K131 inside the match separately from K133 outside it, while checking folding and oligomerization. None is currently an observed causal residue.
-    posed_by: Codex
-    posed_date: '2026-10-11'
-  - discussion_id: duf54-family-function-and-dimer
-    prompt: Determine physiological targets and whether dimerization is required for function.
-    kind: CURATION_TODO
-    status: OPEN
-    rationale: Genomic neighborhood, structural similarity and apparent dimers do not establish RNase P/exosome function or dimer necessity. The frozen family description is not a family-wide experimental conclusion.
-    evidence:
-      - reference: PMID:19079550
-        supports: PARTIAL
-        evidence_source: primary_structural_and_computational_analysis
-        explanation: Surface comparisons and dimeric preparations are not negative PAB1135 binding assays or functional dimer-disruption tests.
-      - reference: PMID:20380716
-        supports: PARTIAL
-        evidence_source: primary_binding_and_homology_model
-        explanation: One processed protein binds synthetic probes; the basic-patch model and physiological RNA targets remain hypotheses.
-      - reference: PMID:21135215
-        supports: PARTIAL
-        evidence_source: primary_genomic_context_paragraph
-        explanation: The minimal RNase P study uses DUF54 as an operon marker; general proteinase sensitivity does not identify a DUF54-specific requirement.
-    notes: Inspect the currently inaccessible Miyazono2009 full text and later member studies, verify deposited structural identities, and test physiological RNA binding plus functional dimer perturbations. The 1082 frozen proteins remain in scope. Do not convert structural predictions into experimentally contested edges or assume conserved biochemical function.
-    posed_by: Codex
-    posed_date: '2026-10-11'
+- discussion_id: pab1135-construct-and-specificity
+  prompt: Resolve the assayed protein termini and RNA-recognition determinants.
+  kind: CURATION_TODO
+  status: OPEN
+  rationale: Reference identity is exact, but trypsin removes unspecified native residues and its printed
+    concentration is inconsistent. RNA sequence and folding change together in the three-probe comparison.
+  evidence:
+  - reference: PMID:20380716
+    supports: PARTIAL
+    evidence_source: primary_methods_and_original_figures
+    explanation: Figures1-3 support preparation integrity and probe-dependent binding, without exact termini,
+      a fitted KD, replication statistics or matched sequence/structure controls.
+  notes: Verify cleavage sites and preparation-specific controls; quantify orthogonal binding with saturation
+    and replication. Test model-suggested R11/R13/K65/R106/H127/R129/K131 inside the match separately
+    from K133 outside it, while checking folding and oligomerization. None is currently an observed causal
+    residue.
+  posed_by: Codex
+  posed_date: '2026-10-11'
+- discussion_id: duf54-family-function-and-dimer
+  prompt: Determine physiological targets and whether dimerization is required for function.
+  kind: CURATION_TODO
+  status: OPEN
+  rationale: Genomic neighborhood, structural similarity and apparent dimers do not establish RNase P/exosome
+    function or dimer necessity. The frozen family description is not a family-wide experimental conclusion.
+  evidence:
+  - reference: PMID:19079550
+    supports: PARTIAL
+    evidence_source: primary_structural_and_computational_analysis
+    explanation: Surface comparisons and dimeric preparations are not negative PAB1135 binding assays
+      or functional dimer-disruption tests.
+  - reference: PMID:20380716
+    supports: PARTIAL
+    evidence_source: primary_binding_and_homology_model
+    explanation: One processed protein binds synthetic probes; the basic-patch model and physiological
+      RNA targets remain hypotheses.
+  - reference: PMID:21135215
+    supports: PARTIAL
+    evidence_source: primary_genomic_context_paragraph
+    explanation: The minimal RNase P study uses DUF54 as an operon marker; general proteinase sensitivity
+      does not identify a DUF54-specific requirement.
+  notes: Inspect the currently inaccessible Miyazono2009 full text and later member studies, verify deposited
+    structural identities, and test physiological RNA binding plus functional dimer perturbations. The
+    1082 frozen proteins remain in scope. Do not convert structural predictions into experimentally contested
+    edges or assume conserved biochemical function.
+  posed_by: Codex
+  posed_date: '2026-10-11'

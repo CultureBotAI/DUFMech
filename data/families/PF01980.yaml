@@ -114,6 +114,8 @@ causal_graphs:
   - node_id: deletion
     label: Single trmO deletion versus WT
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:P28634
   - node_id: thr1_m6t6a
     label: Native Thr1 m6t6A37-containing fragment signal
     node_type: STATE
@@ -171,6 +173,8 @@ causal_graphs:
   - node_id: wt_rescue
     label: WT trmO plasmid in delta-trmO versus empty vector
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:P28634
   - node_id: signal
     label: Normalized cellular m6t6A signal
     node_type: PHENOTYPE
@@ -347,18 +351,28 @@ causal_graphs:
   - node_id: q25a
     label: Q25A versus WT trmO complementation
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:P28634
   - node_id: r92a
     label: R92A versus WT trmO complementation
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:P28634
   - node_id: d125a
     label: D125A versus WT trmO complementation
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:P28634
   - node_id: k136a
     label: K136A versus WT trmO complementation
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:P28634
   - node_id: cterm_double
     label: Joint D194A/R196A versus WT trmO complementation
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:P28634
   - node_id: signal
     label: Normalized cellular m6t6A signal
     node_type: PHENOTYPE
@@ -478,6 +492,8 @@ causal_graphs:
   - node_id: signal
     label: Methyl incorporation relative to WT Thr3
     node_type: PHENOTYPE
+    grounding:
+    - UniProtKB:P28634
   edges:
   - edge_id: as4-lowers-incorporation
     subject: as4
@@ -597,6 +613,8 @@ causal_graphs:
   - node_id: signal
     label: Methyl incorporation versus WT Thr4
     node_type: PHENOTYPE
+    grounding:
+    - UniProtKB:P28634
   edges:
   - edge_id: triple-increases-incorporation
     subject: triple
@@ -648,6 +666,8 @@ causal_graphs:
   - node_id: deletion
     label: trmO deletion in tcdA-positive cells versus WT
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:P28634
   - node_id: reporter
     label: OD-normalized ThrL-Luc luminescence
     node_type: PHENOTYPE
@@ -685,6 +705,8 @@ causal_graphs:
   - node_id: deletion
     label: Add trmO deletion to delta-tcdA cells
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:P28634
   - node_id: reporter
     label: OD-normalized ThrL-Luc luminescence versus delta-tcdA
     node_type: PHENOTYPE
@@ -904,5 +926,13 @@ curation_events:
   outcome: needs_followup
   summary: Review original tsaA1 reporter contexts with inherited scientific follow-ups
   history_record: history/records/PF01980/2026-10-15T221357Z-codex-40c40f.yaml
+  event_index: 0
+  llm_assisted: true
+- timestamp: '2026-10-18T02:54:46Z'
+  curator: Antigravity
+  action: EDIT
+  outcome: changed
+  summary: Ground causal graph gene and protein nodes in PF01980 with verified UniProtKB accessions (UniProtKB:P28634)
+  history_record: history/records/PF01980/2026-10-18T025446Z-antigravity-8f1638.yaml
   event_index: 0
   llm_assisted: true

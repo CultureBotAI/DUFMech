@@ -2,403 +2,511 @@ pfam_id: PF01697
 curation_status: IN_PROGRESS
 curation_history: history/records/PF01697
 causal_graphs:
-  - graph_id: galt1-extract-core-galactosylation
-    title: GALT-1 expression extract supports core-fucose-associated galactosylation
-    scope: Titz 2009 Figure 2, untagged full-coding-region C. elegans GALT-1 expressed in Sf9 cells; raw postnuclear extract, not purified protein or isolated domain.
-    context: Joint reaction of 0.5 ul extract, 1 mM UDP-Gal and 40 uM dabsyl-GEN[GnGnF6]R in 2.5 ul, MES pH6.5 with MnCl2, 2 h at room temperature. HTML prints MES 40 uM and MnCl2 10 uM; those unusual units remain unresolved, not silently corrected to mM.
-    family_mapping: GALT-1/M03F8.4 maps to O16374, 425 aa, current PF01697 189-394. Historical NP_504545.2 matches the reference and predates the study; the complete experimental clone is not independently verified. N-terminal membrane/glycosylation regions extend outside the domain.
-    scope_status: MECHANISTIC
-    taxon: NCBITaxon:6239
-    limitations: DIRECT describes the joint biochemical preparation-to-product observation, not autonomous purified GALT-1 chemistry. Figure 2B's caption reverses the displayed precursor order; use parent masses. The exact beta1,4 assignment additionally cites uninspected 2009 supplement S3. No elementary catalytic steps or family-wide substrate specificity are established.
-    nodes:
-      - node_id: galt1-extract-donor-acceptor
-        label: Joint GALT-1 expression extract, UDP-Gal and GnGnF6 glycopeptide reaction
-        node_type: ACTIVITY
-        grounding:
-          - UniProtKB:O16374
-      - node_id: core-beta-galactosylated-product
-        label: Core-fucose-associated beta-galactosylated glycopeptide product
-        node_type: STATE
-    edges:
-      - edge_id: joint-extract-reaction-produces-product
-        subject: galt1-extract-donor-acceptor
-        predicate: produces
-        object: core-beta-galactosylated-product
-        mechanism: The complete reaction adds 162 Da to parent2207, yielding2369; MS/MS fragment1273 locates the added hexose with core fucose, and beta-galactosidase removes it. Empty-vector and donor-omission controls lack the product.
-        directness: DIRECT
-        support: OBSERVED
-        evidence_kind: EXPERIMENTAL
-        evidence:
-          - reference: PMID:19858195
-            source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC2794738/
-            snippet: postnuclear supernatant
-            explanation: Expression/transferase Methods and visually inspected Figure 2A-C support the net extract reaction and product assignment; no purified enzyme or independently inspected S3 claim.
-            cache_path: evidence/PF01697/titz-2009-galt1.txt
-            cache_sha256: f0ead8cfc1653edd653af10e4036c499223c3beeed159a9d829a688a29cb9038
-  - graph_id: galt1-extract-donor-substitutions
-    title: Donor substitutions lower the product-associated HPLC peak
-    scope: Titz 2009 Figure 3A, Sf9 GALT-1 expression extract with dansyl-N[GnGnF6]ST, distinct from the dabsylated MS acceptor and lower-extract kinetics experiment.
-    context: Standard 0.5-ul raw-extract reaction, 40 uM acceptor, 1 mM donor, 2 h at room temperature in 2.5 ul MES pH6.5/MnCl2. Each indicated UDP sugar replaces UDP-Gal equimolarly. MES40uM/MnCl2-10uM are the unresolved printed units.
-    family_mapping: Full GALT-1/M03F8.4 corresponds to O16374/NP_504545.2; PF01697 189-394 within the 425-aa reference. These are donor changes to the complete extract reaction, not domain substitutions.
-    scope_status: MECHANISTIC
-    taxon: NCBITaxon:6239
-    limitations: The 8.06-min peak with UDP-Glc is small but nonzero and not chemically identified. Donor contamination or extract interconversion is not excluded. No universal exclusive specificity, purified-enzyme Km or binding affinity is claimed.
-    nodes:
-      - node_id: replace-with-udp-glc
-        label: Replace UDP-Gal with UDP-Glc
-        node_type: PERTURBATION
-      - node_id: replace-with-udp-glcnac
-        label: Replace UDP-Gal with UDP-GlcNAc
-        node_type: PERTURBATION
-      - node_id: replace-with-udp-galnac
-        label: Replace UDP-Gal with UDP-GalNAc
-        node_type: PERTURBATION
-      - node_id: hplc-product-peak
-        label: Product-associated 8.06-min HPLC peak
-        node_type: STATE
-    edges:
-      - edge_id: udp-glc-decreases-product-peak
-        subject: replace-with-udp-glc
-        predicate: decreases
-        object: hplc-product-peak
-        mechanism: Relative to UDP-Gal, the UDP-Glc reaction gives only a minor peak at the product retention time, reported below ten percent; it does not establish intrinsic glucosyltransferase activity.
-        directness: DIRECT
-        support: OBSERVED
-        evidence_kind: EXPERIMENTAL
-        evidence:
-          - reference: PMID:19858195
-            source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC2794738/
-            snippet: donor specificity
-            explanation: Figure 3A donor-comparison traces, associated Results and equimolar-substitution Methods; retain the small unresolved UDP-Glc peak.
-            cache_path: evidence/PF01697/titz-2009-galt1.txt
-            cache_sha256: f0ead8cfc1653edd653af10e4036c499223c3beeed159a9d829a688a29cb9038
-      - edge_id: udp-glcnac-decreases-product-peak
-        subject: replace-with-udp-glcnac
-        predicate: decreases
-        object: hplc-product-peak
-        mechanism: The UDP-GlcNAc reaction retains the substrate trace without the product peak visible with UDP-Gal under the matched assay.
-        directness: DIRECT
-        support: OBSERVED
-        evidence_kind: EXPERIMENTAL
-        evidence:
-          - reference: PMID:19858195
-            source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC2794738/
-            snippet: donor specificity
-            explanation: Visually inspected Figure 3A, UDP-GlcNAc versus UDP-Gal; limited to this assay's detection and preparation.
-            cache_path: evidence/PF01697/titz-2009-galt1.txt
-            cache_sha256: f0ead8cfc1653edd653af10e4036c499223c3beeed159a9d829a688a29cb9038
-      - edge_id: udp-galnac-decreases-product-peak
-        subject: replace-with-udp-galnac
-        predicate: decreases
-        object: hplc-product-peak
-        mechanism: The UDP-GalNAc reaction lacks the product peak visible with UDP-Gal under the matched assay.
-        directness: DIRECT
-        support: OBSERVED
-        evidence_kind: EXPERIMENTAL
-        evidence:
-          - reference: PMID:19858195
-            source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC2794738/
-            snippet: donor specificity
-            explanation: Visually inspected Figure 3A, UDP-GalNAc versus UDP-Gal; no claim of absolute inactivity in every context.
-            cache_path: evidence/PF01697/titz-2009-galt1.txt
-            cache_sha256: f0ead8cfc1653edd653af10e4036c499223c3beeed159a9d829a688a29cb9038
-  - graph_id: galt1-extract-acceptor-substitutions
-    title: Acceptor glycan substitutions alter qualitative conversion
-    scope: Titz 2009 Figure 4, dabsyl-GENR glycopeptides bearing GnGnF6, MMF6 or MMF3, assayed with whole GALT-1 expression extract.
-    context: 0.5 ul raw extract, 1 mM UDP-Gal, 40 uM supplied glycopeptide, 2 h at room temperature in 2.5 ul MES pH6.5/MnCl2. Compare each indicated replacement with its named parent substrate; printed buffer/metal units remain unresolved.
-    family_mapping: Whole O16374-associated GALT-1 contains PF01697 189-394; no purified or isolated-domain activity is established by the substrate substitutions.
-    scope_status: MECHANISTIC
-    taxon: NCBITaxon:6239
-    limitations: Product and parent MALDI patterns support qualitative conversion, not absolute rates or equivalent ionization efficiencies. MMF6 remains a substrate, so antennal GlcNAcs are not strictly required. MMF3 changes the fucose linkage as a positional isomer; no cellular glycan necessity is inferred.
-    nodes:
-      - node_id: gngnf6-to-mmf6
-        label: Replace GnGnF6 with MMF6 lacking antennal GlcNAcs
-        node_type: PERTURBATION
-      - node_id: mmf6-to-mmf3
-        label: Replace MMF6 with its alpha1,3-core-fucose isomer MMF3
-        node_type: PERTURBATION
-      - node_id: supplied-acceptor-galactosylation
-        label: Qualitative galactosylation of the supplied glycopeptide
-        node_type: ACTIVITY
-    edges:
-      - edge_id: mmf6-decreases-conversion-versus-gngnf6
-        subject: gngnf6-to-mmf6
-        predicate: decreases
-        object: supplied-acceptor-galactosylation
-        mechanism: GnGnF6 shows product2369 without visible parent2207, whereas MMF6 retains parent1801 alongside product1963. The latter is partial conversion, not a lack of activity.
-        directness: DIRECT
-        support: OBSERVED
-        evidence_kind: EXPERIMENTAL
-        evidence:
-          - reference: PMID:19858195
-            source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC2794738/
-            snippet: acceptor specificity
-            explanation: Figure 4 first two spectra and 2-h protocol; endpoint represents conversion of each supplied substrate, not an identical product mass across conditions.
-            cache_path: evidence/PF01697/titz-2009-galt1.txt
-            cache_sha256: f0ead8cfc1653edd653af10e4036c499223c3beeed159a9d829a688a29cb9038
-      - edge_id: mmf3-decreases-conversion-versus-mmf6
-        subject: mmf6-to-mmf3
-        predicate: decreases
-        object: supplied-acceptor-galactosylation
-        mechanism: Switching the core fucose from alpha1,6 to alpha1,3 leaves the parent1801 peak without the product1963 observed for MMF6.
-        directness: DIRECT
-        support: OBSERVED
-        evidence_kind: EXPERIMENTAL
-        evidence:
-          - reference: PMID:19858195
-            source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC2794738/
-            snippet: acceptor specificity
-            explanation: Visually inspected Figure 4 MMF6/MMF3 spectra, retaining the positional-isomer comparison and detection limit.
-            cache_path: evidence/PF01697/titz-2009-galt1.txt
-            cache_sha256: f0ead8cfc1653edd653af10e4036c499223c3beeed159a9d829a688a29cb9038
-  - graph_id: galt1-free-glycan-metal-comparisons
-    title: Metal and EDTA substitutions alter the radiolabel readout
-    scope: Titz 2009 Figure 5B, raw GALT-1 expression extract, free GnGnF6 glycan and UDP-[14C]Gal; not the peptide assays or 12-h TLC comparison.
-    context: Standard 2-h room-temperature reaction with 40 uM free acceptor, 1 mM UDP-Gal at 28.5 mCi/mmol, 0.5 ul extract in 2.5 ul. Neutral products counted after AG1-X8 removal of charged donor. MnCl2 is replaced by equal nominal concentrations of metal chloride, water or Na2EDTA; HTML prints 10 uM metal and 40 uM MES, unresolved.
-    family_mapping: The extract contains whole C. elegans GALT-1/O16374-associated protein, PF01697 189-394 in a 425-aa reference. Altering the reaction environment is not residue-specific evidence for D289/D291 coordination.
-    scope_status: MECHANISTIC
-    taxon: NCBITaxon:6239
-    limitations: Readout is product-associated neutral-fraction radioactivity, with possible hydrolysis background. Water-added extract retains residual cofactors and is not metal-free. Three to seven independent experiments with SD do not establish a significant Mn/Fe/Co ranking, an exclusive Mn requirement or a purified-enzyme metal-binding mechanism.
-    nodes:
-      - node_id: add-mn-versus-water
-        label: Supply MnCl2 instead of water to the extract reaction
-        node_type: PERTURBATION
-      - node_id: add-fe-versus-water
-        label: Supply Fe(II) chloride instead of water to the extract reaction
-        node_type: PERTURBATION
-      - node_id: add-co-versus-water
-        label: Supply Co(II) chloride instead of water to the extract reaction
-        node_type: PERTURBATION
-      - node_id: replace-mn-with-edta
-        label: Replace MnCl2 with Na2EDTA
-        node_type: PERTURBATION
-      - node_id: neutral-fraction-counts
-        label: Product-associated neutral-fraction radiolabel counts
-        node_type: STATE
-    edges:
-      - edge_id: mn-increases-counts-versus-water
-        subject: add-mn-versus-water
-        predicate: increases
-        object: neutral-fraction-counts
-        mechanism: Mn addition produces a higher normalized radiolabel readout than the water-added extract containing residual cofactors.
-        directness: DIRECT
-        support: OBSERVED
-        evidence_kind: EXPERIMENTAL
-        evidence:
-          - reference: PMID:19858195
-            source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC2794738/
-            snippet: co-factor dependence
-            explanation: Figure 5B Mn versus aq bars and assay Methods; Figure 5A separately checks radiolabel product migration.
-            cache_path: evidence/PF01697/titz-2009-galt1.txt
-            cache_sha256: f0ead8cfc1653edd653af10e4036c499223c3beeed159a9d829a688a29cb9038
-      - edge_id: fe-increases-counts-versus-water
-        subject: add-fe-versus-water
-        predicate: increases
-        object: neutral-fraction-counts
-        mechanism: The Fe(II) condition produces a higher normalized radiolabel readout than the water-added extract; the enzyme's molecular metal occupancy is not measured.
-        directness: DIRECT
-        support: OBSERVED
-        evidence_kind: EXPERIMENTAL
-        evidence:
-          - reference: PMID:19858195
-            source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC2794738/
-            snippet: co-factor dependence
-            explanation: Visually inspected Figure 5B Fe versus aq; no statistically supported advantage over Mn or Co is asserted.
-            cache_path: evidence/PF01697/titz-2009-galt1.txt
-            cache_sha256: f0ead8cfc1653edd653af10e4036c499223c3beeed159a9d829a688a29cb9038
-      - edge_id: co-increases-counts-versus-water
-        subject: add-co-versus-water
-        predicate: increases
-        object: neutral-fraction-counts
-        mechanism: The Co(II) condition produces a higher normalized radiolabel readout than the water-added extract; this is not a universal physiological cofactor assignment.
-        directness: DIRECT
-        support: OBSERVED
-        evidence_kind: EXPERIMENTAL
-        evidence:
-          - reference: PMID:19858195
-            source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC2794738/
-            snippet: co-factor dependence
-            explanation: Visually inspected Figure 5B Co versus aq, mean and SD for the stated extract assay.
-            cache_path: evidence/PF01697/titz-2009-galt1.txt
-            cache_sha256: f0ead8cfc1653edd653af10e4036c499223c3beeed159a9d829a688a29cb9038
-      - edge_id: edta-replacement-decreases-counts
-        subject: replace-mn-with-edta
-        predicate: decreases
-        object: neutral-fraction-counts
-        mechanism: EDTA replacing MnCl2 lowers the readout near the vector-control baseline. It is not an EDTA-on-top-of-Mn experiment or proof of literally zero transfer.
-        directness: DIRECT
-        support: OBSERVED
-        evidence_kind: EXPERIMENTAL
-        evidence:
-          - reference: PMID:19858195
-            source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC2794738/
-            snippet: co-factor dependence
-            explanation: Figure 5B EDTA/Mn/vector bars and Methods specifying replacement at equal concentration.
-            cache_path: evidence/PF01697/titz-2009-galt1.txt
-            cache_sha256: f0ead8cfc1653edd653af10e4036c499223c3beeed159a9d829a688a29cb9038
-  - graph_id: galt1-unc119-cgl2-development
-    title: The op497 allele increases development on CGL2 food in unc-119 animals
-    scope: Titz 2009 Figure 6A, unc-119(ed3);galt-1(op497) compared with unc-119(ed3), distinct from the companion pmk-1 experiment.
-    context: 50-100 newly hatched L1 on NGM containing 1 mM IPTG and 50 ug/ml kanamycin, seeded with CGL2-producing BL21(DE3); fraction reaching L4 after72h, three replicates with SD. Overnight37C is plate preparation, not an established worm assay temperature.
-    family_mapping: M03F8.4/galt-1 corresponds to O16374, PF01697 189-394. Companion primary Figure4B maps op497 to a Mos1 insertion in exon2; neither exact mutant protein nor domain-specific disruption is established.
-    scope_status: PHENOTYPIC
-    taxon: NCBITaxon:6239
-    limitations: Whole-genotype developmental response is indirect. No toxin-free comparison for every line is displayed in this panel; development is not a quantitative mortality or binding assay. The separate joint-construct rescue is informative but does not make the DUF domain autonomously causal.
-    nodes:
-      - node_id: op497-in-unc119
-        label: Add galt-1(op497) to the unc-119(ed3) background
-        node_type: PERTURBATION
-        grounding:
-          - WormBase:WBGene00019763
-      - node_id: unc119-cgl2-l4-fraction
-        label: Fraction reaching L4 at72h on CGL2 food in the unc-119 comparison
-        node_type: PHENOTYPE
-    edges:
-      - edge_id: op497-increases-unc119-l4-fraction
-        subject: op497-in-unc119
-        predicate: increases
-        object: unc119-cgl2-l4-fraction
-        mechanism: The double mutant has a higher L4 fraction than the unc-119 single mutant under CGL2 exposure, consistent with reduced developmental sensitivity without resolving the intervening molecular sequence.
-        directness: INDIRECT
-        support: OBSERVED
-        evidence_kind: EXPERIMENTAL
-        evidence:
-          - reference: PMID:19858195
-            source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC2794738/
-            snippet: rescue of CGL2 sensitivity
-            explanation: Figure 6A untransformed single/double-mutant bars and developmental Methods, not the separate fluorescence endpoint.
-            cache_path: evidence/PF01697/titz-2009-galt1.txt
-            cache_sha256: f0ead8cfc1653edd653af10e4036c499223c3beeed159a9d829a688a29cb9038
-  - graph_id: galt1-joint-construct-cgl2-rescue
-    title: Two integrated joint constructs restore CGL2 developmental sensitivity
-    scope: Titz 2009 Figure 6A, opIs444 and opIs445 in unc-119(ed3);galt-1(op497), each compared with the untransformed double mutant.
-    context: pAB15 carries genomic galt-1 with1843bp upstream fused to mCherry/let-858 plus the unc-119 transformation marker; integrants selected by rescue of the unc-119 dauer defect. CGL2-fed L1-to-L4 assay after72h uses the Figure6 conditions, three replicates with SD.
-    family_mapping: Complete GALT-1/M03F8.4 coding region in the fusion maps to O16374-associated protein with PF01697 189-394, plus non-domain regions and reporter. The integrated arrays additionally rescue the selection-marker phenotype.
-    scope_status: PHENOTYPIC
-    taxon: NCBITaxon:6239
-    limitations: Retain the joint intervention, not a pure single-gene rescue. opIs444 is incompletely restored; no formal equivalence of opIs445 to WT is claimed. The unc-119 single mutant is itself CGL2-sensitive. Expression images do not establish marker-verified Golgi localization or a resolved toxic mechanism.
-    nodes:
-      - node_id: integrate-opis444
-        label: Introduce joint galt-1-mCherry and unc-119 marker array opIs444
-        node_type: PERTURBATION
-      - node_id: integrate-opis445
-        label: Introduce joint galt-1-mCherry and unc-119 marker array opIs445
-        node_type: PERTURBATION
-      - node_id: rescued-cgl2-l4-fraction
-        label: L4 fraction after72h on CGL2 food relative to the double mutant
-        node_type: PHENOTYPE
-    edges:
-      - edge_id: opis444-decreases-l4-fraction
-        subject: integrate-opis444
-        predicate: decreases
-        object: rescued-cgl2-l4-fraction
-        mechanism: The opIs444 line has a lower L4 fraction than the untransformed double mutant, indicating partial restoration of CGL2 sensitivity with the joint construct.
-        directness: INDIRECT
-        support: OBSERVED
-        evidence_kind: EXPERIMENTAL
-        evidence:
-          - reference: PMID:19858195
-            source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC2794738/
-            snippet: rescue of CGL2 sensitivity
-            explanation: Figure 6A opIs444 comparison and genomic fusion/selection Methods; preserve residual development and marker co-rescue.
-            cache_path: evidence/PF01697/titz-2009-galt1.txt
-            cache_sha256: f0ead8cfc1653edd653af10e4036c499223c3beeed159a9d829a688a29cb9038
-      - edge_id: opis445-decreases-l4-fraction
-        subject: integrate-opis445
-        predicate: decreases
-        object: rescued-cgl2-l4-fraction
-        mechanism: The opIs445 line has a lower L4 fraction than the untransformed double mutant, restoring developmental sensitivity in this joint-construct comparison.
-        directness: INDIRECT
-        support: OBSERVED
-        evidence_kind: EXPERIMENTAL
-        evidence:
-          - reference: PMID:19858195
-            source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC2794738/
-            snippet: rescue of CGL2 sensitivity
-            explanation: Figure 6A opIs445 comparison; no demonstrated statistical equality with WT or independent control of every insertion effect.
-            cache_path: evidence/PF01697/titz-2009-galt1.txt
-            cache_sha256: f0ead8cfc1653edd653af10e4036c499223c3beeed159a9d829a688a29cb9038
-  - graph_id: galt1-pmk1-cgl2-development
-    title: The op497 allele increases development on CGL2 food in pmk-1 animals
-    scope: Butschi 2010 Figure 4A/B, pmk-1(km25);galt-1(op497) compared with the CGL2-hypersensitive pmk-1(km25) parent.
-    context: Mos1-selected insertion mutants were outcrossed two to six times; 50-100 newly hatched L1 on CGL2-producing BL21(DE3), fraction reaching L4 after72h. Plates were prepared overnight at23C; assay-specific animal temperature is not restated.
-    family_mapping: Figure4B identifies op497 in the second exon of M03F8.4/galt-1, O16374-associated 425-aa protein with PF01697 189-394. No domain-specific knockout or mutant protein length is established.
-    scope_status: PHENOTYPIC
-    taxon: NCBITaxon:6239
-    limitations: Published statistical comparisons are to N2, not the zero-L4 pmk-1 population. The observation is developmental resistance in this genetic background, not a direct glycan-binding measurement. Figure6 lectin staining tests fut-8, not galt-1. Rescue from the unc-119 study is not a matched rescue in pmk-1.
-    nodes:
-      - node_id: op497-in-pmk1
-        label: Add galt-1(op497) to the pmk-1(km25) background
-        node_type: PERTURBATION
-        grounding:
-          - WormBase:WBGene00019763
-      - node_id: pmk1-cgl2-l4-fraction
-        label: Fraction reaching L4 at72h on CGL2 food in the pmk-1 comparison
-        node_type: PHENOTYPE
-    edges:
-      - edge_id: op497-increases-pmk1-l4-fraction
-        subject: op497-in-pmk1
-        predicate: increases
-        object: pmk1-cgl2-l4-fraction
-        mechanism: The insertion-bearing double mutant develops to L4 at a higher fraction than pmk-1 alone under CGL2 feeding; the intermediate molecular events are not tracked in this assay.
-        directness: INDIRECT
-        support: OBSERVED
-        evidence_kind: EXPERIMENTAL
-        evidence:
-          - reference: PMID:20062796
-            source_url: https://journals.plos.org/plospathogens/article?id=10.1371/journal.ppat.1000717
-            snippet: fraction of animals
-            explanation: Visually inspected Figure4A/B and developmental/Mos1 Methods; no genotype-wide mortality or lectin-staining inference.
-            cache_path: evidence/PF01697/butschi-2010-galt1.txt
-            cache_sha256: 5a614d50bcb2ca9673a0330b8a74394729d4fd748db926e61e0e5dcdac391024
-  - graph_id: galt1-pmk1-selected-glycan-peak
-    title: The op497 genotype reduces a selected core-galactosylated glycan peak
-    scope: Butschi 2010 Figure7, pmk-1(km25);galt-1(op497) versus pmk-1(km25); selected PNGaseF-resistant/PNGaseA-sensitive N-glycan fraction, not the entire glycome.
-    context: Five-day room-temperature liquid OP50 cultures, no CGL2 exposure in this preparation. Sequential PNGase release, PA labeling, NP-HPLC fraction34.0-35.5min followed by RP-HPLC; selected peakA near14.5min is characterized by MS/MS and exoglycosidases, including supplement FigureS2.
-    family_mapping: Whole-gene Mos1 op497 perturbs M03F8.4/galt-1, associated with O16374 and its PF01697 interval189-394. This indirect whole-animal glycan change does not locate the intervention within the domain or prove purified-domain catalysis.
-    scope_status: PHENOTYPIC
-    taxon: NCBITaxon:6239
-    limitations: Qualitative selected-peak comparison, not calibrated total glycan abundance, replicated quantitative glycomics or a matched glycome rescue. The analogous fut-8 mutant is a separate perturbation. The biochemical extract product and toxin-development readouts are not joined into an entirely observed causal sequence.
-    nodes:
-      - node_id: op497-pmk1-glycome-preparation
-        label: Substitute pmk-1;galt-1(op497) for pmk-1 in the glycome comparison
-        node_type: PERTURBATION
-        grounding:
-          - WormBase:WBGene00019763
-      - node_id: selected-core-galactosylated-peak
-        label: Selected core-galactosylated Hex5dHex2HexNAc2-PA peakA
-        node_type: STATE
-    edges:
-      - edge_id: op497-decreases-selected-peak
-        subject: op497-pmk1-glycome-preparation
-        predicate: decreases
-        object: selected-core-galactosylated-peak
-        mechanism: PeakA present in pmk-1 is not detected in the double-mutant selected fraction. Parent1605/core fragment753 and sequential galactosidase/fucosidase changes support its core-galactosylated assignment, without making the genotype effect direct chemistry.
-        directness: INDIRECT
-        support: OBSERVED
-        evidence_kind: EXPERIMENTAL
-        evidence:
-          - reference: PMID:20062796
-            source_url: https://journals.plos.org/plospathogens/article?id=10.1371/journal.ppat.1000717
-            snippet: Peak A
-            explanation: Figure7A-C, glycan preparation/analysis Methods, and visually inspected one-page supplement FigureS2; the supplement characterizes the isolated peak, not quantitative genotype replication.
-            cache_path: evidence/PF01697/butschi-2010-galt1.txt
-            cache_sha256: 5a614d50bcb2ca9673a0330b8a74394729d4fd748db926e61e0e5dcdac391024
-discussions:
-  - discussion_id: galt1-purified-enzyme-and-family-coverage
-    prompt: Resolve GALT-1 assay and construct gaps, and extend GT92 member coverage independently.
-    kind: CURATION_TODO
-    status: OPEN
-    rationale: Eight graphs retain fifteen observed effects across crude-extract biochemistry, two genetic backgrounds, joint-construct rescue and a selected glycan fraction. Neither the full protein's isolated PF01697 domain nor every GT92 member has a resolved causal mechanism.
+- graph_id: galt1-extract-core-galactosylation
+  title: GALT-1 expression extract supports core-fucose-associated galactosylation
+  scope: Titz 2009 Figure 2, untagged full-coding-region C. elegans GALT-1 expressed in Sf9 cells; raw
+    postnuclear extract, not purified protein or isolated domain.
+  context: Joint reaction of 0.5 ul extract, 1 mM UDP-Gal and 40 uM dabsyl-GEN[GnGnF6]R in 2.5 ul, MES
+    pH6.5 with MnCl2, 2 h at room temperature. HTML prints MES 40 uM and MnCl2 10 uM; those unusual units
+    remain unresolved, not silently corrected to mM.
+  family_mapping: GALT-1/M03F8.4 maps to O16374, 425 aa, current PF01697 189-394. Historical NP_504545.2
+    matches the reference and predates the study; the complete experimental clone is not independently
+    verified. N-terminal membrane/glycosylation regions extend outside the domain.
+  scope_status: MECHANISTIC
+  taxon: NCBITaxon:6239
+  limitations: DIRECT describes the joint biochemical preparation-to-product observation, not autonomous
+    purified GALT-1 chemistry. Figure 2B's caption reverses the displayed precursor order; use parent
+    masses. The exact beta1,4 assignment additionally cites uninspected 2009 supplement S3. No elementary
+    catalytic steps or family-wide substrate specificity are established.
+  nodes:
+  - node_id: galt1-extract-donor-acceptor
+    label: Joint GALT-1 expression extract, UDP-Gal and GnGnF6 glycopeptide reaction
+    node_type: ACTIVITY
+    grounding:
+    - UniProtKB:O16374
+  - node_id: core-beta-galactosylated-product
+    label: Core-fucose-associated beta-galactosylated glycopeptide product
+    node_type: STATE
+  edges:
+  - edge_id: joint-extract-reaction-produces-product
+    subject: galt1-extract-donor-acceptor
+    predicate: produces
+    object: core-beta-galactosylated-product
+    mechanism: The complete reaction adds 162 Da to parent2207, yielding2369; MS/MS fragment1273 locates
+      the added hexose with core fucose, and beta-galactosidase removes it. Empty-vector and donor-omission
+      controls lack the product.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
     evidence:
-      - reference: PMID:19858195
-        supports: PARTIAL
-        evidence_source: inspected_primary_html_and_main_figures
-        explanation: Product, donor, acceptor, metal and rescue comparisons are supported, but the printed MES/metal units, historical clone and supplemental beta1,4 analysis need further inspection. All biochemical assays use raw Sf9 extract.
-      - reference: PMID:20062796
-        supports: PARTIAL
-        evidence_source: inspected_primary_full_text_figures_and_supplement
-        explanation: The pmk-1 phenotype and selected glycan deficit are supported with exon2 allele mapping and peak structural analysis. Lectin staining used fut-8 and cannot be transferred to galt-1.
-    notes: Verify 2009 supplemental primers/S3 and assay units using an accessible primary copy; current PMC PDF returned HTML, publisher403 and ETH429. Distinguish exact long NP_504545.2 mapping from unverified historical clones, putative DXD chemistry from residue tests, and apparent crude-extract Km from intrinsic constants. Inspect purified enzyme, other alleles and matched glycome rescue when available. Pigeon PMID19959475 and Populus GalS1 PMID36849618 are unintegrated family leads; do not transfer nematode core-fucose specificity to plant galactan extension/capping. Status remains IN_PROGRESS with partial scientific self-review, not family completion.
-    posed_by: Codex
-    posed_date: '2026-10-11'
+    - reference: PMID:19858195
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC2794738/
+      snippet: postnuclear supernatant
+      explanation: Expression/transferase Methods and visually inspected Figure 2A-C support the net extract
+        reaction and product assignment; no purified enzyme or independently inspected S3 claim.
+      cache_path: evidence/PF01697/titz-2009-galt1.txt
+      cache_sha256: f0ead8cfc1653edd653af10e4036c499223c3beeed159a9d829a688a29cb9038
+- graph_id: galt1-extract-donor-substitutions
+  title: Donor substitutions lower the product-associated HPLC peak
+  scope: Titz 2009 Figure 3A, Sf9 GALT-1 expression extract with dansyl-N[GnGnF6]ST, distinct from the
+    dabsylated MS acceptor and lower-extract kinetics experiment.
+  context: Standard 0.5-ul raw-extract reaction, 40 uM acceptor, 1 mM donor, 2 h at room temperature in
+    2.5 ul MES pH6.5/MnCl2. Each indicated UDP sugar replaces UDP-Gal equimolarly. MES40uM/MnCl2-10uM
+    are the unresolved printed units.
+  family_mapping: Full GALT-1/M03F8.4 corresponds to O16374/NP_504545.2; PF01697 189-394 within the 425-aa
+    reference. These are donor changes to the complete extract reaction, not domain substitutions.
+  scope_status: MECHANISTIC
+  taxon: NCBITaxon:6239
+  limitations: The 8.06-min peak with UDP-Glc is small but nonzero and not chemically identified. Donor
+    contamination or extract interconversion is not excluded. No universal exclusive specificity, purified-enzyme
+    Km or binding affinity is claimed.
+  nodes:
+  - node_id: replace-with-udp-glc
+    label: Replace UDP-Gal with UDP-Glc
+    node_type: PERTURBATION
+  - node_id: replace-with-udp-glcnac
+    label: Replace UDP-Gal with UDP-GlcNAc
+    node_type: PERTURBATION
+  - node_id: replace-with-udp-galnac
+    label: Replace UDP-Gal with UDP-GalNAc
+    node_type: PERTURBATION
+  - node_id: hplc-product-peak
+    label: Product-associated 8.06-min HPLC peak
+    node_type: STATE
+  edges:
+  - edge_id: udp-glc-decreases-product-peak
+    subject: replace-with-udp-glc
+    predicate: decreases
+    object: hplc-product-peak
+    mechanism: Relative to UDP-Gal, the UDP-Glc reaction gives only a minor peak at the product retention
+      time, reported below ten percent; it does not establish intrinsic glucosyltransferase activity.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:19858195
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC2794738/
+      snippet: donor specificity
+      explanation: Figure 3A donor-comparison traces, associated Results and equimolar-substitution Methods;
+        retain the small unresolved UDP-Glc peak.
+      cache_path: evidence/PF01697/titz-2009-galt1.txt
+      cache_sha256: f0ead8cfc1653edd653af10e4036c499223c3beeed159a9d829a688a29cb9038
+  - edge_id: udp-glcnac-decreases-product-peak
+    subject: replace-with-udp-glcnac
+    predicate: decreases
+    object: hplc-product-peak
+    mechanism: The UDP-GlcNAc reaction retains the substrate trace without the product peak visible with
+      UDP-Gal under the matched assay.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:19858195
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC2794738/
+      snippet: donor specificity
+      explanation: Visually inspected Figure 3A, UDP-GlcNAc versus UDP-Gal; limited to this assay's detection
+        and preparation.
+      cache_path: evidence/PF01697/titz-2009-galt1.txt
+      cache_sha256: f0ead8cfc1653edd653af10e4036c499223c3beeed159a9d829a688a29cb9038
+  - edge_id: udp-galnac-decreases-product-peak
+    subject: replace-with-udp-galnac
+    predicate: decreases
+    object: hplc-product-peak
+    mechanism: The UDP-GalNAc reaction lacks the product peak visible with UDP-Gal under the matched assay.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:19858195
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC2794738/
+      snippet: donor specificity
+      explanation: Visually inspected Figure 3A, UDP-GalNAc versus UDP-Gal; no claim of absolute inactivity
+        in every context.
+      cache_path: evidence/PF01697/titz-2009-galt1.txt
+      cache_sha256: f0ead8cfc1653edd653af10e4036c499223c3beeed159a9d829a688a29cb9038
+- graph_id: galt1-extract-acceptor-substitutions
+  title: Acceptor glycan substitutions alter qualitative conversion
+  scope: Titz 2009 Figure 4, dabsyl-GENR glycopeptides bearing GnGnF6, MMF6 or MMF3, assayed with whole
+    GALT-1 expression extract.
+  context: 0.5 ul raw extract, 1 mM UDP-Gal, 40 uM supplied glycopeptide, 2 h at room temperature in 2.5
+    ul MES pH6.5/MnCl2. Compare each indicated replacement with its named parent substrate; printed buffer/metal
+    units remain unresolved.
+  family_mapping: Whole O16374-associated GALT-1 contains PF01697 189-394; no purified or isolated-domain
+    activity is established by the substrate substitutions.
+  scope_status: MECHANISTIC
+  taxon: NCBITaxon:6239
+  limitations: Product and parent MALDI patterns support qualitative conversion, not absolute rates or
+    equivalent ionization efficiencies. MMF6 remains a substrate, so antennal GlcNAcs are not strictly
+    required. MMF3 changes the fucose linkage as a positional isomer; no cellular glycan necessity is
+    inferred.
+  nodes:
+  - node_id: gngnf6-to-mmf6
+    label: Replace GnGnF6 with MMF6 lacking antennal GlcNAcs
+    node_type: PERTURBATION
+  - node_id: mmf6-to-mmf3
+    label: Replace MMF6 with its alpha1,3-core-fucose isomer MMF3
+    node_type: PERTURBATION
+  - node_id: supplied-acceptor-galactosylation
+    label: Qualitative galactosylation of the supplied glycopeptide
+    node_type: ACTIVITY
+    grounding:
+    - UniProtKB:O16374
+  edges:
+  - edge_id: mmf6-decreases-conversion-versus-gngnf6
+    subject: gngnf6-to-mmf6
+    predicate: decreases
+    object: supplied-acceptor-galactosylation
+    mechanism: GnGnF6 shows product2369 without visible parent2207, whereas MMF6 retains parent1801 alongside
+      product1963. The latter is partial conversion, not a lack of activity.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:19858195
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC2794738/
+      snippet: acceptor specificity
+      explanation: Figure 4 first two spectra and 2-h protocol; endpoint represents conversion of each
+        supplied substrate, not an identical product mass across conditions.
+      cache_path: evidence/PF01697/titz-2009-galt1.txt
+      cache_sha256: f0ead8cfc1653edd653af10e4036c499223c3beeed159a9d829a688a29cb9038
+  - edge_id: mmf3-decreases-conversion-versus-mmf6
+    subject: mmf6-to-mmf3
+    predicate: decreases
+    object: supplied-acceptor-galactosylation
+    mechanism: Switching the core fucose from alpha1,6 to alpha1,3 leaves the parent1801 peak without
+      the product1963 observed for MMF6.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:19858195
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC2794738/
+      snippet: acceptor specificity
+      explanation: Visually inspected Figure 4 MMF6/MMF3 spectra, retaining the positional-isomer comparison
+        and detection limit.
+      cache_path: evidence/PF01697/titz-2009-galt1.txt
+      cache_sha256: f0ead8cfc1653edd653af10e4036c499223c3beeed159a9d829a688a29cb9038
+- graph_id: galt1-free-glycan-metal-comparisons
+  title: Metal and EDTA substitutions alter the radiolabel readout
+  scope: Titz 2009 Figure 5B, raw GALT-1 expression extract, free GnGnF6 glycan and UDP-[14C]Gal; not
+    the peptide assays or 12-h TLC comparison.
+  context: Standard 2-h room-temperature reaction with 40 uM free acceptor, 1 mM UDP-Gal at 28.5 mCi/mmol,
+    0.5 ul extract in 2.5 ul. Neutral products counted after AG1-X8 removal of charged donor. MnCl2 is
+    replaced by equal nominal concentrations of metal chloride, water or Na2EDTA; HTML prints 10 uM metal
+    and 40 uM MES, unresolved.
+  family_mapping: The extract contains whole C. elegans GALT-1/O16374-associated protein, PF01697 189-394
+    in a 425-aa reference. Altering the reaction environment is not residue-specific evidence for D289/D291
+    coordination.
+  scope_status: MECHANISTIC
+  taxon: NCBITaxon:6239
+  limitations: Readout is product-associated neutral-fraction radioactivity, with possible hydrolysis
+    background. Water-added extract retains residual cofactors and is not metal-free. Three to seven independent
+    experiments with SD do not establish a significant Mn/Fe/Co ranking, an exclusive Mn requirement or
+    a purified-enzyme metal-binding mechanism.
+  nodes:
+  - node_id: add-mn-versus-water
+    label: Supply MnCl2 instead of water to the extract reaction
+    node_type: PERTURBATION
+  - node_id: add-fe-versus-water
+    label: Supply Fe(II) chloride instead of water to the extract reaction
+    node_type: PERTURBATION
+  - node_id: add-co-versus-water
+    label: Supply Co(II) chloride instead of water to the extract reaction
+    node_type: PERTURBATION
+  - node_id: replace-mn-with-edta
+    label: Replace MnCl2 with Na2EDTA
+    node_type: PERTURBATION
+  - node_id: neutral-fraction-counts
+    label: Product-associated neutral-fraction radiolabel counts
+    node_type: STATE
+  edges:
+  - edge_id: mn-increases-counts-versus-water
+    subject: add-mn-versus-water
+    predicate: increases
+    object: neutral-fraction-counts
+    mechanism: Mn addition produces a higher normalized radiolabel readout than the water-added extract
+      containing residual cofactors.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:19858195
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC2794738/
+      snippet: co-factor dependence
+      explanation: Figure 5B Mn versus aq bars and assay Methods; Figure 5A separately checks radiolabel
+        product migration.
+      cache_path: evidence/PF01697/titz-2009-galt1.txt
+      cache_sha256: f0ead8cfc1653edd653af10e4036c499223c3beeed159a9d829a688a29cb9038
+  - edge_id: fe-increases-counts-versus-water
+    subject: add-fe-versus-water
+    predicate: increases
+    object: neutral-fraction-counts
+    mechanism: The Fe(II) condition produces a higher normalized radiolabel readout than the water-added
+      extract; the enzyme's molecular metal occupancy is not measured.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:19858195
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC2794738/
+      snippet: co-factor dependence
+      explanation: Visually inspected Figure 5B Fe versus aq; no statistically supported advantage over
+        Mn or Co is asserted.
+      cache_path: evidence/PF01697/titz-2009-galt1.txt
+      cache_sha256: f0ead8cfc1653edd653af10e4036c499223c3beeed159a9d829a688a29cb9038
+  - edge_id: co-increases-counts-versus-water
+    subject: add-co-versus-water
+    predicate: increases
+    object: neutral-fraction-counts
+    mechanism: The Co(II) condition produces a higher normalized radiolabel readout than the water-added
+      extract; this is not a universal physiological cofactor assignment.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:19858195
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC2794738/
+      snippet: co-factor dependence
+      explanation: Visually inspected Figure 5B Co versus aq, mean and SD for the stated extract assay.
+      cache_path: evidence/PF01697/titz-2009-galt1.txt
+      cache_sha256: f0ead8cfc1653edd653af10e4036c499223c3beeed159a9d829a688a29cb9038
+  - edge_id: edta-replacement-decreases-counts
+    subject: replace-mn-with-edta
+    predicate: decreases
+    object: neutral-fraction-counts
+    mechanism: EDTA replacing MnCl2 lowers the readout near the vector-control baseline. It is not an
+      EDTA-on-top-of-Mn experiment or proof of literally zero transfer.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:19858195
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC2794738/
+      snippet: co-factor dependence
+      explanation: Figure 5B EDTA/Mn/vector bars and Methods specifying replacement at equal concentration.
+      cache_path: evidence/PF01697/titz-2009-galt1.txt
+      cache_sha256: f0ead8cfc1653edd653af10e4036c499223c3beeed159a9d829a688a29cb9038
+- graph_id: galt1-unc119-cgl2-development
+  title: The op497 allele increases development on CGL2 food in unc-119 animals
+  scope: Titz 2009 Figure 6A, unc-119(ed3);galt-1(op497) compared with unc-119(ed3), distinct from the
+    companion pmk-1 experiment.
+  context: 50-100 newly hatched L1 on NGM containing 1 mM IPTG and 50 ug/ml kanamycin, seeded with CGL2-producing
+    BL21(DE3); fraction reaching L4 after72h, three replicates with SD. Overnight37C is plate preparation,
+    not an established worm assay temperature.
+  family_mapping: M03F8.4/galt-1 corresponds to O16374, PF01697 189-394. Companion primary Figure4B maps
+    op497 to a Mos1 insertion in exon2; neither exact mutant protein nor domain-specific disruption is
+    established.
+  scope_status: PHENOTYPIC
+  taxon: NCBITaxon:6239
+  limitations: Whole-genotype developmental response is indirect. No toxin-free comparison for every line
+    is displayed in this panel; development is not a quantitative mortality or binding assay. The separate
+    joint-construct rescue is informative but does not make the DUF domain autonomously causal.
+  nodes:
+  - node_id: op497-in-unc119
+    label: Add galt-1(op497) to the unc-119(ed3) background
+    node_type: PERTURBATION
+    grounding:
+    - WormBase:WBGene00019763
+    - UniProtKB:O16374
+  - node_id: unc119-cgl2-l4-fraction
+    label: Fraction reaching L4 at72h on CGL2 food in the unc-119 comparison
+    node_type: PHENOTYPE
+  edges:
+  - edge_id: op497-increases-unc119-l4-fraction
+    subject: op497-in-unc119
+    predicate: increases
+    object: unc119-cgl2-l4-fraction
+    mechanism: The double mutant has a higher L4 fraction than the unc-119 single mutant under CGL2 exposure,
+      consistent with reduced developmental sensitivity without resolving the intervening molecular sequence.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:19858195
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC2794738/
+      snippet: rescue of CGL2 sensitivity
+      explanation: Figure 6A untransformed single/double-mutant bars and developmental Methods, not the
+        separate fluorescence endpoint.
+      cache_path: evidence/PF01697/titz-2009-galt1.txt
+      cache_sha256: f0ead8cfc1653edd653af10e4036c499223c3beeed159a9d829a688a29cb9038
+- graph_id: galt1-joint-construct-cgl2-rescue
+  title: Two integrated joint constructs restore CGL2 developmental sensitivity
+  scope: Titz 2009 Figure 6A, opIs444 and opIs445 in unc-119(ed3);galt-1(op497), each compared with the
+    untransformed double mutant.
+  context: pAB15 carries genomic galt-1 with1843bp upstream fused to mCherry/let-858 plus the unc-119
+    transformation marker; integrants selected by rescue of the unc-119 dauer defect. CGL2-fed L1-to-L4
+    assay after72h uses the Figure6 conditions, three replicates with SD.
+  family_mapping: Complete GALT-1/M03F8.4 coding region in the fusion maps to O16374-associated protein
+    with PF01697 189-394, plus non-domain regions and reporter. The integrated arrays additionally rescue
+    the selection-marker phenotype.
+  scope_status: PHENOTYPIC
+  taxon: NCBITaxon:6239
+  limitations: Retain the joint intervention, not a pure single-gene rescue. opIs444 is incompletely restored;
+    no formal equivalence of opIs445 to WT is claimed. The unc-119 single mutant is itself CGL2-sensitive.
+    Expression images do not establish marker-verified Golgi localization or a resolved toxic mechanism.
+  nodes:
+  - node_id: integrate-opis444
+    label: Introduce joint galt-1-mCherry and unc-119 marker array opIs444
+    node_type: PERTURBATION
+    grounding:
+    - UniProtKB:O16374
+  - node_id: integrate-opis445
+    label: Introduce joint galt-1-mCherry and unc-119 marker array opIs445
+    node_type: PERTURBATION
+    grounding:
+    - UniProtKB:O16374
+  - node_id: rescued-cgl2-l4-fraction
+    label: L4 fraction after72h on CGL2 food relative to the double mutant
+    node_type: PHENOTYPE
+  edges:
+  - edge_id: opis444-decreases-l4-fraction
+    subject: integrate-opis444
+    predicate: decreases
+    object: rescued-cgl2-l4-fraction
+    mechanism: The opIs444 line has a lower L4 fraction than the untransformed double mutant, indicating
+      partial restoration of CGL2 sensitivity with the joint construct.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:19858195
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC2794738/
+      snippet: rescue of CGL2 sensitivity
+      explanation: Figure 6A opIs444 comparison and genomic fusion/selection Methods; preserve residual
+        development and marker co-rescue.
+      cache_path: evidence/PF01697/titz-2009-galt1.txt
+      cache_sha256: f0ead8cfc1653edd653af10e4036c499223c3beeed159a9d829a688a29cb9038
+  - edge_id: opis445-decreases-l4-fraction
+    subject: integrate-opis445
+    predicate: decreases
+    object: rescued-cgl2-l4-fraction
+    mechanism: The opIs445 line has a lower L4 fraction than the untransformed double mutant, restoring
+      developmental sensitivity in this joint-construct comparison.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:19858195
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC2794738/
+      snippet: rescue of CGL2 sensitivity
+      explanation: Figure 6A opIs445 comparison; no demonstrated statistical equality with WT or independent
+        control of every insertion effect.
+      cache_path: evidence/PF01697/titz-2009-galt1.txt
+      cache_sha256: f0ead8cfc1653edd653af10e4036c499223c3beeed159a9d829a688a29cb9038
+- graph_id: galt1-pmk1-cgl2-development
+  title: The op497 allele increases development on CGL2 food in pmk-1 animals
+  scope: Butschi 2010 Figure 4A/B, pmk-1(km25);galt-1(op497) compared with the CGL2-hypersensitive pmk-1(km25)
+    parent.
+  context: Mos1-selected insertion mutants were outcrossed two to six times; 50-100 newly hatched L1 on
+    CGL2-producing BL21(DE3), fraction reaching L4 after72h. Plates were prepared overnight at23C; assay-specific
+    animal temperature is not restated.
+  family_mapping: Figure4B identifies op497 in the second exon of M03F8.4/galt-1, O16374-associated 425-aa
+    protein with PF01697 189-394. No domain-specific knockout or mutant protein length is established.
+  scope_status: PHENOTYPIC
+  taxon: NCBITaxon:6239
+  limitations: Published statistical comparisons are to N2, not the zero-L4 pmk-1 population. The observation
+    is developmental resistance in this genetic background, not a direct glycan-binding measurement. Figure6
+    lectin staining tests fut-8, not galt-1. Rescue from the unc-119 study is not a matched rescue in
+    pmk-1.
+  nodes:
+  - node_id: op497-in-pmk1
+    label: Add galt-1(op497) to the pmk-1(km25) background
+    node_type: PERTURBATION
+    grounding:
+    - WormBase:WBGene00019763
+    - UniProtKB:O16374
+  - node_id: pmk1-cgl2-l4-fraction
+    label: Fraction reaching L4 at72h on CGL2 food in the pmk-1 comparison
+    node_type: PHENOTYPE
+  edges:
+  - edge_id: op497-increases-pmk1-l4-fraction
+    subject: op497-in-pmk1
+    predicate: increases
+    object: pmk1-cgl2-l4-fraction
+    mechanism: The insertion-bearing double mutant develops to L4 at a higher fraction than pmk-1 alone
+      under CGL2 feeding; the intermediate molecular events are not tracked in this assay.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:20062796
+      source_url: https://journals.plos.org/plospathogens/article?id=10.1371/journal.ppat.1000717
+      snippet: fraction of animals
+      explanation: Visually inspected Figure4A/B and developmental/Mos1 Methods; no genotype-wide mortality
+        or lectin-staining inference.
+      cache_path: evidence/PF01697/butschi-2010-galt1.txt
+      cache_sha256: 5a614d50bcb2ca9673a0330b8a74394729d4fd748db926e61e0e5dcdac391024
+- graph_id: galt1-pmk1-selected-glycan-peak
+  title: The op497 genotype reduces a selected core-galactosylated glycan peak
+  scope: Butschi 2010 Figure7, pmk-1(km25);galt-1(op497) versus pmk-1(km25); selected PNGaseF-resistant/PNGaseA-sensitive
+    N-glycan fraction, not the entire glycome.
+  context: Five-day room-temperature liquid OP50 cultures, no CGL2 exposure in this preparation. Sequential
+    PNGase release, PA labeling, NP-HPLC fraction34.0-35.5min followed by RP-HPLC; selected peakA near14.5min
+    is characterized by MS/MS and exoglycosidases, including supplement FigureS2.
+  family_mapping: Whole-gene Mos1 op497 perturbs M03F8.4/galt-1, associated with O16374 and its PF01697
+    interval189-394. This indirect whole-animal glycan change does not locate the intervention within
+    the domain or prove purified-domain catalysis.
+  scope_status: PHENOTYPIC
+  taxon: NCBITaxon:6239
+  limitations: Qualitative selected-peak comparison, not calibrated total glycan abundance, replicated
+    quantitative glycomics or a matched glycome rescue. The analogous fut-8 mutant is a separate perturbation.
+    The biochemical extract product and toxin-development readouts are not joined into an entirely observed
+    causal sequence.
+  nodes:
+  - node_id: op497-pmk1-glycome-preparation
+    label: Substitute pmk-1;galt-1(op497) for pmk-1 in the glycome comparison
+    node_type: PERTURBATION
+    grounding:
+    - WormBase:WBGene00019763
+    - UniProtKB:O16374
+  - node_id: selected-core-galactosylated-peak
+    label: Selected core-galactosylated Hex5dHex2HexNAc2-PA peakA
+    node_type: STATE
+  edges:
+  - edge_id: op497-decreases-selected-peak
+    subject: op497-pmk1-glycome-preparation
+    predicate: decreases
+    object: selected-core-galactosylated-peak
+    mechanism: PeakA present in pmk-1 is not detected in the double-mutant selected fraction. Parent1605/core
+      fragment753 and sequential galactosidase/fucosidase changes support its core-galactosylated assignment,
+      without making the genotype effect direct chemistry.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:20062796
+      source_url: https://journals.plos.org/plospathogens/article?id=10.1371/journal.ppat.1000717
+      snippet: Peak A
+      explanation: Figure7A-C, glycan preparation/analysis Methods, and visually inspected one-page supplement
+        FigureS2; the supplement characterizes the isolated peak, not quantitative genotype replication.
+      cache_path: evidence/PF01697/butschi-2010-galt1.txt
+      cache_sha256: 5a614d50bcb2ca9673a0330b8a74394729d4fd748db926e61e0e5dcdac391024
+discussions:
+- discussion_id: galt1-purified-enzyme-and-family-coverage
+  prompt: Resolve GALT-1 assay and construct gaps, and extend GT92 member coverage independently.
+  kind: CURATION_TODO
+  status: OPEN
+  rationale: Eight graphs retain fifteen observed effects across crude-extract biochemistry, two genetic
+    backgrounds, joint-construct rescue and a selected glycan fraction. Neither the full protein's isolated
+    PF01697 domain nor every GT92 member has a resolved causal mechanism.
+  evidence:
+  - reference: PMID:19858195
+    supports: PARTIAL
+    evidence_source: inspected_primary_html_and_main_figures
+    explanation: Product, donor, acceptor, metal and rescue comparisons are supported, but the printed
+      MES/metal units, historical clone and supplemental beta1,4 analysis need further inspection. All
+      biochemical assays use raw Sf9 extract.
+  - reference: PMID:20062796
+    supports: PARTIAL
+    evidence_source: inspected_primary_full_text_figures_and_supplement
+    explanation: The pmk-1 phenotype and selected glycan deficit are supported with exon2 allele mapping
+      and peak structural analysis. Lectin staining used fut-8 and cannot be transferred to galt-1.
+  notes: Verify 2009 supplemental primers/S3 and assay units using an accessible primary copy; current
+    PMC PDF returned HTML, publisher403 and ETH429. Distinguish exact long NP_504545.2 mapping from unverified
+    historical clones, putative DXD chemistry from residue tests, and apparent crude-extract Km from intrinsic
+    constants. Inspect purified enzyme, other alleles and matched glycome rescue when available. Pigeon
+    PMID19959475 and Populus GalS1 PMID36849618 are unintegrated family leads; do not transfer nematode
+    core-fucose specificity to plant galactan extension/capping. Status remains IN_PROGRESS with partial
+    scientific self-review, not family completion.
+  posed_by: Codex
+  posed_date: '2026-10-11'

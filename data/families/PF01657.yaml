@@ -91,9 +91,13 @@ causal_graphs:
   - node_id: r93a
     label: R93A instead of WT mature Gnk2
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:A4ZDL6
   - node_id: e104a
     label: E104A instead of WT mature Gnk2
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:A4ZDL6
   edges:
   - edge_id: dose-increases-wt-binding-response
     subject: wt-mannobiose-dose
@@ -203,6 +207,8 @@ causal_graphs:
   - node_id: r93a-treatment
     label: Substitute 2 uM R93A for WT Gnk2
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:A4ZDL6
   - node_id: soluble-mannan
     label: Add 0.5% yeast mannan during WT Gnk2 treatment
     node_type: PERTURBATION
@@ -283,6 +289,8 @@ causal_graphs:
   - node_id: gnk2-dependent-delay
     label: Gnk2-dependent delay relative to each strain's untreated control
     node_type: PHENOTYPE
+    grounding:
+    - UniProtKB:A4ZDL6
   edges:
   - edge_id: mnn2-deletion-decreases-delay-response
     subject: mnn2-deletion-background
@@ -329,6 +337,8 @@ causal_graphs:
   - node_id: r93a-liquid-treatment
     label: Substitute 10 uM R93A for WT Gnk2
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:A4ZDL6
   - node_id: liquid-growth-inhibition
     label: Inhibition of the 36-h OD600 endpoint
     node_type: PHENOTYPE
@@ -387,12 +397,16 @@ causal_graphs:
   - node_id: wt-disc
     label: Place a 300-ug WT Gnk2 disc beside F. oxysporum
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:A4ZDL6
   - node_id: local-growth-exclusion
     label: Local mycelial growth exclusion around the disc
     node_type: PHENOTYPE
   - node_id: r93a-disc
     label: Substitute a 300-ug R93A disc for WT
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:A4ZDL6
   edges:
   - edge_id: wt-increases-local-growth-exclusion
     subject: wt-disc
@@ -447,12 +461,16 @@ causal_graphs:
   - node_id: wt-disc
     label: Place a 300-ug WT Gnk2 disc beside F. culmorum
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:A4ZDL6
   - node_id: local-growth-exclusion
     label: Local mycelial growth exclusion around the disc
     node_type: PHENOTYPE
   - node_id: r93a-disc
     label: Substitute a 300-ug R93A disc for WT
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:A4ZDL6
   edges:
   - edge_id: wt-increases-local-growth-exclusion
     subject: wt-disc
@@ -505,5 +523,13 @@ curation_events:
   outcome: needs_followup
   summary: Retain scoped scientific review of Gnk2 binding and growth graphs
   history_record: history/records/PF01657/2026-10-11T122509Z-codex-9ba452.yaml
+  event_index: 0
+  llm_assisted: true
+- timestamp: '2026-10-18T02:54:46Z'
+  curator: Antigravity
+  action: EDIT
+  outcome: changed
+  summary: Ground causal graph gene and protein nodes in PF01657 with verified UniProtKB accessions (UniProtKB:A4ZDL6)
+  history_record: history/records/PF01657/2026-10-18T025446Z-antigravity-ccacab.yaml
   event_index: 0
   llm_assisted: true

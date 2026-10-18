@@ -1,0 +1,80 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01923
+  path: curation/families/PF01923.yaml
+session:
+  id: 2026-10-18T025446Z-antigravity-1ae74e
+  timestamp: '2026-10-18T02:54:46Z'
+  actors:
+  - type: ai_agent
+    name: Antigravity
+    model: Claude Opus 4.6
+    agent_tool: Antigravity
+events:
+- type: EDIT
+  outcome: changed
+  summary: Ground causal graph gene and protein nodes in PF01923 with verified UniProtKB
+    accessions (UniProtKB:Q8ZNR5, UniProtKB:Q50EJ2, UniProtKB:Q9ZFV4, UniProtKB:A0A0H3GFM5,
+    UniProtKB:Q96EY8)
+  details: 'Reviewed PF01923 causal_graphs and grounded gene/protein PERTURBATION,
+    ACTIVITY, and protein-complex STATE nodes across 21 causal graph(s) using verified
+    UniProtKB accessions from family_mapping:
+
+    - `sepduo-growth-2001`: grounded pduo -> UniProtKB:Q8ZNR5; double -> UniProtKB:Q8ZNR5;
+    rescue -> UniProtKB:Q8ZNR5; overexpression -> UniProtKB:Q8ZNR5
+
+    - `sepduo-truncation-activity-2004`: grounded c185 -> UniProtKB:Q8ZNR5; c230 ->
+    UniProtKB:Q8ZNR5; c293 -> UniProtKB:Q8ZNR5; c90 -> UniProtKB:Q8ZNR5
+
+    - `sepduo-triphosphate-2004`: grounded reaction -> UniProtKB:Q8ZNR5
+
+    - `sepduo-inhibition-2004`: grounded activity -> UniProtKB:Q8ZNR5
+
+    - `sepduo-metal-additions-2004`: grounded activity -> UniProtKB:Q8ZNR5
+
+    - `sepduo-truncation-complementation-2004`: grounded c185 -> UniProtKB:Q8ZNR5;
+    c230 -> UniProtKB:Q8ZNR5; c293 -> UniProtKB:Q8ZNR5
+
+    - `lrpduo-variant-coordination-2009`: grounded f112a -> UniProtKB:Q50EJ2; f112h
+    -> UniProtKB:Q50EJ2; dmb -> UniProtKB:Q50EJ2; his -> UniProtKB:Q50EJ2
+
+    - `lrpduo-cobi-kinetics-2009`: grounded f112a -> UniProtKB:Q50EJ2; f112h -> UniProtKB:Q50EJ2;
+    f112y -> UniProtKB:Q50EJ2; f112w -> UniProtKB:Q50EJ2
+
+    - `lrpduo-cobii-kinetics-2009`: grounded f112a -> UniProtKB:Q50EJ2; f112h -> UniProtKB:Q50EJ2;
+    f112y -> UniProtKB:Q50EJ2; f112w -> UniProtKB:Q50EJ2; f163a -> UniProtKB:Q50EJ2
+
+    - `lrpduo-variant-growth-2009`: grounded variants -> UniProtKB:Q50EJ2
+
+    - `seeutt-metal-oxygen-2014`: grounded activity -> UniProtKB:Q9ZFV4
+
+    - `seeutt-variant-activity-2014`: grounded h67a -> UniProtKB:Q9ZFV4; c79a -> UniProtKB:Q9ZFV4;
+    c80a -> UniProtKB:Q9ZFV4; c83a -> UniProtKB:Q9ZFV4
+
+    - `seeutt-complementation-2014`: grounded wt -> UniProtKB:Q9ZFV4; c79a -> UniProtKB:Q9ZFV4;
+    h67a -> UniProtKB:Q9ZFV4; c80a -> UniProtKB:Q9ZFV4; c83a -> UniProtKB:Q9ZFV4
+
+    - `lmeutt-product-2018`: grounded cobii-fre -> UniProtKB:A0A0H3GFM5; cobii-flda
+    -> UniProtKB:A0A0H3GFM5; cbii -> UniProtKB:A0A0H3GFM5
+
+    - `lmeutt-triphosphate-2018`: grounded reaction -> UniProtKB:A0A0H3GFM5
+
+    - `lmeutt-carbon-growth-2018`: grounded native -> UniProtKB:A0A0H3GFM5; optimized
+    -> UniProtKB:A0A0H3GFM5
+
+    - `lmeutt-nitrogen-growth-2018`: grounded native -> UniProtKB:A0A0H3GFM5; optimized
+    -> UniProtKB:A0A0H3GFM5
+
+    - `lmeutt-reporter-growth-2018`: grounded native -> UniProtKB:A0A0H3GFM5; optimized
+    -> UniProtKB:A0A0H3GFM5
+
+    - `mmab-fdx1-coupled-2023`: grounded r186q -> UniProtKB:Q96EY8; r190h -> UniProtKB:Q96EY8;
+    r190c -> UniProtKB:Q96EY8; e193k -> UniProtKB:Q96EY8
+
+    - `mmab-corrinoid-coordination-2023`: grounded wt -> UniProtKB:Q96EY8; r190h ->
+    UniProtKB:Q96EY8; four -> UniProtKB:Q96EY8
+
+    - `mmab-r190h-redox-2023`: grounded cobi -> UniProtKB:Q96EY8'
+  sections:
+  - causal_graphs

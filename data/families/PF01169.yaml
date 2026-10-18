@@ -174,12 +174,16 @@ causal_graphs:
   - node_id: calcium-uptake-response
     label: Calcium-uptake-associated Fura-2 ratio increase
     node_type: ACTIVITY
+    grounding:
+    - UniProtKB:P38301
   - node_id: ph8-manganese-assay
     label: Set external pH to 8.0 rather than 6.8 during the manganese assay
     node_type: PERTURBATION
   - node_id: manganese-uptake-response
     label: Manganese-uptake-associated Fura-2 quenching magnitude
     node_type: ACTIVITY
+    grounding:
+    - UniProtKB:P38301
   edges:
   - edge_id: alkaline-gradient-increases-calcium-response
     subject: ph8-calcium-assay
@@ -382,5 +386,13 @@ curation_events:
   outcome: needs_followup
   summary: Retain partial scientific self-review of Gdt1 gradient and compartment-pH effects.
   history_record: history/records/PF01169/2026-10-11T094723Z-codex-0a4b20.yaml
+  event_index: 0
+  llm_assisted: true
+- timestamp: '2026-10-18T02:54:46Z'
+  curator: Antigravity
+  action: EDIT
+  outcome: changed
+  summary: Ground causal graph gene and protein nodes in PF01169 with verified UniProtKB accessions (UniProtKB:P38301)
+  history_record: history/records/PF01169/2026-10-18T025446Z-antigravity-0fd101.yaml
   event_index: 0
   llm_assisted: true

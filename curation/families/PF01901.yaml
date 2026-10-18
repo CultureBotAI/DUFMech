@@ -2,281 +2,373 @@ pfam_id: PF01901
 curation_status: IN_PROGRESS
 curation_history: history/records/PF01901
 causal_graphs:
-  - graph_id: o157-wzy-tn5-tube-staining-2020
-    title: Wzy disruption reduces tube biofilm staining in the tested O157 strain
-    scope: Sheng2020 Figure1B; ATCC43895 wzy-Tn5 versus its parental culture.
-    context: Qualitative crystal-violet tube assay at37 C under static conditions. The30 C library screen is a separate assay, not a replicate of this endpoint.
-    family_mapping: The2024follow-up cites CP008957.1; AIG69277.1/EDL933_3111 equals Q8X4T7/BAB36267.1,394 aa,PF01901 8-205,score0.041. ATCC documents ATCC700927 as derived from ATCC43895. Their lineage relationship is established; the experimental stock, insertion junction and affected domain segment are not independently sequenced here.
-    scope_status: PHENOTYPIC
-    taxon: NCBITaxon:83334
-    limitations: No Wzy-specific rescue or downstream-expression control was established. csgB complementation is not wzy rescue. The later2024study retains residual biofilm under its conditions; do not infer universal absence or direct PF01901 chemistry.
-    nodes:
-      - node_id: wzy-insertion
-        label: Reported wzy-Tn5 allele in the ATCC43895 background
-        node_type: PERTURBATION
-      - node_id: tube-staining
-        label: Retained crystal-violet tube-ring staining
-        node_type: PHENOTYPE
-    edges:
-      - edge_id: insertion-decreases-tube-staining
-        subject: wzy-insertion
-        predicate: decreases
-        object: tube-staining
-        mechanism: The named wzy-Tn5 tube has much less ring staining than the parental43895 tube. This whole-cell phenotype does not resolve biomass,attachment,dye retention or polar contributions. Comparable intracellular recovery in Figure1D is not converted into an invasion-defect edge.
-        directness: INDIRECT
-        support: OBSERVED
-        evidence_kind: EXPERIMENTAL
-        evidence:
-          - reference: PMID:32316415
-            source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC7232329/
-            snippet: biofilm-negative
-            explanation: Original Figure1B and its caption establish the qualitative tube contrast; Table1 names wzy-Tn5. Original1D constrains invasion claims. The insertion was mapped by the authors,not independently sequenced in this review.
-            cache_path: evidence/PF01901/sheng-2020.txt
-            cache_sha256: 9f6de06da18e36eba66965e742ceb73f2534a692136d663e5c39849da6adb905
-  - graph_id: o157-wzy-tn5-lps-2024
-    title: The wzy-Tn5 culture has reduced long-O-antigen LPS signal
-    scope: Sheng2024 Figure1B; ATCC43895 wzy-Tn5 versus parental LPS.
-    context: Silver-stained Tricine-SDS-PAGE of whole-cell LPS preparations. Figure1A is an expected-structure schematic,not a purified polymerase experiment or complete chemical structure determination.
-    family_mapping: CP008957.1/AIG69277.1 equals Q8X4T7/BAB36267.1,with PF01901 at8-205 of394 aa,score0.041. ATCC700927 is a documented derivative of ATCC43895,not independently sequenced assay DNA. O85335/AAC32340.1 differs at234 and is not substituted; the historical insertion remains unverified.
-    scope_status: PHENOTYPIC
-    taxon: NCBITaxon:83334
-    limitations: The actual genotype is Tn5,not a verified clean delta-wzy deletion despite the schematic label. No allele-specific rescue,exact insertion position or neighboring-expression measurement was established. The weak partial family hit does not establish an isolated catalytic domain or archaeal transfer.
-    nodes:
-      - node_id: wzy-insertion
-        label: Reported wzy-Tn5 allele in the ATCC43895 background
-        node_type: PERTURBATION
-      - node_id: long-o-antigen-signal
-        label: Long-O-antigen LPS gel signal
-        node_type: STATE
-    edges:
-      - edge_id: insertion-decreases-long-o-antigen
-        subject: wzy-insertion
-        predicate: decreases
-        object: long-o-antigen-signal
-        mechanism: The mutant lane loses the parental long-O-antigen signal while retaining a lower band assigned to one repeat unit. This supports a strain-scoped LPS assembly contribution without demonstrating purified Wzy chemistry,processivity or a particular glycosidic linkage.
-        directness: INDIRECT
-        support: OBSERVED
-        evidence_kind: EXPERIMENTAL
-        evidence:
-          - reference: PMID:39273173
-            source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC11394844/
-            snippet: single O-antigen unit
-            explanation: Visually inspected Figure1B is the observed gel; Figure1A supplies an interpretation,not an independent chemical assay. Table1 identifies reuse of the2020insertion mutant.
-            cache_path: evidence/PF01901/sheng-2024.txt
-            cache_sha256: 7ab1fdc0f56fa8bed1b36c6d9b2e386f61f0dee1549bc70e71ebb37d61ff0125
-  - graph_id: o157-wzy-tn5-microtiter-biomass-2024
-    title: Wzy disruption reduces retained microtiter biofilm staining
-    scope: Sheng2024 Figure2B; ATCC43895 wzy-Tn5 versus parental culture.
-    context: Crystal-violet microtiter endpoint at37 C after24h. Methods says MSM with0.04%glucose but the caption says4%; this source discrepancy is unresolved. Caption reports six assays per strain,mean/SD and ANOVA with Dunnett comparison.
-    family_mapping: CP008957.1/AIG69277.1 equals Q8X4T7/BAB36267.1,394 aa,PF01901 8-205,score0.041. ATCC700927 is a documented derivative of ATCC43895. Exact experimental-stock sequence and insertion remain unresolved; this is not a verified domain-specific perturbation.
-    scope_status: PHENOTYPIC
-    taxon: NCBITaxon:83334
-    limitations: Lower staining is not complete biofilm loss; Figure2A retains a weaker ring. Tube duration is overnight in Methods versus48h in caption/Results. Figure3 does not supply a matched wzy growth curve. No Wzy-specific rescue was established; reused2020allele is not an independent genotype replication.
-    nodes:
-      - node_id: wzy-insertion
-        label: Reported wzy-Tn5 allele in the ATCC43895 background
-        node_type: PERTURBATION
-      - node_id: retained-cv-signal
-        label: Microtiter retained crystal-violet absorbance
-        node_type: PHENOTYPE
-    edges:
-      - edge_id: insertion-decreases-cv-signal
-        subject: wzy-insertion
-        predicate: decreases
-        object: retained-cv-signal
-        mechanism: The wzy-Tn5 bar is below parental43895 with the caption's p<0.01 comparison. Residual signal remains. Altered attachment,biomass,dye retention or envelope effects are not separated; no causal chain from the LPS band to this readout is inferred from their co-occurrence.
-        directness: INDIRECT
-        support: OBSERVED
-        evidence_kind: EXPERIMENTAL
-        evidence:
-          - reference: PMID:39273173
-            source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC11394844/
-            snippet: wzy-Tn5
-            explanation: Original Figure2B and its caption establish the directional comparison and reported statistics. Original2A retains a ring. The glucose,time and plotted-versus-text mean discrepancies remain explicit instead of supplying a false exact protocol or effect size.
-            cache_path: evidence/PF01901/sheng-2024.txt
-            cache_sha256: 7ab1fdc0f56fa8bed1b36c6d9b2e386f61f0dee1549bc70e71ebb37d61ff0125
-  - graph_id: o157-wzy-tn5-motility-2024
-    title: Wzy disruption reduces but does not abolish motility-halo spread
-    scope: Sheng2024 Figure4; ATCC43895 wzy-Tn5 versus parental culture.
-    context: Soft-agar population-spread endpoint. Methods/caption report40h while Results says48h. Caption gives three repeats,mean/SD,two-tailed unpaired t-test and p<0.01 for the wzy contrast.
-    family_mapping: CP008957.1/AIG69277.1 equals Q8X4T7/BAB36267.1,PF01901 8-205 of394 aa,score0.041. ATCC700927 derives from ATCC43895 according to ATCC. The historical assay stock and insertion are not independently verified; no residue-specific archaeal mechanism follows.
-    scope_status: PHENOTYPIC
-    taxon: NCBITaxon:83334
-    limitations: Residual spread and the flagellin immunoblot band remain. Halo diameter is not motor speed or flagellum abundance. No Wzy-specific rescue or matched wzy growth control was established. Retained Congo-red binding in Figure5 also excludes a complete-curli-loss claim.
-    nodes:
-      - node_id: wzy-insertion
-        label: Reported wzy-Tn5 allele in the ATCC43895 background
-        node_type: PERTURBATION
-      - node_id: motility-halo
-        label: Soft-agar motility-halo diameter
-        node_type: PHENOTYPE
-    edges:
-      - edge_id: insertion-decreases-halo
-        subject: wzy-insertion
-        predicate: decreases
-        object: motility-halo
-        mechanism: The wzy-Tn5 halo is smaller but nonzero compared with WT. The same figure retains a flagellin band,so neither absence of flagella nor direct inhibition of their biosynthesis follows. Envelope,motility and growth contributions remain unresolved.
-        directness: INDIRECT
-        support: OBSERVED
-        evidence_kind: EXPERIMENTAL
-        evidence:
-          - reference: PMID:39273173
-            source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC11394844/
-            snippet: impaired motility
-            explanation: Original Figure4 upper bars and lower immunoblot were inspected together. Figure5 retains wzy Congo-red binding. The40h/48h discrepancy and lack of allele-specific rescue prevent stronger mechanistic attribution.
-            cache_path: evidence/PF01901/sheng-2024.txt
-            cache_sha256: 7ab1fdc0f56fa8bed1b36c6d9b2e386f61f0dee1549bc70e71ebb37d61ff0125
-  - graph_id: o157-sk2526-surface-coat-2008
-    title: The SK2526 insertion mutant has less ferritin-associated surface material
-    scope: Shifrin2008 Figure3A; reported wzy insertion versus parental EHEC context.
-    context: Representative thin-section microscopy. Figure3 caption gives30 C,EM Methods37 C; the discrepancy remains unresolved. The caption's EPEC wording conflicts with the EHEC heading and Results.
-    family_mapping: Table1 assigns SK2526 to TUV93-0,an EDL933 derivative,and identifies a Sakai-origin allele. Sakai Q8X4T7/BAB36267.1 equals EDL933 AIG69277.1; PF01901 8-205 of394 aa,score0.041. Exact historical allele sequence is unverified; no O127 transfer is made.
-    scope_status: PHENOTYPIC
-    taxon: NCBITaxon:83334
-    limitations: Representative images do not quantify capsule mass. No Wzy rescue was performed; etp/etk complementation is not interchangeable. Staining,assembly and abundance explanations remain unresolved.
-    nodes:
-      - node_id: sk2526-insertion
-        label: SK2526 wzy insertion in the TUV93-0 background
-        node_type: PERTURBATION
-      - node_id: ferritin-coat
-        label: Ferritin-associated surface-coat signal
-        node_type: PHENOTYPE
-    edges:
-      - edge_id: insertion-decreases-coat
-        subject: sk2526-insertion
-        predicate: decreases
-        object: ferritin-coat
-        mechanism: The mutant micrograph has less peripheral material. This supports an envelope phenotype,not an isolated-domain chemical mechanism or a quantitative universal capsule-loss claim.
-        directness: INDIRECT
-        support: OBSERVED
-        evidence_kind: EXPERIMENTAL
-        evidence:
-          - reference: PMID:18502854
-            source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC2447026/
-            snippet: wzy
-            explanation: Original Figure3A,Table1 and selected Methods/Results; temperature and caption-species conflicts retained.
-            cache_path: evidence/PF01901/shifrin-2008.txt
-            cache_sha256: 0a0b45ec1b69fb4611f6eaa1343c54187468907d84cd9326ab9bd24b7af8e231
-  - graph_id: o157-sk2526-polysaccharide-signals-2008
-    title: The insertion mutant has lower LPS and capsular-fraction signals
-    scope: Shifrin2008 Figure3B; two separately measured polysaccharide fractions.
-    context: Anti-O157 LPS immunoblot and capsular-fraction dot assay,normalized to bacterial numbers. These are distinct readouts,not a causal chain between fractions.
-    family_mapping: SK2526 derives from TUV93-0 with the Sakai-origin insertion. Q8X4T7/BAB36267.1 and AIG69277.1 are matching references,PF01901 8-205 of394 aa,score0.041. Whole-cell allele evidence does not isolate that partial domain; actual stocks were not sequenced here.
-    scope_status: PHENOTYPIC
-    taxon: NCBITaxon:83334
-    limitations: No Wzy complementation or quantitative replication was established. Lower-migrating LPS material remains; immunoreactivity does not establish complete chemical absence,linkage identity or polymerase kinetics.
-    nodes:
-      - node_id: sk2526-insertion
-        label: SK2526 wzy insertion in the TUV93-0 background
-        node_type: PERTURBATION
-      - node_id: lps-o157-signal
-        label: Polymeric anti-O157 LPS signal
-        node_type: STATE
-      - node_id: capsule-o157-signal
-        label: Anti-O157 capsular-fraction dot signal
-        node_type: STATE
-    edges:
-      - edge_id: insertion-decreases-lps-signal
-        subject: sk2526-insertion
-        predicate: decreases
-        object: lps-o157-signal
-        mechanism: The mutant has lower polymeric immunoreactivity; residual lower material precludes an all-glycan-loss interpretation.
-        directness: INDIRECT
-        support: OBSERVED
-        evidence_kind: EXPERIMENTAL
-        evidence:
-          - reference: PMID:18502854
-            source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC2447026/
-            snippet: wzy
-            explanation: Original Figure3B upper panel; a measured signal,not a direct chemical assay.
-            cache_path: evidence/PF01901/shifrin-2008.txt
-            cache_sha256: 0a0b45ec1b69fb4611f6eaa1343c54187468907d84cd9326ab9bd24b7af8e231
-      - edge_id: insertion-decreases-capsule-signal
-        subject: sk2526-insertion
-        predicate: decreases
-        object: capsule-o157-signal
-        mechanism: The separated capsular-fraction dot is weaker. Recovery and antigenicity remain alternatives to a specific defect in glycosidic-bond formation.
-        directness: INDIRECT
-        support: OBSERVED
-        evidence_kind: EXPERIMENTAL
-        evidence:
-          - reference: PMID:18502854
-            source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC2447026/
-            snippet: wzy
-            explanation: Original Figure3B lower panel,kept distinct from its LPS immunoblot.
-            cache_path: evidence/PF01901/shifrin-2008.txt
-            cache_sha256: 0a0b45ec1b69fb4611f6eaa1343c54187468907d84cd9326ab9bd24b7af8e231
-  - graph_id: o157-43888-wzy-complementation-2021
-    title: Wzy complementation restores BECP10 spot clearing in ATCC43888
-    scope: Park2021 original Figure4C; complemented versus uncomplemented wzy-insertion culture.
-    context: Qualitative phage spot readout with retained ECP26 clearing as a comparator. The actual image labels spots C,although the caption says A; no quantitative adsorption rate is inferred.
-    family_mapping: ATCC43888 reference CP041623.1/FNZ21_14180 encodes QDZ55367.1,exactly equal to Q8X4T7/BAB36267.1,394 aa,PF01901 8-205,score0.041. Its CDS start matches the displayed cluster start2969732. This does not independently sequence the experimental insertion or plasmid.
-    scope_status: PHENOTYPIC
-    taxon: NCBITaxon:83334
-    limitations: Empty-vector comparison,exact construct/tag and figure-specific replication were not established. This is not rescue of the separate SK2526 or ATCC43895 mutants. Spot clearing is not proof of direct Wzy binding or productive-infection efficiency.
-    nodes:
-      - node_id: wzy-complementation
-        label: Reported wzy complementation in the ATCC43888 insertion background
-        node_type: PERTURBATION
-      - node_id: becp10-clearing
-        label: BECP10 spot clearing
-        node_type: PHENOTYPE
-    edges:
-      - edge_id: complementation-increases-clearing
-        subject: wzy-complementation
-        predicate: increases
-        object: becp10-clearing
-        mechanism: Clearing returns in the complemented culture. A Wzy-dependent surface contribution is consistent with this contrast; direct receptor chemistry is not established.
-        directness: INDIRECT
-        support: OBSERVED
-        evidence_kind: EXPERIMENTAL
-        evidence:
-          - reference: PMID:34452334
-            source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC8402813/
-            snippet: restored sensitivity
-            explanation: Original Figure4C,not the caption's panel A. No duplicate deletion-versus-WT edge is inferred from this complemented/uncomplemented comparison.
-            cache_path: evidence/PF01901/park-2021.txt
-            cache_sha256: 5365e1b63ba290b8b4a09f752746b03f06003d7b7a5cfd7e45eb2587ed810462
+- graph_id: o157-wzy-tn5-tube-staining-2020
+  title: Wzy disruption reduces tube biofilm staining in the tested O157 strain
+  scope: Sheng2020 Figure1B; ATCC43895 wzy-Tn5 versus its parental culture.
+  context: Qualitative crystal-violet tube assay at37 C under static conditions. The30 C library screen
+    is a separate assay, not a replicate of this endpoint.
+  family_mapping: The2024follow-up cites CP008957.1; AIG69277.1/EDL933_3111 equals Q8X4T7/BAB36267.1,394
+    aa,PF01901 8-205,score0.041. ATCC documents ATCC700927 as derived from ATCC43895. Their lineage relationship
+    is established; the experimental stock, insertion junction and affected domain segment are not independently
+    sequenced here.
+  scope_status: PHENOTYPIC
+  taxon: NCBITaxon:83334
+  limitations: No Wzy-specific rescue or downstream-expression control was established. csgB complementation
+    is not wzy rescue. The later2024study retains residual biofilm under its conditions; do not infer
+    universal absence or direct PF01901 chemistry.
+  nodes:
+  - node_id: wzy-insertion
+    label: Reported wzy-Tn5 allele in the ATCC43895 background
+    node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q8X4T7
+  - node_id: tube-staining
+    label: Retained crystal-violet tube-ring staining
+    node_type: PHENOTYPE
+  edges:
+  - edge_id: insertion-decreases-tube-staining
+    subject: wzy-insertion
+    predicate: decreases
+    object: tube-staining
+    mechanism: The named wzy-Tn5 tube has much less ring staining than the parental43895 tube. This whole-cell
+      phenotype does not resolve biomass,attachment,dye retention or polar contributions. Comparable intracellular
+      recovery in Figure1D is not converted into an invasion-defect edge.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:32316415
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC7232329/
+      snippet: biofilm-negative
+      explanation: Original Figure1B and its caption establish the qualitative tube contrast; Table1 names
+        wzy-Tn5. Original1D constrains invasion claims. The insertion was mapped by the authors,not independently
+        sequenced in this review.
+      cache_path: evidence/PF01901/sheng-2020.txt
+      cache_sha256: 9f6de06da18e36eba66965e742ceb73f2534a692136d663e5c39849da6adb905
+- graph_id: o157-wzy-tn5-lps-2024
+  title: The wzy-Tn5 culture has reduced long-O-antigen LPS signal
+  scope: Sheng2024 Figure1B; ATCC43895 wzy-Tn5 versus parental LPS.
+  context: Silver-stained Tricine-SDS-PAGE of whole-cell LPS preparations. Figure1A is an expected-structure
+    schematic,not a purified polymerase experiment or complete chemical structure determination.
+  family_mapping: CP008957.1/AIG69277.1 equals Q8X4T7/BAB36267.1,with PF01901 at8-205 of394 aa,score0.041.
+    ATCC700927 is a documented derivative of ATCC43895,not independently sequenced assay DNA. O85335/AAC32340.1
+    differs at234 and is not substituted; the historical insertion remains unverified.
+  scope_status: PHENOTYPIC
+  taxon: NCBITaxon:83334
+  limitations: The actual genotype is Tn5,not a verified clean delta-wzy deletion despite the schematic
+    label. No allele-specific rescue,exact insertion position or neighboring-expression measurement was
+    established. The weak partial family hit does not establish an isolated catalytic domain or archaeal
+    transfer.
+  nodes:
+  - node_id: wzy-insertion
+    label: Reported wzy-Tn5 allele in the ATCC43895 background
+    node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q8X4T7
+  - node_id: long-o-antigen-signal
+    label: Long-O-antigen LPS gel signal
+    node_type: STATE
+  edges:
+  - edge_id: insertion-decreases-long-o-antigen
+    subject: wzy-insertion
+    predicate: decreases
+    object: long-o-antigen-signal
+    mechanism: The mutant lane loses the parental long-O-antigen signal while retaining a lower band assigned
+      to one repeat unit. This supports a strain-scoped LPS assembly contribution without demonstrating
+      purified Wzy chemistry,processivity or a particular glycosidic linkage.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:39273173
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC11394844/
+      snippet: single O-antigen unit
+      explanation: Visually inspected Figure1B is the observed gel; Figure1A supplies an interpretation,not
+        an independent chemical assay. Table1 identifies reuse of the2020insertion mutant.
+      cache_path: evidence/PF01901/sheng-2024.txt
+      cache_sha256: 7ab1fdc0f56fa8bed1b36c6d9b2e386f61f0dee1549bc70e71ebb37d61ff0125
+- graph_id: o157-wzy-tn5-microtiter-biomass-2024
+  title: Wzy disruption reduces retained microtiter biofilm staining
+  scope: Sheng2024 Figure2B; ATCC43895 wzy-Tn5 versus parental culture.
+  context: Crystal-violet microtiter endpoint at37 C after24h. Methods says MSM with0.04%glucose but the
+    caption says4%; this source discrepancy is unresolved. Caption reports six assays per strain,mean/SD
+    and ANOVA with Dunnett comparison.
+  family_mapping: CP008957.1/AIG69277.1 equals Q8X4T7/BAB36267.1,394 aa,PF01901 8-205,score0.041. ATCC700927
+    is a documented derivative of ATCC43895. Exact experimental-stock sequence and insertion remain unresolved;
+    this is not a verified domain-specific perturbation.
+  scope_status: PHENOTYPIC
+  taxon: NCBITaxon:83334
+  limitations: Lower staining is not complete biofilm loss; Figure2A retains a weaker ring. Tube duration
+    is overnight in Methods versus48h in caption/Results. Figure3 does not supply a matched wzy growth
+    curve. No Wzy-specific rescue was established; reused2020allele is not an independent genotype replication.
+  nodes:
+  - node_id: wzy-insertion
+    label: Reported wzy-Tn5 allele in the ATCC43895 background
+    node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q8X4T7
+  - node_id: retained-cv-signal
+    label: Microtiter retained crystal-violet absorbance
+    node_type: PHENOTYPE
+  edges:
+  - edge_id: insertion-decreases-cv-signal
+    subject: wzy-insertion
+    predicate: decreases
+    object: retained-cv-signal
+    mechanism: The wzy-Tn5 bar is below parental43895 with the caption's p<0.01 comparison. Residual signal
+      remains. Altered attachment,biomass,dye retention or envelope effects are not separated; no causal
+      chain from the LPS band to this readout is inferred from their co-occurrence.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:39273173
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC11394844/
+      snippet: wzy-Tn5
+      explanation: Original Figure2B and its caption establish the directional comparison and reported
+        statistics. Original2A retains a ring. The glucose,time and plotted-versus-text mean discrepancies
+        remain explicit instead of supplying a false exact protocol or effect size.
+      cache_path: evidence/PF01901/sheng-2024.txt
+      cache_sha256: 7ab1fdc0f56fa8bed1b36c6d9b2e386f61f0dee1549bc70e71ebb37d61ff0125
+- graph_id: o157-wzy-tn5-motility-2024
+  title: Wzy disruption reduces but does not abolish motility-halo spread
+  scope: Sheng2024 Figure4; ATCC43895 wzy-Tn5 versus parental culture.
+  context: Soft-agar population-spread endpoint. Methods/caption report40h while Results says48h. Caption
+    gives three repeats,mean/SD,two-tailed unpaired t-test and p<0.01 for the wzy contrast.
+  family_mapping: CP008957.1/AIG69277.1 equals Q8X4T7/BAB36267.1,PF01901 8-205 of394 aa,score0.041. ATCC700927
+    derives from ATCC43895 according to ATCC. The historical assay stock and insertion are not independently
+    verified; no residue-specific archaeal mechanism follows.
+  scope_status: PHENOTYPIC
+  taxon: NCBITaxon:83334
+  limitations: Residual spread and the flagellin immunoblot band remain. Halo diameter is not motor speed
+    or flagellum abundance. No Wzy-specific rescue or matched wzy growth control was established. Retained
+    Congo-red binding in Figure5 also excludes a complete-curli-loss claim.
+  nodes:
+  - node_id: wzy-insertion
+    label: Reported wzy-Tn5 allele in the ATCC43895 background
+    node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q8X4T7
+  - node_id: motility-halo
+    label: Soft-agar motility-halo diameter
+    node_type: PHENOTYPE
+  edges:
+  - edge_id: insertion-decreases-halo
+    subject: wzy-insertion
+    predicate: decreases
+    object: motility-halo
+    mechanism: The wzy-Tn5 halo is smaller but nonzero compared with WT. The same figure retains a flagellin
+      band,so neither absence of flagella nor direct inhibition of their biosynthesis follows. Envelope,motility
+      and growth contributions remain unresolved.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:39273173
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC11394844/
+      snippet: impaired motility
+      explanation: Original Figure4 upper bars and lower immunoblot were inspected together. Figure5 retains
+        wzy Congo-red binding. The40h/48h discrepancy and lack of allele-specific rescue prevent stronger
+        mechanistic attribution.
+      cache_path: evidence/PF01901/sheng-2024.txt
+      cache_sha256: 7ab1fdc0f56fa8bed1b36c6d9b2e386f61f0dee1549bc70e71ebb37d61ff0125
+- graph_id: o157-sk2526-surface-coat-2008
+  title: The SK2526 insertion mutant has less ferritin-associated surface material
+  scope: Shifrin2008 Figure3A; reported wzy insertion versus parental EHEC context.
+  context: Representative thin-section microscopy. Figure3 caption gives30 C,EM Methods37 C; the discrepancy
+    remains unresolved. The caption's EPEC wording conflicts with the EHEC heading and Results.
+  family_mapping: Table1 assigns SK2526 to TUV93-0,an EDL933 derivative,and identifies a Sakai-origin
+    allele. Sakai Q8X4T7/BAB36267.1 equals EDL933 AIG69277.1; PF01901 8-205 of394 aa,score0.041. Exact
+    historical allele sequence is unverified; no O127 transfer is made.
+  scope_status: PHENOTYPIC
+  taxon: NCBITaxon:83334
+  limitations: Representative images do not quantify capsule mass. No Wzy rescue was performed; etp/etk
+    complementation is not interchangeable. Staining,assembly and abundance explanations remain unresolved.
+  nodes:
+  - node_id: sk2526-insertion
+    label: SK2526 wzy insertion in the TUV93-0 background
+    node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q8X4T7
+  - node_id: ferritin-coat
+    label: Ferritin-associated surface-coat signal
+    node_type: PHENOTYPE
+  edges:
+  - edge_id: insertion-decreases-coat
+    subject: sk2526-insertion
+    predicate: decreases
+    object: ferritin-coat
+    mechanism: The mutant micrograph has less peripheral material. This supports an envelope phenotype,not
+      an isolated-domain chemical mechanism or a quantitative universal capsule-loss claim.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:18502854
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC2447026/
+      snippet: wzy
+      explanation: Original Figure3A,Table1 and selected Methods/Results; temperature and caption-species
+        conflicts retained.
+      cache_path: evidence/PF01901/shifrin-2008.txt
+      cache_sha256: 0a0b45ec1b69fb4611f6eaa1343c54187468907d84cd9326ab9bd24b7af8e231
+- graph_id: o157-sk2526-polysaccharide-signals-2008
+  title: The insertion mutant has lower LPS and capsular-fraction signals
+  scope: Shifrin2008 Figure3B; two separately measured polysaccharide fractions.
+  context: Anti-O157 LPS immunoblot and capsular-fraction dot assay,normalized to bacterial numbers. These
+    are distinct readouts,not a causal chain between fractions.
+  family_mapping: SK2526 derives from TUV93-0 with the Sakai-origin insertion. Q8X4T7/BAB36267.1 and AIG69277.1
+    are matching references,PF01901 8-205 of394 aa,score0.041. Whole-cell allele evidence does not isolate
+    that partial domain; actual stocks were not sequenced here.
+  scope_status: PHENOTYPIC
+  taxon: NCBITaxon:83334
+  limitations: No Wzy complementation or quantitative replication was established. Lower-migrating LPS
+    material remains; immunoreactivity does not establish complete chemical absence,linkage identity or
+    polymerase kinetics.
+  nodes:
+  - node_id: sk2526-insertion
+    label: SK2526 wzy insertion in the TUV93-0 background
+    node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q8X4T7
+  - node_id: lps-o157-signal
+    label: Polymeric anti-O157 LPS signal
+    node_type: STATE
+  - node_id: capsule-o157-signal
+    label: Anti-O157 capsular-fraction dot signal
+    node_type: STATE
+  edges:
+  - edge_id: insertion-decreases-lps-signal
+    subject: sk2526-insertion
+    predicate: decreases
+    object: lps-o157-signal
+    mechanism: The mutant has lower polymeric immunoreactivity; residual lower material precludes an all-glycan-loss
+      interpretation.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:18502854
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC2447026/
+      snippet: wzy
+      explanation: Original Figure3B upper panel; a measured signal,not a direct chemical assay.
+      cache_path: evidence/PF01901/shifrin-2008.txt
+      cache_sha256: 0a0b45ec1b69fb4611f6eaa1343c54187468907d84cd9326ab9bd24b7af8e231
+  - edge_id: insertion-decreases-capsule-signal
+    subject: sk2526-insertion
+    predicate: decreases
+    object: capsule-o157-signal
+    mechanism: The separated capsular-fraction dot is weaker. Recovery and antigenicity remain alternatives
+      to a specific defect in glycosidic-bond formation.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:18502854
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC2447026/
+      snippet: wzy
+      explanation: Original Figure3B lower panel,kept distinct from its LPS immunoblot.
+      cache_path: evidence/PF01901/shifrin-2008.txt
+      cache_sha256: 0a0b45ec1b69fb4611f6eaa1343c54187468907d84cd9326ab9bd24b7af8e231
+- graph_id: o157-43888-wzy-complementation-2021
+  title: Wzy complementation restores BECP10 spot clearing in ATCC43888
+  scope: Park2021 original Figure4C; complemented versus uncomplemented wzy-insertion culture.
+  context: Qualitative phage spot readout with retained ECP26 clearing as a comparator. The actual image
+    labels spots C,although the caption says A; no quantitative adsorption rate is inferred.
+  family_mapping: ATCC43888 reference CP041623.1/FNZ21_14180 encodes QDZ55367.1,exactly equal to Q8X4T7/BAB36267.1,394
+    aa,PF01901 8-205,score0.041. Its CDS start matches the displayed cluster start2969732. This does not
+    independently sequence the experimental insertion or plasmid.
+  scope_status: PHENOTYPIC
+  taxon: NCBITaxon:83334
+  limitations: Empty-vector comparison,exact construct/tag and figure-specific replication were not established.
+    This is not rescue of the separate SK2526 or ATCC43895 mutants. Spot clearing is not proof of direct
+    Wzy binding or productive-infection efficiency.
+  nodes:
+  - node_id: wzy-complementation
+    label: Reported wzy complementation in the ATCC43888 insertion background
+    node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q8X4T7
+  - node_id: becp10-clearing
+    label: BECP10 spot clearing
+    node_type: PHENOTYPE
+  edges:
+  - edge_id: complementation-increases-clearing
+    subject: wzy-complementation
+    predicate: increases
+    object: becp10-clearing
+    mechanism: Clearing returns in the complemented culture. A Wzy-dependent surface contribution is consistent
+      with this contrast; direct receptor chemistry is not established.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:34452334
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC8402813/
+      snippet: restored sensitivity
+      explanation: Original Figure4C,not the caption's panel A. No duplicate deletion-versus-WT edge is
+        inferred from this complemented/uncomplemented comparison.
+      cache_path: evidence/PF01901/park-2021.txt
+      cache_sha256: 5365e1b63ba290b8b4a09f752746b03f06003d7b7a5cfd7e45eb2587ed810462
 discussions:
-  - discussion_id: duf70-assay-identity-and-attribution
-    prompt: Resolve exact experimental wzy alleles and assay reporting before assigning a domain mechanism.
-    kind: CURATION_TODO
-    status: OPEN
-    rationale: Whole-cell insertion effects support the measured directions but do not isolate Wzy chemistry,polar effects or a PF01901 catalytic segment. Current O157 membership is a short score0.041 hit,unlike the strong archaeal matches.
-    evidence:
-      - reference: https://www.atcc.org/products/700927
-        supports: SUPPORT
-        evidence_source: culture_collection_authority
-        explanation: ATCC establishes the700927-to-43895derivative relationship. Earlier unexplained-lineage wording is refined,not converted into proof of an exact historical assay sequence.
-      - reference: PMID:34452334
-        supports: PARTIAL
-        evidence_source: selected_full_text_and_figure
-        explanation: ATCC43888 complementation supports its spot-clearing contrast,not rescue of another strain's allele. Its matched QDZ55367.1 reference improves identity grounding without sequencing the plasmid.
-      - reference: PMID:39273173
-        supports: PARTIAL
-        evidence_source: selected_full_text_and_figures
-        explanation: Figures1/2/4 retain long-O-antigen,biomass and halo reductions; residual signal,flagellin and Congo-red binding constrain interpretation. The cited CP008957 reference equals Q8X4T7 but names ATCC700927,not an independently sequenced ATCC43895 culture. Glucose and duration discrepancies remain unresolved.
-      - reference: PMID:32316415
-        supports: PARTIAL
-        evidence_source: selected_full_text_and_figure
-        explanation: Figure1B supports reduced tube staining;1D does not show the csgB-like invasion reduction for wzy. csgB rescue must not become wzy rescue. The later study reuses this mutant.
-    posed_by: Codex
-    posed_date: '2026-10-11'
-    notes: Seven graphs retain eight indirect observed effects,not purified polymerization or a family-wide assignment. The strain lineage is resolved,but exact alleles,downstream-expression controls and assay-matched controls remain open. ATCC43888 rescue is separate from the unrescued2008/2020/2024contexts. New evidence supplements historical ledgers without overwriting them.
-  - discussion_id: duf70-primary-context-and-family-coverage
-    prompt: Inspect additional O157 primary experiments and archaeal members without transferring other Wzy families.
-    kind: CURATION_TODO
-    status: OPEN
-    rationale: The237 frozen proteins are not covered by these O157 contexts. Reviewed Q57862/MJ0419 and Q57863/MJ0420 are uncharacterized in the inspected annotation; this is not proof of absent experiments. EX_DUF naming and clanCL0499 do not establish universal polymerase chemistry.
-    evidence:
-      - reference: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01901/
-        supports: PARTIAL
-        evidence_source: database
-        explanation: Current family metadata remains tentative. Exact sequence comparisons map four references; archaeal PF01901 intervals are11-336 and14-363,whereas O157 is8-205. O85335 and Q8X4T7 differ at234.
-      - reference: PMID:28955320
-        supports: PARTIAL
-        evidence_source: selected_full_text_and_table
-        explanation: FPC840_340035 has a Table3 HHpredPF01901 relationship but no reported InterProScan hit. Comparative genomics and serotype PCR are not gene-perturbation evidence; current sequence mapping remains open.
-    posed_by: Codex
-    posed_date: '2026-10-11'
-    notes: Selected2008capsule and2021BECP10evidence is now inspected; their additional contexts and supplements remain bounded. The2004doi10.1074/jbc.M401879200full paper remains inaccessible through attempted endpoints. O86purified Wzy is reportedPF14296,not transferable here. No molybdate edge follows from Q6LY80's submitted name. Keep IN_PROGRESS pending member-specific evidence.
+- discussion_id: duf70-assay-identity-and-attribution
+  prompt: Resolve exact experimental wzy alleles and assay reporting before assigning a domain mechanism.
+  kind: CURATION_TODO
+  status: OPEN
+  rationale: Whole-cell insertion effects support the measured directions but do not isolate Wzy chemistry,polar
+    effects or a PF01901 catalytic segment. Current O157 membership is a short score0.041 hit,unlike the
+    strong archaeal matches.
+  evidence:
+  - reference: https://www.atcc.org/products/700927
+    supports: SUPPORT
+    evidence_source: culture_collection_authority
+    explanation: ATCC establishes the700927-to-43895derivative relationship. Earlier unexplained-lineage
+      wording is refined,not converted into proof of an exact historical assay sequence.
+  - reference: PMID:34452334
+    supports: PARTIAL
+    evidence_source: selected_full_text_and_figure
+    explanation: ATCC43888 complementation supports its spot-clearing contrast,not rescue of another strain's
+      allele. Its matched QDZ55367.1 reference improves identity grounding without sequencing the plasmid.
+  - reference: PMID:39273173
+    supports: PARTIAL
+    evidence_source: selected_full_text_and_figures
+    explanation: Figures1/2/4 retain long-O-antigen,biomass and halo reductions; residual signal,flagellin
+      and Congo-red binding constrain interpretation. The cited CP008957 reference equals Q8X4T7 but names
+      ATCC700927,not an independently sequenced ATCC43895 culture. Glucose and duration discrepancies
+      remain unresolved.
+  - reference: PMID:32316415
+    supports: PARTIAL
+    evidence_source: selected_full_text_and_figure
+    explanation: Figure1B supports reduced tube staining;1D does not show the csgB-like invasion reduction
+      for wzy. csgB rescue must not become wzy rescue. The later study reuses this mutant.
+  posed_by: Codex
+  posed_date: '2026-10-11'
+  notes: Seven graphs retain eight indirect observed effects,not purified polymerization or a family-wide
+    assignment. The strain lineage is resolved,but exact alleles,downstream-expression controls and assay-matched
+    controls remain open. ATCC43888 rescue is separate from the unrescued2008/2020/2024contexts. New evidence
+    supplements historical ledgers without overwriting them.
+- discussion_id: duf70-primary-context-and-family-coverage
+  prompt: Inspect additional O157 primary experiments and archaeal members without transferring other
+    Wzy families.
+  kind: CURATION_TODO
+  status: OPEN
+  rationale: The237 frozen proteins are not covered by these O157 contexts. Reviewed Q57862/MJ0419 and
+    Q57863/MJ0420 are uncharacterized in the inspected annotation; this is not proof of absent experiments.
+    EX_DUF naming and clanCL0499 do not establish universal polymerase chemistry.
+  evidence:
+  - reference: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01901/
+    supports: PARTIAL
+    evidence_source: database
+    explanation: Current family metadata remains tentative. Exact sequence comparisons map four references;
+      archaeal PF01901 intervals are11-336 and14-363,whereas O157 is8-205. O85335 and Q8X4T7 differ at234.
+  - reference: PMID:28955320
+    supports: PARTIAL
+    evidence_source: selected_full_text_and_table
+    explanation: FPC840_340035 has a Table3 HHpredPF01901 relationship but no reported InterProScan hit.
+      Comparative genomics and serotype PCR are not gene-perturbation evidence; current sequence mapping
+      remains open.
+  posed_by: Codex
+  posed_date: '2026-10-11'
+  notes: Selected2008capsule and2021BECP10evidence is now inspected; their additional contexts and supplements
+    remain bounded. The2004doi10.1074/jbc.M401879200full paper remains inaccessible through attempted
+    endpoints. O86purified Wzy is reportedPF14296,not transferable here. No molybdate edge follows from
+    Q6LY80's submitted name. Keep IN_PROGRESS pending member-specific evidence.

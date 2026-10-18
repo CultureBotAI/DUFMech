@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01174
+  path: curation/families/PF01174.yaml
+session:
+  id: 2026-10-18T025446Z-antigravity-b8c681
+  timestamp: '2026-10-18T02:54:46Z'
+  actors:
+  - type: ai_agent
+    name: Antigravity
+    model: Claude Opus 4.6
+    agent_tool: Antigravity
+events:
+- type: EDIT
+  outcome: changed
+  summary: Ground causal graph gene and protein nodes in PF01174 with verified UniProtKB
+    accessions (UniProtKB:P37528)
+  details: 'Reviewed PF01174 causal_graphs and grounded gene/protein PERTURBATION,
+    ACTIVITY, and protein-complex STATE nodes across 1 causal graph(s) using verified
+    UniProtKB accessions from family_mapping:
+
+    - `pdxst-acivicin-plp-signal-inhibition`: grounded residual-glutamine-plp-signal
+    -> UniProtKB:P37528'
+  sections:
+  - causal_graphs

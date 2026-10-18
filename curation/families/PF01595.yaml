@@ -2,269 +2,359 @@ pfam_id: PF01595
 curation_status: IN_PROGRESS
 curation_history: history/records/PF01595
 causal_graphs:
-  - graph_id: ttcorb-liposome-magnesium-uptake
-    title: Reconstituted TtCorB supports magnesium accumulation in proteoliposomes
-    scope: Full-length Tepidiphilus thermophilus CorB 1-445 with C-terminal His6, Chen 2021 Figure 6a and Supplementary Figure 8a/b; not Thermus thermophilus or isolated CNNM transmembrane domain.
-    context: POPE/POPG 3:1 vesicles contain 50 uM mag-fura-2 in 20 mM HEPES-KOH pH 7.5, 100 mM KCl, 50 mM NaCl and initially 0.5 mM EDTA. UDM-purified protein is reconstituted by Sephadex G-50 detergent removal, one freeze/thaw and 0.8-um extrusion. Dilute 10 ul vesicles into 190 ul EDTA-free buffer at 25 C. Following a 1-min baseline, add 5 mM MgCl2 for the WT/empty and protein-loading comparisons. The separate MgCl2 series uses 0.75, 1.5, 3 and 5 mM. Monitor 330/369-nm excitation and 509-nm emission for 10 min; Triton/EDTA calibration yields intravesicular magnesium. Captions report three independent measurements, mean +/- SEM.
-    family_mapping: A0A0K6IWT9 sequence version 1 is 445 aa and maps to PF01595 at 19-189. UniProt and InterPro sequences exactly match. The paper identifies this accession and intact pET29a construct. CBS/CorC regions are also present; the isolated Pfam domain was not tested.
-    scope_status: MECHANISTIC
-    taxon: NCBITaxon:876478
-    limitations: Directness concerns magnesium accumulation in purified-protein vesicles, not an observed atomic transport cycle. Orientation and active fraction are not measured, so influx into these vesicles is not native cellular import/export direction. Independent measurements are not stated to be independent purifications. Empty controls receive matched 0.05% UDM buffer. The concentration/loading series are separate interventions, not a serial causal chain or a fitted Michaelis constant. Ion counter-substrates and exchange stoichiometry remain unresolved.
-    nodes:
-      - node_id: ttcorb-reconstituted
-        label: Reconstitute full-length TtCorB at protein/lipid 1:30 instead of empty vesicles
-        node_type: PERTURBATION
-        grounding: [UniProtKB:A0A0K6IWT9]
-      - node_id: intravesicular-magnesium
-        label: Intravesicular magnesium accumulation after external MgCl2 addition
-        node_type: STATE
-      - node_id: higher-protein-loading
-        label: Increase TtCorB loading from 1:810 to 1:30 at 5 mM external MgCl2
-        node_type: PERTURBATION
-      - node_id: higher-external-magnesium
-        label: Increase external MgCl2 from 0.75 to 5 mM in the separate substrate series
-        node_type: PERTURBATION
-    edges:
-      - edge_id: ttcorb-increases-magnesium-accumulation
-        subject: ttcorb-reconstituted
-        predicate: increases
-        object: intravesicular-magnesium
-        mechanism: Protein-containing liposomes accumulate magnesium above the empty-vesicle response after MgCl2 addition. The purified reconstitution supports a direct transport-associated effect without proving a specific counterion, native direction or isolated-domain sufficiency.
-        directness: DIRECT
-        support: OBSERVED
-        evidence_kind: EXPERIMENTAL
-        evidence:
-          - reference: PMID:34188059
-            source_url: https://www.nature.com/articles/s41467-021-24282-7
-            snippet: transport activity
-            explanation: Figure 6a, its empty-liposome control and reconstitution Methods were inspected; the graph retains the measured compartment and intact construct.
-            cache_path: evidence/PF01595/chen-2021-transport.txt
-            cache_sha256: 749f284d9182f483dd5122d24c377639036d9a50454275c6866fc027de28fd19
-          - reference: https://www.ebi.ac.uk/interpro/api/protein/uniprot/A0A0K6IWT9/entry/pfam/PF01595/
-            source_url: https://www.ebi.ac.uk/interpro/api/protein/uniprot/A0A0K6IWT9/entry/pfam/PF01595/
-            snippet: A0A0K6IWT9 Pfam:PF01595; interval 19-189 inclusive.
-            explanation: Accession, taxon, full-length sequence equality and current domain interval identify the tested protein, not an isolated-domain experiment.
-            cache_path: evidence/PF01595/CorB-identities.txt
-            cache_sha256: 19726a7da811f1d8ed8811f46263cfa3ce3a5f4a8923ea82eb2dd3833d94c06a
-      - edge_id: protein-loading-increases-accumulation
-        subject: higher-protein-loading
-        predicate: increases
-        object: intravesicular-magnesium
-        mechanism: At fixed external magnesium, vesicles prepared with higher TtCorB loading have greater magnesium accumulation across the 1:810, 1:270, 1:90 and 1:30 wt/wt series. This is a loading-dependent ensemble response, not turnover normalized to active oriented protein.
-        directness: DIRECT
-        support: OBSERVED
-        evidence_kind: EXPERIMENTAL
-        evidence:
-          - reference: PMID:34188059
-            source_url: https://www.nature.com/articles/s41467-021-24282-7
-            snippet: transport activity
-            explanation: Visually inspected Supplementary Figure 8a and its caption show the protein-loading series with an empty-vesicle baseline.
-            cache_path: evidence/PF01595/chen-2021-transport.txt
-            cache_sha256: 749f284d9182f483dd5122d24c377639036d9a50454275c6866fc027de28fd19
-      - edge_id: external-magnesium-increases-accumulation
-        subject: higher-external-magnesium
-        predicate: increases
-        object: intravesicular-magnesium
-        mechanism: Higher external MgCl2 produces greater intravesicular accumulation across the separate 0.75-to-5-mM series. The intervention changes the available substrate and gradient together; it does not isolate binding affinity or establish transport saturation.
-        directness: DIRECT
-        support: OBSERVED
-        evidence_kind: EXPERIMENTAL
-        evidence:
-          - reference: PMID:34188059
-            source_url: https://www.nature.com/articles/s41467-021-24282-7
-            snippet: transport activity
-            explanation: Visually inspected Supplementary Figure 8b and transport Methods support the concentration-dependent response without a kinetic-fit claim.
-            cache_path: evidence/PF01595/chen-2021-transport.txt
-            cache_sha256: 749f284d9182f483dd5122d24c377639036d9a50454275c6866fc027de28fd19
-  - graph_id: mtcorb-liposome-magnesium-uptake
-    title: Reconstituted MtCorB gives modest magnesium accumulation above empty vesicles
-    scope: Full-length Methanoculleus thermophilus CorB 1-426 with C-terminal His6, Chen 2021 Figure 6a; distinct from MtCorB delta-C crystallization constructs.
-    context: POPE/POPG 3:1, protein/lipid 1:30 wt/wt, encapsulated 50 uM mag-fura-2, pH 7.5 with 100 mM KCl and 50 mM NaCl. After a 1-min baseline at 25 C, add 5 mM MgCl2 and follow calibrated intravesicular magnesium for 10 min. Empty liposomes receive matched 0.05% UDM buffer. Three independent measurements, mean +/- SEM; reconstitution Methods call MtCorB UDM-purified, whereas purification Methods specify DDM.
-    family_mapping: A0A1G8XA46 sequence version 1, 426 aa, NCBITaxon 2200; current PF01595 13-187, verified by exact UniProt/InterPro sequence equality. The Pfam interval is not identical to structural TM residues 1-154. Neither isolated CBS 199-322 nor the delta-C structure inherits this full-length transport assay.
-    scope_status: MECHANISTIC
-    taxon: NCBITaxon:2200
-    limitations: The smaller MtCorB signal relative to TtCorB is not zero function or evidence of an intrinsically slower transporter; lipid compatibility may differ. The purification/reconstitution detergent discrepancy remains unresolved. Protein orientation, counterion and stoichiometry are not established. No archaeal cellular direction or human CNNM transport claim is inferred.
-    nodes:
-      - node_id: mtcorb-reconstituted
-        label: Reconstitute full-length MtCorB instead of empty vesicles
-        node_type: PERTURBATION
-        grounding: [UniProtKB:A0A1G8XA46]
-      - node_id: mt-intravesicular-magnesium
-        label: Magnesium accumulation in MtCorB proteoliposomes
-        node_type: STATE
-    edges:
-      - edge_id: mtcorb-increases-magnesium-accumulation
-        subject: mtcorb-reconstituted
-        predicate: increases
-        object: mt-intravesicular-magnesium
-        mechanism: MtCorB-containing vesicles give a modest positive magnesium-accumulation response above empty vesicles after external MgCl2 addition. This is an intact-protein reconstitution result, not an isolated-domain or physiological-direction demonstration.
-        directness: DIRECT
-        support: OBSERVED
-        evidence_kind: EXPERIMENTAL
-        evidence:
-          - reference: PMID:34188059
-            source_url: https://www.nature.com/articles/s41467-021-24282-7
-            snippet: transport activity
-            explanation: Figure 6a, full-length cloning labels and transport Methods support the positive MtCorB response while preserving the unresolved detergent notation.
-            cache_path: evidence/PF01595/chen-2021-transport.txt
-            cache_sha256: 749f284d9182f483dd5122d24c377639036d9a50454275c6866fc027de28fd19
-          - reference: https://www.ebi.ac.uk/interpro/api/protein/uniprot/A0A1G8XA46/entry/pfam/PF01595/
-            source_url: https://www.ebi.ac.uk/interpro/api/protein/uniprot/A0A1G8XA46/entry/pfam/PF01595/
-            snippet: A0A1G8XA46 Pfam:PF01595; interval 13-187 inclusive.
-            explanation: The paper accession and matching database sequence identify the archaeal intact construct separately from TtCorB and domain-only constructs.
-            cache_path: evidence/PF01595/CorB-identities.txt
-            cache_sha256: 19726a7da811f1d8ed8811f46263cfa3ce3a5f4a8923ea82eb2dd3833d94c06a
-  - graph_id: ttcorb-substitution-transport-effects
-    title: TtCorB cavity substitutions increase or decrease liposomal magnesium accumulation
-    scope: Separate single substitutions in intact His6-TtCorB, compared with WT under Chen 2021 Figure 6d/e conditions.
-    context: POPE/POPG 3:1, protein/lipid 1:30 wt/wt, 5 mM added MgCl2, pH 7.5, 25 C, 100 mM KCl and 50 mM NaCl, mag-fura-2 excitation 330/369 nm and emission 509 nm. The 10-min time courses use empty-liposome and WT comparisons, three independent measurements, mean +/- SEM. Supplementary Figure 8c/d supplies size-exclusion and reconstituted-protein SDS-PAGE controls.
-    family_mapping: Reference A0A0K6IWT9 S26, S30, N76, S117, E118, P121 and K122 were sequence-verified and all lie inside PF01595 19-189. Each mutation is in the full 445-aa protein, not an isolated-domain construct; domain position does not isolate its causal microstep.
-    scope_status: MECHANISTIC
-    taxon: NCBITaxon:876478
-    limitations: All plotted loss-of-response mutants retain accumulation above empty controls. E33A and N80A are described as near WT, not zero-effect proof. Several variants, especially S26A/S30A/N76A, have earlier or broadened SEC peaks. Strong incorporation bands do not establish equal folding, oligomerization, orientation or active fraction. Directness means the net purified-vesicle effect; an elementary metal-coordination or pi-helix-motion mechanism remains unresolved.
-    nodes:
-      - node_id: s26a
-        label: S26A instead of WT TtCorB
-        node_type: PERTURBATION
-      - node_id: s30a
-        label: S30A instead of WT TtCorB
-        node_type: PERTURBATION
-      - node_id: n76a
-        label: N76A instead of WT TtCorB
-        node_type: PERTURBATION
-      - node_id: s117a
-        label: S117A instead of WT TtCorB
-        node_type: PERTURBATION
-      - node_id: e118a
-        label: E118A instead of WT TtCorB
-        node_type: PERTURBATION
-      - node_id: p121g
-        label: P121G instead of WT TtCorB
-        node_type: PERTURBATION
-      - node_id: k122a
-        label: K122A instead of WT TtCorB
-        node_type: PERTURBATION
-      - node_id: mutant-magnesium-accumulation
-        label: Magnesium accumulation after external MgCl2 addition
-        node_type: STATE
-        grounding: [UniProtKB:A0A0K6IWT9]
-    edges:
-      - edge_id: s26a-increases-accumulation
-        subject: s26a
-        predicate: increases
-        object: mutant-magnesium-accumulation
-        mechanism: S26A proteoliposomes accumulate more magnesium than WT in Figure 6d. Its altered SEC behavior prevents assigning the increase uniquely to altered ion coordination or release.
-        directness: DIRECT
-        support: OBSERVED
-        evidence_kind: EXPERIMENTAL
-        evidence:
-          - reference: PMID:34188059
-            source_url: https://www.nature.com/articles/s41467-021-24282-7
-            snippet: increased transport activity
-            explanation: Figure 6d and Supplementary 8c/d were visually checked together; the transport increase and assembly-control qualification are both retained.
-            cache_path: evidence/PF01595/chen-2021-transport.txt
-            cache_sha256: 749f284d9182f483dd5122d24c377639036d9a50454275c6866fc027de28fd19
-      - edge_id: s30a-increases-accumulation
-        subject: s30a
-        predicate: increases
-        object: mutant-magnesium-accumulation
-        mechanism: S30A gives greater magnesium accumulation than WT in this purified TtCorB assay. It is not assigned the opposite phenotype reported for an equivalent substitution in a different chimeric cellular system.
-        directness: DIRECT
-        support: OBSERVED
-        evidence_kind: EXPERIMENTAL
-        evidence:
-          - reference: PMID:34188059
-            source_url: https://www.nature.com/articles/s41467-021-24282-7
-            snippet: increased transport activity
-            explanation: Figure 6d supports the increase; Supplementary 8c/d limits a unique mechanistic explanation, and Results explicitly distinguish earlier cellular chimera experiments.
-            cache_path: evidence/PF01595/chen-2021-transport.txt
-            cache_sha256: 749f284d9182f483dd5122d24c377639036d9a50454275c6866fc027de28fd19
-      - edge_id: n76a-increases-accumulation
-        subject: n76a
-        predicate: increases
-        object: mutant-magnesium-accumulation
-        mechanism: N76A proteoliposomes accumulate more magnesium than WT despite the altered SEC profile. The increased ensemble response is observed; a weakened metal-binding site causing faster release is only an interpretation.
-        directness: DIRECT
-        support: OBSERVED
-        evidence_kind: EXPERIMENTAL
-        evidence:
-          - reference: PMID:34188059
-            source_url: https://www.nature.com/articles/s41467-021-24282-7
-            snippet: increased transport activity
-            explanation: Figure 6d and Supplementary 8c/d establish the direction and relevant incorporation/assembly controls.
-            cache_path: evidence/PF01595/chen-2021-transport.txt
-            cache_sha256: 749f284d9182f483dd5122d24c377639036d9a50454275c6866fc027de28fd19
-      - edge_id: s117a-decreases-accumulation
-        subject: s117a
-        predicate: decreases
-        object: mutant-magnesium-accumulation
-        mechanism: S117A lowers accumulation relative to WT but retains substantial signal above empty vesicles. This is not complete transport loss or proof that a particular pi-helix conformation was prevented.
-        directness: DIRECT
-        support: OBSERVED
-        evidence_kind: EXPERIMENTAL
-        evidence:
-          - reference: PMID:34188059
-            source_url: https://www.nature.com/articles/s41467-021-24282-7
-            snippet: transport activity
-            explanation: Figure 6e and Supplementary 8c/d support reduced but nonzero accumulation in reconstituted mutant protein.
-            cache_path: evidence/PF01595/chen-2021-transport.txt
-            cache_sha256: 749f284d9182f483dd5122d24c377639036d9a50454275c6866fc027de28fd19
-      - edge_id: e118a-decreases-accumulation
-        subject: e118a
-        predicate: decreases
-        object: mutant-magnesium-accumulation
-        mechanism: E118A lowers accumulation relative to WT while retaining a response above empty vesicles. The substitution does not uniquely establish loss of a proton-exchange or magnesium-coordination microstep.
-        directness: DIRECT
-        support: OBSERVED
-        evidence_kind: EXPERIMENTAL
-        evidence:
-          - reference: PMID:34188059
-            source_url: https://www.nature.com/articles/s41467-021-24282-7
-            snippet: transport activity
-            explanation: Figure 6e and Supplementary 8c/d retain the direction, residual activity and incorporation controls.
-            cache_path: evidence/PF01595/chen-2021-transport.txt
-            cache_sha256: 749f284d9182f483dd5122d24c377639036d9a50454275c6866fc027de28fd19
-      - edge_id: p121g-decreases-accumulation
-        subject: p121g
-        predicate: decreases
-        object: mutant-magnesium-accumulation
-        mechanism: P121G lowers magnesium accumulation in the intact protein. Residual transport and the absence of a direct conformational-motion measurement prevent describing the phenotype as proof of a specific helix-kink mechanism.
-        directness: DIRECT
-        support: OBSERVED
-        evidence_kind: EXPERIMENTAL
-        evidence:
-          - reference: PMID:34188059
-            source_url: https://www.nature.com/articles/s41467-021-24282-7
-            snippet: transport activity
-            explanation: Figure 6e and Supplementary 8c/d show reduced accumulation and retained protein incorporation.
-            cache_path: evidence/PF01595/chen-2021-transport.txt
-            cache_sha256: 749f284d9182f483dd5122d24c377639036d9a50454275c6866fc027de28fd19
-      - edge_id: k122a-decreases-accumulation
-        subject: k122a
-        predicate: decreases
-        object: mutant-magnesium-accumulation
-        mechanism: K122A lowers accumulation relative to WT, with a nonzero signal above empty vesicles. The net response does not identify a unique ion path or distinguish catalytic effects from changes in active fraction.
-        directness: DIRECT
-        support: OBSERVED
-        evidence_kind: EXPERIMENTAL
-        evidence:
-          - reference: PMID:34188059
-            source_url: https://www.nature.com/articles/s41467-021-24282-7
-            snippet: transport activity
-            explanation: Figure 6e and Supplementary 8c/d support the scoped decrease and the retained limitations.
-            cache_path: evidence/PF01595/chen-2021-transport.txt
-            cache_sha256: 749f284d9182f483dd5122d24c377639036d9a50454275c6866fc027de28fd19
-discussions:
-  - discussion_id: corb-counterions-constructs-and-family-transfer
-    prompt: Resolve counterion and native-direction questions, the MtCorB detergent discrepancy, and additional CNNM/CorC contexts before family-wide mechanistic claims.
-    kind: CURATION_TODO
-    status: OPEN
-    rationale: Eleven directly observed reconstituted-assay effects do not establish ion stoichiometry, an elementary structural cycle or universal function across PF01595.
+- graph_id: ttcorb-liposome-magnesium-uptake
+  title: Reconstituted TtCorB supports magnesium accumulation in proteoliposomes
+  scope: Full-length Tepidiphilus thermophilus CorB 1-445 with C-terminal His6, Chen 2021 Figure 6a and
+    Supplementary Figure 8a/b; not Thermus thermophilus or isolated CNNM transmembrane domain.
+  context: POPE/POPG 3:1 vesicles contain 50 uM mag-fura-2 in 20 mM HEPES-KOH pH 7.5, 100 mM KCl, 50 mM
+    NaCl and initially 0.5 mM EDTA. UDM-purified protein is reconstituted by Sephadex G-50 detergent removal,
+    one freeze/thaw and 0.8-um extrusion. Dilute 10 ul vesicles into 190 ul EDTA-free buffer at 25 C.
+    Following a 1-min baseline, add 5 mM MgCl2 for the WT/empty and protein-loading comparisons. The separate
+    MgCl2 series uses 0.75, 1.5, 3 and 5 mM. Monitor 330/369-nm excitation and 509-nm emission for 10
+    min; Triton/EDTA calibration yields intravesicular magnesium. Captions report three independent measurements,
+    mean +/- SEM.
+  family_mapping: A0A0K6IWT9 sequence version 1 is 445 aa and maps to PF01595 at 19-189. UniProt and InterPro
+    sequences exactly match. The paper identifies this accession and intact pET29a construct. CBS/CorC
+    regions are also present; the isolated Pfam domain was not tested.
+  scope_status: MECHANISTIC
+  taxon: NCBITaxon:876478
+  limitations: Directness concerns magnesium accumulation in purified-protein vesicles, not an observed
+    atomic transport cycle. Orientation and active fraction are not measured, so influx into these vesicles
+    is not native cellular import/export direction. Independent measurements are not stated to be independent
+    purifications. Empty controls receive matched 0.05% UDM buffer. The concentration/loading series are
+    separate interventions, not a serial causal chain or a fitted Michaelis constant. Ion counter-substrates
+    and exchange stoichiometry remain unresolved.
+  nodes:
+  - node_id: ttcorb-reconstituted
+    label: Reconstitute full-length TtCorB at protein/lipid 1:30 instead of empty vesicles
+    node_type: PERTURBATION
+    grounding:
+    - UniProtKB:A0A0K6IWT9
+  - node_id: intravesicular-magnesium
+    label: Intravesicular magnesium accumulation after external MgCl2 addition
+    node_type: STATE
+  - node_id: higher-protein-loading
+    label: Increase TtCorB loading from 1:810 to 1:30 at 5 mM external MgCl2
+    node_type: PERTURBATION
+    grounding:
+    - UniProtKB:A0A0K6IWT9
+  - node_id: higher-external-magnesium
+    label: Increase external MgCl2 from 0.75 to 5 mM in the separate substrate series
+    node_type: PERTURBATION
+  edges:
+  - edge_id: ttcorb-increases-magnesium-accumulation
+    subject: ttcorb-reconstituted
+    predicate: increases
+    object: intravesicular-magnesium
+    mechanism: Protein-containing liposomes accumulate magnesium above the empty-vesicle response after
+      MgCl2 addition. The purified reconstitution supports a direct transport-associated effect without
+      proving a specific counterion, native direction or isolated-domain sufficiency.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
     evidence:
-      - reference: PMID:34188059
-        supports: PARTIAL
-        evidence_source: full_text_figure_6_supplementary_figure_8
-        explanation: No valinomycin stimulation, near-WT E33A/N80A results, mutant SEC changes and the different earlier chimera context remain explicit. The earlier Huang study has not been independently full-text reviewed here.
-    posed_by: Codex
-    posed_date: '2026-10-11'
-    notes: Examine human CNNM and bacterial CorC studies separately; retain whole-protein versus domain and cellular versus liposome distinctions. Current work is partial scientific self-review and IN_PROGRESS.
+    - reference: PMID:34188059
+      source_url: https://www.nature.com/articles/s41467-021-24282-7
+      snippet: transport activity
+      explanation: Figure 6a, its empty-liposome control and reconstitution Methods were inspected; the
+        graph retains the measured compartment and intact construct.
+      cache_path: evidence/PF01595/chen-2021-transport.txt
+      cache_sha256: 749f284d9182f483dd5122d24c377639036d9a50454275c6866fc027de28fd19
+    - reference: https://www.ebi.ac.uk/interpro/api/protein/uniprot/A0A0K6IWT9/entry/pfam/PF01595/
+      source_url: https://www.ebi.ac.uk/interpro/api/protein/uniprot/A0A0K6IWT9/entry/pfam/PF01595/
+      snippet: A0A0K6IWT9 Pfam:PF01595; interval 19-189 inclusive.
+      explanation: Accession, taxon, full-length sequence equality and current domain interval identify
+        the tested protein, not an isolated-domain experiment.
+      cache_path: evidence/PF01595/CorB-identities.txt
+      cache_sha256: 19726a7da811f1d8ed8811f46263cfa3ce3a5f4a8923ea82eb2dd3833d94c06a
+  - edge_id: protein-loading-increases-accumulation
+    subject: higher-protein-loading
+    predicate: increases
+    object: intravesicular-magnesium
+    mechanism: At fixed external magnesium, vesicles prepared with higher TtCorB loading have greater
+      magnesium accumulation across the 1:810, 1:270, 1:90 and 1:30 wt/wt series. This is a loading-dependent
+      ensemble response, not turnover normalized to active oriented protein.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:34188059
+      source_url: https://www.nature.com/articles/s41467-021-24282-7
+      snippet: transport activity
+      explanation: Visually inspected Supplementary Figure 8a and its caption show the protein-loading
+        series with an empty-vesicle baseline.
+      cache_path: evidence/PF01595/chen-2021-transport.txt
+      cache_sha256: 749f284d9182f483dd5122d24c377639036d9a50454275c6866fc027de28fd19
+  - edge_id: external-magnesium-increases-accumulation
+    subject: higher-external-magnesium
+    predicate: increases
+    object: intravesicular-magnesium
+    mechanism: Higher external MgCl2 produces greater intravesicular accumulation across the separate
+      0.75-to-5-mM series. The intervention changes the available substrate and gradient together; it
+      does not isolate binding affinity or establish transport saturation.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:34188059
+      source_url: https://www.nature.com/articles/s41467-021-24282-7
+      snippet: transport activity
+      explanation: Visually inspected Supplementary Figure 8b and transport Methods support the concentration-dependent
+        response without a kinetic-fit claim.
+      cache_path: evidence/PF01595/chen-2021-transport.txt
+      cache_sha256: 749f284d9182f483dd5122d24c377639036d9a50454275c6866fc027de28fd19
+- graph_id: mtcorb-liposome-magnesium-uptake
+  title: Reconstituted MtCorB gives modest magnesium accumulation above empty vesicles
+  scope: Full-length Methanoculleus thermophilus CorB 1-426 with C-terminal His6, Chen 2021 Figure 6a;
+    distinct from MtCorB delta-C crystallization constructs.
+  context: POPE/POPG 3:1, protein/lipid 1:30 wt/wt, encapsulated 50 uM mag-fura-2, pH 7.5 with 100 mM
+    KCl and 50 mM NaCl. After a 1-min baseline at 25 C, add 5 mM MgCl2 and follow calibrated intravesicular
+    magnesium for 10 min. Empty liposomes receive matched 0.05% UDM buffer. Three independent measurements,
+    mean +/- SEM; reconstitution Methods call MtCorB UDM-purified, whereas purification Methods specify
+    DDM.
+  family_mapping: A0A1G8XA46 sequence version 1, 426 aa, NCBITaxon 2200; current PF01595 13-187, verified
+    by exact UniProt/InterPro sequence equality. The Pfam interval is not identical to structural TM residues
+    1-154. Neither isolated CBS 199-322 nor the delta-C structure inherits this full-length transport
+    assay.
+  scope_status: MECHANISTIC
+  taxon: NCBITaxon:2200
+  limitations: The smaller MtCorB signal relative to TtCorB is not zero function or evidence of an intrinsically
+    slower transporter; lipid compatibility may differ. The purification/reconstitution detergent discrepancy
+    remains unresolved. Protein orientation, counterion and stoichiometry are not established. No archaeal
+    cellular direction or human CNNM transport claim is inferred.
+  nodes:
+  - node_id: mtcorb-reconstituted
+    label: Reconstitute full-length MtCorB instead of empty vesicles
+    node_type: PERTURBATION
+    grounding:
+    - UniProtKB:A0A1G8XA46
+  - node_id: mt-intravesicular-magnesium
+    label: Magnesium accumulation in MtCorB proteoliposomes
+    node_type: STATE
+  edges:
+  - edge_id: mtcorb-increases-magnesium-accumulation
+    subject: mtcorb-reconstituted
+    predicate: increases
+    object: mt-intravesicular-magnesium
+    mechanism: MtCorB-containing vesicles give a modest positive magnesium-accumulation response above
+      empty vesicles after external MgCl2 addition. This is an intact-protein reconstitution result, not
+      an isolated-domain or physiological-direction demonstration.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:34188059
+      source_url: https://www.nature.com/articles/s41467-021-24282-7
+      snippet: transport activity
+      explanation: Figure 6a, full-length cloning labels and transport Methods support the positive MtCorB
+        response while preserving the unresolved detergent notation.
+      cache_path: evidence/PF01595/chen-2021-transport.txt
+      cache_sha256: 749f284d9182f483dd5122d24c377639036d9a50454275c6866fc027de28fd19
+    - reference: https://www.ebi.ac.uk/interpro/api/protein/uniprot/A0A1G8XA46/entry/pfam/PF01595/
+      source_url: https://www.ebi.ac.uk/interpro/api/protein/uniprot/A0A1G8XA46/entry/pfam/PF01595/
+      snippet: A0A1G8XA46 Pfam:PF01595; interval 13-187 inclusive.
+      explanation: The paper accession and matching database sequence identify the archaeal intact construct
+        separately from TtCorB and domain-only constructs.
+      cache_path: evidence/PF01595/CorB-identities.txt
+      cache_sha256: 19726a7da811f1d8ed8811f46263cfa3ce3a5f4a8923ea82eb2dd3833d94c06a
+- graph_id: ttcorb-substitution-transport-effects
+  title: TtCorB cavity substitutions increase or decrease liposomal magnesium accumulation
+  scope: Separate single substitutions in intact His6-TtCorB, compared with WT under Chen 2021 Figure
+    6d/e conditions.
+  context: POPE/POPG 3:1, protein/lipid 1:30 wt/wt, 5 mM added MgCl2, pH 7.5, 25 C, 100 mM KCl and 50
+    mM NaCl, mag-fura-2 excitation 330/369 nm and emission 509 nm. The 10-min time courses use empty-liposome
+    and WT comparisons, three independent measurements, mean +/- SEM. Supplementary Figure 8c/d supplies
+    size-exclusion and reconstituted-protein SDS-PAGE controls.
+  family_mapping: Reference A0A0K6IWT9 S26, S30, N76, S117, E118, P121 and K122 were sequence-verified
+    and all lie inside PF01595 19-189. Each mutation is in the full 445-aa protein, not an isolated-domain
+    construct; domain position does not isolate its causal microstep.
+  scope_status: MECHANISTIC
+  taxon: NCBITaxon:876478
+  limitations: All plotted loss-of-response mutants retain accumulation above empty controls. E33A and
+    N80A are described as near WT, not zero-effect proof. Several variants, especially S26A/S30A/N76A,
+    have earlier or broadened SEC peaks. Strong incorporation bands do not establish equal folding, oligomerization,
+    orientation or active fraction. Directness means the net purified-vesicle effect; an elementary metal-coordination
+    or pi-helix-motion mechanism remains unresolved.
+  nodes:
+  - node_id: s26a
+    label: S26A instead of WT TtCorB
+    node_type: PERTURBATION
+    grounding:
+    - UniProtKB:A0A0K6IWT9
+  - node_id: s30a
+    label: S30A instead of WT TtCorB
+    node_type: PERTURBATION
+    grounding:
+    - UniProtKB:A0A0K6IWT9
+  - node_id: n76a
+    label: N76A instead of WT TtCorB
+    node_type: PERTURBATION
+    grounding:
+    - UniProtKB:A0A0K6IWT9
+  - node_id: s117a
+    label: S117A instead of WT TtCorB
+    node_type: PERTURBATION
+    grounding:
+    - UniProtKB:A0A0K6IWT9
+  - node_id: e118a
+    label: E118A instead of WT TtCorB
+    node_type: PERTURBATION
+    grounding:
+    - UniProtKB:A0A0K6IWT9
+  - node_id: p121g
+    label: P121G instead of WT TtCorB
+    node_type: PERTURBATION
+    grounding:
+    - UniProtKB:A0A0K6IWT9
+  - node_id: k122a
+    label: K122A instead of WT TtCorB
+    node_type: PERTURBATION
+    grounding:
+    - UniProtKB:A0A0K6IWT9
+  - node_id: mutant-magnesium-accumulation
+    label: Magnesium accumulation after external MgCl2 addition
+    node_type: STATE
+    grounding:
+    - UniProtKB:A0A0K6IWT9
+  edges:
+  - edge_id: s26a-increases-accumulation
+    subject: s26a
+    predicate: increases
+    object: mutant-magnesium-accumulation
+    mechanism: S26A proteoliposomes accumulate more magnesium than WT in Figure 6d. Its altered SEC behavior
+      prevents assigning the increase uniquely to altered ion coordination or release.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:34188059
+      source_url: https://www.nature.com/articles/s41467-021-24282-7
+      snippet: increased transport activity
+      explanation: Figure 6d and Supplementary 8c/d were visually checked together; the transport increase
+        and assembly-control qualification are both retained.
+      cache_path: evidence/PF01595/chen-2021-transport.txt
+      cache_sha256: 749f284d9182f483dd5122d24c377639036d9a50454275c6866fc027de28fd19
+  - edge_id: s30a-increases-accumulation
+    subject: s30a
+    predicate: increases
+    object: mutant-magnesium-accumulation
+    mechanism: S30A gives greater magnesium accumulation than WT in this purified TtCorB assay. It is
+      not assigned the opposite phenotype reported for an equivalent substitution in a different chimeric
+      cellular system.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:34188059
+      source_url: https://www.nature.com/articles/s41467-021-24282-7
+      snippet: increased transport activity
+      explanation: Figure 6d supports the increase; Supplementary 8c/d limits a unique mechanistic explanation,
+        and Results explicitly distinguish earlier cellular chimera experiments.
+      cache_path: evidence/PF01595/chen-2021-transport.txt
+      cache_sha256: 749f284d9182f483dd5122d24c377639036d9a50454275c6866fc027de28fd19
+  - edge_id: n76a-increases-accumulation
+    subject: n76a
+    predicate: increases
+    object: mutant-magnesium-accumulation
+    mechanism: N76A proteoliposomes accumulate more magnesium than WT despite the altered SEC profile.
+      The increased ensemble response is observed; a weakened metal-binding site causing faster release
+      is only an interpretation.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:34188059
+      source_url: https://www.nature.com/articles/s41467-021-24282-7
+      snippet: increased transport activity
+      explanation: Figure 6d and Supplementary 8c/d establish the direction and relevant incorporation/assembly
+        controls.
+      cache_path: evidence/PF01595/chen-2021-transport.txt
+      cache_sha256: 749f284d9182f483dd5122d24c377639036d9a50454275c6866fc027de28fd19
+  - edge_id: s117a-decreases-accumulation
+    subject: s117a
+    predicate: decreases
+    object: mutant-magnesium-accumulation
+    mechanism: S117A lowers accumulation relative to WT but retains substantial signal above empty vesicles.
+      This is not complete transport loss or proof that a particular pi-helix conformation was prevented.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:34188059
+      source_url: https://www.nature.com/articles/s41467-021-24282-7
+      snippet: transport activity
+      explanation: Figure 6e and Supplementary 8c/d support reduced but nonzero accumulation in reconstituted
+        mutant protein.
+      cache_path: evidence/PF01595/chen-2021-transport.txt
+      cache_sha256: 749f284d9182f483dd5122d24c377639036d9a50454275c6866fc027de28fd19
+  - edge_id: e118a-decreases-accumulation
+    subject: e118a
+    predicate: decreases
+    object: mutant-magnesium-accumulation
+    mechanism: E118A lowers accumulation relative to WT while retaining a response above empty vesicles.
+      The substitution does not uniquely establish loss of a proton-exchange or magnesium-coordination
+      microstep.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:34188059
+      source_url: https://www.nature.com/articles/s41467-021-24282-7
+      snippet: transport activity
+      explanation: Figure 6e and Supplementary 8c/d retain the direction, residual activity and incorporation
+        controls.
+      cache_path: evidence/PF01595/chen-2021-transport.txt
+      cache_sha256: 749f284d9182f483dd5122d24c377639036d9a50454275c6866fc027de28fd19
+  - edge_id: p121g-decreases-accumulation
+    subject: p121g
+    predicate: decreases
+    object: mutant-magnesium-accumulation
+    mechanism: P121G lowers magnesium accumulation in the intact protein. Residual transport and the absence
+      of a direct conformational-motion measurement prevent describing the phenotype as proof of a specific
+      helix-kink mechanism.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:34188059
+      source_url: https://www.nature.com/articles/s41467-021-24282-7
+      snippet: transport activity
+      explanation: Figure 6e and Supplementary 8c/d show reduced accumulation and retained protein incorporation.
+      cache_path: evidence/PF01595/chen-2021-transport.txt
+      cache_sha256: 749f284d9182f483dd5122d24c377639036d9a50454275c6866fc027de28fd19
+  - edge_id: k122a-decreases-accumulation
+    subject: k122a
+    predicate: decreases
+    object: mutant-magnesium-accumulation
+    mechanism: K122A lowers accumulation relative to WT, with a nonzero signal above empty vesicles. The
+      net response does not identify a unique ion path or distinguish catalytic effects from changes in
+      active fraction.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:34188059
+      source_url: https://www.nature.com/articles/s41467-021-24282-7
+      snippet: transport activity
+      explanation: Figure 6e and Supplementary 8c/d support the scoped decrease and the retained limitations.
+      cache_path: evidence/PF01595/chen-2021-transport.txt
+      cache_sha256: 749f284d9182f483dd5122d24c377639036d9a50454275c6866fc027de28fd19
+discussions:
+- discussion_id: corb-counterions-constructs-and-family-transfer
+  prompt: Resolve counterion and native-direction questions, the MtCorB detergent discrepancy, and additional
+    CNNM/CorC contexts before family-wide mechanistic claims.
+  kind: CURATION_TODO
+  status: OPEN
+  rationale: Eleven directly observed reconstituted-assay effects do not establish ion stoichiometry,
+    an elementary structural cycle or universal function across PF01595.
+  evidence:
+  - reference: PMID:34188059
+    supports: PARTIAL
+    evidence_source: full_text_figure_6_supplementary_figure_8
+    explanation: No valinomycin stimulation, near-WT E33A/N80A results, mutant SEC changes and the different
+      earlier chimera context remain explicit. The earlier Huang study has not been independently full-text
+      reviewed here.
+  posed_by: Codex
+  posed_date: '2026-10-11'
+  notes: Examine human CNNM and bacterial CorC studies separately; retain whole-protein versus domain
+    and cellular versus liposome distinctions. Current work is partial scientific self-review and IN_PROGRESS.

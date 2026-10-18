@@ -2,405 +2,573 @@ pfam_id: PF01981
 curation_status: IN_PROGRESS
 curation_history: history/records/PF01981
 discussions:
-  - discussion_id: pth2-constructs-and-domain-mapping
-    prompt: Resolve historical physical constructs and domain coordinates before stronger domain-specific or residue claims.
-    kind: CURATION_TODO
-    status: OPEN
-    rationale: Reference-domain mappings do not independently sequence assay constructs; yeast sequence versions and the retired Lokiarchaeum accession need explicit treatment.
-    evidence:
-      - reference: PMID:12475929
-        supports: PARTIAL
-        evidence_source: primary_publication
-        explanation: MJ0051 and historical YBL057c constructs are named, but current P34222 sequence2 numbering is not an authenticated remapping of the old truncation.
-      - reference: PMID:42626907
-        supports: PARTIAL
-        evidence_source: primary_publication
-        explanation: Table1 supplies distinct activity and crystal sequences; archived UniProt entry19 maps their identical core to PF01981, but current HMM boundaries remain unresolved.
-    posed_by: Codex
-    posed_date: '2026-10-15'
-    notes: See evidence/PF01981/member-mapping.txt. Whole-protein rescue is not isolated-domain necessity. Obtain original Fromant2005 mutant data and folding/abundance controls before claiming atomic chemistry.
-  - discussion_id: pth2-discrepancies-and-physiology
-    prompt: Resolve source discrepancies and distinguish heterologous rescue and assay responses from native physiology.
-    kind: CURATION_TODO
-    status: OPEN
-    rationale: Full-length yeast complementation differs between2002 and2003; original substrate units, Table6 ionic conditions and2026 resolution values also differ.
-    evidence:
-      - reference: PMID:12799450
-        supports: PARTIAL
-        evidence_source: primary_publication
-        explanation: Full-length pKKpthY2 rescue contrasts with pGRAS failure in2002. Host/vector/expression differences prevent pooling. YHR189w respiratory defects are Pth1 results.
-      - reference: PMID:42626907
-        supports: PARTIAL
-        evidence_source: primary_publication
-        explanation: Figure5 measures one-minute enzyme activity, not organism growth or an irreversible-denaturation curve; structure resolution text disagrees with Table3 and deposition.
-    posed_by: Codex
-    posed_date: '2026-10-15'
-    notes: Retain native yeast deletion negatives as condition-specific, not universal dispensability. Do not infer mitochondrial localization, tRNA-folding causality, toxicity mechanisms or thermal niches from these graphs.
-  - discussion_id: pth2-literature-and-member-coverage
-    prompt: Extend primary-source review to residue experiments, eukaryotic roles and additional exact PF01981 members.
-    kind: CURATION_TODO
-    status: OPEN
-    rationale: Three inspected studies do not complete this diverse family's mechanism coverage.
-    evidence:
-      - reference: PMID:15766258
-        supports: PARTIAL
-        evidence_source: primary_publication
-        explanation: Abstract and later citations are discovery leads only; full mutation assays have not been inspected here.
-    posed_by: Codex
-    posed_date: '2026-10-15'
-    notes: Follow yeast UBL/proteasome and human PTRH2/BIT1 primary studies, older uninspected figures, the2026 supplement and other archaeal members. Structural resemblance and automated annotations are not experimental transfer.
+- discussion_id: pth2-constructs-and-domain-mapping
+  prompt: Resolve historical physical constructs and domain coordinates before stronger domain-specific
+    or residue claims.
+  kind: CURATION_TODO
+  status: OPEN
+  rationale: Reference-domain mappings do not independently sequence assay constructs; yeast sequence
+    versions and the retired Lokiarchaeum accession need explicit treatment.
+  evidence:
+  - reference: PMID:12475929
+    supports: PARTIAL
+    evidence_source: primary_publication
+    explanation: MJ0051 and historical YBL057c constructs are named, but current P34222 sequence2 numbering
+      is not an authenticated remapping of the old truncation.
+  - reference: PMID:42626907
+    supports: PARTIAL
+    evidence_source: primary_publication
+    explanation: Table1 supplies distinct activity and crystal sequences; archived UniProt entry19 maps
+      their identical core to PF01981, but current HMM boundaries remain unresolved.
+  posed_by: Codex
+  posed_date: '2026-10-15'
+  notes: See evidence/PF01981/member-mapping.txt. Whole-protein rescue is not isolated-domain necessity.
+    Obtain original Fromant2005 mutant data and folding/abundance controls before claiming atomic chemistry.
+- discussion_id: pth2-discrepancies-and-physiology
+  prompt: Resolve source discrepancies and distinguish heterologous rescue and assay responses from native
+    physiology.
+  kind: CURATION_TODO
+  status: OPEN
+  rationale: Full-length yeast complementation differs between2002 and2003; original substrate units,
+    Table6 ionic conditions and2026 resolution values also differ.
+  evidence:
+  - reference: PMID:12799450
+    supports: PARTIAL
+    evidence_source: primary_publication
+    explanation: Full-length pKKpthY2 rescue contrasts with pGRAS failure in2002. Host/vector/expression
+      differences prevent pooling. YHR189w respiratory defects are Pth1 results.
+  - reference: PMID:42626907
+    supports: PARTIAL
+    evidence_source: primary_publication
+    explanation: Figure5 measures one-minute enzyme activity, not organism growth or an irreversible-denaturation
+      curve; structure resolution text disagrees with Table3 and deposition.
+  posed_by: Codex
+  posed_date: '2026-10-15'
+  notes: Retain native yeast deletion negatives as condition-specific, not universal dispensability. Do
+    not infer mitochondrial localization, tRNA-folding causality, toxicity mechanisms or thermal niches
+    from these graphs.
+- discussion_id: pth2-literature-and-member-coverage
+  prompt: Extend primary-source review to residue experiments, eukaryotic roles and additional exact PF01981
+    members.
+  kind: CURATION_TODO
+  status: OPEN
+  rationale: Three inspected studies do not complete this diverse family's mechanism coverage.
+  evidence:
+  - reference: PMID:15766258
+    supports: PARTIAL
+    evidence_source: primary_publication
+    explanation: Abstract and later citations are discovery leads only; full mutation assays have not
+      been inspected here.
+  posed_by: Codex
+  posed_date: '2026-10-15'
+  notes: Follow yeast UBL/proteasome and human PTRH2/BIT1 primary studies, older uninspected figures,
+    the2026 supplement and other archaeal members. Structural resemblance and automated annotations are
+    not experimental transfer.
 causal_graphs:
-  - graph_id: mjpth2-substrate-hydrolysis-2002
-    title: Purified MJ0051 releases reaminoacylatable tRNAs
-    scope: Recombinant M. jannaschii MJ0051 with C-terminal His6, not all PF01981 members.
-    context: Rosas2002 Figure 1B; pGR51C/pET20b protein, 37 C, 187 nM; separate diacetyl-[14C]Lys-tRNA and acetyl-[14C]Phe-tRNA assays. E. coli Pth and no-enzyme controls; subsequent recharging with the appropriate aminoacylation system.
-    family_mapping: Q60363 sequence version 1, entry version 131, 115 aa, MJ0051; current PF01981 spans 1-115. The paper cites NP_247015.1. Physical vector junctions are not independently verified; evidence/PF01981/member-mapping.txt.
-    scope_status: MECHANISTIC
-    taxon: NCBITaxon:243232
-    limitations: No natural peptide-length series or atomic catalytic pathway. Substrate units differ between Methods and Figure1A; no silently corrected Figure1B concentration. Image was inaccessible; Methods, Results and caption inspected. Recharging is a product-integrity assay, not cellular translation flux.
-    nodes:
-      - {node_id: lys_reaction, label: MJ0051 plus diacetyl-Lys-tRNA in the defined assay, node_type: ACTIVITY, grounding: ['UniProtKB:Q60363']}
-      - {node_id: lys_trna, label: Released reaminoacylatable tRNA-Lys, node_type: STATE}
-      - {node_id: phe_reaction, label: MJ0051 plus acetyl-Phe-tRNA in the defined assay, node_type: ACTIVITY, grounding: ['UniProtKB:Q60363']}
-      - {node_id: phe_trna, label: Released reaminoacylatable tRNA-Phe, node_type: STATE}
-    edges:
-      - edge_id: releases-lys-trna
-        subject: lys_reaction
-        predicate: produces
-        object: lys_trna
-        mechanism: Purified-protein hydrolysis followed by Lys recharging supports release of functional tRNA rather than a nuclease-only explanation.
-        directness: DIRECT
-        support: OBSERVED
-        evidence_kind: EXPERIMENTAL
-        evidence:
-          - reference: PMID:12475929
-            source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC139208/
-            snippet: The enzyme was able to hydrolyze both substrates
-            explanation: Figure1B, recombinant-enzyme Results and reaminoacylation Methods; R1 in the retained ledger. TLC of extract is not recast as purified-enzyme product identification.
-            cache_path: evidence/PF01981/rosas2002.txt
-            cache_sha256: a1e5d1f37b907b1524227a917d5d131da284d4e75448a504639a75c022681f20
-      - edge_id: releases-phe-trna
-        subject: phe_reaction
-        predicate: produces
-        object: phe_trna
-        mechanism: The separately tested acetyl-Phe substrate yields tRNA that can be recharged; this does not establish all peptide substrates.
-        directness: DIRECT
-        support: OBSERVED
-        evidence_kind: EXPERIMENTAL
-        evidence:
-          - reference: PMID:12475929
-            source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC139208/
-            snippet: The enzyme was able to hydrolyze both substrates
-            explanation: Figure1B and recombinant-enzyme Results; R1. Distinct substrate, not a second independent publication.
-            cache_path: evidence/PF01981/rosas2002.txt
-            cache_sha256: a1e5d1f37b907b1524227a917d5d131da284d4e75448a504639a75c022681f20
-  - graph_id: mjpth2-heterologous-rescue-2002
-    title: MJ0051 complements E. coli C600 pth-ts
-    scope: Whole MJ0051 gene supplied in pGR518 to an E. coli temperature-sensitive pth background.
-    context: Table 1; LB, ampicillin 0.1 mg/ml, IPTG 1 uM; 42 C versus 32 C. Empty pKQV4 and E. coli pth comparators; cured clones regain temperature sensitivity.
-    family_mapping: MJ0051 maps to Q60363/PF01981 reference 1-115. The rescue plasmid is not the tagged purified-enzyme construct; native archaeal essentiality is not tested.
-    scope_status: PHENOTYPIC
-    limitations: Rescue measures growth, not intracellular substrate abundance or a direct translation step. Native host and isolated-domain necessity remain untested; pth-null rescue is only reported without displayed data and not a separate edge.
-    nodes:
-      - {node_id: plasmid, label: pGR518-MJ0051 versus empty vector, node_type: PERTURBATION, grounding: ['UniProtKB:Q60363']}
-      - {node_id: growth, label: C600 pth-ts growth at 42 C, node_type: PHENOTYPE}
-    edges:
-      - edge_id: rescues-growth
-        subject: plasmid
-        predicate: enables
-        object: growth
-        mechanism: Growth rescue depends on retention of the MJ0051 plasmid under these conditions; intervening cellular events are unresolved.
-        directness: INDIRECT
-        support: OBSERVED
-        evidence_kind: EXPERIMENTAL
-        evidence:
-          - reference: PMID:12475929
-            source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC139208/
-            snippet: Both pth genes, but not the empty vector
-            explanation: Table1 and complementation Results, including cured-clone control; ledger R2.
-            cache_path: evidence/PF01981/rosas2002.txt
-            cache_sha256: a1e5d1f37b907b1524227a917d5d131da284d4e75448a504639a75c022681f20
-  - graph_id: yeast-pth2-truncated-rescue-2002
-    title: Historical truncated yeast PTH2 rescues C600 pth-ts
-    scope: YBL057c-derived pGR87L, with the source's N-terminal 86-residue deletion and initiation-codon substitution.
-    context: Table 1 and yeast Results; E. coli C600 pth-ts, 42 C, LB/ampicillin/IPTG as in the 2002 complementation assay. Full-length pGRAS did not rescue in that experiment.
-    family_mapping: Gene correspondence to P34222 supports family identity; current sequence version 2 is 208 aa with PF01981 at 89-208. Do not equate the historical deleted 86 residues with today's numbering; the physical old insert remains unresolved.
-    scope_status: PHENOTYPIC
-    limitations: No matched expression, folding or targeting measurements. No claim that the N-terminus intrinsically inhibits catalysis or proves organellar localization. The2003 full-length rescue is preserved separately.
-    nodes:
-      - {node_id: truncated, label: Historical pGR87L versus empty vector, node_type: PERTURBATION}
-      - {node_id: growth, label: C600 pth-ts growth at 42 C, node_type: PHENOTYPE}
-    edges:
-      - edge_id: rescues-growth
-        subject: truncated
-        predicate: enables
-        object: growth
-        mechanism: This historical yeast-derived construct supports bacterial growth; the direct cellular mechanism and reason for the full-length negative are unresolved.
-        directness: INDIRECT
-        support: OBSERVED
-        evidence_kind: EXPERIMENTAL
-        evidence:
-          - reference: PMID:12475929
-            source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC139208/
-            snippet: rescued the temperature sensitivity
-            explanation: Table1 and yeast Results; R3. Host and construct are not pooled with Fromant2003.
-            cache_path: evidence/PF01981/rosas2002.txt
-            cache_sha256: a1e5d1f37b907b1524227a917d5d131da284d4e75448a504639a75c022681f20
-  - graph_id: sspth2-hydrolysis-2003
-    title: Purified SSO0175 hydrolyzes defined N-blocked aminoacyl-tRNAs
-    scope: Recombinant S. solfataricus P2 SSO0175, with distinct substrate-specific assays.
-    context: Fromant2003 Figure 1 and Table 5, 50 C; Tris pH 7.5, EDTA, DTT and standard 10 mM MgCl2 assay. Periodate-treated Lys substrate plus subsequent LysRS/ATP recharging tests tRNA integrity; other substrates use deacylation kinetics.
-    family_mapping: Q980V1 sequence version 1, entry version 128, 120 aa, SSO0175; N-terminal Edman match. Later SIFTS 1XTY PF01981 spans 2-120. Mapping does not independently authenticate the 2003 physical insert.
-    scope_status: MECHANISTIC
-    taxon: NCBITaxon:273057
-    limitations: Artificial N-blocked aminoacyl substrates, not a natural peptidyl-tRNA census. Functional recharging was established for Lys, not independently for every substrate. Table5 Km estimates for other substrates assume competitive tRNA-Lys inhibition. Figure1 caption/text, not its unavailable image, inspected.
-    nodes:
-      - {node_id: lys_assay, label: Purified SSO0175 plus diacetyl-Lys-tRNA, node_type: ACTIVITY, grounding: ['UniProtKB:Q980V1']}
-      - {node_id: lys_product, label: Released reaminoacylatable tRNA-Lys, node_type: STATE}
-      - {node_id: fmet_assay, label: Purified SSO0175 plus formyl-Met-tRNA-fMet, node_type: ACTIVITY}
-      - {node_id: fmet_cleavage, label: Formyl-Met-tRNA-fMet deacylation, node_type: PROCESS}
-      - {node_id: his_assay, label: Purified SSO0175 plus acetyl-His-tRNA-His, node_type: ACTIVITY}
-      - {node_id: his_cleavage, label: Acetyl-His-tRNA-His deacylation, node_type: PROCESS}
-    edges:
-      - edge_id: releases-functional-lys-trna
-        subject: lys_assay
-        predicate: produces
-        object: lys_product
-        mechanism: Product recharging accompanies substrate loss, with pre-existing uncharged tRNA inactivated and a no-PTH comparator. This supports tRNA-releasing hydrolysis without specifying catalytic residues.
-        directness: DIRECT
-        support: OBSERVED
-        evidence_kind: EXPERIMENTAL
-        evidence:
-          - reference: PMID:12799450
-            source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC162332/
-            snippet: capable of liberating functional tRNA
-            explanation: Figure1 caption, corresponding Methods/Results, ledger S1. The no-enzyme baseline is nonzero.
-            cache_path: evidence/PF01981/fromant2003.txt
-            cache_sha256: b8f76cca88d5c37b0b5b909d4456ce2b0924f177c8a18be2907087b818c0932d
-      - edge_id: supports-fmet-deacylation
-        subject: fmet_assay
-        predicate: enables
-        object: fmet_cleavage
-        mechanism: Purified-enzyme substrate kinetics establish deacylation of the E. coli initiator substrate in vitro, not depletion in living bacteria or native archaeal initiation.
-        directness: DIRECT
-        support: OBSERVED
-        evidence_kind: EXPERIMENTAL
-        evidence:
-          - reference: PMID:12799450
-            source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC162332/
-            snippet: capable of liberating functional tRNA
-            explanation: Table5 formyl-methionyl row and substrate-specificity Results, not the quotation alone, support this edge; ledger S1. Product recharge was separately tested only for Lys.
-            cache_path: evidence/PF01981/fromant2003.txt
-            cache_sha256: b8f76cca88d5c37b0b5b909d4456ce2b0924f177c8a18be2907087b818c0932d
-      - edge_id: supports-his-deacylation
-        subject: his_assay
-        predicate: enables
-        object: his_cleavage
-        mechanism: The tested acetyl-His substrate is deacylated under the purified-enzyme conditions; a universal tRNA-identity rule is not inferred.
-        directness: DIRECT
-        support: OBSERVED
-        evidence_kind: EXPERIMENTAL
-        evidence:
-          - reference: PMID:12799450
-            source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC162332/
-            snippet: capable of liberating functional tRNA
-            explanation: Table5 acetyl-histidyl row and substrate-specificity Results; ledger S1. The measured substrate-specific result supplies the relation.
-            cache_path: evidence/PF01981/fromant2003.txt
-            cache_sha256: b8f76cca88d5c37b0b5b909d4456ce2b0924f177c8a18be2907087b818c0932d
-  - graph_id: sspth2-ionic-assay-effects-2003
-    title: Separate ionic additions increase the SSO0175 assay rate
-    scope: Purified SSO0175 and diacetyl-Lys-tRNA under Table3 conditions; separate additions, not joint necessary cofactors.
-    context: 50 C, 20 mM Tris pH 7.5, 0.1 mM EDTA, 0.1 mM DTT, 0.75 uM substrate; enzyme 0.1-10 nM. No-addition baseline 0.026/s. Reported standard errors below 20%.
-    family_mapping: Q980V1/SSO0175; reference PF01981 at 2-120 in 1XTY. Whole purified protein, not an isolated mutant domain.
-    scope_status: PHENOTYPIC
-    taxon: NCBITaxon:273057
-    limitations: Rate effects do not independently demonstrate tRNA compaction, direct ion binding or catalytic metal necessity. Enzyme concentration varies with rate; these are normalized specific activities. No assertion that all salt concentrations activate.
-    nodes:
-      - {node_id: magnesium, label: Separate 40 mM MgCl2 addition versus no addition, node_type: PERTURBATION}
-      - {node_id: potassium, label: Separate 300 mM KCl addition versus no addition, node_type: PERTURBATION}
-      - {node_id: spermidine, label: Separate 0.1 mM spermidine-HCl addition versus no addition, node_type: PERTURBATION}
-      - {node_id: rate, label: Defined diacetyl-Lys-tRNA deacylation specific activity, node_type: ACTIVITY}
-    edges:
-      - edge_id: magnesium-increases-rate
-        subject: magnesium
-        predicate: increases
-        object: rate
-        mechanism: Table 3 reports 2.3/s with 40 mM MgCl2 versus 0.026/s without an added compound; the molecular origin of the increase is unresolved.
-        directness: UNRESOLVED
-        support: OBSERVED
-        evidence_kind: EXPERIMENTAL
-        evidence:
-          - reference: PMID:12799450
-            source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC162332/
-            snippet: each of these compounds stimulated the rate
-            explanation: Table3 magnesium comparison and footnote; ledger S2. Not a combined cofactor requirement.
-            cache_path: evidence/PF01981/fromant2003.txt
-            cache_sha256: b8f76cca88d5c37b0b5b909d4456ce2b0924f177c8a18be2907087b818c0932d
-      - edge_id: potassium-increases-rate
-        subject: potassium
-        predicate: increases
-        object: rate
-        mechanism: The separate 300 mM KCl condition gives 2.0/s versus the no-addition baseline; no monotonic salt-response rule is asserted.
-        directness: UNRESOLVED
-        support: OBSERVED
-        evidence_kind: EXPERIMENTAL
-        evidence:
-          - reference: PMID:12799450
-            source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC162332/
-            snippet: each of these compounds stimulated the rate
-            explanation: Table3 potassium row and assay footnote; ledger S2.
-            cache_path: evidence/PF01981/fromant2003.txt
-            cache_sha256: b8f76cca88d5c37b0b5b909d4456ce2b0924f177c8a18be2907087b818c0932d
-      - edge_id: spermidine-increases-rate
-        subject: spermidine
-        predicate: increases
-        object: rate
-        mechanism: The separate 0.1 mM spermidine-HCl condition gives 1.9/s; substrate folding is an interpretation, not a directly measured intermediate.
-        directness: UNRESOLVED
-        support: OBSERVED
-        evidence_kind: EXPERIMENTAL
-        evidence:
-          - reference: PMID:12799450
-            source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC162332/
-            snippet: each of these compounds stimulated the rate
-            explanation: Table3 spermidine row; ledger S2. No physiological polyamine-regulation claim.
-            cache_path: evidence/PF01981/fromant2003.txt
-            cache_sha256: b8f76cca88d5c37b0b5b909d4456ce2b0924f177c8a18be2907087b818c0932d
-  - graph_id: sspth2-uncharged-trna-inhibition-2003
-    title: Uncharged tRNAs inhibit the SSO0175 hydrolysis assay
-    scope: Separate E. coli tRNA-Lys and tRNA-fMet additions to purified archaeal PTH2 assays.
-    context: Fromant2003 Methods/Table 6; 50 C, Tris pH 7.5, EDTA, DTT; varied inhibitor/substrate concentrations. Table 6 specifies 0.2 uM substrate and 0.075 nM enzyme; the general Methods include MgCl2 but Table 6 omits it.
-    family_mapping: Q980V1/SSO0175; later 1XTY PF01981 mapping 2-120. Nucleic-acid recognition is tested with the whole protein.
-    scope_status: PHENOTYPIC
-    taxon: NCBITaxon:273057
-    limitations: Preserve ionic-condition ambiguity. Reported inhibition constants are not directly measured binding affinities. Competitive behavior was explicitly checked for tRNA-Lys; native feedback and binding-site geometry remain unresolved. rRNA/DNA negatives are assay-specific.
-    nodes:
-      - {node_id: lys_trna, label: Added uncharged tRNA-Lys, node_type: PERTURBATION}
-      - {node_id: fmet_trna, label: Added uncharged tRNA-fMet, node_type: PERTURBATION}
-      - {node_id: rate, label: Diacetyl-Lys-tRNA initial deacylation rate, node_type: ACTIVITY}
-    edges:
-      - edge_id: lys-trna-inhibits
-        subject: lys_trna
-        predicate: decreases
-        object: rate
-        mechanism: Initial-rate measurements support inhibition with a competitive fit for tRNA-Lys; no direct atomic binding interaction is assigned.
-        directness: UNRESOLVED
-        support: OBSERVED
-        evidence_kind: EXPERIMENTAL
-        evidence:
-          - reference: PMID:12799450
-            source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC162332/
-            snippet: strong inhibition of the hydrolytic reaction
-            explanation: Methods inhibition series and Table6; ledger S3. Distinguish measured rate inhibition from inferred binding mechanism.
-            cache_path: evidence/PF01981/fromant2003.txt
-            cache_sha256: b8f76cca88d5c37b0b5b909d4456ce2b0924f177c8a18be2907087b818c0932d
-      - edge_id: fmet-trna-inhibits
-        subject: fmet_trna
-        predicate: decreases
-        object: rate
-        mechanism: The separate uncharged initiator-tRNA titration inhibits deacylation; this is not evidence that a native feedback circuit operates.
-        directness: UNRESOLVED
-        support: OBSERVED
-        evidence_kind: EXPERIMENTAL
-        evidence:
-          - reference: PMID:12799450
-            source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC162332/
-            snippet: strong inhibition of the hydrolytic reaction
-            explanation: Table6 tRNA-fMet row and Results; ledger S3. No measured binding Kd or demonstrated tRNA-fMet competitive mode is claimed.
-            cache_path: evidence/PF01981/fromant2003.txt
-            cache_sha256: b8f76cca88d5c37b0b5b909d4456ce2b0924f177c8a18be2907087b818c0932d
-  - graph_id: sspth2-heterologous-rescue-2003
-    title: SSO0175 supports growth after E. coli Pth supply is lost
-    scope: S. solfataricus SSO0175/pTrc-pthS in E. coli K37delta-pthTr.
-    context: Fromant2003 identification Results; 42 C eliminates the temperature-sensitive pMAKpth source of bacterial Pth. Empty pTrc99-A fails to yield thermoresistant clones.
-    family_mapping: SSO0175/Q980V1 reference sequence version 1; PF01981 mapping 2-120. Whole-gene complementation, not a domain-only intervention.
-    scope_status: PHENOTYPIC
-    limitations: No direct intracellular tRNA measurement or native archaeal essentiality test. Excess-expression toxicity in XL1-Blue is a different context, not a contradiction of this rescue.
-    nodes:
-      - {node_id: gene, label: pTrc-pthS versus empty pTrc99-A, node_type: PERTURBATION, grounding: ['UniProtKB:Q980V1']}
-      - {node_id: growth, label: K37delta-pthTr growth at 42 C, node_type: PHENOTYPE}
-    edges:
-      - edge_id: supports-growth
-        subject: gene
-        predicate: enables
-        object: growth
-        mechanism: The introduced archaeal gene supplies a function sufficient for growth in this bacterial complementation setting; intervening in-cell steps are not directly assayed.
-        directness: INDIRECT
-        support: OBSERVED
-        evidence_kind: EXPERIMENTAL
-        evidence:
-          - reference: PMID:12799450
-            source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC162332/
-            snippet: acquired the capacity to grow
-            explanation: SSO0175 identification Results and strain Table1; ledger S4. Not the separate yeast pKK construct.
-            cache_path: evidence/PF01981/fromant2003.txt
-            cache_sha256: b8f76cca88d5c37b0b5b909d4456ce2b0924f177c8a18be2907087b818c0932d
-  - graph_id: yeast-pth2-full-length-rescue-2003
-    title: Full-length yeast YBL057c rescues a different E. coli pth background
-    scope: Source-reported full-length YBL057c in pKKpthY2, distinct from2002 pGRAS and pGR87L.
-    context: Fromant2003 homolog Results; E. coli K37delta-pthTr at 42 C with loss of pMAKpth. Table 7 crude-extract activity is supporting context, not a purified yeast-enzyme assay.
-    family_mapping: YBL057C corresponds to P34222, current 208-aa sequence version 2, with PF01981 at 89-208. The full physical historical insert is not independently sequence-verified.
-    scope_status: PHENOTYPIC
-    limitations: Different vector, host and expression conditions from2002; no head-to-head resolution of full-length failure versus rescue. Do not infer localization or that truncation universally changes catalytic efficiency.
-    nodes:
-      - {node_id: gene, label: Full-length YBL057c supplied by pKKpthY2, node_type: PERTURBATION}
-      - {node_id: growth, label: K37delta-pthTr growth at 42 C, node_type: PHENOTYPE}
-    edges:
-      - edge_id: supports-growth
-        subject: gene
-        predicate: enables
-        object: growth
-        mechanism: Full-length yeast-gene transformants grow after loss of the bacterial Pth maintenance plasmid; this is a separate reported rescue, not a resolution of the earlier negative.
-        directness: INDIRECT
-        support: OBSERVED
-        evidence_kind: EXPERIMENTAL
-        evidence:
-          - reference: PMID:12799450
-            source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC162332/
-            snippet: Transformants grew
-            explanation: Homolog Results and explicit comparison with Rosas2002; ledger S4/N1. Native yeast deletion results are not a positive mechanism edge.
-            cache_path: evidence/PF01981/fromant2003.txt
-            cache_sha256: b8f76cca88d5c37b0b5b909d4456ce2b0924f177c8a18be2907087b818c0932d
-  - graph_id: lokipth2-temperature-response-2026
-    title: LokiPth2 assay activity rises to 60 C and falls at 70 C
-    scope: Synthetic LCGC14_0646670-derived protein with GPH cleavage remnant, not the C-terminally tagged crystal sample or live archaeal growth.
-    context: Kawashima2026 Methods 2.5/Figure 5; 20 nM enzyme, 1 uM diacetyl-[14C]Lys-tRNA, 20 mM HEPES-KOH pH 7.6, 150 mM KCl, 10 mM MgCl2, 7 mM beta-mercaptoethanol; 50 ul, 1 min, supernatant radiolabel. Same substrate batch; PhPth2 comparison; three independent experiments, SD.
-    family_mapping: Table 1 core equals archived A0A0F9U5Y0 entry version 19, sequence version 1, 118 aa, which explicitly maps PF01981; PDB 24BT entity 1 carries the same core plus a different tag. Accession currently deleted; HMM boundaries unresolved. Taxon 1538547 follows the deposition; historical metagenome taxonomy retained in member-mapping.txt.
-    scope_status: PHENOTYPIC
-    taxon: NCBITaxon:1538547
-    limitations: One-minute rate response does not establish irreversible protein denaturation or environmental growth optimum. Comparator limits substrate-only explanations but no separate Figure5 blank or raw replicate data were inspected. Structural salt-bridge and substrate-binding hypotheses are not OBSERVED edges.
-    nodes:
-      - {node_id: warm, label: Assay temperature 60 C versus 20 C, node_type: PERTURBATION}
-      - {node_id: hotter, label: Assay temperature 70 C versus 60 C, node_type: PERTURBATION}
-      - {node_id: activity, label: LokiPth2 one-minute deacylation-assay activity, node_type: ACTIVITY}
-    edges:
-      - edge_id: warming-increases-activity
-        subject: warm
-        predicate: increases
-        object: activity
-        mechanism: Figure 5 reports greater activity at 60 C than 20 C under the defined assay; no continuous curve or precise optimum between sampled temperatures is inferred.
-        directness: UNRESOLVED
-        support: OBSERVED
-        evidence_kind: EXPERIMENTAL
-        evidence:
-          - reference: PMID:42626907
-            source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC13523710/
-            snippet: The same batch of substrate was used for all temperature conditions.
-            explanation: Original Figure5 image and Results3.3 supply the direction, Methods2.5 the shared-substrate control; ledger L2. No numerical bar digitization.
-            cache_path: evidence/PF01981/kawashima2026.txt
-            cache_sha256: 80de6e3f8e9b0f8bb66e5e1c4e1d36a6b86f991d26bdab65beec18a2d5f494dc
-      - edge_id: further-heating-decreases-activity
-        subject: hotter
-        predicate: decreases
-        object: activity
-        mechanism: The 70 C response is below 60 C while the PhPth2 comparator retains activity; the underlying structural transition is not directly measured.
-        directness: UNRESOLVED
-        support: OBSERVED
-        evidence_kind: EXPERIMENTAL
-        evidence:
-          - reference: PMID:42626907
-            source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC13523710/
-            snippet: The same batch of substrate was used for all temperature conditions.
-            explanation: Figure5 image/caption and Results3.3; ledger L2/N1. This is not an irreversible heat-inactivation or growth experiment.
-            cache_path: evidence/PF01981/kawashima2026.txt
-            cache_sha256: 80de6e3f8e9b0f8bb66e5e1c4e1d36a6b86f991d26bdab65beec18a2d5f494dc
+- graph_id: mjpth2-substrate-hydrolysis-2002
+  title: Purified MJ0051 releases reaminoacylatable tRNAs
+  scope: Recombinant M. jannaschii MJ0051 with C-terminal His6, not all PF01981 members.
+  context: Rosas2002 Figure 1B; pGR51C/pET20b protein, 37 C, 187 nM; separate diacetyl-[14C]Lys-tRNA and
+    acetyl-[14C]Phe-tRNA assays. E. coli Pth and no-enzyme controls; subsequent recharging with the appropriate
+    aminoacylation system.
+  family_mapping: Q60363 sequence version 1, entry version 131, 115 aa, MJ0051; current PF01981 spans
+    1-115. The paper cites NP_247015.1. Physical vector junctions are not independently verified; evidence/PF01981/member-mapping.txt.
+  scope_status: MECHANISTIC
+  taxon: NCBITaxon:243232
+  limitations: No natural peptide-length series or atomic catalytic pathway. Substrate units differ between
+    Methods and Figure1A; no silently corrected Figure1B concentration. Image was inaccessible; Methods,
+    Results and caption inspected. Recharging is a product-integrity assay, not cellular translation flux.
+  nodes:
+  - node_id: lys_reaction
+    label: MJ0051 plus diacetyl-Lys-tRNA in the defined assay
+    node_type: ACTIVITY
+    grounding:
+    - UniProtKB:Q60363
+  - node_id: lys_trna
+    label: Released reaminoacylatable tRNA-Lys
+    node_type: STATE
+  - node_id: phe_reaction
+    label: MJ0051 plus acetyl-Phe-tRNA in the defined assay
+    node_type: ACTIVITY
+    grounding:
+    - UniProtKB:Q60363
+  - node_id: phe_trna
+    label: Released reaminoacylatable tRNA-Phe
+    node_type: STATE
+  edges:
+  - edge_id: releases-lys-trna
+    subject: lys_reaction
+    predicate: produces
+    object: lys_trna
+    mechanism: Purified-protein hydrolysis followed by Lys recharging supports release of functional tRNA
+      rather than a nuclease-only explanation.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:12475929
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC139208/
+      snippet: The enzyme was able to hydrolyze both substrates
+      explanation: Figure1B, recombinant-enzyme Results and reaminoacylation Methods; R1 in the retained
+        ledger. TLC of extract is not recast as purified-enzyme product identification.
+      cache_path: evidence/PF01981/rosas2002.txt
+      cache_sha256: a1e5d1f37b907b1524227a917d5d131da284d4e75448a504639a75c022681f20
+  - edge_id: releases-phe-trna
+    subject: phe_reaction
+    predicate: produces
+    object: phe_trna
+    mechanism: The separately tested acetyl-Phe substrate yields tRNA that can be recharged; this does
+      not establish all peptide substrates.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:12475929
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC139208/
+      snippet: The enzyme was able to hydrolyze both substrates
+      explanation: Figure1B and recombinant-enzyme Results; R1. Distinct substrate, not a second independent
+        publication.
+      cache_path: evidence/PF01981/rosas2002.txt
+      cache_sha256: a1e5d1f37b907b1524227a917d5d131da284d4e75448a504639a75c022681f20
+- graph_id: mjpth2-heterologous-rescue-2002
+  title: MJ0051 complements E. coli C600 pth-ts
+  scope: Whole MJ0051 gene supplied in pGR518 to an E. coli temperature-sensitive pth background.
+  context: Table 1; LB, ampicillin 0.1 mg/ml, IPTG 1 uM; 42 C versus 32 C. Empty pKQV4 and E. coli pth
+    comparators; cured clones regain temperature sensitivity.
+  family_mapping: MJ0051 maps to Q60363/PF01981 reference 1-115. The rescue plasmid is not the tagged
+    purified-enzyme construct; native archaeal essentiality is not tested.
+  scope_status: PHENOTYPIC
+  limitations: Rescue measures growth, not intracellular substrate abundance or a direct translation step.
+    Native host and isolated-domain necessity remain untested; pth-null rescue is only reported without
+    displayed data and not a separate edge.
+  nodes:
+  - node_id: plasmid
+    label: pGR518-MJ0051 versus empty vector
+    node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q60363
+  - node_id: growth
+    label: C600 pth-ts growth at 42 C
+    node_type: PHENOTYPE
+  edges:
+  - edge_id: rescues-growth
+    subject: plasmid
+    predicate: enables
+    object: growth
+    mechanism: Growth rescue depends on retention of the MJ0051 plasmid under these conditions; intervening
+      cellular events are unresolved.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:12475929
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC139208/
+      snippet: Both pth genes, but not the empty vector
+      explanation: Table1 and complementation Results, including cured-clone control; ledger R2.
+      cache_path: evidence/PF01981/rosas2002.txt
+      cache_sha256: a1e5d1f37b907b1524227a917d5d131da284d4e75448a504639a75c022681f20
+- graph_id: yeast-pth2-truncated-rescue-2002
+  title: Historical truncated yeast PTH2 rescues C600 pth-ts
+  scope: YBL057c-derived pGR87L, with the source's N-terminal 86-residue deletion and initiation-codon
+    substitution.
+  context: Table 1 and yeast Results; E. coli C600 pth-ts, 42 C, LB/ampicillin/IPTG as in the 2002 complementation
+    assay. Full-length pGRAS did not rescue in that experiment.
+  family_mapping: Gene correspondence to P34222 supports family identity; current sequence version 2 is
+    208 aa with PF01981 at 89-208. Do not equate the historical deleted 86 residues with today's numbering;
+    the physical old insert remains unresolved.
+  scope_status: PHENOTYPIC
+  limitations: No matched expression, folding or targeting measurements. No claim that the N-terminus
+    intrinsically inhibits catalysis or proves organellar localization. The2003 full-length rescue is
+    preserved separately.
+  nodes:
+  - node_id: truncated
+    label: Historical pGR87L versus empty vector
+    node_type: PERTURBATION
+    grounding:
+    - UniProtKB:P34222
+  - node_id: growth
+    label: C600 pth-ts growth at 42 C
+    node_type: PHENOTYPE
+  edges:
+  - edge_id: rescues-growth
+    subject: truncated
+    predicate: enables
+    object: growth
+    mechanism: This historical yeast-derived construct supports bacterial growth; the direct cellular
+      mechanism and reason for the full-length negative are unresolved.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:12475929
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC139208/
+      snippet: rescued the temperature sensitivity
+      explanation: Table1 and yeast Results; R3. Host and construct are not pooled with Fromant2003.
+      cache_path: evidence/PF01981/rosas2002.txt
+      cache_sha256: a1e5d1f37b907b1524227a917d5d131da284d4e75448a504639a75c022681f20
+- graph_id: sspth2-hydrolysis-2003
+  title: Purified SSO0175 hydrolyzes defined N-blocked aminoacyl-tRNAs
+  scope: Recombinant S. solfataricus P2 SSO0175, with distinct substrate-specific assays.
+  context: Fromant2003 Figure 1 and Table 5, 50 C; Tris pH 7.5, EDTA, DTT and standard 10 mM MgCl2 assay.
+    Periodate-treated Lys substrate plus subsequent LysRS/ATP recharging tests tRNA integrity; other substrates
+    use deacylation kinetics.
+  family_mapping: Q980V1 sequence version 1, entry version 128, 120 aa, SSO0175; N-terminal Edman match.
+    Later SIFTS 1XTY PF01981 spans 2-120. Mapping does not independently authenticate the 2003 physical
+    insert.
+  scope_status: MECHANISTIC
+  taxon: NCBITaxon:273057
+  limitations: Artificial N-blocked aminoacyl substrates, not a natural peptidyl-tRNA census. Functional
+    recharging was established for Lys, not independently for every substrate. Table5 Km estimates for
+    other substrates assume competitive tRNA-Lys inhibition. Figure1 caption/text, not its unavailable
+    image, inspected.
+  nodes:
+  - node_id: lys_assay
+    label: Purified SSO0175 plus diacetyl-Lys-tRNA
+    node_type: ACTIVITY
+    grounding:
+    - UniProtKB:Q980V1
+  - node_id: lys_product
+    label: Released reaminoacylatable tRNA-Lys
+    node_type: STATE
+  - node_id: fmet_assay
+    label: Purified SSO0175 plus formyl-Met-tRNA-fMet
+    node_type: ACTIVITY
+    grounding:
+    - UniProtKB:Q980V1
+  - node_id: fmet_cleavage
+    label: Formyl-Met-tRNA-fMet deacylation
+    node_type: PROCESS
+  - node_id: his_assay
+    label: Purified SSO0175 plus acetyl-His-tRNA-His
+    node_type: ACTIVITY
+    grounding:
+    - UniProtKB:Q980V1
+  - node_id: his_cleavage
+    label: Acetyl-His-tRNA-His deacylation
+    node_type: PROCESS
+  edges:
+  - edge_id: releases-functional-lys-trna
+    subject: lys_assay
+    predicate: produces
+    object: lys_product
+    mechanism: Product recharging accompanies substrate loss, with pre-existing uncharged tRNA inactivated
+      and a no-PTH comparator. This supports tRNA-releasing hydrolysis without specifying catalytic residues.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:12799450
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC162332/
+      snippet: capable of liberating functional tRNA
+      explanation: Figure1 caption, corresponding Methods/Results, ledger S1. The no-enzyme baseline is
+        nonzero.
+      cache_path: evidence/PF01981/fromant2003.txt
+      cache_sha256: b8f76cca88d5c37b0b5b909d4456ce2b0924f177c8a18be2907087b818c0932d
+  - edge_id: supports-fmet-deacylation
+    subject: fmet_assay
+    predicate: enables
+    object: fmet_cleavage
+    mechanism: Purified-enzyme substrate kinetics establish deacylation of the E. coli initiator substrate
+      in vitro, not depletion in living bacteria or native archaeal initiation.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:12799450
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC162332/
+      snippet: capable of liberating functional tRNA
+      explanation: Table5 formyl-methionyl row and substrate-specificity Results, not the quotation alone,
+        support this edge; ledger S1. Product recharge was separately tested only for Lys.
+      cache_path: evidence/PF01981/fromant2003.txt
+      cache_sha256: b8f76cca88d5c37b0b5b909d4456ce2b0924f177c8a18be2907087b818c0932d
+  - edge_id: supports-his-deacylation
+    subject: his_assay
+    predicate: enables
+    object: his_cleavage
+    mechanism: The tested acetyl-His substrate is deacylated under the purified-enzyme conditions; a universal
+      tRNA-identity rule is not inferred.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:12799450
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC162332/
+      snippet: capable of liberating functional tRNA
+      explanation: Table5 acetyl-histidyl row and substrate-specificity Results; ledger S1. The measured
+        substrate-specific result supplies the relation.
+      cache_path: evidence/PF01981/fromant2003.txt
+      cache_sha256: b8f76cca88d5c37b0b5b909d4456ce2b0924f177c8a18be2907087b818c0932d
+- graph_id: sspth2-ionic-assay-effects-2003
+  title: Separate ionic additions increase the SSO0175 assay rate
+  scope: Purified SSO0175 and diacetyl-Lys-tRNA under Table3 conditions; separate additions, not joint
+    necessary cofactors.
+  context: 50 C, 20 mM Tris pH 7.5, 0.1 mM EDTA, 0.1 mM DTT, 0.75 uM substrate; enzyme 0.1-10 nM. No-addition
+    baseline 0.026/s. Reported standard errors below 20%.
+  family_mapping: Q980V1/SSO0175; reference PF01981 at 2-120 in 1XTY. Whole purified protein, not an isolated
+    mutant domain.
+  scope_status: PHENOTYPIC
+  taxon: NCBITaxon:273057
+  limitations: Rate effects do not independently demonstrate tRNA compaction, direct ion binding or catalytic
+    metal necessity. Enzyme concentration varies with rate; these are normalized specific activities.
+    No assertion that all salt concentrations activate.
+  nodes:
+  - node_id: magnesium
+    label: Separate 40 mM MgCl2 addition versus no addition
+    node_type: PERTURBATION
+  - node_id: potassium
+    label: Separate 300 mM KCl addition versus no addition
+    node_type: PERTURBATION
+  - node_id: spermidine
+    label: Separate 0.1 mM spermidine-HCl addition versus no addition
+    node_type: PERTURBATION
+  - node_id: rate
+    label: Defined diacetyl-Lys-tRNA deacylation specific activity
+    node_type: ACTIVITY
+    grounding:
+    - UniProtKB:Q980V1
+  edges:
+  - edge_id: magnesium-increases-rate
+    subject: magnesium
+    predicate: increases
+    object: rate
+    mechanism: Table 3 reports 2.3/s with 40 mM MgCl2 versus 0.026/s without an added compound; the molecular
+      origin of the increase is unresolved.
+    directness: UNRESOLVED
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:12799450
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC162332/
+      snippet: each of these compounds stimulated the rate
+      explanation: Table3 magnesium comparison and footnote; ledger S2. Not a combined cofactor requirement.
+      cache_path: evidence/PF01981/fromant2003.txt
+      cache_sha256: b8f76cca88d5c37b0b5b909d4456ce2b0924f177c8a18be2907087b818c0932d
+  - edge_id: potassium-increases-rate
+    subject: potassium
+    predicate: increases
+    object: rate
+    mechanism: The separate 300 mM KCl condition gives 2.0/s versus the no-addition baseline; no monotonic
+      salt-response rule is asserted.
+    directness: UNRESOLVED
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:12799450
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC162332/
+      snippet: each of these compounds stimulated the rate
+      explanation: Table3 potassium row and assay footnote; ledger S2.
+      cache_path: evidence/PF01981/fromant2003.txt
+      cache_sha256: b8f76cca88d5c37b0b5b909d4456ce2b0924f177c8a18be2907087b818c0932d
+  - edge_id: spermidine-increases-rate
+    subject: spermidine
+    predicate: increases
+    object: rate
+    mechanism: The separate 0.1 mM spermidine-HCl condition gives 1.9/s; substrate folding is an interpretation,
+      not a directly measured intermediate.
+    directness: UNRESOLVED
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:12799450
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC162332/
+      snippet: each of these compounds stimulated the rate
+      explanation: Table3 spermidine row; ledger S2. No physiological polyamine-regulation claim.
+      cache_path: evidence/PF01981/fromant2003.txt
+      cache_sha256: b8f76cca88d5c37b0b5b909d4456ce2b0924f177c8a18be2907087b818c0932d
+- graph_id: sspth2-uncharged-trna-inhibition-2003
+  title: Uncharged tRNAs inhibit the SSO0175 hydrolysis assay
+  scope: Separate E. coli tRNA-Lys and tRNA-fMet additions to purified archaeal PTH2 assays.
+  context: Fromant2003 Methods/Table 6; 50 C, Tris pH 7.5, EDTA, DTT; varied inhibitor/substrate concentrations.
+    Table 6 specifies 0.2 uM substrate and 0.075 nM enzyme; the general Methods include MgCl2 but Table
+    6 omits it.
+  family_mapping: Q980V1/SSO0175; later 1XTY PF01981 mapping 2-120. Nucleic-acid recognition is tested
+    with the whole protein.
+  scope_status: PHENOTYPIC
+  taxon: NCBITaxon:273057
+  limitations: Preserve ionic-condition ambiguity. Reported inhibition constants are not directly measured
+    binding affinities. Competitive behavior was explicitly checked for tRNA-Lys; native feedback and
+    binding-site geometry remain unresolved. rRNA/DNA negatives are assay-specific.
+  nodes:
+  - node_id: lys_trna
+    label: Added uncharged tRNA-Lys
+    node_type: PERTURBATION
+  - node_id: fmet_trna
+    label: Added uncharged tRNA-fMet
+    node_type: PERTURBATION
+  - node_id: rate
+    label: Diacetyl-Lys-tRNA initial deacylation rate
+    node_type: ACTIVITY
+    grounding:
+    - UniProtKB:Q980V1
+  edges:
+  - edge_id: lys-trna-inhibits
+    subject: lys_trna
+    predicate: decreases
+    object: rate
+    mechanism: Initial-rate measurements support inhibition with a competitive fit for tRNA-Lys; no direct
+      atomic binding interaction is assigned.
+    directness: UNRESOLVED
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:12799450
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC162332/
+      snippet: strong inhibition of the hydrolytic reaction
+      explanation: Methods inhibition series and Table6; ledger S3. Distinguish measured rate inhibition
+        from inferred binding mechanism.
+      cache_path: evidence/PF01981/fromant2003.txt
+      cache_sha256: b8f76cca88d5c37b0b5b909d4456ce2b0924f177c8a18be2907087b818c0932d
+  - edge_id: fmet-trna-inhibits
+    subject: fmet_trna
+    predicate: decreases
+    object: rate
+    mechanism: The separate uncharged initiator-tRNA titration inhibits deacylation; this is not evidence
+      that a native feedback circuit operates.
+    directness: UNRESOLVED
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:12799450
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC162332/
+      snippet: strong inhibition of the hydrolytic reaction
+      explanation: Table6 tRNA-fMet row and Results; ledger S3. No measured binding Kd or demonstrated
+        tRNA-fMet competitive mode is claimed.
+      cache_path: evidence/PF01981/fromant2003.txt
+      cache_sha256: b8f76cca88d5c37b0b5b909d4456ce2b0924f177c8a18be2907087b818c0932d
+- graph_id: sspth2-heterologous-rescue-2003
+  title: SSO0175 supports growth after E. coli Pth supply is lost
+  scope: S. solfataricus SSO0175/pTrc-pthS in E. coli K37delta-pthTr.
+  context: Fromant2003 identification Results; 42 C eliminates the temperature-sensitive pMAKpth source
+    of bacterial Pth. Empty pTrc99-A fails to yield thermoresistant clones.
+  family_mapping: SSO0175/Q980V1 reference sequence version 1; PF01981 mapping 2-120. Whole-gene complementation,
+    not a domain-only intervention.
+  scope_status: PHENOTYPIC
+  limitations: No direct intracellular tRNA measurement or native archaeal essentiality test. Excess-expression
+    toxicity in XL1-Blue is a different context, not a contradiction of this rescue.
+  nodes:
+  - node_id: gene
+    label: pTrc-pthS versus empty pTrc99-A
+    node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q980V1
+  - node_id: growth
+    label: K37delta-pthTr growth at 42 C
+    node_type: PHENOTYPE
+  edges:
+  - edge_id: supports-growth
+    subject: gene
+    predicate: enables
+    object: growth
+    mechanism: The introduced archaeal gene supplies a function sufficient for growth in this bacterial
+      complementation setting; intervening in-cell steps are not directly assayed.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:12799450
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC162332/
+      snippet: acquired the capacity to grow
+      explanation: SSO0175 identification Results and strain Table1; ledger S4. Not the separate yeast
+        pKK construct.
+      cache_path: evidence/PF01981/fromant2003.txt
+      cache_sha256: b8f76cca88d5c37b0b5b909d4456ce2b0924f177c8a18be2907087b818c0932d
+- graph_id: yeast-pth2-full-length-rescue-2003
+  title: Full-length yeast YBL057c rescues a different E. coli pth background
+  scope: Source-reported full-length YBL057c in pKKpthY2, distinct from2002 pGRAS and pGR87L.
+  context: Fromant2003 homolog Results; E. coli K37delta-pthTr at 42 C with loss of pMAKpth. Table 7 crude-extract
+    activity is supporting context, not a purified yeast-enzyme assay.
+  family_mapping: YBL057C corresponds to P34222, current 208-aa sequence version 2, with PF01981 at 89-208.
+    The full physical historical insert is not independently sequence-verified.
+  scope_status: PHENOTYPIC
+  limitations: Different vector, host and expression conditions from2002; no head-to-head resolution of
+    full-length failure versus rescue. Do not infer localization or that truncation universally changes
+    catalytic efficiency.
+  nodes:
+  - node_id: gene
+    label: Full-length YBL057c supplied by pKKpthY2
+    node_type: PERTURBATION
+    grounding:
+    - UniProtKB:P34222
+  - node_id: growth
+    label: K37delta-pthTr growth at 42 C
+    node_type: PHENOTYPE
+  edges:
+  - edge_id: supports-growth
+    subject: gene
+    predicate: enables
+    object: growth
+    mechanism: Full-length yeast-gene transformants grow after loss of the bacterial Pth maintenance plasmid;
+      this is a separate reported rescue, not a resolution of the earlier negative.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:12799450
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC162332/
+      snippet: Transformants grew
+      explanation: Homolog Results and explicit comparison with Rosas2002; ledger S4/N1. Native yeast
+        deletion results are not a positive mechanism edge.
+      cache_path: evidence/PF01981/fromant2003.txt
+      cache_sha256: b8f76cca88d5c37b0b5b909d4456ce2b0924f177c8a18be2907087b818c0932d
+- graph_id: lokipth2-temperature-response-2026
+  title: LokiPth2 assay activity rises to 60 C and falls at 70 C
+  scope: Synthetic LCGC14_0646670-derived protein with GPH cleavage remnant, not the C-terminally tagged
+    crystal sample or live archaeal growth.
+  context: Kawashima2026 Methods 2.5/Figure 5; 20 nM enzyme, 1 uM diacetyl-[14C]Lys-tRNA, 20 mM HEPES-KOH
+    pH 7.6, 150 mM KCl, 10 mM MgCl2, 7 mM beta-mercaptoethanol; 50 ul, 1 min, supernatant radiolabel.
+    Same substrate batch; PhPth2 comparison; three independent experiments, SD.
+  family_mapping: Table 1 core equals archived A0A0F9U5Y0 entry version 19, sequence version 1, 118 aa,
+    which explicitly maps PF01981; PDB 24BT entity 1 carries the same core plus a different tag. Accession
+    currently deleted; HMM boundaries unresolved. Taxon 1538547 follows the deposition; historical metagenome
+    taxonomy retained in member-mapping.txt.
+  scope_status: PHENOTYPIC
+  taxon: NCBITaxon:1538547
+  limitations: One-minute rate response does not establish irreversible protein denaturation or environmental
+    growth optimum. Comparator limits substrate-only explanations but no separate Figure5 blank or raw
+    replicate data were inspected. Structural salt-bridge and substrate-binding hypotheses are not OBSERVED
+    edges.
+  nodes:
+  - node_id: warm
+    label: Assay temperature 60 C versus 20 C
+    node_type: PERTURBATION
+  - node_id: hotter
+    label: Assay temperature 70 C versus 60 C
+    node_type: PERTURBATION
+  - node_id: activity
+    label: LokiPth2 one-minute deacylation-assay activity
+    node_type: ACTIVITY
+  edges:
+  - edge_id: warming-increases-activity
+    subject: warm
+    predicate: increases
+    object: activity
+    mechanism: Figure 5 reports greater activity at 60 C than 20 C under the defined assay; no continuous
+      curve or precise optimum between sampled temperatures is inferred.
+    directness: UNRESOLVED
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:42626907
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC13523710/
+      snippet: The same batch of substrate was used for all temperature conditions.
+      explanation: Original Figure5 image and Results3.3 supply the direction, Methods2.5 the shared-substrate
+        control; ledger L2. No numerical bar digitization.
+      cache_path: evidence/PF01981/kawashima2026.txt
+      cache_sha256: 80de6e3f8e9b0f8bb66e5e1c4e1d36a6b86f991d26bdab65beec18a2d5f494dc
+  - edge_id: further-heating-decreases-activity
+    subject: hotter
+    predicate: decreases
+    object: activity
+    mechanism: The 70 C response is below 60 C while the PhPth2 comparator retains activity; the underlying
+      structural transition is not directly measured.
+    directness: UNRESOLVED
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:42626907
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC13523710/
+      snippet: The same batch of substrate was used for all temperature conditions.
+      explanation: Figure5 image/caption and Results3.3; ledger L2/N1. This is not an irreversible heat-inactivation
+        or growth experiment.
+      cache_path: evidence/PF01981/kawashima2026.txt
+      cache_sha256: 80de6e3f8e9b0f8bb66e5e1c4e1d36a6b86f991d26bdab65beec18a2d5f494dc

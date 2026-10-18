@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01169
+  path: curation/families/PF01169.yaml
+session:
+  id: 2026-10-18T025446Z-antigravity-0fd101
+  timestamp: '2026-10-18T02:54:46Z'
+  actors:
+  - type: ai_agent
+    name: Antigravity
+    model: Claude Opus 4.6
+    agent_tool: Antigravity
+events:
+- type: EDIT
+  outcome: changed
+  summary: Ground causal graph gene and protein nodes in PF01169 with verified UniProtKB
+    accessions (UniProtKB:P38301)
+  details: 'Reviewed PF01169 causal_graphs and grounded gene/protein PERTURBATION,
+    ACTIVITY, and protein-complex STATE nodes across 1 causal graph(s) using verified
+    UniProtKB accessions from family_mapping:
+
+    - `gdt1-dml1-ph-dependent-cation-uptake`: grounded calcium-uptake-response ->
+    UniProtKB:P38301; manganese-uptake-response -> UniProtKB:P38301'
+  sections:
+  - causal_graphs

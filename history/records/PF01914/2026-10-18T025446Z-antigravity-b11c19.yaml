@@ -1,0 +1,40 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01914
+  path: curation/families/PF01914.yaml
+session:
+  id: 2026-10-18T025446Z-antigravity-b11c19
+  timestamp: '2026-10-18T02:54:46Z'
+  actors:
+  - type: ai_agent
+    name: Antigravity
+    model: Claude Opus 4.6
+    agent_tool: Antigravity
+events:
+- type: EDIT
+  outcome: changed
+  summary: Ground causal graph gene and protein nodes in PF01914 with verified UniProtKB
+    accessions (UniProtKB:P0AEY1, UniProtKB:P25743)
+  details: 'Reviewed PF01914 causal_graphs and grounded gene/protein PERTURBATION,
+    ACTIVITY, and protein-complex STATE nodes across 6 causal graph(s) using verified
+    UniProtKB accessions from family_mapping:
+
+    - `marc-selected-clone-growth-2025`: grounded b2058 -> UniProtKB:P0AEY1; b2059
+    -> UniProtKB:P0AEY1; b2063 -> UniProtKB:P0AEY1; b2068 -> UniProtKB:P0AEY1
+
+    - `marc-selected-clone-uptake-2025`: grounded b2058 -> UniProtKB:P0AEY1; b2059
+    -> UniProtKB:P0AEY1; b2063 -> UniProtKB:P0AEY1; b2068 -> UniProtKB:P0AEY1
+
+    - `yche-genomic-insert-growth-2025`: grounded pbr-yche -> UniProtKB:P25743
+
+    - `marc-reconstruction-glucose-2011`: grounded no-solvent -> UniProtKB:P0AEY1;
+    isobutanol -> UniProtKB:P0AEY1
+
+    - `marc-reconstruction-xylose-2011`: grounded no-solvent -> UniProtKB:P0AEY1;
+    isobutanol -> UniProtKB:P0AEY1
+
+    - `marc-solvent-growth-2020`: grounded deletion-isoprenol -> UniProtKB:P0AEY1;
+    deletion-butanol -> UniProtKB:P0AEY1'
+  sections:
+  - causal_graphs

@@ -1,0 +1,28 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01638
+  path: curation/families/PF01638.yaml
+session:
+  id: 2026-10-18T025446Z-antigravity-794a65
+  timestamp: '2026-10-18T02:54:46Z'
+  actors:
+  - type: ai_agent
+    name: Antigravity
+    model: Claude Opus 4.6
+    agent_tool: Antigravity
+events:
+- type: EDIT
+  outcome: changed
+  summary: Ground causal graph gene and protein nodes in PF01638 with verified UniProtKB
+    accessions (UniProtKB:P42406)
+  details: 'Reviewed PF01638 causal_graphs and grounded gene/protein PERTURBATION,
+    ACTIVITY, and protein-complex STATE nodes across 2 causal graph(s) using verified
+    UniProtKB accessions from family_mapping:
+
+    - `hxlr-wt-c11a-dna-binding-response`: grounded c11a-binding -> UniProtKB:P42406
+
+    - `hxlr-heterologous-gfp-response`: grounded c11a-reporter -> UniProtKB:P42406;
+    k13a-reporter -> UniProtKB:P42406'
+  sections:
+  - causal_graphs

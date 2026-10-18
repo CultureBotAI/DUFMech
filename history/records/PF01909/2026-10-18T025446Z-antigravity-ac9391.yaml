@@ -1,0 +1,33 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01909
+  path: curation/families/PF01909.yaml
+session:
+  id: 2026-10-18T025446Z-antigravity-ac9391
+  timestamp: '2026-10-18T02:54:46Z'
+  actors:
+  - type: ai_agent
+    name: Antigravity
+    model: Claude Opus 4.6
+    agent_tool: Antigravity
+events:
+- type: EDIT
+  outcome: changed
+  summary: Ground causal graph gene and protein nodes in PF01909 with verified UniProtKB
+    accessions (UniProtKB:P27249)
+  details: 'Reviewed PF01909 causal_graphs and grounded gene/protein PERTURBATION,
+    ACTIVITY, and protein-complex STATE nodes across 3 causal graph(s) using verified
+    UniProtKB accessions from family_mapping:
+
+    - `glnd-nt-construct-and-residue-2010`: grounded n-fragment-reaction -> UniProtKB:P27249;
+    delta-nt -> UniProtKB:P27249; g93l -> UniProtKB:P27249; g93v -> UniProtKB:P27249;
+    g94d -> UniProtKB:P27249
+
+    - `glnd-hd-removal-controls-2010`: grounded hd-aa -> UniProtKB:P27249; hd-qn ->
+    UniProtKB:P27249
+
+    - `glnd-glutamine-mg-response-2010`: grounded wt-modification -> UniProtKB:P27249;
+    hd-aa-modification -> UniProtKB:P27249; hd-qn-modification -> UniProtKB:P27249'
+  sections:
+  - causal_graphs

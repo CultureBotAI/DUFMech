@@ -2,136 +2,185 @@ pfam_id: PF01862
 curation_status: IN_PROGRESS
 curation_history: history/records/PF01862
 causal_graphs:
-  - graph_id: mjpdad-radiolabeled-decarboxylation
-    title: Mj-PdaD decarboxylates arginine with reduced activity in two mutants
-    scope: "Soriano 2008 Table 2 and Methods 2.5: intact recombinant M. jannaschii PdaD preparations, WT, E109Q and N47A."
-    context: "pPRDC.19 mutant derivatives expressed in E. coli B834(DE3), N-terminal His tag removed. Assay at 343 K for 30 min: 50 mM MES/NaOH pH 6.0, 50 mM KCl, 1 mM DTT, 4 mM L-arginine plus 2 ul radiolabeled L-arginine; HCl termination and 14CO2 scintillation measurement."
-    family_mapping: "MJ0316/pdaD, Q57764 sequence version 1 exactly equals AAB98302.1, 165 aa; JAL-1/DSM 2661 reference taxon 243232. PF01862 19-162 includes N47 and E109. Published primers and PDB 2QQC/2QQD confirm the substitutions; residual His0 is not included in native numbering. No isolated-domain sufficiency."
-    scope_status: MECHANISTIC
-    taxon: NCBITaxon:243232
-    limitations: "DIRECT denotes net purified-preparation effects, not proton transfer or a measured self-processing rate. Specific activity per protein mass is not kcat per processed site. WT assay-preparation details, replicate count, uncertainty definition, blank subtraction and tracer specific activity were not independently established. Mutant processing/folding differences can contribute; neither mutant is inactive."
-    nodes:
-      - node_id: wt-arginine-assay
-        label: WT intact Mj-PdaD with radiolabeled L-arginine
-        node_type: ACTIVITY
-        grounding: [UniProtKB:Q57764]
-      - node_id: e109q-preparation
-        label: Replace WT preparation with E109Q Mj-PdaD
-        node_type: PERTURBATION
-      - node_id: n47a-preparation
-        label: Replace WT preparation with N47A Mj-PdaD
-        node_type: PERTURBATION
-      - node_id: radiolabeled-co2-output
-        label: Radiolabeled carbon dioxide released from L-arginine
-        node_type: STATE
-      - node_id: preparation-specific-activity
-        label: Decarboxylation specific activity per microgram of preparation
-        node_type: ACTIVITY
-    edges:
-      - edge_id: wt-produces-radiolabeled-co2
-        subject: wt-arginine-assay
-        predicate: produces
-        object: radiolabeled-co2-output
-        mechanism: "The enzyme/substrate preparation releases 14CO2; the WT comparator has reported specific activity 1014 +/-58 pmol/min/ug. This readout is not direct measurement of every intermediate or an intracellular flux."
-        directness: DIRECT
-        support: OBSERVED
-        evidence_kind: EXPERIMENTAL
-        evidence:
-          - reference: PMID:18391404
-            source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC2467525/
-            snippet: PvlArgDC decarboxylation activity
-            explanation: Table 2 WT row and Methods 2.5 define the measured CO2 endpoint; source and preparation limitations are retained.
-            cache_path: evidence/PF01862/soriano-2008-pvlargdc.txt
-            cache_sha256: 49f5fe1c11257acd2a765d4ac07c2a3eccb4fbcd765ec904a45992cb3567fffb
-      - edge_id: e109q-decreases-specific-activity
-        subject: e109q-preparation
-        predicate: decreases
-        object: preparation-specific-activity
-        mechanism: "E109Q gives 132 +/-8 versus WT 1014 +/-58 pmol/min/ug, approximately 7.7-fold lower with about 13% residual activity. Separate E109Q crystals are fully processed and contain agmatine; the mutation is not a processing or catalytic null."
-        directness: DIRECT
-        support: OBSERVED
-        evidence_kind: EXPERIMENTAL
-        evidence:
-          - reference: PMID:18391404
-            source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC2467525/
-            snippet: PvlArgDC decarboxylation activity
-            explanation: Table 2 and Results 3.1/3.3 support the preparation-level decrease, not direct proof of Glu109 proton donation or a measured processing rate.
-            cache_path: evidence/PF01862/soriano-2008-pvlargdc.txt
-            cache_sha256: 49f5fe1c11257acd2a765d4ac07c2a3eccb4fbcd765ec904a45992cb3567fffb
-      - edge_id: n47a-decreases-specific-activity
-        subject: n47a-preparation
-        predicate: decreases
-        object: preparation-specific-activity
-        mechanism: "N47A gives 2 versus WT 1014 +/-58 pmol/min/ug, roughly 500-fold lower. Table 2 supplies no N47A uncertainty. The measured decrease does not distinguish impaired catalytic chemistry from altered maturation or active-site abundance."
-        directness: DIRECT
-        support: OBSERVED
-        evidence_kind: EXPERIMENTAL
-        evidence:
-          - reference: PMID:18391404
-            source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC2467525/
-            snippet: PvlArgDC decarboxylation activity
-            explanation: Table 2 and Results 3.3; nonzero residual activity and unresolved processing contribution qualify the effect.
-            cache_path: evidence/PF01862/soriano-2008-pvlargdc.txt
-            cache_sha256: 49f5fe1c11257acd2a765d4ac07c2a3eccb4fbcd765ec904a45992cb3567fffb
-  - graph_id: mjpdad-processing-contribution-hypothesis
-    title: Incomplete N47A maturation may contribute to its activity loss
-    scope: "Soriano 2008 Results 3.1-3.3 and Conclusions: proposed interpretation of N47A crystal states and separate specific-activity measurements."
-    context: "Crystals grown at 295 K with 1-2 mM arginine in PEG2000/MPD/glycerol and HEPES pH 6.7-7.3; assay instead at 343 K and pH 6.0. A failed processing comparison at 338 K for 3 h supplied no relative WT/mutant rate."
-    family_mapping: "Intact Q57764/AAB98302.1 N47A, PF01862 19-162; cleavage is between native S52 and S53, yielding the S53-derived pyruvoyl group. PDB 2QQD includes processed and unprocessed chains plus residual His0. This is not a claim for all PF01862 members."
-    scope_status: HYPOTHETICAL
-    taxon: NCBITaxon:243232
-    limitations: "Crystal populations are not assay-solution processing fractions. One N47A site is mixed and modeled predominantly processed; four are unprocessed and one clearly processed. N47A local structural comparison uses S53A, not WT. Processing-rate comparison was inconclusive, and neither molecular mediation nor its quantitative contribution was established."
-    nodes:
-      - node_id: reduced-mature-active-fraction
-        label: Proposed reduced mature pyruvoyl-bearing fraction in N47A assay solution
-        node_type: STATE
-      - node_id: n47a-preparation-activity
-        label: N47A decarboxylation activity per unit total protein
-        node_type: ACTIVITY
-    edges:
-      - edge_id: incomplete-maturation-may-decrease-activity
-        subject: reduced-mature-active-fraction
-        predicate: decreases
-        object: n47a-preparation-activity
-        mechanism: "An unprocessed fraction could reduce the abundance of catalytically mature sites per unit protein and contribute to the observed activity loss. Mixed crystal states and altered local contacts motivate this explanation; they do not demonstrate the intervening change in assay solution or exclude impaired turnover of the processed fraction."
-        directness: UNRESOLVED
-        support: HYPOTHESIZED
-        evidence_kind: EXPERIMENTAL
-        evidence:
-          - reference: PMID:18391404
-            source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC2467525/
-            snippet: Efforts to measure the rate of autoprocessing were inconclusive
-            explanation: Methods 2.5, Results 3.1-3.3, Conclusions and inspected Figures 3/4 support a stated mechanistic hypothesis; no observed rate or quantitative mediation is assigned.
-            cache_path: evidence/PF01862/soriano-2008-pvlargdc.txt
-            cache_sha256: 49f5fe1c11257acd2a765d4ac07c2a3eccb4fbcd765ec904a45992cb3567fffb
+- graph_id: mjpdad-radiolabeled-decarboxylation
+  title: Mj-PdaD decarboxylates arginine with reduced activity in two mutants
+  scope: 'Soriano 2008 Table 2 and Methods 2.5: intact recombinant M. jannaschii PdaD preparations, WT,
+    E109Q and N47A.'
+  context: 'pPRDC.19 mutant derivatives expressed in E. coli B834(DE3), N-terminal His tag removed. Assay
+    at 343 K for 30 min: 50 mM MES/NaOH pH 6.0, 50 mM KCl, 1 mM DTT, 4 mM L-arginine plus 2 ul radiolabeled
+    L-arginine; HCl termination and 14CO2 scintillation measurement.'
+  family_mapping: MJ0316/pdaD, Q57764 sequence version 1 exactly equals AAB98302.1, 165 aa; JAL-1/DSM
+    2661 reference taxon 243232. PF01862 19-162 includes N47 and E109. Published primers and PDB 2QQC/2QQD
+    confirm the substitutions; residual His0 is not included in native numbering. No isolated-domain sufficiency.
+  scope_status: MECHANISTIC
+  taxon: NCBITaxon:243232
+  limitations: DIRECT denotes net purified-preparation effects, not proton transfer or a measured self-processing
+    rate. Specific activity per protein mass is not kcat per processed site. WT assay-preparation details,
+    replicate count, uncertainty definition, blank subtraction and tracer specific activity were not independently
+    established. Mutant processing/folding differences can contribute; neither mutant is inactive.
+  nodes:
+  - node_id: wt-arginine-assay
+    label: WT intact Mj-PdaD with radiolabeled L-arginine
+    node_type: ACTIVITY
+    grounding:
+    - UniProtKB:Q57764
+  - node_id: e109q-preparation
+    label: Replace WT preparation with E109Q Mj-PdaD
+    node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q57764
+  - node_id: n47a-preparation
+    label: Replace WT preparation with N47A Mj-PdaD
+    node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q57764
+  - node_id: radiolabeled-co2-output
+    label: Radiolabeled carbon dioxide released from L-arginine
+    node_type: STATE
+  - node_id: preparation-specific-activity
+    label: Decarboxylation specific activity per microgram of preparation
+    node_type: ACTIVITY
+  edges:
+  - edge_id: wt-produces-radiolabeled-co2
+    subject: wt-arginine-assay
+    predicate: produces
+    object: radiolabeled-co2-output
+    mechanism: The enzyme/substrate preparation releases 14CO2; the WT comparator has reported specific
+      activity 1014 +/-58 pmol/min/ug. This readout is not direct measurement of every intermediate or
+      an intracellular flux.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:18391404
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC2467525/
+      snippet: PvlArgDC decarboxylation activity
+      explanation: Table 2 WT row and Methods 2.5 define the measured CO2 endpoint; source and preparation
+        limitations are retained.
+      cache_path: evidence/PF01862/soriano-2008-pvlargdc.txt
+      cache_sha256: 49f5fe1c11257acd2a765d4ac07c2a3eccb4fbcd765ec904a45992cb3567fffb
+  - edge_id: e109q-decreases-specific-activity
+    subject: e109q-preparation
+    predicate: decreases
+    object: preparation-specific-activity
+    mechanism: E109Q gives 132 +/-8 versus WT 1014 +/-58 pmol/min/ug, approximately 7.7-fold lower with
+      about 13% residual activity. Separate E109Q crystals are fully processed and contain agmatine; the
+      mutation is not a processing or catalytic null.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:18391404
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC2467525/
+      snippet: PvlArgDC decarboxylation activity
+      explanation: Table 2 and Results 3.1/3.3 support the preparation-level decrease, not direct proof
+        of Glu109 proton donation or a measured processing rate.
+      cache_path: evidence/PF01862/soriano-2008-pvlargdc.txt
+      cache_sha256: 49f5fe1c11257acd2a765d4ac07c2a3eccb4fbcd765ec904a45992cb3567fffb
+  - edge_id: n47a-decreases-specific-activity
+    subject: n47a-preparation
+    predicate: decreases
+    object: preparation-specific-activity
+    mechanism: N47A gives 2 versus WT 1014 +/-58 pmol/min/ug, roughly 500-fold lower. Table 2 supplies
+      no N47A uncertainty. The measured decrease does not distinguish impaired catalytic chemistry from
+      altered maturation or active-site abundance.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:18391404
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC2467525/
+      snippet: PvlArgDC decarboxylation activity
+      explanation: Table 2 and Results 3.3; nonzero residual activity and unresolved processing contribution
+        qualify the effect.
+      cache_path: evidence/PF01862/soriano-2008-pvlargdc.txt
+      cache_sha256: 49f5fe1c11257acd2a765d4ac07c2a3eccb4fbcd765ec904a45992cb3567fffb
+- graph_id: mjpdad-processing-contribution-hypothesis
+  title: Incomplete N47A maturation may contribute to its activity loss
+  scope: 'Soriano 2008 Results 3.1-3.3 and Conclusions: proposed interpretation of N47A crystal states
+    and separate specific-activity measurements.'
+  context: Crystals grown at 295 K with 1-2 mM arginine in PEG2000/MPD/glycerol and HEPES pH 6.7-7.3;
+    assay instead at 343 K and pH 6.0. A failed processing comparison at 338 K for 3 h supplied no relative
+    WT/mutant rate.
+  family_mapping: Intact Q57764/AAB98302.1 N47A, PF01862 19-162; cleavage is between native S52 and S53,
+    yielding the S53-derived pyruvoyl group. PDB 2QQD includes processed and unprocessed chains plus residual
+    His0. This is not a claim for all PF01862 members.
+  scope_status: HYPOTHETICAL
+  taxon: NCBITaxon:243232
+  limitations: Crystal populations are not assay-solution processing fractions. One N47A site is mixed
+    and modeled predominantly processed; four are unprocessed and one clearly processed. N47A local structural
+    comparison uses S53A, not WT. Processing-rate comparison was inconclusive, and neither molecular mediation
+    nor its quantitative contribution was established.
+  nodes:
+  - node_id: reduced-mature-active-fraction
+    label: Proposed reduced mature pyruvoyl-bearing fraction in N47A assay solution
+    node_type: STATE
+    grounding:
+    - UniProtKB:Q57764
+  - node_id: n47a-preparation-activity
+    label: N47A decarboxylation activity per unit total protein
+    node_type: ACTIVITY
+    grounding:
+    - UniProtKB:Q57764
+  edges:
+  - edge_id: incomplete-maturation-may-decrease-activity
+    subject: reduced-mature-active-fraction
+    predicate: decreases
+    object: n47a-preparation-activity
+    mechanism: An unprocessed fraction could reduce the abundance of catalytically mature sites per unit
+      protein and contribute to the observed activity loss. Mixed crystal states and altered local contacts
+      motivate this explanation; they do not demonstrate the intervening change in assay solution or exclude
+      impaired turnover of the processed fraction.
+    directness: UNRESOLVED
+    support: HYPOTHESIZED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:18391404
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC2467525/
+      snippet: Efforts to measure the rate of autoprocessing were inconclusive
+      explanation: Methods 2.5, Results 3.1-3.3, Conclusions and inspected Figures 3/4 support a stated
+        mechanistic hypothesis; no observed rate or quantitative mediation is assigned.
+      cache_path: evidence/PF01862/soriano-2008-pvlargdc.txt
+      cache_sha256: 49f5fe1c11257acd2a765d4ac07c2a3eccb4fbcd765ec904a45992cb3567fffb
 discussions:
-  - discussion_id: pvlargdc-processing-and-activity-separation
-    prompt: Quantify maturation separately from catalytic activity of processed sites.
-    kind: CURATION_TODO
-    status: OPEN
-    rationale: Mutant preparation activities and crystal states support distinct observations. The published failed processing-rate comparison cannot establish relative maturation kinetics or mediation of N47A activity loss.
-    evidence:
-      - reference: PMID:18391404
-        supports: PARTIAL
-        evidence_source: primary_methods_table_2_and_figures_3_4
-        explanation: E109Q retains activity and fully processed crystal protomers; N47A retains low activity with mixed processing states. Neither establishes a unique catalytic chemical step.
-    notes: See evidence/PF01862/PvlArgDC-identity.txt and pvlargdc-gap-ledger.txt. Obtain matched assay-solution processing fractions, valid WT processing controls, activity per processed site and folding controls. Do not treat PYR53 deposit metadata labeled expression tag as biological identity.
-    posed_by: Codex
-    posed_date: '2026-10-11'
-  - discussion_id: pvlargdc-primary-protocols-and-member-coverage
-    prompt: Inspect original processing protocols and Tk-PdaD growth experiments before extending the graphs.
-    kind: CURATION_TODO
-    status: OPEN
-    rationale: Original 2002/2003 full protocols and Fukuda 2008 fulltext were inaccessible in this turn. Abstracts and database summaries are discovery leads, not grounds for importing unverified conditions or family-wide functions.
-    evidence:
-      - reference: PMID:11980912
-        supports: PARTIAL
-        evidence_source: primary_abstract_only
-        explanation: Original biochemical characterization and proposed bacterial host effects need separate primary assessment; no host-pH edge adopted.
-      - reference: PMID:18702616
-        supports: PARTIAL
-        evidence_source: primary_abstract_only
-        explanation: TK0149 activity and agmatine-dependent deletion growth are leads; exact strain, dose, medium and rescue context remain unverified.
-    notes: Keep IN_PROGRESS. Do not transfer PLP-dependent ADC mechanisms, BpsA phenotypes or whole-family essentiality. Graph count is not completion and the hypothetical processing contribution is not an observed biochemical step.
-    posed_by: Codex
-    posed_date: '2026-10-11'
+- discussion_id: pvlargdc-processing-and-activity-separation
+  prompt: Quantify maturation separately from catalytic activity of processed sites.
+  kind: CURATION_TODO
+  status: OPEN
+  rationale: Mutant preparation activities and crystal states support distinct observations. The published
+    failed processing-rate comparison cannot establish relative maturation kinetics or mediation of N47A
+    activity loss.
+  evidence:
+  - reference: PMID:18391404
+    supports: PARTIAL
+    evidence_source: primary_methods_table_2_and_figures_3_4
+    explanation: E109Q retains activity and fully processed crystal protomers; N47A retains low activity
+      with mixed processing states. Neither establishes a unique catalytic chemical step.
+  notes: See evidence/PF01862/PvlArgDC-identity.txt and pvlargdc-gap-ledger.txt. Obtain matched assay-solution
+    processing fractions, valid WT processing controls, activity per processed site and folding controls.
+    Do not treat PYR53 deposit metadata labeled expression tag as biological identity.
+  posed_by: Codex
+  posed_date: '2026-10-11'
+- discussion_id: pvlargdc-primary-protocols-and-member-coverage
+  prompt: Inspect original processing protocols and Tk-PdaD growth experiments before extending the graphs.
+  kind: CURATION_TODO
+  status: OPEN
+  rationale: Original 2002/2003 full protocols and Fukuda 2008 fulltext were inaccessible in this turn.
+    Abstracts and database summaries are discovery leads, not grounds for importing unverified conditions
+    or family-wide functions.
+  evidence:
+  - reference: PMID:11980912
+    supports: PARTIAL
+    evidence_source: primary_abstract_only
+    explanation: Original biochemical characterization and proposed bacterial host effects need separate
+      primary assessment; no host-pH edge adopted.
+  - reference: PMID:18702616
+    supports: PARTIAL
+    evidence_source: primary_abstract_only
+    explanation: TK0149 activity and agmatine-dependent deletion growth are leads; exact strain, dose,
+      medium and rescue context remain unverified.
+  notes: Keep IN_PROGRESS. Do not transfer PLP-dependent ADC mechanisms, BpsA phenotypes or whole-family
+    essentiality. Graph count is not completion and the hypothetical processing contribution is not an
+    observed biochemical step.
+  posed_by: Codex
+  posed_date: '2026-10-11'

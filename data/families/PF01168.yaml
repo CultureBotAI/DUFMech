@@ -83,6 +83,8 @@ causal_graphs:
   - node_id: k39a-racemase-substitution
     label: K39A instead of WT without exogenous alkylamine
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:P10724
   - node_id: detectable-racemase-activity
     label: Detectable alanine-racemization activity
     node_type: ACTIVITY
@@ -251,6 +253,8 @@ causal_graphs:
   - node_id: k39a-labeled-pmp-assay
     label: K39A instead of WT in the labeled-PMP/pyruvate assay
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:P10724
   - node_id: methylamine-added-to-k39a
     label: Add 0.5 M methylamine to K39A with PMP and pyruvate
     node_type: PERTURBATION
@@ -310,5 +314,13 @@ curation_events:
   outcome: needs_followup
   summary: Retain partial scientific self-review of Alr cofactor assays
   history_record: history/records/PF01168/2026-10-11T092821Z-codex-3db13c.yaml
+  event_index: 0
+  llm_assisted: true
+- timestamp: '2026-10-18T02:54:46Z'
+  curator: Antigravity
+  action: EDIT
+  outcome: changed
+  summary: Ground causal graph gene and protein nodes in PF01168 with verified UniProtKB accessions (UniProtKB:P10724)
+  history_record: history/records/PF01168/2026-10-18T025446Z-antigravity-311db4.yaml
   event_index: 0
   llm_assisted: true

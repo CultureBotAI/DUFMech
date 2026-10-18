@@ -91,6 +91,8 @@ causal_graphs:
   - node_id: pair-and-buffer
     label: Supply RPP21-RPP29 and use its lower-salt optimized protocol
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:O26119
   - node_id: fitted-km
     label: Fitted single-turnover substrate KM
     node_type: STATE
@@ -130,9 +132,13 @@ causal_graphs:
   - node_id: add-pair-normalized-protocol
     label: Add RPP21-RPP29 to RPR-POP5-RPP30 with published pH normalization
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:O26119
   - node_id: cleavage-kobs
     label: Reported pH5.8-equivalent cleavage kobs
     node_type: ACTIVITY
+    grounding:
+    - UniProtKB:O26119
   edges:
   - edge_id: pair-protocol-increases-normalized-rate
     subject: add-pair-normalized-protocol
@@ -170,6 +176,8 @@ causal_graphs:
   - node_id: delta24
     label: Replace full-length Pfu Rpp29 with delta24
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q8U007
   - node_id: nmr-response
     label: Rpp21-induced Rpp29 NMR chemical-shift response
     node_type: STATE
@@ -232,12 +240,18 @@ causal_graphs:
   - node_id: delta24
     label: Substitute Rpp29 delta24 in the two-RPP reaction
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q8U007
   - node_id: delta31
     label: Substitute Rpp29 delta31 in the two-RPP reaction
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q8U007
   - node_id: processing-activity
     label: Relative pre-tRNATyr processing activity
     node_type: ACTIVITY
+    grounding:
+    - UniProtKB:Q8U007
   edges:
   - edge_id: delta24-decreases-processing
     subject: delta24
@@ -289,12 +303,18 @@ causal_graphs:
   - node_id: delta24
     label: Substitute Rpp29 delta24 in the four-RPP reaction
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q8U007
   - node_id: delta31
     label: Substitute Rpp29 delta31 in the four-RPP reaction
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q8U007
   - node_id: processing-activity
     label: Relative pre-tRNATyr processing activity
     node_type: ACTIVITY
+    grounding:
+    - UniProtKB:Q8U007
   edges:
   - edge_id: delta24-decreases-processing
     subject: delta24
@@ -346,9 +366,13 @@ causal_graphs:
   - node_id: pair-protocol
     label: Replace RNA-only protocol with RPP21-RPP29 protocol
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q8U007
   - node_id: four-rpp-protocol
     label: Replace RNA-only protocol with four-RPP protocol
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q8U007
   - node_id: correct-fraction
     label: Correct-site fraction among cleaved products
     node_type: STATE
@@ -405,9 +429,13 @@ causal_graphs:
   - node_id: pair-protocol
     label: Switch RNA-only cis assay to optimized RPP21-RPP29 protocol
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q57903
   - node_id: four-rpp-protocol
     label: Switch RNA-only cis assay to optimized four-RPP protocol
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q57903
   - node_id: correct-fraction
     label: Correct-site fraction among cleaved cis products
     node_type: STATE
@@ -464,5 +492,14 @@ curation_events:
   outcome: needs_followup
   summary: Retain scoped scientific review of Rpp29 causal graphs
   history_record: history/records/PF01868/2026-10-11T175514Z-codex-18acb8.yaml
+  event_index: 0
+  llm_assisted: true
+- timestamp: '2026-10-18T02:54:46Z'
+  curator: Antigravity
+  action: EDIT
+  outcome: changed
+  summary: Ground causal graph gene and protein nodes in PF01868 with verified UniProtKB accessions (UniProtKB:O26119,
+    UniProtKB:Q8U007, UniProtKB:Q57903)
+  history_record: history/records/PF01868/2026-10-18T025446Z-antigravity-14255b.yaml
   event_index: 0
   llm_assisted: true

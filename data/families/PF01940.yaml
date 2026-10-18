@@ -79,9 +79,13 @@ causal_graphs:
   - node_id: mut1
     label: vte6-1 leaf extract instead of WT
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q9SYM0
   - node_id: mut2
     label: vte6-2 leaf extract instead of WT
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q9SYM0
   - node_id: product
     label: Phytyl-diphosphate product
     node_type: STATE
@@ -926,5 +930,13 @@ curation_events:
   outcome: needs_followup
   summary: Retain partial DUF92 scientific self-review
   history_record: history/records/PF01940/2026-10-12T061811Z-codex-e5508e.yaml
+  event_index: 0
+  llm_assisted: true
+- timestamp: '2026-10-18T02:54:46Z'
+  curator: Antigravity
+  action: EDIT
+  outcome: changed
+  summary: Ground causal graph gene and protein nodes in PF01940 with verified UniProtKB accessions (UniProtKB:Q9SYM0)
+  history_record: history/records/PF01940/2026-10-18T025446Z-antigravity-194f87.yaml
   event_index: 0
   llm_assisted: true

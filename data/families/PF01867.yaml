@@ -90,15 +90,21 @@ causal_graphs:
   - node_id: joint-reaction
     label: WT Cas1-Cas2 with duplex donor and supercoiled pCRISPR
     node_type: ACTIVITY
+    grounding:
+    - UniProtKB:Q46896
   - node_id: integrated-dna
     label: Deproteinized donor-labeled relaxed and linear plasmid products
     node_type: STATE
   - node_id: h208a
     label: Substitute Cas1 H208A with WT Cas2
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q46896
   - node_id: d221a
     label: Substitute Cas1 D221A with WT Cas2
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q46896
   - node_id: cas2-deletion
     label: Replace WT Cas2 with its beta6-beta7 deletion variant
     node_type: PERTURBATION
@@ -303,6 +309,8 @@ causal_graphs:
   - node_id: cas1-y-dna
     label: Purified Cas1 with the synthetic Y-DNA intermediate
     node_type: ACTIVITY
+    grounding:
+    - UniProtKB:Q46896
   - node_id: released-donor
     label: Released radiolabeled 33-bp donor-sized duplex
     node_type: STATE
@@ -341,6 +349,8 @@ causal_graphs:
   - node_id: coexpress-cas1-cas2
     label: Induce both Cas1 and Cas2 in BL21-AI
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q46896
   - node_id: expanded-locus
     label: Expanded CRISPR-I locus PCR bands
     node_type: PHENOTYPE
@@ -379,9 +389,13 @@ causal_graphs:
   - node_id: four-single-variants
     label: Cas1 E141A, H208A, D218A or D221A, each separately
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q46896
   - node_id: k224a
     label: Cas1 K224A with WT Cas2
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q46896
   - node_id: expanded-locus
     label: Expanded CRISPR-I PCR bands relative to WT
     node_type: PHENOTYPE
@@ -438,6 +452,8 @@ causal_graphs:
   - node_id: interface-single-variants
     label: Cas1 R245D, R252E or R256E, each separately
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q46896
   - node_id: expanded-locus
     label: Expanded CRISPR-I PCR bands relative to WT
     node_type: PHENOTYPE
@@ -476,6 +492,8 @@ causal_graphs:
   - node_id: r252e
     label: Introduce Cas1-FLAG R252E with WT Cas2-HA
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q46896
   - node_id: cas2-recovery
     label: Cas2-HA signal in the Cas1-FLAG immunoprecipitate
     node_type: PHENOTYPE
@@ -513,5 +531,13 @@ curation_events:
   outcome: needs_followup
   summary: Review scoped Cas1 biochemical and cellular graph evidence
   history_record: history/records/PF01867/2026-10-11T173709Z-codex-f21434.yaml
+  event_index: 0
+  llm_assisted: true
+- timestamp: '2026-10-18T02:54:46Z'
+  curator: Antigravity
+  action: EDIT
+  outcome: changed
+  summary: Ground causal graph gene and protein nodes in PF01867 with verified UniProtKB accessions (UniProtKB:Q46896)
+  history_record: history/records/PF01867/2026-10-18T025446Z-antigravity-604f8a.yaml
   event_index: 0
   llm_assisted: true

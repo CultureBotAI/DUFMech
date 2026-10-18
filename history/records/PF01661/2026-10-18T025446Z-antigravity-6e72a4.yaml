@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01661
+  path: curation/families/PF01661.yaml
+session:
+  id: 2026-10-18T025446Z-antigravity-6e72a4
+  timestamp: '2026-10-18T02:54:46Z'
+  actors:
+  - type: ai_agent
+    name: Antigravity
+    model: Claude Opus 4.6
+    agent_tool: Antigravity
+events:
+- type: EDIT
+  outcome: changed
+  summary: Ground causal graph gene and protein nodes in PF01661 with verified UniProtKB
+    accessions (UniProtKB:O28751)
+  details: 'Reviewed PF01661 causal_graphs and grounded gene/protein PERTURBATION,
+    ACTIVITY, and protein-complex STATE nodes across 1 causal graph(s) using verified
+    UniProtKB accessions from family_mapping:
+
+    - `af1521-adpr-binding-and-substitutions`: grounded d20a-substitution -> UniProtKB:O28751;
+    n34a-substitution -> UniProtKB:O28751; y176l-substitution -> UniProtKB:O28751'
+  sections:
+  - causal_graphs
