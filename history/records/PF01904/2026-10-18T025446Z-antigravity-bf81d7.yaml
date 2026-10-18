@@ -1,0 +1,38 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01904
+  path: curation/families/PF01904.yaml
+session:
+  id: 2026-10-18T025446Z-antigravity-bf81d7
+  timestamp: '2026-10-18T02:54:46Z'
+  actors:
+  - type: ai_agent
+    name: Antigravity
+    model: Claude Opus 4.6
+    agent_tool: Antigravity
+events:
+- type: EDIT
+  outcome: changed
+  summary: Ground causal graph gene and protein nodes in PF01904 with verified UniProtKB
+    accessions (UniProtKB:P37348, UniProtKB:Q9X1W6)
+  details: 'Reviewed PF01904 causal_graphs and grounded gene/protein PERTURBATION,
+    ACTIVITY, and protein-complex STATE nodes across 2 causal graph(s) using verified
+    UniProtKB accessions from family_mapping:
+
+    - `yece-joint-deletion-relative-growth-2014`: grounded yece-caic-joint-loss ->
+    UniProtKB:P37348; yece-degp-joint-loss -> UniProtKB:P37348; yece-asnb-joint-loss
+    -> UniProtKB:P37348; yece-ycbx-joint-loss -> UniProtKB:P37348; yece-cbpa-joint-loss
+    -> UniProtKB:P37348; yece-yceg-joint-loss -> UniProtKB:P37348; yece-pspf-joint-loss
+    -> UniProtKB:P37348; yece-pspa-joint-loss -> UniProtKB:P37348; yece-grxd-joint-loss
+    -> UniProtKB:P37348; yece-cspc-joint-loss -> UniProtKB:P37348; yece-yfbj-joint-loss
+    -> UniProtKB:P37348; yece-csda-joint-loss -> UniProtKB:P37348; yece-ygeo-joint-loss
+    -> UniProtKB:P37348; yece-ygfz-joint-loss -> UniProtKB:P37348; yece-yghd-joint-loss
+    -> UniProtKB:P37348; yece-exbb-joint-loss -> UniProtKB:P37348; yece-ttdb-joint-loss
+    -> UniProtKB:P37348; yece-gltb-joint-loss -> UniProtKB:P37348; yece-gltd-joint-loss
+    -> UniProtKB:P37348; yece-alr-joint-loss -> UniProtKB:P37348; yece-idnd-joint-loss
+    -> UniProtKB:P37348
+
+    - `tm1631-modeled-dna-cleavage-2016`: grounded modeled-reactant-system -> UniProtKB:Q9X1W6'
+  sections:
+  - causal_graphs

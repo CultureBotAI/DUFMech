@@ -1,0 +1,48 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01910
+  path: curation/families/PF01910.yaml
+session:
+  id: 2026-10-18T025446Z-antigravity-46e707
+  timestamp: '2026-10-18T02:54:46Z'
+  actors:
+  - type: ai_agent
+    name: Antigravity
+    model: Claude Opus 4.6
+    agent_tool: Antigravity
+events:
+- type: EDIT
+  outcome: changed
+  summary: Ground causal graph gene and protein nodes in PF01910 with verified UniProtKB
+    accessions (UniProtKB:Q9WYV6, UniProtKB:P35195, UniProtKB:J9VTN7)
+  details: 'Reviewed PF01910 causal_graphs and grounded gene/protein PERTURBATION,
+    ACTIVITY, and protein-complex STATE nodes across 9 causal graph(s) using verified
+    UniProtKB accessions from family_mapping:
+
+    - `tm0486-production-assembly-2010`: grounded apparent-assembly -> UniProtKB:Q9WYV6
+
+    - `ecm15-yeast-cfw-2018`: grounded sc-deletion -> UniProtKB:P35195; cn-rescue
+    -> UniProtKB:J9VTN7
+
+    - `ecm15-fungal-localization-2018`: grounded ecm-deletion -> UniProtKB:J9VTN7
+
+    - `ecm15-fungal-capsule-2018`: grounded deletion -> UniProtKB:J9VTN7; own-complement
+    -> UniProtKB:J9VTN7
+
+    - `ecm15-fungal-growth-2018`: grounded deletion -> UniProtKB:J9VTN7; complement
+    -> UniProtKB:J9VTN7
+
+    - `ecm15-fungal-mating-2018`: grounded deletion -> UniProtKB:J9VTN7; complement
+    -> UniProtKB:J9VTN7
+
+    - `ecm15-fungal-pigment-2018`: grounded deletion -> UniProtKB:J9VTN7; complement
+    -> UniProtKB:J9VTN7
+
+    - `ecm15-fungal-host-endpoint-2018`: grounded deletion -> UniProtKB:J9VTN7; complement
+    -> UniProtKB:J9VTN7
+
+    - `ecm15-fungal-expression-host-endpoint-2018`: grounded elevated-expression ->
+    UniProtKB:J9VTN7'
+  sections:
+  - causal_graphs

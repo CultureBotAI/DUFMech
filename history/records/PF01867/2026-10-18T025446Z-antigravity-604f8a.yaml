@@ -1,0 +1,37 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01867
+  path: curation/families/PF01867.yaml
+session:
+  id: 2026-10-18T025446Z-antigravity-604f8a
+  timestamp: '2026-10-18T02:54:46Z'
+  actors:
+  - type: ai_agent
+    name: Antigravity
+    model: Claude Opus 4.6
+    agent_tool: Antigravity
+events:
+- type: EDIT
+  outcome: changed
+  summary: Ground causal graph gene and protein nodes in PF01867 with verified UniProtKB
+    accessions (UniProtKB:Q46896)
+  details: 'Reviewed PF01867 causal_graphs and grounded gene/protein PERTURBATION,
+    ACTIVITY, and protein-complex STATE nodes across 6 causal graph(s) using verified
+    UniProtKB accessions from family_mapping:
+
+    - `cas1-cas2-purified-integration`: grounded joint-reaction -> UniProtKB:Q46896;
+    h208a -> UniProtKB:Q46896; d221a -> UniProtKB:Q46896
+
+    - `cas1-synthetic-intermediate-disintegration`: grounded cas1-y-dna -> UniProtKB:Q46896
+
+    - `cas1-cas2-cellular-acquisition`: grounded coexpress-cas1-cas2 -> UniProtKB:Q46896
+
+    - `cas1-cellular-active-site-variants`: grounded four-single-variants -> UniProtKB:Q46896;
+    k224a -> UniProtKB:Q46896
+
+    - `cas1-cellular-interface-variants`: grounded interface-single-variants -> UniProtKB:Q46896
+
+    - `cas1-r252e-lysate-coisolation`: grounded r252e -> UniProtKB:Q46896'
+  sections:
+  - causal_graphs

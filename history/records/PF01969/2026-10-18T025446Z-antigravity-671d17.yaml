@@ -1,0 +1,46 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01969
+  path: curation/families/PF01969.yaml
+session:
+  id: 2026-10-18T025446Z-antigravity-671d17
+  timestamp: '2026-10-18T02:54:46Z'
+  actors:
+  - type: ai_agent
+    name: Antigravity
+    model: Claude Opus 4.6
+    agent_tool: Antigravity
+events:
+- type: EDIT
+  outcome: changed
+  summary: Ground causal graph gene and protein nodes in PF01969 with verified UniProtKB
+    accessions (UniProtKB:Q2RFJ5)
+  details: 'Reviewed PF01969 causal_graphs and grounded gene/protein PERTURBATION,
+    ACTIVITY, and protein-complex STATE nodes across 6 causal graph(s) using verified
+    UniProtKB accessions from family_mapping:
+
+    - `moorella-growth-nickel-preparation-2022`: grounded no-added-ni-growth -> UniProtKB:Q2RFJ5
+
+    - `moorella-histidine-variant-reporters-2026`: grounded h53a -> UniProtKB:Q2RFJ5;
+    h72a -> UniProtKB:Q2RFJ5; h108a -> UniProtKB:Q2RFJ5; h116a -> UniProtKB:Q2RFJ5;
+    h118a -> UniProtKB:Q2RFJ5; h160a -> UniProtKB:Q2RFJ5; h226a -> UniProtKB:Q2RFJ5
+
+    - `moorella-pocket-cleft-variant-reporters-2026`: grounded d15a -> UniProtKB:Q2RFJ5;
+    r71a -> UniProtKB:Q2RFJ5; e104a -> UniProtKB:Q2RFJ5; e119a -> UniProtKB:Q2RFJ5;
+    d124a -> UniProtKB:Q2RFJ5; d128a -> UniProtKB:Q2RFJ5; e187a -> UniProtKB:Q2RFJ5;
+    y180a -> UniProtKB:Q2RFJ5; n238a -> UniProtKB:Q2RFJ5; q241a -> UniProtKB:Q2RFJ5;
+    q325a -> UniProtKB:Q2RFJ5; e243a -> UniProtKB:Q2RFJ5; e300a -> UniProtKB:Q2RFJ5;
+    r323a -> UniProtKB:Q2RFJ5
+
+    - `moorella-linker-construct-reporters-2026`: grounded deletion -> UniProtKB:Q2RFJ5;
+    shortened -> UniProtKB:Q2RFJ5; rigid -> UniProtKB:Q2RFJ5; alternative -> UniProtKB:Q2RFJ5
+
+    - `moorella-proposed-intermediate-transfer-2026`: grounded larc2-intermediate
+    -> UniProtKB:Q2RFJ5; cleft-intermediate -> UniProtKB:Q2RFJ5; larc1-intermediate
+    -> UniProtKB:Q2RFJ5
+
+    - `moorella-proposed-e104-nickel-chemistry-2026`: grounded proposed-pocket-reactants
+    -> UniProtKB:Q2RFJ5; proposed-carbanion -> UniProtKB:Q2RFJ5'
+  sections:
+  - causal_graphs

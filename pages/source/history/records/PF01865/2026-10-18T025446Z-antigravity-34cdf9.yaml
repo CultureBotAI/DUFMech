@@ -1,0 +1,32 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01865
+  path: curation/families/PF01865.yaml
+session:
+  id: 2026-10-18T025446Z-antigravity-34cdf9
+  timestamp: '2026-10-18T02:54:46Z'
+  actors:
+  - type: ai_agent
+    name: Antigravity
+    model: Claude Opus 4.6
+    agent_tool: Antigravity
+events:
+- type: EDIT
+  outcome: changed
+  summary: Ground causal graph gene and protein nodes in PF01865 with verified UniProtKB
+    accessions (UniProtKB:O30498)
+  details: 'Reviewed PF01865 causal_graphs and grounded gene/protein PERTURBATION,
+    ACTIVITY, and protein-complex STATE nodes across 4 causal graph(s) using verified
+    UniProtKB accessions from family_mapping:
+
+    - `pap-operon-restoration`: grounded restore-operon -> UniProtKB:O30498
+
+    - `pap-native-single-substitutions`: grounded pap-single-substitution -> UniProtKB:O30498
+
+    - `pap-heterologous-operon`: grounded high-copy-pap-pit -> UniProtKB:O30498
+
+    - `pap-heterologous-substitutions`: grounded single-variants -> UniProtKB:O30498;
+    double-variant -> UniProtKB:O30498'
+  sections:
+  - causal_graphs

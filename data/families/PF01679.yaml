@@ -130,6 +130,8 @@ causal_graphs:
   - node_id: yr93-pmp3-loss
     label: Additional pmp3::URA3 in the YR93 pmr2 background
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:P87284
   - node_id: yr93-salt-relative-growth
     label: YR93-background relative OD600 during salt challenge
     node_type: PHENOTYPE
@@ -169,6 +171,8 @@ causal_graphs:
   - node_id: yr93-nha1-pmp3-loss
     label: Add pmp3::URA3 to the YR93-1 pmr2/nha1 background
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:P87284
   - node_id: yr93-nha1-salt-growth
     label: Relative OD600 of pmr2/nha1-background salt-challenged cultures
     node_type: PHENOTYPE
@@ -211,6 +215,8 @@ causal_graphs:
   - node_id: cn3-sodium-assay
     label: CN3 pmp3::TRP1 rather than W303-1B under sodium challenge
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:P87284
   - node_id: intracellular-sodium-content
     label: Reported intracellular sodium concentration at 30-90 min
     node_type: STATE
@@ -252,6 +258,8 @@ causal_graphs:
   - node_id: cn3-methylammonium-assay
     label: CN3 rather than W303-1B in the methylammonium uptake assay
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:P87284
   - node_id: methylammonium-label-retention
     label: Filter-retained 14C-methylammonium signal over 10-60 min
     node_type: STATE
@@ -292,12 +300,16 @@ causal_graphs:
   - node_id: cn3-hygromycin
     label: CN3 rather than W303-1B on 100 ug/ml hygromycin B
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:P87284
   - node_id: hygromycin-spot-growth
     label: Spot growth on hygromycin B medium
     node_type: PHENOTYPE
   - node_id: cn3-tma
     label: CN3 rather than W303-1B on 0.7 M TMA
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:P87284
   - node_id: tma-spot-growth
     label: Spot growth on tetramethylammonium medium
     node_type: PHENOTYPE
@@ -355,6 +367,8 @@ causal_graphs:
   - node_id: cy162-pmp3-loss-egta
     label: Additional pmp3::URA3 in trk1/trk2 cells with 1 mM EGTA
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:P87284
   - node_id: cy162-early-growth-egta
     label: OD600 over 15-30 h in no-added-KCl YD plus EGTA
     node_type: PHENOTYPE
@@ -418,6 +432,8 @@ causal_graphs:
   - node_id: cy162-pmp3-loss-acid
     label: Additional pmp3::URA3 in CY162 during acidic-pH challenge
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:P87284
   - node_id: cy162-acid-relative-growth
     label: OD600 at pH 3-4 relative to the same strain at pH 5.5
     node_type: PHENOTYPE
@@ -656,5 +672,13 @@ curation_events:
   outcome: needs_followup
   summary: Retain partial scientific self-review of Pmp3 phenotype graphs
   history_record: history/records/PF01679/2026-10-11T132012Z-codex-ae48e7.yaml
+  event_index: 0
+  llm_assisted: true
+- timestamp: '2026-10-18T02:54:46Z'
+  curator: Antigravity
+  action: EDIT
+  outcome: changed
+  summary: Ground causal graph gene and protein nodes in PF01679 with verified UniProtKB accessions (UniProtKB:P87284)
+  history_record: history/records/PF01679/2026-10-18T025446Z-antigravity-23b74c.yaml
   event_index: 0
   llm_assisted: true

@@ -1,0 +1,36 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01881
+  path: curation/families/PF01881.yaml
+session:
+  id: 2026-10-18T025446Z-antigravity-6c23fe
+  timestamp: '2026-10-18T02:54:46Z'
+  actors:
+  - type: ai_agent
+    name: Antigravity
+    model: Claude Opus 4.6
+    agent_tool: Antigravity
+events:
+- type: EDIT
+  outcome: changed
+  summary: Ground causal graph gene and protein nodes in PF01881 with verified UniProtKB
+    accessions (UniProtKB:Q8U1S4)
+  details: 'Reviewed PF01881 causal_graphs and grounded gene/protein PERTURBATION,
+    ACTIVITY, and protein-complex STATE nodes across 5 causal graph(s) using verified
+    UniProtKB accessions from family_mapping:
+
+
+    - `pfu-cas6-n-terminal-substitutions`: grounded y31a -> UniProtKB:Q8U1S4; h46a
+    -> UniProtKB:Q8U1S4; k52a -> UniProtKB:Q8U1S4
+
+    - `pfu-cas6-c-terminal-glycine-loop`: grounded four-glycine-mutant -> UniProtKB:Q8U1S4
+
+    - `pfu-cas6-rna-protection`: grounded cas6-preincubation -> UniProtKB:Q8U1S4
+
+    - `pfu-cas6-recognition-sequence-variants`: grounded shifted-rnp -> UniProtKB:Q8U1S4
+
+    - `pfu-cas6-hypothetical-wraparound-alignment`: grounded proposed-wraparound-context
+    -> UniProtKB:Q8U1S4'
+  sections:
+  - causal_graphs

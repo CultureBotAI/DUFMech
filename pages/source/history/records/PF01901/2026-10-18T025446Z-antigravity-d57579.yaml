@@ -1,0 +1,37 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01901
+  path: curation/families/PF01901.yaml
+session:
+  id: 2026-10-18T025446Z-antigravity-d57579
+  timestamp: '2026-10-18T02:54:46Z'
+  actors:
+  - type: ai_agent
+    name: Antigravity
+    model: Claude Opus 4.6
+    agent_tool: Antigravity
+events:
+- type: EDIT
+  outcome: changed
+  summary: Ground causal graph gene and protein nodes in PF01901 with verified UniProtKB
+    accessions (UniProtKB:Q8X4T7)
+  details: 'Reviewed PF01901 causal_graphs and grounded gene/protein PERTURBATION,
+    ACTIVITY, and protein-complex STATE nodes across 7 causal graph(s) using verified
+    UniProtKB accessions from family_mapping:
+
+    - `o157-wzy-tn5-tube-staining-2020`: grounded wzy-insertion -> UniProtKB:Q8X4T7
+
+    - `o157-wzy-tn5-lps-2024`: grounded wzy-insertion -> UniProtKB:Q8X4T7
+
+    - `o157-wzy-tn5-microtiter-biomass-2024`: grounded wzy-insertion -> UniProtKB:Q8X4T7
+
+    - `o157-wzy-tn5-motility-2024`: grounded wzy-insertion -> UniProtKB:Q8X4T7
+
+    - `o157-sk2526-surface-coat-2008`: grounded sk2526-insertion -> UniProtKB:Q8X4T7
+
+    - `o157-sk2526-polysaccharide-signals-2008`: grounded sk2526-insertion -> UniProtKB:Q8X4T7
+
+    - `o157-43888-wzy-complementation-2021`: grounded wzy-complementation -> UniProtKB:Q8X4T7'
+  sections:
+  - causal_graphs

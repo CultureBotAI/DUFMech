@@ -99,12 +99,18 @@ causal_graphs:
   - node_id: tk-branched-reaction
     label: Intact Tk-BpsA plus dcSAM and N4-aminopropylspermidine
     node_type: ACTIVITY
+    grounding:
+    - UniProtKB:Q5JIZ3
   - node_id: d159a-preparation
     label: Substitute D159A for WT Tk-BpsA
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q5JIZ3
   - node_id: d160a-preparation
     label: Substitute D160A for WT Tk-BpsA
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q5JIZ3
   - node_id: mono-branched-product
     label: N4-aminopropylspermidine produced from spermidine
     node_type: STATE
@@ -277,6 +283,8 @@ causal_graphs:
   - node_id: terminal-quadruple-preparation
     label: Published D342N/D343N/E344Q/E345Q Tk-BpsA preparation
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q5JIZ3
   - node_id: spermidine-kcat
     label: Fitted spermidine-assay turnover number
     node_type: ACTIVITY
@@ -337,6 +345,8 @@ causal_graphs:
   - node_id: replace-tth-terminal-segment
     label: Replace the eight-residue Tth-BpsA tail with the nine-residue Tk tail
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q72L89
   - node_id: branched-norspermidine-efficiency
     label: Catalytic efficiency with N4-aminopropylnorspermidine
     node_type: ACTIVITY
@@ -377,6 +387,8 @@ causal_graphs:
   - node_id: putative-preloaded-carrier-with-acceptor
     label: Putative aminopropylated terminal Tk-BpsA carrier with spermidine
     node_type: STATE
+    grounding:
+    - UniProtKB:Q5JIZ3
   - node_id: hypothetical-carrier-derived-product
     label: N4-aminopropylspermidine formed by transfer from the carrier
     node_type: STATE
@@ -418,6 +430,8 @@ causal_graphs:
   - node_id: dbp1-versus-ku216-sulfur
     label: DBP1 genotype instead of KU216 in sulfur medium
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q5JIZ3
   - node_id: add-bcpa-to-dbp1
     label: Add 1 mM N4-bis(aminopropyl)spermidine to DBP1
     node_type: PERTURBATION
@@ -477,9 +491,13 @@ causal_graphs:
   - node_id: dbp1-pyruvate-genotype
     label: DBP1 instead of KU216 in pyruvate medium
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q5JIZ3
   - node_id: kps-versus-dbp1-genotype
     label: Independently constructed KPS instead of DBP1
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q5JIZ3
   - node_id: pyruvate-93c-growth
     label: OD660 growth at 93 C in pyruvate medium
     node_type: PHENOTYPE
@@ -537,9 +555,13 @@ causal_graphs:
   - node_id: dbp1-cold-genotype
     label: DBP1 instead of KU216 during cold cycling
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q5JIZ3
   - node_id: kps-cold-genotype
     label: KPS instead of DBP1 during the first two cold cycles
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q5JIZ3
   - node_id: cold-cycle-normalized-cfu
     label: CFU survival relative to each strain's untreated baseline
     node_type: PHENOTYPE
@@ -595,5 +617,14 @@ curation_events:
   outcome: needs_followup
   summary: Retain scoped scientific self-review of BpsA causal graphs
   history_record: history/records/PF01861/2026-10-11T160403Z-codex-a0a1e6.yaml
+  event_index: 0
+  llm_assisted: true
+- timestamp: '2026-10-18T02:54:46Z'
+  curator: Antigravity
+  action: EDIT
+  outcome: changed
+  summary: Ground causal graph gene and protein nodes in PF01861 with verified UniProtKB accessions (UniProtKB:Q5JIZ3,
+    UniProtKB:Q72L89)
+  history_record: history/records/PF01861/2026-10-18T025446Z-antigravity-195ba1.yaml
   event_index: 0
   llm_assisted: true

@@ -1,0 +1,42 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01809
+  path: curation/families/PF01809.yaml
+session:
+  id: 2026-10-18T025446Z-antigravity-d1621c
+  timestamp: '2026-10-18T02:54:46Z'
+  actors:
+  - type: ai_agent
+    name: Antigravity
+    model: Claude Opus 4.6
+    agent_tool: Antigravity
+events:
+- type: EDIT
+  outcome: changed
+  summary: Ground causal graph gene and protein nodes in PF01809 with verified UniProtKB
+    accessions (UniProtKB:P0A8C8)
+  details: 'Reviewed PF01809 causal_graphs and grounded gene/protein PERTURBATION,
+    ACTIVITY, and protein-complex STATE nodes across 8 causal graph(s) using verified
+    UniProtKB accessions from family_mapping:
+
+    - `yidd-gfp-peripheral-localization`: grounded fuse-full-yidd -> UniProtKB:P0A8C8;
+    fuse-yidd-h1 -> UniProtKB:P0A8C8
+
+    - `yidd-induced-tagged-expression-stress`: grounded induce-his-yidd -> UniProtKB:P0A8C8
+
+    - `yidd-bw25113-energized-vesicle-proxies`: grounded delete-yidd-vesicles -> UniProtKB:P0A8C8
+
+    - `yidd-bw25113-vesicle-enzyme-readouts`: grounded delete-yidd-vesicles -> UniProtKB:P0A8C8
+
+    - `yidd-bw25113-membrane-abundance`: grounded delete-yidd-bw25113 -> UniProtKB:P0A8C8
+
+    - `yidd-bw25113-nuok-protection`: grounded delete-yidd-empty-vector -> UniProtKB:P0A8C8;
+    delete-yidd-yidc-compensated -> UniProtKB:P0A8C8
+
+    - `yidd-overexpression-nuok-protection`: grounded his-yidd-enriched-vesicles ->
+    UniProtKB:P0A8C8
+
+    - `yidd-bw25113-f0c-yidc-compensation`: grounded delete-yidd-empty-vector -> UniProtKB:P0A8C8'
+  sections:
+  - causal_graphs

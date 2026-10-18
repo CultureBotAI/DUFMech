@@ -87,6 +87,8 @@ causal_graphs:
   - node_id: ymr027w-deletion
     label: YMR027W deletion
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q04371
   - node_id: cellular-f1p
     label: Cellular fructose-1-phosphate abundance
     node_type: PHENOTYPE
@@ -129,5 +131,13 @@ curation_events:
   outcome: needs_followup
   summary: Retain a scoped scientific review of YMR027W causal graphs
   history_record: history/records/PF01937/2026-10-11T043318Z-codex-1adadd.yaml
+  event_index: 0
+  llm_assisted: true
+- timestamp: '2026-10-18T02:54:46Z'
+  curator: Antigravity
+  action: EDIT
+  outcome: changed
+  summary: Ground causal graph gene and protein nodes in PF01937 with verified UniProtKB accessions (UniProtKB:Q04371)
+  history_record: history/records/PF01937/2026-10-18T025446Z-antigravity-6951c4.yaml
   event_index: 0
   llm_assisted: true

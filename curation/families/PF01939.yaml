@@ -3,491 +3,895 @@ curation_status: IN_PROGRESS
 curation_history: history/records/PF01939
 discussions:
 - discussion_id: pf01939-cleavage-geometry
-  prompt: "Reconcile the two C. glutamicum cleavage-product reports without erasing their different assay contexts."
+  prompt: Reconcile the two C. glutamicum cleavage-product reports without erasing their different assay
+    contexts.
   kind: CURATION_TODO
   status: OPEN
-  rationale: "Both studies use ATCC13032 yet report three- versus five-nucleotide overhangs; their metal, pH, substrate, tag and truncation contexts differ."
+  rationale: Both studies use ATCC13032 yet report three- versus five-nucleotide overhangs; their metal,
+    pH, substrate, tag and truncation contexts differ.
   evidence:
-  - {"reference":"PMID:29878158","supports":"PARTIAL","evidence_source":"primary_publication","explanation":"Compare original product assignments and later primary evidence. Differences are possible explanatory variables, not an established cause. Ishino deltaCter removes five residues; Takemoto Cdel removes two."}
+  - reference: PMID:29878158
+    supports: PARTIAL
+    evidence_source: primary_publication
+    explanation: Compare original product assignments and later primary evidence. Differences are possible
+      explanatory variables, not an established cause. Ishino deltaCter removes five residues; Takemoto
+      Cdel removes two.
   posed_by: Codex
   posed_date: '2026-10-12'
-  notes: "See evidence/PF01939/coverage.txt; partial scientific curation, not family-wide completion."
+  notes: See evidence/PF01939/coverage.txt; partial scientific curation, not family-wide completion.
 - discussion_id: pf01939-native-repair-and-coverage
-  prompt: "Extend accession-mapped native repair and other-member graphs without assuming a universal DSB-to-HR pathway."
+  prompt: Extend accession-mapped native repair and other-member graphs without assuming a universal DSB-to-HR
+    pathway.
   kind: CURATION_TODO
   status: OPEN
-  rationale: "Biochemical cleavage and cellular mutation readouts do not establish the complete intervening pathway; later M. smegmatis work favors short-range repair."
+  rationale: Biochemical cleavage and cellular mutation readouts do not establish the complete intervening
+    pathway; later M. smegmatis work favors short-range repair.
   evidence:
-  - {"reference":"PMID:39417425","supports":"PARTIAL","evidence_source":"primary_publication","explanation":"Inspect all remaining relevant figures, supplements and exact constructs, including P.abyssi2012/2014, Tko structures, S.islandicus, T.gammatolerans and M.smegmatis. Preserve nick-versus-DSB and exonuclease-versus-flap alternatives. All family members and previous follow-ups remain in scope."}
+  - reference: PMID:39417425
+    supports: PARTIAL
+    evidence_source: primary_publication
+    explanation: Inspect all remaining relevant figures, supplements and exact constructs, including P.abyssi2012/2014,
+      Tko structures, S.islandicus, T.gammatolerans and M.smegmatis. Preserve nick-versus-DSB and exonuclease-versus-flap
+      alternatives. All family members and previous follow-ups remain in scope.
   posed_by: Codex
   posed_date: '2026-10-12'
-  notes: "See evidence/PF01939/coverage.txt; partial scientific curation, not family-wide completion."
+  notes: See evidence/PF01939/coverage.txt; partial scientific curation, not family-wide completion.
 causal_graphs:
 - graph_id: pab-flap-cleavage-2009
-  title: "P. abyssi NucS cleaves accessible model DNA flaps"
-  scope: "Ren2009 Figure5A/B purified-protein reactions."
-  context: "Labeled5-prime or3-prime flap substrates; Mg-containing10-min assays. Methods specify46 or56C without resolving the temperature of each panel. End-bound streptavidin contrasts are separate substrate treatments."
-  family_mapping: "Q9V2E8 v1,251 aa,PAB2263/PYRAB01260,PF01939 126-244 and separate PF21003 28-120. Full-protein preparation,not isolated PF01939."
-  taxon: "NCBITaxon:272844"
-  scope_status: "MECHANISTIC"
-  limitations: "High protein amounts produce additional short products. The blocked-end result supports accessibility,not direct visualization of sliding. Caption5A and diagram do not unambiguously agree on biotin attachment wording."
+  title: P. abyssi NucS cleaves accessible model DNA flaps
+  scope: Ren2009 Figure5A/B purified-protein reactions.
+  context: Labeled5-prime or3-prime flap substrates; Mg-containing10-min assays. Methods specify46 or56C
+    without resolving the temperature of each panel. End-bound streptavidin contrasts are separate substrate
+    treatments.
+  family_mapping: Q9V2E8 v1,251 aa,PAB2263/PYRAB01260,PF01939 126-244 and separate PF21003 28-120. Full-protein
+    preparation,not isolated PF01939.
+  taxon: NCBITaxon:272844
+  scope_status: MECHANISTIC
+  limitations: High protein amounts produce additional short products. The blocked-end result supports
+    accessibility,not direct visualization of sliding. Caption5A and diagram do not unambiguously agree
+    on biotin attachment wording.
   nodes:
-  - {"node_id":"flap5","label":"WT NucS added to accessible5-prime flap","node_type":"ACTIVITY","grounding":["UniProtKB:Q9V2E8"]}
-  - {"node_id":"flap3","label":"WT NucS added to accessible3-prime flap","node_type":"ACTIVITY"}
-  - {"node_id":"block5","label":"Streptavidin-bound5-prime flap substrate","node_type":"PERTURBATION"}
-  - {"node_id":"block3","label":"Streptavidin-bound3-prime flap substrate","node_type":"PERTURBATION"}
-  - {"node_id":"cut5","label":"5-prime flap junction-associated products","node_type":"STATE"}
-  - {"node_id":"cut3","label":"3-prime flap junction-associated products","node_type":"STATE"}
+  - node_id: flap5
+    label: WT NucS added to accessible5-prime flap
+    node_type: ACTIVITY
+    grounding:
+    - UniProtKB:Q9V2E8
+  - node_id: flap3
+    label: WT NucS added to accessible3-prime flap
+    node_type: ACTIVITY
+    grounding:
+    - UniProtKB:Q9V2E8
+  - node_id: block5
+    label: Streptavidin-bound5-prime flap substrate
+    node_type: PERTURBATION
+  - node_id: block3
+    label: Streptavidin-bound3-prime flap substrate
+    node_type: PERTURBATION
+  - node_id: cut5
+    label: 5-prime flap junction-associated products
+    node_type: STATE
+  - node_id: cut3
+    label: 3-prime flap junction-associated products
+    node_type: STATE
   edges:
   - edge_id: five-prime-flap-cleavage
-    subject: "flap5"
-    predicate: "produces"
-    object: "cut5"
-    mechanism: "Purified WT protein generates junction-associated products from the accessible5-prime model flap."
-    directness: "DIRECT"
-    support: "OBSERVED"
-    evidence_kind: "EXPERIMENTAL"
+    subject: flap5
+    predicate: produces
+    object: cut5
+    mechanism: Purified WT protein generates junction-associated products from the accessible5-prime model
+      flap.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
     evidence:
-    - {"reference":"PMID:19609302","source_url":"https://pmc.ncbi.nlm.nih.gov/articles/PMC2735178/","snippet":"cleavage at the junction","explanation":"Figure5A visual gel comparison and nuclease Methods; approximately25-nt discrete product.","cache_path":"evidence/PF01939/ren-2009.txt","cache_sha256":"c02aea3ef9f1a3c9466798e1b67d33c290c472d66da26f8c62b3121f4f9760da"}
+    - reference: PMID:19609302
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC2735178/
+      snippet: cleavage at the junction
+      explanation: Figure5A visual gel comparison and nuclease Methods; approximately25-nt discrete product.
+      cache_path: evidence/PF01939/ren-2009.txt
+      cache_sha256: c02aea3ef9f1a3c9466798e1b67d33c290c472d66da26f8c62b3121f4f9760da
   - edge_id: three-prime-flap-cleavage
-    subject: "flap3"
-    predicate: "produces"
-    object: "cut3"
-    mechanism: "Purified WT protein generates junction-associated products from the accessible3-prime model flap."
-    directness: "DIRECT"
-    support: "OBSERVED"
-    evidence_kind: "EXPERIMENTAL"
+    subject: flap3
+    predicate: produces
+    object: cut3
+    mechanism: Purified WT protein generates junction-associated products from the accessible3-prime model
+      flap.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
     evidence:
-    - {"reference":"PMID:19609302","source_url":"https://pmc.ncbi.nlm.nih.gov/articles/PMC2735178/","snippet":"cleavage at the junction","explanation":"Figure5B visual gel comparison; approximately22-nt discrete product.","cache_path":"evidence/PF01939/ren-2009.txt","cache_sha256":"c02aea3ef9f1a3c9466798e1b67d33c290c472d66da26f8c62b3121f4f9760da"}
+    - reference: PMID:19609302
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC2735178/
+      snippet: cleavage at the junction
+      explanation: Figure5B visual gel comparison; approximately22-nt discrete product.
+      cache_path: evidence/PF01939/ren-2009.txt
+      cache_sha256: c02aea3ef9f1a3c9466798e1b67d33c290c472d66da26f8c62b3121f4f9760da
   - edge_id: blocked-five-prime-cleavage-reduction
-    subject: "block5"
-    predicate: "decreases"
-    object: "cut5"
-    mechanism: "End-bound streptavidin suppresses detectable cleavage relative to the accessible model substrate; steric restriction is consistent with but does not prove threading."
-    directness: "UNRESOLVED"
-    support: "OBSERVED"
-    evidence_kind: "EXPERIMENTAL"
+    subject: block5
+    predicate: decreases
+    object: cut5
+    mechanism: End-bound streptavidin suppresses detectable cleavage relative to the accessible model
+      substrate; steric restriction is consistent with but does not prove threading.
+    directness: UNRESOLVED
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
     evidence:
-    - {"reference":"PMID:19609302","source_url":"https://pmc.ncbi.nlm.nih.gov/articles/PMC2735178/","snippet":"cleavage at the junction","explanation":"Figure5A paired gels and Results; biotin-attachment wording remains qualified.","cache_path":"evidence/PF01939/ren-2009.txt","cache_sha256":"c02aea3ef9f1a3c9466798e1b67d33c290c472d66da26f8c62b3121f4f9760da"}
+    - reference: PMID:19609302
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC2735178/
+      snippet: cleavage at the junction
+      explanation: Figure5A paired gels and Results; biotin-attachment wording remains qualified.
+      cache_path: evidence/PF01939/ren-2009.txt
+      cache_sha256: c02aea3ef9f1a3c9466798e1b67d33c290c472d66da26f8c62b3121f4f9760da
   - edge_id: blocked-three-prime-cleavage-reduction
-    subject: "block3"
-    predicate: "decreases"
-    object: "cut3"
-    mechanism: "End-bound streptavidin suppresses detectable cleavage of the3-prime flap in the matched reaction."
-    directness: "UNRESOLVED"
-    support: "OBSERVED"
-    evidence_kind: "EXPERIMENTAL"
+    subject: block3
+    predicate: decreases
+    object: cut3
+    mechanism: End-bound streptavidin suppresses detectable cleavage of the3-prime flap in the matched
+      reaction.
+    directness: UNRESOLVED
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
     evidence:
-    - {"reference":"PMID:19609302","source_url":"https://pmc.ncbi.nlm.nih.gov/articles/PMC2735178/","snippet":"cleavage at the junction","explanation":"Figure5B paired gels; not a directly observed protein translocation trajectory.","cache_path":"evidence/PF01939/ren-2009.txt","cache_sha256":"c02aea3ef9f1a3c9466798e1b67d33c290c472d66da26f8c62b3121f4f9760da"}
+    - reference: PMID:19609302
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC2735178/
+      snippet: cleavage at the junction
+      explanation: Figure5B paired gels; not a directly observed protein translocation trajectory.
+      cache_path: evidence/PF01939/ren-2009.txt
+      cache_sha256: c02aea3ef9f1a3c9466798e1b67d33c290c472d66da26f8c62b3121f4f9760da
 - graph_id: pab-splayed-specificity-2009
-  title: "N-terminal substitutions and PCNA alter P. abyssi junction products"
-  scope: "Ren2009 Figure5C/D,distinct perturbations of splayed-substrate assays."
-  context: "Whole WT or R42A/W75S protein; labeled splayed DNA. PCNA addition compared with no-PCNA/BSA control,three measurements. No equivalent effect is asserted for the other5-prime strand."
-  family_mapping: "Q9V2E8 v1,251 aa,PAB2263/PYRAB01260,PF01939 126-244 and separate PF21003 28-120. Full-protein preparation,not isolated PF01939. R42 and W75 map to PF21003,not PF01939."
-  taxon: "NCBITaxon:272844"
-  scope_status: "MECHANISTIC"
-  limitations: "The double mutant retains short-product smear,so it is not globally nuclease-dead. PCNA-associated specificity changes do not establish native recruitment or all downstream repair steps."
+  title: N-terminal substitutions and PCNA alter P. abyssi junction products
+  scope: Ren2009 Figure5C/D,distinct perturbations of splayed-substrate assays.
+  context: Whole WT or R42A/W75S protein; labeled splayed DNA. PCNA addition compared with no-PCNA/BSA
+    control,three measurements. No equivalent effect is asserted for the other5-prime strand.
+  family_mapping: Q9V2E8 v1,251 aa,PAB2263/PYRAB01260,PF01939 126-244 and separate PF21003 28-120. Full-protein
+    preparation,not isolated PF01939. R42 and W75 map to PF21003,not PF01939.
+  taxon: NCBITaxon:272844
+  scope_status: MECHANISTIC
+  limitations: The double mutant retains short-product smear,so it is not globally nuclease-dead. PCNA-associated
+    specificity changes do not establish native recruitment or all downstream repair steps.
   nodes:
-  - {"node_id":"double","label":"R42A/W75S instead of WT NucS","node_type":"PERTURBATION"}
-  - {"node_id":"clamp","label":"PCNA added to WT NucS and splayed DNA","node_type":"ACTIVITY"}
-  - {"node_id":"junction","label":"Discrete splayed-junction cleavage product","node_type":"STATE"}
+  - node_id: double
+    label: R42A/W75S instead of WT NucS
+    node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q9V2E8
+  - node_id: clamp
+    label: PCNA added to WT NucS and splayed DNA
+    node_type: ACTIVITY
+    grounding:
+    - UniProtKB:Q9V2E8
+  - node_id: junction
+    label: Discrete splayed-junction cleavage product
+    node_type: STATE
   edges:
   - edge_id: double-mutant-junction-reduction
-    subject: "double"
-    predicate: "decreases"
-    object: "junction"
-    mechanism: "The double substitution reduces the discrete junction product while heterogeneous short products remain."
-    directness: "UNRESOLVED"
-    support: "OBSERVED"
-    evidence_kind: "EXPERIMENTAL"
+    subject: double
+    predicate: decreases
+    object: junction
+    mechanism: The double substitution reduces the discrete junction product while heterogeneous short
+      products remain.
+    directness: UNRESOLVED
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
     evidence:
-    - {"reference":"PMID:19609302","source_url":"https://pmc.ncbi.nlm.nih.gov/articles/PMC2735178/","snippet":"cleavage at the junction","explanation":"Figure5C middle/right gels; substitutions are outside PF01939 and may affect substrate handling.","cache_path":"evidence/PF01939/ren-2009.txt","cache_sha256":"c02aea3ef9f1a3c9466798e1b67d33c290c472d66da26f8c62b3121f4f9760da"}
+    - reference: PMID:19609302
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC2735178/
+      snippet: cleavage at the junction
+      explanation: Figure5C middle/right gels; substitutions are outside PF01939 and may affect substrate
+        handling.
+      cache_path: evidence/PF01939/ren-2009.txt
+      cache_sha256: c02aea3ef9f1a3c9466798e1b67d33c290c472d66da26f8c62b3121f4f9760da
   - edge_id: pcna-junction-product-increase
-    subject: "clamp"
-    predicate: "increases"
-    object: "junction"
-    mechanism: "PCNA increases the measured junction-product yield under these conditions; the authors associate this with suppression of nonspecific processing."
-    directness: "DIRECT"
-    support: "OBSERVED"
-    evidence_kind: "EXPERIMENTAL"
+    subject: clamp
+    predicate: increases
+    object: junction
+    mechanism: PCNA increases the measured junction-product yield under these conditions; the authors
+      associate this with suppression of nonspecific processing.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
     evidence:
-    - {"reference":"PMID:19609302","source_url":"https://pmc.ncbi.nlm.nih.gov/articles/PMC2735178/","snippet":"cleavage at the junction","explanation":"Figure5D quantified biochemical comparison; not an inference from binding alone.","cache_path":"evidence/PF01939/ren-2009.txt","cache_sha256":"c02aea3ef9f1a3c9466798e1b67d33c290c472d66da26f8c62b3121f4f9760da"}
+    - reference: PMID:19609302
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC2735178/
+      snippet: cleavage at the junction
+      explanation: Figure5D quantified biochemical comparison; not an inference from binding alone.
+      cache_path: evidence/PF01939/ren-2009.txt
+      cache_sha256: c02aea3ef9f1a3c9466798e1b67d33c290c472d66da26f8c62b3121f4f9760da
 - graph_id: tko-mismatch-cleavage-2016
-  title: "TkoEndoMS cleaves mismatched duplex and requires intact tested residues"
-  scope: "Ishino2016 Figures2/3 and SupplementS6."
-  context: "Purified TK1898 with G/T45-bp duplex at55C in Mg-containing buffer. Figure3 uses50nM dimer; S6 compares100nM WT or mutant dimer with5nM DNA."
-  family_mapping: "Q5JER9 v1,252 aa,TK1898,PF01939 131-245 and separate PF21003 29-125. Full-protein preparation,not isolated PF01939. D165,E179,K181 are in PF01939; N76D is a separate N-terminal control."
-  taxon: "NCBITaxon:69014"
-  scope_status: "MECHANISTIC"
-  limitations: "SDS-PAGE confirms recovered mutant protein,not identical folding. Cleavage of two strands in vitro does not prove a native DSB-to-recombination repair chain. Low-dose normal duplex/ssDNA negatives differ from the high-dose graph."
+  title: TkoEndoMS cleaves mismatched duplex and requires intact tested residues
+  scope: Ishino2016 Figures2/3 and SupplementS6.
+  context: Purified TK1898 with G/T45-bp duplex at55C in Mg-containing buffer. Figure3 uses50nM dimer;
+    S6 compares100nM WT or mutant dimer with5nM DNA.
+  family_mapping: Q5JER9 v1,252 aa,TK1898,PF01939 131-245 and separate PF21003 29-125. Full-protein preparation,not
+    isolated PF01939. D165,E179,K181 are in PF01939; N76D is a separate N-terminal control.
+  taxon: NCBITaxon:69014
+  scope_status: MECHANISTIC
+  limitations: SDS-PAGE confirms recovered mutant protein,not identical folding. Cleavage of two strands
+    in vitro does not prove a native DSB-to-recombination repair chain. Low-dose normal duplex/ssDNA negatives
+    differ from the high-dose graph.
   nodes:
-  - {"node_id":"reaction","label":"WT TkoEndoMS plus G/T duplex and Mg","node_type":"ACTIVITY","grounding":["UniProtKB:Q5JER9"]}
-  - {"node_id":"d165a","label":"D165A instead of WT TkoEndoMS","node_type":"PERTURBATION"}
-  - {"node_id":"e179a","label":"E179A instead of WT TkoEndoMS","node_type":"PERTURBATION"}
-  - {"node_id":"k181a","label":"K181A instead of WT TkoEndoMS","node_type":"PERTURBATION"}
-  - {"node_id":"products","label":"Mismatch-cleaved duplex with5-nt5-prime overhang","node_type":"STATE"}
+  - node_id: reaction
+    label: WT TkoEndoMS plus G/T duplex and Mg
+    node_type: ACTIVITY
+    grounding:
+    - UniProtKB:Q5JER9
+  - node_id: d165a
+    label: D165A instead of WT TkoEndoMS
+    node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q5JER9
+  - node_id: e179a
+    label: E179A instead of WT TkoEndoMS
+    node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q5JER9
+  - node_id: k181a
+    label: K181A instead of WT TkoEndoMS
+    node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q5JER9
+  - node_id: products
+    label: Mismatch-cleaved duplex with5-nt5-prime overhang
+    node_type: STATE
   edges:
   - edge_id: mismatch-duplex-cleavage
-    subject: "reaction"
-    predicate: "produces"
-    object: "products"
-    mechanism: "Strand-specific product sizing assigns cuts on both strands and a five-nucleotide5-prime overhang."
-    directness: "DIRECT"
-    support: "OBSERVED"
-    evidence_kind: "EXPERIMENTAL"
+    subject: reaction
+    predicate: produces
+    object: products
+    mechanism: Strand-specific product sizing assigns cuts on both strands and a five-nucleotide5-prime
+      overhang.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
     evidence:
-    - {"reference":"PMID:27001046","source_url":"https://pmc.ncbi.nlm.nih.gov/articles/PMC4838380/","snippet":"Mutational analysis","explanation":"Figures2/3 and Methods; both labeled strands and size-marker controls.","cache_path":"evidence/PF01939/ishino-2016.txt","cache_sha256":"3e4e70c4b5400132389e889304cf396dc18d28cd02354b8d6af468167d108b50"}
+    - reference: PMID:27001046
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC4838380/
+      snippet: Mutational analysis
+      explanation: Figures2/3 and Methods; both labeled strands and size-marker controls.
+      cache_path: evidence/PF01939/ishino-2016.txt
+      cache_sha256: 3e4e70c4b5400132389e889304cf396dc18d28cd02354b8d6af468167d108b50
   - edge_id: d165a-cleavage-reduction
-    subject: "d165a"
-    predicate: "decreases"
-    object: "products"
-    mechanism: "D165A reduces detectable G/T-cleavage products relative to WT at matched concentration."
-    directness: "UNRESOLVED"
-    support: "OBSERVED"
-    evidence_kind: "EXPERIMENTAL"
+    subject: d165a
+    predicate: decreases
+    object: products
+    mechanism: D165A reduces detectable G/T-cleavage products relative to WT at matched concentration.
+    directness: UNRESOLVED
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
     evidence:
-    - {"reference":"PMID:27001046","source_url":"https://pmc.ncbi.nlm.nih.gov/articles/PMC4838380/","snippet":"Mutational analysis","explanation":"SupplementS6A/B,page12,visually inspected; no independent folding-equivalence measurement.","cache_path":"evidence/PF01939/ishino-2016.txt","cache_sha256":"3e4e70c4b5400132389e889304cf396dc18d28cd02354b8d6af468167d108b50"}
+    - reference: PMID:27001046
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC4838380/
+      snippet: Mutational analysis
+      explanation: SupplementS6A/B,page12,visually inspected; no independent folding-equivalence measurement.
+      cache_path: evidence/PF01939/ishino-2016.txt
+      cache_sha256: 3e4e70c4b5400132389e889304cf396dc18d28cd02354b8d6af468167d108b50
   - edge_id: e179a-cleavage-reduction
-    subject: "e179a"
-    predicate: "decreases"
-    object: "products"
-    mechanism: "E179A reduces detectable G/T-cleavage products relative to WT."
-    directness: "UNRESOLVED"
-    support: "OBSERVED"
-    evidence_kind: "EXPERIMENTAL"
+    subject: e179a
+    predicate: decreases
+    object: products
+    mechanism: E179A reduces detectable G/T-cleavage products relative to WT.
+    directness: UNRESOLVED
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
     evidence:
-    - {"reference":"PMID:27001046","source_url":"https://pmc.ncbi.nlm.nih.gov/articles/PMC4838380/","snippet":"Mutational analysis","explanation":"SupplementS6A/B,page12; distinct individual mutant,not a combined substitution.","cache_path":"evidence/PF01939/ishino-2016.txt","cache_sha256":"3e4e70c4b5400132389e889304cf396dc18d28cd02354b8d6af468167d108b50"}
+    - reference: PMID:27001046
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC4838380/
+      snippet: Mutational analysis
+      explanation: SupplementS6A/B,page12; distinct individual mutant,not a combined substitution.
+      cache_path: evidence/PF01939/ishino-2016.txt
+      cache_sha256: 3e4e70c4b5400132389e889304cf396dc18d28cd02354b8d6af468167d108b50
   - edge_id: k181a-cleavage-reduction
-    subject: "k181a"
-    predicate: "decreases"
-    object: "products"
-    mechanism: "K181A reduces detectable G/T-cleavage products relative to WT."
-    directness: "UNRESOLVED"
-    support: "OBSERVED"
-    evidence_kind: "EXPERIMENTAL"
+    subject: k181a
+    predicate: decreases
+    object: products
+    mechanism: K181A reduces detectable G/T-cleavage products relative to WT.
+    directness: UNRESOLVED
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
     evidence:
-    - {"reference":"PMID:27001046","source_url":"https://pmc.ncbi.nlm.nih.gov/articles/PMC4838380/","snippet":"Mutational analysis","explanation":"SupplementS6A/B,page12; N76D retains activity and is not included among the loss variants.","cache_path":"evidence/PF01939/ishino-2016.txt","cache_sha256":"3e4e70c4b5400132389e889304cf396dc18d28cd02354b8d6af468167d108b50"}
+    - reference: PMID:27001046
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC4838380/
+      snippet: Mutational analysis
+      explanation: SupplementS6A/B,page12; N76D retains activity and is not included among the loss variants.
+      cache_path: evidence/PF01939/ishino-2016.txt
+      cache_sha256: 3e4e70c4b5400132389e889304cf396dc18d28cd02354b8d6af468167d108b50
 - graph_id: tko-pcna-stimulation-2016
-  title: "PCNA stimulation depends on the tested TkoEndoMS terminal tail"
-  scope: "Ishino2016 Figure8."
-  context: "4nM WT or deltaPIP dimer,5nM G/T DNA,PCNA titration in the reported mismatch-cleavage assay; four independent measurements."
-  family_mapping: "Q5JER9 v1,252 aa,TK1898,PF01939 131-245 and separate PF21003 29-125. Full-protein preparation,not isolated PF01939. DeltaPIP removes QKTLF248-252,OUTSIDE current PF01939 131-245."
-  taxon: "NCBITaxon:69014"
-  scope_status: "MECHANISTIC"
-  limitations: "The truncation retains basal cleavage; it is not total catalytic inactivation. Tail dependence is a whole-protein property,not proof of a PF01939-local clamp site or isolated-domain sufficiency."
+  title: PCNA stimulation depends on the tested TkoEndoMS terminal tail
+  scope: Ishino2016 Figure8.
+  context: 4nM WT or deltaPIP dimer,5nM G/T DNA,PCNA titration in the reported mismatch-cleavage assay;
+    four independent measurements.
+  family_mapping: Q5JER9 v1,252 aa,TK1898,PF01939 131-245 and separate PF21003 29-125. Full-protein preparation,not
+    isolated PF01939. DeltaPIP removes QKTLF248-252,OUTSIDE current PF01939 131-245.
+  taxon: NCBITaxon:69014
+  scope_status: MECHANISTIC
+  limitations: The truncation retains basal cleavage; it is not total catalytic inactivation. Tail dependence
+    is a whole-protein property,not proof of a PF01939-local clamp site or isolated-domain sufficiency.
   nodes:
-  - {"node_id":"clamp","label":"PCNA added to WT TkoEndoMS and G/T DNA","node_type":"ACTIVITY"}
-  - {"node_id":"tail","label":"DeltaPIP instead of WT TkoEndoMS with PCNA","node_type":"PERTURBATION"}
-  - {"node_id":"cleavage","label":"G/T duplex cleavage in the PCNA-containing assay","node_type":"STATE"}
+  - node_id: clamp
+    label: PCNA added to WT TkoEndoMS and G/T DNA
+    node_type: ACTIVITY
+    grounding:
+    - UniProtKB:Q5JER9
+  - node_id: tail
+    label: DeltaPIP instead of WT TkoEndoMS with PCNA
+    node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q5JER9
+  - node_id: cleavage
+    label: G/T duplex cleavage in the PCNA-containing assay
+    node_type: STATE
   edges:
   - edge_id: pcna-cleavage-increase
-    subject: "clamp"
-    predicate: "increases"
-    object: "cleavage"
-    mechanism: "Cognate PCNA increases the product fraction for WT over the tested concentration range."
-    directness: "DIRECT"
-    support: "OBSERVED"
-    evidence_kind: "EXPERIMENTAL"
+    subject: clamp
+    predicate: increases
+    object: cleavage
+    mechanism: Cognate PCNA increases the product fraction for WT over the tested concentration range.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
     evidence:
-    - {"reference":"PMID:27001046","source_url":"https://pmc.ncbi.nlm.nih.gov/articles/PMC4838380/","snippet":"Mutational analysis","explanation":"Figure8B/C matched gel and four-experiment quantification; binding alone is not used as evidence.","cache_path":"evidence/PF01939/ishino-2016.txt","cache_sha256":"3e4e70c4b5400132389e889304cf396dc18d28cd02354b8d6af468167d108b50"}
+    - reference: PMID:27001046
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC4838380/
+      snippet: Mutational analysis
+      explanation: Figure8B/C matched gel and four-experiment quantification; binding alone is not used
+        as evidence.
+      cache_path: evidence/PF01939/ishino-2016.txt
+      cache_sha256: 3e4e70c4b5400132389e889304cf396dc18d28cd02354b8d6af468167d108b50
   - edge_id: tail-deletion-stimulation-loss
-    subject: "tail"
-    predicate: "decreases"
-    object: "cleavage"
-    mechanism: "Deleting the five terminal residues removes the PCNA-dependent increase while basal product formation remains."
-    directness: "UNRESOLVED"
-    support: "OBSERVED"
-    evidence_kind: "EXPERIMENTAL"
+    subject: tail
+    predicate: decreases
+    object: cleavage
+    mechanism: Deleting the five terminal residues removes the PCNA-dependent increase while basal product
+      formation remains.
+    directness: UNRESOLVED
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
     evidence:
-    - {"reference":"PMID:27001046","source_url":"https://pmc.ncbi.nlm.nih.gov/articles/PMC4838380/","snippet":"Mutational analysis","explanation":"Figure8 WT/deltaPIP comparison; deleted residues are outside the current Pfam match.","cache_path":"evidence/PF01939/ishino-2016.txt","cache_sha256":"3e4e70c4b5400132389e889304cf396dc18d28cd02354b8d6af468167d108b50"}
+    - reference: PMID:27001046
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC4838380/
+      snippet: Mutational analysis
+      explanation: Figure8 WT/deltaPIP comparison; deleted residues are outside the current Pfam match.
+      cache_path: evidence/PF01939/ishino-2016.txt
+      cache_sha256: 3e4e70c4b5400132389e889304cf396dc18d28cd02354b8d6af468167d108b50
 - graph_id: tko-high-concentration-substrates-2016
-  title: "High-concentration TkoEndoMS also processes non-mismatch model DNAs"
-  scope: "Ishino2016 Figure6A-C."
-  context: "50nM DNA,WT dimer concentration series up to400nM,55C10min; matched D165A negative control and G/T positive control."
-  family_mapping: "Q5JER9 v1,252 aa,TK1898,PF01939 131-245 and separate PF21003 29-125. Full-protein preparation,not isolated PF01939."
-  taxon: "NCBITaxon:69014"
-  scope_status: "MECHANISTIC"
-  limitations: "These weak,heterogeneous high-concentration effects do not establish native branched-DNA or nonspecific-DNA repair pathways. Protein:DNA ratios differ from the low-concentration mismatch-specificity assays."
+  title: High-concentration TkoEndoMS also processes non-mismatch model DNAs
+  scope: Ishino2016 Figure6A-C.
+  context: 50nM DNA,WT dimer concentration series up to400nM,55C10min; matched D165A negative control
+    and G/T positive control.
+  family_mapping: Q5JER9 v1,252 aa,TK1898,PF01939 131-245 and separate PF21003 29-125. Full-protein preparation,not
+    isolated PF01939.
+  taxon: NCBITaxon:69014
+  scope_status: MECHANISTIC
+  limitations: These weak,heterogeneous high-concentration effects do not establish native branched-DNA
+    or nonspecific-DNA repair pathways. Protein:DNA ratios differ from the low-concentration mismatch-specificity
+    assays.
   nodes:
-  - {"node_id":"flap3","label":"High-concentration WT TkoEndoMS plus 3-prime flap DNA","node_type":"ACTIVITY"}
-  - {"node_id":"flap3-products","label":"Heterogeneous 3-prime flap DNA cleavage products","node_type":"STATE"}
-  - {"node_id":"flap5","label":"High-concentration WT TkoEndoMS plus 5-prime flap DNA","node_type":"ACTIVITY"}
-  - {"node_id":"flap5-products","label":"Heterogeneous 5-prime flap DNA cleavage products","node_type":"STATE"}
-  - {"node_id":"splay3","label":"High-concentration WT TkoEndoMS plus 3-prime splayed DNA","node_type":"ACTIVITY"}
-  - {"node_id":"splay3-products","label":"Heterogeneous 3-prime splayed DNA cleavage products","node_type":"STATE"}
-  - {"node_id":"splay5","label":"High-concentration WT TkoEndoMS plus 5-prime splayed DNA","node_type":"ACTIVITY"}
-  - {"node_id":"splay5-products","label":"Heterogeneous 5-prime splayed DNA cleavage products","node_type":"STATE"}
-  - {"node_id":"duplex","label":"High-concentration WT TkoEndoMS plus normal duplex DNA","node_type":"ACTIVITY"}
-  - {"node_id":"duplex-products","label":"Heterogeneous normal duplex DNA cleavage products","node_type":"STATE"}
-  - {"node_id":"single","label":"High-concentration WT TkoEndoMS plus single-stranded DNA","node_type":"ACTIVITY"}
-  - {"node_id":"single-products","label":"Heterogeneous single-stranded DNA cleavage products","node_type":"STATE"}
+  - node_id: flap3
+    label: High-concentration WT TkoEndoMS plus 3-prime flap DNA
+    node_type: ACTIVITY
+    grounding:
+    - UniProtKB:Q5JER9
+  - node_id: flap3-products
+    label: Heterogeneous 3-prime flap DNA cleavage products
+    node_type: STATE
+  - node_id: flap5
+    label: High-concentration WT TkoEndoMS plus 5-prime flap DNA
+    node_type: ACTIVITY
+    grounding:
+    - UniProtKB:Q5JER9
+  - node_id: flap5-products
+    label: Heterogeneous 5-prime flap DNA cleavage products
+    node_type: STATE
+  - node_id: splay3
+    label: High-concentration WT TkoEndoMS plus 3-prime splayed DNA
+    node_type: ACTIVITY
+    grounding:
+    - UniProtKB:Q5JER9
+  - node_id: splay3-products
+    label: Heterogeneous 3-prime splayed DNA cleavage products
+    node_type: STATE
+  - node_id: splay5
+    label: High-concentration WT TkoEndoMS plus 5-prime splayed DNA
+    node_type: ACTIVITY
+    grounding:
+    - UniProtKB:Q5JER9
+  - node_id: splay5-products
+    label: Heterogeneous 5-prime splayed DNA cleavage products
+    node_type: STATE
+  - node_id: duplex
+    label: High-concentration WT TkoEndoMS plus normal duplex DNA
+    node_type: ACTIVITY
+    grounding:
+    - UniProtKB:Q5JER9
+  - node_id: duplex-products
+    label: Heterogeneous normal duplex DNA cleavage products
+    node_type: STATE
+  - node_id: single
+    label: High-concentration WT TkoEndoMS plus single-stranded DNA
+    node_type: ACTIVITY
+    grounding:
+    - UniProtKB:Q5JER9
+  - node_id: single-products
+    label: Heterogeneous single-stranded DNA cleavage products
+    node_type: STATE
   edges:
   - edge_id: flap3-high-dose-cleavage
-    subject: "flap3"
-    predicate: "produces"
-    object: "flap3-products"
-    mechanism: "WT TkoEndoMS generates heterogeneous products from 3-prime flap DNA in this high-concentration assay; this is not a claim of physiological substrate preference."
-    directness: "DIRECT"
-    support: "OBSERVED"
-    evidence_kind: "EXPERIMENTAL"
+    subject: flap3
+    predicate: produces
+    object: flap3-products
+    mechanism: WT TkoEndoMS generates heterogeneous products from 3-prime flap DNA in this high-concentration
+      assay; this is not a claim of physiological substrate preference.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
     evidence:
-    - {"reference":"PMID:27001046","source_url":"https://pmc.ncbi.nlm.nih.gov/articles/PMC4838380/","snippet":"Mutational analysis","explanation":"Figure6 visual gels,50nM substrate,WT concentration series and D165A controls; distinct from low-dose Figure2 negatives.","cache_path":"evidence/PF01939/ishino-2016.txt","cache_sha256":"3e4e70c4b5400132389e889304cf396dc18d28cd02354b8d6af468167d108b50"}
+    - reference: PMID:27001046
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC4838380/
+      snippet: Mutational analysis
+      explanation: Figure6 visual gels,50nM substrate,WT concentration series and D165A controls; distinct
+        from low-dose Figure2 negatives.
+      cache_path: evidence/PF01939/ishino-2016.txt
+      cache_sha256: 3e4e70c4b5400132389e889304cf396dc18d28cd02354b8d6af468167d108b50
   - edge_id: flap5-high-dose-cleavage
-    subject: "flap5"
-    predicate: "produces"
-    object: "flap5-products"
-    mechanism: "WT TkoEndoMS generates heterogeneous products from 5-prime flap DNA in this high-concentration assay; this is not a claim of physiological substrate preference."
-    directness: "DIRECT"
-    support: "OBSERVED"
-    evidence_kind: "EXPERIMENTAL"
+    subject: flap5
+    predicate: produces
+    object: flap5-products
+    mechanism: WT TkoEndoMS generates heterogeneous products from 5-prime flap DNA in this high-concentration
+      assay; this is not a claim of physiological substrate preference.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
     evidence:
-    - {"reference":"PMID:27001046","source_url":"https://pmc.ncbi.nlm.nih.gov/articles/PMC4838380/","snippet":"Mutational analysis","explanation":"Figure6 visual gels,50nM substrate,WT concentration series and D165A controls; distinct from low-dose Figure2 negatives.","cache_path":"evidence/PF01939/ishino-2016.txt","cache_sha256":"3e4e70c4b5400132389e889304cf396dc18d28cd02354b8d6af468167d108b50"}
+    - reference: PMID:27001046
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC4838380/
+      snippet: Mutational analysis
+      explanation: Figure6 visual gels,50nM substrate,WT concentration series and D165A controls; distinct
+        from low-dose Figure2 negatives.
+      cache_path: evidence/PF01939/ishino-2016.txt
+      cache_sha256: 3e4e70c4b5400132389e889304cf396dc18d28cd02354b8d6af468167d108b50
   - edge_id: splay3-high-dose-cleavage
-    subject: "splay3"
-    predicate: "produces"
-    object: "splay3-products"
-    mechanism: "WT TkoEndoMS generates heterogeneous products from 3-prime splayed DNA in this high-concentration assay; this is not a claim of physiological substrate preference."
-    directness: "DIRECT"
-    support: "OBSERVED"
-    evidence_kind: "EXPERIMENTAL"
+    subject: splay3
+    predicate: produces
+    object: splay3-products
+    mechanism: WT TkoEndoMS generates heterogeneous products from 3-prime splayed DNA in this high-concentration
+      assay; this is not a claim of physiological substrate preference.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
     evidence:
-    - {"reference":"PMID:27001046","source_url":"https://pmc.ncbi.nlm.nih.gov/articles/PMC4838380/","snippet":"Mutational analysis","explanation":"Figure6 visual gels,50nM substrate,WT concentration series and D165A controls; distinct from low-dose Figure2 negatives.","cache_path":"evidence/PF01939/ishino-2016.txt","cache_sha256":"3e4e70c4b5400132389e889304cf396dc18d28cd02354b8d6af468167d108b50"}
+    - reference: PMID:27001046
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC4838380/
+      snippet: Mutational analysis
+      explanation: Figure6 visual gels,50nM substrate,WT concentration series and D165A controls; distinct
+        from low-dose Figure2 negatives.
+      cache_path: evidence/PF01939/ishino-2016.txt
+      cache_sha256: 3e4e70c4b5400132389e889304cf396dc18d28cd02354b8d6af468167d108b50
   - edge_id: splay5-high-dose-cleavage
-    subject: "splay5"
-    predicate: "produces"
-    object: "splay5-products"
-    mechanism: "WT TkoEndoMS generates heterogeneous products from 5-prime splayed DNA in this high-concentration assay; this is not a claim of physiological substrate preference."
-    directness: "DIRECT"
-    support: "OBSERVED"
-    evidence_kind: "EXPERIMENTAL"
+    subject: splay5
+    predicate: produces
+    object: splay5-products
+    mechanism: WT TkoEndoMS generates heterogeneous products from 5-prime splayed DNA in this high-concentration
+      assay; this is not a claim of physiological substrate preference.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
     evidence:
-    - {"reference":"PMID:27001046","source_url":"https://pmc.ncbi.nlm.nih.gov/articles/PMC4838380/","snippet":"Mutational analysis","explanation":"Figure6 visual gels,50nM substrate,WT concentration series and D165A controls; distinct from low-dose Figure2 negatives.","cache_path":"evidence/PF01939/ishino-2016.txt","cache_sha256":"3e4e70c4b5400132389e889304cf396dc18d28cd02354b8d6af468167d108b50"}
+    - reference: PMID:27001046
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC4838380/
+      snippet: Mutational analysis
+      explanation: Figure6 visual gels,50nM substrate,WT concentration series and D165A controls; distinct
+        from low-dose Figure2 negatives.
+      cache_path: evidence/PF01939/ishino-2016.txt
+      cache_sha256: 3e4e70c4b5400132389e889304cf396dc18d28cd02354b8d6af468167d108b50
   - edge_id: duplex-high-dose-cleavage
-    subject: "duplex"
-    predicate: "produces"
-    object: "duplex-products"
-    mechanism: "WT TkoEndoMS generates heterogeneous products from normal duplex DNA in this high-concentration assay; this is not a claim of physiological substrate preference."
-    directness: "DIRECT"
-    support: "OBSERVED"
-    evidence_kind: "EXPERIMENTAL"
+    subject: duplex
+    predicate: produces
+    object: duplex-products
+    mechanism: WT TkoEndoMS generates heterogeneous products from normal duplex DNA in this high-concentration
+      assay; this is not a claim of physiological substrate preference.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
     evidence:
-    - {"reference":"PMID:27001046","source_url":"https://pmc.ncbi.nlm.nih.gov/articles/PMC4838380/","snippet":"Mutational analysis","explanation":"Figure6 visual gels,50nM substrate,WT concentration series and D165A controls; distinct from low-dose Figure2 negatives.","cache_path":"evidence/PF01939/ishino-2016.txt","cache_sha256":"3e4e70c4b5400132389e889304cf396dc18d28cd02354b8d6af468167d108b50"}
+    - reference: PMID:27001046
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC4838380/
+      snippet: Mutational analysis
+      explanation: Figure6 visual gels,50nM substrate,WT concentration series and D165A controls; distinct
+        from low-dose Figure2 negatives.
+      cache_path: evidence/PF01939/ishino-2016.txt
+      cache_sha256: 3e4e70c4b5400132389e889304cf396dc18d28cd02354b8d6af468167d108b50
   - edge_id: single-high-dose-cleavage
-    subject: "single"
-    predicate: "produces"
-    object: "single-products"
-    mechanism: "WT TkoEndoMS generates heterogeneous products from single-stranded DNA in this high-concentration assay; this is not a claim of physiological substrate preference."
-    directness: "DIRECT"
-    support: "OBSERVED"
-    evidence_kind: "EXPERIMENTAL"
+    subject: single
+    predicate: produces
+    object: single-products
+    mechanism: WT TkoEndoMS generates heterogeneous products from single-stranded DNA in this high-concentration
+      assay; this is not a claim of physiological substrate preference.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
     evidence:
-    - {"reference":"PMID:27001046","source_url":"https://pmc.ncbi.nlm.nih.gov/articles/PMC4838380/","snippet":"Mutational analysis","explanation":"Figure6 visual gels,50nM substrate,WT concentration series and D165A controls; distinct from low-dose Figure2 negatives.","cache_path":"evidence/PF01939/ishino-2016.txt","cache_sha256":"3e4e70c4b5400132389e889304cf396dc18d28cd02354b8d6af468167d108b50"}
+    - reference: PMID:27001046
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC4838380/
+      snippet: Mutational analysis
+      explanation: Figure6 visual gels,50nM substrate,WT concentration series and D165A controls; distinct
+        from low-dose Figure2 negatives.
+      cache_path: evidence/PF01939/ishino-2016.txt
+      cache_sha256: 3e4e70c4b5400132389e889304cf396dc18d28cd02354b8d6af468167d108b50
 - graph_id: cgl-mn-cleavage-and-clamp-2018
-  title: "CglEndoMS cleavage and clamp effects in the Mn assay"
-  scope: "Ishino2018 Figures3/4 and Table1."
-  context: "N-terminally His-tagged CglEndoMS; default30C,pH6.4,2.5mM MnCl2,45-bp G/T duplex. Cognate beta-clamp addition and separate SPR binding assay."
-  family_mapping: "ATCC13032 NCgl1168/CGL_RS06055 maps via NCBI Gene1019198 and WP_011014205.1 to Q8NR49 v1,230 aa. PF01939 110-230; PF21003 2-103. Not strainR A4QDH7. DeltaCter removes ELTLF226-230 within PF01939."
-  taxon: "NCBITaxon:196627"
-  scope_status: "MECHANISTIC"
-  limitations: "Five-nucleotide product assignment conflicts with Takemoto2018's three-nucleotide report under different conditions. No universal Mn-only requirement is asserted. Homology-model residue numbering is not Cgl numbering; mutant folding is not independently established."
+  title: CglEndoMS cleavage and clamp effects in the Mn assay
+  scope: Ishino2018 Figures3/4 and Table1.
+  context: N-terminally His-tagged CglEndoMS; default30C,pH6.4,2.5mM MnCl2,45-bp G/T duplex. Cognate beta-clamp
+    addition and separate SPR binding assay.
+  family_mapping: ATCC13032 NCgl1168/CGL_RS06055 maps via NCBI Gene1019198 and WP_011014205.1 to Q8NR49
+    v1,230 aa. PF01939 110-230; PF21003 2-103. Not strainR A4QDH7. DeltaCter removes ELTLF226-230 within
+    PF01939.
+  taxon: NCBITaxon:196627
+  scope_status: MECHANISTIC
+  limitations: Five-nucleotide product assignment conflicts with Takemoto2018's three-nucleotide report
+    under different conditions. No universal Mn-only requirement is asserted. Homology-model residue numbering
+    is not Cgl numbering; mutant folding is not independently established.
   nodes:
-  - {"node_id":"reaction","label":"CglEndoMS plus G/T DNA in Mn assay","node_type":"ACTIVITY","grounding":["UniProtKB:Q8NR49"]}
-  - {"node_id":"clamp","label":"Beta-clamp added to WT CglEndoMS reaction","node_type":"ACTIVITY"}
-  - {"node_id":"trunc","label":"Five-residue deltaCter instead of WT CglEndoMS","node_type":"PERTURBATION"}
-  - {"node_id":"products","label":"Reported5-nt-overhang G/T cleavage products","node_type":"STATE"}
-  - {"node_id":"binding","label":"Measured CglEndoMS-beta-clamp SPR interaction","node_type":"STATE"}
+  - node_id: reaction
+    label: CglEndoMS plus G/T DNA in Mn assay
+    node_type: ACTIVITY
+    grounding:
+    - UniProtKB:Q8NR49
+  - node_id: clamp
+    label: Beta-clamp added to WT CglEndoMS reaction
+    node_type: ACTIVITY
+    grounding:
+    - UniProtKB:Q8NR49
+  - node_id: trunc
+    label: Five-residue deltaCter instead of WT CglEndoMS
+    node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q8NR49
+  - node_id: products
+    label: Reported5-nt-overhang G/T cleavage products
+    node_type: STATE
+  - node_id: binding
+    label: Measured CglEndoMS-beta-clamp SPR interaction
+    node_type: STATE
+    grounding:
+    - UniProtKB:Q8NR49
   edges:
   - edge_id: mn-assay-duplex-cleavage
-    subject: "reaction"
-    predicate: "produces"
-    object: "products"
-    mechanism: "Strand-labeled products are assigned to a five-nucleotide5-prime overhang with or without clamp in this study."
-    directness: "DIRECT"
-    support: "OBSERVED"
-    evidence_kind: "EXPERIMENTAL"
+    subject: reaction
+    predicate: produces
+    object: products
+    mechanism: Strand-labeled products are assigned to a five-nucleotide5-prime overhang with or without
+      clamp in this study.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
     evidence:
-    - {"reference":"PMID:29846672","source_url":"https://pmc.ncbi.nlm.nih.gov/articles/PMC6159515/","snippet":"mutation avoidance","explanation":"Figure4A-C visual product ladders; model panelsD/E are not the product evidence.","cache_path":"evidence/PF01939/ishino-2018.txt","cache_sha256":"c0a2cfcd1ae1c3c80f1eb8e0859d33609756bb32030ba7f9477b9e7cb9717de5"}
+    - reference: PMID:29846672
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC6159515/
+      snippet: mutation avoidance
+      explanation: Figure4A-C visual product ladders; model panelsD/E are not the product evidence.
+      cache_path: evidence/PF01939/ishino-2018.txt
+      cache_sha256: c0a2cfcd1ae1c3c80f1eb8e0859d33609756bb32030ba7f9477b9e7cb9717de5
   - edge_id: beta-clamp-cleavage-increase
-    subject: "clamp"
-    predicate: "increases"
-    object: "products"
-    mechanism: "Adding cognate clamp increases WT product formation relative to the no-clamp reaction."
-    directness: "DIRECT"
-    support: "OBSERVED"
-    evidence_kind: "EXPERIMENTAL"
+    subject: clamp
+    predicate: increases
+    object: products
+    mechanism: Adding cognate clamp increases WT product formation relative to the no-clamp reaction.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
     evidence:
-    - {"reference":"PMID:29846672","source_url":"https://pmc.ncbi.nlm.nih.gov/articles/PMC6159515/","snippet":"mutation avoidance","explanation":"Figure3A/B; clamp-alone and no-protein controls,three measurements.","cache_path":"evidence/PF01939/ishino-2018.txt","cache_sha256":"c0a2cfcd1ae1c3c80f1eb8e0859d33609756bb32030ba7f9477b9e7cb9717de5"}
+    - reference: PMID:29846672
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC6159515/
+      snippet: mutation avoidance
+      explanation: Figure3A/B; clamp-alone and no-protein controls,three measurements.
+      cache_path: evidence/PF01939/ishino-2018.txt
+      cache_sha256: c0a2cfcd1ae1c3c80f1eb8e0859d33609756bb32030ba7f9477b9e7cb9717de5
   - edge_id: five-residue-truncation-stimulation-loss
-    subject: "trunc"
-    predicate: "decreases"
-    object: "products"
-    mechanism: "DeltaCter loses the clamp-dependent increase compared with WT in the clamp-containing assay while retaining low basal cleavage."
-    directness: "UNRESOLVED"
-    support: "OBSERVED"
-    evidence_kind: "EXPERIMENTAL"
+    subject: trunc
+    predicate: decreases
+    object: products
+    mechanism: DeltaCter loses the clamp-dependent increase compared with WT in the clamp-containing assay
+      while retaining low basal cleavage.
+    directness: UNRESOLVED
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
     evidence:
-    - {"reference":"PMID:29846672","source_url":"https://pmc.ncbi.nlm.nih.gov/articles/PMC6159515/","snippet":"mutation avoidance","explanation":"Figure3A/B; this is a five-residue deletion,not Takemoto's two-residue Cdel.","cache_path":"evidence/PF01939/ishino-2018.txt","cache_sha256":"c0a2cfcd1ae1c3c80f1eb8e0859d33609756bb32030ba7f9477b9e7cb9717de5"}
+    - reference: PMID:29846672
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC6159515/
+      snippet: mutation avoidance
+      explanation: Figure3A/B; this is a five-residue deletion,not Takemoto's two-residue Cdel.
+      cache_path: evidence/PF01939/ishino-2018.txt
+      cache_sha256: c0a2cfcd1ae1c3c80f1eb8e0859d33609756bb32030ba7f9477b9e7cb9717de5
   - edge_id: five-residue-truncation-binding-loss
-    subject: "trunc"
-    predicate: "decreases"
-    object: "binding"
-    mechanism: "DeltaCter reduces the detectable interaction with immobilized clamp relative to WT under the reported SPR conditions."
-    directness: "UNRESOLVED"
-    support: "OBSERVED"
-    evidence_kind: "EXPERIMENTAL"
+    subject: trunc
+    predicate: decreases
+    object: binding
+    mechanism: DeltaCter reduces the detectable interaction with immobilized clamp relative to WT under
+      the reported SPR conditions.
+    directness: UNRESOLVED
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
     evidence:
-    - {"reference":"PMID:29846672","source_url":"https://pmc.ncbi.nlm.nih.gov/articles/PMC6159515/","snippet":"mutation avoidance","explanation":"Figure3C sensorgrams; binding is a separate readout,not sufficient evidence of downstream activation.","cache_path":"evidence/PF01939/ishino-2018.txt","cache_sha256":"c0a2cfcd1ae1c3c80f1eb8e0859d33609756bb32030ba7f9477b9e7cb9717de5"}
+    - reference: PMID:29846672
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC6159515/
+      snippet: mutation avoidance
+      explanation: Figure3C sensorgrams; binding is a separate readout,not sufficient evidence of downstream
+        activation.
+      cache_path: evidence/PF01939/ishino-2018.txt
+      cache_sha256: c0a2cfcd1ae1c3c80f1eb8e0859d33609756bb32030ba7f9477b9e7cb9717de5
 - graph_id: cgl-mutation-frequency-2018
-  title: "CglEndoMS perturbations alter native mutation frequency"
-  scope: "Ishino2018 Figure1C/D; ATCC13032-derived strains."
-  context: "Selected-colony mutation-frequency assay with native deletion,five-residue chromosomal truncation,WT plasmid rescue and empty-vector controls; four biological replicates."
-  family_mapping: "ATCC13032 NCgl1168/CGL_RS06055 maps via NCBI Gene1019198 and WP_011014205.1 to Q8NR49 v1,230 aa. PF01939 110-230; PF21003 2-103. Not strainR A4QDH7. The chromosomal deltaCter removes226-230."
-  taxon: "NCBITaxon:196627"
-  scope_status: "PHENOTYPIC"
-  limitations: "Figure1C is mutation FREQUENCY,not Takemoto's fluctuation-derived rate. Figure1D measures RNA,not equal protein abundance. WT complementation approaches but is not numerically identical to parental frequency; intermediates are unresolved."
+  title: CglEndoMS perturbations alter native mutation frequency
+  scope: Ishino2018 Figure1C/D; ATCC13032-derived strains.
+  context: Selected-colony mutation-frequency assay with native deletion,five-residue chromosomal truncation,WT
+    plasmid rescue and empty-vector controls; four biological replicates.
+  family_mapping: ATCC13032 NCgl1168/CGL_RS06055 maps via NCBI Gene1019198 and WP_011014205.1 to Q8NR49
+    v1,230 aa. PF01939 110-230; PF21003 2-103. Not strainR A4QDH7. The chromosomal deltaCter removes226-230.
+  taxon: NCBITaxon:196627
+  scope_status: PHENOTYPIC
+  limitations: Figure1C is mutation FREQUENCY,not Takemoto's fluctuation-derived rate. Figure1D measures
+    RNA,not equal protein abundance. WT complementation approaches but is not numerically identical to
+    parental frequency; intermediates are unresolved.
   nodes:
-  - {"node_id":"deletion","label":"Native nucS deletion instead of WT","node_type":"PERTURBATION"}
-  - {"node_id":"rescue","label":"WT nucS supplied to deletion strain","node_type":"PERTURBATION"}
-  - {"node_id":"tail","label":"Native five-residue terminal truncation instead of WT","node_type":"PERTURBATION"}
-  - {"node_id":"frequency","label":"Measured spontaneous mutation frequency","node_type":"PHENOTYPE"}
+  - node_id: deletion
+    label: Native nucS deletion instead of WT
+    node_type: PERTURBATION
+  - node_id: rescue
+    label: WT nucS supplied to deletion strain
+    node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q8NQE1
+  - node_id: tail
+    label: Native five-residue terminal truncation instead of WT
+    node_type: PERTURBATION
+  - node_id: frequency
+    label: Measured spontaneous mutation frequency
+    node_type: PHENOTYPE
   edges:
   - edge_id: deletion-frequency-increase
-    subject: "deletion"
-    predicate: "increases"
-    object: "frequency"
-    mechanism: "Deleting nucS increases the selected-colony mutation-frequency readout relative to parental ATCC13032."
-    directness: "INDIRECT"
-    support: "OBSERVED"
-    evidence_kind: "EXPERIMENTAL"
+    subject: deletion
+    predicate: increases
+    object: frequency
+    mechanism: Deleting nucS increases the selected-colony mutation-frequency readout relative to parental
+      ATCC13032.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
     evidence:
-    - {"reference":"PMID:29846672","source_url":"https://pmc.ncbi.nlm.nih.gov/articles/PMC6159515/","snippet":"mutation avoidance","explanation":"Figure1C; retain frequency-versus-rate distinction despite mixed Results terminology.","cache_path":"evidence/PF01939/ishino-2018.txt","cache_sha256":"c0a2cfcd1ae1c3c80f1eb8e0859d33609756bb32030ba7f9477b9e7cb9717de5"}
+    - reference: PMID:29846672
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC6159515/
+      snippet: mutation avoidance
+      explanation: Figure1C; retain frequency-versus-rate distinction despite mixed Results terminology.
+      cache_path: evidence/PF01939/ishino-2018.txt
+      cache_sha256: c0a2cfcd1ae1c3c80f1eb8e0859d33609756bb32030ba7f9477b9e7cb9717de5
   - edge_id: rescue-frequency-reduction
-    subject: "rescue"
-    predicate: "decreases"
-    object: "frequency"
-    mechanism: "WT nucS complementation lowers the deletion-strain frequency relative to the empty-vector control."
-    directness: "INDIRECT"
-    support: "OBSERVED"
-    evidence_kind: "EXPERIMENTAL"
+    subject: rescue
+    predicate: decreases
+    object: frequency
+    mechanism: WT nucS complementation lowers the deletion-strain frequency relative to the empty-vector
+      control.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
     evidence:
-    - {"reference":"PMID:29846672","source_url":"https://pmc.ncbi.nlm.nih.gov/articles/PMC6159515/","snippet":"mutation avoidance","explanation":"Figure1C/D; locus-specific rescue does not identify every biochemical intermediate.","cache_path":"evidence/PF01939/ishino-2018.txt","cache_sha256":"c0a2cfcd1ae1c3c80f1eb8e0859d33609756bb32030ba7f9477b9e7cb9717de5"}
+    - reference: PMID:29846672
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC6159515/
+      snippet: mutation avoidance
+      explanation: Figure1C/D; locus-specific rescue does not identify every biochemical intermediate.
+      cache_path: evidence/PF01939/ishino-2018.txt
+      cache_sha256: c0a2cfcd1ae1c3c80f1eb8e0859d33609756bb32030ba7f9477b9e7cb9717de5
   - edge_id: five-residue-tail-frequency-increase
-    subject: "tail"
-    predicate: "increases"
-    object: "frequency"
-    mechanism: "The five-residue chromosomal truncation increases measured mutation frequency despite detectable nucS transcript."
-    directness: "INDIRECT"
-    support: "OBSERVED"
-    evidence_kind: "EXPERIMENTAL"
+    subject: tail
+    predicate: increases
+    object: frequency
+    mechanism: The five-residue chromosomal truncation increases measured mutation frequency despite detectable
+      nucS transcript.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
     evidence:
-    - {"reference":"PMID:29846672","source_url":"https://pmc.ncbi.nlm.nih.gov/articles/PMC6159515/","snippet":"mutation avoidance","explanation":"Figure1C/D; transcript abundance does not certify protein folding or equal abundance.","cache_path":"evidence/PF01939/ishino-2018.txt","cache_sha256":"c0a2cfcd1ae1c3c80f1eb8e0859d33609756bb32030ba7f9477b9e7cb9717de5"}
+    - reference: PMID:29846672
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC6159515/
+      snippet: mutation avoidance
+      explanation: Figure1C/D; transcript abundance does not certify protein folding or equal abundance.
+      cache_path: evidence/PF01939/ishino-2018.txt
+      cache_sha256: c0a2cfcd1ae1c3c80f1eb8e0859d33609756bb32030ba7f9477b9e7cb9717de5
 - graph_id: cgl-mg-cleavage-and-clamp-2018
-  title: "CglEndoMS cleavage and clamp effects in the Mg assay"
-  scope: "Takemoto2018 Figures1B/C and2D/E."
-  context: "Tag-free pColdIV EndoMS with His-DnaN; default37C,pH8,10mM magnesium acetate,100mM potassium acetate,60min.100-bp G/T substrate for activity;40-bp strand-labeled substrate for product assignment."
-  family_mapping: "ATCC13032 NCgl1168/CGL_RS06055 maps via NCBI Gene1019198 and WP_011014205.1 to Q8NR49 v1,230 aa. PF01939 110-230; PF21003 2-103. Not strainR A4QDH7. D144 is in PF01939. Cdel removes only L229/F230,leaving228 residues."
-  taxon: "NCBITaxon:196627"
-  scope_status: "MECHANISTIC"
-  limitations: "The reported THREE-nucleotide overhang differs from Ishino2018's FIVE-nucleotide assignment in the same strain. Neither discrepancy is silently corrected. Clamp effects are concentration-dependent; excess-clamp inhibition and rapid DNA dissociation remain separate limits."
+  title: CglEndoMS cleavage and clamp effects in the Mg assay
+  scope: Takemoto2018 Figures1B/C and2D/E.
+  context: Tag-free pColdIV EndoMS with His-DnaN; default37C,pH8,10mM magnesium acetate,100mM potassium
+    acetate,60min.100-bp G/T substrate for activity;40-bp strand-labeled substrate for product assignment.
+  family_mapping: ATCC13032 NCgl1168/CGL_RS06055 maps via NCBI Gene1019198 and WP_011014205.1 to Q8NR49
+    v1,230 aa. PF01939 110-230; PF21003 2-103. Not strainR A4QDH7. D144 is in PF01939. Cdel removes only
+    L229/F230,leaving228 residues.
+  taxon: NCBITaxon:196627
+  scope_status: MECHANISTIC
+  limitations: The reported THREE-nucleotide overhang differs from Ishino2018's FIVE-nucleotide assignment
+    in the same strain. Neither discrepancy is silently corrected. Clamp effects are concentration-dependent;
+    excess-clamp inhibition and rapid DNA dissociation remain separate limits.
   nodes:
-  - {"node_id":"reaction","label":"WT CglEndoMS plus G/T DNA in Mg assay","node_type":"ACTIVITY","grounding":["UniProtKB:Q8NR49"]}
-  - {"node_id":"d144a","label":"D144A instead of WT CglEndoMS","node_type":"PERTURBATION"}
-  - {"node_id":"clamp","label":"Cognate DnaN added to WT EndoMS reaction","node_type":"ACTIVITY"}
-  - {"node_id":"tail","label":"Two-residue Cdel instead of WT with DnaN","node_type":"PERTURBATION"}
-  - {"node_id":"products","label":"G/T duplex cleavage products in the Mg assay","node_type":"STATE"}
+  - node_id: reaction
+    label: WT CglEndoMS plus G/T DNA in Mg assay
+    node_type: ACTIVITY
+    grounding:
+    - UniProtKB:Q8NR49
+  - node_id: d144a
+    label: D144A instead of WT CglEndoMS
+    node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q8NR49
+  - node_id: clamp
+    label: Cognate DnaN added to WT EndoMS reaction
+    node_type: ACTIVITY
+    grounding:
+    - UniProtKB:Q8NR49
+  - node_id: tail
+    label: Two-residue Cdel instead of WT with DnaN
+    node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q8NR49
+  - node_id: products
+    label: G/T duplex cleavage products in the Mg assay
+    node_type: STATE
   edges:
   - edge_id: mg-assay-duplex-cleavage
-    subject: "reaction"
-    predicate: "produces"
-    object: "products"
-    mechanism: "WT cleaves mismatched DNA,and the separately sized products are assigned to a three-nucleotide5-prime overhang."
-    directness: "DIRECT"
-    support: "OBSERVED"
-    evidence_kind: "EXPERIMENTAL"
+    subject: reaction
+    predicate: produces
+    object: products
+    mechanism: WT cleaves mismatched DNA,and the separately sized products are assigned to a three-nucleotide5-prime
+      overhang.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
     evidence:
-    - {"reference":"PMID:29878158","source_url":"https://pmc.ncbi.nlm.nih.gov/articles/PMC6159521/","snippet":"three-nucleotide long","explanation":"Figure1B/C visual gels and strand-specific size markers; reported geometry remains qualified by the other study.","cache_path":"evidence/PF01939/takemoto-2018.txt","cache_sha256":"64dd2f9a707044655b1053a21f5f4a2ae25946eb5ac9c81da58ea61b41d2f41e"}
+    - reference: PMID:29878158
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC6159521/
+      snippet: three-nucleotide long
+      explanation: Figure1B/C visual gels and strand-specific size markers; reported geometry remains
+        qualified by the other study.
+      cache_path: evidence/PF01939/takemoto-2018.txt
+      cache_sha256: 64dd2f9a707044655b1053a21f5f4a2ae25946eb5ac9c81da58ea61b41d2f41e
   - edge_id: d144a-cleavage-reduction
-    subject: "d144a"
-    predicate: "decreases"
-    object: "products"
-    mechanism: "D144A reduces detectable G/T-cleavage products under the matched purified-protein comparison."
-    directness: "UNRESOLVED"
-    support: "OBSERVED"
-    evidence_kind: "EXPERIMENTAL"
+    subject: d144a
+    predicate: decreases
+    object: products
+    mechanism: D144A reduces detectable G/T-cleavage products under the matched purified-protein comparison.
+    directness: UNRESOLVED
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
     evidence:
-    - {"reference":"PMID:29878158","source_url":"https://pmc.ncbi.nlm.nih.gov/articles/PMC6159521/","snippet":"three-nucleotide long","explanation":"Figure1B,WT versus D144A and normal-duplex controls; activity loss alone does not exclude structural effects.","cache_path":"evidence/PF01939/takemoto-2018.txt","cache_sha256":"64dd2f9a707044655b1053a21f5f4a2ae25946eb5ac9c81da58ea61b41d2f41e"}
+    - reference: PMID:29878158
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC6159521/
+      snippet: three-nucleotide long
+      explanation: Figure1B,WT versus D144A and normal-duplex controls; activity loss alone does not exclude
+        structural effects.
+      cache_path: evidence/PF01939/takemoto-2018.txt
+      cache_sha256: 64dd2f9a707044655b1053a21f5f4a2ae25946eb5ac9c81da58ea61b41d2f41e
   - edge_id: dnan-cleavage-increase
-    subject: "clamp"
-    predicate: "increases"
-    object: "products"
-    mechanism: "Cognate DnaN increases WT cleavage in the tested concentration range."
-    directness: "DIRECT"
-    support: "OBSERVED"
-    evidence_kind: "EXPERIMENTAL"
+    subject: clamp
+    predicate: increases
+    object: products
+    mechanism: Cognate DnaN increases WT cleavage in the tested concentration range.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
     evidence:
-    - {"reference":"PMID:29878158","source_url":"https://pmc.ncbi.nlm.nih.gov/articles/PMC6159521/","snippet":"three-nucleotide long","explanation":"Figure2D/E; measured cleavage effect,not inferred from co-IP alone.","cache_path":"evidence/PF01939/takemoto-2018.txt","cache_sha256":"64dd2f9a707044655b1053a21f5f4a2ae25946eb5ac9c81da58ea61b41d2f41e"}
+    - reference: PMID:29878158
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC6159521/
+      snippet: three-nucleotide long
+      explanation: Figure2D/E; measured cleavage effect,not inferred from co-IP alone.
+      cache_path: evidence/PF01939/takemoto-2018.txt
+      cache_sha256: 64dd2f9a707044655b1053a21f5f4a2ae25946eb5ac9c81da58ea61b41d2f41e
   - edge_id: two-residue-tail-stimulation-loss
-    subject: "tail"
-    predicate: "decreases"
-    object: "products"
-    mechanism: "Deleting L229/F230 removes the DnaN-dependent stimulation while basal cleavage remains."
-    directness: "UNRESOLVED"
-    support: "OBSERVED"
-    evidence_kind: "EXPERIMENTAL"
+    subject: tail
+    predicate: decreases
+    object: products
+    mechanism: Deleting L229/F230 removes the DnaN-dependent stimulation while basal cleavage remains.
+    directness: UNRESOLVED
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
     evidence:
-    - {"reference":"PMID:29878158","source_url":"https://pmc.ncbi.nlm.nih.gov/articles/PMC6159521/","snippet":"three-nucleotide long","explanation":"Figure2A/D; distinct two-residue construct,not the five-residue deltaCter from Ishino2018.","cache_path":"evidence/PF01939/takemoto-2018.txt","cache_sha256":"64dd2f9a707044655b1053a21f5f4a2ae25946eb5ac9c81da58ea61b41d2f41e"}
+    - reference: PMID:29878158
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC6159521/
+      snippet: three-nucleotide long
+      explanation: Figure2A/D; distinct two-residue construct,not the five-residue deltaCter from Ishino2018.
+      cache_path: evidence/PF01939/takemoto-2018.txt
+      cache_sha256: 64dd2f9a707044655b1053a21f5f4a2ae25946eb5ac9c81da58ea61b41d2f41e
 - graph_id: cgl-mutation-rate-2018
-  title: "CglEndoMS perturbations alter native fluctuation-derived mutation rate"
-  scope: "Takemoto2018 Figures1A and2C; ATCC13032-derived strains."
-  context: "Native deletion and two-residue terminal truncation; WT or D144A complementation in the deletion background. Fluctuation analysis with20 cultures and confidence intervals."
-  family_mapping: "ATCC13032 NCgl1168/CGL_RS06055 maps via NCBI Gene1019198 and WP_011014205.1 to Q8NR49 v1,230 aa. PF01939 110-230; PF21003 2-103. Not strainR A4QDH7. D144 and L229/F230 are within PF01939."
-  taxon: "NCBITaxon:196627"
-  scope_status: "PHENOTYPIC"
-  limitations: "Native mutation RATE is not Ishino's frequency. Similar protein abundance supports interpretation but does not establish identical folding. Direct repair intermediates and the biochemical-to-cellular causal chain remain unresolved."
+  title: CglEndoMS perturbations alter native fluctuation-derived mutation rate
+  scope: Takemoto2018 Figures1A and2C; ATCC13032-derived strains.
+  context: Native deletion and two-residue terminal truncation; WT or D144A complementation in the deletion
+    background. Fluctuation analysis with20 cultures and confidence intervals.
+  family_mapping: ATCC13032 NCgl1168/CGL_RS06055 maps via NCBI Gene1019198 and WP_011014205.1 to Q8NR49
+    v1,230 aa. PF01939 110-230; PF21003 2-103. Not strainR A4QDH7. D144 and L229/F230 are within PF01939.
+  taxon: NCBITaxon:196627
+  scope_status: PHENOTYPIC
+  limitations: Native mutation RATE is not Ishino's frequency. Similar protein abundance supports interpretation
+    but does not establish identical folding. Direct repair intermediates and the biochemical-to-cellular
+    causal chain remain unresolved.
   nodes:
-  - {"node_id":"deletion","label":"Native endoMS deletion instead of WT","node_type":"PERTURBATION"}
-  - {"node_id":"rescue","label":"WT endoMS supplied to deletion strain","node_type":"PERTURBATION"}
-  - {"node_id":"mutant","label":"D144A instead of WT complementation","node_type":"PERTURBATION"}
-  - {"node_id":"tail","label":"Native two-residue Cdel instead of WT","node_type":"PERTURBATION"}
-  - {"node_id":"rate","label":"Fluctuation-derived spontaneous mutation rate","node_type":"PHENOTYPE"}
+  - node_id: deletion
+    label: Native endoMS deletion instead of WT
+    node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q8NR49
+  - node_id: rescue
+    label: WT endoMS supplied to deletion strain
+    node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q8NR49
+  - node_id: mutant
+    label: D144A instead of WT complementation
+    node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q8NR49
+  - node_id: tail
+    label: Native two-residue Cdel instead of WT
+    node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q8NR49
+  - node_id: rate
+    label: Fluctuation-derived spontaneous mutation rate
+    node_type: PHENOTYPE
   edges:
   - edge_id: deletion-rate-increase
-    subject: "deletion"
-    predicate: "increases"
-    object: "rate"
-    mechanism: "Deleting endoMS raises the estimated mutation rate relative to parental ATCC13032."
-    directness: "INDIRECT"
-    support: "OBSERVED"
-    evidence_kind: "EXPERIMENTAL"
+    subject: deletion
+    predicate: increases
+    object: rate
+    mechanism: Deleting endoMS raises the estimated mutation rate relative to parental ATCC13032.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
     evidence:
-    - {"reference":"PMID:29878158","source_url":"https://pmc.ncbi.nlm.nih.gov/articles/PMC6159521/","snippet":"three-nucleotide long","explanation":"Figure1A WT/deletion controls; rate is derived from fluctuation analysis.","cache_path":"evidence/PF01939/takemoto-2018.txt","cache_sha256":"64dd2f9a707044655b1053a21f5f4a2ae25946eb5ac9c81da58ea61b41d2f41e"}
+    - reference: PMID:29878158
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC6159521/
+      snippet: three-nucleotide long
+      explanation: Figure1A WT/deletion controls; rate is derived from fluctuation analysis.
+      cache_path: evidence/PF01939/takemoto-2018.txt
+      cache_sha256: 64dd2f9a707044655b1053a21f5f4a2ae25946eb5ac9c81da58ea61b41d2f41e
   - edge_id: rescue-rate-reduction
-    subject: "rescue"
-    predicate: "decreases"
-    object: "rate"
-    mechanism: "WT complementation reduces the mutation rate relative to the deletion empty-vector control."
-    directness: "INDIRECT"
-    support: "OBSERVED"
-    evidence_kind: "EXPERIMENTAL"
+    subject: rescue
+    predicate: decreases
+    object: rate
+    mechanism: WT complementation reduces the mutation rate relative to the deletion empty-vector control.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
     evidence:
-    - {"reference":"PMID:29878158","source_url":"https://pmc.ncbi.nlm.nih.gov/articles/PMC6159521/","snippet":"three-nucleotide long","explanation":"Figure1A native Cgl WT construct,not cross-species complementation.","cache_path":"evidence/PF01939/takemoto-2018.txt","cache_sha256":"64dd2f9a707044655b1053a21f5f4a2ae25946eb5ac9c81da58ea61b41d2f41e"}
+    - reference: PMID:29878158
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC6159521/
+      snippet: three-nucleotide long
+      explanation: Figure1A native Cgl WT construct,not cross-species complementation.
+      cache_path: evidence/PF01939/takemoto-2018.txt
+      cache_sha256: 64dd2f9a707044655b1053a21f5f4a2ae25946eb5ac9c81da58ea61b41d2f41e
   - edge_id: d144a-rescue-defect
-    subject: "mutant"
-    predicate: "increases"
-    object: "rate"
-    mechanism: "D144A complementation leaves a higher mutation rate than WT complementation in the same deletion background."
-    directness: "INDIRECT"
-    support: "OBSERVED"
-    evidence_kind: "EXPERIMENTAL"
+    subject: mutant
+    predicate: increases
+    object: rate
+    mechanism: D144A complementation leaves a higher mutation rate than WT complementation in the same
+      deletion background.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
     evidence:
-    - {"reference":"PMID:29878158","source_url":"https://pmc.ncbi.nlm.nih.gov/articles/PMC6159521/","snippet":"three-nucleotide long","explanation":"Figure1A and SupplementS4 abundance control; not a direct observation of cleavage inside cells.","cache_path":"evidence/PF01939/takemoto-2018.txt","cache_sha256":"64dd2f9a707044655b1053a21f5f4a2ae25946eb5ac9c81da58ea61b41d2f41e"}
+    - reference: PMID:29878158
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC6159521/
+      snippet: three-nucleotide long
+      explanation: Figure1A and SupplementS4 abundance control; not a direct observation of cleavage inside
+        cells.
+      cache_path: evidence/PF01939/takemoto-2018.txt
+      cache_sha256: 64dd2f9a707044655b1053a21f5f4a2ae25946eb5ac9c81da58ea61b41d2f41e
   - edge_id: two-residue-tail-rate-increase
-    subject: "tail"
-    predicate: "increases"
-    object: "rate"
-    mechanism: "The chromosomal two-residue Cdel raises the estimated rate relative to WT."
-    directness: "INDIRECT"
-    support: "OBSERVED"
-    evidence_kind: "EXPERIMENTAL"
+    subject: tail
+    predicate: increases
+    object: rate
+    mechanism: The chromosomal two-residue Cdel raises the estimated rate relative to WT.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
     evidence:
-    - {"reference":"PMID:29878158","source_url":"https://pmc.ncbi.nlm.nih.gov/articles/PMC6159521/","snippet":"three-nucleotide long","explanation":"Figure2A/C; do not equate this construct with Ishino's five-residue truncation.","cache_path":"evidence/PF01939/takemoto-2018.txt","cache_sha256":"64dd2f9a707044655b1053a21f5f4a2ae25946eb5ac9c81da58ea61b41d2f41e"}
+    - reference: PMID:29878158
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC6159521/
+      snippet: three-nucleotide long
+      explanation: Figure2A/C; do not equate this construct with Ishino's five-residue truncation.
+      cache_path: evidence/PF01939/takemoto-2018.txt
+      cache_sha256: 64dd2f9a707044655b1053a21f5f4a2ae25946eb5ac9c81da58ea61b41d2f41e

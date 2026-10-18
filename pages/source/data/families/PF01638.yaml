@@ -136,6 +136,8 @@ causal_graphs:
   - node_id: c11a-binding
     label: C11A instead of WT HxlR
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:P42406
   - node_id: fa-binding-enhancement
     label: Formaldehyde-dependent enhancement of the DNA gel shift
     node_type: ACTIVITY
@@ -254,9 +256,13 @@ causal_graphs:
   - node_id: c11a-reporter
     label: C11A instead of WT-labeled pBAD-HxlR
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:P42406
   - node_id: k13a-reporter
     label: K13A instead of WT-labeled pBAD-HxlR
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:P42406
   - node_id: fa-gfp-induction
     label: Formaldehyde-dependent GFP reporter induction
     node_type: PHENOTYPE
@@ -330,5 +336,13 @@ curation_events:
   outcome: needs_followup
   summary: Retain partial scientific causal-graph self-review for PF01638
   history_record: history/records/PF01638/2026-10-11T120923Z-codex-690454.yaml
+  event_index: 0
+  llm_assisted: true
+- timestamp: '2026-10-18T02:54:46Z'
+  curator: Antigravity
+  action: EDIT
+  outcome: changed
+  summary: Ground causal graph gene and protein nodes in PF01638 with verified UniProtKB accessions (UniProtKB:P42406)
+  history_record: history/records/PF01638/2026-10-18T025446Z-antigravity-794a65.yaml
   event_index: 0
   llm_assisted: true

@@ -1,0 +1,38 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01594
+  path: curation/families/PF01594.yaml
+session:
+  id: 2026-10-18T025446Z-antigravity-f8cc90
+  timestamp: '2026-10-18T02:54:46Z'
+  actors:
+  - type: ai_agent
+    name: Antigravity
+    model: Claude Opus 4.6
+    agent_tool: Antigravity
+events:
+- type: EDIT
+  outcome: changed
+  summary: Ground causal graph gene and protein nodes in PF01594 with verified UniProtKB
+    accessions (UniProtKB:P0AFS5)
+  details: 'Reviewed PF01594 causal_graphs and grounded gene/protein PERTURBATION,
+    ACTIVITY, and protein-complex STATE nodes across 6 causal graph(s) using verified
+    UniProtKB accessions from family_mapping:
+
+    - `tqsa-deletion-extracellular-activity-lbglu`: grounded tqsa-deletion-lbglu ->
+    UniProtKB:P0AFS5
+
+    - `tqsa-deletion-lsr-reporter-phases`: grounded tqsa-deletion-exponential -> UniProtKB:P0AFS5;
+    tqsa-deletion-stationary -> UniProtKB:P0AFS5
+
+    - `tqsa-complemented-extracellular-activity`: grounded induce-tqsa-complement
+    -> UniProtKB:P0AFS5
+
+    - `tqsa-deletion-biofilm-lbglu`: grounded tqsa-deletion-biofilm-lbglu -> UniProtKB:P0AFS5
+
+    - `tqsa-deletion-biofilm-m9cglu`: grounded tqsa-deletion-m9cglu -> UniProtKB:P0AFS5
+
+    - `tqsa-deletion-biofilm-lb`: grounded tqsa-deletion-biofilm-lb -> UniProtKB:P0AFS5'
+  sections:
+  - causal_graphs

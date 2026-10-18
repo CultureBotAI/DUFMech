@@ -83,6 +83,8 @@ causal_graphs:
   - node_id: flap3
     label: WT NucS added to accessible3-prime flap
     node_type: ACTIVITY
+    grounding:
+    - UniProtKB:Q9V2E8
   - node_id: block5
     label: Streptavidin-bound5-prime flap substrate
     node_type: PERTURBATION
@@ -175,9 +177,13 @@ causal_graphs:
   - node_id: double
     label: R42A/W75S instead of WT NucS
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q9V2E8
   - node_id: clamp
     label: PCNA added to WT NucS and splayed DNA
     node_type: ACTIVITY
+    grounding:
+    - UniProtKB:Q9V2E8
   - node_id: junction
     label: Discrete splayed-junction cleavage product
     node_type: STATE
@@ -236,12 +242,18 @@ causal_graphs:
   - node_id: d165a
     label: D165A instead of WT TkoEndoMS
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q5JER9
   - node_id: e179a
     label: E179A instead of WT TkoEndoMS
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q5JER9
   - node_id: k181a
     label: K181A instead of WT TkoEndoMS
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q5JER9
   - node_id: products
     label: Mismatch-cleaved duplex with5-nt5-prime overhang
     node_type: STATE
@@ -322,9 +334,13 @@ causal_graphs:
   - node_id: clamp
     label: PCNA added to WT TkoEndoMS and G/T DNA
     node_type: ACTIVITY
+    grounding:
+    - UniProtKB:Q5JER9
   - node_id: tail
     label: DeltaPIP instead of WT TkoEndoMS with PCNA
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q5JER9
   - node_id: cleavage
     label: G/T duplex cleavage in the PCNA-containing assay
     node_type: STATE
@@ -377,36 +393,48 @@ causal_graphs:
   - node_id: flap3
     label: High-concentration WT TkoEndoMS plus 3-prime flap DNA
     node_type: ACTIVITY
+    grounding:
+    - UniProtKB:Q5JER9
   - node_id: flap3-products
     label: Heterogeneous 3-prime flap DNA cleavage products
     node_type: STATE
   - node_id: flap5
     label: High-concentration WT TkoEndoMS plus 5-prime flap DNA
     node_type: ACTIVITY
+    grounding:
+    - UniProtKB:Q5JER9
   - node_id: flap5-products
     label: Heterogeneous 5-prime flap DNA cleavage products
     node_type: STATE
   - node_id: splay3
     label: High-concentration WT TkoEndoMS plus 3-prime splayed DNA
     node_type: ACTIVITY
+    grounding:
+    - UniProtKB:Q5JER9
   - node_id: splay3-products
     label: Heterogeneous 3-prime splayed DNA cleavage products
     node_type: STATE
   - node_id: splay5
     label: High-concentration WT TkoEndoMS plus 5-prime splayed DNA
     node_type: ACTIVITY
+    grounding:
+    - UniProtKB:Q5JER9
   - node_id: splay5-products
     label: Heterogeneous 5-prime splayed DNA cleavage products
     node_type: STATE
   - node_id: duplex
     label: High-concentration WT TkoEndoMS plus normal duplex DNA
     node_type: ACTIVITY
+    grounding:
+    - UniProtKB:Q5JER9
   - node_id: duplex-products
     label: Heterogeneous normal duplex DNA cleavage products
     node_type: STATE
   - node_id: single
     label: High-concentration WT TkoEndoMS plus single-stranded DNA
     node_type: ACTIVITY
+    grounding:
+    - UniProtKB:Q5JER9
   - node_id: single-products
     label: Heterogeneous single-stranded DNA cleavage products
     node_type: STATE
@@ -535,15 +563,21 @@ causal_graphs:
   - node_id: clamp
     label: Beta-clamp added to WT CglEndoMS reaction
     node_type: ACTIVITY
+    grounding:
+    - UniProtKB:Q8NR49
   - node_id: trunc
     label: Five-residue deltaCter instead of WT CglEndoMS
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q8NR49
   - node_id: products
     label: Reported5-nt-overhang G/T cleavage products
     node_type: STATE
   - node_id: binding
     label: Measured CglEndoMS-beta-clamp SPR interaction
     node_type: STATE
+    grounding:
+    - UniProtKB:Q8NR49
   edges:
   - edge_id: mn-assay-duplex-cleavage
     subject: reaction
@@ -628,6 +662,8 @@ causal_graphs:
   - node_id: rescue
     label: WT nucS supplied to deletion strain
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q8NQE1
   - node_id: tail
     label: Native five-residue terminal truncation instead of WT
     node_type: PERTURBATION
@@ -705,12 +741,18 @@ causal_graphs:
   - node_id: d144a
     label: D144A instead of WT CglEndoMS
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q8NR49
   - node_id: clamp
     label: Cognate DnaN added to WT EndoMS reaction
     node_type: ACTIVITY
+    grounding:
+    - UniProtKB:Q8NR49
   - node_id: tail
     label: Two-residue Cdel instead of WT with DnaN
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q8NR49
   - node_id: products
     label: G/T duplex cleavage products in the Mg assay
     node_type: STATE
@@ -794,15 +836,23 @@ causal_graphs:
   - node_id: deletion
     label: Native endoMS deletion instead of WT
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q8NR49
   - node_id: rescue
     label: WT endoMS supplied to deletion strain
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q8NR49
   - node_id: mutant
     label: D144A instead of WT complementation
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q8NR49
   - node_id: tail
     label: Native two-residue Cdel instead of WT
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q8NR49
   - node_id: rate
     label: Fluctuation-derived spontaneous mutation rate
     node_type: PHENOTYPE
@@ -884,5 +934,14 @@ curation_events:
   outcome: needs_followup
   summary: Retain partial NucS causal-graph scientific review with product and coverage follow-ups
   history_record: history/records/PF01939/2026-10-12T055441Z-codex-b73c1e.yaml
+  event_index: 0
+  llm_assisted: true
+- timestamp: '2026-10-18T02:54:46Z'
+  curator: Antigravity
+  action: EDIT
+  outcome: changed
+  summary: Ground causal graph gene and protein nodes in PF01939 with verified UniProtKB accessions (UniProtKB:Q9V2E8,
+    UniProtKB:Q5JER9, UniProtKB:Q8NR49, UniProtKB:Q8NQE1)
+  history_record: history/records/PF01939/2026-10-18T025446Z-antigravity-ade652.yaml
   event_index: 0
   llm_assisted: true

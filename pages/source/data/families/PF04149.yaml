@@ -83,6 +83,8 @@ causal_graphs:
   - node_id: pair-deletion
     label: Joint SCO7615/SCO7616 deletion
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q9F3E1
   - node_id: act-production
     label: Actinorhodin production
     node_type: PHENOTYPE
@@ -123,6 +125,8 @@ causal_graphs:
   - node_id: pair-deletion
     label: Joint SCO7615/SCO7616 deletion
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q9F3E1
   - node_id: act-production
     label: Actinorhodin production
     node_type: PHENOTYPE
@@ -196,5 +200,13 @@ curation_events:
   outcome: needs_followup
   summary: Retain partial scientific reassessment of three PF04149 graphs
   history_record: history/records/PF04149/2026-10-11T041644Z-codex-646d18.yaml
+  event_index: 0
+  llm_assisted: true
+- timestamp: '2026-10-18T02:54:46Z'
+  curator: Antigravity
+  action: EDIT
+  outcome: changed
+  summary: Ground causal graph gene and protein nodes in PF04149 with verified UniProtKB accessions (UniProtKB:Q9F3E1)
+  history_record: history/records/PF04149/2026-10-18T025446Z-antigravity-414223.yaml
   event_index: 0
   llm_assisted: true

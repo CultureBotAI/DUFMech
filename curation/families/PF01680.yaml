@@ -2,344 +2,439 @@ pfam_id: PF01680
 curation_status: IN_PROGRESS
 curation_history: history/records/PF01680
 causal_graphs:
-  - graph_id: pdxs-partner-glutaminase-readout
-    title: PdxS addition increases the partner glutaminase readout
-    scope: Purified untagged Bacillus subtilis 168 YaaD/PdxS and YaaE/PdxT in Raschle 2005 supplement S2A. This is the same experiment retained from the partner perspective in PF01174, not an independent replication.
-    context: 4 uM each protein when present, 300 ul, 50 mM Tris-Cl pH 8.0, 10 mM glutamine, 0.5 mM APAD, 7 U bovine glutamate dehydrogenase, 37 C; monitor A363. Individual-protein controls remain near background.
-    family_mapping: P37527/PDXS_BACSU is strain-168 PdxS/YaaD, 294 aa, sequence version 3; exact InterPro sequence match and PF01680 7-212. Genomic cloning, sequencing and N-terminal protein checks support the association. The full untagged protein, including residues outside this interval, was tested.
-    scope_status: MECHANISTIC
-    taxon: NCBITaxon:224308
-    limitations: This is a coupled glutamate readout. PdxS addition activates the joint preparation; PdxS is not thereby assigned autonomous glutaminase activity. No atomic allostery, ammonia channel or isolated-domain sufficiency is directly measured.
-    nodes:
-      - node_id: add-pdxs-to-pdxt-glutamine
-        label: Add untagged PdxS to PdxT and glutamine
-        node_type: PERTURBATION
-        grounding:
-          - UniProtKB:P37527
-      - node_id: coupled-glutamate-signal
-        label: Glutamate-dependent APAD reduction
-        node_type: ACTIVITY
-    edges:
-      - edge_id: pdxs-increases-partner-readout
-        subject: add-pdxs-to-pdxt-glutamine
-        predicate: increases
-        object: coupled-glutamate-signal
-        mechanism: Partner addition increases glutamine-dependent reporter turnover compared with the individual-protein controls. The joint requirement does not make either protein independently sufficient.
-        directness: DIRECT
-        support: OBSERVED
-        evidence_kind: EXPERIMENTAL
-        evidence:
-          - reference: PMID:16030023
-            source_url: https://archive-ouverte.unige.ch/unige:89531
-            snippet: glutaminase activity
-            explanation: Supplement S2A and main Methods/Results, pp32292-32294; the native untagged preparation differs from the His6 pull-out construct.
-            cache_path: evidence/PF01174/raschle-2005-pdxt.txt
-            cache_sha256: d7f446303a58a75715c784a08baf140e0e1544ad165f1c4f7fd2d27873c4b197
-          - reference: https://www.ebi.ac.uk/interpro/api/protein/uniprot/P37527/entry/pfam/PF01680/
-            source_url: https://www.ebi.ac.uk/interpro/api/protein/uniprot/P37527/entry/pfam/PF01680/
-            snippet: 'P37527 Pfam:PF01680 interval: 7-212, inclusive.'
-            explanation: Exact reference mapping, historical initiator-M restoration and experimental peptide numbering; not proof that all tagged preparations have identical complete sequences.
-            cache_path: evidence/PF01680/PdxS-identity.txt
-            cache_sha256: 338932f451d4982af814bac26aeca8dd40cd6a523460e21c4f30a6f965a8e91f
-  - graph_id: pdxs-joint-plp-product
-    title: The joint PdxS and PdxT reaction produces identified PLP
-    scope: Raschle 2005 purified untagged strain-168 protein reaction and orthogonal product-identification assays. Shared primary experiment with PF01174, not independent support counted twice.
-    context: 40 uM each YaaD/YaaE, 50 mM Tris-Cl pH 8.0, 37 C, 10 mM glutamine, 0.5 mM ribose 5-phosphate and 0.5 mM DHAP. Product analysis combines A414, deproteinized HPLC, chemical spectral shifts, electrospray MS and supplemental NMR.
-    family_mapping: Whole P37527-associated PdxS carries PF01680 7-212; partner PdxT is a separate P37528-associated protein. All proteins and substrates are a joint input, not proof of synthase-domain autonomy.
-    scope_status: MECHANISTIC
-    taxon: NCBITaxon:224308
-    limitations: Figure 1A/B captions state 1 mM glutamine while Methods/Results state 10 mM; no exact fitted kinetics are assigned. Supplemental NMR includes an unknown 3.75-ppm contaminant. The reported DHAP-containing reaction does not establish the molecular route of triose utilization or an intrinsic DHAP isomerase; later substrate-specificity work remains to be reconciled.
-    nodes:
-      - node_id: joint-pdxst-reaction
-        label: Joint PdxS, PdxT, glutamine, ribose 5-phosphate and DHAP reaction
-        node_type: ACTIVITY
-        grounding:
-          - UniProtKB:P37527
-          - UniProtKB:P37528
-      - node_id: identified-plp
-        label: Product identified as pyridoxal 5-phosphate
-        node_type: STATE
-    edges:
-      - edge_id: joint-reaction-produces-plp
-        subject: joint-pdxst-reaction
-        predicate: produces
-        object: identified-plp
-        mechanism: The reconstituted joint reaction produces material matching authentic PLP by orthogonal analyses. This establishes net product formation, not every proposed bond rearrangement.
-        directness: DIRECT
-        support: OBSERVED
-        evidence_kind: EXPERIMENTAL
-        evidence:
-          - reference: PMID:16030023
-            source_url: https://archive-ouverte.unige.ch/unige:89531
-            snippet: pyridoxal
-            explanation: Product Methods/Results pp32293-32296, Figure 2 and supplemental S3; retain both the reported product and its analytical limitations.
-            cache_path: evidence/PF01174/raschle-2005-pdxt.txt
-            cache_sha256: d7f446303a58a75715c784a08baf140e0e1544ad165f1c4f7fd2d27873c4b197
-  - graph_id: pdxs-ribose-external-ammonium
-    title: PdxS supports a product signal with ribose phosphate and external ammonium
-    scope: Raschle 2005 Figure 1C's PdxS-only condition with ribose 5-phosphate, distinct from the ribulose comparison and glutamine-dependent two-protein reaction.
-    context: 20 uM untagged YaaD, no YaaE, 1 mM ribose 5-phosphate, 2 mM DL-G3P and 10 mM ammonium sulfate in 50 mM Tris-Cl pH 8.0 at 37 C; follow A414 over the displayed time course.
-    family_mapping: Strain-168 PdxS/YaaD corresponds to P37527, PF01680 7-212 within the 294-aa reference. Full protein and all listed reactants are retained as one input.
-    scope_status: MECHANISTIC
-    taxon: NCBITaxon:224308
-    limitations: Ammonium sulfate concentration is not an equimolar ammonium-ion concentration. A414 is a PLP-associated reporter, not independent MS/NMR product identification for this particular trace. The assay does not establish that PdxT is dispensable under physiological glutamine conditions.
-    nodes:
-      - node_id: pdxs-ribose-g3p-ammonium
-        label: PdxS with ribose 5-phosphate, DL-G3P and ammonium sulfate
-        node_type: ACTIVITY
-        grounding:
-          - UniProtKB:P37527
-      - node_id: ribose-ammonium-product-signal
-        label: PLP-associated A414 signal without PdxT
-        node_type: STATE
-    edges:
-      - edge_id: pdxs-ammonium-reaction-produces-signal
-        subject: pdxs-ribose-g3p-ammonium
-        predicate: produces
-        object: ribose-ammonium-product-signal
-        mechanism: The joint PdxS/substrate/ammonium mixture develops the product-associated signal without the glutaminase partner in this condition.
-        directness: DIRECT
-        support: OBSERVED
-        evidence_kind: EXPERIMENTAL
-        evidence:
-          - reference: PMID:16030023
-            source_url: https://archive-ouverte.unige.ch/unige:89531
-            snippet: pyridoxal
-            explanation: Visually inspected Figure 1C ribose-phosphate trace without YaaE and its specific 20-uM protocol, not the 40-uM preparative experiment.
-            cache_path: evidence/PF01174/raschle-2005-pdxt.txt
-            cache_sha256: d7f446303a58a75715c784a08baf140e0e1544ad165f1c4f7fd2d27873c4b197
-  - graph_id: pdxs-ribulose-partner-effect
-    title: PdxT addition increases the ribulose-phosphate product signal
-    scope: Raschle 2005 Figure 1C's separate ribulose 5-phosphate and external-ammonium comparison. Same experiment as the corresponding PF01174 partner graph.
-    context: 20 uM untagged YaaD with or without 20 uM YaaE, 1 mM ribulose 5-phosphate, 2 mM DL-G3P and 10 mM ammonium sulfate; 50 mM Tris-Cl pH 8.0, 37 C; A414 time course.
-    family_mapping: Whole strain-168 PdxS/P37527 has PF01680 7-212. The intervention adds the separate PdxT partner; it is not a mutation or deletion within PF01680.
-    scope_status: MECHANISTIC
-    taxon: NCBITaxon:224308
-    limitations: The ribose condition works without PdxT. The observed partner effect cannot be generalized into a universal PdxT requirement or assigned to a directly measured ribulose-isomerization step.
-    nodes:
-      - node_id: add-pdxt-ribulose-ammonium
-        label: Add PdxT to PdxS with ribulose phosphate and external ammonium
-        node_type: PERTURBATION
-        grounding:
-          - UniProtKB:P37528
-      - node_id: ribulose-product-signal
-        label: Ribulose-condition A414 product signal
-        node_type: ACTIVITY
-    edges:
-      - edge_id: partner-increases-ribulose-signal
-        subject: add-pdxt-ribulose-ammonium
-        predicate: increases
-        object: ribulose-product-signal
-        mechanism: Partner addition increases the product-associated signal for this substrate combination even though nitrogen is supplied externally. The particular molecular explanation remains unresolved.
-        directness: DIRECT
-        support: OBSERVED
-        evidence_kind: EXPERIMENTAL
-        evidence:
-          - reference: PMID:16030023
-            source_url: https://archive-ouverte.unige.ch/unige:89531
-            snippet: pyridoxal
-            explanation: Visually inspected Figure 1C ribulose traces and substrate Results p32295; the contrasting ribose negative requirement is preserved.
-            cache_path: evidence/PF01174/raschle-2005-pdxt.txt
-            cache_sha256: d7f446303a58a75715c784a08baf140e0e1544ad165f1c4f7fd2d27873c4b197
-  - graph_id: pdxs-k81-early-adduct
-    title: Ribose phosphate forms a Lys81-linked early adduct
-    scope: Raschle 2007 Figures 3/4, purified Pdx1-His6 and K81R/K149R derivatives. The observed covalent adduct is retained without adopting the paper's subsequently challenged imine interpretation.
-    context: Figure 4 preincubates R5P with each protein for 3 h at 37 C, compared with its no-R5P spectrum; the figure does not enumerate protein/sugar doses. Separate radiolabel-guided tryptic fractionation and isotope-resolved MS/MS locate the early adduct at K81.
-    family_mapping: P37527-associated strain-168 PdxS, current 294-aa sequence with PF01680 7-212. The paper's modified peptide is current residues 61-83 and includes K81. Archived sequence version 2 lacked only the initial M; the paper's numbering already matches current K81/K149. 2NV1 is MAS plus P37527 plus LEHHHHHH, but every 2007 vial's complete clone was not independently sequenced here.
-    scope_status: MECHANISTIC
-    taxon: NCBITaxon:224308
-    limitations: K149R retains the early mass adduct and is not simply inactive in every step. The K81R comparison does not exclude folding effects by itself. Later NMR supports a C2 ketone/C1-N linkage for the prepared early species, so the exact older imine structure is not an observed edge. Neither preparation is an isolated PF01680 domain.
-    nodes:
-      - node_id: wt-pdxs-r5p-incubation
-        label: Incubate WT Pdx1-His6 with ribose 5-phosphate
-        node_type: ACTIVITY
-        grounding:
-          - UniProtKB:P37527
-      - node_id: k81-linked-early-adduct
-        label: Early K81-linked R5P-derived covalent adduct
-        node_type: STATE
-      - node_id: k81r-preparation
-        label: Substitute the Pdx1-His6 K81R preparation for WT
-        node_type: PERTURBATION
-    edges:
-      - edge_id: r5p-reaction-produces-early-adduct
-        subject: wt-pdxs-r5p-incubation
-        predicate: produces
-        object: k81-linked-early-adduct
-        mechanism: WT gains an approximately 212.6-Da mass increment upon R5P incubation, and isotope-resolved peptide analysis identifies K81 as the modified residue. The measured mass/localization is stronger than the original proposed bond chemistry.
-        directness: DIRECT
-        support: OBSERVED
-        evidence_kind: EXPERIMENTAL
-        evidence:
-          - reference: PMID:17189272
-            source_url: https://archive-ouverte.unige.ch/unige:89518
-            snippet: Lys-81
-            explanation: Figures 3A-C and 4A, pp6100-6101; radiolabel-guided separation, isotope mass comparison and fragment assignment support the early adduct localization.
-            cache_path: evidence/PF01680/raschle-2007-pdxs.txt
-            cache_sha256: 4ee3feec377f32495589c46df452ce7b5528f77f40dc5b7e3a825eba7c3111de
-      - edge_id: k81r-decreases-early-adduct
-        subject: k81r-preparation
-        predicate: decreases
-        object: k81-linked-early-adduct
-        mechanism: The K81R sample lacks the new R5P-dependent mass peak observed for WT under the reported comparison. K149R retains a corresponding mass shift, separating the two substitution effects.
-        directness: DIRECT
-        support: OBSERVED
-        evidence_kind: EXPERIMENTAL
-        evidence:
-          - reference: PMID:17189272
-            source_url: https://archive-ouverte.unige.ch/unige:89518
-            snippet: Lys-81
-            explanation: Visually inspected Figure 4A-C with matched plus/minus-R5P spectra; no universal zero activity or folding-rescue claim is made.
-            cache_path: evidence/PF01680/raschle-2007-pdxs.txt
-            cache_sha256: 4ee3feec377f32495589c46df452ce7b5528f77f40dc5b7e3a825eba7c3111de
-  - graph_id: pdxs-chromophore-and-partner-h170n
-    title: Joint reconstitution forms a 315-nm species and the H170N partner lowers it
-    scope: Raschle 2007 Figure 2A main spectra and inset. This is a spectrally defined biochemical state, not endorsement of the original nitrogen-free structural assignment.
-    context: 20 uM free Pdx1, 20 uM Pdx2, 0.2 mM R5P and 10 mM glutamine; main spectra at 0-9 min. Reconstitution Methods give 50 mM Tris-Cl pH 7.5, without restating temperature. Inset compares WT Pdx2 with Pdx2-His6 H170N.
-    family_mapping: Pdx1-His6 derives from P37527-associated PdxS, PF01680 7-212; free preparation is cleared using DL-G3P/ammonium sulfate then dialyzed. H170N is in the separate PdxT/P37528-associated partner, not PF01680. The exact WT partner tag state in this inset is not independently resolved.
-    scope_status: MECHANISTIC
-    taxon: NCBITaxon:224308
-    limitations: Individual Pdx2/glutamine omission controls are described in text; the H170N trace is shown. A sulfate-ammonium route is also reported, so PdxT is not universally necessary. No nitrogen-free formula, ammonia tunnel, complete structural identity or numerical rate advantage is asserted. Later isotope evidence challenges the earlier interpretation.
-    nodes:
-      - node_id: joint-chromophore-reconstitution
-        label: Joint Pdx1, Pdx2, R5P and glutamine reconstitution
-        node_type: ACTIVITY
-        grounding:
-          - UniProtKB:P37527
-      - node_id: chromophore-315
-        label: Reconstituted 315-nm absorbance signal
-        node_type: STATE
-      - node_id: partner-h170n-preparation
-        label: Replace WT partner with the reported Pdx2-His6 H170N preparation
-        node_type: PERTURBATION
-    edges:
-      - edge_id: joint-reconstitution-produces-chromophore
-        subject: joint-chromophore-reconstitution
-        predicate: produces
-        object: chromophore-315
-        mechanism: The complete mixture develops a 315-nm signal over time; neither Pdx2 nor glutamine alone supports that increase with Pdx1/R5P according to the source.
-        directness: DIRECT
-        support: OBSERVED
-        evidence_kind: EXPERIMENTAL
-        evidence:
-          - reference: PMID:17189272
-            source_url: https://archive-ouverte.unige.ch/unige:89518
-            snippet: chromophoric adduct
-            explanation: Figure 2A and reconstitution Methods, pp6099-6100, support a joint-input spectral observation rather than the proposed intermediate formula.
-            cache_path: evidence/PF01680/raschle-2007-pdxs.txt
-            cache_sha256: 4ee3feec377f32495589c46df452ce7b5528f77f40dc5b7e3a825eba7c3111de
-      - edge_id: h170n-partner-decreases-chromophore
-        subject: partner-h170n-preparation
-        predicate: decreases
-        object: chromophore-315
-        mechanism: The reported H170N partner preparation gives a near-baseline time trace compared with the WT partner. This supports a partner-dependent reconstitution effect without assigning the perturbation to the PdxS domain.
-        directness: DIRECT
-        support: OBSERVED
-        evidence_kind: EXPERIMENTAL
-        evidence:
-          - reference: PMID:17189272
-            source_url: https://archive-ouverte.unige.ch/unige:89518
-            snippet: chromophoric adduct
-            explanation: Visually inspected Figure 2A inset; the graph names the actual compared preparation and retains uncertainty in complete tag matching.
-            cache_path: evidence/PF01680/raschle-2007-pdxs.txt
-            cache_sha256: 4ee3feec377f32495589c46df452ce7b5528f77f40dc5b7e3a825eba7c3111de
-  - graph_id: pdxs-g3p-spectral-conversion
-    title: G3P addition lowers the preformed 315-nm signal and raises A414
-    scope: Raschle 2007 Figure 2C main panel after chromophore reconstitution. Two measured endpoints share one substrate-addition intervention; neither is assumed to cause the other.
-    context: Prepare the chromophore as in Figure 2A, then add 0.4 mM DL-G3P; record spectra at 3, 9, 15, 25, 40 and 60 min. The caption ends with pH 8.0 whereas reconstitution Methods use pH 7.5. Temperature is not explicitly restated for this experiment.
-    family_mapping: Whole P37527-associated Pdx1-His6, with PF01680 7-212, is assayed in the stated reconstitution mixture. This is not the 2005 untagged product-identification preparation or the later Hanes NMR quench preparation.
-    scope_status: MECHANISTIC
-    taxon: NCBITaxon:224308
-    limitations: The separate dialyzed inset states 0.4 uM DL-G3P, conflicting with the main-panel 0.4 mM dose, and shows partial conversion. A414 is PLP-associated but does not independently distinguish enzyme-bound from released PLP. No exact conversion yield or complete intervening atomic mechanism is assigned.
-    nodes:
-      - node_id: add-g3p-to-preformed-chromophore
-        label: Add 0.4 mM DL-G3P to the preformed chromophore mixture
-        node_type: PERTURBATION
-      - node_id: remaining-a315
-        label: Remaining A315 chromophore signal
-        node_type: STATE
-      - node_id: rising-a414
-        label: PLP-associated A414 product signal
-        node_type: STATE
-    edges:
-      - edge_id: g3p-decreases-a315
-        subject: add-g3p-to-preformed-chromophore
-        predicate: decreases
-        object: remaining-a315
-        mechanism: The 315-nm absorbance decreases following G3P addition to the preformed species. The experiment constrains net conversion, not all intermediate structures.
-        directness: DIRECT
-        support: OBSERVED
-        evidence_kind: EXPERIMENTAL
-        evidence:
-          - reference: PMID:17189272
-            source_url: https://archive-ouverte.unige.ch/unige:89518
-            snippet: chromophoric adduct
-            explanation: Visually inspected Figure 2C main spectra and caption; main-panel and inset concentrations remain explicitly separate.
-            cache_path: evidence/PF01680/raschle-2007-pdxs.txt
-            cache_sha256: 4ee3feec377f32495589c46df452ce7b5528f77f40dc5b7e3a825eba7c3111de
-      - edge_id: g3p-increases-a414
-        subject: add-g3p-to-preformed-chromophore
-        predicate: increases
-        object: rising-a414
-        mechanism: The same substrate addition raises the product-associated 414-nm absorbance as A315 declines, with an isosbestic point. This is a measured endpoint, not a transitive arrow derived from chromophore loss alone.
-        directness: DIRECT
-        support: OBSERVED
-        evidence_kind: EXPERIMENTAL
-        evidence:
-          - reference: PMID:17189272
-            source_url: https://archive-ouverte.unige.ch/unige:89518
-            snippet: chromophoric adduct
-            explanation: Figure 2C main spectra; orthogonal product identification from 2005 is contextual support, not an independent measurement on this particular sample.
-            cache_path: evidence/PF01680/raschle-2007-pdxs.txt
-            cache_sha256: 4ee3feec377f32495589c46df452ce7b5528f77f40dc5b7e3a825eba7c3111de
-  - graph_id: pdxs-joint-phosphate-release
-    title: The joint R5P reaction releases inorganic phosphate
-    scope: Raschle 2007 Figure 6C/D and the coupled phosphate-assay Methods. Phosphate release is an independent measured endpoint, not a causal consequence inferred from the optical chromophore trace.
-    context: Equimolar Pdx1/Pdx2 at 10, 20 or 40 uM each, glutamine and R5P; 300 ul, 50 mM Tris-Cl pH 8.0, 20 mM MgCl2 and EnzChek components; monitor A360. Assay-specific glutamine/R5P doses and temperature are not enumerated.
-    family_mapping: P37527-associated Pdx1-His6 contains PF01680 7-212, together with the separate Pdx2 protein. Full proteins and substrates are joint inputs, not isolated-domain or family-wide evidence.
-    scope_status: MECHANISTIC
-    taxon: NCBITaxon:224308
-    limitations: No enzyme-free control is shown in Figure 6C/D. Do not assign an exact completed one-to-one phosphate yield from finite time courses or transfer Figure 2A doses. This assay does not by itself distinguish elimination from hydrolysis or establish the nitrogen content of the accompanying chromophore.
-    nodes:
-      - node_id: joint-r5p-phosphate-reaction
-        label: Joint Pdx1, Pdx2, glutamine and R5P reaction
-        node_type: ACTIVITY
-        grounding:
-          - UniProtKB:P37527
-      - node_id: released-phosphate
-        label: Inorganic phosphate detected by the coupled assay
-        node_type: STATE
-    edges:
-      - edge_id: joint-reaction-produces-phosphate
-        subject: joint-r5p-phosphate-reaction
-        predicate: produces
-        object: released-phosphate
-        mechanism: The reported joint reaction yields increasing inorganic-phosphate readout with time. Its concomitance with chromophore formation is retained without joining the two signals by an unsupported causal arrow.
-        directness: DIRECT
-        support: OBSERVED
-        evidence_kind: EXPERIMENTAL
-        evidence:
-          - reference: PMID:17189272
-            source_url: https://archive-ouverte.unige.ch/unige:89518
-            snippet: inorganic phosphate
-            explanation: Phosphate-assay Methods p6099 and visually inspected Figure 6C/D p6103; incomplete condition and control reporting limits mechanistic specificity.
-            cache_path: evidence/PF01680/raschle-2007-pdxs.txt
-            cache_sha256: 4ee3feec377f32495589c46df452ce7b5528f77f40dc5b7e3a825eba7c3111de
-discussions:
-  - discussion_id: pdxs-intermediate-chemistry-and-context-coverage
-    prompt: Reconcile PdxS intermediate structures, complete construct provenance and additional family contexts.
-    kind: CURATION_TODO
-    status: OPEN
-    rationale: Eight graphs retain eleven measured effects with explicit member and assay boundaries. The 2007 early-imine and nitrogen-free chromophore proposals are not encoded as settled chemistry; later 2008 NMR challenges those interpretations but uses distinct preparations and quench products.
+- graph_id: pdxs-partner-glutaminase-readout
+  title: PdxS addition increases the partner glutaminase readout
+  scope: Purified untagged Bacillus subtilis 168 YaaD/PdxS and YaaE/PdxT in Raschle 2005 supplement S2A.
+    This is the same experiment retained from the partner perspective in PF01174, not an independent replication.
+  context: 4 uM each protein when present, 300 ul, 50 mM Tris-Cl pH 8.0, 10 mM glutamine, 0.5 mM APAD,
+    7 U bovine glutamate dehydrogenase, 37 C; monitor A363. Individual-protein controls remain near background.
+  family_mapping: P37527/PDXS_BACSU is strain-168 PdxS/YaaD, 294 aa, sequence version 3; exact InterPro
+    sequence match and PF01680 7-212. Genomic cloning, sequencing and N-terminal protein checks support
+    the association. The full untagged protein, including residues outside this interval, was tested.
+  scope_status: MECHANISTIC
+  taxon: NCBITaxon:224308
+  limitations: This is a coupled glutamate readout. PdxS addition activates the joint preparation; PdxS
+    is not thereby assigned autonomous glutaminase activity. No atomic allostery, ammonia channel or isolated-domain
+    sufficiency is directly measured.
+  nodes:
+  - node_id: add-pdxs-to-pdxt-glutamine
+    label: Add untagged PdxS to PdxT and glutamine
+    node_type: PERTURBATION
+    grounding:
+    - UniProtKB:P37527
+  - node_id: coupled-glutamate-signal
+    label: Glutamate-dependent APAD reduction
+    node_type: ACTIVITY
+  edges:
+  - edge_id: pdxs-increases-partner-readout
+    subject: add-pdxs-to-pdxt-glutamine
+    predicate: increases
+    object: coupled-glutamate-signal
+    mechanism: Partner addition increases glutamine-dependent reporter turnover compared with the individual-protein
+      controls. The joint requirement does not make either protein independently sufficient.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
     evidence:
-      - reference: PMID:17189272
-        supports: PARTIAL
-        evidence_source: inspected_primary_full_text_and_figures
-        explanation: Figures support adduct localization, partner dependence, spectral conversion and phosphate release. Some concentrations, mass descriptions and proposed structures remain inconsistent or incompletely documented.
-      - reference: PMID:18516049
-        supports: PARTIAL
-        evidence_source: inspected_author_full_text_and_publisher_supplement
-        explanation: C2 ketone/C1-N observations and S5 nitrogen-labeling qualify the early structural proposal. Acid/urea-derived Z2 is explicitly not a native enzymatic intermediate; the proposed complete chemical pathway is not fully directly observed.
-    notes: Preserve the 2008 follow-up in evidence/PF01680/hanes-2008-nmr-boundaries.txt. Resolve full tagged clone sequences, WT Pdx2 tag matching, 0.4 mM versus 0.4 uM G3P, pH7.5 versus pH8.0, and text/table mass differences. Inspect the 2008 JACS substrate study before assigning intrinsic DHAP isomerization; inspect the 2011 second-site and 2015 Geobacillus results before extending the chemical sequence. Assess plant/fungal and other microbial members independently. No ammonia-channel geometry, physiological phenotype or family-wide mechanism is established by these graphs. Partial scientific self-review; remain IN_PROGRESS.
-    posed_by: Codex
-    posed_date: '2026-10-11'
+    - reference: PMID:16030023
+      source_url: https://archive-ouverte.unige.ch/unige:89531
+      snippet: glutaminase activity
+      explanation: Supplement S2A and main Methods/Results, pp32292-32294; the native untagged preparation
+        differs from the His6 pull-out construct.
+      cache_path: evidence/PF01174/raschle-2005-pdxt.txt
+      cache_sha256: d7f446303a58a75715c784a08baf140e0e1544ad165f1c4f7fd2d27873c4b197
+    - reference: https://www.ebi.ac.uk/interpro/api/protein/uniprot/P37527/entry/pfam/PF01680/
+      source_url: https://www.ebi.ac.uk/interpro/api/protein/uniprot/P37527/entry/pfam/PF01680/
+      snippet: 'P37527 Pfam:PF01680 interval: 7-212, inclusive.'
+      explanation: Exact reference mapping, historical initiator-M restoration and experimental peptide
+        numbering; not proof that all tagged preparations have identical complete sequences.
+      cache_path: evidence/PF01680/PdxS-identity.txt
+      cache_sha256: 338932f451d4982af814bac26aeca8dd40cd6a523460e21c4f30a6f965a8e91f
+- graph_id: pdxs-joint-plp-product
+  title: The joint PdxS and PdxT reaction produces identified PLP
+  scope: Raschle 2005 purified untagged strain-168 protein reaction and orthogonal product-identification
+    assays. Shared primary experiment with PF01174, not independent support counted twice.
+  context: 40 uM each YaaD/YaaE, 50 mM Tris-Cl pH 8.0, 37 C, 10 mM glutamine, 0.5 mM ribose 5-phosphate
+    and 0.5 mM DHAP. Product analysis combines A414, deproteinized HPLC, chemical spectral shifts, electrospray
+    MS and supplemental NMR.
+  family_mapping: Whole P37527-associated PdxS carries PF01680 7-212; partner PdxT is a separate P37528-associated
+    protein. All proteins and substrates are a joint input, not proof of synthase-domain autonomy.
+  scope_status: MECHANISTIC
+  taxon: NCBITaxon:224308
+  limitations: Figure 1A/B captions state 1 mM glutamine while Methods/Results state 10 mM; no exact fitted
+    kinetics are assigned. Supplemental NMR includes an unknown 3.75-ppm contaminant. The reported DHAP-containing
+    reaction does not establish the molecular route of triose utilization or an intrinsic DHAP isomerase;
+    later substrate-specificity work remains to be reconciled.
+  nodes:
+  - node_id: joint-pdxst-reaction
+    label: Joint PdxS, PdxT, glutamine, ribose 5-phosphate and DHAP reaction
+    node_type: ACTIVITY
+    grounding:
+    - UniProtKB:P37527
+    - UniProtKB:P37528
+  - node_id: identified-plp
+    label: Product identified as pyridoxal 5-phosphate
+    node_type: STATE
+  edges:
+  - edge_id: joint-reaction-produces-plp
+    subject: joint-pdxst-reaction
+    predicate: produces
+    object: identified-plp
+    mechanism: The reconstituted joint reaction produces material matching authentic PLP by orthogonal
+      analyses. This establishes net product formation, not every proposed bond rearrangement.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:16030023
+      source_url: https://archive-ouverte.unige.ch/unige:89531
+      snippet: pyridoxal
+      explanation: Product Methods/Results pp32293-32296, Figure 2 and supplemental S3; retain both the
+        reported product and its analytical limitations.
+      cache_path: evidence/PF01174/raschle-2005-pdxt.txt
+      cache_sha256: d7f446303a58a75715c784a08baf140e0e1544ad165f1c4f7fd2d27873c4b197
+- graph_id: pdxs-ribose-external-ammonium
+  title: PdxS supports a product signal with ribose phosphate and external ammonium
+  scope: Raschle 2005 Figure 1C's PdxS-only condition with ribose 5-phosphate, distinct from the ribulose
+    comparison and glutamine-dependent two-protein reaction.
+  context: 20 uM untagged YaaD, no YaaE, 1 mM ribose 5-phosphate, 2 mM DL-G3P and 10 mM ammonium sulfate
+    in 50 mM Tris-Cl pH 8.0 at 37 C; follow A414 over the displayed time course.
+  family_mapping: Strain-168 PdxS/YaaD corresponds to P37527, PF01680 7-212 within the 294-aa reference.
+    Full protein and all listed reactants are retained as one input.
+  scope_status: MECHANISTIC
+  taxon: NCBITaxon:224308
+  limitations: Ammonium sulfate concentration is not an equimolar ammonium-ion concentration. A414 is
+    a PLP-associated reporter, not independent MS/NMR product identification for this particular trace.
+    The assay does not establish that PdxT is dispensable under physiological glutamine conditions.
+  nodes:
+  - node_id: pdxs-ribose-g3p-ammonium
+    label: PdxS with ribose 5-phosphate, DL-G3P and ammonium sulfate
+    node_type: ACTIVITY
+    grounding:
+    - UniProtKB:P37527
+  - node_id: ribose-ammonium-product-signal
+    label: PLP-associated A414 signal without PdxT
+    node_type: STATE
+  edges:
+  - edge_id: pdxs-ammonium-reaction-produces-signal
+    subject: pdxs-ribose-g3p-ammonium
+    predicate: produces
+    object: ribose-ammonium-product-signal
+    mechanism: The joint PdxS/substrate/ammonium mixture develops the product-associated signal without
+      the glutaminase partner in this condition.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:16030023
+      source_url: https://archive-ouverte.unige.ch/unige:89531
+      snippet: pyridoxal
+      explanation: Visually inspected Figure 1C ribose-phosphate trace without YaaE and its specific 20-uM
+        protocol, not the 40-uM preparative experiment.
+      cache_path: evidence/PF01174/raschle-2005-pdxt.txt
+      cache_sha256: d7f446303a58a75715c784a08baf140e0e1544ad165f1c4f7fd2d27873c4b197
+- graph_id: pdxs-ribulose-partner-effect
+  title: PdxT addition increases the ribulose-phosphate product signal
+  scope: Raschle 2005 Figure 1C's separate ribulose 5-phosphate and external-ammonium comparison. Same
+    experiment as the corresponding PF01174 partner graph.
+  context: 20 uM untagged YaaD with or without 20 uM YaaE, 1 mM ribulose 5-phosphate, 2 mM DL-G3P and
+    10 mM ammonium sulfate; 50 mM Tris-Cl pH 8.0, 37 C; A414 time course.
+  family_mapping: Whole strain-168 PdxS/P37527 has PF01680 7-212. The intervention adds the separate PdxT
+    partner; it is not a mutation or deletion within PF01680.
+  scope_status: MECHANISTIC
+  taxon: NCBITaxon:224308
+  limitations: The ribose condition works without PdxT. The observed partner effect cannot be generalized
+    into a universal PdxT requirement or assigned to a directly measured ribulose-isomerization step.
+  nodes:
+  - node_id: add-pdxt-ribulose-ammonium
+    label: Add PdxT to PdxS with ribulose phosphate and external ammonium
+    node_type: PERTURBATION
+    grounding:
+    - UniProtKB:P37528
+  - node_id: ribulose-product-signal
+    label: Ribulose-condition A414 product signal
+    node_type: ACTIVITY
+  edges:
+  - edge_id: partner-increases-ribulose-signal
+    subject: add-pdxt-ribulose-ammonium
+    predicate: increases
+    object: ribulose-product-signal
+    mechanism: Partner addition increases the product-associated signal for this substrate combination
+      even though nitrogen is supplied externally. The particular molecular explanation remains unresolved.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:16030023
+      source_url: https://archive-ouverte.unige.ch/unige:89531
+      snippet: pyridoxal
+      explanation: Visually inspected Figure 1C ribulose traces and substrate Results p32295; the contrasting
+        ribose negative requirement is preserved.
+      cache_path: evidence/PF01174/raschle-2005-pdxt.txt
+      cache_sha256: d7f446303a58a75715c784a08baf140e0e1544ad165f1c4f7fd2d27873c4b197
+- graph_id: pdxs-k81-early-adduct
+  title: Ribose phosphate forms a Lys81-linked early adduct
+  scope: Raschle 2007 Figures 3/4, purified Pdx1-His6 and K81R/K149R derivatives. The observed covalent
+    adduct is retained without adopting the paper's subsequently challenged imine interpretation.
+  context: Figure 4 preincubates R5P with each protein for 3 h at 37 C, compared with its no-R5P spectrum;
+    the figure does not enumerate protein/sugar doses. Separate radiolabel-guided tryptic fractionation
+    and isotope-resolved MS/MS locate the early adduct at K81.
+  family_mapping: P37527-associated strain-168 PdxS, current 294-aa sequence with PF01680 7-212. The paper's
+    modified peptide is current residues 61-83 and includes K81. Archived sequence version 2 lacked only
+    the initial M; the paper's numbering already matches current K81/K149. 2NV1 is MAS plus P37527 plus
+    LEHHHHHH, but every 2007 vial's complete clone was not independently sequenced here.
+  scope_status: MECHANISTIC
+  taxon: NCBITaxon:224308
+  limitations: K149R retains the early mass adduct and is not simply inactive in every step. The K81R
+    comparison does not exclude folding effects by itself. Later NMR supports a C2 ketone/C1-N linkage
+    for the prepared early species, so the exact older imine structure is not an observed edge. Neither
+    preparation is an isolated PF01680 domain.
+  nodes:
+  - node_id: wt-pdxs-r5p-incubation
+    label: Incubate WT Pdx1-His6 with ribose 5-phosphate
+    node_type: ACTIVITY
+    grounding:
+    - UniProtKB:P37527
+  - node_id: k81-linked-early-adduct
+    label: Early K81-linked R5P-derived covalent adduct
+    node_type: STATE
+  - node_id: k81r-preparation
+    label: Substitute the Pdx1-His6 K81R preparation for WT
+    node_type: PERTURBATION
+    grounding:
+    - UniProtKB:P37527
+  edges:
+  - edge_id: r5p-reaction-produces-early-adduct
+    subject: wt-pdxs-r5p-incubation
+    predicate: produces
+    object: k81-linked-early-adduct
+    mechanism: WT gains an approximately 212.6-Da mass increment upon R5P incubation, and isotope-resolved
+      peptide analysis identifies K81 as the modified residue. The measured mass/localization is stronger
+      than the original proposed bond chemistry.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:17189272
+      source_url: https://archive-ouverte.unige.ch/unige:89518
+      snippet: Lys-81
+      explanation: Figures 3A-C and 4A, pp6100-6101; radiolabel-guided separation, isotope mass comparison
+        and fragment assignment support the early adduct localization.
+      cache_path: evidence/PF01680/raschle-2007-pdxs.txt
+      cache_sha256: 4ee3feec377f32495589c46df452ce7b5528f77f40dc5b7e3a825eba7c3111de
+  - edge_id: k81r-decreases-early-adduct
+    subject: k81r-preparation
+    predicate: decreases
+    object: k81-linked-early-adduct
+    mechanism: The K81R sample lacks the new R5P-dependent mass peak observed for WT under the reported
+      comparison. K149R retains a corresponding mass shift, separating the two substitution effects.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:17189272
+      source_url: https://archive-ouverte.unige.ch/unige:89518
+      snippet: Lys-81
+      explanation: Visually inspected Figure 4A-C with matched plus/minus-R5P spectra; no universal zero
+        activity or folding-rescue claim is made.
+      cache_path: evidence/PF01680/raschle-2007-pdxs.txt
+      cache_sha256: 4ee3feec377f32495589c46df452ce7b5528f77f40dc5b7e3a825eba7c3111de
+- graph_id: pdxs-chromophore-and-partner-h170n
+  title: Joint reconstitution forms a 315-nm species and the H170N partner lowers it
+  scope: Raschle 2007 Figure 2A main spectra and inset. This is a spectrally defined biochemical state,
+    not endorsement of the original nitrogen-free structural assignment.
+  context: 20 uM free Pdx1, 20 uM Pdx2, 0.2 mM R5P and 10 mM glutamine; main spectra at 0-9 min. Reconstitution
+    Methods give 50 mM Tris-Cl pH 7.5, without restating temperature. Inset compares WT Pdx2 with Pdx2-His6
+    H170N.
+  family_mapping: Pdx1-His6 derives from P37527-associated PdxS, PF01680 7-212; free preparation is cleared
+    using DL-G3P/ammonium sulfate then dialyzed. H170N is in the separate PdxT/P37528-associated partner,
+    not PF01680. The exact WT partner tag state in this inset is not independently resolved.
+  scope_status: MECHANISTIC
+  taxon: NCBITaxon:224308
+  limitations: Individual Pdx2/glutamine omission controls are described in text; the H170N trace is shown.
+    A sulfate-ammonium route is also reported, so PdxT is not universally necessary. No nitrogen-free
+    formula, ammonia tunnel, complete structural identity or numerical rate advantage is asserted. Later
+    isotope evidence challenges the earlier interpretation.
+  nodes:
+  - node_id: joint-chromophore-reconstitution
+    label: Joint Pdx1, Pdx2, R5P and glutamine reconstitution
+    node_type: ACTIVITY
+    grounding:
+    - UniProtKB:P37527
+  - node_id: chromophore-315
+    label: Reconstituted 315-nm absorbance signal
+    node_type: STATE
+  - node_id: partner-h170n-preparation
+    label: Replace WT partner with the reported Pdx2-His6 H170N preparation
+    node_type: PERTURBATION
+  edges:
+  - edge_id: joint-reconstitution-produces-chromophore
+    subject: joint-chromophore-reconstitution
+    predicate: produces
+    object: chromophore-315
+    mechanism: The complete mixture develops a 315-nm signal over time; neither Pdx2 nor glutamine alone
+      supports that increase with Pdx1/R5P according to the source.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:17189272
+      source_url: https://archive-ouverte.unige.ch/unige:89518
+      snippet: chromophoric adduct
+      explanation: Figure 2A and reconstitution Methods, pp6099-6100, support a joint-input spectral observation
+        rather than the proposed intermediate formula.
+      cache_path: evidence/PF01680/raschle-2007-pdxs.txt
+      cache_sha256: 4ee3feec377f32495589c46df452ce7b5528f77f40dc5b7e3a825eba7c3111de
+  - edge_id: h170n-partner-decreases-chromophore
+    subject: partner-h170n-preparation
+    predicate: decreases
+    object: chromophore-315
+    mechanism: The reported H170N partner preparation gives a near-baseline time trace compared with the
+      WT partner. This supports a partner-dependent reconstitution effect without assigning the perturbation
+      to the PdxS domain.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:17189272
+      source_url: https://archive-ouverte.unige.ch/unige:89518
+      snippet: chromophoric adduct
+      explanation: Visually inspected Figure 2A inset; the graph names the actual compared preparation
+        and retains uncertainty in complete tag matching.
+      cache_path: evidence/PF01680/raschle-2007-pdxs.txt
+      cache_sha256: 4ee3feec377f32495589c46df452ce7b5528f77f40dc5b7e3a825eba7c3111de
+- graph_id: pdxs-g3p-spectral-conversion
+  title: G3P addition lowers the preformed 315-nm signal and raises A414
+  scope: Raschle 2007 Figure 2C main panel after chromophore reconstitution. Two measured endpoints share
+    one substrate-addition intervention; neither is assumed to cause the other.
+  context: Prepare the chromophore as in Figure 2A, then add 0.4 mM DL-G3P; record spectra at 3, 9, 15,
+    25, 40 and 60 min. The caption ends with pH 8.0 whereas reconstitution Methods use pH 7.5. Temperature
+    is not explicitly restated for this experiment.
+  family_mapping: Whole P37527-associated Pdx1-His6, with PF01680 7-212, is assayed in the stated reconstitution
+    mixture. This is not the 2005 untagged product-identification preparation or the later Hanes NMR quench
+    preparation.
+  scope_status: MECHANISTIC
+  taxon: NCBITaxon:224308
+  limitations: The separate dialyzed inset states 0.4 uM DL-G3P, conflicting with the main-panel 0.4 mM
+    dose, and shows partial conversion. A414 is PLP-associated but does not independently distinguish
+    enzyme-bound from released PLP. No exact conversion yield or complete intervening atomic mechanism
+    is assigned.
+  nodes:
+  - node_id: add-g3p-to-preformed-chromophore
+    label: Add 0.4 mM DL-G3P to the preformed chromophore mixture
+    node_type: PERTURBATION
+  - node_id: remaining-a315
+    label: Remaining A315 chromophore signal
+    node_type: STATE
+  - node_id: rising-a414
+    label: PLP-associated A414 product signal
+    node_type: STATE
+  edges:
+  - edge_id: g3p-decreases-a315
+    subject: add-g3p-to-preformed-chromophore
+    predicate: decreases
+    object: remaining-a315
+    mechanism: The 315-nm absorbance decreases following G3P addition to the preformed species. The experiment
+      constrains net conversion, not all intermediate structures.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:17189272
+      source_url: https://archive-ouverte.unige.ch/unige:89518
+      snippet: chromophoric adduct
+      explanation: Visually inspected Figure 2C main spectra and caption; main-panel and inset concentrations
+        remain explicitly separate.
+      cache_path: evidence/PF01680/raschle-2007-pdxs.txt
+      cache_sha256: 4ee3feec377f32495589c46df452ce7b5528f77f40dc5b7e3a825eba7c3111de
+  - edge_id: g3p-increases-a414
+    subject: add-g3p-to-preformed-chromophore
+    predicate: increases
+    object: rising-a414
+    mechanism: The same substrate addition raises the product-associated 414-nm absorbance as A315 declines,
+      with an isosbestic point. This is a measured endpoint, not a transitive arrow derived from chromophore
+      loss alone.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:17189272
+      source_url: https://archive-ouverte.unige.ch/unige:89518
+      snippet: chromophoric adduct
+      explanation: Figure 2C main spectra; orthogonal product identification from 2005 is contextual support,
+        not an independent measurement on this particular sample.
+      cache_path: evidence/PF01680/raschle-2007-pdxs.txt
+      cache_sha256: 4ee3feec377f32495589c46df452ce7b5528f77f40dc5b7e3a825eba7c3111de
+- graph_id: pdxs-joint-phosphate-release
+  title: The joint R5P reaction releases inorganic phosphate
+  scope: Raschle 2007 Figure 6C/D and the coupled phosphate-assay Methods. Phosphate release is an independent
+    measured endpoint, not a causal consequence inferred from the optical chromophore trace.
+  context: Equimolar Pdx1/Pdx2 at 10, 20 or 40 uM each, glutamine and R5P; 300 ul, 50 mM Tris-Cl pH 8.0,
+    20 mM MgCl2 and EnzChek components; monitor A360. Assay-specific glutamine/R5P doses and temperature
+    are not enumerated.
+  family_mapping: P37527-associated Pdx1-His6 contains PF01680 7-212, together with the separate Pdx2
+    protein. Full proteins and substrates are joint inputs, not isolated-domain or family-wide evidence.
+  scope_status: MECHANISTIC
+  taxon: NCBITaxon:224308
+  limitations: No enzyme-free control is shown in Figure 6C/D. Do not assign an exact completed one-to-one
+    phosphate yield from finite time courses or transfer Figure 2A doses. This assay does not by itself
+    distinguish elimination from hydrolysis or establish the nitrogen content of the accompanying chromophore.
+  nodes:
+  - node_id: joint-r5p-phosphate-reaction
+    label: Joint Pdx1, Pdx2, glutamine and R5P reaction
+    node_type: ACTIVITY
+    grounding:
+    - UniProtKB:P37527
+  - node_id: released-phosphate
+    label: Inorganic phosphate detected by the coupled assay
+    node_type: STATE
+  edges:
+  - edge_id: joint-reaction-produces-phosphate
+    subject: joint-r5p-phosphate-reaction
+    predicate: produces
+    object: released-phosphate
+    mechanism: The reported joint reaction yields increasing inorganic-phosphate readout with time. Its
+      concomitance with chromophore formation is retained without joining the two signals by an unsupported
+      causal arrow.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:17189272
+      source_url: https://archive-ouverte.unige.ch/unige:89518
+      snippet: inorganic phosphate
+      explanation: Phosphate-assay Methods p6099 and visually inspected Figure 6C/D p6103; incomplete
+        condition and control reporting limits mechanistic specificity.
+      cache_path: evidence/PF01680/raschle-2007-pdxs.txt
+      cache_sha256: 4ee3feec377f32495589c46df452ce7b5528f77f40dc5b7e3a825eba7c3111de
+discussions:
+- discussion_id: pdxs-intermediate-chemistry-and-context-coverage
+  prompt: Reconcile PdxS intermediate structures, complete construct provenance and additional family
+    contexts.
+  kind: CURATION_TODO
+  status: OPEN
+  rationale: Eight graphs retain eleven measured effects with explicit member and assay boundaries. The
+    2007 early-imine and nitrogen-free chromophore proposals are not encoded as settled chemistry; later
+    2008 NMR challenges those interpretations but uses distinct preparations and quench products.
+  evidence:
+  - reference: PMID:17189272
+    supports: PARTIAL
+    evidence_source: inspected_primary_full_text_and_figures
+    explanation: Figures support adduct localization, partner dependence, spectral conversion and phosphate
+      release. Some concentrations, mass descriptions and proposed structures remain inconsistent or incompletely
+      documented.
+  - reference: PMID:18516049
+    supports: PARTIAL
+    evidence_source: inspected_author_full_text_and_publisher_supplement
+    explanation: C2 ketone/C1-N observations and S5 nitrogen-labeling qualify the early structural proposal.
+      Acid/urea-derived Z2 is explicitly not a native enzymatic intermediate; the proposed complete chemical
+      pathway is not fully directly observed.
+  notes: Preserve the 2008 follow-up in evidence/PF01680/hanes-2008-nmr-boundaries.txt. Resolve full tagged
+    clone sequences, WT Pdx2 tag matching, 0.4 mM versus 0.4 uM G3P, pH7.5 versus pH8.0, and text/table
+    mass differences. Inspect the 2008 JACS substrate study before assigning intrinsic DHAP isomerization;
+    inspect the 2011 second-site and 2015 Geobacillus results before extending the chemical sequence.
+    Assess plant/fungal and other microbial members independently. No ammonia-channel geometry, physiological
+    phenotype or family-wide mechanism is established by these graphs. Partial scientific self-review;
+    remain IN_PROGRESS.
+  posed_by: Codex
+  posed_date: '2026-10-11'

@@ -396,6 +396,8 @@ causal_graphs:
   - node_id: partner-exchange
     label: Replace Mjan-CofD with Mrhiz-CofD while retaining Mrhiz-CofC
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:E5ASS2
   - node_id: relative-3pg
     label: 3PG-derived product fraction
     node_type: STATE
@@ -552,6 +554,8 @@ causal_graphs:
   - node_id: partner-exchange
     label: Replace Mjan-CofD with Msmeg-FbiA while retaining Msmeg-FbiD
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:A0QUZ4
   - node_id: relative-2pl
     label: 2PL-derived product fraction
     node_type: STATE
@@ -608,5 +612,14 @@ curation_events:
   outcome: needs_followup
   summary: Review scoped CofC/FbiD causal evidence with unresolved source and mechanism follow-ups
   history_record: history/records/PF01983/2026-10-16T035024Z-codex-4d58e5.yaml
+  event_index: 0
+  llm_assisted: true
+- timestamp: '2026-10-18T02:54:46Z'
+  curator: Antigravity
+  action: EDIT
+  outcome: changed
+  summary: Ground causal graph gene and protein nodes in PF01983 with verified UniProtKB accessions (UniProtKB:E5ASS2,
+    UniProtKB:A0QUZ4)
+  history_record: history/records/PF01983/2026-10-18T025446Z-antigravity-580b13.yaml
   event_index: 0
   llm_assisted: true

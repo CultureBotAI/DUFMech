@@ -141,12 +141,18 @@ causal_graphs:
   - node_id: nterminal-quintuple-alanine
     label: R74A/S75A/R76A/S79A/K80A grouped substitution
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q8K0Z7
   - node_id: nterminal-quadruple-alanine
     label: K112A/N113A/K116A/S117A grouped substitution
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q8K0Z7
   - node_id: domain-triple-alanine
     label: K162A/Y163A/K167A grouped substitution
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q8K0Z7
   - node_id: probeb-bound-fraction
     label: Probe B bound fraction at the displayed protein concentrations
     node_type: STATE
@@ -390,9 +396,13 @@ causal_graphs:
   - node_id: profiling-taco1-ko
     label: TACO1 knockout versus WT in profiling
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q9BSH4
   - node_id: profiling-taco1-rescue
     label: TACO1 reconstitution versus knockout in profiling
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q9BSH4
   - node_id: two-pro-window-occupancy
     label: Normalized occupancy in two-Pro five-residue windows
     node_type: STATE
@@ -483,5 +493,14 @@ curation_events:
   outcome: needs_followup
   summary: Retain partial TACO1 causal evidence self-review with follow-up requirements.
   history_record: history/records/PF01709/2026-10-11T141910Z-codex-55ffa0.yaml
+  event_index: 0
+  llm_assisted: true
+- timestamp: '2026-10-18T02:54:46Z'
+  curator: Antigravity
+  action: EDIT
+  outcome: changed
+  summary: Ground causal graph gene and protein nodes in PF01709 with verified UniProtKB accessions (UniProtKB:Q8K0Z7,
+    UniProtKB:Q9BSH4)
+  history_record: history/records/PF01709/2026-10-18T025446Z-antigravity-6ee97e.yaml
   event_index: 0
   llm_assisted: true

@@ -1,0 +1,30 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01938
+  path: curation/families/PF01938.yaml
+session:
+  id: 2026-10-18T025446Z-antigravity-2892a8
+  timestamp: '2026-10-18T02:54:46Z'
+  actors:
+  - type: ai_agent
+    name: Antigravity
+    model: Claude Opus 4.6
+    agent_tool: Antigravity
+events:
+- type: EDIT
+  outcome: changed
+  summary: Ground causal graph gene and protein nodes in PF01938 with verified UniProtKB
+    accessions (UniProtKB:Q6M142)
+  details: 'Reviewed PF01938 causal_graphs and grounded gene/protein PERTURBATION,
+    ACTIVITY, and protein-complex STATE nodes across 3 causal graph(s) using verified
+    UniProtKB accessions from family_mapping:
+
+    - `tram0076-native-growth-37c-2019`: grounded deletion -> UniProtKB:Q6M142
+
+    - `tram0076-utr-dna-beacons-2019`: grounded dna0127 -> UniProtKB:Q6M142; dna1515
+    -> UniProtKB:Q6M142; dna1697 -> UniProtKB:Q6M142
+
+    - `tram0076-bx04-cold-rescue-2019`: grounded expression -> UniProtKB:Q6M142'
+  sections:
+  - causal_graphs

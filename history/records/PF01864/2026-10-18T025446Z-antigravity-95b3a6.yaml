@@ -1,0 +1,42 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01864
+  path: curation/families/PF01864.yaml
+session:
+  id: 2026-10-18T025446Z-antigravity-95b3a6
+  timestamp: '2026-10-18T02:54:46Z'
+  actors:
+  - type: ai_agent
+    name: Antigravity
+    model: Claude Opus 4.6
+    agent_tool: Antigravity
+events:
+- type: EDIT
+  outcome: changed
+  summary: Ground causal graph gene and protein nodes in PF01864 with verified UniProtKB
+    accessions (UniProtKB:Q9YF05)
+  details: 'Reviewed PF01864 causal_graphs and grounded gene/protein PERTURBATION,
+    ACTIVITY, and protein-complex STATE nodes across 6 causal graph(s) using verified
+    UniProtKB accessions from family_mapping:
+
+    - `apcars-ctp-binding`: grounded undetected-single-mutants -> UniProtKB:Q9YF05;
+    weaker-single-mutants -> UniProtKB:Q9YF05
+
+    - `apcars-substitution-product-assays`: grounded main-panel-single-mutants ->
+    UniProtKB:Q9YF05; additional-cl1-single-mutants -> UniProtKB:Q9YF05; outside-span-single-mutants
+    -> UniProtKB:Q9YF05; periplasmic-in-span-single-mutants -> UniProtKB:Q9YF05
+
+    - `apcars-dgggp-strip-binding`: grounded d122a-or-d125a -> UniProtKB:Q9YF05; n28a-k57a-or-d100a
+    -> UniProtKB:Q9YF05; four-tail-site-variants -> UniProtKB:Q9YF05; q123a-or-h157a
+    -> UniProtKB:Q9YF05
+
+    - `apcars-groove-site-product-assays`: grounded four-tail-site-single-mutants
+    -> UniProtKB:Q9YF05; stronger-strip-single-mutants -> UniProtKB:Q9YF05
+
+    - `apcars-phosphoryl-transfer-hypothesis`: grounded proposed-magnesium-residue-environment
+    -> UniProtKB:Q9YF05
+
+    - `apcars-tm5-release-hypothesis`: grounded proposed-tm5-motion -> UniProtKB:Q9YF05'
+  sections:
+  - causal_graphs

@@ -160,12 +160,18 @@ causal_graphs:
   - node_id: d20a-substitution
     label: D20A substitution in the intact Af1521 protein
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:O28751
   - node_id: n34a-substitution
     label: N34A substitution in the intact Af1521 protein
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:O28751
   - node_id: y176l-substitution
     label: Y176L substitution in the intact Af1521 protein
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:O28751
   - node_id: measured-adpr-affinity
     label: ADP-ribose binding affinity relative to WT in the ITC assay
     node_type: STATE
@@ -395,5 +401,13 @@ curation_events:
   outcome: needs_followup
   summary: Retain scoped scientific self-review of Af1521 causal graphs
   history_record: history/records/PF01661/2026-10-11T130033Z-codex-8b2f90.yaml
+  event_index: 0
+  llm_assisted: true
+- timestamp: '2026-10-18T02:54:46Z'
+  curator: Antigravity
+  action: EDIT
+  outcome: changed
+  summary: Ground causal graph gene and protein nodes in PF01661 with verified UniProtKB accessions (UniProtKB:O28751)
+  history_record: history/records/PF01661/2026-10-18T025446Z-antigravity-6e72a4.yaml
   event_index: 0
   llm_assisted: true

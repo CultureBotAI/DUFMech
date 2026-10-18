@@ -6,50 +6,65 @@ discussions:
   prompt: Resolve construct numbering, primary-source discrepancies and missing supplementary methods.
   kind: CURATION_TODO
   status: OPEN
-  rationale: Assay-specific effects are supported without identifying every construct or silently normalizing conflicting statements.
+  rationale: Assay-specific effects are supported without identifying every construct or silently normalizing
+    conflicting statements.
   evidence:
   - reference: PMID:16216582
     supports: PARTIAL
     evidence_source: author_thesis_republication
-    explanation: Substrate exclusions, GDP Km and Mn activity differ between prose and tables; deposited and primer-derived N termini also differ.
+    explanation: Substrate exclusions, GDP Km and Mn activity differ between prose and tables; deposited
+      and primer-derived N termini also differ.
   - reference: PMID:41032520
     supports: PARTIAL
     evidence_source: primary_figure_and_results
-    explanation: Figure7I labels ATRAP while its images, legend and Results identify ATG9A; supplement-dependent construct details remain unavailable.
+    explanation: Figure7I labels ATRAP while its images, legend and Results identify ATG9A; supplement-dependent
+      construct details remain unavailable.
   posed_by: Codex
   posed_date: '2026-10-12'
-  notes: Retain MLI versus primer-suggested MLLI extension,5mM standard versus10mM kinetic Mg, and unavailable PNAS supplementary methods. TPP is thiamine pyrophosphate. Human PRRC1 accession identifies the gene, not verified sequence identity of every experimental clone.
+  notes: Retain MLI versus primer-suggested MLLI extension,5mM standard versus10mM kinetic Mg, and unavailable
+    PNAS supplementary methods. TPP is thiamine pyrophosphate. Human PRRC1 accession identifies the gene,
+    not verified sequence identity of every experimental clone.
 - discussion_id: pf01931-member-and-domain-coverage
   prompt: Extend primary review to zebrafish Mys, domain-specific PRRC1 assays and other NTPase_I-T members.
   kind: CURATION_TODO
   status: OPEN
-  rationale: YjjX and whole-human-PRRC1 assays do not characterize every frozen family member or prove isolated PF01931 function.
+  rationale: YjjX and whole-human-PRRC1 assays do not characterize every frozen family member or prove
+    isolated PF01931 function.
   evidence:
   - reference: PMID:18342848
     supports: PARTIAL
     evidence_source: primary_source_discovery
-    explanation: Zebrafish misty-somites developmental study is a discovered follow-up, not a reviewed graph.
+    explanation: Zebrafish misty-somites developmental study is a discovered follow-up, not a reviewed
+      graph.
   - reference: PMID:20018846
     supports: PARTIAL
     evidence_source: primary_source_discovery
     explanation: Mys-PKA regulation needs construct-mapped primary methods and figure review.
   posed_by: Codex
   posed_date: '2026-10-12'
-  notes: See coverage ledger for Lawhorn thiamine-antimetabolite screen, VC0702/1U14, Thermoplasma fusions and Liu2025 thesis. No RNA-protection, translation-inhibition, PRRC1 NTP hydrolysis or family-wide negative conclusion is established here.
+  notes: See coverage ledger for Lawhorn thiamine-antimetabolite screen, VC0702/1U14, Thermoplasma fusions
+    and Liu2025 thesis. No RNA-protection, translation-inhibition, PRRC1 NTP hydrolysis or family-wide
+    negative conclusion is established here.
 causal_graphs:
 - graph_id: yjjx-substrate-hydrolysis-2005
   title: Purified YjjX releases phosphate with five tested purine substrates
-  scope: Zheng2005 study inspected through author's2009 thesis chapter4, table4.2 and Methods4.5.5-6; separate substrate reactions.
-  context: C-His6 YjjX expressed in BL21(DE3);25C,pH6.75 Bis-Tris. Standard assay5mM MgCl2, table kinetics10mM; enzyme-free substrate blanks subtracted.
-  family_mapping: P39411 sequencev2,170aa,taxon83333; PF01931 matches4-168. Deposited1U5W184aa is MLI plus canonical sequence plus SGRVEHHHHHH; primer suggests MLLI. No isolated-domain assay.
+  scope: Zheng2005 study inspected through author's2009 thesis chapter4, table4.2 and Methods4.5.5-6;
+    separate substrate reactions.
+  context: C-His6 YjjX expressed in BL21(DE3);25C,pH6.75 Bis-Tris. Standard assay5mM MgCl2, table kinetics10mM;
+    enzyme-free substrate blanks subtracted.
+  family_mapping: P39411 sequencev2,170aa,taxon83333; PF01931 matches4-168. Deposited1U5W184aa is MLI
+    plus canonical sequence plus SGRVEHHHHHH; primer suggests MLLI. No isolated-domain assay.
   taxon: NCBITaxon:83333
   scope_status: MECHANISTIC
-  limitations: Colorimetric phosphate release does not independently identify IDP/XDP or elementary chemistry. dATP/dCTP prose versus8mM table signals conflict. No native nucleotide-pool or oxidative-survival effect is measured.
+  limitations: Colorimetric phosphate release does not independently identify IDP/XDP or elementary chemistry.
+    dATP/dCTP prose versus8mM table signals conflict. No native nucleotide-pool or oxidative-survival
+    effect is measured.
   nodes:
   - node_id: itp
     label: Purified YjjX with ITP and Mg
     node_type: STATE
-    grounding: [UniProtKB:P39411]
+    grounding:
+    - UniProtKB:P39411
   - node_id: xtp
     label: Purified YjjX with XTP and Mg
     node_type: STATE
@@ -70,7 +85,8 @@ causal_graphs:
     subject: itp
     predicate: produces
     object: phosphate
-    mechanism: The enzyme-containing ITP assay gives phosphate above enzyme-free background; apparent kinetic parameters support substrate turnover.
+    mechanism: The enzyme-containing ITP assay gives phosphate above enzyme-free background; apparent
+      kinetic parameters support substrate turnover.
     directness: DIRECT
     support: OBSERVED
     evidence_kind: EXPERIMENTAL
@@ -85,7 +101,8 @@ causal_graphs:
     subject: xtp
     predicate: produces
     object: phosphate
-    mechanism: Purified YjjX supports XTP-dependent phosphate release; the remaining nucleotide product is not separately resolved here.
+    mechanism: Purified YjjX supports XTP-dependent phosphate release; the remaining nucleotide product
+      is not separately resolved here.
     directness: DIRECT
     support: OBSERVED
     evidence_kind: EXPERIMENTAL
@@ -100,7 +117,8 @@ causal_graphs:
     subject: ditp
     predicate: produces
     object: phosphate
-    mechanism: The dITP assay shows phosphate release at the tested concentrations; a higher apparent Km does not prove a physiological DNA-protection role.
+    mechanism: The dITP assay shows phosphate release at the tested concentrations; a higher apparent
+      Km does not prove a physiological DNA-protection role.
     directness: DIRECT
     support: OBSERVED
     evidence_kind: EXPERIMENTAL
@@ -115,7 +133,8 @@ causal_graphs:
     subject: gtp
     predicate: produces
     object: phosphate
-    mechanism: GTP is a weaker phosphate-release substrate in the separate substrate assay; this differs from its effect when added to an ITP reaction.
+    mechanism: GTP is a weaker phosphate-release substrate in the separate substrate assay; this differs
+      from its effect when added to an ITP reaction.
     directness: DIRECT
     support: OBSERVED
     evidence_kind: EXPERIMENTAL
@@ -130,7 +149,8 @@ causal_graphs:
     subject: gdp
     predicate: produces
     object: phosphate
-    mechanism: GDP supports phosphate release in the purified-enzyme assay; this does not establish regulation of an EF-Tu-bound nucleotide.
+    mechanism: GDP supports phosphate release in the purified-enzyme assay; this does not establish regulation
+      of an EF-Tu-bound nucleotide.
     directness: DIRECT
     support: OBSERVED
     evidence_kind: EXPERIMENTAL
@@ -138,17 +158,22 @@ causal_graphs:
     - reference: PMID:16216582
       source_url: https://www.collectionscanada.gc.ca/obj/thesescanada/vol2/002/NR69981.PDF
       snippet: Kinetic Data of YjjX with Various Substrates
-      explanation: Thesis table4.2 GDP row; prose/table Km discrepancy retained without adopting a numerical edge.
+      explanation: Thesis table4.2 GDP row; prose/table Km discrepancy retained without adopting a numerical
+        edge.
       cache_path: evidence/PF01931/zheng-2005.txt
       cache_sha256: f1b0e6eb3fe0854c25cbf76643c584ea6c913dac8e0cf7c5922b58d82b09dba2
 - graph_id: yjjx-inhibitor-assay-2005
   title: Three separately added compounds reduce YjjX ITPase signal
   scope: Zheng2005 thesis-republished figure4.5; individually varied ATP,GTP or thiamine pyrophosphate.
-  context: Purified C-His6 YjjX ITP assay,pH6.75,25C,divalent metal; relative activity versus added-compound concentration.
-  family_mapping: P39411 sequencev2,170aa; PF01931 matches4-168. Full recombinant protein with unresolved N-terminal extension numbering.
+  context: Purified C-His6 YjjX ITP assay,pH6.75,25C,divalent metal; relative activity versus added-compound
+    concentration.
+  family_mapping: P39411 sequencev2,170aa; PF01931 matches4-168. Full recombinant protein with unresolved
+    N-terminal extension numbering.
   taxon: NCBITaxon:83333
   scope_status: MECHANISTIC
-  limitations: Dose-dependent reaction inhibition does not independently establish competitive binding or a thiamine-detoxification pathway. TPP is not thymidine triphosphate; GTP also has weak substrate activity in a different assay.
+  limitations: Dose-dependent reaction inhibition does not independently establish competitive binding
+    or a thiamine-detoxification pathway. TPP is not thymidine triphosphate; GTP also has weak substrate
+    activity in a different assay.
   nodes:
   - node_id: atp
     label: ATP addition to the YjjX ITP reaction
@@ -162,13 +187,15 @@ causal_graphs:
   - node_id: activity
     label: Relative ITPase phosphate-release signal
     node_type: ACTIVITY
-    grounding: [UniProtKB:P39411]
+    grounding:
+    - UniProtKB:P39411
   edges:
   - edge_id: atp-inhibition
     subject: atp
     predicate: decreases
     object: activity
-    mechanism: Increasing separately added ATP reduces the measured ITPase signal under the purified-protein assay conditions.
+    mechanism: Increasing separately added ATP reduces the measured ITPase signal under the purified-protein
+      assay conditions.
     directness: DIRECT
     support: OBSERVED
     evidence_kind: EXPERIMENTAL
@@ -183,7 +210,8 @@ causal_graphs:
     subject: gtp
     predicate: decreases
     object: activity
-    mechanism: Increasing GTP in the ITP-containing reaction lowers relative ITPase signal; no cellular GTP-regulation mechanism is established.
+    mechanism: Increasing GTP in the ITP-containing reaction lowers relative ITPase signal; no cellular
+      GTP-regulation mechanism is established.
     directness: DIRECT
     support: OBSERVED
     evidence_kind: EXPERIMENTAL
@@ -198,7 +226,8 @@ causal_graphs:
     subject: tpp
     predicate: decreases
     object: activity
-    mechanism: Thiamine pyrophosphate reduces the measured ITPase signal; hydrolysis of TPP or an antimetabolite is not shown by this inhibition test.
+    mechanism: Thiamine pyrophosphate reduces the measured ITPase signal; hydrolysis of TPP or an antimetabolite
+      is not shown by this inhibition test.
     directness: DIRECT
     support: OBSERVED
     evidence_kind: EXPERIMENTAL
@@ -212,16 +241,20 @@ causal_graphs:
 - graph_id: prrc1-coat-signal-2021
   title: PRRC1 knockdown increases two COPII immunofluorescence signals
   scope: Huang2021 Figure5E-T, HEK293T PRRC1 siRNA versus control.
-  context: Day3 after transfection; total cellular fluorescence,three experiments,>125cells per experiment. SEC31A protein abundance and Golgin97 controls.
-  family_mapping: Human Q96M27 sequencev1,445aa,PF01931 matches260-376. Whole-gene knockdown, not isolated-domain perturbation; exact siRNA/isoform details unverified.
+  context: Day3 after transfection; total cellular fluorescence,three experiments,>125cells per experiment.
+    SEC31A protein abundance and Golgin97 controls.
+  family_mapping: Human Q96M27 sequencev1,445aa,PF01931 matches260-376. Whole-gene knockdown, not isolated-domain
+    perturbation; exact siRNA/isoform details unverified.
   taxon: NCBITaxon:9606
   scope_status: PHENOTYPIC
-  limitations: Fluorescence is not a direct coat-disassembly rate. No siRNA-resistant rescue is shown here; domain mechanism and indirect cellular alternatives remain unresolved.
+  limitations: Fluorescence is not a direct coat-disassembly rate. No siRNA-resistant rescue is shown
+    here; domain mechanism and indirect cellular alternatives remain unresolved.
   nodes:
   - node_id: knockdown
     label: PRRC1 siRNA versus control in HEK293T
     node_type: PERTURBATION
-    grounding: [UniProtKB:Q96M27]
+    grounding:
+    - UniProtKB:Q96M27
   - node_id: sec31
     label: Cellular SEC31A immunofluorescence
     node_type: PHENOTYPE
@@ -233,7 +266,8 @@ causal_graphs:
     subject: knockdown
     predicate: increases
     object: sec31
-    mechanism: PRRC1 depletion increases the cellular SEC31A fluorescent readout despite comparable total SEC31A protein on immunoblot.
+    mechanism: PRRC1 depletion increases the cellular SEC31A fluorescent readout despite comparable total
+      SEC31A protein on immunoblot.
     directness: INDIRECT
     support: OBSERVED
     evidence_kind: EXPERIMENTAL
@@ -248,7 +282,8 @@ causal_graphs:
     subject: knockdown
     predicate: increases
     object: sec24
-    mechanism: PRRC1 depletion increases cellular SEC24C immunofluorescence under the matched imaging protocol.
+    mechanism: PRRC1 depletion increases cellular SEC24C immunofluorescence under the matched imaging
+      protocol.
     directness: INDIRECT
     support: OBSERVED
     evidence_kind: EXPERIMENTAL
@@ -262,16 +297,20 @@ causal_graphs:
 - graph_id: prrc1-rush-transport-2021
   title: PRRC1 depletion delays two RUSH reporters reaching the Golgi
   scope: Huang2021 Figure5U-X, separate SBP-EGFP-EGFR and SBP-EGFP-ShhN reporters in HEK293T.
-  context: Day3 siRNA; reporter24h after siRNA;40uM biotin and100ng/ul cycloheximide release,15/30min;three experiments,>100cells each.
-  family_mapping: Q96M27 sequencev1,445aa; PF01931 matches260-376. Gene depletion cannot identify the active domain or catalytic residues.
+  context: Day3 siRNA; reporter24h after siRNA;40uM biotin and100ng/ul cycloheximide release,15/30min;three
+    experiments,>100cells each.
+  family_mapping: Q96M27 sequencev1,445aa; PF01931 matches260-376. Gene depletion cannot identify the
+    active domain or catalytic residues.
   taxon: NCBITaxon:9606
   scope_status: PHENOTYPIC
-  limitations: Fraction of Golgi-positive cells is a trafficking readout, not direct cargo binding or proof of a specific COPII reaction. Not equivalent to2025 steady-state EGFR localization.
+  limitations: Fraction of Golgi-positive cells is a trafficking readout, not direct cargo binding or
+    proof of a specific COPII reaction. Not equivalent to2025 steady-state EGFR localization.
   nodes:
   - node_id: knockdown
     label: PRRC1 knockdown during synchronized reporter release
     node_type: PERTURBATION
-    grounding: [UniProtKB:Q96M27]
+    grounding:
+    - UniProtKB:Q96M27
   - node_id: egfr
     label: Cells with Golgi-localized EGFR reporter
     node_type: PHENOTYPE
@@ -283,7 +322,8 @@ causal_graphs:
     subject: knockdown
     predicate: decreases
     object: egfr
-    mechanism: Knockdown reduces the fraction reaching the scored Golgi-positive EGFR state at matched post-release times.
+    mechanism: Knockdown reduces the fraction reaching the scored Golgi-positive EGFR state at matched
+      post-release times.
     directness: INDIRECT
     support: OBSERVED
     evidence_kind: EXPERIMENTAL
@@ -312,16 +352,20 @@ causal_graphs:
 - graph_id: prrc1-atrap-localization-2025
   title: PRRC1 knockout increases Golgi-associated ATRAP signal
   scope: Peng2025 Figure7C-F, WT versus PRRC1 knockout HeLa cells.
-  context: Steady-state ATRAP localization, Golgi/total above-threshold fluorescence;30-51cells per group per replicate.
-  family_mapping: Human Q96M27 sequencev1,445aa; PF01931 matches260-376. Immunoblot-validated whole-gene knockout; exact clone sequence not verified.
+  context: Steady-state ATRAP localization, Golgi/total above-threshold fluorescence;30-51cells per group
+    per replicate.
+  family_mapping: Human Q96M27 sequencev1,445aa; PF01931 matches260-376. Immunoblot-validated whole-gene
+    knockout; exact clone sequence not verified.
   taxon: NCBITaxon:9606
   scope_status: PHENOTYPIC
-  limitations: Increased Golgi fraction supports a localization defect, not a direct export rate or AP4-dependent biochemical step. Steady-state EGFR surface localization is a condition-specific negative comparator.
+  limitations: Increased Golgi fraction supports a localization defect, not a direct export rate or AP4-dependent
+    biochemical step. Steady-state EGFR surface localization is a condition-specific negative comparator.
   nodes:
   - node_id: knockout
     label: PRRC1 knockout in HeLa
     node_type: PERTURBATION
-    grounding: [UniProtKB:Q96M27]
+    grounding:
+    - UniProtKB:Q96M27
   - node_id: golgi
     label: Golgi fraction of ATRAP fluorescence
     node_type: PHENOTYPE
@@ -344,19 +388,25 @@ causal_graphs:
 - graph_id: prrc1-atg9a-localization-2025
   title: PRRC1 knockout and re-expression alter ATG9A localization
   scope: Peng2025 Figure7H-I, WT,PRRC1 knockout and knockout plus PRRC1-HA HeLa cells.
-  context: ATG9A/TGN46/Climp-63 imaging;30-56cells per group per replicate. Rescue compared with knockout background.
-  family_mapping: Human Q96M27 sequencev1,445aa; PF01931 matches260-376. Whole-protein rescue; exact isoform and construct sequence remain unverified.
+  context: ATG9A/TGN46/Climp-63 imaging;30-56cells per group per replicate. Rescue compared with knockout
+    background.
+  family_mapping: Human Q96M27 sequencev1,445aa; PF01931 matches260-376. Whole-protein rescue; exact isoform
+    and construct sequence remain unverified.
   taxon: NCBITaxon:9606
   scope_status: PHENOTYPIC
-  limitations: PanelI y-axis says ATRAP but images, legend and Results identify ATG9A. Retain discrepancy. ER colocalization and rescue do not identify isolated-domain sufficiency or direct cargo binding.
+  limitations: PanelI y-axis says ATRAP but images, legend and Results identify ATG9A. Retain discrepancy.
+    ER colocalization and rescue do not identify isolated-domain sufficiency or direct cargo binding.
   nodes:
   - node_id: knockout
     label: PRRC1 knockout versus WT
     node_type: PERTURBATION
-    grounding: [UniProtKB:Q96M27]
+    grounding:
+    - UniProtKB:Q96M27
   - node_id: rescue
     label: PRRC1-HA expression in knockout cells
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q96M27
   - node_id: golgi
     label: Golgi fraction of ATG9A fluorescence
     node_type: PHENOTYPE
@@ -365,7 +415,8 @@ causal_graphs:
     subject: knockout
     predicate: decreases
     object: golgi
-    mechanism: Knockout reduces the ATG9A Golgi fraction, with increased ER-marker colocalization in the companion images.
+    mechanism: Knockout reduces the ATG9A Golgi fraction, with increased ER-marker colocalization in the
+      companion images.
     directness: INDIRECT
     support: OBSERVED
     evidence_kind: EXPERIMENTAL
@@ -380,7 +431,8 @@ causal_graphs:
     subject: rescue
     predicate: increases
     object: golgi
-    mechanism: PRRC1-HA re-expression restores the ATG9A localization readout relative to knockout cells without assigning an elementary molecular mechanism.
+    mechanism: PRRC1-HA re-expression restores the ATG9A localization readout relative to knockout cells
+      without assigning an elementary molecular mechanism.
     directness: INDIRECT
     support: OBSERVED
     evidence_kind: EXPERIMENTAL
@@ -388,22 +440,29 @@ causal_graphs:
     - reference: PMID:41032520
       source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC12519218/
       snippet: PRRC1 KO
-      explanation: Figure7H rescue images and panelI rescue group, read with caption and text rather than mislabeled y-axis alone.
+      explanation: Figure7H rescue images and panelI rescue group, read with caption and text rather than
+        mislabeled y-axis alone.
       cache_path: evidence/PF01931/peng-2025.txt
       cache_sha256: af7e652b91d8ac0e2dc063f6429299ccbe7855bf07cd972ddaaedbd152937fe0
 - graph_id: prrc1-vesicle-fraction-2025
   title: Added GST-PRRC1 increases three cargo signals in vesicle fractions
-  scope: Peng2025 Figure7J-K, semi-intact-cell vesicle formation with purified GST-PRRC1 and rat liver cytosol.
-  context: Compare0 versus0.01mg/ml GST-PRRC1 at0.4mg/ml rat liver cytosol,n3. Separate2mg/ml cytosol lanes are not pooled into this claim.
-  family_mapping: Human PRRC1 gene anchor Q96M27 sequencev1,445aa,PF01931 matches260-376; exact recombinant clone sequence and purification details are supplement-dependent and unverified.
+  scope: Peng2025 Figure7J-K, semi-intact-cell vesicle formation with purified GST-PRRC1 and rat liver
+    cytosol.
+  context: Compare0 versus0.01mg/ml GST-PRRC1 at0.4mg/ml rat liver cytosol,n3. Separate2mg/ml cytosol
+    lanes are not pooled into this claim.
+  family_mapping: Human PRRC1 gene anchor Q96M27 sequencev1,445aa,PF01931 matches260-376; exact recombinant
+    clone sequence and purification details are supplement-dependent and unverified.
   taxon: NCBITaxon:9606
   scope_status: PHENOTYPIC
-  limitations: Multicomponent mixed-species assay measures recovered cargo, not isolated-domain chemistry or direct cargo recognition. No GST-only lane is shown. Mechanistic intermediates and exact semi-intact-cell genotype remain unverified.
+  limitations: Multicomponent mixed-species assay measures recovered cargo, not isolated-domain chemistry
+    or direct cargo recognition. No GST-only lane is shown. Mechanistic intermediates and exact semi-intact-cell
+    genotype remain unverified.
   nodes:
   - node_id: addition
     label: GST-PRRC1 addition to low-cytosol budding reaction
     node_type: PERTURBATION
-    grounding: [UniProtKB:Q96M27]
+    grounding:
+    - UniProtKB:Q96M27
   - node_id: atg9a
     label: ATG9A in the recovered vesicle fraction
     node_type: PHENOTYPE
@@ -418,7 +477,8 @@ causal_graphs:
     subject: addition
     predicate: increases
     object: atg9a
-    mechanism: The GST-PRRC1-supplemented reaction yields more vesicle-associated ATG9A signal under limiting-cytosol conditions.
+    mechanism: The GST-PRRC1-supplemented reaction yields more vesicle-associated ATG9A signal under limiting-cytosol
+      conditions.
     directness: UNRESOLVED
     support: OBSERVED
     evidence_kind: EXPERIMENTAL
@@ -426,7 +486,8 @@ causal_graphs:
     - reference: PMID:41032520
       source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC12519218/
       snippet: GST-PRRC1
-      explanation: Figure7J paired0.4mg/ml RLC lanes and K quantification; Methods references supplement for preparation.
+      explanation: Figure7J paired0.4mg/ml RLC lanes and K quantification; Methods references supplement
+        for preparation.
       cache_path: evidence/PF01931/peng-2025.txt
       cache_sha256: af7e652b91d8ac0e2dc063f6429299ccbe7855bf07cd972ddaaedbd152937fe0
   - edge_id: ergic53-packaging
@@ -441,7 +502,8 @@ causal_graphs:
     - reference: PMID:41032520
       source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC12519218/
       snippet: GST-PRRC1
-      explanation: Figure7J ERGIC53 blot and K quantification; does not establish a direct PRRC1-ERGIC53 interaction.
+      explanation: Figure7J ERGIC53 blot and K quantification; does not establish a direct PRRC1-ERGIC53
+        interaction.
       cache_path: evidence/PF01931/peng-2025.txt
       cache_sha256: af7e652b91d8ac0e2dc063f6429299ccbe7855bf07cd972ddaaedbd152937fe0
   - edge_id: sec22b-packaging
@@ -462,16 +524,20 @@ causal_graphs:
 - graph_id: prrc1-starvation-puncta-2025
   title: PRRC1 knockout reduces starvation-associated LC3 puncta
   scope: Peng2025 Figure7L-N, WT versus PRRC1 knockout HeLa cells.
-  context: 60min EBSS starvation; ImageJ particle size and number,30-38cells per group per replicate; non-starved images also shown.
-  family_mapping: Human Q96M27 sequencev1,445aa; PF01931 matches260-376. Whole-gene knockout, not domain-selective mutation.
+  context: 60min EBSS starvation; ImageJ particle size and number,30-38cells per group per replicate;
+    non-starved images also shown.
+  family_mapping: Human Q96M27 sequencev1,445aa; PF01931 matches260-376. Whole-gene knockout, not domain-selective
+    mutation.
   taxon: NCBITaxon:9606
   scope_status: PHENOTYPIC
-  limitations: LC3 morphology is not autophagic flux. No demonstrated mediation through ATG9A, direct PRRC1-to-LC3 mechanism or separate LC3 rescue is established by these panels.
+  limitations: LC3 morphology is not autophagic flux. No demonstrated mediation through ATG9A, direct
+    PRRC1-to-LC3 mechanism or separate LC3 rescue is established by these panels.
   nodes:
   - node_id: knockout
     label: PRRC1 knockout under60min EBSS starvation
     node_type: PERTURBATION
-    grounding: [UniProtKB:Q96M27]
+    grounding:
+    - UniProtKB:Q96M27
   - node_id: size
     label: Mean LC3 punctum size
     node_type: PHENOTYPE

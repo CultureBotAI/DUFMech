@@ -2,207 +2,273 @@ pfam_id: PF01172
 curation_status: IN_PROGRESS
 curation_history: history/records/PF01172
 causal_graphs:
-  - graph_id: sbds-efl1-mouse-pre60s-release
-    title: Joint SBDS, EFL1 and GTP release eIF6 from mouse pre-60S particles
-    scope: Recombinant human SBDS and EFL1 acting on eIF6-loaded pre-60S particles isolated from Sbds-deleted mouse liver in Finch 2011 Figure 3B/C. This is a mixed-species, whole-protein reconstitution.
-    context: 100 ul with about 0.5-1 pmol pre-60S, 5 pmol each SBDS/EFL1, 100 uM GTP, 10 mM Tris-HCl pH 7.4, 75 mM KCl, 1.5 mM MgCl2 and protease/RNase inhibitors; 10 min at 37 C. Sucrose-cushion centrifugation and immunoblotting distinguish free and bound eIF6.
-    family_mapping: Q9Y3A5/SBDS_HUMAN is 250 aa, sequence version 4, matching current NP_057122.2 and InterPro exactly. PF01172 spans 14-100; the paper's structural domain I spans 2-96. The paper cites unversioned NP_057122. The intact protein includes other domains, and complete experimental tags/scars remain unresolved.
-    scope_status: MECHANISTIC
-    limitations: SBDS alone is not sufficient. GDP/no nucleotide fail and GDPNP gives marginal release; these do not quantify a complete kinetic cycle. Ebp1/Nmd3 retention constrains specificity. The supplement was inaccessible, so full construct details and raw blots are unverified. Neither isolated SBDS_N activity nor direct 80S assembly is measured.
-    nodes:
-      - node_id: joint-sbds-efl1-gtp-mouse-pre60s
-        label: Add human SBDS and EFL1 with GTP to mouse pre-60S particles
-        node_type: ACTIVITY
-        grounding:
-          - UniProtKB:Q9Y3A5
-      - node_id: mouse-pre60s-eif6-release
-        label: eIF6 redistribution from particle-bound to free fraction
-        node_type: PROCESS
-    edges:
-      - edge_id: joint-factors-enable-mouse-eif6-release
-        subject: joint-sbds-efl1-gtp-mouse-pre60s
-        predicate: enables
-        object: mouse-pre60s-eif6-release
-        mechanism: The joint factor/GTP condition releases eIF6 while individual-factor controls do not. This is a directly observed biochemical release effect; no independent sufficient cause is assigned to either protein alone.
-        directness: DIRECT
-        support: OBSERVED
-        evidence_kind: EXPERIMENTAL
-        evidence:
-          - reference: PMID:21536732
-            source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC3084026/
-            snippet: eIF6 release
-            explanation: Visually inspected Figure 3B/C and main release-assay Methods; Ebp1/Nmd3 and nucleotide controls remain part of the scope.
-            cache_path: evidence/PF01172/finch-2011-sbds.txt
-            cache_sha256: 0d56ee0dd618c81142fd366253d3c8b39e79ca0a37c0d014fd4608869e9e47d5
-          - reference: https://www.ebi.ac.uk/interpro/api/protein/uniprot/Q9Y3A5/entry/pfam/PF01172/
-            source_url: https://www.ebi.ac.uk/interpro/api/protein/uniprot/Q9Y3A5/entry/pfam/PF01172/
-            snippet: 'Q9Y3A5 Pfam:PF01172 interval: 14-100, inclusive.'
-            explanation: Current exact reference mapping, distinct from a claim that this domain alone performs the whole-protein reaction.
-            cache_path: evidence/PF01172/SBDS-identity.txt
-            cache_sha256: 310d70c64af2514b1d769b877d83765895e3cba9fe12bb8b686d8bb15a387615
-  - graph_id: sbds-efl1-rabbit-truncated-eif6-release
-    title: SBDS and EFL1 release truncated eIF6 from rabbit 60S particles
-    scope: Human SBDS/EFL1 and recombinant human eIF6(1-225) on salt-washed rabbit reticulocyte 60S subunits in Figure 3D. This mature-particle preparation is separate from mouse pre-60S.
-    context: Preload 5 pmol rabbit 60S with excess eIF6(1-225) for 20 min on ice, remove free factor with a 100-kDa filter, and perform the 100-ul release assay with 5 pmol each SBDS/EFL1 and 100 uM GTP for 10 min at 37 C in the pH-7.4 release buffer. Compare bound/free immunoblots after sucrose pelleting.
-    family_mapping: Human whole SBDS maps to Q9Y3A5 and PF01172 14-100; the rabbit particle and truncated eIF6 are separate components. The SBDS and EFL1 tag states cannot be reconstructed from the accessible main Methods alone.
-    scope_status: MECHANISTIC
-    limitations: Rpl28 retention and EDTA release controls are retained. The eIF6 truncation excludes S235, but this does not exclude every phosphorylation mechanism in cells. Mature rabbit particles are not treated as equivalent to mouse precursors or a wholly human system.
-    nodes:
-      - node_id: joint-factors-rabbit-truncated-eif6
-        label: Add human SBDS, EFL1 and GTP to eIF6(1-225)-loaded rabbit 60S
-        node_type: ACTIVITY
-        grounding:
-          - UniProtKB:Q9Y3A5
-      - node_id: truncated-eif6-release
-        label: Release of eIF6(1-225) into the free fraction
-        node_type: PROCESS
-    edges:
-      - edge_id: joint-factors-enable-truncated-eif6-release
-        subject: joint-factors-rabbit-truncated-eif6
-        predicate: enables
-        object: truncated-eif6-release
-        mechanism: The joint protein/GTP condition promotes release of the prebound truncation lacking S235; single factors or GDP do not reproduce the effect. The observation concerns net release, not a directly observed domain-rotation trajectory.
-        directness: DIRECT
-        support: OBSERVED
-        evidence_kind: EXPERIMENTAL
-        evidence:
-          - reference: PMID:21536732
-            source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC3084026/
-            snippet: eIF6 release
-            explanation: Figure 3D, mature-particle loading protocol and main Results distinguish this truncation experiment from the native mouse-particle assay.
-            cache_path: evidence/PF01172/finch-2011-sbds.txt
-            cache_sha256: 0d56ee0dd618c81142fd366253d3c8b39e79ca0a37c0d014fd4608869e9e47d5
-  - graph_id: sbds-variants-rabbit-60s-gtp-hydrolysis
-    title: SBDS preparations alter 60S-dependent EFL1 GTP hydrolysis
-    scope: WT, R126T and K151N human SBDS preparations in the separate rabbit-60S phosphate-release assay of Figure 6B. R126T and K151N are outside PF01172.
-    context: 50 ul containing 5 nmol gamma-32P-GTP, 5 pmol rabbit 60S, 6.3 pmol SBDS when present and 40 pmol EFL1; 50 mM Tris pH 7.4, 2 mM MgCl2, 150 mM NaCl and 2 mM DTT; 30 min at 37 C. Charcoal separation and scintillation quantify Pi; bars report three experiments with SD.
-    family_mapping: Q9Y3A5 has R126 and K151 outside its PF01172 14-100 match, within the full multidomain SBDS molecule. These are whole-protein context effects, not mapped N-terminal catalytic residues.
-    scope_status: MECHANISTIC
-    limitations: SBDS alone without 60S does not significantly activate EFL1. H96A EFL1 is a catalytic control. Hydrolysis and eIF6 release use different buffers and particles in separate vessels. K151N's nonsignificant difference from WT does not establish kinetic equivalence; no universal rate or stoichiometry is inferred.
-    nodes:
-      - node_id: add-wt-sbds-rabbit-60s
-        label: Add WT SBDS rather than no SBDS to EFL1 and rabbit 60S
-        node_type: PERTURBATION
-        grounding:
-          - UniProtKB:Q9Y3A5
-      - node_id: replace-wt-sbds-r126t
-        label: Replace WT SBDS with R126T in the hydrolysis assay
-        node_type: PERTURBATION
-      - node_id: add-k151n-sbds-rabbit-60s
-        label: Add K151N SBDS rather than no SBDS to EFL1 and rabbit 60S
-        node_type: PERTURBATION
-      - node_id: efl1-pi-release
-        label: 60S-dependent EFL1 phosphate-release readout
-        node_type: ACTIVITY
-    edges:
-      - edge_id: wt-sbds-increases-efl1-pi-release
-        subject: add-wt-sbds-rabbit-60s
-        predicate: increases
-        object: efl1-pi-release
-        mechanism: WT SBDS increases the EFL1/60S-dependent Pi signal relative to no SBDS. This is an observed turnover effect, not direct visualization of an allosteric contact or a sufficient cause of eIF6 release by itself.
-        directness: DIRECT
-        support: OBSERVED
-        evidence_kind: EXPERIMENTAL
-        evidence:
-          - reference: PMID:21536732
-            source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC3084026/
-            snippet: GTP hydrolysis
-            explanation: Figure 6B lanes 5/7, catalytic and no-particle controls, and the separate phosphate-assay Methods.
-            cache_path: evidence/PF01172/finch-2011-sbds.txt
-            cache_sha256: 0d56ee0dd618c81142fd366253d3c8b39e79ca0a37c0d014fd4608869e9e47d5
-      - edge_id: r126t-decreases-efl1-pi-release
-        subject: replace-wt-sbds-r126t
-        predicate: decreases
-        object: efl1-pi-release
-        mechanism: The R126T preparation stimulates less Pi release than WT in the matched biochemical system. Main-text NMR analysis reports local perturbation with preserved overall fold; detailed binding evidence in supplement S7 was not inspected.
-        directness: DIRECT
-        support: OBSERVED
-        evidence_kind: EXPERIMENTAL
-        evidence:
-          - reference: PMID:21536732
-            source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC3084026/
-            snippet: GTP hydrolysis
-            explanation: Figure 6B lanes 7/8 and the mutant Results. The mutation is not in the N-terminal Pfam domain.
-            cache_path: evidence/PF01172/finch-2011-sbds.txt
-            cache_sha256: 0d56ee0dd618c81142fd366253d3c8b39e79ca0a37c0d014fd4608869e9e47d5
-      - edge_id: k151n-increases-efl1-pi-release-over-no-sbds
-        subject: add-k151n-sbds-rabbit-60s
-        predicate: increases
-        object: efl1-pi-release
-        mechanism: K151N retains stimulation relative to the no-SBDS baseline despite its impaired release phenotype in a different assay. This is not an assertion that K151N and WT have identical kinetics.
-        directness: DIRECT
-        support: OBSERVED
-        evidence_kind: EXPERIMENTAL
-        evidence:
-          - reference: PMID:21536732
-            source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC3084026/
-            snippet: GTP hydrolysis
-            explanation: Figure 6B lanes 5/9 and the reported significance versus baseline, not a claim based on nonsignificance versus WT.
-            cache_path: evidence/PF01172/finch-2011-sbds.txt
-            cache_sha256: 0d56ee0dd618c81142fd366253d3c8b39e79ca0a37c0d014fd4608869e9e47d5
-  - graph_id: sbds-variants-mouse-pre60s-release
-    title: R126T and K151N SBDS preparations reduce eIF6 release
-    scope: Figure 6C compares human WT and mutant SBDS with EFL1/GTP on Sbds-deleted mouse-liver pre-60S particles. Neither mutant lies inside PF01172.
-    context: The 100-ul mouse-particle release assay uses about 0.5-1 pmol pre-60S, 5 pmol SBDS, 5 pmol EFL1 and 100 uM GTP in 10 mM Tris-HCl pH 7.4, 75 mM KCl and 1.5 mM MgCl2 with inhibitors; 10 min at 37 C, sucrose pelleting and bound/free immunoblots.
-    family_mapping: The tested multidomain protein corresponds to Q9Y3A5, PF01172 14-100; R126T and K151N alter another domain. Reference agreement does not substitute for sequencing the experimental variants or assign their effect to SBDS_N alone.
-    scope_status: MECHANISTIC
-    limitations: Ebp1 is retained as a particle control. The figure does not supply a precise release fraction or a complete kinetic analysis. Main-text NMR supports retained fold, but the supplementary binding assay and detailed constructs remain uninspected. Disease etiology and universal family behavior are not graph outputs.
-    nodes:
-      - node_id: r126t-in-mouse-release-assay
-        label: Replace WT SBDS with R126T in the mouse-particle assay
-        node_type: PERTURBATION
-      - node_id: k151n-in-mouse-release-assay
-        label: Replace WT SBDS with K151N in the mouse-particle assay
-        node_type: PERTURBATION
-      - node_id: mutant-assay-eif6-release
-        label: eIF6 release from mouse pre-60S particles
-        node_type: PROCESS
-    edges:
-      - edge_id: r126t-decreases-mouse-eif6-release
-        subject: r126t-in-mouse-release-assay
-        predicate: decreases
-        object: mutant-assay-eif6-release
-        mechanism: The R126T preparation gives less free eIF6 and more bound eIF6 than WT under the joint EFL1/GTP condition. The direct biochemical effect does not establish a specific N-terminal contact.
-        directness: DIRECT
-        support: OBSERVED
-        evidence_kind: EXPERIMENTAL
-        evidence:
-          - reference: PMID:21536732
-            source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC3084026/
-            snippet: eIF6 release
-            explanation: Visually inspected Figure 6C WT/R126T lanes and mutant Results, distinct from the phosphate assay.
-            cache_path: evidence/PF01172/finch-2011-sbds.txt
-            cache_sha256: 0d56ee0dd618c81142fd366253d3c8b39e79ca0a37c0d014fd4608869e9e47d5
-      - edge_id: k151n-decreases-mouse-eif6-release
-        subject: k151n-in-mouse-release-assay
-        predicate: decreases
-        object: mutant-assay-eif6-release
-        mechanism: K151N reduces eIF6 release relative to WT despite retaining stimulation in the separate GTP-hydrolysis assay. This preserves the experimentally important uncoupling without joining separate assays into one directly observed temporal chain.
-        directness: DIRECT
-        support: OBSERVED
-        evidence_kind: EXPERIMENTAL
-        evidence:
-          - reference: PMID:21536732
-            source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC3084026/
-            snippet: eIF6 release
-            explanation: Figure 6C WT/K151N lanes and contrast with Figure 6B, retaining the differing particle and buffer contexts.
-            cache_path: evidence/PF01172/finch-2011-sbds.txt
-            cache_sha256: 0d56ee0dd618c81142fd366253d3c8b39e79ca0a37c0d014fd4608869e9e47d5
-discussions:
-  - discussion_id: sbds-domain-specific-mechanism-and-constructs
-    prompt: Resolve SBDS construct details and domain-specific causal evidence before extending the release cycle.
-    kind: CURATION_TODO
-    status: OPEN
-    rationale: Seven observed whole-protein biochemical effects do not establish isolated N-terminal-domain sufficiency, a directly tracked conformational cycle or all member functions.
+- graph_id: sbds-efl1-mouse-pre60s-release
+  title: Joint SBDS, EFL1 and GTP release eIF6 from mouse pre-60S particles
+  scope: Recombinant human SBDS and EFL1 acting on eIF6-loaded pre-60S particles isolated from Sbds-deleted
+    mouse liver in Finch 2011 Figure 3B/C. This is a mixed-species, whole-protein reconstitution.
+  context: 100 ul with about 0.5-1 pmol pre-60S, 5 pmol each SBDS/EFL1, 100 uM GTP, 10 mM Tris-HCl pH
+    7.4, 75 mM KCl, 1.5 mM MgCl2 and protease/RNase inhibitors; 10 min at 37 C. Sucrose-cushion centrifugation
+    and immunoblotting distinguish free and bound eIF6.
+  family_mapping: Q9Y3A5/SBDS_HUMAN is 250 aa, sequence version 4, matching current NP_057122.2 and InterPro
+    exactly. PF01172 spans 14-100; the paper's structural domain I spans 2-96. The paper cites unversioned
+    NP_057122. The intact protein includes other domains, and complete experimental tags/scars remain
+    unresolved.
+  scope_status: MECHANISTIC
+  limitations: SBDS alone is not sufficient. GDP/no nucleotide fail and GDPNP gives marginal release;
+    these do not quantify a complete kinetic cycle. Ebp1/Nmd3 retention constrains specificity. The supplement
+    was inaccessible, so full construct details and raw blots are unverified. Neither isolated SBDS_N
+    activity nor direct 80S assembly is measured.
+  nodes:
+  - node_id: joint-sbds-efl1-gtp-mouse-pre60s
+    label: Add human SBDS and EFL1 with GTP to mouse pre-60S particles
+    node_type: ACTIVITY
+    grounding:
+    - UniProtKB:Q9Y3A5
+  - node_id: mouse-pre60s-eif6-release
+    label: eIF6 redistribution from particle-bound to free fraction
+    node_type: PROCESS
+  edges:
+  - edge_id: joint-factors-enable-mouse-eif6-release
+    subject: joint-sbds-efl1-gtp-mouse-pre60s
+    predicate: enables
+    object: mouse-pre60s-eif6-release
+    mechanism: The joint factor/GTP condition releases eIF6 while individual-factor controls do not. This
+      is a directly observed biochemical release effect; no independent sufficient cause is assigned to
+      either protein alone.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
     evidence:
-      - reference: PMID:21536732
-        supports: PARTIAL
-        evidence_source: inspected_primary_biochemical_results_and_methods
-        explanation: Figures 3/6 and main Methods support separate release and hydrolysis effects. Supplement access failed; R126T/K151N are outside PF01172.
-      - reference: doi:10.1038/s41467-022-29214-7
-        supports: PARTIAL
-        evidence_source: primary_abstract_only
-        explanation: The 2022 abstract identifies mature-ribosome recycling contexts requiring full Methods, figure and construct assessment.
-    notes: Obtain 2011 supplementary purification and binding protocols and exact clone sequences. Review the 2015 structural and 2022 recycling studies with domain-specific perturbations; separate physical contacts and static structures from directed causal steps. Do not transfer yeast genetics, mouse pathology, treatment implications or predicted rotations into observed human-domain edges. Partial same-agent scientific assessment; remain IN_PROGRESS.
-    posed_by: Codex
-    posed_date: '2026-10-11'
+    - reference: PMID:21536732
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC3084026/
+      snippet: eIF6 release
+      explanation: Visually inspected Figure 3B/C and main release-assay Methods; Ebp1/Nmd3 and nucleotide
+        controls remain part of the scope.
+      cache_path: evidence/PF01172/finch-2011-sbds.txt
+      cache_sha256: 0d56ee0dd618c81142fd366253d3c8b39e79ca0a37c0d014fd4608869e9e47d5
+    - reference: https://www.ebi.ac.uk/interpro/api/protein/uniprot/Q9Y3A5/entry/pfam/PF01172/
+      source_url: https://www.ebi.ac.uk/interpro/api/protein/uniprot/Q9Y3A5/entry/pfam/PF01172/
+      snippet: 'Q9Y3A5 Pfam:PF01172 interval: 14-100, inclusive.'
+      explanation: Current exact reference mapping, distinct from a claim that this domain alone performs
+        the whole-protein reaction.
+      cache_path: evidence/PF01172/SBDS-identity.txt
+      cache_sha256: 310d70c64af2514b1d769b877d83765895e3cba9fe12bb8b686d8bb15a387615
+- graph_id: sbds-efl1-rabbit-truncated-eif6-release
+  title: SBDS and EFL1 release truncated eIF6 from rabbit 60S particles
+  scope: Human SBDS/EFL1 and recombinant human eIF6(1-225) on salt-washed rabbit reticulocyte 60S subunits
+    in Figure 3D. This mature-particle preparation is separate from mouse pre-60S.
+  context: Preload 5 pmol rabbit 60S with excess eIF6(1-225) for 20 min on ice, remove free factor with
+    a 100-kDa filter, and perform the 100-ul release assay with 5 pmol each SBDS/EFL1 and 100 uM GTP for
+    10 min at 37 C in the pH-7.4 release buffer. Compare bound/free immunoblots after sucrose pelleting.
+  family_mapping: Human whole SBDS maps to Q9Y3A5 and PF01172 14-100; the rabbit particle and truncated
+    eIF6 are separate components. The SBDS and EFL1 tag states cannot be reconstructed from the accessible
+    main Methods alone.
+  scope_status: MECHANISTIC
+  limitations: Rpl28 retention and EDTA release controls are retained. The eIF6 truncation excludes S235,
+    but this does not exclude every phosphorylation mechanism in cells. Mature rabbit particles are not
+    treated as equivalent to mouse precursors or a wholly human system.
+  nodes:
+  - node_id: joint-factors-rabbit-truncated-eif6
+    label: Add human SBDS, EFL1 and GTP to eIF6(1-225)-loaded rabbit 60S
+    node_type: ACTIVITY
+    grounding:
+    - UniProtKB:Q9Y3A5
+  - node_id: truncated-eif6-release
+    label: Release of eIF6(1-225) into the free fraction
+    node_type: PROCESS
+  edges:
+  - edge_id: joint-factors-enable-truncated-eif6-release
+    subject: joint-factors-rabbit-truncated-eif6
+    predicate: enables
+    object: truncated-eif6-release
+    mechanism: The joint protein/GTP condition promotes release of the prebound truncation lacking S235;
+      single factors or GDP do not reproduce the effect. The observation concerns net release, not a directly
+      observed domain-rotation trajectory.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:21536732
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC3084026/
+      snippet: eIF6 release
+      explanation: Figure 3D, mature-particle loading protocol and main Results distinguish this truncation
+        experiment from the native mouse-particle assay.
+      cache_path: evidence/PF01172/finch-2011-sbds.txt
+      cache_sha256: 0d56ee0dd618c81142fd366253d3c8b39e79ca0a37c0d014fd4608869e9e47d5
+- graph_id: sbds-variants-rabbit-60s-gtp-hydrolysis
+  title: SBDS preparations alter 60S-dependent EFL1 GTP hydrolysis
+  scope: WT, R126T and K151N human SBDS preparations in the separate rabbit-60S phosphate-release assay
+    of Figure 6B. R126T and K151N are outside PF01172.
+  context: 50 ul containing 5 nmol gamma-32P-GTP, 5 pmol rabbit 60S, 6.3 pmol SBDS when present and 40
+    pmol EFL1; 50 mM Tris pH 7.4, 2 mM MgCl2, 150 mM NaCl and 2 mM DTT; 30 min at 37 C. Charcoal separation
+    and scintillation quantify Pi; bars report three experiments with SD.
+  family_mapping: Q9Y3A5 has R126 and K151 outside its PF01172 14-100 match, within the full multidomain
+    SBDS molecule. These are whole-protein context effects, not mapped N-terminal catalytic residues.
+  scope_status: MECHANISTIC
+  limitations: SBDS alone without 60S does not significantly activate EFL1. H96A EFL1 is a catalytic control.
+    Hydrolysis and eIF6 release use different buffers and particles in separate vessels. K151N's nonsignificant
+    difference from WT does not establish kinetic equivalence; no universal rate or stoichiometry is inferred.
+  nodes:
+  - node_id: add-wt-sbds-rabbit-60s
+    label: Add WT SBDS rather than no SBDS to EFL1 and rabbit 60S
+    node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q9Y3A5
+  - node_id: replace-wt-sbds-r126t
+    label: Replace WT SBDS with R126T in the hydrolysis assay
+    node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q9Y3A5
+  - node_id: add-k151n-sbds-rabbit-60s
+    label: Add K151N SBDS rather than no SBDS to EFL1 and rabbit 60S
+    node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q9Y3A5
+  - node_id: efl1-pi-release
+    label: 60S-dependent EFL1 phosphate-release readout
+    node_type: ACTIVITY
+  edges:
+  - edge_id: wt-sbds-increases-efl1-pi-release
+    subject: add-wt-sbds-rabbit-60s
+    predicate: increases
+    object: efl1-pi-release
+    mechanism: WT SBDS increases the EFL1/60S-dependent Pi signal relative to no SBDS. This is an observed
+      turnover effect, not direct visualization of an allosteric contact or a sufficient cause of eIF6
+      release by itself.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:21536732
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC3084026/
+      snippet: GTP hydrolysis
+      explanation: Figure 6B lanes 5/7, catalytic and no-particle controls, and the separate phosphate-assay
+        Methods.
+      cache_path: evidence/PF01172/finch-2011-sbds.txt
+      cache_sha256: 0d56ee0dd618c81142fd366253d3c8b39e79ca0a37c0d014fd4608869e9e47d5
+  - edge_id: r126t-decreases-efl1-pi-release
+    subject: replace-wt-sbds-r126t
+    predicate: decreases
+    object: efl1-pi-release
+    mechanism: The R126T preparation stimulates less Pi release than WT in the matched biochemical system.
+      Main-text NMR analysis reports local perturbation with preserved overall fold; detailed binding
+      evidence in supplement S7 was not inspected.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:21536732
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC3084026/
+      snippet: GTP hydrolysis
+      explanation: Figure 6B lanes 7/8 and the mutant Results. The mutation is not in the N-terminal Pfam
+        domain.
+      cache_path: evidence/PF01172/finch-2011-sbds.txt
+      cache_sha256: 0d56ee0dd618c81142fd366253d3c8b39e79ca0a37c0d014fd4608869e9e47d5
+  - edge_id: k151n-increases-efl1-pi-release-over-no-sbds
+    subject: add-k151n-sbds-rabbit-60s
+    predicate: increases
+    object: efl1-pi-release
+    mechanism: K151N retains stimulation relative to the no-SBDS baseline despite its impaired release
+      phenotype in a different assay. This is not an assertion that K151N and WT have identical kinetics.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:21536732
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC3084026/
+      snippet: GTP hydrolysis
+      explanation: Figure 6B lanes 5/9 and the reported significance versus baseline, not a claim based
+        on nonsignificance versus WT.
+      cache_path: evidence/PF01172/finch-2011-sbds.txt
+      cache_sha256: 0d56ee0dd618c81142fd366253d3c8b39e79ca0a37c0d014fd4608869e9e47d5
+- graph_id: sbds-variants-mouse-pre60s-release
+  title: R126T and K151N SBDS preparations reduce eIF6 release
+  scope: Figure 6C compares human WT and mutant SBDS with EFL1/GTP on Sbds-deleted mouse-liver pre-60S
+    particles. Neither mutant lies inside PF01172.
+  context: The 100-ul mouse-particle release assay uses about 0.5-1 pmol pre-60S, 5 pmol SBDS, 5 pmol
+    EFL1 and 100 uM GTP in 10 mM Tris-HCl pH 7.4, 75 mM KCl and 1.5 mM MgCl2 with inhibitors; 10 min at
+    37 C, sucrose pelleting and bound/free immunoblots.
+  family_mapping: The tested multidomain protein corresponds to Q9Y3A5, PF01172 14-100; R126T and K151N
+    alter another domain. Reference agreement does not substitute for sequencing the experimental variants
+    or assign their effect to SBDS_N alone.
+  scope_status: MECHANISTIC
+  limitations: Ebp1 is retained as a particle control. The figure does not supply a precise release fraction
+    or a complete kinetic analysis. Main-text NMR supports retained fold, but the supplementary binding
+    assay and detailed constructs remain uninspected. Disease etiology and universal family behavior are
+    not graph outputs.
+  nodes:
+  - node_id: r126t-in-mouse-release-assay
+    label: Replace WT SBDS with R126T in the mouse-particle assay
+    node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q9Y3A5
+  - node_id: k151n-in-mouse-release-assay
+    label: Replace WT SBDS with K151N in the mouse-particle assay
+    node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q9Y3A5
+  - node_id: mutant-assay-eif6-release
+    label: eIF6 release from mouse pre-60S particles
+    node_type: PROCESS
+  edges:
+  - edge_id: r126t-decreases-mouse-eif6-release
+    subject: r126t-in-mouse-release-assay
+    predicate: decreases
+    object: mutant-assay-eif6-release
+    mechanism: The R126T preparation gives less free eIF6 and more bound eIF6 than WT under the joint
+      EFL1/GTP condition. The direct biochemical effect does not establish a specific N-terminal contact.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:21536732
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC3084026/
+      snippet: eIF6 release
+      explanation: Visually inspected Figure 6C WT/R126T lanes and mutant Results, distinct from the phosphate
+        assay.
+      cache_path: evidence/PF01172/finch-2011-sbds.txt
+      cache_sha256: 0d56ee0dd618c81142fd366253d3c8b39e79ca0a37c0d014fd4608869e9e47d5
+  - edge_id: k151n-decreases-mouse-eif6-release
+    subject: k151n-in-mouse-release-assay
+    predicate: decreases
+    object: mutant-assay-eif6-release
+    mechanism: K151N reduces eIF6 release relative to WT despite retaining stimulation in the separate
+      GTP-hydrolysis assay. This preserves the experimentally important uncoupling without joining separate
+      assays into one directly observed temporal chain.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:21536732
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC3084026/
+      snippet: eIF6 release
+      explanation: Figure 6C WT/K151N lanes and contrast with Figure 6B, retaining the differing particle
+        and buffer contexts.
+      cache_path: evidence/PF01172/finch-2011-sbds.txt
+      cache_sha256: 0d56ee0dd618c81142fd366253d3c8b39e79ca0a37c0d014fd4608869e9e47d5
+discussions:
+- discussion_id: sbds-domain-specific-mechanism-and-constructs
+  prompt: Resolve SBDS construct details and domain-specific causal evidence before extending the release
+    cycle.
+  kind: CURATION_TODO
+  status: OPEN
+  rationale: Seven observed whole-protein biochemical effects do not establish isolated N-terminal-domain
+    sufficiency, a directly tracked conformational cycle or all member functions.
+  evidence:
+  - reference: PMID:21536732
+    supports: PARTIAL
+    evidence_source: inspected_primary_biochemical_results_and_methods
+    explanation: Figures 3/6 and main Methods support separate release and hydrolysis effects. Supplement
+      access failed; R126T/K151N are outside PF01172.
+  - reference: doi:10.1038/s41467-022-29214-7
+    supports: PARTIAL
+    evidence_source: primary_abstract_only
+    explanation: The 2022 abstract identifies mature-ribosome recycling contexts requiring full Methods,
+      figure and construct assessment.
+  notes: Obtain 2011 supplementary purification and binding protocols and exact clone sequences. Review
+    the 2015 structural and 2022 recycling studies with domain-specific perturbations; separate physical
+    contacts and static structures from directed causal steps. Do not transfer yeast genetics, mouse pathology,
+    treatment implications or predicted rotations into observed human-domain edges. Partial same-agent
+    scientific assessment; remain IN_PROGRESS.
+  posed_by: Codex
+  posed_date: '2026-10-11'

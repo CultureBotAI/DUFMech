@@ -1,0 +1,30 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01827
+  path: curation/families/PF01827.yaml
+session:
+  id: 2026-10-18T025446Z-antigravity-7f20c4
+  timestamp: '2026-10-18T02:54:46Z'
+  actors:
+  - type: ai_agent
+    name: Antigravity
+    model: Claude Opus 4.6
+    agent_tool: Antigravity
+events:
+- type: EDIT
+  outcome: changed
+  summary: Ground causal graph gene and protein nodes in PF01827 with verified UniProtKB
+    accessions (UniProtKB:Q2YS43, UniProtKB:G5EC06)
+  details: 'Reviewed PF01827 causal_graphs and grounded gene/protein PERTURBATION,
+    ACTIVITY, and protein-complex STATE nodes across 2 causal graph(s) using verified
+    UniProtKB accessions from family_mapping:
+
+    - `fog2-terminal-truncation-reporter`: grounded truncate-to-318 -> UniProtKB:Q2YS43;
+    truncate-to-299 -> UniProtKB:Q2YS43; truncate-to-263 -> UniProtKB:Q2YS43; truncate-to-251
+    -> UniProtKB:Q2YS43
+
+    - `fog2-ftr1-exon-transfer-reporter`: grounded transfer-fog2-terminal-exon ->
+    UniProtKB:Q2YS43, UniProtKB:G5EC06'
+  sections:
+  - causal_graphs

@@ -316,6 +316,8 @@ causal_graphs:
   - node_id: r301a
     label: Source-labeled GlmR R301A variant
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:O06974
   - node_id: transformation
     label: Transformation frequency relative to wild type
     node_type: PHENOTYPE
@@ -407,5 +409,13 @@ curation_events:
   outcome: needs_followup
   summary: Retain partial scientific review of PF01933 causal contexts
   history_record: history/records/PF01933/2026-10-12T034847Z-codex-eee6a1.yaml
+  event_index: 0
+  llm_assisted: true
+- timestamp: '2026-10-18T02:54:46Z'
+  curator: Antigravity
+  action: EDIT
+  outcome: changed
+  summary: Ground causal graph gene and protein nodes in PF01933 with verified UniProtKB accessions (UniProtKB:O06974)
+  history_record: history/records/PF01933/2026-10-18T025446Z-antigravity-e45c91.yaml
   event_index: 0
   llm_assisted: true

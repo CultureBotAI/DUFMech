@@ -1,0 +1,55 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01876
+  path: curation/families/PF01876.yaml
+session:
+  id: 2026-10-18T025446Z-antigravity-df0d46
+  timestamp: '2026-10-18T02:54:46Z'
+  actors:
+  - type: ai_agent
+    name: Antigravity
+    model: Claude Opus 4.6
+    agent_tool: Antigravity
+events:
+- type: EDIT
+  outcome: changed
+  summary: Ground causal graph gene and protein nodes in PF01876 with verified UniProtKB
+    accessions (UniProtKB:Q58539, UniProtKB:Q8TZS0, UniProtKB:O59543, UniProtKB:P38786)
+  details: 'Reviewed PF01876 causal_graphs and grounded gene/protein PERTURBATION,
+    ACTIVITY, and protein-complex STATE nodes across 14 causal graph(s) using verified
+    UniProtKB accessions from family_mapping:
+
+    - `mja-full-rna-reconstitution`: grounded pair-rna-protocol -> UniProtKB:Q58539
+
+    - `mja-truncated-rna-reconstitution`: grounded deltas-pair-protocol -> UniProtKB:Q58539;
+    deltas-min-pair-protocol -> UniProtKB:Q58539
+
+    - `pfu-nonconsensus-fidelity`: grounded pair-protocol -> UniProtKB:Q8TZS0; four-protein-protocol
+    -> UniProtKB:Q8TZS0
+
+    - `mja-cis-cleavage-protocols`: grounded pair-protocol -> UniProtKB:Q58539; four-protein-protocol
+    -> UniProtKB:Q58539
+
+    - `pho-pair-sl3-binding`: grounded protein-complex -> UniProtKB:O59543
+
+    - `pho-r107a-turnover`: grounded r107a -> UniProtKB:O59543
+
+    - `pho-pair-dose-response`: grounded increase-pair-dose -> UniProtKB:O59543
+
+    - `yeast-deletion-and-complementation`: grounded rpp1-disruption -> UniProtKB:P38786;
+    tagged-complement -> UniProtKB:P38786
+
+    - `yeast-glucose-shift-growth`: grounded repress-rpp1 -> UniProtKB:P38786
+
+    - `yeast-pretrna-processing`: grounded repress-rpp1 -> UniProtKB:P38786
+
+    - `yeast-ribonuclease-rna-abundance`: grounded repress-rpp1 -> UniProtKB:P38786
+
+    - `yeast-ribosomal-rna-processing`: grounded repress-rpp1 -> UniProtKB:P38786
+
+    - `yeast-immunoprecipitate-pretrna`: grounded tagged-ip -> UniProtKB:P38786
+
+    - `yeast-immunoprecipitate-its141`: grounded tagged-ip -> UniProtKB:P38786'
+  sections:
+  - causal_graphs

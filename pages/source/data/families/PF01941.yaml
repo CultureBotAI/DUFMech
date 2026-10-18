@@ -373,15 +373,23 @@ causal_graphs:
   - node_id: met
     label: Complete cascade plus L-methionine
     node_type: ACTIVITY
+    grounding:
+    - UniProtKB:Q58605
   - node_id: onb
     label: Complete cascade plus ONB-Hcy
     node_type: ACTIVITY
+    grounding:
+    - UniProtKB:Q58605
   - node_id: dmnb
     label: Complete cascade plus DMNB-Hcy
     node_type: ACTIVITY
+    grounding:
+    - UniProtKB:Q58605
   - node_id: brom
     label: Complete cascade plus pBrONB-Hcy
     node_type: ACTIVITY
+    grounding:
+    - UniProtKB:Q58605
   - node_id: capmet
     label: N7-methylated GpppA product 4a
     node_type: STATE
@@ -478,5 +486,13 @@ curation_events:
   outcome: needs_followup
   summary: Retain partial PF01941 MAT causal-context scientific self-review
   history_record: history/records/PF01941/2026-10-12T064422Z-codex-c2a818.yaml
+  event_index: 0
+  llm_assisted: true
+- timestamp: '2026-10-18T02:54:46Z'
+  curator: Antigravity
+  action: EDIT
+  outcome: changed
+  summary: Ground causal graph gene and protein nodes in PF01941 with verified UniProtKB accessions (UniProtKB:Q58605)
+  history_record: history/records/PF01941/2026-10-18T025446Z-antigravity-2786db.yaml
   event_index: 0
   llm_assisted: true

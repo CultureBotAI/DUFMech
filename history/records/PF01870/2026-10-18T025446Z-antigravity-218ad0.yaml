@@ -1,0 +1,40 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01870
+  path: curation/families/PF01870.yaml
+session:
+  id: 2026-10-18T025446Z-antigravity-218ad0
+  timestamp: '2026-10-18T02:54:46Z'
+  actors:
+  - type: ai_agent
+    name: Antigravity
+    model: Claude Opus 4.6
+    agent_tool: Antigravity
+events:
+- type: EDIT
+  outcome: changed
+  summary: Ground causal graph gene and protein nodes in PF01870 with verified UniProtKB
+    accessions (UniProtKB:E7FHX4, UniProtKB:F0NID3)
+  details: 'Reviewed PF01870 causal_graphs and grounded gene/protein PERTURBATION,
+    ACTIVITY, and protein-complex STATE nodes across 6 causal graph(s) using verified
+    UniProtKB accessions from family_mapping:
+
+
+    - `pfu-reca-intermediate-resolution`: grounded add-hjc -> UniProtKB:E7FHX4
+
+    - `pfu-extract-immunodepletion`: grounded anti-hjc -> UniProtKB:E7FHX4
+
+    - `pfu-junction-binding-competition`: grounded labeled-complex -> UniProtKB:E7FHX4
+
+    - `sire-mutation-dependent-phosphorylation-readouts`: grounded s34a-0171 -> UniProtKB:F0NID3;
+    s9a-2030 -> UniProtKB:F0NID3; t138a-2030 -> UniProtKB:F0NID3; t138a-2056kd ->
+    UniProtKB:F0NID3
+
+    - `sire-cleavage-substitution-effects`: grounded s9e -> UniProtKB:F0NID3; s34e
+    -> UniProtKB:F0NID3; d42n -> UniProtKB:F0NID3
+
+    - `sire-s34e-damage-tolerance`: grounded s34e-uv -> UniProtKB:F0NID3; s34e-cisplatin
+    -> UniProtKB:F0NID3'
+  sections:
+  - causal_graphs

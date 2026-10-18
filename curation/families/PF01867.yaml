@@ -2,394 +2,493 @@ pfam_id: PF01867
 curation_status: IN_PROGRESS
 curation_history: history/records/PF01867
 causal_graphs:
-  - graph_id: cas1-cas2-purified-integration
-    title: Purified Cas1-Cas2 integrates donor DNA into supercoiled pCRISPR
-    scope: Nunez2015 Figures1B-E/2B-C and ExtendedData3, preparation-level integration and mutant comparisons.
-    context: "MG1655 proteins with affinity tags removed; 33-bp M13-derived duplex and pUC19-based pCRISPR carrying the BL21-AI locus. Radiolabel default:200 nM complex,20 nM donor,approximately5 nM target;20 mM HEPES pH7.5,25 mM KCl,10 mM MgCl2,1 mM DTT,10%DMSO,37 C,1 h. EDTA/SDS/proteinase K treatment precedes gel analysis."
-    family_mapping: "Cas1 Q46896 sequence version1 equals NP_417235.1 and PDB4P6I entity2,305 aa. Current PF01867 match131-226 includes H208 and D221. Cas2 is a separate partner, not another PF01867 domain."
-    scope_status: MECHANISTIC
-    taxon: NCBITaxon:83333
-    limitations: "Joint preparation/substrate conditions, not isolated-domain sufficiency. Radiolabeled relaxed/linear bands do not uniquely prove full-site insertion or completed chromosomal repair; half-site events predominate. BandX is not labeled donor-containing product. Mutant losses do not alone identify an elementary catalytic step. Cas1 K224A and Cas2 E9Q retain activity."
-    nodes:
-      - node_id: joint-reaction
-        label: WT Cas1-Cas2 with duplex donor and supercoiled pCRISPR
-        node_type: ACTIVITY
-      - node_id: integrated-dna
-        label: Deproteinized donor-labeled relaxed and linear plasmid products
-        node_type: STATE
-      - node_id: h208a
-        label: Substitute Cas1 H208A with WT Cas2
-        node_type: PERTURBATION
-      - node_id: d221a
-        label: Substitute Cas1 D221A with WT Cas2
-        node_type: PERTURBATION
-      - node_id: cas2-deletion
-        label: Replace WT Cas2 with its beta6-beta7 deletion variant
-        node_type: PERTURBATION
-    edges:
-      - edge_id: joint-reaction-produces-integrated-dna
-        subject: joint-reaction
-        predicate: produces
-        object: integrated-dna
-        mechanism: Joint WT proteins generate donor-containing plasmid products relative to component-omission controls. Retention of label after deproteinization and restriction digestion supports covalent integration, without assigning every band to a unique full-site product.
-        directness: DIRECT
-        support: OBSERVED
-        evidence_kind: EXPERIMENTAL
-        evidence:
-          - reference: PMID:25707795
-            source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC4359072/
-            snippet: Disintegration assays
-            explanation: Original Figures1B-E and2B-C plus integration/radiolabel Methods; BandX exclusion and half-site interpretation come from the associated Results.
-            cache_path: evidence/PF01867/nunez-2015-integration.txt
-            cache_sha256: 2742611e7b117b36fce70cba810483e901f2bc10eef2e2a8b8ccac18e393db50
-      - edge_id: h208a-decreases-integration
-        subject: h208a
-        predicate: decreases
-        object: integrated-dna
-        mechanism: H208A loses detectable integration under the matched purified-protein protocol. This is a preparation-level substitution effect, not direct observation of histidine-mediated proton transfer.
-        directness: DIRECT
-        support: OBSERVED
-        evidence_kind: EXPERIMENTAL
-        evidence:
-          - reference: PMID:25707795
-            source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC4359072/
-            snippet: Disintegration assays
-            explanation: Original Figure1E and ExtendedData3C; matched WT Cas2 and radiolabeled donor.
-            cache_path: evidence/PF01867/nunez-2015-integration.txt
-            cache_sha256: 2742611e7b117b36fce70cba810483e901f2bc10eef2e2a8b8ccac18e393db50
-      - edge_id: d221a-decreases-integration
-        subject: d221a
-        predicate: decreases
-        object: integrated-dna
-        mechanism: D221A lowers the donor-containing product to undetectable levels in this gel assay. Neither protein-folding equivalence nor an individual metal-coordination microstep is established by that endpoint.
-        directness: DIRECT
-        support: OBSERVED
-        evidence_kind: EXPERIMENTAL
-        evidence:
-          - reference: PMID:25707795
-            source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC4359072/
-            snippet: Disintegration assays
-            explanation: Original ExtendedData3B/C, with active K224A comparison explicitly retained rather than treating all displayed variants as inactive.
-            cache_path: evidence/PF01867/nunez-2015-integration.txt
-            cache_sha256: 2742611e7b117b36fce70cba810483e901f2bc10eef2e2a8b8ccac18e393db50
-      - edge_id: cas2-deletion-decreases-integration
-        subject: cas2-deletion
-        predicate: decreases
-        object: integrated-dna
-        mechanism: The partner deletion loses detectable donor incorporation with WT Cas1. The perturbation removes a Cas2 interaction region; it is not a mutation inside PF01867 or proof that Cas2 nuclease chemistry is required.
-        directness: DIRECT
-        support: OBSERVED
-        evidence_kind: EXPERIMENTAL
-        evidence:
-          - reference: PMID:25707795
-            source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC4359072/
-            snippet: Disintegration assays
-            explanation: Original Figure1C/E; Cas2 E9Q remains active in the same comparison.
-            cache_path: evidence/PF01867/nunez-2015-integration.txt
-            cache_sha256: 2742611e7b117b36fce70cba810483e901f2bc10eef2e2a8b8ccac18e393db50
-  - graph_id: cas2-enhancement-in-manganese
-    title: Cas2 enhances the low Cas1-alone integration signal in manganese
-    scope: Nunez2015 ExtendedData2B, matched purified-protein titration.
-    context: "Same donor/pCRISPR radiolabel assay,10 mM MnCl2 replacing MgCl2;0/50/100/200 nM protein series,37 C,1 h. Compare Cas1 alone with Cas1 plus Cas2 at the corresponding series positions."
-    family_mapping: "Intact MG1655 Cas1 Q46896/NP_417235.1; PF01867 131-226. No isolated-domain or other-member experiment."
-    scope_status: MECHANISTIC
-    taxon: NCBITaxon:83333
-    limitations: Qualitative representative gels, not measured fold stimulation. Low Cas1-alone activity prevents an absolute Cas2 requirement claim. The Mg condition is a separate comparison, not pooled with Mn.
-    nodes:
-      - node_id: add-cas2
-        label: Add Cas2 to the Cas1 donor-target reaction in manganese
-        node_type: PERTURBATION
-      - node_id: integrated-dna
-        label: Radiolabeled donor-containing plasmid product
-        node_type: STATE
-    edges:
-      - edge_id: cas2-increases-integration
-        subject: add-cas2
-        predicate: increases
-        object: integrated-dna
-        mechanism: Product bands are stronger with both proteins than with Cas1 alone. This records partner-dependent enhancement in Mn without converting the low baseline into zero activity.
-        directness: DIRECT
-        support: OBSERVED
-        evidence_kind: EXPERIMENTAL
-        evidence:
-          - reference: PMID:25707795
-            source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC4359072/
-            snippet: Disintegration assays
-            explanation: Original ExtendedData2B and associated main-text statement; Cas2-alone and no-protein controls inspected.
-            cache_path: evidence/PF01867/nunez-2015-integration.txt
-            cache_sha256: 2742611e7b117b36fce70cba810483e901f2bc10eef2e2a8b8ccac18e393db50
-  - graph_id: cas1-integration-substrate-perturbations
-    title: Donor-end chemistry and target topology alter the IHF-absent reaction
-    scope: Nunez2015 Figure3A-C, three separate substrate comparisons.
-    context: WT Cas1-Cas2, Mg radiolabel integration protocol at37 C for1 h; each altered substrate compared with the matched33-bp duplex/supercoiled pCRISPR control. No IHF is supplied.
-    family_mapping: "Intact MG1655 Cas1 Q46896/NP_417235.1, PF01867 131-226, acting with Cas2. DNA perturbations do not establish isolated-domain sufficiency."
-    scope_status: MECHANISTIC
-    taxon: NCBITaxon:83333
-    limitations: "Three separate experiments, not a combined perturbation. Dual3prime capping differs from single-end capping;5prime phosphorylation is compatible. Later PMID27211867 establishes an IHF-dependent linear-DNA context, so topology dependence is not universal. Empty supercoiled pUC19 also supports integration."
-    nodes:
-      - node_id: cap-both-ends
-        label: Phosphorylate both donor 3-prime ends
-        node_type: PERTURBATION
-      - node_id: single-strand
-        label: Supply donor strand S1 or S2 alone, each separately
-        node_type: PERTURBATION
-      - node_id: linearize-target
-        label: Replace supercoiled pCRISPR with linear pCRISPR
-        node_type: PERTURBATION
-      - node_id: integration-product
-        label: Radiolabeled donor-containing target product
-        node_type: STATE
-    edges:
-      - edge_id: dual-capping-decreases-integration
-        subject: cap-both-ends
-        predicate: decreases
-        object: integration-product
-        mechanism: Blocking both3prime hydroxyls removes detectable integration, supporting the end-chemistry requirement in this reaction. The endpoint does not directly image the nucleophilic transition state.
-        directness: DIRECT
-        support: OBSERVED
-        evidence_kind: EXPERIMENTAL
-        evidence:
-          - reference: PMID:25707795
-            source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC4359072/
-            snippet: Disintegration assays
-            explanation: Original Figure3A/B dual-capped donor versus hydroxyl-ended duplex; Methods uses phosphatase-minus kinase for labeled3prime-phosphorylated substrates.
-            cache_path: evidence/PF01867/nunez-2015-integration.txt
-            cache_sha256: 2742611e7b117b36fce70cba810483e901f2bc10eef2e2a8b8ccac18e393db50
-      - edge_id: single-strand-decreases-integration
-        subject: single-strand
-        predicate: decreases
-        object: integration-product
-        mechanism: Neither isolated donor strand yields the product seen with the annealed duplex. This is a substrate-state comparison, not proof that every Cas1 homolog rejects all single-stranded donors.
-        directness: DIRECT
-        support: OBSERVED
-        evidence_kind: EXPERIMENTAL
-        evidence:
-          - reference: PMID:25707795
-            source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC4359072/
-            snippet: Disintegration assays
-            explanation: Original Figure3A/B separate S1-only and S2-only lanes with and without Cas1-Cas2.
-            cache_path: evidence/PF01867/nunez-2015-integration.txt
-            cache_sha256: 2742611e7b117b36fce70cba810483e901f2bc10eef2e2a8b8ccac18e393db50
-      - edge_id: linear-target-decreases-ihf-absent-integration
-        subject: linearize-target
-        predicate: decreases
-        object: integration-product
-        mechanism: Linear pCRISPR lacks detectable incorporation under the tested IHF-absent conditions. Later host-factor-supported integration into linear DNA bounds this negative; it is not a universal physical prerequisite for Cas1.
-        directness: DIRECT
-        support: OBSERVED
-        evidence_kind: EXPERIMENTAL
-        evidence:
-          - reference: PMID:25707795
-            source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC4359072/
-            snippet: Disintegration assays
-            explanation: Original Figure3C directly compares supercoiled and linear pCRISPR; the separate1-kb fragment and empty-vector results prevent sequence-requirement overstatement.
-            cache_path: evidence/PF01867/nunez-2015-integration.txt
-            cache_sha256: 2742611e7b117b36fce70cba810483e901f2bc10eef2e2a8b8ccac18e393db50
-  - graph_id: cas1-synthetic-intermediate-disintegration
-    title: Cas1 releases a donor-sized duplex from synthetic Y-DNA
-    scope: Nunez2015 Figure2G/H, Cas1-alone preparation in two separately tested metal conditions.
-    context: 50 nM purified Cas1 with5 nM synthetic radiolabeled Y-DNA; integration buffer containing10 mM MgCl2 or MnCl2,37 C,1 h; native15%polyacrylamide electrophoresis.
-    family_mapping: "Intact Q46896/NP_417235.1 Cas1, PF01867 131-226; the synthetic substrate mimics a half-site intermediate but was not recovered from the integration assay."
-    scope_status: MECHANISTIC
-    taxon: NCBITaxon:83333
-    limitations: "Cas2 is optional and Cas2 alone is inactive. This is not proof that BandX in the separate plasmid reaction necessarily arose through this route. The original ED5 target-rejoining image is unresolved because of a PMC image/caption mismatch; no separate rejoining edge is claimed."
-    nodes:
-      - node_id: cas1-y-dna
-        label: Purified Cas1 with the synthetic Y-DNA intermediate
-        node_type: ACTIVITY
-      - node_id: released-donor
-        label: Released radiolabeled 33-bp donor-sized duplex
-        node_type: STATE
-    edges:
-      - edge_id: cas1-produces-released-donor
-        subject: cas1-y-dna
-        predicate: produces
-        object: released-donor
-        mechanism: Cas1 alone generates the donor-sized product in both tested metal conditions, relative to no-protein and Cas2-only controls. This preparation-level disintegration observation does not resolve every chemical microstep or minor product.
-        directness: DIRECT
-        support: OBSERVED
-        evidence_kind: EXPERIMENTAL
-        evidence:
-          - reference: PMID:25707795
-            source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC4359072/
-            snippet: Disintegration assays
-            explanation: Correctly matched original main Figure2H and synthetic-substrate Methods, not the incorrectly linked ED5 image.
-            cache_path: evidence/PF01867/nunez-2015-integration.txt
-            cache_sha256: 2742611e7b117b36fce70cba810483e901f2bc10eef2e2a8b8ccac18e393db50
-  - graph_id: cas1-cas2-cellular-acquisition
-    title: Joint Cas1-Cas2 expression expands the cellular CRISPR locus
-    scope: Nunez2014 Figure1B, heterologous whole-cell acquisition assay.
-    context: "MG1655 cas1/cas2 on pCDF-1b in BL21-AI; LB,50 ug/ml streptomycin,0.2%arabinose,0.1 mM IPTG,20-24 h induction. OD600-normalized cellular input and CRISPR-I PCR/agarose readout."
-    family_mapping: "Donor Cas1 Q46896/NP_417235.1,305 aa,PF01867 131-226. Taxon identifies the K12 donor reference, not BL21-AI as an identical strain."
-    scope_status: PHENOTYPIC
-    taxon: NCBITaxon:83333
-    limitations: "Whole-cell joint-expression effect, not purified Cas1 sufficiency or an isolated-domain experiment. PCR expansion and reported clonal sequencing do not establish protection against phage. No raw sequencing reanalysis or SupplementaryTable1 review is claimed."
-    nodes:
-      - node_id: coexpress-cas1-cas2
-        label: Induce both Cas1 and Cas2 in BL21-AI
-        node_type: PERTURBATION
-      - node_id: expanded-locus
-        label: Expanded CRISPR-I locus PCR bands
-        node_type: PHENOTYPE
-    edges:
-      - edge_id: coexpression-increases-locus-expansion
-        subject: coexpress-cas1-cas2
-        predicate: increases
-        object: expanded-locus
-        mechanism: Expanded bands appear with joint expression, unlike Cas1-only, Cas2-only or empty-vector controls. This phenotype includes host activities needed after initial integration and is not joined to the purified endpoint as a directly traced pathway.
-        directness: INDIRECT
-        support: OBSERVED
-        evidence_kind: EXPERIMENTAL
-        evidence:
-          - reference: PMID:24793649
-            source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC4075942/
-            snippet: Spacer acquisition assays
-            explanation: Original Figure1B and Online Methods; induced/uninduced and individual-component controls inspected.
-            cache_path: evidence/PF01867/nunez-2014-acquisition.txt
-            cache_sha256: a3fce8f923833fade4c50d9b1bb2d1d213c819a5ecccd2d54485b49331be7792
-  - graph_id: cas1-cellular-active-site-variants
-    title: In-domain Cas1 substitutions reduce cellular locus expansion
-    scope: Nunez2014 Figure4C, separately tested Cas1 single substitutions with WT Cas2.
-    context: BL21-AI pCDF-1b acquisition assay after20-24 h induction, matched WT coexpression control and OD600-normalized CRISPR-I PCR; at least three assay repetitions.
-    family_mapping: "Q46896/NP_417235.1 reference E141,H208,D218,D221,K224 verified; all lie within current PF01867 131-226. Intact proteins, not purified isolated domains."
-    scope_status: PHENOTYPIC
-    taxon: NCBITaxon:83333
-    limitations: "Each variant is a separate single substitution, not a combined mutant. Loss of a cellular endpoint does not prove loss of chemistry. K224A retains purified integration in2015 ED3; abundance, folding and host-dependent steps remain alternatives."
-    nodes:
-      - node_id: four-single-variants
-        label: Cas1 E141A, H208A, D218A or D221A, each separately
-        node_type: PERTURBATION
-      - node_id: k224a
-        label: Cas1 K224A with WT Cas2
-        node_type: PERTURBATION
-      - node_id: expanded-locus
-        label: Expanded CRISPR-I PCR bands relative to WT
-        node_type: PHENOTYPE
-    edges:
-      - edge_id: four-site-variants-decrease-acquisition
-        subject: four-single-variants
-        predicate: decreases
-        object: expanded-locus
-        mechanism: Each of the four variants loses detectable expanded bands under the cellular protocol. The grouped node records four separately tested effects without claiming equal quantitative impairment or a shared demonstrated chemical defect.
-        directness: INDIRECT
-        support: OBSERVED
-        evidence_kind: EXPERIMENTAL
-        evidence:
-          - reference: PMID:24793649
-            source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC4075942/
-            snippet: Spacer acquisition assays
-            explanation: Original Figure4C lane labels and Online Methods; the readout is cellular locus expansion, not direct nuclease activity.
-            cache_path: evidence/PF01867/nunez-2014-acquisition.txt
-            cache_sha256: a3fce8f923833fade4c50d9b1bb2d1d213c819a5ecccd2d54485b49331be7792
-      - edge_id: k224a-decreases-cellular-acquisition
-        subject: k224a
-        predicate: decreases
-        object: expanded-locus
-        mechanism: K224A lacks detectable expanded bands here despite its retained integration in the later purified assay. The unresolved context dependence prevents labeling the mutant universally catalytically inactive.
-        directness: INDIRECT
-        support: OBSERVED
-        evidence_kind: EXPERIMENTAL
-        evidence:
-          - reference: PMID:24793649
-            source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC4075942/
-            snippet: Spacer acquisition assays
-            explanation: Original Figure4C K224A lane; contrasted explicitly with PMID25707795 ExtendedData3 rather than suppressing either result.
-            cache_path: evidence/PF01867/nunez-2014-acquisition.txt
-            cache_sha256: a3fce8f923833fade4c50d9b1bb2d1d213c819a5ecccd2d54485b49331be7792
-  - graph_id: cas1-cellular-interface-variants
-    title: Outside-match Cas1 charge substitutions reduce locus expansion
-    scope: Nunez2014 Figure3D, three independently tested single variants.
-    context: BL21-AI cellular acquisition protocol, each Cas1 variant coexpressed with WT Cas2 and compared with WT Cas1/Cas2;20-24 h induction and normalized CRISPR-I PCR.
-    family_mapping: "Reference Q46896/NP_417235.1 R245,R252,R256 verified but outside PF01867 131-226. These effects belong to the intact family-bearing protein, not directly to the annotated interval."
-    scope_status: PHENOTYPIC
-    taxon: NCBITaxon:83333
-    limitations: Corresponding alanine substitutions retain acquisition. The three charge substitutions are not a triple mutant. WT-like SEC retention was reported for R252E only and does not establish normal folding of all variants; original supplement remains uninspected.
-    nodes:
-      - node_id: interface-single-variants
-        label: Cas1 R245D, R252E or R256E, each separately
-        node_type: PERTURBATION
-      - node_id: expanded-locus
-        label: Expanded CRISPR-I PCR bands relative to WT
-        node_type: PHENOTYPE
-    edges:
-      - edge_id: charged-variants-decrease-acquisition
-        subject: interface-single-variants
-        predicate: decreases
-        object: expanded-locus
-        mechanism: Each charge-reversal variant gives little or no expanded product compared with WT. The result does not prove that every substitution at these positions, or every PF01867 member, has the same defect.
-        directness: INDIRECT
-        support: OBSERVED
-        evidence_kind: EXPERIMENTAL
-        evidence:
-          - reference: PMID:24793649
-            source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC4075942/
-            snippet: Spacer acquisition assays
-            explanation: Original Figure3D charged/alanine/WT comparisons and associated Results; tail-deletion and I291 variants in Figure3C retain activity.
-            cache_path: evidence/PF01867/nunez-2014-acquisition.txt
-            cache_sha256: a3fce8f923833fade4c50d9b1bb2d1d213c819a5ecccd2d54485b49331be7792
-  - graph_id: cas1-r252e-lysate-coisolation
-    title: R252E reduces Cas2 recovery in a Cas1 immunoprecipitation
-    scope: Nunez2014 Figure3F, lysate co-immunoprecipitation separate from acquisition.
-    context: BL21-AI coexpressing Cas1-FLAG and Cas2-HA; normalized lysate input,anti-FLAG resin,400 mM KCl washes and anti-HA blotting. Compare R252E with WT Cas1.
-    family_mapping: "Q46896/NP_417235.1 R252 lies outside PF01867 131-226. Epitope-tagged intact protein in cell lysate, not isolated domain or tag-cleaved purified complex."
-    scope_status: PHENOTYPIC
-    taxon: NCBITaxon:83333
-    limitations: Co-isolation is not a purified affinity measurement or a direct activation step. Input controls do not eliminate every abundance/folding/complex-stability alternative. No observed causal arrow joins reduced co-isolation to the separate acquisition phenotype.
-    nodes:
-      - node_id: r252e
-        label: Introduce Cas1-FLAG R252E with WT Cas2-HA
-        node_type: PERTURBATION
-      - node_id: cas2-recovery
-        label: Cas2-HA signal in the Cas1-FLAG immunoprecipitate
-        node_type: PHENOTYPE
-    edges:
-      - edge_id: r252e-decreases-cas2-coisolation
-        subject: r252e
-        predicate: decreases
-        object: cas2-recovery
-        mechanism: Cas2-HA recovery is strongly reduced despite its detection in the input. This is a mutation-dependent lysate association readout; it does not establish the entire mechanistic route from residue charge to immunity.
-        directness: INDIRECT
-        support: OBSERVED
-        evidence_kind: EXPERIMENTAL
-        evidence:
-          - reference: PMID:24793649
-            source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC4075942/
-            snippet: Spacer acquisition assays
-            explanation: Original Figure3F input and immunoprecipitate panels plus IP Methods; no equivalent co-IP result is assigned to R245D or R256E.
-            cache_path: evidence/PF01867/nunez-2014-acquisition.txt
-            cache_sha256: a3fce8f923833fade4c50d9b1bb2d1d213c819a5ecccd2d54485b49331be7792
+- graph_id: cas1-cas2-purified-integration
+  title: Purified Cas1-Cas2 integrates donor DNA into supercoiled pCRISPR
+  scope: Nunez2015 Figures1B-E/2B-C and ExtendedData3, preparation-level integration and mutant comparisons.
+  context: MG1655 proteins with affinity tags removed; 33-bp M13-derived duplex and pUC19-based pCRISPR
+    carrying the BL21-AI locus. Radiolabel default:200 nM complex,20 nM donor,approximately5 nM target;20
+    mM HEPES pH7.5,25 mM KCl,10 mM MgCl2,1 mM DTT,10%DMSO,37 C,1 h. EDTA/SDS/proteinase K treatment precedes
+    gel analysis.
+  family_mapping: Cas1 Q46896 sequence version1 equals NP_417235.1 and PDB4P6I entity2,305 aa. Current
+    PF01867 match131-226 includes H208 and D221. Cas2 is a separate partner, not another PF01867 domain.
+  scope_status: MECHANISTIC
+  taxon: NCBITaxon:83333
+  limitations: Joint preparation/substrate conditions, not isolated-domain sufficiency. Radiolabeled relaxed/linear
+    bands do not uniquely prove full-site insertion or completed chromosomal repair; half-site events
+    predominate. BandX is not labeled donor-containing product. Mutant losses do not alone identify an
+    elementary catalytic step. Cas1 K224A and Cas2 E9Q retain activity.
+  nodes:
+  - node_id: joint-reaction
+    label: WT Cas1-Cas2 with duplex donor and supercoiled pCRISPR
+    node_type: ACTIVITY
+    grounding:
+    - UniProtKB:Q46896
+  - node_id: integrated-dna
+    label: Deproteinized donor-labeled relaxed and linear plasmid products
+    node_type: STATE
+  - node_id: h208a
+    label: Substitute Cas1 H208A with WT Cas2
+    node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q46896
+  - node_id: d221a
+    label: Substitute Cas1 D221A with WT Cas2
+    node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q46896
+  - node_id: cas2-deletion
+    label: Replace WT Cas2 with its beta6-beta7 deletion variant
+    node_type: PERTURBATION
+  edges:
+  - edge_id: joint-reaction-produces-integrated-dna
+    subject: joint-reaction
+    predicate: produces
+    object: integrated-dna
+    mechanism: Joint WT proteins generate donor-containing plasmid products relative to component-omission
+      controls. Retention of label after deproteinization and restriction digestion supports covalent
+      integration, without assigning every band to a unique full-site product.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:25707795
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC4359072/
+      snippet: Disintegration assays
+      explanation: Original Figures1B-E and2B-C plus integration/radiolabel Methods; BandX exclusion and
+        half-site interpretation come from the associated Results.
+      cache_path: evidence/PF01867/nunez-2015-integration.txt
+      cache_sha256: 2742611e7b117b36fce70cba810483e901f2bc10eef2e2a8b8ccac18e393db50
+  - edge_id: h208a-decreases-integration
+    subject: h208a
+    predicate: decreases
+    object: integrated-dna
+    mechanism: H208A loses detectable integration under the matched purified-protein protocol. This is
+      a preparation-level substitution effect, not direct observation of histidine-mediated proton transfer.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:25707795
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC4359072/
+      snippet: Disintegration assays
+      explanation: Original Figure1E and ExtendedData3C; matched WT Cas2 and radiolabeled donor.
+      cache_path: evidence/PF01867/nunez-2015-integration.txt
+      cache_sha256: 2742611e7b117b36fce70cba810483e901f2bc10eef2e2a8b8ccac18e393db50
+  - edge_id: d221a-decreases-integration
+    subject: d221a
+    predicate: decreases
+    object: integrated-dna
+    mechanism: D221A lowers the donor-containing product to undetectable levels in this gel assay. Neither
+      protein-folding equivalence nor an individual metal-coordination microstep is established by that
+      endpoint.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:25707795
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC4359072/
+      snippet: Disintegration assays
+      explanation: Original ExtendedData3B/C, with active K224A comparison explicitly retained rather
+        than treating all displayed variants as inactive.
+      cache_path: evidence/PF01867/nunez-2015-integration.txt
+      cache_sha256: 2742611e7b117b36fce70cba810483e901f2bc10eef2e2a8b8ccac18e393db50
+  - edge_id: cas2-deletion-decreases-integration
+    subject: cas2-deletion
+    predicate: decreases
+    object: integrated-dna
+    mechanism: The partner deletion loses detectable donor incorporation with WT Cas1. The perturbation
+      removes a Cas2 interaction region; it is not a mutation inside PF01867 or proof that Cas2 nuclease
+      chemistry is required.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:25707795
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC4359072/
+      snippet: Disintegration assays
+      explanation: Original Figure1C/E; Cas2 E9Q remains active in the same comparison.
+      cache_path: evidence/PF01867/nunez-2015-integration.txt
+      cache_sha256: 2742611e7b117b36fce70cba810483e901f2bc10eef2e2a8b8ccac18e393db50
+- graph_id: cas2-enhancement-in-manganese
+  title: Cas2 enhances the low Cas1-alone integration signal in manganese
+  scope: Nunez2015 ExtendedData2B, matched purified-protein titration.
+  context: Same donor/pCRISPR radiolabel assay,10 mM MnCl2 replacing MgCl2;0/50/100/200 nM protein series,37
+    C,1 h. Compare Cas1 alone with Cas1 plus Cas2 at the corresponding series positions.
+  family_mapping: Intact MG1655 Cas1 Q46896/NP_417235.1; PF01867 131-226. No isolated-domain or other-member
+    experiment.
+  scope_status: MECHANISTIC
+  taxon: NCBITaxon:83333
+  limitations: Qualitative representative gels, not measured fold stimulation. Low Cas1-alone activity
+    prevents an absolute Cas2 requirement claim. The Mg condition is a separate comparison, not pooled
+    with Mn.
+  nodes:
+  - node_id: add-cas2
+    label: Add Cas2 to the Cas1 donor-target reaction in manganese
+    node_type: PERTURBATION
+  - node_id: integrated-dna
+    label: Radiolabeled donor-containing plasmid product
+    node_type: STATE
+  edges:
+  - edge_id: cas2-increases-integration
+    subject: add-cas2
+    predicate: increases
+    object: integrated-dna
+    mechanism: Product bands are stronger with both proteins than with Cas1 alone. This records partner-dependent
+      enhancement in Mn without converting the low baseline into zero activity.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:25707795
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC4359072/
+      snippet: Disintegration assays
+      explanation: Original ExtendedData2B and associated main-text statement; Cas2-alone and no-protein
+        controls inspected.
+      cache_path: evidence/PF01867/nunez-2015-integration.txt
+      cache_sha256: 2742611e7b117b36fce70cba810483e901f2bc10eef2e2a8b8ccac18e393db50
+- graph_id: cas1-integration-substrate-perturbations
+  title: Donor-end chemistry and target topology alter the IHF-absent reaction
+  scope: Nunez2015 Figure3A-C, three separate substrate comparisons.
+  context: WT Cas1-Cas2, Mg radiolabel integration protocol at37 C for1 h; each altered substrate compared
+    with the matched33-bp duplex/supercoiled pCRISPR control. No IHF is supplied.
+  family_mapping: Intact MG1655 Cas1 Q46896/NP_417235.1, PF01867 131-226, acting with Cas2. DNA perturbations
+    do not establish isolated-domain sufficiency.
+  scope_status: MECHANISTIC
+  taxon: NCBITaxon:83333
+  limitations: Three separate experiments, not a combined perturbation. Dual3prime capping differs from
+    single-end capping;5prime phosphorylation is compatible. Later PMID27211867 establishes an IHF-dependent
+    linear-DNA context, so topology dependence is not universal. Empty supercoiled pUC19 also supports
+    integration.
+  nodes:
+  - node_id: cap-both-ends
+    label: Phosphorylate both donor 3-prime ends
+    node_type: PERTURBATION
+  - node_id: single-strand
+    label: Supply donor strand S1 or S2 alone, each separately
+    node_type: PERTURBATION
+  - node_id: linearize-target
+    label: Replace supercoiled pCRISPR with linear pCRISPR
+    node_type: PERTURBATION
+  - node_id: integration-product
+    label: Radiolabeled donor-containing target product
+    node_type: STATE
+  edges:
+  - edge_id: dual-capping-decreases-integration
+    subject: cap-both-ends
+    predicate: decreases
+    object: integration-product
+    mechanism: Blocking both3prime hydroxyls removes detectable integration, supporting the end-chemistry
+      requirement in this reaction. The endpoint does not directly image the nucleophilic transition state.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:25707795
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC4359072/
+      snippet: Disintegration assays
+      explanation: Original Figure3A/B dual-capped donor versus hydroxyl-ended duplex; Methods uses phosphatase-minus
+        kinase for labeled3prime-phosphorylated substrates.
+      cache_path: evidence/PF01867/nunez-2015-integration.txt
+      cache_sha256: 2742611e7b117b36fce70cba810483e901f2bc10eef2e2a8b8ccac18e393db50
+  - edge_id: single-strand-decreases-integration
+    subject: single-strand
+    predicate: decreases
+    object: integration-product
+    mechanism: Neither isolated donor strand yields the product seen with the annealed duplex. This is
+      a substrate-state comparison, not proof that every Cas1 homolog rejects all single-stranded donors.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:25707795
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC4359072/
+      snippet: Disintegration assays
+      explanation: Original Figure3A/B separate S1-only and S2-only lanes with and without Cas1-Cas2.
+      cache_path: evidence/PF01867/nunez-2015-integration.txt
+      cache_sha256: 2742611e7b117b36fce70cba810483e901f2bc10eef2e2a8b8ccac18e393db50
+  - edge_id: linear-target-decreases-ihf-absent-integration
+    subject: linearize-target
+    predicate: decreases
+    object: integration-product
+    mechanism: Linear pCRISPR lacks detectable incorporation under the tested IHF-absent conditions. Later
+      host-factor-supported integration into linear DNA bounds this negative; it is not a universal physical
+      prerequisite for Cas1.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:25707795
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC4359072/
+      snippet: Disintegration assays
+      explanation: Original Figure3C directly compares supercoiled and linear pCRISPR; the separate1-kb
+        fragment and empty-vector results prevent sequence-requirement overstatement.
+      cache_path: evidence/PF01867/nunez-2015-integration.txt
+      cache_sha256: 2742611e7b117b36fce70cba810483e901f2bc10eef2e2a8b8ccac18e393db50
+- graph_id: cas1-synthetic-intermediate-disintegration
+  title: Cas1 releases a donor-sized duplex from synthetic Y-DNA
+  scope: Nunez2015 Figure2G/H, Cas1-alone preparation in two separately tested metal conditions.
+  context: 50 nM purified Cas1 with5 nM synthetic radiolabeled Y-DNA; integration buffer containing10
+    mM MgCl2 or MnCl2,37 C,1 h; native15%polyacrylamide electrophoresis.
+  family_mapping: Intact Q46896/NP_417235.1 Cas1, PF01867 131-226; the synthetic substrate mimics a half-site
+    intermediate but was not recovered from the integration assay.
+  scope_status: MECHANISTIC
+  taxon: NCBITaxon:83333
+  limitations: Cas2 is optional and Cas2 alone is inactive. This is not proof that BandX in the separate
+    plasmid reaction necessarily arose through this route. The original ED5 target-rejoining image is
+    unresolved because of a PMC image/caption mismatch; no separate rejoining edge is claimed.
+  nodes:
+  - node_id: cas1-y-dna
+    label: Purified Cas1 with the synthetic Y-DNA intermediate
+    node_type: ACTIVITY
+    grounding:
+    - UniProtKB:Q46896
+  - node_id: released-donor
+    label: Released radiolabeled 33-bp donor-sized duplex
+    node_type: STATE
+  edges:
+  - edge_id: cas1-produces-released-donor
+    subject: cas1-y-dna
+    predicate: produces
+    object: released-donor
+    mechanism: Cas1 alone generates the donor-sized product in both tested metal conditions, relative
+      to no-protein and Cas2-only controls. This preparation-level disintegration observation does not
+      resolve every chemical microstep or minor product.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:25707795
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC4359072/
+      snippet: Disintegration assays
+      explanation: Correctly matched original main Figure2H and synthetic-substrate Methods, not the incorrectly
+        linked ED5 image.
+      cache_path: evidence/PF01867/nunez-2015-integration.txt
+      cache_sha256: 2742611e7b117b36fce70cba810483e901f2bc10eef2e2a8b8ccac18e393db50
+- graph_id: cas1-cas2-cellular-acquisition
+  title: Joint Cas1-Cas2 expression expands the cellular CRISPR locus
+  scope: Nunez2014 Figure1B, heterologous whole-cell acquisition assay.
+  context: MG1655 cas1/cas2 on pCDF-1b in BL21-AI; LB,50 ug/ml streptomycin,0.2%arabinose,0.1 mM IPTG,20-24
+    h induction. OD600-normalized cellular input and CRISPR-I PCR/agarose readout.
+  family_mapping: Donor Cas1 Q46896/NP_417235.1,305 aa,PF01867 131-226. Taxon identifies the K12 donor
+    reference, not BL21-AI as an identical strain.
+  scope_status: PHENOTYPIC
+  taxon: NCBITaxon:83333
+  limitations: Whole-cell joint-expression effect, not purified Cas1 sufficiency or an isolated-domain
+    experiment. PCR expansion and reported clonal sequencing do not establish protection against phage.
+    No raw sequencing reanalysis or SupplementaryTable1 review is claimed.
+  nodes:
+  - node_id: coexpress-cas1-cas2
+    label: Induce both Cas1 and Cas2 in BL21-AI
+    node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q46896
+  - node_id: expanded-locus
+    label: Expanded CRISPR-I locus PCR bands
+    node_type: PHENOTYPE
+  edges:
+  - edge_id: coexpression-increases-locus-expansion
+    subject: coexpress-cas1-cas2
+    predicate: increases
+    object: expanded-locus
+    mechanism: Expanded bands appear with joint expression, unlike Cas1-only, Cas2-only or empty-vector
+      controls. This phenotype includes host activities needed after initial integration and is not joined
+      to the purified endpoint as a directly traced pathway.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:24793649
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC4075942/
+      snippet: Spacer acquisition assays
+      explanation: Original Figure1B and Online Methods; induced/uninduced and individual-component controls
+        inspected.
+      cache_path: evidence/PF01867/nunez-2014-acquisition.txt
+      cache_sha256: a3fce8f923833fade4c50d9b1bb2d1d213c819a5ecccd2d54485b49331be7792
+- graph_id: cas1-cellular-active-site-variants
+  title: In-domain Cas1 substitutions reduce cellular locus expansion
+  scope: Nunez2014 Figure4C, separately tested Cas1 single substitutions with WT Cas2.
+  context: BL21-AI pCDF-1b acquisition assay after20-24 h induction, matched WT coexpression control and
+    OD600-normalized CRISPR-I PCR; at least three assay repetitions.
+  family_mapping: Q46896/NP_417235.1 reference E141,H208,D218,D221,K224 verified; all lie within current
+    PF01867 131-226. Intact proteins, not purified isolated domains.
+  scope_status: PHENOTYPIC
+  taxon: NCBITaxon:83333
+  limitations: Each variant is a separate single substitution, not a combined mutant. Loss of a cellular
+    endpoint does not prove loss of chemistry. K224A retains purified integration in2015 ED3; abundance,
+    folding and host-dependent steps remain alternatives.
+  nodes:
+  - node_id: four-single-variants
+    label: Cas1 E141A, H208A, D218A or D221A, each separately
+    node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q46896
+  - node_id: k224a
+    label: Cas1 K224A with WT Cas2
+    node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q46896
+  - node_id: expanded-locus
+    label: Expanded CRISPR-I PCR bands relative to WT
+    node_type: PHENOTYPE
+  edges:
+  - edge_id: four-site-variants-decrease-acquisition
+    subject: four-single-variants
+    predicate: decreases
+    object: expanded-locus
+    mechanism: Each of the four variants loses detectable expanded bands under the cellular protocol.
+      The grouped node records four separately tested effects without claiming equal quantitative impairment
+      or a shared demonstrated chemical defect.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:24793649
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC4075942/
+      snippet: Spacer acquisition assays
+      explanation: Original Figure4C lane labels and Online Methods; the readout is cellular locus expansion,
+        not direct nuclease activity.
+      cache_path: evidence/PF01867/nunez-2014-acquisition.txt
+      cache_sha256: a3fce8f923833fade4c50d9b1bb2d1d213c819a5ecccd2d54485b49331be7792
+  - edge_id: k224a-decreases-cellular-acquisition
+    subject: k224a
+    predicate: decreases
+    object: expanded-locus
+    mechanism: K224A lacks detectable expanded bands here despite its retained integration in the later
+      purified assay. The unresolved context dependence prevents labeling the mutant universally catalytically
+      inactive.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:24793649
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC4075942/
+      snippet: Spacer acquisition assays
+      explanation: Original Figure4C K224A lane; contrasted explicitly with PMID25707795 ExtendedData3
+        rather than suppressing either result.
+      cache_path: evidence/PF01867/nunez-2014-acquisition.txt
+      cache_sha256: a3fce8f923833fade4c50d9b1bb2d1d213c819a5ecccd2d54485b49331be7792
+- graph_id: cas1-cellular-interface-variants
+  title: Outside-match Cas1 charge substitutions reduce locus expansion
+  scope: Nunez2014 Figure3D, three independently tested single variants.
+  context: BL21-AI cellular acquisition protocol, each Cas1 variant coexpressed with WT Cas2 and compared
+    with WT Cas1/Cas2;20-24 h induction and normalized CRISPR-I PCR.
+  family_mapping: Reference Q46896/NP_417235.1 R245,R252,R256 verified but outside PF01867 131-226. These
+    effects belong to the intact family-bearing protein, not directly to the annotated interval.
+  scope_status: PHENOTYPIC
+  taxon: NCBITaxon:83333
+  limitations: Corresponding alanine substitutions retain acquisition. The three charge substitutions
+    are not a triple mutant. WT-like SEC retention was reported for R252E only and does not establish
+    normal folding of all variants; original supplement remains uninspected.
+  nodes:
+  - node_id: interface-single-variants
+    label: Cas1 R245D, R252E or R256E, each separately
+    node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q46896
+  - node_id: expanded-locus
+    label: Expanded CRISPR-I PCR bands relative to WT
+    node_type: PHENOTYPE
+  edges:
+  - edge_id: charged-variants-decrease-acquisition
+    subject: interface-single-variants
+    predicate: decreases
+    object: expanded-locus
+    mechanism: Each charge-reversal variant gives little or no expanded product compared with WT. The
+      result does not prove that every substitution at these positions, or every PF01867 member, has the
+      same defect.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:24793649
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC4075942/
+      snippet: Spacer acquisition assays
+      explanation: Original Figure3D charged/alanine/WT comparisons and associated Results; tail-deletion
+        and I291 variants in Figure3C retain activity.
+      cache_path: evidence/PF01867/nunez-2014-acquisition.txt
+      cache_sha256: a3fce8f923833fade4c50d9b1bb2d1d213c819a5ecccd2d54485b49331be7792
+- graph_id: cas1-r252e-lysate-coisolation
+  title: R252E reduces Cas2 recovery in a Cas1 immunoprecipitation
+  scope: Nunez2014 Figure3F, lysate co-immunoprecipitation separate from acquisition.
+  context: BL21-AI coexpressing Cas1-FLAG and Cas2-HA; normalized lysate input,anti-FLAG resin,400 mM
+    KCl washes and anti-HA blotting. Compare R252E with WT Cas1.
+  family_mapping: Q46896/NP_417235.1 R252 lies outside PF01867 131-226. Epitope-tagged intact protein
+    in cell lysate, not isolated domain or tag-cleaved purified complex.
+  scope_status: PHENOTYPIC
+  taxon: NCBITaxon:83333
+  limitations: Co-isolation is not a purified affinity measurement or a direct activation step. Input
+    controls do not eliminate every abundance/folding/complex-stability alternative. No observed causal
+    arrow joins reduced co-isolation to the separate acquisition phenotype.
+  nodes:
+  - node_id: r252e
+    label: Introduce Cas1-FLAG R252E with WT Cas2-HA
+    node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q46896
+  - node_id: cas2-recovery
+    label: Cas2-HA signal in the Cas1-FLAG immunoprecipitate
+    node_type: PHENOTYPE
+  edges:
+  - edge_id: r252e-decreases-cas2-coisolation
+    subject: r252e
+    predicate: decreases
+    object: cas2-recovery
+    mechanism: Cas2-HA recovery is strongly reduced despite its detection in the input. This is a mutation-dependent
+      lysate association readout; it does not establish the entire mechanistic route from residue charge
+      to immunity.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:24793649
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC4075942/
+      snippet: Spacer acquisition assays
+      explanation: Original Figure3F input and immunoprecipitate panels plus IP Methods; no equivalent
+        co-IP result is assigned to R245D or R256E.
+      cache_path: evidence/PF01867/nunez-2014-acquisition.txt
+      cache_sha256: a3fce8f923833fade4c50d9b1bb2d1d213c819a5ecccd2d54485b49331be7792
 discussions:
-  - discussion_id: cas1-context-dependent-mechanism
-    prompt: Resolve assay-specific differences before extending Cas1 into a universal integration pathway.
-    kind: CURATION_TODO
-    status: OPEN
-    rationale: Cellular K224A loss, retained purified K224A activity, IHF-dependent linear-target integration and later structural work constrain older biochemical generalizations.
-    evidence:
-      - reference: PMID:24793649
-        supports: PARTIAL
-        evidence_source: original_figures_and_online_methods
-        explanation: Figure4C cellular K224A differs from the original2015 ED3 purified comparison; outside-match interface effects remain intact-protein phenotypes.
-      - reference: PMID:27211867
-        supports: PARTIAL
-        evidence_source: primary_abstract_only
-        explanation: IHF permits linear-DNA integration and leader-border targeting; inaccessible publisher fulltext prevents a complete new IHF graph assessment.
-      - reference: PMID:28729350
-        supports: PARTIAL
-        evidence_source: selected_primary_results_and_figure_captions
-        explanation: Target-dose and upstream-recognition effects require original image and method review before extending the graph; structural contacts alone are not observed event order.
-    notes: See evidence/PF01867/cas1-gap-ledger.txt. Keep half-site and full-site assignments distinct, retain partner/cofactor contexts, and verify alternative members before family transfer. No complete immunity chain is claimed.
-    posed_by: Codex
-    posed_date: '2026-10-11'
-  - discussion_id: cas1-primary-source-and-member-coverage
-    prompt: Resolve the ED5 image mismatch and inspect remaining Cas1 members and experimental contexts.
-    kind: CURATION_TODO
-    status: OPEN
-    rationale: The original-image support for target rejoining is unresolved, and the retained E.coli experiments do not exhaust a diverse bacterial and archaeal family.
-    evidence:
-      - reference: PMID:25707795
-        supports: PARTIAL
-        evidence_source: matched_main_figures_and_mismatched_extended_image_links
-        explanation: Main Figure2H supports donor release; the image linked under ED5 instead shows ED6 substrate panels. No original ED5 visual verification is claimed.
-    notes: Follow the gap ledger's capture, DNA-repair, typeI-F, typeV-C and S.pyogenes leads with exact identities and conditions. Check uninspected2014 supplementary controls and laboratory construct sequences. Retain IN_PROGRESS and partial self-review.
-    posed_by: Codex
-    posed_date: '2026-10-11'
+- discussion_id: cas1-context-dependent-mechanism
+  prompt: Resolve assay-specific differences before extending Cas1 into a universal integration pathway.
+  kind: CURATION_TODO
+  status: OPEN
+  rationale: Cellular K224A loss, retained purified K224A activity, IHF-dependent linear-target integration
+    and later structural work constrain older biochemical generalizations.
+  evidence:
+  - reference: PMID:24793649
+    supports: PARTIAL
+    evidence_source: original_figures_and_online_methods
+    explanation: Figure4C cellular K224A differs from the original2015 ED3 purified comparison; outside-match
+      interface effects remain intact-protein phenotypes.
+  - reference: PMID:27211867
+    supports: PARTIAL
+    evidence_source: primary_abstract_only
+    explanation: IHF permits linear-DNA integration and leader-border targeting; inaccessible publisher
+      fulltext prevents a complete new IHF graph assessment.
+  - reference: PMID:28729350
+    supports: PARTIAL
+    evidence_source: selected_primary_results_and_figure_captions
+    explanation: Target-dose and upstream-recognition effects require original image and method review
+      before extending the graph; structural contacts alone are not observed event order.
+  notes: See evidence/PF01867/cas1-gap-ledger.txt. Keep half-site and full-site assignments distinct,
+    retain partner/cofactor contexts, and verify alternative members before family transfer. No complete
+    immunity chain is claimed.
+  posed_by: Codex
+  posed_date: '2026-10-11'
+- discussion_id: cas1-primary-source-and-member-coverage
+  prompt: Resolve the ED5 image mismatch and inspect remaining Cas1 members and experimental contexts.
+  kind: CURATION_TODO
+  status: OPEN
+  rationale: The original-image support for target rejoining is unresolved, and the retained E.coli experiments
+    do not exhaust a diverse bacterial and archaeal family.
+  evidence:
+  - reference: PMID:25707795
+    supports: PARTIAL
+    evidence_source: matched_main_figures_and_mismatched_extended_image_links
+    explanation: Main Figure2H supports donor release; the image linked under ED5 instead shows ED6 substrate
+      panels. No original ED5 visual verification is claimed.
+  notes: Follow the gap ledger's capture, DNA-repair, typeI-F, typeV-C and S.pyogenes leads with exact
+    identities and conditions. Check uninspected2014 supplementary controls and laboratory construct sequences.
+    Retain IN_PROGRESS and partial self-review.
+  posed_by: Codex
+  posed_date: '2026-10-11'

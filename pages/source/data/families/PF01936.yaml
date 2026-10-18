@@ -100,6 +100,8 @@ causal_graphs:
   - node_id: mutant
     label: D426A/D427A instead of WT fragment
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q9Y4F3
   - node_id: processing
     label: U30 processing relative to WT in Mn
     node_type: PHENOTYPE
@@ -364,15 +366,23 @@ causal_graphs:
   - node_id: d178a
     label: Source D178A replacing WT in158-1381
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q8BJ34
   - node_id: d215a
     label: Source D215A replacing WT in158-1381
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q8BJ34
   - node_id: d246a
     label: Source D246A replacing WT in158-1381
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q8BJ34
   - node_id: d272a
     label: Source D272A replacing WT in158-1381
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q8BJ34
   - node_id: processing
     label: H49 processing relative to WT preparation
     node_type: PHENOTYPE
@@ -663,5 +673,14 @@ curation_events:
   outcome: needs_followup
   summary: Retain partial scientific review of mapped MARF1 causal contexts for PF01936.
   history_record: history/records/PF01936/2026-10-12T050520Z-codex-4654b7.yaml
+  event_index: 0
+  llm_assisted: true
+- timestamp: '2026-10-18T02:54:46Z'
+  curator: Antigravity
+  action: EDIT
+  outcome: changed
+  summary: Ground causal graph gene and protein nodes in PF01936 with verified UniProtKB accessions (UniProtKB:Q9Y4F3,
+    UniProtKB:Q8BJ34)
+  history_record: history/records/PF01936/2026-10-18T025446Z-antigravity-b04c48.yaml
   event_index: 0
   llm_assisted: true

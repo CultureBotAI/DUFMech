@@ -243,12 +243,16 @@ causal_graphs:
   - node_id: undetected-single-mutants
     label: N28A, P31A, K57A, D100A, K107A or D125A, each separately
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q9YF05
   - node_id: detectable-ctp-binding
     label: Detectable ITC CTP-binding response
     node_type: STATE
   - node_id: weaker-single-mutants
     label: D41A, R51A, G54A, D55A, T58A, R108A, R114A or D122A, each separately
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q9YF05
   edges:
   - edge_id: magnesium-increases-apparent-affinity
     subject: magnesium-present
@@ -321,15 +325,23 @@ causal_graphs:
   - node_id: main-panel-single-mutants
     label: N28A, P31A, R51A, D55A, K57A, T58A, D100A, K107A, R108A, R114A, D122A or D125A, each separately
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q9YF05
   - node_id: additional-cl1-single-mutants
     label: D41A or G54A, each separately
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q9YF05
   - node_id: outside-span-single-mutants
     label: D8A or W9A outside the Pfam span, each separately
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q9YF05
   - node_id: periplasmic-in-span-single-mutants
     label: D12A, E16A, N82A or Y139A, each separately
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q9YF05
   - node_id: product-output
     label: CDP-archaeol endpoint signal relative to the matched panel WT
     node_type: STATE
@@ -423,15 +435,23 @@ causal_graphs:
   - node_id: d122a-or-d125a
     label: D122A or D125A, each separately
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q9YF05
   - node_id: n28a-k57a-or-d100a
     label: N28A, K57A or D100A, each separately
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q9YF05
   - node_id: four-tail-site-variants
     label: A29W, L124W, F126A or L156W, each separately
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q9YF05
   - node_id: q123a-or-h157a
     label: Q123A or H157A, each separately
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q9YF05
   - node_id: lipid-strip-signal
     label: Anti-His-detected DGGGP strip-binding signal
     node_type: STATE
@@ -520,9 +540,13 @@ causal_graphs:
   - node_id: four-tail-site-single-mutants
     label: A29W, L124W, F126A or L156W, each separately
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q9YF05
   - node_id: stronger-strip-single-mutants
     label: Q123A or H157A, each separately
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q9YF05
   - node_id: product-output
     label: CDP-archaeol endpoint product signal
     node_type: STATE
@@ -577,6 +601,8 @@ causal_graphs:
   - node_id: proposed-magnesium-residue-environment
     label: Proposed Mg, N28, K57 and D100 environment around bound CTP
     node_type: STATE
+    grounding:
+    - UniProtKB:Q9YF05
   - node_id: proposed-headgroup-attack
     label: Proposed DGGGP phosphate-head attack on CTP alpha-phosphate
     node_type: PROCESS
@@ -616,6 +642,8 @@ causal_graphs:
   - node_id: proposed-tm5-motion
     label: Proposed motion of the TM5 lipid-facing region
     node_type: PROCESS
+    grounding:
+    - UniProtKB:Q9YF05
   - node_id: proposed-product-release
     label: Proposed release of CDP-archaeol from the active site
     node_type: PROCESS
@@ -653,5 +681,13 @@ curation_events:
   outcome: needs_followup
   summary: Retain scoped ApCarS scientific self-review with open family coverage
   history_record: history/records/PF01864/2026-10-11T165424Z-codex-282736.yaml
+  event_index: 0
+  llm_assisted: true
+- timestamp: '2026-10-18T02:54:46Z'
+  curator: Antigravity
+  action: EDIT
+  outcome: changed
+  summary: Ground causal graph gene and protein nodes in PF01864 with verified UniProtKB accessions (UniProtKB:Q9YF05)
+  history_record: history/records/PF01864/2026-10-18T025446Z-antigravity-95b3a6.yaml
   event_index: 0
   llm_assisted: true
