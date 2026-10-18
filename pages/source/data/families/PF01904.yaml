@@ -94,66 +94,108 @@ causal_graphs:
   - node_id: yece-caic-joint-loss
     label: Joint yecE (b1868) and caiC (b0037) deletion
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:P37348
   - node_id: yece-degp-joint-loss
     label: Joint yecE (b1868) and degP (b0161) deletion
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:P37348
   - node_id: yece-asnb-joint-loss
     label: Joint yecE (b1868) and asnB (b0674) deletion
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:P37348
   - node_id: yece-ycbx-joint-loss
     label: Joint yecE (b1868) and ycbX (b0947) deletion
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:P37348
   - node_id: yece-cbpa-joint-loss
     label: Joint yecE (b1868) and cbpA (b1000) deletion
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:P37348
   - node_id: yece-yceg-joint-loss
     label: Joint yecE (b1868) and yceG (b1097) deletion
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:P37348
   - node_id: yece-pspf-joint-loss
     label: Joint yecE (b1868) and pspF (b1303) deletion
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:P37348
   - node_id: yece-pspa-joint-loss
     label: Joint yecE (b1868) and pspA (b1304) deletion
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:P37348
   - node_id: yece-grxd-joint-loss
     label: Joint yecE (b1868) and grxD (b1654) deletion
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:P37348
   - node_id: yece-cspc-joint-loss
     label: Joint yecE (b1868) and cspC (b1823) deletion
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:P37348
   - node_id: yece-yfbj-joint-loss
     label: Joint yecE (b1868) and yfbJ (b2258) deletion
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:P37348
   - node_id: yece-csda-joint-loss
     label: Joint yecE (b1868) and csdA (b2810) deletion
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:P37348
   - node_id: yece-ygeo-joint-loss
     label: Joint yecE (b1868) and ygeO (b2859) deletion
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:P37348
   - node_id: yece-ygfz-joint-loss
     label: Joint yecE (b1868) and ygfZ (b2898) deletion
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:P37348
   - node_id: yece-yghd-joint-loss
     label: Joint yecE (b1868) and yghD (b2968) deletion
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:P37348
   - node_id: yece-exbb-joint-loss
     label: Joint yecE (b1868) and exbB (b3006) deletion
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:P37348
   - node_id: yece-ttdb-joint-loss
     label: Joint yecE (b1868) and ttdB (b3062) deletion
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:P37348
   - node_id: yece-gltb-joint-loss
     label: Joint yecE (b1868) and gltB (b3212) deletion
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:P37348
   - node_id: yece-gltd-joint-loss
     label: Joint yecE (b1868) and gltD (b3213) deletion
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:P37348
   - node_id: yece-alr-joint-loss
     label: Joint yecE (b1868) and alr (b4053) deletion
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:P37348
   - node_id: yece-idnd-joint-loss
     label: Joint yecE (b1868) and idnD (b4267) deletion
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:P37348
   - node_id: relative-colony-growth
     label: Normalized colony growth relative to the multiplicative expectation
     node_type: PHENOTYPE
@@ -600,6 +642,8 @@ causal_graphs:
   - node_id: modeled-reactant-system
     label: Preorganized Tm1631-DNA system with two Mg ions and assumed nucleophile
     node_type: STATE
+    grounding:
+    - UniProtKB:Q9X1W6
   - node_id: proposed-pentacovalent-state
     label: Proposed pentacovalent DNA phosphate state in the joint modeled system
     node_type: STATE
@@ -660,5 +704,14 @@ curation_events:
   outcome: needs_followup
   summary: Retain partial self-review of YecE fitness effects and hypothetical Tm1631 chemistry
   history_record: history/records/PF01904/2026-10-11T231831Z-codex-7302c4.yaml
+  event_index: 0
+  llm_assisted: true
+- timestamp: '2026-10-18T02:54:46Z'
+  curator: Antigravity
+  action: EDIT
+  outcome: changed
+  summary: Ground causal graph gene and protein nodes in PF01904 with verified UniProtKB accessions (UniProtKB:P37348,
+    UniProtKB:Q9X1W6)
+  history_record: history/records/PF01904/2026-10-18T025446Z-antigravity-bf81d7.yaml
   event_index: 0
   llm_assisted: true

@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01554
+  path: curation/families/PF01554.yaml
+session:
+  id: 2026-10-18T025446Z-antigravity-78ee19
+  timestamp: '2026-10-18T02:54:46Z'
+  actors:
+  - type: ai_agent
+    name: Antigravity
+    model: Claude Opus 4.6
+    agent_tool: Antigravity
+events:
+- type: EDIT
+  outcome: changed
+  summary: Ground causal graph gene and protein nodes in PF01554 with verified UniProtKB
+    accessions (UniProtKB:Q9KRU4)
+  details: 'Reviewed PF01554 causal_graphs and grounded gene/protein PERTURBATION,
+    ACTIVITY, and protein-complex STATE nodes across 1 causal graph(s) using verified
+    UniProtKB accessions from family_mapping:
+
+    - `norm-vc-sodium-binding-and-substitutions`: grounded d36n-versus-wt -> UniProtKB:Q9KRU4;
+    e255q-versus-wt -> UniProtKB:Q9KRU4; d371n-versus-wt -> UniProtKB:Q9KRU4'
+  sections:
+  - causal_graphs

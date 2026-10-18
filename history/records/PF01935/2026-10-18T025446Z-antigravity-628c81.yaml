@@ -1,0 +1,28 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01935
+  path: curation/families/PF01935.yaml
+session:
+  id: 2026-10-18T025446Z-antigravity-628c81
+  timestamp: '2026-10-18T02:54:46Z'
+  actors:
+  - type: ai_agent
+    name: Antigravity
+    model: Claude Opus 4.6
+    agent_tool: Antigravity
+events:
+- type: EDIT
+  outcome: changed
+  summary: Ground causal graph gene and protein nodes in PF01935 with verified UniProtKB
+    accessions (UniProtKB:Q97WG8, UniProtKB:F0NFK8)
+  details: 'Reviewed PF01935 causal_graphs and grounded gene/protein PERTURBATION,
+    ACTIVITY, and protein-complex STATE nodes across 2 causal graph(s) using verified
+    UniProtKB accessions from family_mapping:
+
+    - `sso2251-nura-dna-destruction-2014`: grounded k154a -> UniProtKB:Q97WG8; r381a
+    -> UniProtKB:Q97WG8; k363a -> UniProtKB:Q97WG8; d471a -> UniProtKB:Q97WG8
+
+    - `sire0064-deletion-complementation-2015`: grounded d176e -> UniProtKB:F0NFK8'
+  sections:
+  - causal_graphs

@@ -2,267 +2,364 @@ pfam_id: PF01594
 curation_status: IN_PROGRESS
 curation_history: history/records/PF01594
 causal_graphs:
-  - graph_id: tqsa-deletion-extracellular-activity-lb
-    title: Whole-gene ydgG deletion lowers extracellular AI-2 reporter activity in LB
-    scope: E. coli K-12 BW25113 and its complete ydgG::KmR replacement, Herzberg 2006 pp. 589-590; not a purified TqsA transport assay.
-    context: Overnight donor cultures are diluted 1:100 in LB and harvested at OD600 0.6. Filter-sterilized supernatants are assayed with V. harveyi BB170 luminescence normalized per reporter cell. The cited detailed reporter protocol was not independently inspected; no absolute AI-2 concentration or reporter incubation time is invented.
-    family_mapping: P0AFS5 / tqsA/ydgG / b1601 is the 344-aa K12 reference, sequence version 1, with PF01594 17-328. The paper identifies b1601/ydgG and verifies the complete BW25113 deletion by five PCRs. Reference sequence and InterPro match exactly, but the historical assay strain/clone was not independently sequenced. Deletion removes the whole gene, not only the domain.
-    scope_status: PHENOTYPIC
-    taxon: NCBITaxon:83333
-    limitations: Reporter activity is not a direct chemical concentration or membrane flux. Pleiotropy, polarity and altered signal production/uptake remain possible. This assay cannot distinguish increased export from decreased uptake; the later structural study did not demonstrate TqsA transport with its attempted methods.
-    nodes:
-      - node_id: tqsa-deletion-lb
-        label: Complete ydgG::KmR replacement rather than WT in LB
-        node_type: PERTURBATION
-        grounding:
-          - UniProtKB:P0AFS5
-      - node_id: extracellular-bb170-lb
-        label: BB170 luminescence activity elicited by LB supernatant
-        node_type: ACTIVITY
-    edges:
-      - edge_id: deletion-decreases-extracellular-lb
-        subject: tqsa-deletion-lb
-        predicate: decreases
-        object: extracellular-bb170-lb
-        mechanism: The WT/knockout extracellular activity ratio is reported as 13 +/- 9 in LB. The deletion decreases this reporter endpoint; it does not directly prove TqsA-mediated AI-2 export or a domain-specific reaction.
-        directness: INDIRECT
-        support: OBSERVED
-        evidence_kind: EXPERIMENTAL
-        evidence:
-          - reference: PMID:16385049
-            source_url: https://bpb-us-e1.wpmucdn.com/sites.psu.edu/dist/b/137198/files/2021/08/096.pdf
-            snippet: YdgG
-            explanation: AI-2 Methods p. 589 and extracellular-activity Results p. 590 provide the LB comparison and reporter endpoint; Discussion retains export-versus-uptake alternatives.
-            cache_path: evidence/PF01594/herzberg-2006-assays.txt
-            cache_sha256: e1f5bf2694297e49b7d31b5dcc8dec7dc4efaf8d00796473fdd68e0a7ef1c795
-          - reference: https://www.ebi.ac.uk/interpro/api/protein/uniprot/P0AFS5/entry/pfam/PF01594/
-            source_url: https://www.ebi.ac.uk/interpro/api/protein/uniprot/P0AFS5/entry/pfam/PF01594/
-            snippet: 'P0AFS5 Pfam:PF01594; domain interval: 17-328, inclusive.'
-            explanation: Current reference mapping supports the gene/domain association, not identity of every historical construct or isolated-domain causality.
-            cache_path: evidence/PF01594/TqsA-identity.txt
-            cache_sha256: 61124fbc78dbe1d52e487d9d208a1258a0fab7e0a91114f95a2a538c339aac36
-  - graph_id: tqsa-deletion-extracellular-activity-lbglu
-    title: Whole-gene ydgG deletion lowers extracellular reporter activity in glucose-supplemented LB
-    scope: The separate BW25113 ydgG::KmR versus WT comparison in Herzberg 2006 LBglu cultures.
-    context: LBglu is LB plus 0.2% glucose. Overnight donor cultures are diluted 1:100 and harvested at OD600 0.6. Filtered supernatants are tested with BB170 luminescence normalized per reporter cell. This plasmid-free comparison is not the washed OD600-0.9 complementation assay.
-    family_mapping: b1601/ydgG maps to P0AFS5, 344 aa, PF01594 17-328; the intervention replaces the entire BW25113 gene with a kanamycin cassette. K12 reference identity is not independent historical clone resequencing.
-    scope_status: PHENOTYPIC
-    taxon: NCBITaxon:83333
-    limitations: This indirect bioassay does not establish absolute extracellular AI-2, protein-mediated flux or a single transport direction. Glucose changes regulatory context; the LB result is not substituted for this condition.
-    nodes:
-      - node_id: tqsa-deletion-lbglu
-        label: Complete ydgG::KmR replacement rather than WT in LBglu
-        node_type: PERTURBATION
-      - node_id: extracellular-bb170-lbglu
-        label: BB170 luminescence activity elicited by LBglu supernatant
-        node_type: ACTIVITY
-    edges:
-      - edge_id: deletion-decreases-extracellular-lbglu
-        subject: tqsa-deletion-lbglu
-        predicate: decreases
-        object: extracellular-bb170-lbglu
-        mechanism: WT supernatant produces 4 +/- 2 times the knockout reporter activity in LBglu. The retained direction is a deletion effect on the measured reporter response, not a direct TqsA export step.
-        directness: INDIRECT
-        support: OBSERVED
-        evidence_kind: EXPERIMENTAL
-        evidence:
-          - reference: PMID:16385049
-            source_url: https://bpb-us-e1.wpmucdn.com/sites.psu.edu/dist/b/137198/files/2021/08/096.pdf
-            snippet: YdgG
-            explanation: Extracellular-activity Results p. 590 distinguish the 4 +/- 2 LBglu ratio from the 13 +/- 9 LB ratio; Methods define donor sampling and the reporter.
-            cache_path: evidence/PF01594/herzberg-2006-assays.txt
-            cache_sha256: e1f5bf2694297e49b7d31b5dcc8dec7dc4efaf8d00796473fdd68e0a7ef1c795
-  - graph_id: tqsa-deletion-lsr-reporter-phases
-    title: ydgG deletion increases lsr promoter reporter output in two LBglu growth phases
-    scope: BW25113 WT and ydgG::KmR carrying pLW11 lsrACDBFG::lacZ, Herzberg 2006 Figure 3; not direct intracellular AI-2 quantitation.
-    context: LB plus 0.2% glucose; overnight cultures are diluted to obtain exponential cells at OD600 0.6 and stationary cells at OD600 6. Beta-galactosidase activity is reported as ONPG cleavage per minute per protein mass. Figure 3 uses duplicate experiments and SD; the two phases remain separate endpoints.
-    family_mapping: The complete BW25113 ydgG deletion maps at gene level to 344-aa P0AFS5, whose current PF01594 domain spans 17-328. The reporter plasmid is a separate assay entity and does not measure the isolated domain.
-    scope_status: PHENOTYPIC
-    taxon: NCBITaxon:83333
-    limitations: lsr transcription is an indirect intracellular-signal proxy affected by regulatory context, including glucose catabolite repression. The authors propose a future luxS/ydgG double-mutant test; AI-2 mediation is not uniquely established. No intracellular chemical concentration, export velocity or serial reporter-to-biofilm chain is inferred.
-    nodes:
-      - node_id: tqsa-deletion-exponential
-        label: ydgG::KmR rather than WT at OD600 0.6 in LBglu
-        node_type: PERTURBATION
-      - node_id: tqsa-deletion-stationary
-        label: ydgG::KmR rather than WT at OD600 6 in LBglu
-        node_type: PERTURBATION
-      - node_id: lsr-exponential-output
-        label: Exponential-phase lsrACDBFG::lacZ beta-galactosidase output
-        node_type: ACTIVITY
-      - node_id: lsr-stationary-output
-        label: Stationary-phase lsrACDBFG::lacZ beta-galactosidase output
-        node_type: ACTIVITY
-    edges:
-      - edge_id: deletion-increases-exponential-lsr
-        subject: tqsa-deletion-exponential
-        predicate: increases
-        object: lsr-exponential-output
-        mechanism: The knockout/WT lsr reporter ratio is 16 +/- 5 under exponential LBglu conditions. Increased beta-galactosidase is observed; the implied intracellular AI-2 change is not a direct chemical measurement.
-        directness: INDIRECT
-        support: OBSERVED
-        evidence_kind: EXPERIMENTAL
-        evidence:
-          - reference: PMID:16385049
-            source_url: https://bpb-us-e1.wpmucdn.com/sites.psu.edu/dist/b/137198/files/2021/08/096.pdf
-            snippet: YdgG
-            explanation: Visually inspected Figure 3 and Results p. 591 support the exponential LBglu comparison; AI-2 Methods p. 589 identify the reporter and OD600 endpoint.
-            cache_path: evidence/PF01594/herzberg-2006-assays.txt
-            cache_sha256: e1f5bf2694297e49b7d31b5dcc8dec7dc4efaf8d00796473fdd68e0a7ef1c795
-      - edge_id: deletion-increases-stationary-lsr
-        subject: tqsa-deletion-stationary
-        predicate: increases
-        object: lsr-stationary-output
-        mechanism: At stationary phase the knockout/WT lsr reporter ratio is 10 +/- 5. This separate endpoint is not treated as a time-resolved mechanistic transition from the exponential-phase measurement.
-        directness: INDIRECT
-        support: OBSERVED
-        evidence_kind: EXPERIMENTAL
-        evidence:
-          - reference: PMID:16385049
-            source_url: https://bpb-us-e1.wpmucdn.com/sites.psu.edu/dist/b/137198/files/2021/08/096.pdf
-            snippet: YdgG
-            explanation: Figure 3's stationary LBglu bars and Results p. 591 establish the increase under the independently specified OD600-6 condition.
-            cache_path: evidence/PF01594/herzberg-2006-assays.txt
-            cache_sha256: e1f5bf2694297e49b7d31b5dcc8dec7dc4efaf8d00796473fdd68e0a7ef1c795
-  - graph_id: tqsa-complemented-extracellular-activity
-    title: Induced ydgG complementation restores extracellular reporter activity
-    scope: BW25113 ydgG::KmR with pCA24NydgG+ and empty-vector controls, Herzberg 2006 extracellular complementation experiment.
-    context: Cultures receive IPTG and 30 ug/ml chloramphenicol, are harvested at OD600 0.6, washed twice for 10 min at 8820g to remove antibiotic that inhibits the Vibrio reporter, and resuspended in 20 ml LB plus 0.2% glucose. Supernatants are sampled after growth to OD600 0.9. The retained endpoint is 1.5 mM IPTG, compared with the uncomplemented/vector context and normalized to WT with pCA24N.
-    family_mapping: The historical pCA24NydgG+ expresses the b1601/ydgG gene corresponding to P0AFS5, PF01594 17-328. Full historical tag/linker sequence is not established. Gene-level trans-complementation does not isolate the domain or rule out every overexpression-mediated effect.
-    scope_status: PHENOTYPIC
-    taxon: NCBITaxon:83333
-    limitations: Restoration concerns the extracellular BB170 bioassay only; it is not direct export, restoration of intracellular lsr output or a universal rescue of all deletion phenotypes. Washed OD600-0.9 cultures must not be merged with the plasmid-free OD600-0.6 comparisons.
-    nodes:
-      - node_id: induce-tqsa-complement
-        label: Induce pCA24NydgG+ in the deletion background with 1.5 mM IPTG
-        node_type: PERTURBATION
-      - node_id: complemented-extracellular-output
-        label: Extracellular BB170 activity after antibiotic removal and regrowth
-        node_type: ACTIVITY
-    edges:
-      - edge_id: complementation-increases-extracellular-output
-        subject: induce-tqsa-complement
-        predicate: increases
-        object: complemented-extracellular-output
-        mechanism: Induced ydgG expression increases the deletion strain's extracellular reporter activity toward the WT-empty-vector level; the reported complemented/WT ratio at 1.5 mM IPTG is 1.0 +/- 0.3. This is genetic support for the phenotype, not resolution of export versus uptake.
-        directness: INDIRECT
-        support: OBSERVED
-        evidence_kind: EXPERIMENTAL
-        evidence:
-          - reference: PMID:16385049
-            source_url: https://bpb-us-e1.wpmucdn.com/sites.psu.edu/dist/b/137198/files/2021/08/096.pdf
-            snippet: YdgG
-            explanation: Complementation Methods p. 589 and Results p. 591 explicitly state the wash/regrowth protocol, empty-vector comparator, dose series and restoration endpoint.
-            cache_path: evidence/PF01594/herzberg-2006-assays.txt
-            cache_sha256: e1f5bf2694297e49b7d31b5dcc8dec7dc4efaf8d00796473fdd68e0a7ef1c795
-  - graph_id: tqsa-deletion-biofilm-lbglu
-    title: ydgG deletion increases crystal-violet-stained attached material in LBglu
-    scope: BW25113 ydgG::KmR versus WT in the 96-well assay, Herzberg 2006 p. 589; not the separate flow-cell experiment.
-    context: LB plus 0.2% glucose; overnight cultures diluted to OD600 0.05. Attached material at the bottom and air-liquid interface is stained with 0.1% crystal violet for 20 min. Two independent experiments, each four wells, are reported. Initial-assay culture duration and temperature are not explicit in the inspected Methods.
-    family_mapping: Complete ydgG replacement affects the whole P0AFS5-associated gene, including PF01594 17-328 and its flanks; the current reference is 344 aa and gene-matched to BW25113, not independently clone-sequenced.
-    scope_status: PHENOTYPIC
-    taxon: NCBITaxon:83333
-    limitations: Staining is an attached-mass proxy, not a uniquely AI-2-mediated mechanism or direct domain activity. The paper reports separate trans-complementation with different antibiotic/induction conditions; that is not silently substituted into this plasmid-free comparison. The direction reverses in unsupplemented LB.
-    nodes:
-      - node_id: tqsa-deletion-biofilm-lbglu
-        label: ydgG::KmR rather than WT in LB plus glucose
-        node_type: PERTURBATION
-      - node_id: stained-mass-lbglu
-        label: Crystal-violet-stained attached material in LBglu wells
-        node_type: STATE
-    edges:
-      - edge_id: deletion-increases-lbglu-attached-mass
-        subject: tqsa-deletion-biofilm-lbglu
-        predicate: increases
-        object: stained-mass-lbglu
-        mechanism: The knockout/WT staining ratio is 3.8 +/- 0.2 in LBglu. This assay-specific increase is not proof that TqsA directly represses a molecular biofilm pathway or that every medium has the same response.
-        directness: INDIRECT
-        support: OBSERVED
-        evidence_kind: EXPERIMENTAL
-        evidence:
-          - reference: PMID:16385049
-            source_url: https://bpb-us-e1.wpmucdn.com/sites.psu.edu/dist/b/137198/files/2021/08/096.pdf
-            snippet: YdgG
-            explanation: The 96-well Methods p. 588 and initial biofilm Results p. 589 support this LBglu ratio, not the much larger flow-cell ratios.
-            cache_path: evidence/PF01594/herzberg-2006-assays.txt
-            cache_sha256: e1f5bf2694297e49b7d31b5dcc8dec7dc4efaf8d00796473fdd68e0a7ef1c795
-  - graph_id: tqsa-deletion-biofilm-m9cglu
-    title: ydgG deletion increases attached material in glucose/Casamino-Acids M9 wells
-    scope: The separate BW25113 ydgG::KmR versus WT M9Cglu 96-well comparison in Herzberg 2006.
-    context: M9 supplemented with 0.4% glucose and 0.4% Casamino Acids; overnight cultures diluted to OD600 0.05. Total attached material is stained with 0.1% crystal violet for 20 min. Two independent experiments with four wells each; initial-assay incubation duration and temperature remain unverified.
-    family_mapping: The whole-gene intervention maps to P0AFS5 / b1601, PF01594 17-328, in the BW25113 assay background. It does not specifically remove only the annotated domain.
-    scope_status: PHENOTYPIC
-    taxon: NCBITaxon:83333
-    limitations: The 96-well endpoint is not the separate 24-h flow-chamber assay, and four wells are technical subsamples rather than four independent cultures. This modest increase does not establish export direction, substrate specificity or a causal AI-2-to-biofilm chain.
-    nodes:
-      - node_id: tqsa-deletion-m9cglu
-        label: ydgG::KmR rather than WT in M9Cglu wells
-        node_type: PERTURBATION
-      - node_id: stained-mass-m9cglu
-        label: Crystal-violet-stained attached material in M9Cglu wells
-        node_type: STATE
-    edges:
-      - edge_id: deletion-increases-m9cglu-attached-mass
-        subject: tqsa-deletion-m9cglu
-        predicate: increases
-        object: stained-mass-m9cglu
-        mechanism: The knockout/WT crystal-violet endpoint ratio is 1.6 +/- 0.1. The direction is retained only for this medium and assay, without importing the flow-cell biomass or thickness magnitudes.
-        directness: INDIRECT
-        support: OBSERVED
-        evidence_kind: EXPERIMENTAL
-        evidence:
-          - reference: PMID:16385049
-            source_url: https://bpb-us-e1.wpmucdn.com/sites.psu.edu/dist/b/137198/files/2021/08/096.pdf
-            snippet: YdgG
-            explanation: Methods p. 588 define M9Cglu and staining; Results p. 589 provide the distinct 1.6 +/- 0.1 well-assay ratio.
-            cache_path: evidence/PF01594/herzberg-2006-assays.txt
-            cache_sha256: e1f5bf2694297e49b7d31b5dcc8dec7dc4efaf8d00796473fdd68e0a7ef1c795
-  - graph_id: tqsa-deletion-biofilm-lb
-    title: ydgG deletion decreases attached material in LB without added glucose
-    scope: The condition-specific opposite-direction BW25113 comparison in Herzberg 2006's 96-well assay.
-    context: Unsupplemented LB; cultures start at OD600 0.05 after overnight growth. Both bottom and air-liquid-interface material contribute to the 0.1% crystal-violet stain after 20 min. Two independent experiments with four wells each; incubation duration and temperature of this initial experiment are not specified in the inspected Methods.
-    family_mapping: BW25113 complete ydgG::KmR replacement corresponds to the gene encoding P0AFS5, whose reference domain is PF01594 17-328. This is a whole-gene phenotype, not isolated-domain biochemical activity.
-    scope_status: PHENOTYPIC
-    taxon: NCBITaxon:83333
-    limitations: This decrease prevents a medium-independent claim that ydgG deletion increases biofilm. The endpoint is attached stainable material, not a molecular transport rate; no causal mediator is uniquely established.
-    nodes:
-      - node_id: tqsa-deletion-biofilm-lb
-        label: ydgG::KmR rather than WT in LB without added glucose
-        node_type: PERTURBATION
-      - node_id: stained-mass-lb
-        label: Crystal-violet-stained attached material in LB wells
-        node_type: STATE
-    edges:
-      - edge_id: deletion-decreases-lb-attached-mass
-        subject: tqsa-deletion-biofilm-lb
-        predicate: decreases
-        object: stained-mass-lb
-        mechanism: The knockout/WT staining ratio is 0.5 +/- 0.1 in LB, opposite to the increases in glucose-supplemented media. The contextual negative is retained rather than erased by the paper's broad repression wording.
-        directness: INDIRECT
-        support: OBSERVED
-        evidence_kind: EXPERIMENTAL
-        evidence:
-          - reference: PMID:16385049
-            source_url: https://bpb-us-e1.wpmucdn.com/sites.psu.edu/dist/b/137198/files/2021/08/096.pdf
-            snippet: YdgG
-            explanation: Initial biofilm Results p. 589 explicitly report decreased staining in LB, while Methods p. 588 define the assay and medium.
-            cache_path: evidence/PF01594/herzberg-2006-assays.txt
-            cache_sha256: e1f5bf2694297e49b7d31b5dcc8dec7dc4efaf8d00796473fdd68e0a7ef1c795
-discussions:
-  - discussion_id: tqsa-transport-direction-and-phenotype-mediators
-    prompt: Resolve direct TqsA transport and assay-specific mediators before extending reporter effects into a molecular pathway.
-    kind: CURATION_TODO
-    status: OPEN
-    rationale: The historical knockout/rescue data support scoped cellular effects but do not distinguish enhanced export from inhibited uptake, and structure/binding does not by itself establish transport.
+- graph_id: tqsa-deletion-extracellular-activity-lb
+  title: Whole-gene ydgG deletion lowers extracellular AI-2 reporter activity in LB
+  scope: E. coli K-12 BW25113 and its complete ydgG::KmR replacement, Herzberg 2006 pp. 589-590; not a
+    purified TqsA transport assay.
+  context: Overnight donor cultures are diluted 1:100 in LB and harvested at OD600 0.6. Filter-sterilized
+    supernatants are assayed with V. harveyi BB170 luminescence normalized per reporter cell. The cited
+    detailed reporter protocol was not independently inspected; no absolute AI-2 concentration or reporter
+    incubation time is invented.
+  family_mapping: P0AFS5 / tqsA/ydgG / b1601 is the 344-aa K12 reference, sequence version 1, with PF01594
+    17-328. The paper identifies b1601/ydgG and verifies the complete BW25113 deletion by five PCRs. Reference
+    sequence and InterPro match exactly, but the historical assay strain/clone was not independently sequenced.
+    Deletion removes the whole gene, not only the domain.
+  scope_status: PHENOTYPIC
+  taxon: NCBITaxon:83333
+  limitations: Reporter activity is not a direct chemical concentration or membrane flux. Pleiotropy,
+    polarity and altered signal production/uptake remain possible. This assay cannot distinguish increased
+    export from decreased uptake; the later structural study did not demonstrate TqsA transport with its
+    attempted methods.
+  nodes:
+  - node_id: tqsa-deletion-lb
+    label: Complete ydgG::KmR replacement rather than WT in LB
+    node_type: PERTURBATION
+    grounding:
+    - UniProtKB:P0AFS5
+  - node_id: extracellular-bb170-lb
+    label: BB170 luminescence activity elicited by LB supernatant
+    node_type: ACTIVITY
+  edges:
+  - edge_id: deletion-decreases-extracellular-lb
+    subject: tqsa-deletion-lb
+    predicate: decreases
+    object: extracellular-bb170-lb
+    mechanism: The WT/knockout extracellular activity ratio is reported as 13 +/- 9 in LB. The deletion
+      decreases this reporter endpoint; it does not directly prove TqsA-mediated AI-2 export or a domain-specific
+      reaction.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
     evidence:
-      - reference: PMID:16385049
-        supports: PARTIAL
-        evidence_source: full_text_and_figure_3
-        explanation: Eight observed indirect effects retain separate extracellular, intracellular-proxy, complementation and medium-specific staining contexts. The exact historical clone, initial well-assay time/temperature and detailed reporter protocol remain open. Other motility, flow-cell and complementation endpoints require separate curation; MIC ordering is ambiguous.
-      - reference: PMID:35698912
-        supports: PARTIAL
-        evidence_source: selected_full_text
-        explanation: The 2022 Discussion explicitly reports inability to demonstrate TqsA transport with attempted methods. Native-MS binding and proposed structural movement do not supply an observed transmembrane step. Preliminary mutants, the suspect printed mass-shift unit and uninspected supplementary spectra require further assessment; condition-specific negative antiport results are not universal nonfunction.
-    posed_by: Codex
-    posed_date: '2026-10-11'
-    notes: Do not transfer Upf0118 antiport to TqsA or collapse the four E. coli family members. Retain the LB biofilm decrease, glucose-dependent regulation, possible deletion pleiotropy and lack of established AI-2-specific mediation. Partial scientific self-review; IN_PROGRESS.
+    - reference: PMID:16385049
+      source_url: https://bpb-us-e1.wpmucdn.com/sites.psu.edu/dist/b/137198/files/2021/08/096.pdf
+      snippet: YdgG
+      explanation: AI-2 Methods p. 589 and extracellular-activity Results p. 590 provide the LB comparison
+        and reporter endpoint; Discussion retains export-versus-uptake alternatives.
+      cache_path: evidence/PF01594/herzberg-2006-assays.txt
+      cache_sha256: e1f5bf2694297e49b7d31b5dcc8dec7dc4efaf8d00796473fdd68e0a7ef1c795
+    - reference: https://www.ebi.ac.uk/interpro/api/protein/uniprot/P0AFS5/entry/pfam/PF01594/
+      source_url: https://www.ebi.ac.uk/interpro/api/protein/uniprot/P0AFS5/entry/pfam/PF01594/
+      snippet: 'P0AFS5 Pfam:PF01594; domain interval: 17-328, inclusive.'
+      explanation: Current reference mapping supports the gene/domain association, not identity of every
+        historical construct or isolated-domain causality.
+      cache_path: evidence/PF01594/TqsA-identity.txt
+      cache_sha256: 61124fbc78dbe1d52e487d9d208a1258a0fab7e0a91114f95a2a538c339aac36
+- graph_id: tqsa-deletion-extracellular-activity-lbglu
+  title: Whole-gene ydgG deletion lowers extracellular reporter activity in glucose-supplemented LB
+  scope: The separate BW25113 ydgG::KmR versus WT comparison in Herzberg 2006 LBglu cultures.
+  context: LBglu is LB plus 0.2% glucose. Overnight donor cultures are diluted 1:100 and harvested at
+    OD600 0.6. Filtered supernatants are tested with BB170 luminescence normalized per reporter cell.
+    This plasmid-free comparison is not the washed OD600-0.9 complementation assay.
+  family_mapping: b1601/ydgG maps to P0AFS5, 344 aa, PF01594 17-328; the intervention replaces the entire
+    BW25113 gene with a kanamycin cassette. K12 reference identity is not independent historical clone
+    resequencing.
+  scope_status: PHENOTYPIC
+  taxon: NCBITaxon:83333
+  limitations: This indirect bioassay does not establish absolute extracellular AI-2, protein-mediated
+    flux or a single transport direction. Glucose changes regulatory context; the LB result is not substituted
+    for this condition.
+  nodes:
+  - node_id: tqsa-deletion-lbglu
+    label: Complete ydgG::KmR replacement rather than WT in LBglu
+    node_type: PERTURBATION
+    grounding:
+    - UniProtKB:P0AFS5
+  - node_id: extracellular-bb170-lbglu
+    label: BB170 luminescence activity elicited by LBglu supernatant
+    node_type: ACTIVITY
+  edges:
+  - edge_id: deletion-decreases-extracellular-lbglu
+    subject: tqsa-deletion-lbglu
+    predicate: decreases
+    object: extracellular-bb170-lbglu
+    mechanism: WT supernatant produces 4 +/- 2 times the knockout reporter activity in LBglu. The retained
+      direction is a deletion effect on the measured reporter response, not a direct TqsA export step.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:16385049
+      source_url: https://bpb-us-e1.wpmucdn.com/sites.psu.edu/dist/b/137198/files/2021/08/096.pdf
+      snippet: YdgG
+      explanation: Extracellular-activity Results p. 590 distinguish the 4 +/- 2 LBglu ratio from the
+        13 +/- 9 LB ratio; Methods define donor sampling and the reporter.
+      cache_path: evidence/PF01594/herzberg-2006-assays.txt
+      cache_sha256: e1f5bf2694297e49b7d31b5dcc8dec7dc4efaf8d00796473fdd68e0a7ef1c795
+- graph_id: tqsa-deletion-lsr-reporter-phases
+  title: ydgG deletion increases lsr promoter reporter output in two LBglu growth phases
+  scope: BW25113 WT and ydgG::KmR carrying pLW11 lsrACDBFG::lacZ, Herzberg 2006 Figure 3; not direct intracellular
+    AI-2 quantitation.
+  context: LB plus 0.2% glucose; overnight cultures are diluted to obtain exponential cells at OD600 0.6
+    and stationary cells at OD600 6. Beta-galactosidase activity is reported as ONPG cleavage per minute
+    per protein mass. Figure 3 uses duplicate experiments and SD; the two phases remain separate endpoints.
+  family_mapping: The complete BW25113 ydgG deletion maps at gene level to 344-aa P0AFS5, whose current
+    PF01594 domain spans 17-328. The reporter plasmid is a separate assay entity and does not measure
+    the isolated domain.
+  scope_status: PHENOTYPIC
+  taxon: NCBITaxon:83333
+  limitations: lsr transcription is an indirect intracellular-signal proxy affected by regulatory context,
+    including glucose catabolite repression. The authors propose a future luxS/ydgG double-mutant test;
+    AI-2 mediation is not uniquely established. No intracellular chemical concentration, export velocity
+    or serial reporter-to-biofilm chain is inferred.
+  nodes:
+  - node_id: tqsa-deletion-exponential
+    label: ydgG::KmR rather than WT at OD600 0.6 in LBglu
+    node_type: PERTURBATION
+    grounding:
+    - UniProtKB:P0AFS5
+  - node_id: tqsa-deletion-stationary
+    label: ydgG::KmR rather than WT at OD600 6 in LBglu
+    node_type: PERTURBATION
+    grounding:
+    - UniProtKB:P0AFS5
+  - node_id: lsr-exponential-output
+    label: Exponential-phase lsrACDBFG::lacZ beta-galactosidase output
+    node_type: ACTIVITY
+  - node_id: lsr-stationary-output
+    label: Stationary-phase lsrACDBFG::lacZ beta-galactosidase output
+    node_type: ACTIVITY
+  edges:
+  - edge_id: deletion-increases-exponential-lsr
+    subject: tqsa-deletion-exponential
+    predicate: increases
+    object: lsr-exponential-output
+    mechanism: The knockout/WT lsr reporter ratio is 16 +/- 5 under exponential LBglu conditions. Increased
+      beta-galactosidase is observed; the implied intracellular AI-2 change is not a direct chemical measurement.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:16385049
+      source_url: https://bpb-us-e1.wpmucdn.com/sites.psu.edu/dist/b/137198/files/2021/08/096.pdf
+      snippet: YdgG
+      explanation: Visually inspected Figure 3 and Results p. 591 support the exponential LBglu comparison;
+        AI-2 Methods p. 589 identify the reporter and OD600 endpoint.
+      cache_path: evidence/PF01594/herzberg-2006-assays.txt
+      cache_sha256: e1f5bf2694297e49b7d31b5dcc8dec7dc4efaf8d00796473fdd68e0a7ef1c795
+  - edge_id: deletion-increases-stationary-lsr
+    subject: tqsa-deletion-stationary
+    predicate: increases
+    object: lsr-stationary-output
+    mechanism: At stationary phase the knockout/WT lsr reporter ratio is 10 +/- 5. This separate endpoint
+      is not treated as a time-resolved mechanistic transition from the exponential-phase measurement.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:16385049
+      source_url: https://bpb-us-e1.wpmucdn.com/sites.psu.edu/dist/b/137198/files/2021/08/096.pdf
+      snippet: YdgG
+      explanation: Figure 3's stationary LBglu bars and Results p. 591 establish the increase under the
+        independently specified OD600-6 condition.
+      cache_path: evidence/PF01594/herzberg-2006-assays.txt
+      cache_sha256: e1f5bf2694297e49b7d31b5dcc8dec7dc4efaf8d00796473fdd68e0a7ef1c795
+- graph_id: tqsa-complemented-extracellular-activity
+  title: Induced ydgG complementation restores extracellular reporter activity
+  scope: BW25113 ydgG::KmR with pCA24NydgG+ and empty-vector controls, Herzberg 2006 extracellular complementation
+    experiment.
+  context: Cultures receive IPTG and 30 ug/ml chloramphenicol, are harvested at OD600 0.6, washed twice
+    for 10 min at 8820g to remove antibiotic that inhibits the Vibrio reporter, and resuspended in 20
+    ml LB plus 0.2% glucose. Supernatants are sampled after growth to OD600 0.9. The retained endpoint
+    is 1.5 mM IPTG, compared with the uncomplemented/vector context and normalized to WT with pCA24N.
+  family_mapping: The historical pCA24NydgG+ expresses the b1601/ydgG gene corresponding to P0AFS5, PF01594
+    17-328. Full historical tag/linker sequence is not established. Gene-level trans-complementation does
+    not isolate the domain or rule out every overexpression-mediated effect.
+  scope_status: PHENOTYPIC
+  taxon: NCBITaxon:83333
+  limitations: Restoration concerns the extracellular BB170 bioassay only; it is not direct export, restoration
+    of intracellular lsr output or a universal rescue of all deletion phenotypes. Washed OD600-0.9 cultures
+    must not be merged with the plasmid-free OD600-0.6 comparisons.
+  nodes:
+  - node_id: induce-tqsa-complement
+    label: Induce pCA24NydgG+ in the deletion background with 1.5 mM IPTG
+    node_type: PERTURBATION
+    grounding:
+    - UniProtKB:P0AFS5
+  - node_id: complemented-extracellular-output
+    label: Extracellular BB170 activity after antibiotic removal and regrowth
+    node_type: ACTIVITY
+  edges:
+  - edge_id: complementation-increases-extracellular-output
+    subject: induce-tqsa-complement
+    predicate: increases
+    object: complemented-extracellular-output
+    mechanism: Induced ydgG expression increases the deletion strain's extracellular reporter activity
+      toward the WT-empty-vector level; the reported complemented/WT ratio at 1.5 mM IPTG is 1.0 +/- 0.3.
+      This is genetic support for the phenotype, not resolution of export versus uptake.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:16385049
+      source_url: https://bpb-us-e1.wpmucdn.com/sites.psu.edu/dist/b/137198/files/2021/08/096.pdf
+      snippet: YdgG
+      explanation: Complementation Methods p. 589 and Results p. 591 explicitly state the wash/regrowth
+        protocol, empty-vector comparator, dose series and restoration endpoint.
+      cache_path: evidence/PF01594/herzberg-2006-assays.txt
+      cache_sha256: e1f5bf2694297e49b7d31b5dcc8dec7dc4efaf8d00796473fdd68e0a7ef1c795
+- graph_id: tqsa-deletion-biofilm-lbglu
+  title: ydgG deletion increases crystal-violet-stained attached material in LBglu
+  scope: BW25113 ydgG::KmR versus WT in the 96-well assay, Herzberg 2006 p. 589; not the separate flow-cell
+    experiment.
+  context: LB plus 0.2% glucose; overnight cultures diluted to OD600 0.05. Attached material at the bottom
+    and air-liquid interface is stained with 0.1% crystal violet for 20 min. Two independent experiments,
+    each four wells, are reported. Initial-assay culture duration and temperature are not explicit in
+    the inspected Methods.
+  family_mapping: Complete ydgG replacement affects the whole P0AFS5-associated gene, including PF01594
+    17-328 and its flanks; the current reference is 344 aa and gene-matched to BW25113, not independently
+    clone-sequenced.
+  scope_status: PHENOTYPIC
+  taxon: NCBITaxon:83333
+  limitations: Staining is an attached-mass proxy, not a uniquely AI-2-mediated mechanism or direct domain
+    activity. The paper reports separate trans-complementation with different antibiotic/induction conditions;
+    that is not silently substituted into this plasmid-free comparison. The direction reverses in unsupplemented
+    LB.
+  nodes:
+  - node_id: tqsa-deletion-biofilm-lbglu
+    label: ydgG::KmR rather than WT in LB plus glucose
+    node_type: PERTURBATION
+    grounding:
+    - UniProtKB:P0AFS5
+  - node_id: stained-mass-lbglu
+    label: Crystal-violet-stained attached material in LBglu wells
+    node_type: STATE
+  edges:
+  - edge_id: deletion-increases-lbglu-attached-mass
+    subject: tqsa-deletion-biofilm-lbglu
+    predicate: increases
+    object: stained-mass-lbglu
+    mechanism: The knockout/WT staining ratio is 3.8 +/- 0.2 in LBglu. This assay-specific increase is
+      not proof that TqsA directly represses a molecular biofilm pathway or that every medium has the
+      same response.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:16385049
+      source_url: https://bpb-us-e1.wpmucdn.com/sites.psu.edu/dist/b/137198/files/2021/08/096.pdf
+      snippet: YdgG
+      explanation: The 96-well Methods p. 588 and initial biofilm Results p. 589 support this LBglu ratio,
+        not the much larger flow-cell ratios.
+      cache_path: evidence/PF01594/herzberg-2006-assays.txt
+      cache_sha256: e1f5bf2694297e49b7d31b5dcc8dec7dc4efaf8d00796473fdd68e0a7ef1c795
+- graph_id: tqsa-deletion-biofilm-m9cglu
+  title: ydgG deletion increases attached material in glucose/Casamino-Acids M9 wells
+  scope: The separate BW25113 ydgG::KmR versus WT M9Cglu 96-well comparison in Herzberg 2006.
+  context: M9 supplemented with 0.4% glucose and 0.4% Casamino Acids; overnight cultures diluted to OD600
+    0.05. Total attached material is stained with 0.1% crystal violet for 20 min. Two independent experiments
+    with four wells each; initial-assay incubation duration and temperature remain unverified.
+  family_mapping: The whole-gene intervention maps to P0AFS5 / b1601, PF01594 17-328, in the BW25113 assay
+    background. It does not specifically remove only the annotated domain.
+  scope_status: PHENOTYPIC
+  taxon: NCBITaxon:83333
+  limitations: The 96-well endpoint is not the separate 24-h flow-chamber assay, and four wells are technical
+    subsamples rather than four independent cultures. This modest increase does not establish export direction,
+    substrate specificity or a causal AI-2-to-biofilm chain.
+  nodes:
+  - node_id: tqsa-deletion-m9cglu
+    label: ydgG::KmR rather than WT in M9Cglu wells
+    node_type: PERTURBATION
+    grounding:
+    - UniProtKB:P0AFS5
+  - node_id: stained-mass-m9cglu
+    label: Crystal-violet-stained attached material in M9Cglu wells
+    node_type: STATE
+  edges:
+  - edge_id: deletion-increases-m9cglu-attached-mass
+    subject: tqsa-deletion-m9cglu
+    predicate: increases
+    object: stained-mass-m9cglu
+    mechanism: The knockout/WT crystal-violet endpoint ratio is 1.6 +/- 0.1. The direction is retained
+      only for this medium and assay, without importing the flow-cell biomass or thickness magnitudes.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:16385049
+      source_url: https://bpb-us-e1.wpmucdn.com/sites.psu.edu/dist/b/137198/files/2021/08/096.pdf
+      snippet: YdgG
+      explanation: Methods p. 588 define M9Cglu and staining; Results p. 589 provide the distinct 1.6
+        +/- 0.1 well-assay ratio.
+      cache_path: evidence/PF01594/herzberg-2006-assays.txt
+      cache_sha256: e1f5bf2694297e49b7d31b5dcc8dec7dc4efaf8d00796473fdd68e0a7ef1c795
+- graph_id: tqsa-deletion-biofilm-lb
+  title: ydgG deletion decreases attached material in LB without added glucose
+  scope: The condition-specific opposite-direction BW25113 comparison in Herzberg 2006's 96-well assay.
+  context: Unsupplemented LB; cultures start at OD600 0.05 after overnight growth. Both bottom and air-liquid-interface
+    material contribute to the 0.1% crystal-violet stain after 20 min. Two independent experiments with
+    four wells each; incubation duration and temperature of this initial experiment are not specified
+    in the inspected Methods.
+  family_mapping: BW25113 complete ydgG::KmR replacement corresponds to the gene encoding P0AFS5, whose
+    reference domain is PF01594 17-328. This is a whole-gene phenotype, not isolated-domain biochemical
+    activity.
+  scope_status: PHENOTYPIC
+  taxon: NCBITaxon:83333
+  limitations: This decrease prevents a medium-independent claim that ydgG deletion increases biofilm.
+    The endpoint is attached stainable material, not a molecular transport rate; no causal mediator is
+    uniquely established.
+  nodes:
+  - node_id: tqsa-deletion-biofilm-lb
+    label: ydgG::KmR rather than WT in LB without added glucose
+    node_type: PERTURBATION
+    grounding:
+    - UniProtKB:P0AFS5
+  - node_id: stained-mass-lb
+    label: Crystal-violet-stained attached material in LB wells
+    node_type: STATE
+  edges:
+  - edge_id: deletion-decreases-lb-attached-mass
+    subject: tqsa-deletion-biofilm-lb
+    predicate: decreases
+    object: stained-mass-lb
+    mechanism: The knockout/WT staining ratio is 0.5 +/- 0.1 in LB, opposite to the increases in glucose-supplemented
+      media. The contextual negative is retained rather than erased by the paper's broad repression wording.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:16385049
+      source_url: https://bpb-us-e1.wpmucdn.com/sites.psu.edu/dist/b/137198/files/2021/08/096.pdf
+      snippet: YdgG
+      explanation: Initial biofilm Results p. 589 explicitly report decreased staining in LB, while Methods
+        p. 588 define the assay and medium.
+      cache_path: evidence/PF01594/herzberg-2006-assays.txt
+      cache_sha256: e1f5bf2694297e49b7d31b5dcc8dec7dc4efaf8d00796473fdd68e0a7ef1c795
+discussions:
+- discussion_id: tqsa-transport-direction-and-phenotype-mediators
+  prompt: Resolve direct TqsA transport and assay-specific mediators before extending reporter effects
+    into a molecular pathway.
+  kind: CURATION_TODO
+  status: OPEN
+  rationale: The historical knockout/rescue data support scoped cellular effects but do not distinguish
+    enhanced export from inhibited uptake, and structure/binding does not by itself establish transport.
+  evidence:
+  - reference: PMID:16385049
+    supports: PARTIAL
+    evidence_source: full_text_and_figure_3
+    explanation: Eight observed indirect effects retain separate extracellular, intracellular-proxy, complementation
+      and medium-specific staining contexts. The exact historical clone, initial well-assay time/temperature
+      and detailed reporter protocol remain open. Other motility, flow-cell and complementation endpoints
+      require separate curation; MIC ordering is ambiguous.
+  - reference: PMID:35698912
+    supports: PARTIAL
+    evidence_source: selected_full_text
+    explanation: The 2022 Discussion explicitly reports inability to demonstrate TqsA transport with attempted
+      methods. Native-MS binding and proposed structural movement do not supply an observed transmembrane
+      step. Preliminary mutants, the suspect printed mass-shift unit and uninspected supplementary spectra
+      require further assessment; condition-specific negative antiport results are not universal nonfunction.
+  posed_by: Codex
+  posed_date: '2026-10-11'
+  notes: Do not transfer Upf0118 antiport to TqsA or collapse the four E. coli family members. Retain
+    the LB biofilm decrease, glucose-dependent regulation, possible deletion pleiotropy and lack of established
+    AI-2-specific mediation. Partial scientific self-review; IN_PROGRESS.

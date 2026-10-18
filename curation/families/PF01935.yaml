@@ -6,19 +6,23 @@ discussions:
   prompt: Resolve assay and construct differences before generalizing a HerA chemo-mechanical cycle.
   kind: CURATION_TODO
   status: OPEN
-  rationale: Pfam121-331 is narrower than the structural catalytic assembly; measured ATPase, unwinding, triplex displacement and DNA destruction are not interchangeable.
+  rationale: Pfam121-331 is narrower than the structural catalytic assembly; measured ATPase, unwinding,
+    triplex displacement and DNA destruction are not interchangeable.
   evidence:
   - reference: PMID:25420454
     supports: PARTIAL
     evidence_source: primary_assays_and_supplement
-    explanation: D471A raises ATP turnover and does not lower Figure4C unwinding, yet lowers triplex displacement and DNA destruction. Preserve substrate/concentration and K142A/R142A label discrepancies.
+    explanation: D471A raises ATP turnover and does not lower Figure4C unwinding, yet lowers triplex displacement
+      and DNA destruction. Preserve substrate/concentration and K142A/R142A label discrepancies.
   - reference: PMID:25880130
     supports: PARTIAL
     evidence_source: primary_complementation_and_biochemistry
-    explanation: E233S complementation is a cellular selection outcome, not a directly measured consequence of an individual purified reaction product.
+    explanation: E233S complementation is a cellular selection outcome, not a directly measured consequence
+      of an individual purified reaction product.
   posed_by: Codex
   posed_date: '2026-10-12'
-  notes: Inspect2015 supplements and omitted2014 mutants/doping/interface contexts. Retain no-DNA and NurA-dependence differences across organisms; do not hand-correct the frozen description.
+  notes: Inspect2015 supplements and omitted2014 mutants/doping/interface contexts. Retain no-DNA and
+    NurA-dependence differences across organisms; do not hand-correct the frozen description.
 - discussion_id: pf01935-bacterial-and-antiviral-coverage
   prompt: Add accession-mapped bacterial and antiviral HerA contexts with primary assay evidence.
   kind: CURATION_TODO
@@ -28,149 +32,251 @@ discussions:
   - reference: PMID:40010344
     supports: PARTIAL
     evidence_source: primary_abstract_and_full_text_lead
-    explanation: HerA-DUF4297 defense is a distinct partner context; author-hosted full text was located but not inspected for curation.
+    explanation: HerA-DUF4297 defense is a distinct partner context; author-hosted full text was located
+      but not inspected for curation.
   - reference: PMID:25868646
     supports: PARTIAL
     evidence_source: primary_abstract_followup
-    explanation: Deinococcus biochemical and physiological effects require separate mapping and assay review.
+    explanation: Deinococcus biochemical and physiological effects require separate mapping and assay
+      review.
   posed_by: Codex
   posed_date: '2026-10-12'
-  notes: Coverage ledger retains2004,2012,2014 assembly,2015 alternative assays,2017 loading,2022 bacterial and2024-2025 antiviral followups. DUF4297 is not DUF87.
+  notes: Coverage ledger retains2004,2012,2014 assembly,2015 alternative assays,2017 loading,2022 bacterial
+    and2024-2025 antiviral followups. DUF4297 is not DUF87.
 causal_graphs:
 - graph_id: sso2251-overhang-atpase-2014
   title: HerA substitutions change ATP turnover on overhang DNA
   scope: Rzechorzek2014 Figure4A; full-length SSO2251 variants with nuclease-inactivated D58A NurA.
-  context: Select the5-prime15nt-overhang duplex comparison;30nM complex,400nM DNA,400uM ATP,5mM MgCl2,Tris pH8,NaCl,glycerol;60C preassembly. Three independent repeats.
-  family_mapping: Q97WG8v1,500aa,P2 taxon273057,PF01935 121-331. R142/K154 inside; K363/R381/D471 outside current match. Full proteins, not isolated-domain ATPase assays or crystallization HerAm10.
+  context: Select the5-prime15nt-overhang duplex comparison;30nM complex,400nM DNA,400uM ATP,5mM MgCl2,Tris
+    pH8,NaCl,glycerol;60C preassembly. Three independent repeats.
+  family_mapping: Q97WG8v1,500aa,P2 taxon273057,PF01935 121-331. R142/K154 inside; K363/R381/D471 outside
+    current match. Full proteins, not isolated-domain ATPase assays or crystallization HerAm10.
   taxon: NCBITaxon:273057
   scope_status: PHENOTYPIC
-  limitations: Directional phosphate-release changes do not directly resolve folding, assembly or the atomic coupling cycle. Other DNA substrates and no-DNA conditions remain separate. Increased ATP turnover is not increased repair.
+  limitations: Directional phosphate-release changes do not directly resolve folding, assembly or the
+    atomic coupling cycle. Other DNA substrates and no-DNA conditions remain separate. Increased ATP turnover
+    is not increased repair.
   nodes:
-  - {node_id: k154a, label: K154A instead of wild-type HerA, node_type: PERTURBATION}
-  - {node_id: r142a, label: R142A instead of wild-type HerA, node_type: PERTURBATION}
-  - {node_id: r381a, label: R381A instead of wild-type HerA, node_type: PERTURBATION}
-  - {node_id: k363a, label: K363A instead of wild-type HerA, node_type: PERTURBATION}
-  - {node_id: d471a, label: D471A instead of wild-type HerA, node_type: PERTURBATION}
-  - {node_id: double, label: R142A-R381A double substitution, node_type: PERTURBATION}
-  - {node_id: phosphate, label: Phosphate released per HerA monomer on5-prime-overhang DNA, node_type: PHENOTYPE}
+  - node_id: k154a
+    label: K154A instead of wild-type HerA
+    node_type: PERTURBATION
+  - node_id: r142a
+    label: R142A instead of wild-type HerA
+    node_type: PERTURBATION
+  - node_id: r381a
+    label: R381A instead of wild-type HerA
+    node_type: PERTURBATION
+  - node_id: k363a
+    label: K363A instead of wild-type HerA
+    node_type: PERTURBATION
+  - node_id: d471a
+    label: D471A instead of wild-type HerA
+    node_type: PERTURBATION
+  - node_id: double
+    label: R142A-R381A double substitution
+    node_type: PERTURBATION
+  - node_id: phosphate
+    label: Phosphate released per HerA monomer on5-prime-overhang DNA
+    node_type: PHENOTYPE
   edges:
   - edge_id: k154a-atpase-loss
     subject: k154a
     predicate: decreases
     object: phosphate
-    mechanism: Replacing the Walker-A lysine lowers phosphate release to an undetectable level in this complex assay.
+    mechanism: Replacing the Walker-A lysine lowers phosphate release to an undetectable level in this
+      complex assay.
     directness: UNRESOLVED
     support: OBSERVED
     evidence_kind: EXPERIMENTAL
     evidence:
-    - {reference: 'PMID:25420454', source_url: 'https://www.nature.com/articles/ncomms6506', snippet: K154A, explanation: 'Figure4A K154A versus WT; supplement pp13-14 ATPase conditions.', cache_path: evidence/PF01935/rzechorzek-2014.txt, cache_sha256: 177261d03cb53470db34e03f18c062c086ad016a2e9efd67d2552a46440fbfb1}
+    - reference: PMID:25420454
+      source_url: https://www.nature.com/articles/ncomms6506
+      snippet: K154A
+      explanation: Figure4A K154A versus WT; supplement pp13-14 ATPase conditions.
+      cache_path: evidence/PF01935/rzechorzek-2014.txt
+      cache_sha256: 177261d03cb53470db34e03f18c062c086ad016a2e9efd67d2552a46440fbfb1
   - edge_id: r142a-atpase-increase
     subject: r142a
     predicate: increases
     object: phosphate
-    mechanism: R142A raises phosphate release on the selected overhang substrate despite a proposed regulatory rather than obligatory catalytic role.
+    mechanism: R142A raises phosphate release on the selected overhang substrate despite a proposed regulatory
+      rather than obligatory catalytic role.
     directness: UNRESOLVED
     support: OBSERVED
     evidence_kind: EXPERIMENTAL
     evidence:
-    - {reference: 'PMID:25420454', source_url: 'https://www.nature.com/articles/ncomms6506', snippet: K154A, explanation: 'Figure4A R142A versus WT5-prime-overhang bars; not a claim that the static arginine contact directly caused the increase.', cache_path: evidence/PF01935/rzechorzek-2014.txt, cache_sha256: 177261d03cb53470db34e03f18c062c086ad016a2e9efd67d2552a46440fbfb1}
+    - reference: PMID:25420454
+      source_url: https://www.nature.com/articles/ncomms6506
+      snippet: K154A
+      explanation: Figure4A R142A versus WT5-prime-overhang bars; not a claim that the static arginine
+        contact directly caused the increase.
+      cache_path: evidence/PF01935/rzechorzek-2014.txt
+      cache_sha256: 177261d03cb53470db34e03f18c062c086ad016a2e9efd67d2552a46440fbfb1
   - edge_id: r381a-atpase-reduction
     subject: r381a
     predicate: decreases
     object: phosphate
-    mechanism: R381A lowers phosphate release relative to wild type on this substrate, without assuming complete loss on every DNA geometry.
+    mechanism: R381A lowers phosphate release relative to wild type on this substrate, without assuming
+      complete loss on every DNA geometry.
     directness: UNRESOLVED
     support: OBSERVED
     evidence_kind: EXPERIMENTAL
     evidence:
-    - {reference: 'PMID:25420454', source_url: 'https://www.nature.com/articles/ncomms6506', snippet: K154A, explanation: 'Figure4A R381A5-prime-overhang bars, with higher residual response to blunt DNA kept outside this edge.', cache_path: evidence/PF01935/rzechorzek-2014.txt, cache_sha256: 177261d03cb53470db34e03f18c062c086ad016a2e9efd67d2552a46440fbfb1}
+    - reference: PMID:25420454
+      source_url: https://www.nature.com/articles/ncomms6506
+      snippet: K154A
+      explanation: Figure4A R381A5-prime-overhang bars, with higher residual response to blunt DNA kept
+        outside this edge.
+      cache_path: evidence/PF01935/rzechorzek-2014.txt
+      cache_sha256: 177261d03cb53470db34e03f18c062c086ad016a2e9efd67d2552a46440fbfb1
   - edge_id: k363a-atpase-increase
     subject: k363a
     predicate: increases
     object: phosphate
-    mechanism: K363A raises phosphate release while separately reducing DNA-processing readouts; a direct coupling explanation is not established by this bar plot.
+    mechanism: K363A raises phosphate release while separately reducing DNA-processing readouts; a direct
+      coupling explanation is not established by this bar plot.
     directness: UNRESOLVED
     support: OBSERVED
     evidence_kind: EXPERIMENTAL
     evidence:
-    - {reference: 'PMID:25420454', source_url: 'https://www.nature.com/articles/ncomms6506', snippet: K154A, explanation: 'Figure4A K363A versus WT5-prime-overhang condition.', cache_path: evidence/PF01935/rzechorzek-2014.txt, cache_sha256: 177261d03cb53470db34e03f18c062c086ad016a2e9efd67d2552a46440fbfb1}
+    - reference: PMID:25420454
+      source_url: https://www.nature.com/articles/ncomms6506
+      snippet: K154A
+      explanation: Figure4A K363A versus WT5-prime-overhang condition.
+      cache_path: evidence/PF01935/rzechorzek-2014.txt
+      cache_sha256: 177261d03cb53470db34e03f18c062c086ad016a2e9efd67d2552a46440fbfb1
   - edge_id: d471a-atpase-increase
     subject: d471a
     predicate: increases
     object: phosphate
-    mechanism: The brace substitution increases phosphate release; this is not evidence for increased translocation or nuclease processing.
+    mechanism: The brace substitution increases phosphate release; this is not evidence for increased
+      translocation or nuclease processing.
     directness: UNRESOLVED
     support: OBSERVED
     evidence_kind: EXPERIMENTAL
     evidence:
-    - {reference: 'PMID:25420454', source_url: 'https://www.nature.com/articles/ncomms6506', snippet: K154A, explanation: 'Figure4A D471A versus WT5-prime-overhang condition, distinguished from4B-D.', cache_path: evidence/PF01935/rzechorzek-2014.txt, cache_sha256: 177261d03cb53470db34e03f18c062c086ad016a2e9efd67d2552a46440fbfb1}
+    - reference: PMID:25420454
+      source_url: https://www.nature.com/articles/ncomms6506
+      snippet: K154A
+      explanation: Figure4A D471A versus WT5-prime-overhang condition, distinguished from4B-D.
+      cache_path: evidence/PF01935/rzechorzek-2014.txt
+      cache_sha256: 177261d03cb53470db34e03f18c062c086ad016a2e9efd67d2552a46440fbfb1
   - edge_id: double-atpase-loss
     subject: double
     predicate: decreases
     object: phosphate
-    mechanism: Joint replacement of R142 and R381 lowers release to undetectable levels; it does not isolate the contribution of either residue alone.
+    mechanism: Joint replacement of R142 and R381 lowers release to undetectable levels; it does not isolate
+      the contribution of either residue alone.
     directness: UNRESOLVED
     support: OBSERVED
     evidence_kind: EXPERIMENTAL
     evidence:
-    - {reference: 'PMID:25420454', source_url: 'https://www.nature.com/articles/ncomms6506', snippet: K154A, explanation: 'Figure4A R142A/R381A double-mutant versus WT bars.', cache_path: evidence/PF01935/rzechorzek-2014.txt, cache_sha256: 177261d03cb53470db34e03f18c062c086ad016a2e9efd67d2552a46440fbfb1}
+    - reference: PMID:25420454
+      source_url: https://www.nature.com/articles/ncomms6506
+      snippet: K154A
+      explanation: Figure4A R142A/R381A double-mutant versus WT bars.
+      cache_path: evidence/PF01935/rzechorzek-2014.txt
+      cache_sha256: 177261d03cb53470db34e03f18c062c086ad016a2e9efd67d2552a46440fbfb1
 - graph_id: sso2251-overhang-unwinding-2014
   title: HerA variants reduce unwound oligonucleotide product
   scope: Rzechorzek2014 Figure4C and supplement FigureS5; WT or variant full HerA with D58A NurA.
-  context: 54bp duplex with25nt5-prime tail,10nM DNA,30min60C,3mM ATP,magnesium-containing buffer. Caption0.46uM complex versus Methods0.5uM; boiled and no-protein controls; three repeats.
-  family_mapping: Q97WG8v1,P2,500aa,PF01935 121-331. K154 inside; K363/R381 outside. Nuclease-disabled partner retained, not HerA alone.
+  context: 54bp duplex with25nt5-prime tail,10nM DNA,30min60C,3mM ATP,magnesium-containing buffer. Caption0.46uM
+    complex versus Methods0.5uM; boiled and no-protein controls; three repeats.
+  family_mapping: Q97WG8v1,P2,500aa,PF01935 121-331. K154 inside; K363/R381 outside. Nuclease-disabled
+    partner retained, not HerA alone.
   taxon: NCBITaxon:273057
   scope_status: PHENOTYPIC
-  limitations: Gel separation measures product, not a directly observed atomic movement or physiological repair. K363A reduction is partial. D471A does not reduce this readout and must not be pooled with its triplex/destruction effects.
+  limitations: Gel separation measures product, not a directly observed atomic movement or physiological
+    repair. K363A reduction is partial. D471A does not reduce this readout and must not be pooled with
+    its triplex/destruction effects.
   nodes:
-  - {node_id: k154a, label: K154A HerA with D58A NurA, node_type: PERTURBATION}
-  - {node_id: r381a, label: R381A HerA with D58A NurA, node_type: PERTURBATION}
-  - {node_id: k363a, label: K363A HerA with D58A NurA, node_type: PERTURBATION}
-  - {node_id: product, label: Unwound labeled strand relative to WT complex, node_type: PHENOTYPE}
+  - node_id: k154a
+    label: K154A HerA with D58A NurA
+    node_type: PERTURBATION
+  - node_id: r381a
+    label: R381A HerA with D58A NurA
+    node_type: PERTURBATION
+  - node_id: k363a
+    label: K363A HerA with D58A NurA
+    node_type: PERTURBATION
+  - node_id: product
+    label: Unwound labeled strand relative to WT complex
+    node_type: PHENOTYPE
   edges:
   - edge_id: k154a-unwinding-reduction
     subject: k154a
     predicate: decreases
     object: product
-    mechanism: K154A strongly reduces the separated labeled strand relative to wild-type HerA with the same partner.
+    mechanism: K154A strongly reduces the separated labeled strand relative to wild-type HerA with the
+      same partner.
     directness: UNRESOLVED
     support: OBSERVED
     evidence_kind: EXPERIMENTAL
     evidence:
-    - {reference: 'PMID:25420454', source_url: 'https://www.nature.com/articles/ncomms6506', snippet: K154A, explanation: 'Figure4C lane4 versus3 and quantified triplicates; S5 gels.', cache_path: evidence/PF01935/rzechorzek-2014.txt, cache_sha256: 177261d03cb53470db34e03f18c062c086ad016a2e9efd67d2552a46440fbfb1}
+    - reference: PMID:25420454
+      source_url: https://www.nature.com/articles/ncomms6506
+      snippet: K154A
+      explanation: Figure4C lane4 versus3 and quantified triplicates; S5 gels.
+      cache_path: evidence/PF01935/rzechorzek-2014.txt
+      cache_sha256: 177261d03cb53470db34e03f18c062c086ad016a2e9efd67d2552a46440fbfb1
   - edge_id: r381a-unwinding-reduction
     subject: r381a
     predicate: decreases
     object: product
-    mechanism: R381A strongly reduces the unwound product under the same comparison, without asserting loss of all possible motor activity.
+    mechanism: R381A strongly reduces the unwound product under the same comparison, without asserting
+      loss of all possible motor activity.
     directness: UNRESOLVED
     support: OBSERVED
     evidence_kind: EXPERIMENTAL
     evidence:
-    - {reference: 'PMID:25420454', source_url: 'https://www.nature.com/articles/ncomms6506', snippet: K154A, explanation: 'Figure4C lane6 versus3 and S5 replicates.', cache_path: evidence/PF01935/rzechorzek-2014.txt, cache_sha256: 177261d03cb53470db34e03f18c062c086ad016a2e9efd67d2552a46440fbfb1}
+    - reference: PMID:25420454
+      source_url: https://www.nature.com/articles/ncomms6506
+      snippet: K154A
+      explanation: Figure4C lane6 versus3 and S5 replicates.
+      cache_path: evidence/PF01935/rzechorzek-2014.txt
+      cache_sha256: 177261d03cb53470db34e03f18c062c086ad016a2e9efd67d2552a46440fbfb1
   - edge_id: k363a-unwinding-reduction
     subject: k363a
     predicate: decreases
     object: product
-    mechanism: K363A gives a partial reduction in unwound product relative to wild type, not complete inhibition.
+    mechanism: K363A gives a partial reduction in unwound product relative to wild type, not complete
+      inhibition.
     directness: UNRESOLVED
     support: OBSERVED
     evidence_kind: EXPERIMENTAL
     evidence:
-    - {reference: 'PMID:25420454', source_url: 'https://www.nature.com/articles/ncomms6506', snippet: K154A, explanation: 'Figure4C lane7 versus3 and quantified panel; direction retained without an invented significance estimate.', cache_path: evidence/PF01935/rzechorzek-2014.txt, cache_sha256: 177261d03cb53470db34e03f18c062c086ad016a2e9efd67d2552a46440fbfb1}
+    - reference: PMID:25420454
+      source_url: https://www.nature.com/articles/ncomms6506
+      snippet: K154A
+      explanation: Figure4C lane7 versus3 and quantified panel; direction retained without an invented
+        significance estimate.
+      cache_path: evidence/PF01935/rzechorzek-2014.txt
+      cache_sha256: 177261d03cb53470db34e03f18c062c086ad016a2e9efd67d2552a46440fbfb1
 - graph_id: sso2251-triplex-displacement-2014
   title: Brace and Walker-A variants reduce triplex displacement
   scope: Rzechorzek2014 Figure4D; full HerA variants with D58A NurA.
-  context: SwaI-linearized pLKS5 with22nt TFO,5nM triplex,3mM ATP,10mM MgCl2,MES pH5.5,spermidine; preassembly60C30min,assay50C. Boiled and no-protein controls.
-  family_mapping: Q97WG8v1,500aa,PF01935 121-331. K154 in match; D471/G465 outside. G465STOP removes the C-terminal segment of the full protein rather than the PF01935 domain.
+  context: SwaI-linearized pLKS5 with22nt TFO,5nM triplex,3mM ATP,10mM MgCl2,MES pH5.5,spermidine; preassembly60C30min,assay50C.
+    Boiled and no-protein controls.
+  family_mapping: Q97WG8v1,500aa,PF01935 121-331. K154 in match; D471/G465 outside. G465STOP removes the
+    C-terminal segment of the full protein rather than the PF01935 domain.
   taxon: NCBITaxon:273057
   scope_status: PHENOTYPIC
-  limitations: TFO displacement is a translocation proxy, not a measured step size or velocity. Methods7500bp plasmid and cartoon approximately5kb duplex differ. Variant folding/assembly alternatives are not fully isolated.
+  limitations: TFO displacement is a translocation proxy, not a measured step size or velocity. Methods7500bp
+    plasmid and cartoon approximately5kb duplex differ. Variant folding/assembly alternatives are not
+    fully isolated.
   nodes:
-  - {node_id: k154a, label: K154A substitution versus WT, node_type: PERTURBATION}
-  - {node_id: d471a, label: D471A substitution versus WT, node_type: PERTURBATION}
-  - {node_id: stop, label: G465STOP truncation versus WT, node_type: PERTURBATION}
-  - {node_id: released, label: Released triplex-forming oligonucleotide, node_type: PHENOTYPE}
+  - node_id: k154a
+    label: K154A substitution versus WT
+    node_type: PERTURBATION
+  - node_id: d471a
+    label: D471A substitution versus WT
+    node_type: PERTURBATION
+  - node_id: stop
+    label: G465STOP truncation versus WT
+    node_type: PERTURBATION
+  - node_id: released
+    label: Released triplex-forming oligonucleotide
+    node_type: PHENOTYPE
   edges:
   - edge_id: k154a-displacement-reduction
     subject: k154a
@@ -181,17 +287,28 @@ causal_graphs:
     support: OBSERVED
     evidence_kind: EXPERIMENTAL
     evidence:
-    - {reference: 'PMID:25420454', source_url: 'https://www.nature.com/articles/ncomms6506', snippet: K154A, explanation: 'Figure4D lane4 versus3; supplement p13 assay conditions.', cache_path: evidence/PF01935/rzechorzek-2014.txt, cache_sha256: 177261d03cb53470db34e03f18c062c086ad016a2e9efd67d2552a46440fbfb1}
+    - reference: PMID:25420454
+      source_url: https://www.nature.com/articles/ncomms6506
+      snippet: K154A
+      explanation: Figure4D lane4 versus3; supplement p13 assay conditions.
+      cache_path: evidence/PF01935/rzechorzek-2014.txt
+      cache_sha256: 177261d03cb53470db34e03f18c062c086ad016a2e9efd67d2552a46440fbfb1
   - edge_id: d471a-displacement-reduction
     subject: d471a
     predicate: decreases
     object: released
-    mechanism: D471A lowers TFO release even though it increases phosphate release in a different substrate assay.
+    mechanism: D471A lowers TFO release even though it increases phosphate release in a different substrate
+      assay.
     directness: UNRESOLVED
     support: OBSERVED
     evidence_kind: EXPERIMENTAL
     evidence:
-    - {reference: 'PMID:25420454', source_url: 'https://www.nature.com/articles/ncomms6506', snippet: K154A, explanation: 'Figure4D lane5 versus3; no direct edge from the4A ATPase result is asserted.', cache_path: evidence/PF01935/rzechorzek-2014.txt, cache_sha256: 177261d03cb53470db34e03f18c062c086ad016a2e9efd67d2552a46440fbfb1}
+    - reference: PMID:25420454
+      source_url: https://www.nature.com/articles/ncomms6506
+      snippet: K154A
+      explanation: Figure4D lane5 versus3; no direct edge from the4A ATPase result is asserted.
+      cache_path: evidence/PF01935/rzechorzek-2014.txt
+      cache_sha256: 177261d03cb53470db34e03f18c062c086ad016a2e9efd67d2552a46440fbfb1
   - edge_id: truncation-displacement-reduction
     subject: stop
     predicate: decreases
@@ -201,34 +318,73 @@ causal_graphs:
     support: OBSERVED
     evidence_kind: EXPERIMENTAL
     evidence:
-    - {reference: 'PMID:25420454', source_url: 'https://www.nature.com/articles/ncomms6506', snippet: K154A, explanation: 'Figure4D lane6 versus3; the truncation removes more than the D471 side chain.', cache_path: evidence/PF01935/rzechorzek-2014.txt, cache_sha256: 177261d03cb53470db34e03f18c062c086ad016a2e9efd67d2552a46440fbfb1}
+    - reference: PMID:25420454
+      source_url: https://www.nature.com/articles/ncomms6506
+      snippet: K154A
+      explanation: Figure4D lane6 versus3; the truncation removes more than the D471 side chain.
+      cache_path: evidence/PF01935/rzechorzek-2014.txt
+      cache_sha256: 177261d03cb53470db34e03f18c062c086ad016a2e9efd67d2552a46440fbfb1
 - graph_id: sso2251-nura-dna-destruction-2014
   title: The HerA-NurA reaction degrades long duplex DNA
   scope: Rzechorzek2014 Figure4B and S4; WT or variant HerA with active WT NurA.
-  context: 1.25nM5.3kb DNA,3mM ATP,5mM MnCl2,Tris pH8,NaCl,DTT,glycerol,BSA,60C0-40min. Figure reports2uM complex; differing preassembly/dilution descriptions retained in ledger.
-  family_mapping: Full SSO2251/Q97WG8v1,P2 taxon273057,PF01935 121-331; only K154 among the plotted loss variants is inside the current match. NurA supplies partner nuclease activity.
+  context: 1.25nM5.3kb DNA,3mM ATP,5mM MnCl2,Tris pH8,NaCl,DTT,glycerol,BSA,60C0-40min. Figure reports2uM
+    complex; differing preassembly/dilution descriptions retained in ledger.
+  family_mapping: Full SSO2251/Q97WG8v1,P2 taxon273057,PF01935 121-331; only K154 among the plotted loss
+    variants is inside the current match. NurA supplies partner nuclease activity.
   taxon: NCBITaxon:273057
   scope_status: MECHANISTIC
-  limitations: Joint reconstitution does not establish HerA-intrinsic nuclease activity or isolated-domain chemistry. Main Methods5.5kb conflicts with figure/supplement5.3kb. R381A delays processing but approaches WT at40min; do not label it completely inactive.
+  limitations: Joint reconstitution does not establish HerA-intrinsic nuclease activity or isolated-domain
+    chemistry. Main Methods5.5kb conflicts with figure/supplement5.3kb. R381A delays processing but approaches
+    WT at40min; do not label it completely inactive.
   nodes:
-  - {node_id: complete, label: WT HerA plus WT NurA and ATP in complete buffer, node_type: ACTIVITY, grounding: ['UniProtKB:Q97WG8']}
-  - {node_id: intact, label: Intact5.3kb duplex substrate, node_type: STATE}
-  - {node_id: k154a, label: K154A HerA versus WT with active NurA, node_type: PERTURBATION}
-  - {node_id: r381a, label: R381A HerA versus WT with active NurA, node_type: PERTURBATION}
-  - {node_id: k363a, label: K363A HerA versus WT with active NurA, node_type: PERTURBATION}
-  - {node_id: d471a, label: D471A HerA versus WT with active NurA, node_type: PERTURBATION}
-  - {node_id: processed, label: Fraction of duplex substrate processed during early timecourse, node_type: PHENOTYPE}
+  - node_id: complete
+    label: WT HerA plus WT NurA and ATP in complete buffer
+    node_type: ACTIVITY
+    grounding:
+    - UniProtKB:Q97WG8
+  - node_id: intact
+    label: Intact5.3kb duplex substrate
+    node_type: STATE
+  - node_id: k154a
+    label: K154A HerA versus WT with active NurA
+    node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q97WG8
+  - node_id: r381a
+    label: R381A HerA versus WT with active NurA
+    node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q97WG8
+  - node_id: k363a
+    label: K363A HerA versus WT with active NurA
+    node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q97WG8
+  - node_id: d471a
+    label: D471A HerA versus WT with active NurA
+    node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q97WG8
+  - node_id: processed
+    label: Fraction of duplex substrate processed during early timecourse
+    node_type: PHENOTYPE
   edges:
   - edge_id: complete-dna-degradation
     subject: complete
     predicate: degrades
     object: intact
-    mechanism: The complete purified reaction removes intact duplex substrate over time and generates shorter products; it is a joint protein-and-cofactor condition.
+    mechanism: The complete purified reaction removes intact duplex substrate over time and generates
+      shorter products; it is a joint protein-and-cofactor condition.
     directness: DIRECT
     support: OBSERVED
     evidence_kind: EXPERIMENTAL
     evidence:
-    - {reference: 'PMID:25420454', source_url: 'https://www.nature.com/articles/ncomms6506', snippet: K154A, explanation: 'Figure4B WT timecourse and S4 triplicates/controls; not the Figure9 mechanistic cartoon.', cache_path: evidence/PF01935/rzechorzek-2014.txt, cache_sha256: 177261d03cb53470db34e03f18c062c086ad016a2e9efd67d2552a46440fbfb1}
+    - reference: PMID:25420454
+      source_url: https://www.nature.com/articles/ncomms6506
+      snippet: K154A
+      explanation: Figure4B WT timecourse and S4 triplicates/controls; not the Figure9 mechanistic cartoon.
+      cache_path: evidence/PF01935/rzechorzek-2014.txt
+      cache_sha256: 177261d03cb53470db34e03f18c062c086ad016a2e9efd67d2552a46440fbfb1
   - edge_id: k154a-processing-reduction
     subject: k154a
     predicate: decreases
@@ -238,100 +394,177 @@ causal_graphs:
     support: OBSERVED
     evidence_kind: EXPERIMENTAL
     evidence:
-    - {reference: 'PMID:25420454', source_url: 'https://www.nature.com/articles/ncomms6506', snippet: K154A, explanation: 'Figure4B lanes6-10 versus1-5 and S4; measured substrate processing not a direct atomic role.', cache_path: evidence/PF01935/rzechorzek-2014.txt, cache_sha256: 177261d03cb53470db34e03f18c062c086ad016a2e9efd67d2552a46440fbfb1}
+    - reference: PMID:25420454
+      source_url: https://www.nature.com/articles/ncomms6506
+      snippet: K154A
+      explanation: Figure4B lanes6-10 versus1-5 and S4; measured substrate processing not a direct atomic
+        role.
+      cache_path: evidence/PF01935/rzechorzek-2014.txt
+      cache_sha256: 177261d03cb53470db34e03f18c062c086ad016a2e9efd67d2552a46440fbfb1
   - edge_id: r381a-processing-delay
     subject: r381a
     predicate: decreases
     object: processed
-    mechanism: R381A delays early substrate loss, particularly5-10min, although its40min extent approaches WT.
+    mechanism: R381A delays early substrate loss, particularly5-10min, although its40min extent approaches
+      WT.
     directness: UNRESOLVED
     support: OBSERVED
     evidence_kind: EXPERIMENTAL
     evidence:
-    - {reference: 'PMID:25420454', source_url: 'https://www.nature.com/articles/ncomms6506', snippet: K154A, explanation: 'Figure4B lanes16-20 and quantified timecourse; endpoint qualification checked visually.', cache_path: evidence/PF01935/rzechorzek-2014.txt, cache_sha256: 177261d03cb53470db34e03f18c062c086ad016a2e9efd67d2552a46440fbfb1}
+    - reference: PMID:25420454
+      source_url: https://www.nature.com/articles/ncomms6506
+      snippet: K154A
+      explanation: Figure4B lanes16-20 and quantified timecourse; endpoint qualification checked visually.
+      cache_path: evidence/PF01935/rzechorzek-2014.txt
+      cache_sha256: 177261d03cb53470db34e03f18c062c086ad016a2e9efd67d2552a46440fbfb1
   - edge_id: k363a-processing-reduction
     subject: k363a
     predicate: decreases
     object: processed
-    mechanism: K363A lowers duplex processing relative to WT despite increased ATP turnover in the separate4A assay.
+    mechanism: K363A lowers duplex processing relative to WT despite increased ATP turnover in the separate4A
+      assay.
     directness: UNRESOLVED
     support: OBSERVED
     evidence_kind: EXPERIMENTAL
     evidence:
-    - {reference: 'PMID:25420454', source_url: 'https://www.nature.com/articles/ncomms6506', snippet: K154A, explanation: 'Figure4B lanes21-25 versus1-5 with S4 replicates.', cache_path: evidence/PF01935/rzechorzek-2014.txt, cache_sha256: 177261d03cb53470db34e03f18c062c086ad016a2e9efd67d2552a46440fbfb1}
+    - reference: PMID:25420454
+      source_url: https://www.nature.com/articles/ncomms6506
+      snippet: K154A
+      explanation: Figure4B lanes21-25 versus1-5 with S4 replicates.
+      cache_path: evidence/PF01935/rzechorzek-2014.txt
+      cache_sha256: 177261d03cb53470db34e03f18c062c086ad016a2e9efd67d2552a46440fbfb1
   - edge_id: d471a-processing-reduction
     subject: d471a
     predicate: decreases
     object: processed
-    mechanism: D471A lowers duplex processing relative to WT, consistent with impaired coordination but not proof of the proposed brace-motion mechanism.
+    mechanism: D471A lowers duplex processing relative to WT, consistent with impaired coordination but
+      not proof of the proposed brace-motion mechanism.
     directness: UNRESOLVED
     support: OBSERVED
     evidence_kind: EXPERIMENTAL
     evidence:
-    - {reference: 'PMID:25420454', source_url: 'https://www.nature.com/articles/ncomms6506', snippet: K154A, explanation: 'Figure4B lanes26-30 versus1-5; ATPase and short-duplex unwinding do not have the same direction.', cache_path: evidence/PF01935/rzechorzek-2014.txt, cache_sha256: 177261d03cb53470db34e03f18c062c086ad016a2e9efd67d2552a46440fbfb1}
+    - reference: PMID:25420454
+      source_url: https://www.nature.com/articles/ncomms6506
+      snippet: K154A
+      explanation: Figure4B lanes26-30 versus1-5; ATPase and short-duplex unwinding do not have the same
+        direction.
+      cache_path: evidence/PF01935/rzechorzek-2014.txt
+      cache_sha256: 177261d03cb53470db34e03f18c062c086ad016a2e9efd67d2552a46440fbfb1
 - graph_id: sire0064-deletion-complementation-2015
   title: WT and D176E plasmids permit herA-deletion recovery
   scope: Huang2015 Figure2A-B; E233S pMID-herA-T genetic complementation and counterselection.
-  context: REY15A delta-pyrEF delta-lacS derivative,75C; pSSR plasmids,12uM simvastatin selection then5-FOA/uracil/simvastatin. Flanking PCR and plasmid sequencing distinguish deletion recovery from empty-vector marker escape.
-  family_mapping: SiRe_0064 reference F0NFK8v1,500aa,taxon930945,PF01935 121-331; D176 inside match. Whole-gene plasmid expression, not isolated-domain rescue or WT-strain physiology.
+  context: REY15A delta-pyrEF delta-lacS derivative,75C; pSSR plasmids,12uM simvastatin selection then5-FOA/uracil/simvastatin.
+    Flanking PCR and plasmid sequencing distinguish deletion recovery from empty-vector marker escape.
+  family_mapping: SiRe_0064 reference F0NFK8v1,500aa,taxon930945,PF01935 121-331; D176 inside match. Whole-gene
+    plasmid expression, not isolated-domain rescue or WT-strain physiology.
   taxon: NCBITaxon:930945
   scope_status: PHENOTYPIC
-  limitations: Selected colony recovery is indirect and not a direct end-resection measurement. Other five mutant transformants failed earlier in transformation, so no clean established-deletion comparison is asserted for them. Protein dosage and dominant-negative alternatives remain open.
+  limitations: Selected colony recovery is indirect and not a direct end-resection measurement. Other
+    five mutant transformants failed earlier in transformation, so no clean established-deletion comparison
+    is asserted for them. Protein dosage and dominant-negative alternatives remain open.
   nodes:
-  - {node_id: wt, label: Supply WT herA on pSSR rather than empty vector, node_type: PERTURBATION, grounding: ['UniProtKB:F0NFK8']}
-  - {node_id: d176e, label: Supply D176E herA on pSSR rather than empty vector, node_type: PERTURBATION}
-  - {node_id: recovery, label: Recovery of verified chromosomal herA-deletion cells, node_type: PHENOTYPE}
+  - node_id: wt
+    label: Supply WT herA on pSSR rather than empty vector
+    node_type: PERTURBATION
+    grounding:
+    - UniProtKB:F0NFK8
+  - node_id: d176e
+    label: Supply D176E herA on pSSR rather than empty vector
+    node_type: PERTURBATION
+    grounding:
+    - UniProtKB:F0NFK8
+  - node_id: recovery
+    label: Recovery of verified chromosomal herA-deletion cells
+    node_type: PHENOTYPE
   edges:
   - edge_id: wt-deletion-recovery
     subject: wt
     predicate: enables
     object: recovery
-    mechanism: Ectopic WT herA permits recovery of verified deletion cells under the tested counterselection scheme.
+    mechanism: Ectopic WT herA permits recovery of verified deletion cells under the tested counterselection
+      scheme.
     directness: INDIRECT
     support: OBSERVED
     evidence_kind: EXPERIMENTAL
     evidence:
-    - {reference: 'PMID:25880130', source_url: 'https://pmc.ncbi.nlm.nih.gov/articles/PMC4351679/', snippet: D176E, explanation: 'Figure2B deletion PCR band and plasmid sequence verification; empty-vector escape is not successful deletion rescue.', cache_path: evidence/PF01935/huang-2015.txt, cache_sha256: b8366ed6c7b29e4239e9177e21e569acfd7d1483af3f569737dceaa80a3f861d}
+    - reference: PMID:25880130
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC4351679/
+      snippet: D176E
+      explanation: Figure2B deletion PCR band and plasmid sequence verification; empty-vector escape is
+        not successful deletion rescue.
+      cache_path: evidence/PF01935/huang-2015.txt
+      cache_sha256: b8366ed6c7b29e4239e9177e21e569acfd7d1483af3f569737dceaa80a3f861d
   - edge_id: d176e-deletion-recovery
     subject: d176e
     predicate: enables
     object: recovery
-    mechanism: The D176E allele also permits verified chromosomal deletion recovery despite reduced ATPase activity in a separate purified assay.
+    mechanism: The D176E allele also permits verified chromosomal deletion recovery despite reduced ATPase
+      activity in a separate purified assay.
     directness: INDIRECT
     support: OBSERVED
     evidence_kind: EXPERIMENTAL
     evidence:
-    - {reference: 'PMID:25880130', source_url: 'https://pmc.ncbi.nlm.nih.gov/articles/PMC4351679/', snippet: D176E, explanation: 'Figure2A-B D176E complementation and sequencing; not a direct edge from the Figure5 product fraction to viability.', cache_path: evidence/PF01935/huang-2015.txt, cache_sha256: b8366ed6c7b29e4239e9177e21e569acfd7d1483af3f569737dceaa80a3f861d}
+    - reference: PMID:25880130
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC4351679/
+      snippet: D176E
+      explanation: Figure2A-B D176E complementation and sequencing; not a direct edge from the Figure5
+        product fraction to viability.
+      cache_path: evidence/PF01935/huang-2015.txt
+      cache_sha256: b8366ed6c7b29e4239e9177e21e569acfd7d1483af3f569737dceaa80a3f861d
 - graph_id: sire0064-overhang-exonuclease-2015
   title: HerA variants change NurA-associated exonuclease products
-  scope: Huang2015 Figures4B-C and5A; full HerA D176E or E356D with WT NurA on34/84nt3-prime-overhang DNA.
-  context: 27.8nM HerA hexamer,83.4nM NurA dimer,1nM DNA,1mM ATP,10mM MgCl2,Tris pH8,NaCl,DTT,BSA,65C;30min endpoint and0-30min timecourse. Native and denaturing gels; three repeats.
-  family_mapping: F0NFK8v1,500aa,PF01935 121-331,REY15A taxon930945. D176 inside and E356 outside match. Partner NurA is not the PF01935 protein; excess partner concentration is not complex stoichiometry.
+  scope: Huang2015 Figures4B-C and5A; full HerA D176E or E356D with WT NurA on34/84nt3-prime-overhang
+    DNA.
+  context: 27.8nM HerA hexamer,83.4nM NurA dimer,1nM DNA,1mM ATP,10mM MgCl2,Tris pH8,NaCl,DTT,BSA,65C;30min
+    endpoint and0-30min timecourse. Native and denaturing gels; three repeats.
+  family_mapping: F0NFK8v1,500aa,PF01935 121-331,REY15A taxon930945. D176 inside and E356 outside match.
+    Partner NurA is not the PF01935 protein; excess partner concentration is not complex stoichiometry.
   taxon: NCBITaxon:930945
   scope_status: PHENOTYPIC
-  limitations: No direct atomic catalytic effect is inferred from whole-protein substitutions. E356D retains endonuclease-class activity. D176E increase is specific to the overhang comparison; blunt-DNA exonuclease activity is approximatelyWT.
+  limitations: No direct atomic catalytic effect is inferred from whole-protein substitutions. E356D retains
+    endonuclease-class activity. D176E increase is specific to the overhang comparison; blunt-DNA exonuclease
+    activity is approximatelyWT.
   nodes:
-  - {node_id: d176e, label: D176E HerA with WT NurA versus WT pair, node_type: PERTURBATION}
-  - {node_id: e356d, label: E356D HerA with WT NurA versus WT pair, node_type: PERTURBATION}
-  - {node_id: product, label: Exonuclease-class products from3-prime-overhang DNA, node_type: PHENOTYPE}
+  - node_id: d176e
+    label: D176E HerA with WT NurA versus WT pair
+    node_type: PERTURBATION
+  - node_id: e356d
+    label: E356D HerA with WT NurA versus WT pair
+    node_type: PERTURBATION
+  - node_id: product
+    label: Exonuclease-class products from3-prime-overhang DNA
+    node_type: PHENOTYPE
   edges:
   - edge_id: d176e-overhang-product-increase
     subject: d176e
     predicate: increases
     object: product
-    mechanism: D176E/NurA produces more exonuclease-class products than the WT pair under the selected overhang assay.
+    mechanism: D176E/NurA produces more exonuclease-class products than the WT pair under the selected
+      overhang assay.
     directness: UNRESOLVED
     support: OBSERVED
     evidence_kind: EXPERIMENTAL
     evidence:
-    - {reference: 'PMID:25880130', source_url: 'https://pmc.ncbi.nlm.nih.gov/articles/PMC4351679/', snippet: D176E, explanation: 'Figure4C lanes6 versus4 and Figure5A product/timecourse; Figure5B blunt result separately qualified.', cache_path: evidence/PF01935/huang-2015.txt, cache_sha256: b8366ed6c7b29e4239e9177e21e569acfd7d1483af3f569737dceaa80a3f861d}
+    - reference: PMID:25880130
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC4351679/
+      snippet: D176E
+      explanation: Figure4C lanes6 versus4 and Figure5A product/timecourse; Figure5B blunt result separately
+        qualified.
+      cache_path: evidence/PF01935/huang-2015.txt
+      cache_sha256: b8366ed6c7b29e4239e9177e21e569acfd7d1483af3f569737dceaa80a3f861d
   - edge_id: e356d-overhang-product-reduction
     subject: e356d
     predicate: decreases
     object: product
-    mechanism: E356D/NurA yields fewer exonuclease-class products than WT without eliminating the separately measured endonuclease products.
+    mechanism: E356D/NurA yields fewer exonuclease-class products than WT without eliminating the separately
+      measured endonuclease products.
     directness: UNRESOLVED
     support: OBSERVED
     evidence_kind: EXPERIMENTAL
     evidence:
-    - {reference: 'PMID:25880130', source_url: 'https://pmc.ncbi.nlm.nih.gov/articles/PMC4351679/', snippet: D176E, explanation: 'Figure4C lanes8 versus4 and Figure5A exonuclease curve, not its endonuclease curve.', cache_path: evidence/PF01935/huang-2015.txt, cache_sha256: b8366ed6c7b29e4239e9177e21e569acfd7d1483af3f569737dceaa80a3f861d}
+    - reference: PMID:25880130
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC4351679/
+      snippet: D176E
+      explanation: Figure4C lanes8 versus4 and Figure5A exonuclease curve, not its endonuclease curve.
+      cache_path: evidence/PF01935/huang-2015.txt
+      cache_sha256: b8366ed6c7b29e4239e9177e21e569acfd7d1483af3f569737dceaa80a3f861d

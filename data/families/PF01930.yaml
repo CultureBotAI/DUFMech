@@ -393,6 +393,8 @@ causal_graphs:
   - node_id: binding
     label: Cas4/1-Cas2 occupancy versus ExoI alone
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q74H36
   - node_id: pam-cleavage
     label: ExoI digestion of the PAM-side overhang
     node_type: ACTIVITY
@@ -657,5 +659,13 @@ curation_events:
   outcome: needs_followup
   summary: Retain partial scientific review of PF01930 member-scoped causal graphs
   history_record: history/records/PF01930/2026-10-12T030712Z-codex-393c80.yaml
+  event_index: 0
+  llm_assisted: true
+- timestamp: '2026-10-18T02:54:46Z'
+  curator: Antigravity
+  action: EDIT
+  outcome: changed
+  summary: Ground causal graph gene and protein nodes in PF01930 with verified UniProtKB accessions (UniProtKB:Q74H36)
+  history_record: history/records/PF01930/2026-10-18T025446Z-antigravity-a6904c.yaml
   event_index: 0
   llm_assisted: true

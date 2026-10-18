@@ -637,9 +637,14 @@ causal_graphs:
   - node_id: deletion
     label: Native delta-maf1
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q8EC71
   - node_id: s143_modification
     label: Detected S143-containing FlaA/FlaB glycopeptide adducts
     node_type: PHENOTYPE
+    grounding:
+    - UniProtKB:Q8ECA5
+    - UniProtKB:Q8ECA6
   - node_id: filament_length
     label: Flagellar filament length
     node_type: PHENOTYPE
@@ -649,6 +654,9 @@ causal_graphs:
   - node_id: sheared_signal
     label: FlaA/B signal in mechanically sheared fraction
     node_type: PHENOTYPE
+    grounding:
+    - UniProtKB:Q8ECA5
+    - UniProtKB:Q8ECA6
   edges:
   - edge_id: mr1-maf1-deletion-2024-1
     subject: deletion
@@ -735,9 +743,13 @@ causal_graphs:
   - node_id: deletion
     label: Native delta-maf2
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q8EC85
   - node_id: s105_modification
     label: Detected S105-containing FlaA glycopeptide adducts
     node_type: PHENOTYPE
+    grounding:
+    - UniProtKB:Q8ECA5
   - node_id: spread
     label: Spread on semisolid LB agar
     node_type: PHENOTYPE
@@ -794,9 +806,14 @@ causal_graphs:
   - node_id: double_loss
     label: Native delta-maf1 delta-maf2
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q8EC71
+    - UniProtKB:Q8EC85
   - node_id: modified_flagellin
     label: Detected modified FLAG-FlaA peptides
     node_type: PHENOTYPE
+    grounding:
+    - UniProtKB:Q8ECA5
   - node_id: length
     label: Flagellar filament length relative to delta-maf1
     node_type: PHENOTYPE
@@ -869,9 +886,14 @@ causal_graphs:
   - node_id: rescue
     label: Full-length HA-Maf1 in delta-maf1
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q8EC71
   - node_id: slow_band
     label: WT-like slow-migrating FlaA/B signal
     node_type: PHENOTYPE
+    grounding:
+    - UniProtKB:Q8ECA5
+    - UniProtKB:Q8ECA6
   - node_id: spread
     label: Spreading relative to empty-vector deletion
     node_type: PHENOTYPE
@@ -924,9 +946,14 @@ causal_graphs:
   - node_id: rescue
     label: Reported HA-Maf2 control in delta-maf2
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q8EC85
   - node_id: slow_band
     label: WT-like slow-migrating FlaA/B signal
     node_type: PHENOTYPE
+    grounding:
+    - UniProtKB:Q8ECA5
+    - UniProtKB:Q8ECA6
   edges:
   - edge_id: mr1-maf2-rescue-2024-1
     subject: rescue
@@ -960,9 +987,14 @@ causal_graphs:
   - node_id: variant
     label: HA-Maf1 D247A in cognate deletion
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q8EC71
   - node_id: slow_band
     label: WT-like slow-migrating FlaA/B signal
     node_type: PHENOTYPE
+    grounding:
+    - UniProtKB:Q8ECA5
+    - UniProtKB:Q8ECA6
   - node_id: spread
     label: Spreading in the stated comparator
     node_type: PHENOTYPE
@@ -1016,9 +1048,14 @@ causal_graphs:
   - node_id: variant
     label: HA-Maf1 D333A in cognate deletion
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q8EC71
   - node_id: slow_band
     label: Partially restored slow-migrating FlaA/B signal
     node_type: PHENOTYPE
+    grounding:
+    - UniProtKB:Q8ECA5
+    - UniProtKB:Q8ECA6
   - node_id: spread
     label: Partial spreading relative to empty-vector deletion
     node_type: PHENOTYPE
@@ -1073,9 +1110,14 @@ causal_graphs:
   - node_id: variant
     label: HA-Maf2 D261A in cognate deletion
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q8EC85
   - node_id: slow_band
     label: WT-like slow-migrating FlaA/B signal
     node_type: PHENOTYPE
+    grounding:
+    - UniProtKB:Q8ECA5
+    - UniProtKB:Q8ECA6
   - node_id: spread
     label: Spreading in the stated comparator
     node_type: PHENOTYPE
@@ -1130,9 +1172,14 @@ causal_graphs:
   - node_id: variant
     label: HA-Maf2 D347A in cognate deletion
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q8EC85
   - node_id: slow_band
     label: Partially restored slow-migrating FlaA/B signal
     node_type: PHENOTYPE
+    grounding:
+    - UniProtKB:Q8ECA5
+    - UniProtKB:Q8ECA6
   - node_id: spread
     label: Spreading in the stated comparator
     node_type: PHENOTYPE
@@ -1185,9 +1232,14 @@ causal_graphs:
   - node_id: truncation
     label: HA-Maf1(1-420) in delta-maf1
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q8EC71
   - node_id: slow_band
     label: WT-like FlaA/B mobility shift
     node_type: PHENOTYPE
+    grounding:
+    - UniProtKB:Q8ECA5
+    - UniProtKB:Q8ECA6
   - node_id: spread
     label: Spreading relative to full-length rescue
     node_type: PHENOTYPE
@@ -1238,9 +1290,14 @@ causal_graphs:
   - node_id: truncation
     label: HA-Maf1(1-699) in delta-maf1
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q8EC71
   - node_id: slow_band
     label: Partially restored FlaA/B mobility shift
     node_type: PHENOTYPE
+    grounding:
+    - UniProtKB:Q8ECA5
+    - UniProtKB:Q8ECA6
   - node_id: spread
     label: Partial spreading relative to empty-vector deletion
     node_type: PHENOTYPE
@@ -1295,30 +1352,50 @@ causal_graphs:
   - node_id: full_pair
     label: Full-length Maf1 plus FlaA/B reporter fusions
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q8EC71
+    - UniProtKB:Q8ECA5
+    - UniProtKB:Q8ECA6
   - node_id: reporter
     label: LacZ reporter activity
     node_type: PHENOTYPE
   - node_id: short_pair
     label: Maf1(1-420) plus FlaA/B reporter fusions
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q8EC71
+    - UniProtKB:Q8ECA5
+    - UniProtKB:Q8ECA6
   - node_id: full_signal
     label: Reporter activity relative to full-length pairs
     node_type: PHENOTYPE
   - node_id: partial_pair
     label: Maf1(1-699) plus FlaA/B reporter fusions
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q8EC71
+    - UniProtKB:Q8ECA5
+    - UniProtKB:Q8ECA6
   - node_id: residual_signal
     label: Reporter activity above selected negative controls
     node_type: PHENOTYPE
   - node_id: ctd421_pair
     label: Maf1 CTD421-822 plus FlaA/B reporter fusions
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q8EC71
+    - UniProtKB:Q8ECA5
+    - UniProtKB:Q8ECA6
   - node_id: ctd_signal
     label: Weak reporter signal in productive orientations
     node_type: PHENOTYPE
   - node_id: ctd550_pair
     label: Maf1 CTD550-822 plus FlaA/B reporter fusions
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q8EC71
+    - UniProtKB:Q8ECA5
+    - UniProtKB:Q8ECA6
   edges:
   - edge_id: mr1-maf1-bacth-2024-1
     subject: full_pair
@@ -1422,9 +1499,13 @@ causal_graphs:
   - node_id: glfm_loss
     label: Native delta-glfM
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q8EC84
   - node_id: s105_modified
     label: Detected modified S105-containing FlaA peptide
     node_type: PHENOTYPE
+    grounding:
+    - UniProtKB:Q8ECA5
   - node_id: spread
     label: Spread relative to MR-1 WT
     node_type: PHENOTYPE
@@ -1479,9 +1560,15 @@ causal_graphs:
   - node_id: double_loss
     label: delta-glfM introduced into delta-maf1
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q8EC71
+    - UniProtKB:Q8EC84
   - node_id: slow_band
     label: Residual slow-migrating FlaA/B forms
     node_type: PHENOTYPE
+    grounding:
+    - UniProtKB:Q8ECA5
+    - UniProtKB:Q8ECA6
   edges:
   - edge_id: mr1-glfm-double-deletion-2024-1
     subject: double_loss
@@ -1517,15 +1604,26 @@ causal_graphs:
   - node_id: single_rescue
     label: GlfM expression in delta-glfM
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q8EC84
   - node_id: wt_pattern
     label: WT-like slow-migrating FlaA/B signal
     node_type: PHENOTYPE
+    grounding:
+    - UniProtKB:Q8ECA5
+    - UniProtKB:Q8ECA6
   - node_id: double_rescue
     label: GlfM expression in delta-maf1 delta-glfM
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q8EC84
+    - UniProtKB:Q8EC71
   - node_id: parental_pattern
     label: Residual modification matching delta-maf1
     node_type: PHENOTYPE
+    grounding:
+    - UniProtKB:Q8ECA5
+    - UniProtKB:Q8ECA6
   edges:
   - edge_id: mr1-glfm-rescue-2024-1
     subject: single_rescue
@@ -1578,9 +1676,14 @@ causal_graphs:
   - node_id: variant
     label: GlfM D77A in either tested deletion background
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q8EC84
   - node_id: restored_shift
     label: Mobility rescue relative to matched WT GlfM
     node_type: PHENOTYPE
+    grounding:
+    - UniProtKB:Q8ECA5
+    - UniProtKB:Q8ECA6
   edges:
   - edge_id: mr1-glfm-d77a-2024-1
     subject: variant
@@ -1616,15 +1719,24 @@ causal_graphs:
   - node_id: f24l
     label: GlfM F24L expression in delta-glfM
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q8EC84
   - node_id: shift
     label: WT-like FlaA/B mobility shift
     node_type: PHENOTYPE
+    grounding:
+    - UniProtKB:Q8ECA5
+    - UniProtKB:Q8ECA6
   - node_id: r25k
     label: GlfM R25K expression in delta-glfM
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q8EC84
   - node_id: e80a
     label: GlfM E80A expression in delta-glfM
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q8EC84
   edges:
   - edge_id: mr1-glfm-tolerated-variants-2024-1
     subject: f24l
@@ -1694,12 +1806,22 @@ causal_graphs:
   - node_id: glfm_addition
     label: GlfM with Maf2 and FlaA/B reporter fusions
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q8EC84
+    - UniProtKB:Q8EC85
+    - UniProtKB:Q8ECA5
+    - UniProtKB:Q8ECA6
   - node_id: reporter
     label: LacZ reporter output
     node_type: PHENOTYPE
   - node_id: d77a
     label: GlfM D77A with the same reporter components
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q8EC84
+    - UniProtKB:Q8EC85
+    - UniProtKB:Q8ECA5
+    - UniProtKB:Q8ECA6
   - node_id: wt_reporter
     label: Reporter output relative to WT GlfM
     node_type: PHENOTYPE
@@ -1755,12 +1877,19 @@ causal_graphs:
   - node_id: joint_expression
     label: Maf1 plus FLAG-FlaA in Pse-positive delta-flmG
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q8EC71
+    - UniProtKB:Q8ECA5
   - node_id: s143_adducts
     label: FlaA S143-peptide +359/+375 Da adducts
     node_type: PHENOTYPE
+    grounding:
+    - UniProtKB:Q8ECA5
   - node_id: s105_adducts
     label: S105-containing FlaA peptide +359/+375 Da adducts
     node_type: PHENOTYPE
+    grounding:
+    - UniProtKB:Q8ECA5
   edges:
   - edge_id: mr1-maf1-caulo-reconstitution-2024-1
     subject: joint_expression
@@ -1813,9 +1942,15 @@ causal_graphs:
   - node_id: joint_system
     label: Maf2, GlfM and FLAG-FlaA in Pse-positive delta-flmG
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q8EC85
+    - UniProtKB:Q8EC84
+    - UniProtKB:Q8ECA5
   - node_id: s105_adducts
     label: S105-containing FlaA peptide +359/+375 Da adducts
     node_type: PHENOTYPE
+    grounding:
+    - UniProtKB:Q8ECA5
   edges:
   - edge_id: mr1-maf2-glfm-caulo-reconstitution-2024-1
     subject: joint_system
@@ -1850,9 +1985,14 @@ causal_graphs:
   - node_id: pse_deficient_system
     label: Maf1 plus FLAG-FlaA in delta-neuB
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q8EC71
+    - UniProtKB:Q8ECA5
   - node_id: adduct220
     label: Reported +220 Da adduct on a multi-serine FlaA peptide
     node_type: PHENOTYPE
+    grounding:
+    - UniProtKB:Q8ECA5
   edges:
   - edge_id: mr1-maf1-neub-adduct-2024-1
     subject: pse_deficient_system
@@ -1887,9 +2027,15 @@ causal_graphs:
   - node_id: pse_deficient_system
     label: Maf2, GlfM and FLAG-FlaA in delta-neuB
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q8EC85
+    - UniProtKB:Q8EC84
+    - UniProtKB:Q8ECA5
   - node_id: adduct220
     label: S105-containing FlaA peptide +220 Da adduct
     node_type: PHENOTYPE
+    grounding:
+    - UniProtKB:Q8ECA5
   edges:
   - edge_id: mr1-maf2-glfm-neub-adduct-2024-1
     subject: pse_deficient_system
@@ -1926,9 +2072,16 @@ causal_graphs:
   - node_id: glfm_addition
     label: GlfM added to Maf1/Maf2/FLAG-FlaA in WT Caulobacter
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q8EC84
+    - UniProtKB:Q8EC71
+    - UniProtKB:Q8EC85
+    - UniProtKB:Q8ECA5
   - node_id: retardation
     label: FLAG-FlaA migration retardation
     node_type: PHENOTYPE
+    grounding:
+    - UniProtKB:Q8ECA5
   edges:
   - edge_id: mr1-joint-mafs-caulo-2024-1
     subject: glfm_addition
@@ -1966,21 +2119,33 @@ causal_graphs:
   - node_id: five_sa
     label: FLAG-FlaA with S-to-A set 105/143/171/180/185
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q8ECA5
   - node_id: slow_migration
     label: Migration retardation relative to unmodified-sequence FLAG-FlaA
     node_type: PHENOTYPE
+    grounding:
+    - UniProtKB:Q8ECA5
   - node_id: two_105
     label: FLAG-FlaA with S-to-A set 105/180
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q8ECA5
   - node_id: three_105
     label: FLAG-FlaA with S-to-A set 105/171/180
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q8ECA5
   - node_id: two_143
     label: FLAG-FlaA with S-to-A set 143/185
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q8ECA5
   - node_id: three_143
     label: FLAG-FlaA with S-to-A set 143/171/185
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q8ECA5
   edges:
   - edge_id: mr1-flaa-serine-sets-2024-1
     subject: five_sa
@@ -2090,6 +2255,9 @@ causal_graphs:
   - node_id: slow_band
     label: Slow-migrating native FlaA/B forms
     node_type: PHENOTYPE
+    grounding:
+    - UniProtKB:Q8ECA5
+    - UniProtKB:Q8ECA6
   - node_id: psec_loss
     label: Native delta-pseC
     node_type: PERTURBATION
@@ -2147,6 +2315,9 @@ causal_graphs:
   - node_id: shift
     label: WT-like native FlaA/B mobility shift
     node_type: PHENOTYPE
+    grounding:
+    - UniProtKB:Q8ECA5
+    - UniProtKB:Q8ECA6
   edges:
   - edge_id: mr1-cn32-glfm-rescue-2024-1
     subject: cn32_partner
@@ -2181,9 +2352,14 @@ causal_graphs:
   - node_id: cross_system
     label: CN-32 GlfM with MR-1 Maf2/FlaB in Pse-positive host
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q8EC85
+    - UniProtKB:Q8ECA6
   - node_id: shift
     label: FLAG-FlaB migration retardation
     node_type: PHENOTYPE
+    grounding:
+    - UniProtKB:Q8ECA6
   edges:
   - edge_id: mr1-cn32-glfm-caulo-2024-1
     subject: cross_system
@@ -2218,9 +2394,14 @@ causal_graphs:
   - node_id: joint_system
     label: FLAG-FlaA, Maf1 and donor operon in Ec100
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q8EC71
+    - UniProtKB:Q8ECA5
   - node_id: shift
     label: FLAG-FlaA migration retardation
     node_type: PHENOTYPE
+    grounding:
+    - UniProtKB:Q8ECA5
   edges:
   - edge_id: mr1-maf1-ecoli-reconstitution-2024-1
     subject: joint_system
@@ -2591,5 +2772,14 @@ curation_events:
   outcome: needs_followup
   summary: Retain partial scientific review of PF01973 Kurthia and Irchel cellular contexts.
   history_record: history/records/PF01973/2026-10-15T021738Z-codex-d53a60.yaml
+  event_index: 0
+  llm_assisted: true
+- timestamp: '2026-10-18T02:54:46Z'
+  curator: Antigravity
+  action: EDIT
+  outcome: changed
+  summary: Ground causal graph gene and protein nodes in PF01973 with verified UniProtKB accessions (UniProtKB:Q8EC71,
+    UniProtKB:Q8ECA5, UniProtKB:Q8ECA6, UniProtKB:Q8EC85, UniProtKB:Q8EC84)
+  history_record: history/records/PF01973/2026-10-18T025446Z-antigravity-546c26.yaml
   event_index: 0
   llm_assisted: true

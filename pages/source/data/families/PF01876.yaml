@@ -122,6 +122,8 @@ causal_graphs:
   - node_id: pair-rna-protocol
     label: Reconstitute full Mja RNA with POP5-RPP30 in the pair buffer
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q58539
   - node_id: cleavage-products
     label: Mature-tRNA-sized and 5-prime-leader products
     node_type: STATE
@@ -159,9 +161,13 @@ causal_graphs:
   - node_id: deltas-pair-protocol
     label: Use the deltaS RNA with POP5-RPP30 protocol
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q58539
   - node_id: deltas-min-pair-protocol
     label: Use the112-nt deltaS-Min RNA with POP5-RPP30 protocol
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q58539
   - node_id: cleavage-products
     label: Pre-tRNATyr cleavage products in the corresponding assay
     node_type: STATE
@@ -215,9 +221,13 @@ causal_graphs:
   - node_id: pair-protocol
     label: Use the RNA plus POP5-RPP30 protocol
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q8TZS0
   - node_id: four-protein-protocol
     label: Use the RNA plus all-four-protein protocol
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q8TZS0
   - node_id: correct-fraction
     label: Correctly cleaved fraction among products
     node_type: STATE
@@ -270,9 +280,13 @@ causal_graphs:
   - node_id: pair-protocol
     label: Use the cis-RNA plus POP5-RPP30 protocol
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q58539
   - node_id: four-protein-protocol
     label: Use the cis-RNA plus all-four-protein protocol
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q58539
   - node_id: fitted-kobs
     label: Fitted overall cis-cleavage kobs
     node_type: PROCESS
@@ -364,6 +378,8 @@ causal_graphs:
   - node_id: protein-complex
     label: Use POP5-RPP30 complex instead of POP5 alone
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:O59543
   - node_id: fitted-kd
     label: Fitted Ta-SL3 dissociation constant
     node_type: STATE
@@ -402,6 +418,8 @@ causal_graphs:
   - node_id: r107a
     label: Replace WT Rpp30 with R107A
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:O59543
   - node_id: turnover
     label: Reported reconstituted-complex kcat
     node_type: PROCESS
@@ -439,6 +457,8 @@ causal_graphs:
   - node_id: increase-pair-dose
     label: Increase the jointly supplied POP5-RPP30 dose
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:O59543
   - node_id: cleavage-fraction
     label: Pre-tRNATyr cleavage fraction after15 minutes
     node_type: STATE
@@ -475,9 +495,13 @@ causal_graphs:
   - node_id: rpp1-disruption
     label: Inherit the rpp1::LEU2 disruption without complementation
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:P38786
   - node_id: tagged-complement
     label: Retain low-copy three-myc-RPP1 in the disrupted haploid
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:P38786
   - node_id: haploid-outgrowth
     label: Viable haploid colony outgrowth
     node_type: PHENOTYPE
@@ -532,6 +556,8 @@ causal_graphs:
   - node_id: repress-rpp1
     label: Repress the GAL-driven RPP1 copy in glucose
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:P38786
   - node_id: growth
     label: OD600 growth trajectory after12-16 hours
     node_type: PHENOTYPE
@@ -569,6 +595,8 @@ causal_graphs:
   - node_id: repress-rpp1
     label: Repress GAL-driven RPP1 in glucose
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:P38786
   - node_id: unprocessed-ends
     label: End-unprocessed pre-tRNALeu3 species
     node_type: STATE
@@ -626,6 +654,8 @@ causal_graphs:
   - node_id: repress-rpp1
     label: Repress GAL-driven RPP1 in glucose
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:P38786
   - node_id: mature-rpr1
     label: Mature RPR1 Northern signal relative to U6
     node_type: STATE
@@ -680,6 +710,8 @@ causal_graphs:
   - node_id: repress-rpp1
     label: Repress GAL-driven RPP1 in glucose
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:P38786
   - node_id: long-short-ratio
     label: Long-to-short5.8S RNA ratio
     node_type: STATE
@@ -736,6 +768,8 @@ causal_graphs:
   - node_id: tagged-ip
     label: Use tagged-Rpp1 immunoprecipitate instead of untagged control beads
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:P38786
   - node_id: cleavage-products
     label: Mature-tRNA-sized and5-prime-leader products
     node_type: STATE
@@ -772,6 +806,8 @@ causal_graphs:
   - node_id: tagged-ip
     label: Use tagged-Rpp1 mixed-RNP immunoprecipitate
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:P38786
   - node_id: its141-products
     label: ITS141 products near the expected A3-region size
     node_type: STATE
@@ -808,5 +844,14 @@ curation_events:
   outcome: needs_followup
   summary: Review Rpp30 causal assay scope and retained evidence
   history_record: history/records/PF01876/2026-10-11T191026Z-codex-69d217.yaml
+  event_index: 0
+  llm_assisted: true
+- timestamp: '2026-10-18T02:54:46Z'
+  curator: Antigravity
+  action: EDIT
+  outcome: changed
+  summary: Ground causal graph gene and protein nodes in PF01876 with verified UniProtKB accessions (UniProtKB:Q58539,
+    UniProtKB:Q8TZS0, UniProtKB:O59543, UniProtKB:P38786)
+  history_record: history/records/PF01876/2026-10-18T025446Z-antigravity-df0d46.yaml
   event_index: 0
   llm_assisted: true

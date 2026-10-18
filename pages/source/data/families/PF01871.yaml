@@ -196,6 +196,8 @@ causal_graphs:
   - node_id: e3i3-morpholino
     label: Inject E3I3 morpholino4.2 ng
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q6PH60
   - node_id: heart-rate
     label: Heart beats per minute at3 dpf
     node_type: PHENOTYPE
@@ -233,6 +235,8 @@ causal_graphs:
   - node_id: e1i1-morpholino
     label: Inject E1I1 morpholino8.4 ng as labeled in final Figure4B
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q6PH60
   - node_id: heart-rate
     label: Heart beats per minute at3 dpf
     node_type: PHENOTYPE
@@ -272,6 +276,9 @@ causal_graphs:
   - node_id: human-mrna-with-i2e3
     label: Add human AMMECR1 mRNA200 pg to I2E3 morpholino1.26 ng
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q6PH60
+    - UniProtKB:Q9Y4X0
   - node_id: curved-tail-length
     label: Otic-vesicle-to-tail-end distance along curvature
     node_type: PHENOTYPE
@@ -392,5 +399,14 @@ curation_events:
   outcome: needs_followup
   summary: Retain partial same-agent AMMECR1 causal review with construct and biochemical follow-ups
   history_record: history/records/PF01871/2026-10-11T183000Z-codex-383676.yaml
+  event_index: 0
+  llm_assisted: true
+- timestamp: '2026-10-18T02:54:46Z'
+  curator: Antigravity
+  action: EDIT
+  outcome: changed
+  summary: Ground causal graph gene and protein nodes in PF01871 with verified UniProtKB accessions (UniProtKB:Q6PH60,
+    UniProtKB:Q9Y4X0)
+  history_record: history/records/PF01871/2026-10-18T025446Z-antigravity-281743.yaml
   event_index: 0
   llm_assisted: true

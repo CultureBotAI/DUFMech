@@ -1,0 +1,36 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01980
+  path: curation/families/PF01980.yaml
+session:
+  id: 2026-10-18T025446Z-antigravity-8f1638
+  timestamp: '2026-10-18T02:54:46Z'
+  actors:
+  - type: ai_agent
+    name: Antigravity
+    model: Claude Opus 4.6
+    agent_tool: Antigravity
+events:
+- type: EDIT
+  outcome: changed
+  summary: Ground causal graph gene and protein nodes in PF01980 with verified UniProtKB
+    accessions (UniProtKB:P28634)
+  details: 'Reviewed PF01980 causal_graphs and grounded gene/protein PERTURBATION,
+    ACTIVITY, and protein-complex STATE nodes across 5 causal graph(s) using verified
+    UniProtKB accessions from family_mapping:
+
+
+    - `ectrmo-native-trna-deletion-2014`: grounded deletion -> UniProtKB:P28634
+
+    - `ectrmo-complementation-2014`: grounded wt_rescue -> UniProtKB:P28634
+
+    - `ectrmo-residue-perturbations-2014`: grounded q25a -> UniProtKB:P28634; r92a
+    -> UniProtKB:P28634; d125a -> UniProtKB:P28634; k136a -> UniProtKB:P28634; cterm_double
+    -> UniProtKB:P28634
+
+    - `ectrmo-thrl-reporter-wt-background-2014`: grounded deletion -> UniProtKB:P28634
+
+    - `ectrmo-thrl-reporter-tcda-background-2014`: grounded deletion -> UniProtKB:P28634'
+  sections:
+  - causal_graphs

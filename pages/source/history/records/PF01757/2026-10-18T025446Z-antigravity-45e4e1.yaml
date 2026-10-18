@@ -1,0 +1,41 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01757
+  path: curation/families/PF01757.yaml
+session:
+  id: 2026-10-18T025446Z-antigravity-45e4e1
+  timestamp: '2026-10-18T02:54:46Z'
+  actors:
+  - type: ai_agent
+    name: Antigravity
+    model: Claude Opus 4.6
+    agent_tool: Antigravity
+events:
+- type: EDIT
+  outcome: changed
+  summary: Ground causal graph gene and protein nodes in PF01757 with verified UniProtKB
+    accessions (UniProtKB:Q2FV54, UniProtKB:A0A0H2XFE4)
+  details: 'Reviewed PF01757 causal_graphs and grounded gene/protein PERTURBATION,
+    ACTIVITY, and protein-complex STATE nodes across 5 causal graph(s) using verified
+    UniProtKB accessions from family_mapping:
+
+    - `saoata-acetylcoa-glycan-products`: grounded wt-gm-reaction -> UniProtKB:Q2FV54;
+    substitute-s453a-g5 -> UniProtKB:Q2FV54; substitute-s453a-gm -> UniProtKB:Q2FV54;
+    substitute-c-domain-gm -> UniProtKB:Q2FV54
+
+    - `saoata-substitution-assays`: grounded r25a-preparation -> UniProtKB:Q2FV54;
+    r25k-preparation -> UniProtKB:Q2FV54; h36a-preparation -> UniProtKB:Q2FV54; r86a-preparation
+    -> UniProtKB:Q2FV54; y136a-preparation -> UniProtKB:Q2FV54; e154a-preparation
+    -> UniProtKB:Q2FV54; y206a-preparation -> UniProtKB:Q2FV54
+
+    - `usa300-oata-pg-acetylation`: grounded complement-wt -> UniProtKB:A0A0H2XFE4;
+    complement-h36a -> UniProtKB:A0A0H2XFE4; complement-y206a -> UniProtKB:A0A0H2XFE4
+
+    - `usa300-oata-tunicamycin-lysozyme-growth`: grounded delete-oata -> UniProtKB:A0A0H2XFE4;
+    restore-wt-oata -> UniProtKB:A0A0H2XFE4
+
+    - `saoata-proposed-acetyl-relay`: grounded donor-and-unmodified-oata -> UniProtKB:Q2FV54;
+    tyr206-acetylated-oata -> UniProtKB:Q2FV54; ser453-acetylated-oata -> UniProtKB:Q2FV54'
+  sections:
+  - causal_graphs

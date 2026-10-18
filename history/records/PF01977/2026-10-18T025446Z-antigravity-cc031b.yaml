@@ -1,0 +1,97 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01977
+  path: curation/families/PF01977.yaml
+session:
+  id: 2026-10-18T025446Z-antigravity-cc031b
+  timestamp: '2026-10-18T02:54:46Z'
+  actors:
+  - type: ai_agent
+    name: Antigravity
+    model: Claude Opus 4.6
+    agent_tool: Antigravity
+events:
+- type: EDIT
+  outcome: changed
+  summary: Ground causal graph gene and protein nodes in PF01977 with verified UniProtKB
+    accessions (UniProtKB:A2QHE5, UniProtKB:P94405, UniProtKB:C0H3U9, UniProtKB:Q9S4M7,
+    UniProtKB:Q4R102, UniProtKB:Q03034)
+  details: 'Reviewed PF01977 causal_graphs and grounded gene/protein PERTURBATION,
+    ACTIVITY, and protein-complex STATE nodes across 24 causal graph(s) using verified
+    UniProtKB accessions from family_mapping:
+
+
+    - `anfdc-ere-variant-activity-2018`: grounded r173a -> UniProtKB:A2QHE5; r173k
+    -> UniProtKB:A2QHE5; e277d -> UniProtKB:A2QHE5; e277q -> UniProtKB:A2QHE5; e282d
+    -> UniProtKB:A2QHE5; e282q -> UniProtKB:A2QHE5
+
+    - `anfdc-light-inactivation-2018`: grounded wt_light -> UniProtKB:A2QHE5; e277d_light
+    -> UniProtKB:A2QHE5; e282d_light -> UniProtKB:A2QHE5; wt_uv -> UniProtKB:A2QHE5
+
+    - `anfdc-c-terminal-variant-activity-2019`: grounded f437l -> UniProtKB:A2QHE5;
+    l439g -> UniProtKB:A2QHE5
+
+    - `bsvdccd-substrate-products-2021`: grounded phb_mix -> UniProtKB:P94405, UniProtKB:C0H3U9;
+    van_mix -> UniProtKB:P94405, UniProtKB:C0H3U9; proto_mix -> UniProtKB:P94405,
+    UniProtKB:C0H3U9; methyl_mix -> UniProtKB:P94405, UniProtKB:C0H3U9; gallic_mix
+    -> UniProtKB:P94405, UniProtKB:C0H3U9; syr_mix -> UniProtKB:P94405, UniProtKB:C0H3U9
+
+    - `bsvdccd-cognate-partner-2021`: grounded add_d -> UniProtKB:P94405, UniProtKB:C0H3U9
+
+    - `shvdc-bsd-cross-partner-products-2021`: grounded phb_mix -> UniProtKB:Q9S4M7,
+    UniProtKB:C0H3U9; van_mix -> UniProtKB:Q9S4M7, UniProtKB:C0H3U9; proto_mix ->
+    UniProtKB:Q9S4M7, UniProtKB:C0H3U9; methyl_mix -> UniProtKB:Q9S4M7, UniProtKB:C0H3U9
+
+    - `bsvdc-shd-cross-partner-products-2021`: grounded phb_mix -> UniProtKB:P94405,
+    UniProtKB:Q4R102; van_mix -> UniProtKB:P94405, UniProtKB:Q4R102; methyl_mix ->
+    UniProtKB:P94405, UniProtKB:Q4R102
+
+    - `shvdccd-partner-stoichiometry-2021`: grounded excess_d -> UniProtKB:Q9S4M7,
+    UniProtKB:Q4R102
+
+    - `shvdccd-air-exposure-cofactor-rescue-2021`: grounded air_time -> UniProtKB:Q9S4M7,
+    UniProtKB:Q4R102
+
+    - `shvdccd-partner-tail-deletion-2021`: grounded tail_deletion -> UniProtKB:Q9S4M7,
+    UniProtKB:Q4R102
+
+    - `shvdccd-l182v-syringate-2021`: grounded l182v -> UniProtKB:Q9S4M7
+
+    - `shvdccd-domain-closure-model-2021`: grounded closure_int2 -> UniProtKB:Q9S4M7;
+    strained_int2 -> UniProtKB:Q9S4M7
+
+    - `shvdccd-partner-allostery-model-2021`: grounded partner_interface -> UniProtKB:Q9S4M7,
+    UniProtKB:Q4R102; competent_loops -> UniProtKB:Q9S4M7
+
+    - `scfdc-cinnamate-decarboxylation-2015`: grounded reaction -> UniProtKB:Q03034
+
+    - `scfdc-dialysis-lysate-rescue-2015`: grounded dialysis -> UniProtKB:Q03034;
+    fresh_donor -> UniProtKB:Q03034; dialyzed_donor -> UniProtKB:Q03034
+
+    - `scfdc-host-and-direct-rescue-2015`: grounded delta_host -> UniProtKB:Q03034
+
+    - `scfdc-membrane-separated-activation-2015`: grounded wt_donor -> UniProtKB:Q03034;
+    tpad_donor -> UniProtKB:Q03034; joint_donor -> UniProtKB:Q03034
+
+    - `scfdc-coexpression-construct-effect-2015`: grounded preparation_change -> UniProtKB:Q03034
+
+    - `scfdc-three-substrate-uv-assays-2015`: grounded cinnamate_assay -> UniProtKB:Q03034;
+    ferulate_assay -> UniProtKB:Q03034; coumarate_assay -> UniProtKB:Q03034
+
+    - `scfdc-extracted-fraction-rescue-2015`: grounded fraction_addition -> UniProtKB:Q03034
+
+    - `scfdc-activating-fraction-acid-base-treatment-2015`: grounded acid -> UniProtKB:Q03034;
+    base -> UniProtKB:Q03034
+
+    - `scfdc-fresh-cell-supplementation-2019`: grounded addition_1b -> UniProtKB:Q03034;
+    addition_1e -> UniProtKB:Q03034; addition_1h -> UniProtKB:Q03034; addition_1i
+    -> UniProtKB:Q03034; addition_1j -> UniProtKB:Q03034; addition_1q -> UniProtKB:Q03034;
+    addition_1s -> UniProtKB:Q03034; addition_1t -> UniProtKB:Q03034; addition_1u
+    -> UniProtKB:Q03034
+
+    - `scfdc-cell-density-2019`: grounded od2 -> UniProtKB:Q03034; od3 -> UniProtKB:Q03034
+
+    - `scfdc-temperature-endpoint-2019`: grounded temperature -> UniProtKB:Q03034'
+  sections:
+  - causal_graphs

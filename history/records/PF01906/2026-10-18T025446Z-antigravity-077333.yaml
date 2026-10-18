@@ -1,0 +1,30 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01906
+  path: curation/families/PF01906.yaml
+session:
+  id: 2026-10-18T025446Z-antigravity-077333
+  timestamp: '2026-10-18T02:54:46Z'
+  actors:
+  - type: ai_agent
+    name: Antigravity
+    model: Claude Opus 4.6
+    agent_tool: Antigravity
+events:
+- type: EDIT
+  outcome: changed
+  summary: Ground causal graph gene and protein nodes in PF01906 with verified UniProtKB
+    accessions (UniProtKB:P0A8C1)
+  details: 'Reviewed PF01906 causal_graphs and grounded gene/protein PERTURBATION,
+    ACTIVITY, and protein-complex STATE nodes across 1 causal graph(s) using verified
+    UniProtKB accessions from family_mapping:
+
+    - `ybjq-joint-deletion-relative-growth-2014`: grounded ybjq-caic-joint-loss ->
+    UniProtKB:P0A8C1; ybjq-asnb-joint-loss -> UniProtKB:P0A8C1; ybjq-gsia-joint-loss
+    -> UniProtKB:P0A8C1; ybjq-ycbx-joint-loss -> UniProtKB:P0A8C1; ybjq-yegd-joint-loss
+    -> UniProtKB:P0A8C1; ybjq-ygci-joint-loss -> UniProtKB:P0A8C1; ybjq-csde-joint-loss
+    -> UniProtKB:P0A8C1; ybjq-ygdl-joint-loss -> UniProtKB:P0A8C1; ybjq-yhft-joint-loss
+    -> UniProtKB:P0A8C1; ybjq-idnd-joint-loss -> UniProtKB:P0A8C1'
+  sections:
+  - causal_graphs

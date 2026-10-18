@@ -3,159 +3,295 @@ curation_status: IN_PROGRESS
 curation_history: history/records/PF01938
 discussions:
 - discussion_id: pf01938-native-rna-mechanism
-  prompt: Resolve the native RNA-remodeling steps without relabeling DNA beacons or reporter phenotypes as direct RNA transcription measurements.
+  prompt: Resolve the native RNA-remodeling steps without relabeling DNA beacons or reporter phenotypes
+    as direct RNA transcription measurements.
   kind: CURATION_TODO
   status: OPEN
-  rationale: RNA binding, DNA-beacon fluorescence, reporter growth, mCherry fluorescence and native growth are distinct measurements with unresolved connecting steps.
+  rationale: RNA binding, DNA-beacon fluorescence, reporter growth, mCherry fluorescence and native growth
+    are distinct measurements with unresolved connecting steps.
   evidence:
-  - {reference: 'PMID:31404065', supports: PARTIAL, evidence_source: primary_figures_methods_and_supplement, explanation: 'Figures3C/5A use oligodeoxynucleotides. Figure4 mutant tests are cellular reporters and complementation, not directly measured mutant RNA-unfolding reactions. I33A abundance and host-dependent rescue matter.'}
+  - reference: PMID:31404065
+    supports: PARTIAL
+    evidence_source: primary_figures_methods_and_supplement
+    explanation: Figures3C/5A use oligodeoxynucleotides. Figure4 mutant tests are cellular reporters and
+      complementation, not directly measured mutant RNA-unfolding reactions. I33A abundance and host-dependent
+      rescue matter.
   posed_by: Codex
   posed_date: '2026-10-12'
-  notes: Preserve reference Q6M142 numbering versus tagged constructs, S0001 versus S2 reference identity, repeated D25A primer-table labels, and50/100ug/mL ampicillin discrepancy. RNA-seq and RIP do not independently establish every direct target or feedback edge.
+  notes: Preserve reference Q6M142 numbering versus tagged constructs, S0001 versus S2 reference identity,
+    repeated D25A primer-table labels, and50/100ug/mL ampicillin discrepancy. RNA-seq and RIP do not independently
+    establish every direct target or feedback edge.
 - discussion_id: pf01938-other-members-and-induction
-  prompt: Extend accession-mapped archaeal and multidomain TRAM contexts with their actual induction and domain boundaries.
+  prompt: Extend accession-mapped archaeal and multidomain TRAM contexts with their actual induction and
+    domain boundaries.
   kind: CURATION_TODO
   status: OPEN
-  rationale: MMP0076 does not characterize all35071 proteins and123 architectures; R15 induction dependence must not become an unconditional contradiction.
+  rationale: MMP0076 does not characterize all35071 proteins and123 architectures; R15 induction dependence
+    must not become an unconditional contradiction.
   evidence:
-  - {reference: 'PMID:28878753', supports: PARTIAL, evidence_source: primary_text_and_captions, explanation: 'R15 TRAM3066 supports RL211 growth without IPTG but not after induction. RNase-assisted PP6 loss is not intrinsic TRAM RNase activity.'}
-  - {reference: 'PMID:40325874', supports: PARTIAL, evidence_source: primary_abstract_only, explanation: 'PyTRAM native cold-growth and RNA-chaperone work requires exact mapping and full assay inspection; PYCH_0765 is the separate PyCsp.'}
+  - reference: PMID:28878753
+    supports: PARTIAL
+    evidence_source: primary_text_and_captions
+    explanation: R15 TRAM3066 supports RL211 growth without IPTG but not after induction. RNase-assisted
+      PP6 loss is not intrinsic TRAM RNase activity.
+  - reference: PMID:40325874
+    supports: PARTIAL
+    evidence_source: primary_abstract_only
+    explanation: PyTRAM native cold-growth and RNA-chaperone work requires exact mapping and full assay
+      inspection; PYCH_0765 is the separate PyCsp.
   posed_by: Codex
   posed_date: '2026-10-12'
-  notes: Follow up Ctr3 PMID26769275 and MiaB/RimO/RumA/RlmCD/Trm2/CDKAL1/CDK5RAP1 domain-specific work. One capped500-entry member page is not complete coverage. See evidence/PF01938/coverage.txt.
+  notes: Follow up Ctr3 PMID26769275 and MiaB/RimO/RumA/RlmCD/Trm2/CDKAL1/CDK5RAP1 domain-specific work.
+    One capped500-entry member page is not complete coverage. See evidence/PF01938/coverage.txt.
 causal_graphs:
 - graph_id: tram0076-native-growth-37c-2019
   title: MMP0076 supports native growth at37C
   scope: Li2019 Figure1A; M. maripaludis S0001-derived deletion and complementation strains.
-  context: MMP0076 replaced with pac; pMEV2-0076 rescue and empty-vector controls. Pre-reduced DSMZ141,40mM formate,N2/CO2 80:20 at0.1MPa,37C; triplicate OD600 growth curves.
-  family_mapping: Reference MMP0076 is Q6M142v1,69aa,PF01938 13-67. Assayed host is S0001,not an assumed S2 wild-type culture. Whole stand-alone protein is deleted or expressed,not isolated13-67.
+  context: MMP0076 replaced with pac; pMEV2-0076 rescue and empty-vector controls. Pre-reduced DSMZ141,40mM
+    formate,N2/CO2 80:20 at0.1MPa,37C; triplicate OD600 growth curves.
+  family_mapping: Reference MMP0076 is Q6M142v1,69aa,PF01938 13-67. Assayed host is S0001,not an assumed
+    S2 wild-type culture. Whole stand-alone protein is deleted or expressed,not isolated13-67.
   scope_status: PHENOTYPIC
-  limitations: Growth is a distal phenotype. Adjacent-gene RNA levels are unchanged and complementation supports locus specificity,not every molecular intermediate. The mutant still grows.
+  limitations: Growth is a distal phenotype. Adjacent-gene RNA levels are unchanged and complementation
+    supports locus specificity,not every molecular intermediate. The mutant still grows.
   nodes:
-  - {node_id: deletion, label: MMP0076 deletion instead of parental S0001, node_type: PERTURBATION}
-  - {node_id: rescue, label: WT MMP0076 supplied to deletion strain, node_type: PERTURBATION, grounding: ['UniProtKB:Q6M142']}
-  - {node_id: growth, label: Native exponential growth rate at37C, node_type: PHENOTYPE}
+  - node_id: deletion
+    label: MMP0076 deletion instead of parental S0001
+    node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q6M142
+  - node_id: rescue
+    label: WT MMP0076 supplied to deletion strain
+    node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q6M142
+  - node_id: growth
+    label: Native exponential growth rate at37C
+    node_type: PHENOTYPE
   edges:
   - edge_id: deletion-growth-reduction
     subject: deletion
     predicate: decreases
     object: growth
-    mechanism: The deletion reduces the measured rate from0.15 to0.065h^-1 without establishing which RNA defect mediates the growth effect.
+    mechanism: The deletion reduces the measured rate from0.15 to0.065h^-1 without establishing which
+      RNA defect mediates the growth effect.
     directness: INDIRECT
     support: OBSERVED
     evidence_kind: EXPERIMENTAL
     evidence:
-    - {reference: 'PMID:31404065', source_url: 'https://pmc.ncbi.nlm.nih.gov/articles/PMC6705878/', snippet: Growth of strain, explanation: 'Figure1A and growth/deletion Methods; triplicate cultures and empty-vector controls. Measured growth-rate contrast, not inferred RNA chemistry.', cache_path: evidence/PF01938/li-2019.txt, cache_sha256: 96912ee2641c669680cdfbf4666a500a3b5fe71de582ba72fd85cd63283714e3}
+    - reference: PMID:31404065
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC6705878/
+      snippet: Growth of strain
+      explanation: Figure1A and growth/deletion Methods; triplicate cultures and empty-vector controls.
+        Measured growth-rate contrast, not inferred RNA chemistry.
+      cache_path: evidence/PF01938/li-2019.txt
+      cache_sha256: 96912ee2641c669680cdfbf4666a500a3b5fe71de582ba72fd85cd63283714e3
   - edge_id: complementation-growth-increase
     subject: rescue
     predicate: increases
     object: growth
-    mechanism: Plasmid-borne WT MMP0076 restores growth kinetics toward parental levels compared with the deletion strain control.
+    mechanism: Plasmid-borne WT MMP0076 restores growth kinetics toward parental levels compared with
+      the deletion strain control.
     directness: INDIRECT
     support: OBSERVED
     evidence_kind: EXPERIMENTAL
     evidence:
-    - {reference: 'PMID:31404065', source_url: 'https://pmc.ncbi.nlm.nih.gov/articles/PMC6705878/', snippet: Growth of strain, explanation: 'Figure1A WT complementation curve and Methods; do not confuse this rescue with failure of individual substitutions in Figure4D.', cache_path: evidence/PF01938/li-2019.txt, cache_sha256: 96912ee2641c669680cdfbf4666a500a3b5fe71de582ba72fd85cd63283714e3}
+    - reference: PMID:31404065
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC6705878/
+      snippet: Growth of strain
+      explanation: Figure1A WT complementation curve and Methods; do not confuse this rescue with failure
+        of individual substitutions in Figure4D.
+      cache_path: evidence/PF01938/li-2019.txt
+      cache_sha256: 96912ee2641c669680cdfbf4666a500a3b5fe71de582ba72fd85cd63283714e3
 - graph_id: tram0076-native-growth-22c-2019
   title: MMP0076 deletion slows native growth at22C
   scope: Li2019 Figure1C; parental S0001 versus delta0076.
-  context: Native archaeal OD600 growth curves at22C,triplicate cultures; routine formate-containing DSMZ141 and N2/CO2 gas conditions as described in Methods.
-  family_mapping: MMP0076 maps to Q6M142v1,69aa,PF01938 13-67. Whole-protein deletion in S0001,not a domain-specific knockout or heterologous BX04 rescue.
+  context: Native archaeal OD600 growth curves at22C,triplicate cultures; routine formate-containing DSMZ141
+    and N2/CO2 gas conditions as described in Methods.
+  family_mapping: MMP0076 maps to Q6M142v1,69aa,PF01938 13-67. Whole-protein deletion in S0001,not a domain-specific
+    knockout or heterologous BX04 rescue.
   scope_status: PHENOTYPIC
-  limitations: No22C complementation curve is shown. Lower growth also occurs at37C,so the gene is not demonstrated to act only during cold stress.
+  limitations: No22C complementation curve is shown. Lower growth also occurs at37C,so the gene is not
+    demonstrated to act only during cold stress.
   nodes:
-  - {node_id: deletion, label: MMP0076 deletion instead of parental S0001, node_type: PERTURBATION}
-  - {node_id: growth, label: Native exponential growth rate at22C, node_type: PHENOTYPE}
+  - node_id: deletion
+    label: MMP0076 deletion instead of parental S0001
+    node_type: PERTURBATION
+  - node_id: growth
+    label: Native exponential growth rate at22C
+    node_type: PHENOTYPE
   edges:
   - edge_id: deletion-cool-growth-reduction
     subject: deletion
     predicate: decreases
     object: growth
-    mechanism: Deletion lowers the measured growth rate from0.042 to0.023h^-1 under the tested cool-growth conditions.
+    mechanism: Deletion lowers the measured growth rate from0.042 to0.023h^-1 under the tested cool-growth
+      conditions.
     directness: INDIRECT
     support: OBSERVED
     evidence_kind: EXPERIMENTAL
     evidence:
-    - {reference: 'PMID:31404065', source_url: 'https://pmc.ncbi.nlm.nih.gov/articles/PMC6705878/', snippet: Growth of strain, explanation: 'Figure1C growth comparison; Figure1A rescue is a separate37C context. Distinct cool-growth comparison.', cache_path: evidence/PF01938/li-2019.txt, cache_sha256: 96912ee2641c669680cdfbf4666a500a3b5fe71de582ba72fd85cd63283714e3}
+    - reference: PMID:31404065
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC6705878/
+      snippet: Growth of strain
+      explanation: Figure1C growth comparison; Figure1A rescue is a separate37C context. Distinct cool-growth
+        comparison.
+      cache_path: evidence/PF01938/li-2019.txt
+      cache_sha256: 96912ee2641c669680cdfbf4666a500a3b5fe71de582ba72fd85cd63283714e3
 - graph_id: tram0076-rna-complexes-2019
   title: Purified TRAM0076 forms shifted RNA complexes
   scope: Li2019 Figure3A PP1 and PP10 rEMSA reactions.
-  context: Purified His6-tagged protein and3-prime-biotin RNA,20uL,25C20min. PP1 5nM plus0/25/50uM protein; PP10 10nM plus0/50/100uM protein; free-probe controls.
-  family_mapping: Full Q6M142-reference MMP0076,PF01938 13-67,expressed from pET28a in BL21(DE3)pLysS. Vector-derived termini are not fully sequence-verified; not isolated13-67 or exactly the PDB1YVC construct.
+  context: Purified His6-tagged protein and3-prime-biotin RNA,20uL,25C20min. PP1 5nM plus0/25/50uM protein;
+    PP10 10nM plus0/50/100uM protein; free-probe controls.
+  family_mapping: Full Q6M142-reference MMP0076,PF01938 13-67,expressed from pET28a in BL21(DE3)pLysS.
+    Vector-derived termini are not fully sequence-verified; not isolated13-67 or exactly the PDB1YVC construct.
   scope_status: MECHANISTIC
-  limitations: Complex formation is not activation, cleavage or RNA melting. High protein:RNA ratios and assay-dependent apparent affinities remain explicit; no claim of identical affinity for all possible RNAs.
+  limitations: Complex formation is not activation, cleavage or RNA melting. High protein:RNA ratios and
+    assay-dependent apparent affinities remain explicit; no claim of identical affinity for all possible
+    RNAs.
   nodes:
-  - {node_id: pp1, label: Tagged TRAM0076 added to PP1 RNA, node_type: ACTIVITY, grounding: ['UniProtKB:Q6M142']}
-  - {node_id: pp10, label: Tagged TRAM0076 added to PP10 RNA, node_type: ACTIVITY, grounding: ['UniProtKB:Q6M142']}
-  - {node_id: complex1, label: Shifted PP1 RNA complex, node_type: STATE}
-  - {node_id: complex10, label: Shifted PP10 RNA complex, node_type: STATE}
+  - node_id: pp1
+    label: Tagged TRAM0076 added to PP1 RNA
+    node_type: ACTIVITY
+    grounding:
+    - UniProtKB:Q6M142
+  - node_id: pp10
+    label: Tagged TRAM0076 added to PP10 RNA
+    node_type: ACTIVITY
+    grounding:
+    - UniProtKB:Q6M142
+  - node_id: complex1
+    label: Shifted PP1 RNA complex
+    node_type: STATE
+  - node_id: complex10
+    label: Shifted PP10 RNA complex
+    node_type: STATE
   edges:
   - edge_id: pp1-complex-formation
     subject: pp1
     predicate: produces
     object: complex1
-    mechanism: Protein addition produces a slower-migrating PP1 complex compared with free RNA under the defined binding conditions.
+    mechanism: Protein addition produces a slower-migrating PP1 complex compared with free RNA under the
+      defined binding conditions.
     directness: DIRECT
     support: OBSERVED
     evidence_kind: EXPERIMENTAL
     evidence:
-    - {reference: 'PMID:31404065', source_url: 'https://pmc.ncbi.nlm.nih.gov/articles/PMC6705878/', snippet: RNA binding, explanation: 'Figure3A PP1 lanes and rEMSA Methods; molecular binding observation,not a downstream causal activation inferred from association.', cache_path: evidence/PF01938/li-2019.txt, cache_sha256: 96912ee2641c669680cdfbf4666a500a3b5fe71de582ba72fd85cd63283714e3}
+    - reference: PMID:31404065
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC6705878/
+      snippet: RNA binding
+      explanation: Figure3A PP1 lanes and rEMSA Methods; molecular binding observation,not a downstream
+        causal activation inferred from association.
+      cache_path: evidence/PF01938/li-2019.txt
+      cache_sha256: 96912ee2641c669680cdfbf4666a500a3b5fe71de582ba72fd85cd63283714e3
   - edge_id: pp10-complex-formation
     subject: pp10
     predicate: produces
     object: complex10
-    mechanism: Protein addition produces a slower-migrating PP10 complex compared with its free-probe control.
+    mechanism: Protein addition produces a slower-migrating PP10 complex compared with its free-probe
+      control.
     directness: DIRECT
     support: OBSERVED
     evidence_kind: EXPERIMENTAL
     evidence:
-    - {reference: 'PMID:31404065', source_url: 'https://pmc.ncbi.nlm.nih.gov/articles/PMC6705878/', snippet: RNA binding, explanation: 'Figure3A PP10 lanes with matched10nM RNA and50/100uM protein; distinct from PP1 concentrations.', cache_path: evidence/PF01938/li-2019.txt, cache_sha256: 96912ee2641c669680cdfbf4666a500a3b5fe71de582ba72fd85cd63283714e3}
+    - reference: PMID:31404065
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC6705878/
+      snippet: RNA binding
+      explanation: Figure3A PP10 lanes with matched10nM RNA and50/100uM protein; distinct from PP1 concentrations.
+      cache_path: evidence/PF01938/li-2019.txt
+      cache_sha256: 96912ee2641c669680cdfbf4666a500a3b5fe71de582ba72fd85cd63283714e3
 - graph_id: tram0076-dna-duplex-beacon-2019
   title: TRAM0076 increases DNA-duplex beacon fluorescence
   scope: Li2019 Figure3C; purified WT protein and partially complementary DNA oligos.
-  context: FITC/BHQ1 oligos annealed after95C5min and cooling to4C;20pmol substrate,20uM protein,200uL,200mM Tris-Cl pH7.5,10mM MgCl2,room temperature;460/515nm readout.
-  family_mapping: His6-tagged full MMP0076 preparation,reference Q6M142v1 PF01938 13-67. Purified construct termini are not completely sequence-verified; not an isolated domain or a mutant assay.
+  context: FITC/BHQ1 oligos annealed after95C5min and cooling to4C;20pmol substrate,20uM protein,200uL,200mM
+    Tris-Cl pH7.5,10mM MgCl2,room temperature;460/515nm readout.
+  family_mapping: His6-tagged full MMP0076 preparation,reference Q6M142v1 PF01938 13-67. Purified construct
+    termini are not completely sequence-verified; not an isolated domain or a mutant assay.
   scope_status: MECHANISTIC
-  limitations: Substrates are DNA,not RNA. Fluorescence supports duplex-opening activity under this assay but does not directly resolve native RNA melting,ATP-dependent helicase chemistry or every dye-binding alternative.
+  limitations: Substrates are DNA,not RNA. Fluorescence supports duplex-opening activity under this assay
+    but does not directly resolve native RNA melting,ATP-dependent helicase chemistry or every dye-binding
+    alternative.
   nodes:
-  - {node_id: reaction, label: WT TRAM0076 added to annealed DNA beacon, node_type: ACTIVITY, grounding: ['UniProtKB:Q6M142']}
-  - {node_id: fluorescence, label: Relative FITC beacon fluorescence, node_type: STATE}
+  - node_id: reaction
+    label: WT TRAM0076 added to annealed DNA beacon
+    node_type: ACTIVITY
+    grounding:
+    - UniProtKB:Q6M142
+  - node_id: fluorescence
+    label: Relative FITC beacon fluorescence
+    node_type: STATE
   edges:
   - edge_id: dna-beacon-fluorescence-increase
     subject: reaction
     predicate: increases
     object: fluorescence
-    mechanism: Purified protein addition raises fluorescence from the13% annealed baseline to about54% of heat-denatured signal,consistent with relief of duplex-associated quenching.
+    mechanism: Purified protein addition raises fluorescence from the13% annealed baseline to about54%
+      of heat-denatured signal,consistent with relief of duplex-associated quenching.
     directness: DIRECT
     support: OBSERVED
     evidence_kind: EXPERIMENTAL
     evidence:
-    - {reference: 'PMID:31404065', source_url: 'https://pmc.ncbi.nlm.nih.gov/articles/PMC6705878/', snippet: two partially complementary oligodeoxynucleotides, explanation: 'Figure3C and nucleic-acid unfolding Methods explicitly establish DNA chemistry; CspA/CspE and annealed/denatured controls.', cache_path: evidence/PF01938/li-2019.txt, cache_sha256: 96912ee2641c669680cdfbf4666a500a3b5fe71de582ba72fd85cd63283714e3}
+    - reference: PMID:31404065
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC6705878/
+      snippet: two partially complementary oligodeoxynucleotides
+      explanation: Figure3C and nucleic-acid unfolding Methods explicitly establish DNA chemistry; CspA/CspE
+        and annealed/denatured controls.
+      cache_path: evidence/PF01938/li-2019.txt
+      cache_sha256: 96912ee2641c669680cdfbf4666a500a3b5fe71de582ba72fd85cd63283714e3
 - graph_id: tram0076-utr-dna-beacons-2019
   title: TRAM0076 increases UTR-sequence DNA-beacon signals
   scope: Li2019 Figure5A; DNA versions of three transcript leaders.
-  context: FITC/BHQ1-labeled MMP0127,1515,1697 leader-sequence DNA oligos;20pmol substrate,20uM tagged protein,200uL,200mM Tris-Cl pH7.5,10mM MgCl2,room temperature,460/515nm,annealed and Csp controls.
-  family_mapping: Full tagged MMP0076,reference Q6M142v1,PF01938 13-67. The UTR gene identifiers specify substrate sequences,not additional TRAM family members.
+  context: FITC/BHQ1-labeled MMP0127,1515,1697 leader-sequence DNA oligos;20pmol substrate,20uM tagged
+    protein,200uL,200mM Tris-Cl pH7.5,10mM MgCl2,room temperature,460/515nm,annealed and Csp controls.
+  family_mapping: Full tagged MMP0076,reference Q6M142v1,PF01938 13-67. The UTR gene identifiers specify
+    substrate sequences,not additional TRAM family members.
   scope_status: MECHANISTIC
-  limitations: These are oligodeoxynucleotides despite RNA-oriented Results wording and predicted RNA diagrams. Fluorescence is a direct assay effect,not direct visualization of native transcript folding or transcription.
+  limitations: These are oligodeoxynucleotides despite RNA-oriented Results wording and predicted RNA
+    diagrams. Fluorescence is a direct assay effect,not direct visualization of native transcript folding
+    or transcription.
   nodes:
-  - {node_id: dna0127, label: WT TRAM0076 plus annealed UTR0127 DNA beacon, node_type: ACTIVITY}
-  - {node_id: dna1515, label: WT TRAM0076 plus annealed UTR1515 DNA beacon, node_type: ACTIVITY}
-  - {node_id: dna1697, label: WT TRAM0076 plus annealed UTR1697 DNA beacon, node_type: ACTIVITY}
-  - {node_id: signal0127, label: UTR0127 DNA-beacon fluorescence, node_type: STATE}
-  - {node_id: signal1515, label: UTR1515 DNA-beacon fluorescence, node_type: STATE}
-  - {node_id: signal1697, label: UTR1697 DNA-beacon fluorescence, node_type: STATE}
+  - node_id: dna0127
+    label: WT TRAM0076 plus annealed UTR0127 DNA beacon
+    node_type: ACTIVITY
+    grounding:
+    - UniProtKB:Q6M142
+  - node_id: dna1515
+    label: WT TRAM0076 plus annealed UTR1515 DNA beacon
+    node_type: ACTIVITY
+    grounding:
+    - UniProtKB:Q6M142
+  - node_id: dna1697
+    label: WT TRAM0076 plus annealed UTR1697 DNA beacon
+    node_type: ACTIVITY
+    grounding:
+    - UniProtKB:Q6M142
+  - node_id: signal0127
+    label: UTR0127 DNA-beacon fluorescence
+    node_type: STATE
+  - node_id: signal1515
+    label: UTR1515 DNA-beacon fluorescence
+    node_type: STATE
+  - node_id: signal1697
+    label: UTR1697 DNA-beacon fluorescence
+    node_type: STATE
   edges:
   - edge_id: utr0127-beacon-increase
     subject: dna0127
     predicate: increases
     object: signal0127
-    mechanism: WT protein raises the0127 DNA-beacon signal relative to its annealed control,consistent with reduced quenching.
+    mechanism: WT protein raises the0127 DNA-beacon signal relative to its annealed control,consistent
+      with reduced quenching.
     directness: DIRECT
     support: OBSERVED
     evidence_kind: EXPERIMENTAL
     evidence:
-    - {reference: 'PMID:31404065', source_url: 'https://pmc.ncbi.nlm.nih.gov/articles/PMC6705878/', snippet: two partially complementary oligodeoxynucleotides, explanation: 'Figure5A UTR0127 and the Methods paragraph specifying three leader oligodeoxynucleotides; not RNA melting measured directly.', cache_path: evidence/PF01938/li-2019.txt, cache_sha256: 96912ee2641c669680cdfbf4666a500a3b5fe71de582ba72fd85cd63283714e3}
+    - reference: PMID:31404065
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC6705878/
+      snippet: two partially complementary oligodeoxynucleotides
+      explanation: Figure5A UTR0127 and the Methods paragraph specifying three leader oligodeoxynucleotides;
+        not RNA melting measured directly.
+      cache_path: evidence/PF01938/li-2019.txt
+      cache_sha256: 96912ee2641c669680cdfbf4666a500a3b5fe71de582ba72fd85cd63283714e3
   - edge_id: utr1515-beacon-increase
     subject: dna1515
     predicate: increases
@@ -165,56 +301,106 @@ causal_graphs:
     support: OBSERVED
     evidence_kind: EXPERIMENTAL
     evidence:
-    - {reference: 'PMID:31404065', source_url: 'https://pmc.ncbi.nlm.nih.gov/articles/PMC6705878/', snippet: two partially complementary oligodeoxynucleotides, explanation: 'Figure5A UTR1515 and nucleic-acid unfolding Methods; not the cellular UTR1515MT reporter experiment.', cache_path: evidence/PF01938/li-2019.txt, cache_sha256: 96912ee2641c669680cdfbf4666a500a3b5fe71de582ba72fd85cd63283714e3}
+    - reference: PMID:31404065
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC6705878/
+      snippet: two partially complementary oligodeoxynucleotides
+      explanation: Figure5A UTR1515 and nucleic-acid unfolding Methods; not the cellular UTR1515MT reporter
+        experiment.
+      cache_path: evidence/PF01938/li-2019.txt
+      cache_sha256: 96912ee2641c669680cdfbf4666a500a3b5fe71de582ba72fd85cd63283714e3
   - edge_id: utr1697-beacon-increase
     subject: dna1697
     predicate: increases
     object: signal1697
-    mechanism: WT protein raises the1697 DNA-beacon signal relative to its annealed control; activity is not assumed identical to the other leaders.
+    mechanism: WT protein raises the1697 DNA-beacon signal relative to its annealed control; activity
+      is not assumed identical to the other leaders.
     directness: DIRECT
     support: OBSERVED
     evidence_kind: EXPERIMENTAL
     evidence:
-    - {reference: 'PMID:31404065', source_url: 'https://pmc.ncbi.nlm.nih.gov/articles/PMC6705878/', snippet: two partially complementary oligodeoxynucleotides, explanation: 'Figure5A UTR1697; retain the distinct substrate and lower signal rather than a universal quantitative effect.', cache_path: evidence/PF01938/li-2019.txt, cache_sha256: 96912ee2641c669680cdfbf4666a500a3b5fe71de582ba72fd85cd63283714e3}
+    - reference: PMID:31404065
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC6705878/
+      snippet: two partially complementary oligodeoxynucleotides
+      explanation: Figure5A UTR1697; retain the distinct substrate and lower signal rather than a universal
+        quantitative effect.
+      cache_path: evidence/PF01938/li-2019.txt
+      cache_sha256: 96912ee2641c669680cdfbf4666a500a3b5fe71de582ba72fd85cd63283714e3
 - graph_id: tram0076-rl211-reporter-2019
   title: TRAM0076 expression and variants alter RL211 reporter growth
   scope: Li2019 Figures3B and4C; E. coli RL211 trpL-cat reporter.
-  context: pINIII constructs,1mM IPTG,30ug/mL chloramphenicol,37C2-3days,matched minus-Cm growth controls. Figure3 caption gives50ug/mL ampicillin; Methods gives100ug/mL.
-  family_mapping: MMP0076 Q6M142v1,PF01938 13-67; I33,R35,F39,F42,K62,F63,F65 all lie in the match and are separately changed to alanine. Host is E. coli; protein origin is M. maripaludis.
+  context: pINIII constructs,1mM IPTG,30ug/mL chloramphenicol,37C2-3days,matched minus-Cm growth controls.
+    Figure3 caption gives50ug/mL ampicillin; Methods gives100ug/mL.
+  family_mapping: MMP0076 Q6M142v1,PF01938 13-67; I33,R35,F39,F42,K62,F63,F65 all lie in the match and
+    are separately changed to alanine. Host is E. coli; protein origin is M. maripaludis.
   taxon: NCBITaxon:562
   scope_status: PHENOTYPIC
-  limitations: Reporter growth supports an antitermination interpretation without directly measuring the RNA hairpin. I33A abundance is reduced; folding/abundance effects are not excluded for every mutant. D25A,K28A,G30A,G32A retain activity. Induced TRAM3066 is a different protein and condition-specific negative.
+  limitations: Reporter growth supports an antitermination interpretation without directly measuring the
+    RNA hairpin. I33A abundance is reduced; folding/abundance effects are not excluded for every mutant.
+    D25A,K28A,G30A,G32A retain activity. Induced TRAM3066 is a different protein and condition-specific
+    negative.
   nodes:
-  - {node_id: wt, label: WT TRAM0076 instead of empty pINIII, node_type: PERTURBATION}
-  - {node_id: i33a, label: I33A instead of WT TRAM0076, node_type: PERTURBATION}
-  - {node_id: r35a, label: R35A instead of WT TRAM0076, node_type: PERTURBATION}
-  - {node_id: f39a, label: F39A instead of WT TRAM0076, node_type: PERTURBATION}
-  - {node_id: f42a, label: F42A instead of WT TRAM0076, node_type: PERTURBATION}
-  - {node_id: k62a, label: K62A instead of WT TRAM0076, node_type: PERTURBATION}
-  - {node_id: f63a, label: F63A instead of WT TRAM0076, node_type: PERTURBATION}
-  - {node_id: f65a, label: F65A instead of WT TRAM0076, node_type: PERTURBATION}
-  - {node_id: growth, label: Growth of induced RL211 on chloramphenicol, node_type: PHENOTYPE}
+  - node_id: wt
+    label: WT TRAM0076 instead of empty pINIII
+    node_type: PERTURBATION
+  - node_id: i33a
+    label: I33A instead of WT TRAM0076
+    node_type: PERTURBATION
+  - node_id: r35a
+    label: R35A instead of WT TRAM0076
+    node_type: PERTURBATION
+  - node_id: f39a
+    label: F39A instead of WT TRAM0076
+    node_type: PERTURBATION
+  - node_id: f42a
+    label: F42A instead of WT TRAM0076
+    node_type: PERTURBATION
+  - node_id: k62a
+    label: K62A instead of WT TRAM0076
+    node_type: PERTURBATION
+  - node_id: f63a
+    label: F63A instead of WT TRAM0076
+    node_type: PERTURBATION
+  - node_id: f65a
+    label: F65A instead of WT TRAM0076
+    node_type: PERTURBATION
+  - node_id: growth
+    label: Growth of induced RL211 on chloramphenicol
+    node_type: PHENOTYPE
   edges:
   - edge_id: wt-reporter-growth-increase
     subject: wt
     predicate: increases
     object: growth
-    mechanism: Expressed WT TRAM0076 improves growth on chloramphenicol compared with empty vector in the terminator-linked reporter strain.
+    mechanism: Expressed WT TRAM0076 improves growth on chloramphenicol compared with empty vector in
+      the terminator-linked reporter strain.
     directness: UNRESOLVED
     support: OBSERVED
     evidence_kind: EXPERIMENTAL
     evidence:
-    - {reference: 'PMID:31404065', source_url: 'https://pmc.ncbi.nlm.nih.gov/articles/PMC6705878/', snippet: chloramphenicol resistance, explanation: 'Figure3B WT versus pINIII and Figure4C controls; reporter observation is not a purified RNA reaction.', cache_path: evidence/PF01938/li-2019.txt, cache_sha256: 96912ee2641c669680cdfbf4666a500a3b5fe71de582ba72fd85cd63283714e3}
+    - reference: PMID:31404065
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC6705878/
+      snippet: chloramphenicol resistance
+      explanation: Figure3B WT versus pINIII and Figure4C controls; reporter observation is not a purified
+        RNA reaction.
+      cache_path: evidence/PF01938/li-2019.txt
+      cache_sha256: 96912ee2641c669680cdfbf4666a500a3b5fe71de582ba72fd85cd63283714e3
   - edge_id: i33a-reporter-growth-reduction
     subject: i33a
     predicate: decreases
     object: growth
-    mechanism: I33A lowers +Cm reporter growth relative to WT; reduced protein abundance is a material alternative to a specific catalytic defect.
+    mechanism: I33A lowers +Cm reporter growth relative to WT; reduced protein abundance is a material
+      alternative to a specific catalytic defect.
     directness: UNRESOLVED
     support: OBSERVED
     evidence_kind: EXPERIMENTAL
     evidence:
-    - {reference: 'PMID:31404065', source_url: 'https://pmc.ncbi.nlm.nih.gov/articles/PMC6705878/', snippet: chloramphenicol resistance, explanation: 'Figure4C I33A and Results abundance qualification; I33A does rescue native growth and is not included among failed native variants.', cache_path: evidence/PF01938/li-2019.txt, cache_sha256: 96912ee2641c669680cdfbf4666a500a3b5fe71de582ba72fd85cd63283714e3}
+    - reference: PMID:31404065
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC6705878/
+      snippet: chloramphenicol resistance
+      explanation: Figure4C I33A and Results abundance qualification; I33A does rescue native growth and
+        is not included among failed native variants.
+      cache_path: evidence/PF01938/li-2019.txt
+      cache_sha256: 96912ee2641c669680cdfbf4666a500a3b5fe71de582ba72fd85cd63283714e3
   - edge_id: r35a-reporter-growth-reduction
     subject: r35a
     predicate: decreases
@@ -224,7 +410,12 @@ causal_graphs:
     support: OBSERVED
     evidence_kind: EXPERIMENTAL
     evidence:
-    - {reference: 'PMID:31404065', source_url: 'https://pmc.ncbi.nlm.nih.gov/articles/PMC6705878/', snippet: chloramphenicol resistance, explanation: 'Figure4C R35A,+Cm versus WT with -Cm control; no direct-mutant beacon result asserted.', cache_path: evidence/PF01938/li-2019.txt, cache_sha256: 96912ee2641c669680cdfbf4666a500a3b5fe71de582ba72fd85cd63283714e3}
+    - reference: PMID:31404065
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC6705878/
+      snippet: chloramphenicol resistance
+      explanation: Figure4C R35A,+Cm versus WT with -Cm control; no direct-mutant beacon result asserted.
+      cache_path: evidence/PF01938/li-2019.txt
+      cache_sha256: 96912ee2641c669680cdfbf4666a500a3b5fe71de582ba72fd85cd63283714e3
   - edge_id: f39a-reporter-growth-reduction
     subject: f39a
     predicate: decreases
@@ -234,7 +425,12 @@ causal_graphs:
     support: OBSERVED
     evidence_kind: EXPERIMENTAL
     evidence:
-    - {reference: 'PMID:31404065', source_url: 'https://pmc.ncbi.nlm.nih.gov/articles/PMC6705878/', snippet: chloramphenicol resistance, explanation: 'Figure4C F39A with matched -Cm viability control.', cache_path: evidence/PF01938/li-2019.txt, cache_sha256: 96912ee2641c669680cdfbf4666a500a3b5fe71de582ba72fd85cd63283714e3}
+    - reference: PMID:31404065
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC6705878/
+      snippet: chloramphenicol resistance
+      explanation: Figure4C F39A with matched -Cm viability control.
+      cache_path: evidence/PF01938/li-2019.txt
+      cache_sha256: 96912ee2641c669680cdfbf4666a500a3b5fe71de582ba72fd85cd63283714e3
   - edge_id: f42a-reporter-growth-reduction
     subject: f42a
     predicate: decreases
@@ -244,17 +440,28 @@ causal_graphs:
     support: OBSERVED
     evidence_kind: EXPERIMENTAL
     evidence:
-    - {reference: 'PMID:31404065', source_url: 'https://pmc.ncbi.nlm.nih.gov/articles/PMC6705878/', snippet: chloramphenicol resistance, explanation: 'Figure4C F42A with matched -Cm viability control.', cache_path: evidence/PF01938/li-2019.txt, cache_sha256: 96912ee2641c669680cdfbf4666a500a3b5fe71de582ba72fd85cd63283714e3}
+    - reference: PMID:31404065
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC6705878/
+      snippet: chloramphenicol resistance
+      explanation: Figure4C F42A with matched -Cm viability control.
+      cache_path: evidence/PF01938/li-2019.txt
+      cache_sha256: 96912ee2641c669680cdfbf4666a500a3b5fe71de582ba72fd85cd63283714e3
   - edge_id: k62a-reporter-growth-reduction
     subject: k62a
     predicate: decreases
     object: growth
-    mechanism: Individual K62A replacement reduces induced +Cm reporter growth relative to WT; it is not fully inactive in the separate native-growth assay.
+    mechanism: Individual K62A replacement reduces induced +Cm reporter growth relative to WT; it is not
+      fully inactive in the separate native-growth assay.
     directness: UNRESOLVED
     support: OBSERVED
     evidence_kind: EXPERIMENTAL
     evidence:
-    - {reference: 'PMID:31404065', source_url: 'https://pmc.ncbi.nlm.nih.gov/articles/PMC6705878/', snippet: chloramphenicol resistance, explanation: 'Figure4C K62A; native partial rescue in4D is retained separately.', cache_path: evidence/PF01938/li-2019.txt, cache_sha256: 96912ee2641c669680cdfbf4666a500a3b5fe71de582ba72fd85cd63283714e3}
+    - reference: PMID:31404065
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC6705878/
+      snippet: chloramphenicol resistance
+      explanation: Figure4C K62A; native partial rescue in4D is retained separately.
+      cache_path: evidence/PF01938/li-2019.txt
+      cache_sha256: 96912ee2641c669680cdfbf4666a500a3b5fe71de582ba72fd85cd63283714e3
   - edge_id: f63a-reporter-growth-reduction
     subject: f63a
     predicate: decreases
@@ -264,7 +471,12 @@ causal_graphs:
     support: OBSERVED
     evidence_kind: EXPERIMENTAL
     evidence:
-    - {reference: 'PMID:31404065', source_url: 'https://pmc.ncbi.nlm.nih.gov/articles/PMC6705878/', snippet: chloramphenicol resistance, explanation: 'Figure4C F63A with matched -Cm viability control.', cache_path: evidence/PF01938/li-2019.txt, cache_sha256: 96912ee2641c669680cdfbf4666a500a3b5fe71de582ba72fd85cd63283714e3}
+    - reference: PMID:31404065
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC6705878/
+      snippet: chloramphenicol resistance
+      explanation: Figure4C F63A with matched -Cm viability control.
+      cache_path: evidence/PF01938/li-2019.txt
+      cache_sha256: 96912ee2641c669680cdfbf4666a500a3b5fe71de582ba72fd85cd63283714e3
   - edge_id: f65a-reporter-growth-reduction
     subject: f65a
     predicate: decreases
@@ -274,33 +486,63 @@ causal_graphs:
     support: OBSERVED
     evidence_kind: EXPERIMENTAL
     evidence:
-    - {reference: 'PMID:31404065', source_url: 'https://pmc.ncbi.nlm.nih.gov/articles/PMC6705878/', snippet: chloramphenicol resistance, explanation: 'Figure4C F65A with matched -Cm viability control.', cache_path: evidence/PF01938/li-2019.txt, cache_sha256: 96912ee2641c669680cdfbf4666a500a3b5fe71de582ba72fd85cd63283714e3}
+    - reference: PMID:31404065
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC6705878/
+      snippet: chloramphenicol resistance
+      explanation: Figure4C F65A with matched -Cm viability control.
+      cache_path: evidence/PF01938/li-2019.txt
+      cache_sha256: 96912ee2641c669680cdfbf4666a500a3b5fe71de582ba72fd85cd63283714e3
 - graph_id: tram0076-native-variant-growth-2019
   title: TRAM0076 variants impair native growth complementation
   scope: Li2019 Figure4D andS4; six individual variants versus WT complementation in delta0076.
-  context: M. maripaludis S0001-derived deletion strain,pMEV2 expression,37C,triplicate OD600 timecourses,empty-vector and WT-complement controls.
-  family_mapping: Q6M142v1 PF01938 13-67 contains R35,F39,F42,K62,F63,F65; each is individually replaced by alanine. Whole stand-alone proteins are expressed.
+  context: M. maripaludis S0001-derived deletion strain,pMEV2 expression,37C,triplicate OD600 timecourses,empty-vector
+    and WT-complement controls.
+  family_mapping: Q6M142v1 PF01938 13-67 contains R35,F39,F42,K62,F63,F65; each is individually replaced
+    by alanine. Whole stand-alone proteins are expressed.
   scope_status: PHENOTYPIC
-  limitations: The assay measures growth kinetics,not zero growth or a purified mutant RNA-unfolding rate. K62A partially rescues. I33A,K28A,G30A,G32A restore growth; host-dependent abundance/folding alternatives remain unresolved.
+  limitations: The assay measures growth kinetics,not zero growth or a purified mutant RNA-unfolding rate.
+    K62A partially rescues. I33A,K28A,G30A,G32A restore growth; host-dependent abundance/folding alternatives
+    remain unresolved.
   nodes:
-  - {node_id: r35a, label: R35A instead of WT complementation, node_type: PERTURBATION}
-  - {node_id: f39a, label: F39A instead of WT complementation, node_type: PERTURBATION}
-  - {node_id: f42a, label: F42A instead of WT complementation, node_type: PERTURBATION}
-  - {node_id: k62a, label: K62A instead of WT complementation, node_type: PERTURBATION}
-  - {node_id: f63a, label: F63A instead of WT complementation, node_type: PERTURBATION}
-  - {node_id: f65a, label: F65A instead of WT complementation, node_type: PERTURBATION}
-  - {node_id: growth, label: Growth kinetics restored by complementation at37C, node_type: PHENOTYPE}
+  - node_id: r35a
+    label: R35A instead of WT complementation
+    node_type: PERTURBATION
+  - node_id: f39a
+    label: F39A instead of WT complementation
+    node_type: PERTURBATION
+  - node_id: f42a
+    label: F42A instead of WT complementation
+    node_type: PERTURBATION
+  - node_id: k62a
+    label: K62A instead of WT complementation
+    node_type: PERTURBATION
+  - node_id: f63a
+    label: F63A instead of WT complementation
+    node_type: PERTURBATION
+  - node_id: f65a
+    label: F65A instead of WT complementation
+    node_type: PERTURBATION
+  - node_id: growth
+    label: Growth kinetics restored by complementation at37C
+    node_type: PHENOTYPE
   edges:
   - edge_id: r35a-native-growth-reduction
     subject: r35a
     predicate: decreases
     object: growth
-    mechanism: R35A complementation gives slower growth kinetics than WT complementation and resembles the deletion control.
+    mechanism: R35A complementation gives slower growth kinetics than WT complementation and resembles
+      the deletion control.
     directness: UNRESOLVED
     support: OBSERVED
     evidence_kind: EXPERIMENTAL
     evidence:
-    - {reference: 'PMID:31404065', source_url: 'https://pmc.ncbi.nlm.nih.gov/articles/PMC6705878/', snippet: also did not complement, explanation: 'Figure4D left,R35A versus WT complementation; the growth difference does not isolate its molecular cause.', cache_path: evidence/PF01938/li-2019.txt, cache_sha256: 96912ee2641c669680cdfbf4666a500a3b5fe71de582ba72fd85cd63283714e3}
+    - reference: PMID:31404065
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC6705878/
+      snippet: also did not complement
+      explanation: Figure4D left,R35A versus WT complementation; the growth difference does not isolate
+        its molecular cause.
+      cache_path: evidence/PF01938/li-2019.txt
+      cache_sha256: 96912ee2641c669680cdfbf4666a500a3b5fe71de582ba72fd85cd63283714e3
   - edge_id: f39a-native-growth-reduction
     subject: f39a
     predicate: decreases
@@ -310,7 +552,12 @@ causal_graphs:
     support: OBSERVED
     evidence_kind: EXPERIMENTAL
     evidence:
-    - {reference: 'PMID:31404065', source_url: 'https://pmc.ncbi.nlm.nih.gov/articles/PMC6705878/', snippet: also did not complement, explanation: 'Figure4D left,F39A versus WT complementation,not a lethality test.', cache_path: evidence/PF01938/li-2019.txt, cache_sha256: 96912ee2641c669680cdfbf4666a500a3b5fe71de582ba72fd85cd63283714e3}
+    - reference: PMID:31404065
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC6705878/
+      snippet: also did not complement
+      explanation: Figure4D left,F39A versus WT complementation,not a lethality test.
+      cache_path: evidence/PF01938/li-2019.txt
+      cache_sha256: 96912ee2641c669680cdfbf4666a500a3b5fe71de582ba72fd85cd63283714e3
   - edge_id: f42a-native-growth-reduction
     subject: f42a
     predicate: decreases
@@ -320,17 +567,29 @@ causal_graphs:
     support: OBSERVED
     evidence_kind: EXPERIMENTAL
     evidence:
-    - {reference: 'PMID:31404065', source_url: 'https://pmc.ncbi.nlm.nih.gov/articles/PMC6705878/', snippet: also did not complement, explanation: 'Figure4D left,F42A versus WT complementation.', cache_path: evidence/PF01938/li-2019.txt, cache_sha256: 96912ee2641c669680cdfbf4666a500a3b5fe71de582ba72fd85cd63283714e3}
+    - reference: PMID:31404065
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC6705878/
+      snippet: also did not complement
+      explanation: Figure4D left,F42A versus WT complementation.
+      cache_path: evidence/PF01938/li-2019.txt
+      cache_sha256: 96912ee2641c669680cdfbf4666a500a3b5fe71de582ba72fd85cd63283714e3
   - edge_id: k62a-native-growth-reduction
     subject: k62a
     predicate: decreases
     object: growth
-    mechanism: K62A only partially restores growth and remains slower than WT complementation; it is not equated with complete failure.
+    mechanism: K62A only partially restores growth and remains slower than WT complementation; it is not
+      equated with complete failure.
     directness: UNRESOLVED
     support: OBSERVED
     evidence_kind: EXPERIMENTAL
     evidence:
-    - {reference: 'PMID:31404065', source_url: 'https://pmc.ncbi.nlm.nih.gov/articles/PMC6705878/', snippet: partially complemented, explanation: 'Figure4D right,K62A intermediate curve and explicit partial-complementation Results qualification; partial rescue is not complete failure.', cache_path: evidence/PF01938/li-2019.txt, cache_sha256: 96912ee2641c669680cdfbf4666a500a3b5fe71de582ba72fd85cd63283714e3}
+    - reference: PMID:31404065
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC6705878/
+      snippet: partially complemented
+      explanation: Figure4D right,K62A intermediate curve and explicit partial-complementation Results
+        qualification; partial rescue is not complete failure.
+      cache_path: evidence/PF01938/li-2019.txt
+      cache_sha256: 96912ee2641c669680cdfbf4666a500a3b5fe71de582ba72fd85cd63283714e3
   - edge_id: f63a-native-growth-reduction
     subject: f63a
     predicate: decreases
@@ -340,7 +599,12 @@ causal_graphs:
     support: OBSERVED
     evidence_kind: EXPERIMENTAL
     evidence:
-    - {reference: 'PMID:31404065', source_url: 'https://pmc.ncbi.nlm.nih.gov/articles/PMC6705878/', snippet: also did not complement, explanation: 'Figure4D right,F63A versus WT complementation.', cache_path: evidence/PF01938/li-2019.txt, cache_sha256: 96912ee2641c669680cdfbf4666a500a3b5fe71de582ba72fd85cd63283714e3}
+    - reference: PMID:31404065
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC6705878/
+      snippet: also did not complement
+      explanation: Figure4D right,F63A versus WT complementation.
+      cache_path: evidence/PF01938/li-2019.txt
+      cache_sha256: 96912ee2641c669680cdfbf4666a500a3b5fe71de582ba72fd85cd63283714e3
   - edge_id: f65a-native-growth-reduction
     subject: f65a
     predicate: decreases
@@ -350,32 +614,59 @@ causal_graphs:
     support: OBSERVED
     evidence_kind: EXPERIMENTAL
     evidence:
-    - {reference: 'PMID:31404065', source_url: 'https://pmc.ncbi.nlm.nih.gov/articles/PMC6705878/', snippet: also did not complement, explanation: 'Figure4D right,F65A versus WT complementation.', cache_path: evidence/PF01938/li-2019.txt, cache_sha256: 96912ee2641c669680cdfbf4666a500a3b5fe71de582ba72fd85cd63283714e3}
+    - reference: PMID:31404065
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC6705878/
+      snippet: also did not complement
+      explanation: Figure4D right,F65A versus WT complementation.
+      cache_path: evidence/PF01938/li-2019.txt
+      cache_sha256: 96912ee2641c669680cdfbf4666a500a3b5fe71de582ba72fd85cd63283714e3
 - graph_id: tram0076-native-utr-reporters-2019
   title: MMP0076 genotype and leader sequence alter mCherry signals
   scope: Li2019 Figure5B-D; three UTR reporters and the1515MT leader comparison.
-  context: pMEV4 UTR-mCherry constructs in parental S0001 and delta0076;triplicate early/middle/late growth-phase cultures;575/610nm fluorescence normalized per mL*OD.
-  family_mapping: Deleted whole MMP0076 maps to Q6M142v1 PF01938 13-67. UTR1515MT modifies the reporter leader,not the TRAM protein or a separate Pfam member.
+  context: pMEV4 UTR-mCherry constructs in parental S0001 and delta0076;triplicate early/middle/late growth-phase
+    cultures;575/610nm fluorescence normalized per mL*OD.
+  family_mapping: Deleted whole MMP0076 maps to Q6M142v1 PF01938 13-67. UTR1515MT modifies the reporter
+    leader,not the TRAM protein or a separate Pfam member.
   scope_status: PHENOTYPIC
-  limitations: Fluorescence does not separate transcription,translation,RNA stability or fluorophore maturation. Predicted hairpin disruption is not direct structural verification in cells.1515MT bars are not identical between hosts; the parental advantage is lost or reversed.
+  limitations: Fluorescence does not separate transcription,translation,RNA stability or fluorophore maturation.
+    Predicted hairpin disruption is not direct structural verification in cells.1515MT bars are not identical
+    between hosts; the parental advantage is lost or reversed.
   nodes:
-  - {node_id: deletion, label: Delta0076 instead of parental S0001, node_type: PERTURBATION}
-  - {node_id: leader, label: UTR1515MT instead of WT1515 leader, node_type: PERTURBATION}
-  - {node_id: signal0127, label: Normalized UTR0127-mCherry fluorescence, node_type: PHENOTYPE}
-  - {node_id: signal1515, label: Normalized UTR1515-mCherry fluorescence, node_type: PHENOTYPE}
-  - {node_id: signal1697, label: Normalized UTR1697-mCherry fluorescence, node_type: PHENOTYPE}
-  - {node_id: advantage, label: Parental-minus-deletion reporter fluorescence advantage, node_type: PHENOTYPE}
+  - node_id: deletion
+    label: Delta0076 instead of parental S0001
+    node_type: PERTURBATION
+  - node_id: leader
+    label: UTR1515MT instead of WT1515 leader
+    node_type: PERTURBATION
+  - node_id: signal0127
+    label: Normalized UTR0127-mCherry fluorescence
+    node_type: PHENOTYPE
+  - node_id: signal1515
+    label: Normalized UTR1515-mCherry fluorescence
+    node_type: PHENOTYPE
+  - node_id: signal1697
+    label: Normalized UTR1697-mCherry fluorescence
+    node_type: PHENOTYPE
+  - node_id: advantage
+    label: Parental-minus-deletion reporter fluorescence advantage
+    node_type: PHENOTYPE
   edges:
   - edge_id: deletion-utr0127-signal-reduction
     subject: deletion
     predicate: decreases
     object: signal0127
-    mechanism: Deletion modestly lowers0127-leader reporter signal versus parental cultures at the sampled growth phases.
+    mechanism: Deletion modestly lowers0127-leader reporter signal versus parental cultures at the sampled
+      growth phases.
     directness: UNRESOLVED
     support: OBSERVED
     evidence_kind: EXPERIMENTAL
     evidence:
-    - {reference: 'PMID:31404065', source_url: 'https://pmc.ncbi.nlm.nih.gov/articles/PMC6705878/', snippet: expression of mCherry, explanation: 'Figure5C UTR0127 bars; measured reporter fluorescence,not direct transcription rate.', cache_path: evidence/PF01938/li-2019.txt, cache_sha256: 96912ee2641c669680cdfbf4666a500a3b5fe71de582ba72fd85cd63283714e3}
+    - reference: PMID:31404065
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC6705878/
+      snippet: expression of mCherry
+      explanation: Figure5C UTR0127 bars; measured reporter fluorescence,not direct transcription rate.
+      cache_path: evidence/PF01938/li-2019.txt
+      cache_sha256: 96912ee2641c669680cdfbf4666a500a3b5fe71de582ba72fd85cd63283714e3
   - edge_id: deletion-utr1515-signal-reduction
     subject: deletion
     predicate: decreases
@@ -385,7 +676,12 @@ causal_graphs:
     support: OBSERVED
     evidence_kind: EXPERIMENTAL
     evidence:
-    - {reference: 'PMID:31404065', source_url: 'https://pmc.ncbi.nlm.nih.gov/articles/PMC6705878/', snippet: expression of mCherry, explanation: 'Figure5C UTR1515 bars,three phases,triplicate cultures.', cache_path: evidence/PF01938/li-2019.txt, cache_sha256: 96912ee2641c669680cdfbf4666a500a3b5fe71de582ba72fd85cd63283714e3}
+    - reference: PMID:31404065
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC6705878/
+      snippet: expression of mCherry
+      explanation: Figure5C UTR1515 bars,three phases,triplicate cultures.
+      cache_path: evidence/PF01938/li-2019.txt
+      cache_sha256: 96912ee2641c669680cdfbf4666a500a3b5fe71de582ba72fd85cd63283714e3
   - edge_id: deletion-utr1697-signal-reduction
     subject: deletion
     predicate: decreases
@@ -395,29 +691,54 @@ causal_graphs:
     support: OBSERVED
     evidence_kind: EXPERIMENTAL
     evidence:
-    - {reference: 'PMID:31404065', source_url: 'https://pmc.ncbi.nlm.nih.gov/articles/PMC6705878/', snippet: expression of mCherry, explanation: 'Figure5C UTR1697 bars; not assumed quantitatively equal to0127.', cache_path: evidence/PF01938/li-2019.txt, cache_sha256: 96912ee2641c669680cdfbf4666a500a3b5fe71de582ba72fd85cd63283714e3}
+    - reference: PMID:31404065
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC6705878/
+      snippet: expression of mCherry
+      explanation: Figure5C UTR1697 bars; not assumed quantitatively equal to0127.
+      cache_path: evidence/PF01938/li-2019.txt
+      cache_sha256: 96912ee2641c669680cdfbf4666a500a3b5fe71de582ba72fd85cd63283714e3
   - edge_id: leader-mutation-reduces-genotype-contrast
     subject: leader
     predicate: decreases
     object: advantage
-    mechanism: The1515MT leader removes or reverses the parental fluorescence advantage observed with the WT1515 leader across the genotype comparison.
+    mechanism: The1515MT leader removes or reverses the parental fluorescence advantage observed with
+      the WT1515 leader across the genotype comparison.
     directness: UNRESOLVED
     support: OBSERVED
     evidence_kind: EXPERIMENTAL
     evidence:
-    - {reference: 'PMID:31404065', source_url: 'https://pmc.ncbi.nlm.nih.gov/articles/PMC6705878/', snippet: expression of mCherry, explanation: 'Figure5B,C,D interaction comparison; do not claim equal fluorescence at every stage or directly observed RNA hairpin melting.', cache_path: evidence/PF01938/li-2019.txt, cache_sha256: 96912ee2641c669680cdfbf4666a500a3b5fe71de582ba72fd85cd63283714e3}
+    - reference: PMID:31404065
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC6705878/
+      snippet: expression of mCherry
+      explanation: Figure5B,C,D interaction comparison; do not claim equal fluorescence at every stage
+        or directly observed RNA hairpin melting.
+      cache_path: evidence/PF01938/li-2019.txt
+      cache_sha256: 96912ee2641c669680cdfbf4666a500a3b5fe71de582ba72fd85cd63283714e3
 - graph_id: tram0076-bx04-cold-rescue-2019
   title: Induced TRAM0076 improves heterologous cold growth
   scope: Li2019 S2A,B; E. coli BX04 delta-cspABGE with pIN-0076.
-  context: IPTG-induced pIN-0076 versus induced empty pINIII;18C and22C LB/ampicillin plates,37C viability controls,2-5days,OD6000.9 starting cultures and tenfold dilutions. Methods100ug/mL ampicillin; S2 IPTG dose unspecified.
-  family_mapping: Expressed MMP0076 is Q6M142-reference full protein,PF01938 13-67. Recipient is E. coli BX04,not the native archaeal deletion strain.
+  context: IPTG-induced pIN-0076 versus induced empty pINIII;18C and22C LB/ampicillin plates,37C viability
+    controls,2-5days,OD6000.9 starting cultures and tenfold dilutions. Methods100ug/mL ampicillin; S2
+    IPTG dose unspecified.
+  family_mapping: Expressed MMP0076 is Q6M142-reference full protein,PF01938 13-67. Recipient is E. coli
+    BX04,not the native archaeal deletion strain.
   taxon: NCBITaxon:562
   scope_status: PHENOTYPIC
-  limitations: Induced cold-growth rescue is indirect and does not identify the native archaeal RNA substrate. Uninduced and induced conditions differ; no claim of induction-independent rescue or complete equivalence to Csps.
+  limitations: Induced cold-growth rescue is indirect and does not identify the native archaeal RNA substrate.
+    Uninduced and induced conditions differ; no claim of induction-independent rescue or complete equivalence
+    to Csps.
   nodes:
-  - {node_id: expression, label: Induced TRAM0076 instead of empty vector in BX04, node_type: PERTURBATION}
-  - {node_id: growth18, label: BX04 growth at18C, node_type: PHENOTYPE}
-  - {node_id: growth22, label: BX04 growth at22C, node_type: PHENOTYPE}
+  - node_id: expression
+    label: Induced TRAM0076 instead of empty vector in BX04
+    node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q6M142
+  - node_id: growth18
+    label: BX04 growth at18C
+    node_type: PHENOTYPE
+  - node_id: growth22
+    label: BX04 growth at22C
+    node_type: PHENOTYPE
   edges:
   - edge_id: induced-cold18-growth-increase
     subject: expression
@@ -428,7 +749,12 @@ causal_graphs:
     support: OBSERVED
     evidence_kind: EXPERIMENTAL
     evidence:
-    - {reference: 'PMID:31404065', source_url: 'https://pmc.ncbi.nlm.nih.gov/articles/PMC6705878/', snippet: growth at low, explanation: 'S2A18C+IPTG panel and S2B expression controls; distinct from native mutant complementation.', cache_path: evidence/PF01938/li-2019.txt, cache_sha256: 96912ee2641c669680cdfbf4666a500a3b5fe71de582ba72fd85cd63283714e3}
+    - reference: PMID:31404065
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC6705878/
+      snippet: growth at low
+      explanation: S2A18C+IPTG panel and S2B expression controls; distinct from native mutant complementation.
+      cache_path: evidence/PF01938/li-2019.txt
+      cache_sha256: 96912ee2641c669680cdfbf4666a500a3b5fe71de582ba72fd85cd63283714e3
   - edge_id: induced-cold22-growth-increase
     subject: expression
     predicate: increases
@@ -438,47 +764,85 @@ causal_graphs:
     support: OBSERVED
     evidence_kind: EXPERIMENTAL
     evidence:
-    - {reference: 'PMID:31404065', source_url: 'https://pmc.ncbi.nlm.nih.gov/articles/PMC6705878/', snippet: growth at low, explanation: 'S2A22C+IPTG panel with37C viability comparator; not native22C complementation.', cache_path: evidence/PF01938/li-2019.txt, cache_sha256: 96912ee2641c669680cdfbf4666a500a3b5fe71de582ba72fd85cd63283714e3}
+    - reference: PMID:31404065
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC6705878/
+      snippet: growth at low
+      explanation: S2A22C+IPTG panel with37C viability comparator; not native22C complementation.
+      cache_path: evidence/PF01938/li-2019.txt
+      cache_sha256: 96912ee2641c669680cdfbf4666a500a3b5fe71de582ba72fd85cd63283714e3
 - graph_id: tram0076-parental-cold-reporters-2019
   title: Cold shock transiently increases parental UTR reporter signals
   scope: Li2019 S7; parental S0001 reporter timecourses with deletion and1515MT controls.
-  context: Middle-exponential37C cultures shifted to4C,0-8h sampling,triplicate normalized mCherry fluorescence. Each WT-leader reporter is compared to its own preshift baseline.
-  family_mapping: Parental cells contain intact MMP0076,reference Q6M142v1 PF01938 13-67. This is a temperature perturbation in a TRAM-containing system,not a direct assay of isolated TRAM thermosensing.
+  context: Middle-exponential37C cultures shifted to4C,0-8h sampling,triplicate normalized mCherry fluorescence.
+    Each WT-leader reporter is compared to its own preshift baseline.
+  family_mapping: Parental cells contain intact MMP0076,reference Q6M142v1 PF01938 13-67. This is a temperature
+    perturbation in a TRAM-containing system,not a direct assay of isolated TRAM thermosensing.
   scope_status: PHENOTYPIC
-  limitations: The rise is transient and genotype controls differ in baseline. Deletion curves are not rigorously flat. UTR1515MT lacks the sustained parental increase. Reporter fluorescence alone does not prove a TRAM-mediated transcription chain.
+  limitations: The rise is transient and genotype controls differ in baseline. Deletion curves are not
+    rigorously flat. UTR1515MT lacks the sustained parental increase. Reporter fluorescence alone does
+    not prove a TRAM-mediated transcription chain.
   nodes:
-  - {node_id: cold, label: Parental reporter cultures shifted from37C to4C, node_type: PERTURBATION}
-  - {node_id: signal0127, label: UTR0127-mCherry signal during early cold shock, node_type: PHENOTYPE}
-  - {node_id: signal1515, label: UTR1515-mCherry signal during early cold shock, node_type: PHENOTYPE}
-  - {node_id: signal1697, label: UTR1697-mCherry signal during early cold shock, node_type: PHENOTYPE}
+  - node_id: cold
+    label: Parental reporter cultures shifted from37C to4C
+    node_type: PERTURBATION
+  - node_id: signal0127
+    label: UTR0127-mCherry signal during early cold shock
+    node_type: PHENOTYPE
+  - node_id: signal1515
+    label: UTR1515-mCherry signal during early cold shock
+    node_type: PHENOTYPE
+  - node_id: signal1697
+    label: UTR1697-mCherry signal during early cold shock
+    node_type: PHENOTYPE
   edges:
   - edge_id: cold-utr0127-signal-increase
     subject: cold
     predicate: increases
     object: signal0127
-    mechanism: Cold shock raises the parental0127 reporter signal above its preshift value over the early timecourse,with a later decline.
+    mechanism: Cold shock raises the parental0127 reporter signal above its preshift value over the early
+      timecourse,with a later decline.
     directness: UNRESOLVED
     support: OBSERVED
     evidence_kind: EXPERIMENTAL
     evidence:
-    - {reference: 'PMID:31404065', source_url: 'https://pmc.ncbi.nlm.nih.gov/articles/PMC6705878/', snippet: expression of mCherry, explanation: 'S7 top-left timecourse and top-right deletion comparator; observed temperature response,not direct attribution of every step to TRAM.', cache_path: evidence/PF01938/li-2019.txt, cache_sha256: 96912ee2641c669680cdfbf4666a500a3b5fe71de582ba72fd85cd63283714e3}
+    - reference: PMID:31404065
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC6705878/
+      snippet: expression of mCherry
+      explanation: S7 top-left timecourse and top-right deletion comparator; observed temperature response,not
+        direct attribution of every step to TRAM.
+      cache_path: evidence/PF01938/li-2019.txt
+      cache_sha256: 96912ee2641c669680cdfbf4666a500a3b5fe71de582ba72fd85cd63283714e3
   - edge_id: cold-utr1515-signal-increase
     subject: cold
     predicate: increases
     object: signal1515
-    mechanism: Cold shock raises the parental WT1515-leader reporter signal over its preshift value; the1515MT leader lacks the sustained rise.
+    mechanism: Cold shock raises the parental WT1515-leader reporter signal over its preshift value; the1515MT
+      leader lacks the sustained rise.
     directness: UNRESOLVED
     support: OBSERVED
     evidence_kind: EXPERIMENTAL
     evidence:
-    - {reference: 'PMID:31404065', source_url: 'https://pmc.ncbi.nlm.nih.gov/articles/PMC6705878/', snippet: expression of mCherry, explanation: 'S7 bottom-left WT1515 versus its0h baseline,with1515MT and deletion panels retaining contextual limits.', cache_path: evidence/PF01938/li-2019.txt, cache_sha256: 96912ee2641c669680cdfbf4666a500a3b5fe71de582ba72fd85cd63283714e3}
+    - reference: PMID:31404065
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC6705878/
+      snippet: expression of mCherry
+      explanation: S7 bottom-left WT1515 versus its0h baseline,with1515MT and deletion panels retaining
+        contextual limits.
+      cache_path: evidence/PF01938/li-2019.txt
+      cache_sha256: 96912ee2641c669680cdfbf4666a500a3b5fe71de582ba72fd85cd63283714e3
   - edge_id: cold-utr1697-signal-increase
     subject: cold
     predicate: increases
     object: signal1697
-    mechanism: Cold shock raises the parental1697 reporter signal over its preshift value; the smaller deletion-strain changes are not described as zero.
+    mechanism: Cold shock raises the parental1697 reporter signal over its preshift value; the smaller
+      deletion-strain changes are not described as zero.
     directness: UNRESOLVED
     support: OBSERVED
     evidence_kind: EXPERIMENTAL
     evidence:
-    - {reference: 'PMID:31404065', source_url: 'https://pmc.ncbi.nlm.nih.gov/articles/PMC6705878/', snippet: expression of mCherry, explanation: 'S7 middle-left timecourse and middle-right deletion comparator; retain the separate baselines and fluctuations.', cache_path: evidence/PF01938/li-2019.txt, cache_sha256: 96912ee2641c669680cdfbf4666a500a3b5fe71de582ba72fd85cd63283714e3}
+    - reference: PMID:31404065
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC6705878/
+      snippet: expression of mCherry
+      explanation: S7 middle-left timecourse and middle-right deletion comparator; retain the separate
+        baselines and fluctuations.
+      cache_path: evidence/PF01938/li-2019.txt
+      cache_sha256: 96912ee2641c669680cdfbf4666a500a3b5fe71de582ba72fd85cd63283714e3

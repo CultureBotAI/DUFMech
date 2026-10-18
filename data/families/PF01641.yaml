@@ -256,6 +256,8 @@ causal_graphs:
   - node_id: selr-loss-msra-background
     label: Additional SelR deletion in the MsrA-deleted background
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:P25566
   - node_id: interval-od-increase
     label: OD600 increase during the displayed 14-h interval
     node_type: PHENOTYPE
@@ -354,5 +356,13 @@ curation_events:
   outcome: needs_followup
   summary: Review SelR product assays and conditional yeast-growth effects
   history_record: history/records/PF01641/2026-10-11T123909Z-codex-18842c.yaml
+  event_index: 0
+  llm_assisted: true
+- timestamp: '2026-10-18T02:54:46Z'
+  curator: Antigravity
+  action: EDIT
+  outcome: changed
+  summary: Ground causal graph gene and protein nodes in PF01641 with verified UniProtKB accessions (UniProtKB:P25566)
+  history_record: history/records/PF01641/2026-10-18T025446Z-antigravity-cb2436.yaml
   event_index: 0
   llm_assisted: true

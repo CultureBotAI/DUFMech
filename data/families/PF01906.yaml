@@ -123,33 +123,53 @@ causal_graphs:
   - node_id: ybjq-caic-joint-loss
     label: Joint ybjQ (b0866) and caiC (b0037) deletion
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:P0A8C1
   - node_id: ybjq-asnb-joint-loss
     label: Joint ybjQ (b0866) and asnB (b0674) deletion
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:P0A8C1
   - node_id: ybjq-gsia-joint-loss
     label: Joint ybjQ (b0866) and gsiA (b0829) deletion
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:P0A8C1
   - node_id: ybjq-ycbx-joint-loss
     label: Joint ybjQ (b0866) and ycbX (b0947) deletion
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:P0A8C1
   - node_id: ybjq-yegd-joint-loss
     label: Joint ybjQ (b0866) and yegD (b2069) deletion
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:P0A8C1
   - node_id: ybjq-ygci-joint-loss
     label: Joint ybjQ (b0866) and ygcI (b2757) deletion
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:P0A8C1
   - node_id: ybjq-csde-joint-loss
     label: Joint ybjQ (b0866) and csdE (b2811) deletion
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:P0A8C1
   - node_id: ybjq-ygdl-joint-loss
     label: Joint ybjQ (b0866) and ygdL (b2812) deletion
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:P0A8C1
   - node_id: ybjq-yhft-joint-loss
     label: Joint ybjQ (b0866) and yhfT (b3377) deletion
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:P0A8C1
   - node_id: ybjq-idnd-joint-loss
     label: Joint ybjQ (b0866) and idnD (b4267) deletion
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:P0A8C1
   - node_id: relative-colony-growth
     label: Normalized colony growth relative to the multiplicative expectation
     node_type: PHENOTYPE
@@ -369,5 +389,13 @@ curation_events:
   outcome: needs_followup
   summary: Retain partial scientific self-review of YbjQ growth edges and qualified mechanism leads
   history_record: history/records/PF01906/2026-10-12T000109Z-codex-64a76a.yaml
+  event_index: 0
+  llm_assisted: true
+- timestamp: '2026-10-18T02:54:46Z'
+  curator: Antigravity
+  action: EDIT
+  outcome: changed
+  summary: Ground causal graph gene and protein nodes in PF01906 with verified UniProtKB accessions (UniProtKB:P0A8C1)
+  history_record: history/records/PF01906/2026-10-18T025446Z-antigravity-077333.yaml
   event_index: 0
   llm_assisted: true

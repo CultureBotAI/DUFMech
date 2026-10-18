@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01933
+  path: curation/families/PF01933.yaml
+session:
+  id: 2026-10-18T025446Z-antigravity-e45c91
+  timestamp: '2026-10-18T02:54:46Z'
+  actors:
+  - type: ai_agent
+    name: Antigravity
+    model: Claude Opus 4.6
+    agent_tool: Antigravity
+events:
+- type: EDIT
+  outcome: changed
+  summary: Ground causal graph gene and protein nodes in PF01933 with verified UniProtKB
+    accessions (UniProtKB:O06974)
+  details: 'Reviewed PF01933 causal_graphs and grounded gene/protein PERTURBATION,
+    ACTIVITY, and protein-complex STATE nodes across 1 causal graph(s) using verified
+    UniProtKB accessions from family_mapping:
+
+    - `bsub-glmr-competence-2020`: grounded r301a -> UniProtKB:O06974'
+  sections:
+  - causal_graphs

@@ -406,6 +406,8 @@ causal_graphs:
   - node_id: no-added-ni-growth
     label: LarCMt preparation from culture without added nickel followed by nickel-affinity purification
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q2RFJ5
   - node_id: intermediate-feature
     label: Accumulated715.02 feature relative to nickel-supplemented-growth preparation
     node_type: STATE
@@ -448,24 +450,38 @@ causal_graphs:
   - node_id: h53a
     label: Coexpression with full LarCMt H53A
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q2RFJ5
   - node_id: h72a
     label: Coexpression with full LarCMt H72A
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q2RFJ5
   - node_id: h108a
     label: Coexpression with full LarCMt H108A
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q2RFJ5
   - node_id: h116a
     label: Coexpression with full LarCMt H116A
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q2RFJ5
   - node_id: h118a
     label: Coexpression with full LarCMt H118A
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q2RFJ5
   - node_id: h160a
     label: Coexpression with full LarCMt H160A
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q2RFJ5
   - node_id: h226a
     label: Coexpression with full LarCMt H226A
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q2RFJ5
   - node_id: lara-output
     label: Purified LarALp relative D-lactate output versus WT LarC coexpression
     node_type: PHENOTYPE
@@ -609,45 +625,73 @@ causal_graphs:
   - node_id: d15a
     label: Coexpression with full LarCMt D15A
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q2RFJ5
   - node_id: r71a
     label: Coexpression with full LarCMt R71A
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q2RFJ5
   - node_id: e104a
     label: Coexpression with full LarCMt E104A
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q2RFJ5
   - node_id: e119a
     label: Coexpression with full LarCMt E119A
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q2RFJ5
   - node_id: d124a
     label: Coexpression with full LarCMt D124A
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q2RFJ5
   - node_id: d128a
     label: Coexpression with full LarCMt D128A
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q2RFJ5
   - node_id: e187a
     label: Coexpression with full LarCMt E187A
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q2RFJ5
   - node_id: y180a
     label: Coexpression with full LarCMt Y180A
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q2RFJ5
   - node_id: n238a
     label: Coexpression with full LarCMt N238A
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q2RFJ5
   - node_id: q241a
     label: Coexpression with full LarCMt Q241A
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q2RFJ5
   - node_id: q325a
     label: Coexpression with full LarCMt Q325A
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q2RFJ5
   - node_id: e243a
     label: Coexpression with full LarCMt E243A
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q2RFJ5
   - node_id: e300a
     label: Coexpression with full LarCMt E300A
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q2RFJ5
   - node_id: r323a
     label: Coexpression with full LarCMt R323A
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q2RFJ5
   - node_id: reporter
     label: Purified LarALp relative D-lactate output versus WT LarC coexpression
     node_type: PHENOTYPE
@@ -905,15 +949,23 @@ causal_graphs:
   - node_id: deletion
     label: Author-named linker-deletion construct
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q2RFJ5
   - node_id: shortened
     label: Author-named shortened-linker construct with unresolved7-versus8-residue identity
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q2RFJ5
   - node_id: rigid
     label: Author-named rigid-linker replacement construct
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q2RFJ5
   - node_id: alternative
     label: Author-named alternative flexible-linker construct with sequence discrepancy
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q2RFJ5
   - node_id: reporter
     label: Purified LarALp relative D-lactate output versus WT LarC coexpression
     node_type: PHENOTYPE
@@ -1005,12 +1057,18 @@ causal_graphs:
   - node_id: larc2-intermediate
     label: Proposed P2TCD state following activation at LarC2
     node_type: STATE
+    grounding:
+    - UniProtKB:Q2RFJ5
   - node_id: cleft-intermediate
     label: Proposed transient P2TCD engagement in the interdomain cleft
     node_type: STATE
+    grounding:
+    - UniProtKB:Q2RFJ5
   - node_id: larc1-intermediate
     label: Proposed P2TCD repositioning into a LarC1 pocket
     node_type: STATE
+    grounding:
+    - UniProtKB:Q2RFJ5
   edges:
   - edge_id: larc2-to-cleft
     subject: larc2-intermediate
@@ -1064,9 +1122,13 @@ causal_graphs:
   - node_id: proposed-pocket-reactants
     label: Proposed pocket-associated P2TCD with suitably positioned Glu104 and nickel-bearing assembly
     node_type: STATE
+    grounding:
+    - UniProtKB:Q2RFJ5
   - node_id: proposed-carbanion
     label: Proposed Glu104-assisted substrate adduct and carbanion near coordinated nickel
     node_type: STATE
+    grounding:
+    - UniProtKB:Q2RFJ5
   - node_id: proposed-ni-c-product
     label: Proposed nickel-carbon-bonded cofactor product after further unresolved steps
     node_type: STATE
@@ -1121,5 +1183,13 @@ curation_events:
   outcome: needs_followup
   summary: Retain partial LarC scientific self-review with source and construct follow-ups
   history_record: history/records/PF01969/2026-10-12T181916Z-codex-79ddcb.yaml
+  event_index: 0
+  llm_assisted: true
+- timestamp: '2026-10-18T02:54:46Z'
+  curator: Antigravity
+  action: EDIT
+  outcome: changed
+  summary: Ground causal graph gene and protein nodes in PF01969 with verified UniProtKB accessions (UniProtKB:Q2RFJ5)
+  history_record: history/records/PF01969/2026-10-18T025446Z-antigravity-671d17.yaml
   event_index: 0
   llm_assisted: true

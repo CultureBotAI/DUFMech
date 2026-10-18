@@ -149,15 +149,23 @@ causal_graphs:
   - node_id: pduo
     label: delta-pduO651 in the cobA-positive host
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q8ZNR5
   - node_id: double
     label: Combined pduO/cobA lesions
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q8ZNR5
   - node_id: rescue
     label: pDP1 expressing PduO in the double mutant
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q8ZNR5
   - node_id: overexpression
     label: pDP1 expressing PduO in WT
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q8ZNR5
   - node_id: growth
     label: Growth on 1,2-propanediol
     node_type: PHENOTYPE
@@ -274,15 +282,23 @@ causal_graphs:
   - node_id: c185
     label: PduO1-185 with ATP and reduced substrate
     node_type: ACTIVITY
+    grounding:
+    - UniProtKB:Q8ZNR5
   - node_id: c230
     label: PduO1-230 with ATP and reduced substrate
     node_type: ACTIVITY
+    grounding:
+    - UniProtKB:Q8ZNR5
   - node_id: c293
     label: PduO1-293 with ATP and reduced substrate
     node_type: ACTIVITY
+    grounding:
+    - UniProtKB:Q8ZNR5
   - node_id: c90
     label: Replace full PduO with1-90
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q8ZNR5
   - node_id: product
     label: AdoCbl formation
     node_type: STATE
@@ -365,6 +381,8 @@ causal_graphs:
   - node_id: reaction
     label: PduO, ATP and chemically reduced corrinoid reaction
     node_type: ACTIVITY
+    grounding:
+    - UniProtKB:Q8ZNR5
   - node_id: pppi
     label: Triphosphate reaction product
     node_type: STATE
@@ -614,12 +632,18 @@ causal_graphs:
   - node_id: c185
     label: Express PduO1-185 in BE121
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q8ZNR5
   - node_id: c230
     label: Express PduO1-230 in BE121
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q8ZNR5
   - node_id: c293
     label: Express PduO1-293 in BE121
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q8ZNR5
   - node_id: degradation
     label: 1,2-propanediol degradation phenotype
     node_type: PHENOTYPE
@@ -722,15 +746,23 @@ causal_graphs:
   - node_id: f112a
     label: Crystallize F112A with ATP and cob(II)alamin
     node_type: ACTIVITY
+    grounding:
+    - UniProtKB:Q50EJ2
   - node_id: f112h
     label: Crystallize F112H with ATP and cob(II)alamin
     node_type: ACTIVITY
+    grounding:
+    - UniProtKB:Q50EJ2
   - node_id: dmb
     label: Five-coordinate DMB-on corrinoid complex
     node_type: STATE
+    grounding:
+    - UniProtKB:Q50EJ2
   - node_id: his
     label: Five-coordinate His-on corrinoid complex
     node_type: STATE
+    grounding:
+    - UniProtKB:Q50EJ2
   edges:
   - edge_id: f112a-produces-dmb
     subject: f112a
@@ -777,15 +809,23 @@ causal_graphs:
   - node_id: f112a
     label: F112A substitution in LrPduO
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q50EJ2
   - node_id: f112h
     label: F112H substitution in LrPduO
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q50EJ2
   - node_id: f112y
     label: F112Y substitution in LrPduO
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q50EJ2
   - node_id: f112w
     label: F112W substitution in LrPduO
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q50EJ2
   - node_id: turnover
     label: Cob(I)alamin-dependent turnover
     node_type: STATE
@@ -867,18 +907,28 @@ causal_graphs:
   - node_id: f112a
     label: F112A substitution in LrPduO
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q50EJ2
   - node_id: f112h
     label: F112H substitution in LrPduO
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q50EJ2
   - node_id: f112y
     label: F112Y substitution in LrPduO
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q50EJ2
   - node_id: f112w
     label: F112W substitution in LrPduO
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q50EJ2
   - node_id: f163a
     label: F163A substitution
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q50EJ2
   - node_id: activity
     label: Coupled AdoCbl-forming activity
     node_type: STATE
@@ -980,6 +1030,8 @@ causal_graphs:
   - node_id: variants
     label: Replace WT LrPduO with an individually tested variant
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q50EJ2
   - node_id: growth
     label: Heterologous growth complementation
     node_type: PHENOTYPE
@@ -1262,15 +1314,23 @@ causal_graphs:
   - node_id: h67a
     label: H67A substitution in full EutT
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q9ZFV4
   - node_id: c79a
     label: C79A substitution in full EutT
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q9ZFV4
   - node_id: c80a
     label: C80A substitution in full EutT
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q9ZFV4
   - node_id: c83a
     label: C83A substitution in full EutT
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q9ZFV4
   - node_id: activity
     label: Coupled AdoCbl-forming activity
     node_type: STATE
@@ -1351,18 +1411,28 @@ causal_graphs:
   - node_id: wt
     label: Express WT EutT in JE13176
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q9ZFV4
   - node_id: c79a
     label: Express C79A EutT in JE13176
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q9ZFV4
   - node_id: h67a
     label: Replace WT with H67A EutT
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q9ZFV4
   - node_id: c80a
     label: Replace WT with C80A EutT
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q9ZFV4
   - node_id: c83a
     label: Replace WT with C83A EutT
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q9ZFV4
   - node_id: growth
     label: Growth on ethanolamine
     node_type: PHENOTYPE
@@ -1465,12 +1535,18 @@ causal_graphs:
   - node_id: cobii-fre
     label: LmEutT, MgATP, cob(II)alamin and Fre/FAD system
     node_type: ACTIVITY
+    grounding:
+    - UniProtKB:A0A0H3GFM5
   - node_id: cobii-flda
     label: LmEutT, MgATP, cob(II)alamin and FldA/Fpr system
     node_type: ACTIVITY
+    grounding:
+    - UniProtKB:A0A0H3GFM5
   - node_id: cbii
     label: LmEutT, MgATP and chemically reduced cob(I)inamide
     node_type: ACTIVITY
+    grounding:
+    - UniProtKB:A0A0H3GFM5
   - node_id: adocbl
     label: AdoCbl formation
     node_type: STATE
@@ -1558,6 +1634,8 @@ causal_graphs:
   - node_id: reaction
     label: LmEutT, ATP and reduced-corrinoid cycling reaction
     node_type: ACTIVITY
+    grounding:
+    - UniProtKB:A0A0H3GFM5
   - node_id: pppi
     label: Triphosphate product
     node_type: STATE
@@ -1594,9 +1672,13 @@ causal_graphs:
   - node_id: native
     label: Express native LmEutT coding sequence
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:A0A0H3GFM5
   - node_id: optimized
     label: Express codon-optimized LmEutT coding sequence
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:A0A0H3GFM5
   - node_id: growth
     label: Growth with ethanolamine as carbon source
     node_type: PHENOTYPE
@@ -1650,9 +1732,13 @@ causal_graphs:
   - node_id: native
     label: Express native LmEutT coding sequence
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:A0A0H3GFM5
   - node_id: optimized
     label: Express codon-optimized LmEutT coding sequence
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:A0A0H3GFM5
   - node_id: growth
     label: Growth with ethanolamine as nitrogen source
     node_type: PHENOTYPE
@@ -1705,9 +1791,13 @@ causal_graphs:
   - node_id: native
     label: Express native LmEutT in the reporter host
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:A0A0H3GFM5
   - node_id: optimized
     label: Express codon-optimized LmEutT in the reporter host
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:A0A0H3GFM5
   - node_id: growth
     label: Lactose reporter growth
     node_type: PHENOTYPE
@@ -1776,15 +1866,23 @@ causal_graphs:
   - node_id: r186q
     label: Replace WT MMAB with R186Q
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q96EY8
   - node_id: r190h
     label: Replace WT MMAB with R190H
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q96EY8
   - node_id: r190c
     label: Replace WT MMAB with R190C
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q96EY8
   - node_id: e193k
     label: Replace WT MMAB with E193K
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q96EY8
   edges:
   - edge_id: reaction-produces-product
     subject: reaction
@@ -1910,12 +2008,18 @@ causal_graphs:
   - node_id: wt
     label: Prepare WT MMAB with ATP and cob(II)alamin
     node_type: ACTIVITY
+    grounding:
+    - UniProtKB:Q96EY8
   - node_id: r190h
     label: Prepare R190H MMAB with ATP and cob(II)alamin
     node_type: ACTIVITY
+    grounding:
+    - UniProtKB:Q96EY8
   - node_id: four
     label: Four-coordinate enzyme-bound corrinoid state
     node_type: STATE
+    grounding:
+    - UniProtKB:Q96EY8
   edges:
   - edge_id: wt-produces-four
     subject: wt
@@ -1973,6 +2077,8 @@ causal_graphs:
   - node_id: cobi
     label: Enzyme-bound cob(I)alamin accumulation
     node_type: STATE
+    grounding:
+    - UniProtKB:Q96EY8
   edges:
   - edge_id: ti-produces-cobi
     subject: ti
@@ -2020,5 +2126,14 @@ curation_events:
   outcome: needs_followup
   summary: Retain partial scientific review of PF01923 causal assay graphs
   history_record: history/records/PF01923/2026-10-12T015658Z-codex-194a79.yaml
+  event_index: 0
+  llm_assisted: true
+- timestamp: '2026-10-18T02:54:46Z'
+  curator: Antigravity
+  action: EDIT
+  outcome: changed
+  summary: Ground causal graph gene and protein nodes in PF01923 with verified UniProtKB accessions (UniProtKB:Q8ZNR5,
+    UniProtKB:Q50EJ2, UniProtKB:Q9ZFV4, UniProtKB:A0A0H3GFM5, UniProtKB:Q96EY8)
+  history_record: history/records/PF01923/2026-10-18T025446Z-antigravity-1ae74e.yaml
   event_index: 0
   llm_assisted: true

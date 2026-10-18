@@ -110,6 +110,8 @@ causal_graphs:
   - node_id: csa2-added
     label: Increasing isolated Csa2 in the crRNA assay
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q97Y91
   - node_id: bound-crrna
     label: Gel-shifted crRNA fraction
     node_type: STATE
@@ -148,6 +150,8 @@ causal_graphs:
   - node_id: complex-added
     label: Increasing Csa2/Cas5a preparation in the crRNA assay
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q97Y91
   - node_id: bound-crrna
     label: Gel-shifted crRNA fraction
     node_type: STATE
@@ -194,6 +198,8 @@ causal_graphs:
   - node_id: protein-bound-dna
     label: Slowly migrating protein-bound DNA signal
     node_type: STATE
+    grounding:
+    - UniProtKB:Q97Y91
   edges:
   - edge_id: guide-increases-protein-bound-dna
     subject: guide-added-to-forward-target
@@ -250,6 +256,8 @@ causal_graphs:
   - node_id: h160a-substitution
     label: H160A instead of WT Csa2 in the binding assay
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q97Y91
   - node_id: bound-crrna
     label: Gel-shifted crRNA fraction
     node_type: STATE
@@ -291,6 +299,8 @@ causal_graphs:
   - node_id: cas5-cas7-titration
     label: Increasing Cas5/Cas7 in the fluorescent crRNA assay
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q97Y91
   - node_id: crrna-anisotropy
     label: Fluorescent crRNA anisotropy
     node_type: STATE
@@ -333,6 +343,8 @@ causal_graphs:
   - node_id: devr-deletion
     label: In-frame devR deletion versus WT
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q07765
   - node_id: mature-spore-cfu
     label: Mature-spore CFU per ml at 72 h
     node_type: PHENOTYPE
@@ -372,6 +384,8 @@ causal_graphs:
   - node_id: devr-deletion
     label: In-frame devR deletion versus WT
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q07765
   - node_id: ovoid-cell-appearance
     label: Qualitative ovoid-cell appearance at 48 h
     node_type: PHENOTYPE
@@ -408,6 +422,8 @@ causal_graphs:
   - node_id: devr-deletion
     label: In-frame devR deletion versus WT
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q07765
   - node_id: darkened-fruiting-bodies
     label: Darkened fruiting-body appearance at 96 h
     node_type: PHENOTYPE
@@ -447,6 +463,8 @@ causal_graphs:
   - node_id: devr-deletion
     label: In-frame devR deletion versus WT
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q07765
   - node_id: dev-rna-abundance
     label: Normalized dev RNA abundance at 24 h
     node_type: PHENOTYPE
@@ -605,5 +623,14 @@ curation_events:
   outcome: needs_followup
   summary: Retain partial scientific self-review of Csa2 and DevR graphs
   history_record: history/records/PF01905/2026-10-11T233729Z-codex-3fde6a.yaml
+  event_index: 0
+  llm_assisted: true
+- timestamp: '2026-10-18T02:54:46Z'
+  curator: Antigravity
+  action: EDIT
+  outcome: changed
+  summary: Ground causal graph gene and protein nodes in PF01905 with verified UniProtKB accessions (UniProtKB:Q97Y91,
+    UniProtKB:Q07765)
+  history_record: history/records/PF01905/2026-10-18T025446Z-antigravity-cad1b2.yaml
   event_index: 0
   llm_assisted: true

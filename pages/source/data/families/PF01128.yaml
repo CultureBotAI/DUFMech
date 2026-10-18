@@ -164,15 +164,23 @@ causal_graphs:
   - node_id: k27s-purified
     label: K27S instead of WT in purified kinetics
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q46893
   - node_id: d106e-purified
     label: D106E instead of WT in purified kinetics
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q46893
   - node_id: t140v-purified
     label: T140V instead of WT in purified kinetics
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q46893
   - node_id: r109a-purified
     label: R109A instead of WT in purified kinetics
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q46893
   - node_id: reported-ctp-series-turnover
     label: Reported CTP-series turnover from labeled CDP-ME kinetics
     node_type: ACTIVITY
@@ -270,18 +278,28 @@ causal_graphs:
   - node_id: d106a-crude
     label: Express D106A instead of WT
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q46893
   - node_id: d106n-crude
     label: Express D106N instead of WT
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q46893
   - node_id: k213s-crude
     label: Express K213S instead of WT
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q46893
   - node_id: k27a-crude
     label: Express K27A instead of WT
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q46893
   - node_id: t165v-crude
     label: Express T165V instead of WT
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q46893
   - node_id: crude-extract-cdpme-output
     label: Detected labeled CDP-ME formation in the crude-extract screen
     node_type: ACTIVITY
@@ -386,5 +404,13 @@ curation_events:
   outcome: needs_followup
   summary: Retain partial scientific self-review of IspD assay graphs
   history_record: history/records/PF01128/2026-10-11T092821Z-codex-13b336.yaml
+  event_index: 0
+  llm_assisted: true
+- timestamp: '2026-10-18T02:54:46Z'
+  curator: Antigravity
+  action: EDIT
+  outcome: changed
+  summary: Ground causal graph gene and protein nodes in PF01128 with verified UniProtKB accessions (UniProtKB:Q46893)
+  history_record: history/records/PF01128/2026-10-18T025446Z-antigravity-c66159.yaml
   event_index: 0
   llm_assisted: true

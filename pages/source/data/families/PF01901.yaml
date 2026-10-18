@@ -106,6 +106,8 @@ causal_graphs:
   - node_id: wzy-insertion
     label: Reported wzy-Tn5 allele in the ATCC43895 background
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q8X4T7
   - node_id: tube-staining
     label: Retained crystal-violet tube-ring staining
     node_type: PHENOTYPE
@@ -147,6 +149,8 @@ causal_graphs:
   - node_id: wzy-insertion
     label: Reported wzy-Tn5 allele in the ATCC43895 background
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q8X4T7
   - node_id: long-o-antigen-signal
     label: Long-O-antigen LPS gel signal
     node_type: STATE
@@ -187,6 +191,8 @@ causal_graphs:
   - node_id: wzy-insertion
     label: Reported wzy-Tn5 allele in the ATCC43895 background
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q8X4T7
   - node_id: retained-cv-signal
     label: Microtiter retained crystal-violet absorbance
     node_type: PHENOTYPE
@@ -227,6 +233,8 @@ causal_graphs:
   - node_id: wzy-insertion
     label: Reported wzy-Tn5 allele in the ATCC43895 background
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q8X4T7
   - node_id: motility-halo
     label: Soft-agar motility-halo diameter
     node_type: PHENOTYPE
@@ -266,6 +274,8 @@ causal_graphs:
   - node_id: sk2526-insertion
     label: SK2526 wzy insertion in the TUV93-0 background
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q8X4T7
   - node_id: ferritin-coat
     label: Ferritin-associated surface-coat signal
     node_type: PHENOTYPE
@@ -304,6 +314,8 @@ causal_graphs:
   - node_id: sk2526-insertion
     label: SK2526 wzy insertion in the TUV93-0 background
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q8X4T7
   - node_id: lps-o157-signal
     label: Polymeric anti-O157 LPS signal
     node_type: STATE
@@ -360,6 +372,8 @@ causal_graphs:
   - node_id: wzy-complementation
     label: Reported wzy complementation in the ATCC43888 insertion background
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q8X4T7
   - node_id: becp10-clearing
     label: BECP10 spot clearing
     node_type: PHENOTYPE
@@ -412,5 +426,13 @@ curation_events:
   outcome: needs_followup
   summary: Retain successor PF01901 strain-lineage and primary-context review
   history_record: history/records/PF01901/2026-10-11T223908Z-codex-d665a8.yaml
+  event_index: 0
+  llm_assisted: true
+- timestamp: '2026-10-18T02:54:46Z'
+  curator: Antigravity
+  action: EDIT
+  outcome: changed
+  summary: Ground causal graph gene and protein nodes in PF01901 with verified UniProtKB accessions (UniProtKB:Q8X4T7)
+  history_record: history/records/PF01901/2026-10-18T025446Z-antigravity-d57579.yaml
   event_index: 0
   llm_assisted: true

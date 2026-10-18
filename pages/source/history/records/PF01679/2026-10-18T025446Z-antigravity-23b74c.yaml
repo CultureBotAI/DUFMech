@@ -1,0 +1,38 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01679
+  path: curation/families/PF01679.yaml
+session:
+  id: 2026-10-18T025446Z-antigravity-23b74c
+  timestamp: '2026-10-18T02:54:46Z'
+  actors:
+  - type: ai_agent
+    name: Antigravity
+    model: Claude Opus 4.6
+    agent_tool: Antigravity
+events:
+- type: EDIT
+  outcome: changed
+  summary: Ground causal graph gene and protein nodes in PF01679 with verified UniProtKB
+    accessions (UniProtKB:P87284)
+  details: 'Reviewed PF01679 causal_graphs and grounded gene/protein PERTURBATION,
+    ACTIVITY, and protein-complex STATE nodes across 7 causal graph(s) using verified
+    UniProtKB accessions from family_mapping:
+
+    - `pmp3-pmr2-salt-growth`: grounded yr93-pmp3-loss -> UniProtKB:P87284
+
+    - `pmp3-pmr2-nha1-salt-growth`: grounded yr93-nha1-pmp3-loss -> UniProtKB:P87284
+
+    - `pmp3-sodium-accumulation`: grounded cn3-sodium-assay -> UniProtKB:P87284
+
+    - `pmp3-methylammonium-accumulation`: grounded cn3-methylammonium-assay -> UniProtKB:P87284
+
+    - `pmp3-toxic-cation-growth`: grounded cn3-hygromycin -> UniProtKB:P87284; cn3-tma
+    -> UniProtKB:P87284
+
+    - `pmp3-trk-low-added-potassium`: grounded cy162-pmp3-loss-egta -> UniProtKB:P87284
+
+    - `pmp3-trk-acid-growth`: grounded cy162-pmp3-loss-acid -> UniProtKB:P87284'
+  sections:
+  - causal_graphs

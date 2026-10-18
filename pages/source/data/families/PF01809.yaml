@@ -186,9 +186,13 @@ causal_graphs:
   - node_id: fuse-full-yidd
     label: Fuse full-length YidD to GFP rather than express GFP alone
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:P0A8C8
   - node_id: fuse-yidd-h1
     label: Fuse YidD residues 1-27 to GFP rather than express GFP alone
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:P0A8C8
   - node_id: peripheral-gfp-enrichment
     label: Qualitative peripheral enrichment of GFP fluorescence
     node_type: PHENOTYPE
@@ -243,6 +247,8 @@ causal_graphs:
   - node_id: induce-his-yidd
     label: Add IPTG to induce His-YidD in the reported strain
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:P0A8C8
   - node_id: pspa-immunoblot-signal
     label: Cellular PspA immunoblot signal
     node_type: PHENOTYPE
@@ -283,6 +289,8 @@ causal_graphs:
   - node_id: delete-yidd-vesicles
     label: Prepare vesicles from BW25113 yidD deletion rather than WT
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:P0A8C8
   - node_id: nadh-acma-quenching
     label: NADH-driven ACMA quenching as a delta-pH proxy
     node_type: PHENOTYPE
@@ -382,6 +390,8 @@ causal_graphs:
   - node_id: delete-yidd-vesicles
     label: Use BW25113 yidD deletion vesicles rather than WT
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:P0A8C8
   - node_id: ferricyanide-reduction
     label: NADH-dependent ferricyanide reduction per membrane protein
     node_type: PHENOTYPE
@@ -461,6 +471,8 @@ causal_graphs:
   - node_id: delete-yidd-bw25113
     label: Delete yidD in BW25113
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:P0A8C8
   - node_id: nuok-membrane-signal
     label: NuoK immunoblot signal in the membrane preparation
     node_type: PHENOTYPE
@@ -543,9 +555,13 @@ causal_graphs:
   - node_id: delete-yidd-empty-vector
     label: Delete yidD with pTrc99A relative to matched WT vesicles
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:P0A8C8
   - node_id: delete-yidd-yidc-compensated
     label: Delete yidD with pTrcyidC relative to matched WT vesicles
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:P0A8C8
   - node_id: nuok-protection-empty-vector
     label: Protected NuoK fragment with empty-vector vesicles
     node_type: PHENOTYPE
@@ -607,6 +623,8 @@ causal_graphs:
   - node_id: his-yidd-enriched-vesicles
     label: Use pEK746 His-YidD-enriched rather than pET15b control vesicles
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:P0A8C8
   - node_id: protected-nuok-fragment
     label: Protease-protected NuoK fragment in the reported overexpression assay
     node_type: PHENOTYPE
@@ -650,6 +668,8 @@ causal_graphs:
   - node_id: delete-yidd-empty-vector
     label: Delete yidD with pTrc99A compared with matched WT
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:P0A8C8
   - node_id: restore-yidc-in-deletion
     label: Express pTrcyidC in the deletion compared with its pTrc99A control
     node_type: PERTURBATION
@@ -707,5 +727,13 @@ curation_events:
   outcome: needs_followup
   summary: Review YidD localization and context-specific vesicle effects
   history_record: history/records/PF01809/2026-10-11T153239Z-codex-822a2f.yaml
+  event_index: 0
+  llm_assisted: true
+- timestamp: '2026-10-18T02:54:46Z'
+  curator: Antigravity
+  action: EDIT
+  outcome: changed
+  summary: Ground causal graph gene and protein nodes in PF01809 with verified UniProtKB accessions (UniProtKB:P0A8C8)
+  history_record: history/records/PF01809/2026-10-18T025446Z-antigravity-d1621c.yaml
   event_index: 0
   llm_assisted: true

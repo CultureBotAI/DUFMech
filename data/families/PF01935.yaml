@@ -377,15 +377,23 @@ causal_graphs:
   - node_id: k154a
     label: K154A HerA versus WT with active NurA
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q97WG8
   - node_id: r381a
     label: R381A HerA versus WT with active NurA
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q97WG8
   - node_id: k363a
     label: K363A HerA versus WT with active NurA
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q97WG8
   - node_id: d471a
     label: D471A HerA versus WT with active NurA
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q97WG8
   - node_id: processed
     label: Fraction of duplex substrate processed during early timecourse
     node_type: PHENOTYPE
@@ -492,6 +500,8 @@ causal_graphs:
   - node_id: d176e
     label: Supply D176E herA on pSSR rather than empty vector
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:F0NFK8
   - node_id: recovery
     label: Recovery of verified chromosomal herA-deletion cells
     node_type: PHENOTYPE
@@ -602,5 +612,14 @@ curation_events:
   outcome: needs_followup
   summary: Retain partial HerA causal-graph scientific self-review with open member and assay followups
   history_record: history/records/PF01935/2026-10-12T044221Z-codex-05713d.yaml
+  event_index: 0
+  llm_assisted: true
+- timestamp: '2026-10-18T02:54:46Z'
+  curator: Antigravity
+  action: EDIT
+  outcome: changed
+  summary: Ground causal graph gene and protein nodes in PF01935 with verified UniProtKB accessions (UniProtKB:Q97WG8,
+    UniProtKB:F0NFK8)
+  history_record: history/records/PF01935/2026-10-18T025446Z-antigravity-628c81.yaml
   event_index: 0
   llm_assisted: true

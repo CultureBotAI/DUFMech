@@ -1,0 +1,112 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01973
+  path: curation/families/PF01973.yaml
+session:
+  id: 2026-10-18T025446Z-antigravity-546c26
+  timestamp: '2026-10-18T02:54:46Z'
+  actors:
+  - type: ai_agent
+    name: Antigravity
+    model: Claude Opus 4.6
+    agent_tool: Antigravity
+events:
+- type: EDIT
+  outcome: changed
+  summary: Ground causal graph gene and protein nodes in PF01973 with verified UniProtKB
+    accessions (UniProtKB:Q8EC71, UniProtKB:Q8ECA5, UniProtKB:Q8ECA6, UniProtKB:Q8EC85,
+    UniProtKB:Q8EC84)
+  details: 'Reviewed PF01973 causal_graphs and grounded gene/protein PERTURBATION,
+    ACTIVITY, and protein-complex STATE nodes across 28 causal graph(s) using verified
+    UniProtKB accessions from family_mapping:
+
+    - `mr1-maf1-deletion-2024`: grounded deletion -> UniProtKB:Q8EC71; s143_modification
+    -> UniProtKB:Q8ECA5, UniProtKB:Q8ECA6; sheared_signal -> UniProtKB:Q8ECA5, UniProtKB:Q8ECA6
+
+    - `mr1-maf2-deletion-2024`: grounded deletion -> UniProtKB:Q8EC85; s105_modification
+    -> UniProtKB:Q8ECA5
+
+    - `mr1-double-maf-deletion-2024`: grounded double_loss -> UniProtKB:Q8EC71, UniProtKB:Q8EC85;
+    modified_flagellin -> UniProtKB:Q8ECA5
+
+    - `mr1-maf1-rescue-2024`: grounded rescue -> UniProtKB:Q8EC71; slow_band -> UniProtKB:Q8ECA5,
+    UniProtKB:Q8ECA6
+
+    - `mr1-maf2-rescue-2024`: grounded rescue -> UniProtKB:Q8EC85; slow_band -> UniProtKB:Q8ECA5,
+    UniProtKB:Q8ECA6
+
+    - `mr1-maf1-d247a-2024`: grounded variant -> UniProtKB:Q8EC71; slow_band -> UniProtKB:Q8ECA5,
+    UniProtKB:Q8ECA6
+
+    - `mr1-maf1-d333a-2024`: grounded variant -> UniProtKB:Q8EC71; slow_band -> UniProtKB:Q8ECA5,
+    UniProtKB:Q8ECA6
+
+    - `mr1-maf2-d261a-2024`: grounded variant -> UniProtKB:Q8EC85; slow_band -> UniProtKB:Q8ECA5,
+    UniProtKB:Q8ECA6
+
+    - `mr1-maf2-d347a-2024`: grounded variant -> UniProtKB:Q8EC85; slow_band -> UniProtKB:Q8ECA5,
+    UniProtKB:Q8ECA6
+
+    - `mr1-maf1-truncation-420-2024`: grounded truncation -> UniProtKB:Q8EC71; slow_band
+    -> UniProtKB:Q8ECA5, UniProtKB:Q8ECA6
+
+    - `mr1-maf1-truncation-699-2024`: grounded truncation -> UniProtKB:Q8EC71; slow_band
+    -> UniProtKB:Q8ECA5, UniProtKB:Q8ECA6
+
+    - `mr1-maf1-bacth-2024`: grounded full_pair -> UniProtKB:Q8EC71, UniProtKB:Q8ECA5,
+    UniProtKB:Q8ECA6; short_pair -> UniProtKB:Q8EC71, UniProtKB:Q8ECA5, UniProtKB:Q8ECA6;
+    partial_pair -> UniProtKB:Q8EC71, UniProtKB:Q8ECA5, UniProtKB:Q8ECA6; ctd421_pair
+    -> UniProtKB:Q8EC71, UniProtKB:Q8ECA5, UniProtKB:Q8ECA6; ctd550_pair -> UniProtKB:Q8EC71,
+    UniProtKB:Q8ECA5, UniProtKB:Q8ECA6
+
+    - `mr1-glfm-deletion-2024`: grounded glfm_loss -> UniProtKB:Q8EC84; s105_modified
+    -> UniProtKB:Q8ECA5
+
+    - `mr1-glfm-double-deletion-2024`: grounded double_loss -> UniProtKB:Q8EC71, UniProtKB:Q8EC84;
+    slow_band -> UniProtKB:Q8ECA5, UniProtKB:Q8ECA6
+
+    - `mr1-glfm-rescue-2024`: grounded single_rescue -> UniProtKB:Q8EC84; wt_pattern
+    -> UniProtKB:Q8ECA5, UniProtKB:Q8ECA6; double_rescue -> UniProtKB:Q8EC84, UniProtKB:Q8EC71;
+    parental_pattern -> UniProtKB:Q8ECA5, UniProtKB:Q8ECA6
+
+    - `mr1-glfm-d77a-2024`: grounded variant -> UniProtKB:Q8EC84; restored_shift ->
+    UniProtKB:Q8ECA5, UniProtKB:Q8ECA6
+
+    - `mr1-glfm-tolerated-variants-2024`: grounded f24l -> UniProtKB:Q8EC84; shift
+    -> UniProtKB:Q8ECA5, UniProtKB:Q8ECA6; r25k -> UniProtKB:Q8EC84; e80a -> UniProtKB:Q8EC84
+
+    - `mr1-maf2-glfm-bacth-2024`: grounded glfm_addition -> UniProtKB:Q8EC84, UniProtKB:Q8EC85,
+    UniProtKB:Q8ECA5, UniProtKB:Q8ECA6; d77a -> UniProtKB:Q8EC84, UniProtKB:Q8EC85,
+    UniProtKB:Q8ECA5, UniProtKB:Q8ECA6
+
+    - `mr1-maf1-caulo-reconstitution-2024`: grounded joint_expression -> UniProtKB:Q8EC71,
+    UniProtKB:Q8ECA5; s143_adducts -> UniProtKB:Q8ECA5; s105_adducts -> UniProtKB:Q8ECA5
+
+    - `mr1-maf2-glfm-caulo-reconstitution-2024`: grounded joint_system -> UniProtKB:Q8EC85,
+    UniProtKB:Q8EC84, UniProtKB:Q8ECA5; s105_adducts -> UniProtKB:Q8ECA5
+
+    - `mr1-maf1-neub-adduct-2024`: grounded pse_deficient_system -> UniProtKB:Q8EC71,
+    UniProtKB:Q8ECA5; adduct220 -> UniProtKB:Q8ECA5
+
+    - `mr1-maf2-glfm-neub-adduct-2024`: grounded pse_deficient_system -> UniProtKB:Q8EC85,
+    UniProtKB:Q8EC84, UniProtKB:Q8ECA5; adduct220 -> UniProtKB:Q8ECA5
+
+    - `mr1-joint-mafs-caulo-2024`: grounded glfm_addition -> UniProtKB:Q8EC84, UniProtKB:Q8EC71,
+    UniProtKB:Q8EC85, UniProtKB:Q8ECA5; retardation -> UniProtKB:Q8ECA5
+
+    - `mr1-flaa-serine-sets-2024`: grounded five_sa -> UniProtKB:Q8ECA5; slow_migration
+    -> UniProtKB:Q8ECA5; two_105 -> UniProtKB:Q8ECA5; three_105 -> UniProtKB:Q8ECA5;
+    two_143 -> UniProtKB:Q8ECA5; three_143 -> UniProtKB:Q8ECA5
+
+    - `mr1-pse-pathway-2024`: grounded slow_band -> UniProtKB:Q8ECA5, UniProtKB:Q8ECA6
+
+    - `mr1-cn32-glfm-rescue-2024`: grounded shift -> UniProtKB:Q8ECA5, UniProtKB:Q8ECA6
+
+    - `mr1-cn32-glfm-caulo-2024`: grounded cross_system -> UniProtKB:Q8EC85, UniProtKB:Q8ECA6;
+    shift -> UniProtKB:Q8ECA6
+
+    - `mr1-maf1-ecoli-reconstitution-2024`: grounded joint_system -> UniProtKB:Q8EC71,
+    UniProtKB:Q8ECA5; shift -> UniProtKB:Q8ECA5'
+  sections:
+  - causal_graphs

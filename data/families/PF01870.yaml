@@ -117,6 +117,8 @@ causal_graphs:
   - node_id: add-hjc
     label: Increase Hjc dose after RecA intermediate formation
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:E7FHX4
   - node_id: intermediates
     label: RecA-generated intermediate gel signal
     node_type: STATE
@@ -176,6 +178,8 @@ causal_graphs:
   - node_id: anti-hjc
     label: Deplete crude extract with anti-Hjc antibody
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:E7FHX4
   - node_id: extract-cleavage
     label: Extract-dependent junction cleavage product
     node_type: ACTIVITY
@@ -292,6 +296,8 @@ causal_graphs:
   - node_id: labeled-complex
     label: Radiolabeled Hjc-junction shifted-complex signal
     node_type: STATE
+    grounding:
+    - UniProtKB:E7FHX4
   edges:
   - edge_id: competitor-decreases-labeled-complex
     subject: competitor-junction
@@ -328,15 +334,23 @@ causal_graphs:
   - node_id: s34a-0171
     label: Substitute Hjc S34A in the SiRe_0171 reaction
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:F0NID3
   - node_id: s9a-2030
     label: Substitute Hjc S9A in the SiRe_2030 reaction
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:F0NID3
   - node_id: t138a-2030
     label: Substitute Hjc T138A in the SiRe_2030 reaction
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:F0NID3
   - node_id: t138a-2056kd
     label: Substitute Hjc T138A in the SiRe_2056KD reaction
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:F0NID3
   - node_id: label-0171
     label: Hjc radiolabel signal with SiRe_0171
     node_type: STATE
@@ -433,12 +447,18 @@ causal_graphs:
   - node_id: s9e
     label: Replace WT Hjc with S9E
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:F0NID3
   - node_id: s34e
     label: Replace WT Hjc with S34E
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:F0NID3
   - node_id: d42n
     label: Replace WT Hjc with D42N
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:F0NID3
   - node_id: cleaved-fraction
     label: Junction substrate fraction cleaved after30 min
     node_type: ACTIVITY
@@ -513,9 +533,13 @@ causal_graphs:
   - node_id: s34e-uv
     label: Replace chromosomal Hjc with S34E under25 J/m2 UV
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:F0NID3
   - node_id: s34e-cisplatin
     label: Replace chromosomal Hjc with S34E under15 ug/ml cisplatin
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:F0NID3
   - node_id: uv-outgrowth
     label: Spot outgrowth after high-dose UV
     node_type: PHENOTYPE
@@ -573,5 +597,14 @@ curation_events:
   outcome: needs_followup
   summary: Retain partial scientific review of Hjc causal contexts.
   history_record: history/records/PF01870/2026-10-11T181337Z-codex-5fbc54.yaml
+  event_index: 0
+  llm_assisted: true
+- timestamp: '2026-10-18T02:54:46Z'
+  curator: Antigravity
+  action: EDIT
+  outcome: changed
+  summary: Ground causal graph gene and protein nodes in PF01870 with verified UniProtKB accessions (UniProtKB:E7FHX4,
+    UniProtKB:F0NID3)
+  history_record: history/records/PF01870/2026-10-18T025446Z-antigravity-218ad0.yaml
   event_index: 0
   llm_assisted: true

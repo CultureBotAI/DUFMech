@@ -230,6 +230,8 @@ causal_graphs:
   - node_id: retarded
     label: Retarded TrmB-associated region-1 DNA
     node_type: STATE
+    grounding:
+    - UniProtKB:Q7LYW4
   edges:
   - edge_id: maltose-reduces-retardation
     subject: maltose
@@ -284,6 +286,8 @@ causal_graphs:
   - node_id: protection
     label: TrmB-associated DNaseI protection of promoter regions
     node_type: STATE
+    grounding:
+    - UniProtKB:Q7LYW4
   edges:
   - edge_id: reduces-protection
     subject: maltose
@@ -824,6 +828,8 @@ causal_graphs:
   - node_id: occupancy
     label: Proposed TrmB occupancy overlapping the TM BRE/TATA region
     node_type: STATE
+    grounding:
+    - UniProtKB:Q7LYW4
   - node_id: tbp
     label: TBP recruitment to the TM promoter
     node_type: PROCESS
@@ -3025,5 +3031,13 @@ curation_events:
   outcome: needs_followup
   summary: Review original Lee2007 TrmBL1 reported-assay causal contexts
   history_record: history/records/PF01978/2026-10-15T193604Z-codex-22d4b0.yaml
+  event_index: 0
+  llm_assisted: true
+- timestamp: '2026-10-18T02:54:46Z'
+  curator: Antigravity
+  action: EDIT
+  outcome: changed
+  summary: Ground causal graph gene and protein nodes in PF01978 with verified UniProtKB accessions (UniProtKB:Q7LYW4)
+  history_record: history/records/PF01978/2026-10-18T025446Z-antigravity-bc5921.yaml
   event_index: 0
   llm_assisted: true

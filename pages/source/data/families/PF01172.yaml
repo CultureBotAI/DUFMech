@@ -174,9 +174,13 @@ causal_graphs:
   - node_id: replace-wt-sbds-r126t
     label: Replace WT SBDS with R126T in the hydrolysis assay
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q9Y3A5
   - node_id: add-k151n-sbds-rabbit-60s
     label: Add K151N SBDS rather than no SBDS to EFL1 and rabbit 60S
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q9Y3A5
   - node_id: efl1-pi-release
     label: 60S-dependent EFL1 phosphate-release readout
     node_type: ACTIVITY
@@ -253,9 +257,13 @@ causal_graphs:
   - node_id: r126t-in-mouse-release-assay
     label: Replace WT SBDS with R126T in the mouse-particle assay
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q9Y3A5
   - node_id: k151n-in-mouse-release-assay
     label: Replace WT SBDS with K151N in the mouse-particle assay
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q9Y3A5
   - node_id: mutant-assay-eif6-release
     label: eIF6 release from mouse pre-60S particles
     node_type: PROCESS
@@ -310,5 +318,13 @@ curation_events:
   outcome: needs_followup
   summary: Retain partial scientific self-review of SBDS release and hydrolysis contexts.
   history_record: history/records/PF01172/2026-10-11T100228Z-codex-35c7ce.yaml
+  event_index: 0
+  llm_assisted: true
+- timestamp: '2026-10-18T02:54:46Z'
+  curator: Antigravity
+  action: EDIT
+  outcome: changed
+  summary: Ground causal graph gene and protein nodes in PF01172 with verified UniProtKB accessions (UniProtKB:Q9Y3A5)
+  history_record: history/records/PF01172/2026-10-18T025446Z-antigravity-66ac18.yaml
   event_index: 0
   llm_assisted: true

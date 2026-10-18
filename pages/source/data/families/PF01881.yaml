@@ -148,12 +148,18 @@ causal_graphs:
   - node_id: y31a
     label: Substitute Y31A in intact PF1131
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q8U1S4
   - node_id: h46a
     label: Substitute H46A in intact PF1131
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q8U1S4
   - node_id: k52a
     label: Substitute K52A in intact PF1131
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q8U1S4
   - node_id: product-yield
     label: Repeat-RNA cleavage product yield
     node_type: ACTIVITY
@@ -228,6 +234,8 @@ causal_graphs:
   - node_id: four-glycine-mutant
     label: Jointly substitute G223A/G225A/G231A/G233A in PF1131
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q8U1S4
   - node_id: cleavage-signal
     label: Cas6-dependent repeat-RNA cleavage signal
     node_type: ACTIVITY
@@ -267,6 +275,8 @@ causal_graphs:
   - node_id: cas6-preincubation
     label: Preincubate repeat RNA with increasing Cas6
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q8U1S4
   - node_id: lead-fragments
     label: Pb-induced cleavage signals across RNA nucleotides2-8
     node_type: STATE
@@ -333,6 +343,8 @@ causal_graphs:
   - node_id: shifted-rnp
     label: Shifted RNA-protein complex signal
     node_type: STATE
+    grounding:
+    - UniProtKB:Q8U1S4
   - node_id: cleaved-rna
     label: RNA cleavage product signal
     node_type: STATE
@@ -560,6 +572,8 @@ causal_graphs:
   - node_id: proposed-wraparound-context
     label: Proposed RNA recognition plus linker passage over the intact glycine-loop surface
     node_type: STATE
+    grounding:
+    - UniProtKB:Q8U1S4
   - node_id: proposed-scissile-alignment
     label: Proposed positioning of the scissile bond near the catalytic region
     node_type: STATE
@@ -597,5 +611,13 @@ curation_events:
   outcome: needs_followup
   summary: Retain partial scientific review of PF01881 Cas6 causal contexts
   history_record: history/records/PF01881/2026-10-11T195244Z-codex-639f8b.yaml
+  event_index: 0
+  llm_assisted: true
+- timestamp: '2026-10-18T02:54:46Z'
+  curator: Antigravity
+  action: EDIT
+  outcome: changed
+  summary: Ground causal graph gene and protein nodes in PF01881 with verified UniProtKB accessions (UniProtKB:Q8U1S4)
+  history_record: history/records/PF01881/2026-10-18T025446Z-antigravity-6c23fe.yaml
   event_index: 0
   llm_assisted: true

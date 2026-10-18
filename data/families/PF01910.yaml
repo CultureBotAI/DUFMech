@@ -163,6 +163,8 @@ causal_graphs:
   - node_id: apparent-assembly
     label: Larger apparent TM0486 assemblies
     node_type: STATE
+    grounding:
+    - UniProtKB:Q9WYV6
   edges:
   - edge_id: production-increases-size
     subject: production-thiamine
@@ -257,9 +259,13 @@ causal_graphs:
   - node_id: sc-deletion
     label: ECM15 deletion in BY4741
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:P35195
   - node_id: cn-rescue
     label: C. neoformans ECM15 expression in the yeast deletion background
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:J9VTN7
   - node_id: cfw-growth
     label: Calcofluor-white plate growth
     node_type: PHENOTYPE
@@ -320,6 +326,8 @@ causal_graphs:
   - node_id: ecm-deletion
     label: ECM15 deletion in the Cac2-GFP localization assay
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:J9VTN7
   - node_id: ecm-nuclear
     label: Visible Ecm15 nuclear enrichment
     node_type: STATE
@@ -395,9 +403,13 @@ causal_graphs:
   - node_id: deletion
     label: ECM15 deletion relative to H99
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:J9VTN7
   - node_id: own-complement
     label: Own-gene ECM15 complementation relative to deletion
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:J9VTN7
   - node_id: capsule
     label: Apparent capsule size under glucose-free conditions
     node_type: PHENOTYPE
@@ -449,9 +461,13 @@ causal_graphs:
   - node_id: deletion
     label: ECM15 deletion relative to H99
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:J9VTN7
   - node_id: complement
     label: Own-gene ECM15 complementation relative to deletion
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:J9VTN7
   - node_id: sds-growth
     label: Spot growth under SDS challenge
     node_type: PHENOTYPE
@@ -536,9 +552,13 @@ causal_graphs:
   - node_id: deletion
     label: ECM15 deletion relative to H99
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:J9VTN7
   - node_id: complement
     label: Own-gene ECM15 complementation relative to deletion
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:J9VTN7
   - node_id: filaments
     label: Mating-associated filament formation
     node_type: PHENOTYPE
@@ -589,9 +609,13 @@ causal_graphs:
   - node_id: deletion
     label: ECM15 deletion relative to H99
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:J9VTN7
   - node_id: complement
     label: Own-gene ECM15 complementation relative to deletion
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:J9VTN7
   - node_id: pigment
     label: Visible norepinephrine-dependent pigmentation
     node_type: PHENOTYPE
@@ -643,9 +667,13 @@ causal_graphs:
   - node_id: deletion
     label: ECM15 deletion strain in the published comparison
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:J9VTN7
   - node_id: complement
     label: Own-gene-complement strain relative to deletion
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:J9VTN7
   - node_id: host-survival
     label: Mouse time to moribund endpoint
     node_type: PHENOTYPE
@@ -698,6 +726,8 @@ causal_graphs:
   - node_id: elevated-expression
     label: Published elevated-ECM15-expression condition
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:J9VTN7
   - node_id: host-survival
     label: Mouse time to moribund endpoint in the matched expression experiment
     node_type: PHENOTYPE
@@ -773,5 +803,14 @@ curation_events:
   outcome: needs_followup
   summary: Review PF01910 member-specific binding and phenotype graphs
   history_record: history/records/PF01910/2026-10-12T003314Z-codex-930687.yaml
+  event_index: 0
+  llm_assisted: true
+- timestamp: '2026-10-18T02:54:46Z'
+  curator: Antigravity
+  action: EDIT
+  outcome: changed
+  summary: Ground causal graph gene and protein nodes in PF01910 with verified UniProtKB accessions (UniProtKB:Q9WYV6,
+    UniProtKB:P35195, UniProtKB:J9VTN7)
+  history_record: history/records/PF01910/2026-10-18T025446Z-antigravity-46e707.yaml
   event_index: 0
   llm_assisted: true

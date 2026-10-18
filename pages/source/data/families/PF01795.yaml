@@ -96,6 +96,8 @@ causal_graphs:
   - node_id: both-enzymes-sam-30s
     label: RsmH and RsmI plus SAM and unmethylated 30S
     node_type: ACTIVITY
+    grounding:
+    - UniProtKB:P60390
   - node_id: omit-sam
     label: Omit SAM from the joint-enzyme 30S reaction
     node_type: PERTURBATION
@@ -260,9 +262,13 @@ causal_graphs:
   - node_id: delete-rsmh
     label: Single rsmH deletion relative to WT
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:P60390
   - node_id: delete-rsmh-rsmi
     label: Combined rsmH and rsmI deletion relative to WT
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:P60390
   - node_id: auu-reporter
     label: WT-normalized AUU initiation F/R reporter ratio
     node_type: PHENOTYPE
@@ -454,9 +460,13 @@ causal_graphs:
   - node_id: delete-rsmh
     label: Single rsmH deletion relative to WT in LB at 37 C
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:P60390
   - node_id: delete-rsmh-rsmi
     label: Double rsmH/rsmI deletion relative to WT in LB at 37 C
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:P60390
   - node_id: doubling-time
     label: OD600-derived doubling time in minutes
     node_type: PHENOTYPE
@@ -508,5 +518,13 @@ curation_events:
   outcome: needs_followup
   summary: Retain partial scientific self-review of RsmH causal contexts
   history_record: history/records/PF01795/2026-10-11T151331Z-codex-5ed9a7.yaml
+  event_index: 0
+  llm_assisted: true
+- timestamp: '2026-10-18T02:54:46Z'
+  curator: Antigravity
+  action: EDIT
+  outcome: changed
+  summary: Ground causal graph gene and protein nodes in PF01795 with verified UniProtKB accessions (UniProtKB:P60390)
+  history_record: history/records/PF01795/2026-10-18T025446Z-antigravity-5ca315.yaml
   event_index: 0
   llm_assisted: true

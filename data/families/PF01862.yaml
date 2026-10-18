@@ -105,9 +105,13 @@ causal_graphs:
   - node_id: e109q-preparation
     label: Replace WT preparation with E109Q Mj-PdaD
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q57764
   - node_id: n47a-preparation
     label: Replace WT preparation with N47A Mj-PdaD
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q57764
   - node_id: radiolabeled-co2-output
     label: Radiolabeled carbon dioxide released from L-arginine
     node_type: STATE
@@ -189,6 +193,8 @@ causal_graphs:
   - node_id: reduced-mature-active-fraction
     label: Proposed reduced mature pyruvoyl-bearing fraction in N47A assay solution
     node_type: STATE
+    grounding:
+    - UniProtKB:Q57764
   - node_id: n47a-preparation-activity
     label: N47A decarboxylation activity per unit total protein
     node_type: ACTIVITY
@@ -227,5 +233,13 @@ curation_events:
   outcome: needs_followup
   summary: Review Mj-PdaD activity and unresolved maturation contribution
   history_record: history/records/PF01862/2026-10-11T161806Z-codex-6ec47e.yaml
+  event_index: 0
+  llm_assisted: true
+- timestamp: '2026-10-18T02:54:46Z'
+  curator: Antigravity
+  action: EDIT
+  outcome: changed
+  summary: Ground causal graph gene and protein nodes in PF01862 with verified UniProtKB accessions (UniProtKB:Q57764)
+  history_record: history/records/PF01862/2026-10-18T025446Z-antigravity-6787cc.yaml
   event_index: 0
   llm_assisted: true

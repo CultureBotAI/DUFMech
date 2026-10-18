@@ -24,6 +24,8 @@ causal_graphs:
   - node_id: rescue
     label: cysZ complementation in CR018 versus deletion parent
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q8NLX4
   - node_id: sulfate
     label: Growth on solid sulfate medium
     node_type: PHENOTYPE
@@ -292,9 +294,13 @@ causal_graphs:
   - node_id: wt
     label: WT MamO added to delta-mamO/delta-R9
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q2W8Q2
   - node_id: h116a
     label: H116A MamO added to delta-mamO/delta-R9
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q2W8Q2
   - node_id: mame
     label: MamE proteolytic processing
     node_type: PROCESS
@@ -422,6 +428,8 @@ causal_graphs:
   - node_id: wt
     label: WT MamO complementation in single delta-mamO
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q2W8Q2
   - node_id: mame
     label: MamE proteolytic processing
     node_type: PROCESS
@@ -516,21 +524,33 @@ causal_graphs:
   - node_id: wt
     label: WT FLAG-MamO complementation in LimO-positive delta-mamO
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q2W8Q2
   - node_id: h116a
     label: H116A FLAG-MamO complementation in LimO-positive delta-mamO
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q2W8Q2
   - node_id: d149a
     label: D149A FLAG-MamO complementation in LimO-positive delta-mamO
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q2W8Q2
   - node_id: t225a
     label: T225A FLAG-MamO complementation in LimO-positive delta-mamO
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q2W8Q2
   - node_id: h148a
     label: H148A FLAG-MamO complementation in LimO-positive delta-mamO
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q2W8Q2
   - node_id: h263a
     label: H263A FLAG-MamO complementation in LimO-positive delta-mamO
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q2W8Q2
   - node_id: response
     label: Culture magnetic response
     node_type: PHENOTYPE
@@ -670,15 +690,23 @@ causal_graphs:
   - node_id: abc-vector
     label: pmpABC expression versus empty vector
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:E7BBJ3
   - node_id: ac
     label: pmpAC versus pmpC-only expression
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:E7BBJ3
   - node_id: bc
     label: pmpBC versus pmpC-only expression
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:E7BBJ3
   - node_id: abc-c
     label: pmpABC versus pmpC-only expression
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:E7BBJ3
   - node_id: pig
     label: Normalized prodigiosin signal
     node_type: PHENOTYPE
@@ -786,15 +814,23 @@ causal_graphs:
   - node_id: abc-vector
     label: pmpABC expression versus empty vector
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:E7BBJ3
   - node_id: ac
     label: pmpAC versus pmpC-only expression
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:E7BBJ3
   - node_id: bc
     label: pmpBC versus pmpC-only expression
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:E7BBJ3
   - node_id: abc-c
     label: pmpABC versus pmpC-only expression
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:E7BBJ3
   - node_id: pig
     label: Normalized prodigiosin signal
     node_type: PHENOTYPE

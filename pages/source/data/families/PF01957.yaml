@@ -171,6 +171,8 @@ causal_graphs:
   - node_id: operon_loss
     label: Joint yqeZyqfAB deletion versus CU1065 parent
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:P54465
   - node_id: inhibition
     label: Sublancin-associated lawn inhibition by JH642
     node_type: PHENOTYPE
@@ -212,6 +214,8 @@ causal_graphs:
   - node_id: induced_operon
     label: Induced yqeZyqfAB in sigW mutant versus matched sigW control
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:P54465
   - node_id: inhibition
     label: Sublancin-associated inhibition zone under matched xylose
     node_type: PHENOTYPE
@@ -248,5 +252,13 @@ curation_events:
   outcome: no_change
   summary: Retain partial PF01957 scientific review and causal boundaries
   history_record: history/records/PF01957/2026-10-12T141740Z-codex-cfa1ed.yaml
+  event_index: 0
+  llm_assisted: true
+- timestamp: '2026-10-18T02:54:46Z'
+  curator: Antigravity
+  action: EDIT
+  outcome: changed
+  summary: Ground causal graph gene and protein nodes in PF01957 with verified UniProtKB accessions (UniProtKB:P54465)
+  history_record: history/records/PF01957/2026-10-18T025446Z-antigravity-078723.yaml
   event_index: 0
   llm_assisted: true
