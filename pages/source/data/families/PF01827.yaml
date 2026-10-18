@@ -90,15 +90,23 @@ causal_graphs:
   - node_id: truncate-to-318
     label: Replace full-length FOG-2 with residues 1-318
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q2YS43
   - node_id: truncate-to-299
     label: Replace full-length FOG-2 with residues 1-299
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q2YS43
   - node_id: truncate-to-263
     label: Replace full-length FOG-2 with residues 1-263
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q2YS43
   - node_id: truncate-to-251
     label: Replace full-length FOG-2 with residues 1-251
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q2YS43
   - node_id: gld1-two-hybrid-output
     label: Ordinal GLD-1-dependent yeast two-hybrid output
     node_type: PHENOTYPE
@@ -188,6 +196,9 @@ causal_graphs:
   - node_id: transfer-fog2-terminal-exon
     label: Replace the FTR-1 terminal segment with reported FOG-2 exon 4
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q2YS43
+    - UniProtKB:G5EC06
   - node_id: chimera-gld1-reporter
     label: GLD-1-dependent yeast two-hybrid output of the chimera
     node_type: PHENOTYPE
@@ -352,5 +363,14 @@ curation_events:
   outcome: needs_followup
   summary: Review FOG-2 construct and germline contexts
   history_record: history/records/PF01827/2026-10-11T154819Z-codex-5b27e9.yaml
+  event_index: 0
+  llm_assisted: true
+- timestamp: '2026-10-18T02:54:46Z'
+  curator: Antigravity
+  action: EDIT
+  outcome: changed
+  summary: Ground causal graph gene and protein nodes in PF01827 with verified UniProtKB accessions (UniProtKB:Q2YS43,
+    UniProtKB:G5EC06)
+  history_record: history/records/PF01827/2026-10-18T025446Z-antigravity-7f20c4.yaml
   event_index: 0
   llm_assisted: true

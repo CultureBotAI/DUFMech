@@ -429,6 +429,8 @@ causal_graphs:
   - node_id: rescue
     label: PRRC1-HA expression in knockout cells
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q96M27
   - node_id: golgi
     label: Golgi fraction of ATG9A fluorescence
     node_type: PHENOTYPE
@@ -612,5 +614,13 @@ curation_events:
   outcome: needs_followup
   summary: Retain scoped scientific review of YjjX and PRRC1 causal contexts
   history_record: history/records/PF01931/2026-10-12T033028Z-codex-1ed0ad.yaml
+  event_index: 0
+  llm_assisted: true
+- timestamp: '2026-10-18T02:54:46Z'
+  curator: Antigravity
+  action: EDIT
+  outcome: changed
+  summary: Ground causal graph gene and protein nodes in PF01931 with verified UniProtKB accessions (UniProtKB:Q96M27)
+  history_record: history/records/PF01931/2026-10-18T025446Z-antigravity-77c514.yaml
   event_index: 0
   llm_assisted: true

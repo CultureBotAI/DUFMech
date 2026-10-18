@@ -152,9 +152,13 @@ causal_graphs:
   - node_id: delete-v105
     label: Remove terminal V105 from the recombinant proabylysin scaffold
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q9V1Y2
   - node_id: delete-m104-v105
     label: Remove terminal M104 and V105 from the proabylysin scaffold
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q9V1Y2
   - node_id: thermal-transition
     label: Apparent thermofluor melting temperature
     node_type: STATE
@@ -214,9 +218,13 @@ causal_graphs:
   - node_id: intramolecular-tail-occupancy
     label: Q101-V105 occupies the cleft and coordinates Zn through V105
     node_type: STATE
+    grounding:
+    - UniProtKB:Q9V1Y2
   - node_id: proposed-proabylysin-proteolysis
     label: Proposed proteolytic activity of the intact proabylysin scaffold
     node_type: ACTIVITY
+    grounding:
+    - UniProtKB:Q9V1Y2
   edges:
   - edge_id: tail-may-suppress-proteolysis
     subject: intramolecular-tail-occupancy
@@ -255,9 +263,13 @@ causal_graphs:
   - node_id: partner-helix-occupancy
     label: Partner E102-I110 helix occupies the projannalysin cleft
     node_type: STATE
+    grounding:
+    - UniProtKB:Q57587
   - node_id: proposed-projannalysin-proteolysis
     label: Proposed proteolytic activity of the projannalysin scaffold
     node_type: ACTIVITY
+    grounding:
+    - UniProtKB:Q57587
   edges:
   - edge_id: partner-helix-may-suppress-proteolysis
     subject: partner-helix-occupancy
@@ -292,5 +304,14 @@ curation_events:
   outcome: needs_followup
   summary: Retain partial scientific self-review of PF01863 scoped effects and latency hypotheses
   history_record: history/records/PF01863/2026-10-11T163651Z-codex-d124ff.yaml
+  event_index: 0
+  llm_assisted: true
+- timestamp: '2026-10-18T02:54:46Z'
+  curator: Antigravity
+  action: EDIT
+  outcome: changed
+  summary: Ground causal graph gene and protein nodes in PF01863 with verified UniProtKB accessions (UniProtKB:Q9V1Y2,
+    UniProtKB:Q57587)
+  history_record: history/records/PF01863/2026-10-18T025446Z-antigravity-4ffa4f.yaml
   event_index: 0
   llm_assisted: true

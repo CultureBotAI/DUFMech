@@ -88,6 +88,8 @@ causal_graphs:
   - node_id: higher-protein-loading
     label: Increase TtCorB loading from 1:810 to 1:30 at 5 mM external MgCl2
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:A0A0K6IWT9
   - node_id: higher-external-magnesium
     label: Increase external MgCl2 from 0.75 to 5 mM in the separate substrate series
     node_type: PERTURBATION
@@ -229,24 +231,38 @@ causal_graphs:
   - node_id: s26a
     label: S26A instead of WT TtCorB
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:A0A0K6IWT9
   - node_id: s30a
     label: S30A instead of WT TtCorB
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:A0A0K6IWT9
   - node_id: n76a
     label: N76A instead of WT TtCorB
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:A0A0K6IWT9
   - node_id: s117a
     label: S117A instead of WT TtCorB
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:A0A0K6IWT9
   - node_id: e118a
     label: E118A instead of WT TtCorB
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:A0A0K6IWT9
   - node_id: p121g
     label: P121G instead of WT TtCorB
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:A0A0K6IWT9
   - node_id: k122a
     label: K122A instead of WT TtCorB
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:A0A0K6IWT9
   - node_id: mutant-magnesium-accumulation
     label: Magnesium accumulation after external MgCl2 addition
     node_type: STATE
@@ -390,5 +406,13 @@ curation_events:
   outcome: needs_followup
   summary: Retain partial scientific causal-graph self-review for PF01595
   history_record: history/records/PF01595/2026-10-11T120923Z-codex-1be3da.yaml
+  event_index: 0
+  llm_assisted: true
+- timestamp: '2026-10-18T02:54:46Z'
+  curator: Antigravity
+  action: EDIT
+  outcome: changed
+  summary: Ground causal graph gene and protein nodes in PF01595 with verified UniProtKB accessions (UniProtKB:A0A0K6IWT9)
+  history_record: history/records/PF01595/2026-10-18T025446Z-antigravity-fd03c6.yaml
   event_index: 0
   llm_assisted: true

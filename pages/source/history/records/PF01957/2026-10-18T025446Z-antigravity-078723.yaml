@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01957
+  path: curation/families/PF01957.yaml
+session:
+  id: 2026-10-18T025446Z-antigravity-078723
+  timestamp: '2026-10-18T02:54:46Z'
+  actors:
+  - type: ai_agent
+    name: Antigravity
+    model: Claude Opus 4.6
+    agent_tool: Antigravity
+events:
+- type: EDIT
+  outcome: changed
+  summary: Ground causal graph gene and protein nodes in PF01957 with verified UniProtKB
+    accessions (UniProtKB:P54465)
+  details: 'Reviewed PF01957 causal_graphs and grounded gene/protein PERTURBATION,
+    ACTIVITY, and protein-complex STATE nodes across 2 causal graph(s) using verified
+    UniProtKB accessions from family_mapping:
+
+    - `bacillus-yqez-operon-deletion-2006`: grounded operon_loss -> UniProtKB:P54465
+
+    - `bacillus-yqez-operon-complementation-2006`: grounded induced_operon -> UniProtKB:P54465'
+  sections:
+  - causal_graphs

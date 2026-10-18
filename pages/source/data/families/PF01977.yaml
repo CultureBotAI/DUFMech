@@ -329,21 +329,33 @@ causal_graphs:
   - node_id: r173a
     label: R173A substitution in AnFdc
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:A2QHE5
   - node_id: r173k
     label: R173K substitution in AnFdc
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:A2QHE5
   - node_id: e277d
     label: E277D substitution in AnFdc
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:A2QHE5
   - node_id: e277q
     label: E277Q substitution in AnFdc
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:A2QHE5
   - node_id: e282d
     label: E282D substitution in AnFdc
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:A2QHE5
   - node_id: e282q
     label: E282Q substitution in AnFdc
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:A2QHE5
   - node_id: turnover
     label: Measured cinnamic-acid decarboxylation relative to WT
     node_type: ACTIVITY
@@ -569,15 +581,23 @@ causal_graphs:
   - node_id: wt_light
     label: Ambient-light incubation of WT AnFdc
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:A2QHE5
   - node_id: e277d_light
     label: Ambient-light incubation of E277D AnFdc
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:A2QHE5
   - node_id: e282d_light
     label: Ambient-light incubation of E282D AnFdc
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:A2QHE5
   - node_id: wt_uv
     label: Five-minute365 nm illumination of dark-purified WT
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:A2QHE5
   - node_id: wt_activity
     label: WT cinnamate-decarboxylation activity
     node_type: ACTIVITY
@@ -844,9 +864,13 @@ causal_graphs:
   - node_id: f437l
     label: F437L substitution in the C-terminal domain
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:A2QHE5
   - node_id: l439g
     label: L439G substitution in the C-terminal domain
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:A2QHE5
   - node_id: turnover
     label: Whole-AnFdc cinnamate turnover relative to WT
     node_type: ACTIVITY
@@ -1039,21 +1063,39 @@ causal_graphs:
   - node_id: phb_mix
     label: Published BsCD-prFMN-Mn with PHB
     node_type: PROCESS
+    grounding:
+    - UniProtKB:P94405
+    - UniProtKB:C0H3U9
   - node_id: van_mix
     label: Published BsCD-prFMN-Mn with vanillic acid
     node_type: PROCESS
+    grounding:
+    - UniProtKB:P94405
+    - UniProtKB:C0H3U9
   - node_id: proto_mix
     label: Published BsCD-prFMN-Mn with protocatechuic acid
     node_type: PROCESS
+    grounding:
+    - UniProtKB:P94405
+    - UniProtKB:C0H3U9
   - node_id: methyl_mix
     label: Published BsCD-prFMN-Mn with 3-Me-4-hydroxybenzoic acid
     node_type: PROCESS
+    grounding:
+    - UniProtKB:P94405
+    - UniProtKB:C0H3U9
   - node_id: gallic_mix
     label: Published BsCD-prFMN-Mn with gallic acid
     node_type: PROCESS
+    grounding:
+    - UniProtKB:P94405
+    - UniProtKB:C0H3U9
   - node_id: syr_mix
     label: Published BsCD-prFMN-Mn with syringic acid
     node_type: PROCESS
+    grounding:
+    - UniProtKB:P94405
+    - UniProtKB:C0H3U9
   - node_id: phb_product
     label: PHB-derived phenol product
     node_type: STATE
@@ -1244,6 +1286,9 @@ causal_graphs:
   - node_id: add_d
     label: Add cognate BsD before BsC-prFMN-Mn reconstitution
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:P94405
+    - UniProtKB:C0H3U9
   - node_id: phb_yield
     label: PHB endpoint conversion
     node_type: ACTIVITY
@@ -1301,15 +1346,27 @@ causal_graphs:
   - node_id: phb_mix
     label: ShC-BsD-prFMN-Mn with PHB
     node_type: PROCESS
+    grounding:
+    - UniProtKB:Q9S4M7
+    - UniProtKB:C0H3U9
   - node_id: van_mix
     label: ShC-BsD-prFMN-Mn with vanillic acid
     node_type: PROCESS
+    grounding:
+    - UniProtKB:Q9S4M7
+    - UniProtKB:C0H3U9
   - node_id: proto_mix
     label: ShC-BsD-prFMN-Mn with protocatechuic acid
     node_type: PROCESS
+    grounding:
+    - UniProtKB:Q9S4M7
+    - UniProtKB:C0H3U9
   - node_id: methyl_mix
     label: ShC-BsD-prFMN-Mn with methyl-PHB
     node_type: PROCESS
+    grounding:
+    - UniProtKB:Q9S4M7
+    - UniProtKB:C0H3U9
   - node_id: phb_product
     label: PHB-derived phenol product
     node_type: STATE
@@ -1403,12 +1460,21 @@ causal_graphs:
   - node_id: phb_mix
     label: BsC-ShD-prFMN-Mn with PHB
     node_type: PROCESS
+    grounding:
+    - UniProtKB:P94405
+    - UniProtKB:Q4R102
   - node_id: van_mix
     label: BsC-ShD-prFMN-Mn with vanillic acid
     node_type: PROCESS
+    grounding:
+    - UniProtKB:P94405
+    - UniProtKB:Q4R102
   - node_id: methyl_mix
     label: BsC-ShD-prFMN-Mn with methyl-PHB
     node_type: PROCESS
+    grounding:
+    - UniProtKB:P94405
+    - UniProtKB:Q4R102
   - node_id: phb_product
     label: PHB-derived phenol product
     node_type: STATE
@@ -1483,6 +1549,9 @@ causal_graphs:
   - node_id: excess_d
     label: Increase D:C from 0.2 to 4 at fixed ShC
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q9S4M7
+    - UniProtKB:Q4R102
   - node_id: phb_rate
     label: Measured PHB decarboxylation rate
     node_type: ACTIVITY
@@ -1521,6 +1590,9 @@ causal_graphs:
   - node_id: air_time
     label: Extend ShCD air exposure from 2 to 90 min
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q9S4M7
+    - UniProtKB:Q4R102
   - node_id: cofactor_addition
     label: Add prFMN after 90-min exposure and return to anoxic chamber
     node_type: PERTURBATION
@@ -1638,6 +1710,9 @@ causal_graphs:
   - node_id: tail_deletion
     label: Delete ShD residues 59-68 in V59X complex
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q9S4M7
+    - UniProtKB:Q4R102
   - node_id: van_yield
     label: Vanillate endpoint conversion relative to WT
     node_type: ACTIVITY
@@ -1699,6 +1774,8 @@ causal_graphs:
   - node_id: l182v
     label: ShC L182V in reconstituted ShCD
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q9S4M7
   - node_id: syr_yield
     label: Reported syringic-acid endpoint turnover
     node_type: ACTIVITY
@@ -1739,9 +1816,13 @@ causal_graphs:
   - node_id: closure_int2
     label: Proposed closure around ShCD-prFMN-PHB Int2
     node_type: PROCESS
+    grounding:
+    - UniProtKB:Q9S4M7
   - node_id: strained_int2
     label: Proposed strained aromatic Int2 within full ShCD
     node_type: STATE
+    grounding:
+    - UniProtKB:Q9S4M7
   - node_id: quinoid
     label: Proposed Int3Quinoid-prFMN complex
     node_type: STATE
@@ -1822,9 +1903,14 @@ causal_graphs:
   - node_id: partner_interface
     label: Proposed ShD association at the ShC loop interface
     node_type: PROCESS
+    grounding:
+    - UniProtKB:Q9S4M7
+    - UniProtKB:Q4R102
   - node_id: competent_loops
     label: Proposed catalytically competent ERE-loop configuration
     node_type: STATE
+    grounding:
+    - UniProtKB:Q9S4M7
   edges:
   - edge_id: partner-stabilizes-loops
     subject: partner_interface
@@ -1863,6 +1949,8 @@ causal_graphs:
   - node_id: reaction
     label: Purified ScFdc preparation with bound activating material and cinnamate
     node_type: PROCESS
+    grounding:
+    - UniProtKB:Q03034
   - node_id: product
     label: Styrene measured against authentic standards
     node_type: STATE
@@ -1939,18 +2027,24 @@ causal_graphs:
   - node_id: dialysis
     label: Dialyzing isolated FDC for 24 h
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q03034
   - node_id: isolated_activity
     label: Activity relative to undialyzed isolated FDC
     node_type: ACTIVITY
   - node_id: fresh_donor
     label: Adding fresh WT lysate to dialyzed FDC and cinnamate
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q03034
   - node_id: rescue_activity
     label: Styrene-producing activity of the dialyzed-FDC assay
     node_type: ACTIVITY
   - node_id: dialyzed_donor
     label: Substituting predialyzed lysate for fresh lysate in the rescue assay
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q03034
   edges:
   - edge_id: dialysis-lowers-activity
     subject: dialysis
@@ -2025,6 +2119,8 @@ causal_graphs:
   - node_id: delta_host
     label: FDC production in reported delta-ubiX host versus WT preparation
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q03034
   - node_id: isolated_activity
     label: Isolated FDC preparation activity
     node_type: ACTIVITY
@@ -2132,12 +2228,18 @@ causal_graphs:
   - node_id: wt_donor
     label: WT lysate donor with separated apo-FDC/cinnamate receiver
     node_type: PROCESS
+    grounding:
+    - UniProtKB:Q03034
   - node_id: tpad_donor
     label: Purified tPAD1 donor with separated apo-FDC/cinnamate receiver
     node_type: PROCESS
+    grounding:
+    - UniProtKB:Q03034
   - node_id: joint_donor
     label: tPAD1 plus delta-ubiX lysate donor with separated apo-FDC/cinnamate receiver
     node_type: PROCESS
+    grounding:
+    - UniProtKB:Q03034
   - node_id: output
     label: Receiver assay styrene accumulation relative to delta-ubiX lysate donor
     node_type: STATE
@@ -2213,6 +2315,8 @@ causal_graphs:
   - node_id: preparation_change
     label: Switching from singly expressed N-His FDC to tandem untagged-tPAD1/C-His FDC
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q03034
   - node_id: activity
     label: Purified FDC styrene-specific activity per total protein
     node_type: ACTIVITY
@@ -2255,18 +2359,24 @@ causal_graphs:
   - node_id: cinnamate_assay
     label: Coexpressed FDC preparation with cinnamate
     node_type: PROCESS
+    grounding:
+    - UniProtKB:Q03034
   - node_id: cinnamate_signal
     label: Cinnamate-associated A304 signal
     node_type: STATE
   - node_id: ferulate_assay
     label: Coexpressed FDC preparation with ferulate
     node_type: PROCESS
+    grounding:
+    - UniProtKB:Q03034
   - node_id: ferulate_signal
     label: Ferulate-associated A344 signal
     node_type: STATE
   - node_id: coumarate_assay
     label: Coexpressed FDC preparation with p-coumarate
     node_type: PROCESS
+    grounding:
+    - UniProtKB:Q03034
   - node_id: coumarate_signal
     label: p-Coumarate-associated A334 signal
     node_type: STATE
@@ -2343,6 +2453,8 @@ causal_graphs:
   - node_id: fraction_addition
     label: Adding solvent-cleared FDC-derived fraction to an apo-FDC assay
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q03034
   - node_id: activity
     label: Apo-FDC assay activity
     node_type: ACTIVITY
@@ -2382,9 +2494,13 @@ causal_graphs:
   - node_id: acid
     label: Acid pretreatment and neutralization of the activating fraction
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q03034
   - node_id: base
     label: Base pretreatment and neutralization of the activating fraction
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q03034
   - node_id: activation
     label: Fraction-dependent activation of an apo-FDC assay
     node_type: ACTIVITY
@@ -3038,54 +3154,72 @@ causal_graphs:
   - node_id: addition_1b
     label: Fresh cells and 24 h more incubation for plateaued 1b
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q03034
   - node_id: conversion_1b
     label: HPLC substrate depletion in the 1b reaction
     node_type: PROCESS
   - node_id: addition_1e
     label: Fresh cells and 24 h more incubation for plateaued 1e
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q03034
   - node_id: conversion_1e
     label: HPLC substrate depletion in the 1e reaction
     node_type: PROCESS
   - node_id: addition_1h
     label: Fresh cells and 24 h more incubation for plateaued 1h
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q03034
   - node_id: conversion_1h
     label: HPLC substrate depletion in the 1h reaction
     node_type: PROCESS
   - node_id: addition_1i
     label: Fresh cells and 24 h more incubation for plateaued 1i
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q03034
   - node_id: conversion_1i
     label: HPLC substrate depletion in the 1i reaction
     node_type: PROCESS
   - node_id: addition_1j
     label: Fresh cells and 24 h more incubation for plateaued 1j
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q03034
   - node_id: conversion_1j
     label: HPLC substrate depletion in the 1j reaction
     node_type: PROCESS
   - node_id: addition_1q
     label: Fresh cells and 24 h more incubation for plateaued 1q
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q03034
   - node_id: conversion_1q
     label: HPLC substrate depletion in the 1q reaction
     node_type: PROCESS
   - node_id: addition_1s
     label: Fresh cells and 24 h more incubation for plateaued 1s
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q03034
   - node_id: conversion_1s
     label: HPLC substrate depletion in the 1s reaction
     node_type: PROCESS
   - node_id: addition_1t
     label: Fresh cells and 24 h more incubation for plateaued 1t
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q03034
   - node_id: conversion_1t
     label: HPLC substrate depletion in the 1t reaction
     node_type: PROCESS
   - node_id: addition_1u
     label: Fresh cells and 24 h more incubation for plateaued 1u
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q03034
   - node_id: conversion_1u
     label: HPLC substrate depletion in the 1u reaction
     node_type: PROCESS
@@ -3428,9 +3562,13 @@ causal_graphs:
   - node_id: od2
     label: Cell loading increased from OD600 1 to 2
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q03034
   - node_id: od3
     label: Cell loading increased from OD600 1 to 3
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q03034
   - node_id: conversion
     label: Reported 4-h HPLC depletion of 1i
     node_type: PROCESS
@@ -3484,6 +3622,8 @@ causal_graphs:
   - node_id: temperature
     label: Change from 35 to 45 C in the plotted assay
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q03034
   - node_id: conversion
     label: HPLC depletion of 1i in the 2-4-h series
     node_type: PROCESS
@@ -3649,5 +3789,14 @@ curation_events:
   outcome: needs_followup
   summary: Retain partial scientific review of ScFdc substrate-scope graphs
   history_record: history/records/PF01977/2026-10-15T123008Z-codex-bac27f.yaml
+  event_index: 0
+  llm_assisted: true
+- timestamp: '2026-10-18T02:54:46Z'
+  curator: Antigravity
+  action: EDIT
+  outcome: changed
+  summary: Ground causal graph gene and protein nodes in PF01977 with verified UniProtKB accessions (UniProtKB:A2QHE5,
+    UniProtKB:P94405, UniProtKB:C0H3U9, UniProtKB:Q9S4M7, UniProtKB:Q4R102, UniProtKB:Q03034)
+  history_record: history/records/PF01977/2026-10-18T025446Z-antigravity-cc031b.yaml
   event_index: 0
   llm_assisted: true

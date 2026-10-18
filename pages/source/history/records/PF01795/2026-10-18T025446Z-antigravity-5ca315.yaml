@@ -1,0 +1,31 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01795
+  path: curation/families/PF01795.yaml
+session:
+  id: 2026-10-18T025446Z-antigravity-5ca315
+  timestamp: '2026-10-18T02:54:46Z'
+  actors:
+  - type: ai_agent
+    name: Antigravity
+    model: Claude Opus 4.6
+    agent_tool: Antigravity
+events:
+- type: EDIT
+  outcome: changed
+  summary: Ground causal graph gene and protein nodes in PF01795 with verified UniProtKB
+    accessions (UniProtKB:P60390)
+  details: 'Reviewed PF01795 causal_graphs and grounded gene/protein PERTURBATION,
+    ACTIVITY, and protein-complex STATE nodes across 3 causal graph(s) using verified
+    UniProtKB accessions from family_mapping:
+
+    - `rsmh-purified-ribosome-methylation`: grounded both-enzymes-sam-30s -> UniProtKB:P60390
+
+    - `rsmh-genotype-specific-translation-reporters`: grounded delete-rsmh -> UniProtKB:P60390;
+    delete-rsmh-rsmi -> UniProtKB:P60390
+
+    - `rsmh-lb-doubling-time`: grounded delete-rsmh -> UniProtKB:P60390; delete-rsmh-rsmi
+    -> UniProtKB:P60390'
+  sections:
+  - causal_graphs

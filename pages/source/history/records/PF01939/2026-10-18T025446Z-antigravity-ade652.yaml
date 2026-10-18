@@ -1,0 +1,48 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01939
+  path: curation/families/PF01939.yaml
+session:
+  id: 2026-10-18T025446Z-antigravity-ade652
+  timestamp: '2026-10-18T02:54:46Z'
+  actors:
+  - type: ai_agent
+    name: Antigravity
+    model: Claude Opus 4.6
+    agent_tool: Antigravity
+events:
+- type: EDIT
+  outcome: changed
+  summary: Ground causal graph gene and protein nodes in PF01939 with verified UniProtKB
+    accessions (UniProtKB:Q9V2E8, UniProtKB:Q5JER9, UniProtKB:Q8NR49, UniProtKB:Q8NQE1)
+  details: 'Reviewed PF01939 causal_graphs and grounded gene/protein PERTURBATION,
+    ACTIVITY, and protein-complex STATE nodes across 9 causal graph(s) using verified
+    UniProtKB accessions from family_mapping:
+
+    - `pab-flap-cleavage-2009`: grounded flap3 -> UniProtKB:Q9V2E8
+
+    - `pab-splayed-specificity-2009`: grounded double -> UniProtKB:Q9V2E8; clamp ->
+    UniProtKB:Q9V2E8
+
+    - `tko-mismatch-cleavage-2016`: grounded d165a -> UniProtKB:Q5JER9; e179a -> UniProtKB:Q5JER9;
+    k181a -> UniProtKB:Q5JER9
+
+    - `tko-pcna-stimulation-2016`: grounded clamp -> UniProtKB:Q5JER9; tail -> UniProtKB:Q5JER9
+
+    - `tko-high-concentration-substrates-2016`: grounded flap3 -> UniProtKB:Q5JER9;
+    flap5 -> UniProtKB:Q5JER9; splay3 -> UniProtKB:Q5JER9; splay5 -> UniProtKB:Q5JER9;
+    duplex -> UniProtKB:Q5JER9; single -> UniProtKB:Q5JER9
+
+    - `cgl-mn-cleavage-and-clamp-2018`: grounded clamp -> UniProtKB:Q8NR49; trunc
+    -> UniProtKB:Q8NR49; binding -> UniProtKB:Q8NR49
+
+    - `cgl-mutation-frequency-2018`: grounded rescue -> UniProtKB:Q8NQE1
+
+    - `cgl-mg-cleavage-and-clamp-2018`: grounded d144a -> UniProtKB:Q8NR49; clamp
+    -> UniProtKB:Q8NR49; tail -> UniProtKB:Q8NR49
+
+    - `cgl-mutation-rate-2018`: grounded deletion -> UniProtKB:Q8NR49; rescue -> UniProtKB:Q8NR49;
+    mutant -> UniProtKB:Q8NR49; tail -> UniProtKB:Q8NR49'
+  sections:
+  - causal_graphs

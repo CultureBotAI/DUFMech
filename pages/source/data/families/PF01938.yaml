@@ -81,6 +81,8 @@ causal_graphs:
   - node_id: deletion
     label: MMP0076 deletion instead of parental S0001
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q6M142
   - node_id: rescue
     label: WT MMP0076 supplied to deletion strain
     node_type: PERTURBATION
@@ -274,12 +276,18 @@ causal_graphs:
   - node_id: dna0127
     label: WT TRAM0076 plus annealed UTR0127 DNA beacon
     node_type: ACTIVITY
+    grounding:
+    - UniProtKB:Q6M142
   - node_id: dna1515
     label: WT TRAM0076 plus annealed UTR1515 DNA beacon
     node_type: ACTIVITY
+    grounding:
+    - UniProtKB:Q6M142
   - node_id: dna1697
     label: WT TRAM0076 plus annealed UTR1697 DNA beacon
     node_type: ACTIVITY
+    grounding:
+    - UniProtKB:Q6M142
   - node_id: signal0127
     label: UTR0127 DNA-beacon fluorescence
     node_type: STATE
@@ -746,6 +754,8 @@ causal_graphs:
   - node_id: expression
     label: Induced TRAM0076 instead of empty vector in BX04
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q6M142
   - node_id: growth18
     label: BX04 growth at18C
     node_type: PHENOTYPE
@@ -874,5 +884,13 @@ curation_events:
   outcome: needs_followup
   summary: Retain scoped PF01938 TRAM0076 causal review
   history_record: history/records/PF01938/2026-10-12T052959Z-codex-abed6e.yaml
+  event_index: 0
+  llm_assisted: true
+- timestamp: '2026-10-18T02:54:46Z'
+  curator: Antigravity
+  action: EDIT
+  outcome: changed
+  summary: Ground causal graph gene and protein nodes in PF01938 with verified UniProtKB accessions (UniProtKB:Q6M142)
+  history_record: history/records/PF01938/2026-10-18T025446Z-antigravity-2892a8.yaml
   event_index: 0
   llm_assisted: true

@@ -92,6 +92,8 @@ causal_graphs:
   - node_id: omit-dph6
     label: Omit Dph6 from the complete mixture
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q12429
   - node_id: omit-atp
     label: Omit ATP from the complete mixture
     node_type: PERTURBATION
@@ -266,6 +268,8 @@ causal_graphs:
   - node_id: dph6-deletion
     label: DPH6 deletion in the BY4741 background
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q12429
   - node_id: eef2-labeling
     label: eEF2 modification-reporter band
     node_type: STATE
@@ -303,6 +307,8 @@ causal_graphs:
   - node_id: dph6-deletion
     label: DPH6 deletion in the BY4741 background
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q12429
   - node_id: minus-one-reporter
     label: Normalized minus-one frameshift reporter ratio
     node_type: ACTIVITY
@@ -341,9 +347,13 @@ causal_graphs:
   - node_id: double-mutant
     label: G216N/E220A double-mutant complementation instead of WT
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q12429
   - node_id: distal-truncation
     label: T334-myc3 truncated complementation instead of WT
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q12429
   - node_id: sordarin-growth
     label: Retained spot growth under sordarin
     node_type: PHENOTYPE
@@ -397,6 +407,8 @@ causal_graphs:
   - node_id: internal-deletion
     label: Dph6 deletion347-471 instead of WT in pSU7
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q12429
   - node_id: sordarin-growth
     label: Retained spot growth under sordarin
     node_type: PHENOTYPE
@@ -435,6 +447,8 @@ causal_graphs:
   - node_id: combined-deletion
     label: Add DPH6 loss in the EFT2-deletion context
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q12429
   - node_id: doubling-time
     label: Batch-culture doubling time
     node_type: PHENOTYPE
@@ -472,6 +486,8 @@ causal_graphs:
   - node_id: substrate-in-joint-system
     label: Diphthine-bearing eEF2 in the Dph6 and ATP system
     node_type: STATE
+    grounding:
+    - UniProtKB:Q12429
   - node_id: proposed-adenylate
     label: Proposed adenylated diphthine-bearing eEF2 intermediate
     node_type: STATE
@@ -528,5 +544,13 @@ curation_events:
   outcome: needs_followup
   summary: Review PF01902 Dph6 contexts, domain attribution and proposed chemistry
   history_record: history/records/PF01902/2026-10-11T225938Z-codex-4da870.yaml
+  event_index: 0
+  llm_assisted: true
+- timestamp: '2026-10-18T02:54:46Z'
+  curator: Antigravity
+  action: EDIT
+  outcome: changed
+  summary: Ground causal graph gene and protein nodes in PF01902 with verified UniProtKB accessions (UniProtKB:Q12429)
+  history_record: history/records/PF01902/2026-10-18T025446Z-antigravity-4d0d78.yaml
   event_index: 0
   llm_assisted: true

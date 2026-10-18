@@ -140,12 +140,18 @@ causal_graphs:
   - node_id: d36n-versus-wt
     label: Paper D36N (current D32N) instead of WT
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q9KRU4
   - node_id: e255q-versus-wt
     label: Paper E255Q (current E251Q) instead of WT
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q9KRU4
   - node_id: d371n-versus-wt
     label: Paper D371N (current D367N) instead of WT
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q9KRU4
   - node_id: sodium-enhancement-binding
     label: Sodium-dependent enhancement of low-concentration ethidium binding
     node_type: ACTIVITY
@@ -282,5 +288,13 @@ curation_events:
   outcome: needs_followup
   summary: Retain partial scientific self-review of scoped causal effects and unresolved mechanism coverage.
   history_record: history/records/PF01554/2026-10-11T115025Z-codex-5d42c5.yaml
+  event_index: 0
+  llm_assisted: true
+- timestamp: '2026-10-18T02:54:46Z'
+  curator: Antigravity
+  action: EDIT
+  outcome: changed
+  summary: Ground causal graph gene and protein nodes in PF01554 with verified UniProtKB accessions (UniProtKB:Q9KRU4)
+  history_record: history/records/PF01554/2026-10-18T025446Z-antigravity-78ee19.yaml
   event_index: 0
   llm_assisted: true

@@ -80,6 +80,8 @@ causal_graphs:
   - node_id: restore-operon
     label: Integrate pap-pit-truncated to restore the native pap-pit operon
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:O30498
   - node_id: growth-trajectory
     label: OD600 growth trajectory relative to pap-only integration
     node_type: PHENOTYPE
@@ -140,6 +142,8 @@ causal_graphs:
   - node_id: pap-single-substitution
     label: Pap P75A or R78A, each tested separately
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:O30498
   - node_id: early-growth
     label: OD600 growth during the early and middle time course
     node_type: PHENOTYPE
@@ -197,6 +201,8 @@ causal_graphs:
   - node_id: high-copy-pap-pit
     label: Express intact SmPapPit from pUC119 construct pTH2826
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:O30498
   - node_id: uptake-velocity
     label: MT2006 initial protein-normalized phosphate uptake velocity
     node_type: PHENOTYPE
@@ -234,9 +240,13 @@ causal_graphs:
   - node_id: single-variants
     label: E54A, D58A, P75A, R78A or D93A, each separately
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:O30498
   - node_id: double-variant
     label: Combined Pap D90A and H96Y substitutions
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:O30498
   - node_id: uptake-velocity
     label: Initial phosphate uptake relative to the WT SmPapPit construct
     node_type: PHENOTYPE
@@ -554,5 +564,13 @@ curation_events:
   outcome: needs_followup
   summary: Retain scoped scientific review of PF01865 Pap and PitR causal effects
   history_record: history/records/PF01865/2026-10-11T171646Z-codex-1ece8d.yaml
+  event_index: 0
+  llm_assisted: true
+- timestamp: '2026-10-18T02:54:46Z'
+  curator: Antigravity
+  action: EDIT
+  outcome: changed
+  summary: Ground causal graph gene and protein nodes in PF01865 with verified UniProtKB accessions (UniProtKB:O30498)
+  history_record: history/records/PF01865/2026-10-18T025446Z-antigravity-34cdf9.yaml
   event_index: 0
   llm_assisted: true

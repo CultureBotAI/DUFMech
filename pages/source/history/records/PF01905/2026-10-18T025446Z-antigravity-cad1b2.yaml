@@ -1,0 +1,42 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01905
+  path: curation/families/PF01905.yaml
+session:
+  id: 2026-10-18T025446Z-antigravity-cad1b2
+  timestamp: '2026-10-18T02:54:46Z'
+  actors:
+  - type: ai_agent
+    name: Antigravity
+    model: Claude Opus 4.6
+    agent_tool: Antigravity
+events:
+- type: EDIT
+  outcome: changed
+  summary: Ground causal graph gene and protein nodes in PF01905 with verified UniProtKB
+    accessions (UniProtKB:Q97Y91, UniProtKB:Q07765)
+  details: 'Reviewed PF01905 causal_graphs and grounded gene/protein PERTURBATION,
+    ACTIVITY, and protein-complex STATE nodes across 9 causal graph(s) using verified
+    UniProtKB accessions from family_mapping:
+
+    - `csa2-alone-crrna-binding-2011`: grounded csa2-added -> UniProtKB:Q97Y91
+
+    - `csa2-cas5a-crrna-binding-2011`: grounded complex-added -> UniProtKB:Q97Y91
+
+    - `csa2-cas5a-guide-dependent-ssdna-binding-2011`: grounded protein-bound-dna
+    -> UniProtKB:Q97Y91
+
+    - `csa2-h160a-crrna-binding-2011`: grounded h160a-substitution -> UniProtKB:Q97Y91
+
+    - `cas5-cas7-crrna-anisotropy-2013`: grounded cas5-cas7-titration -> UniProtKB:Q97Y91
+
+    - `devr-deletion-mature-spore-cfu-2015`: grounded devr-deletion -> UniProtKB:Q07765
+
+    - `devr-deletion-cell-shape-2015`: grounded devr-deletion -> UniProtKB:Q07765
+
+    - `devr-deletion-fruiting-body-darkening-2015`: grounded devr-deletion -> UniProtKB:Q07765
+
+    - `devr-deletion-dev-rna-abundance-2015`: grounded devr-deletion -> UniProtKB:Q07765'
+  sections:
+  - causal_graphs

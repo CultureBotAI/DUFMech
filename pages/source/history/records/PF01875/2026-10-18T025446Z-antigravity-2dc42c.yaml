@@ -1,0 +1,44 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01875
+  path: curation/families/PF01875.yaml
+session:
+  id: 2026-10-18T025446Z-antigravity-2dc42c
+  timestamp: '2026-10-18T02:54:46Z'
+  actors:
+  - type: ai_agent
+    name: Antigravity
+    model: Claude Opus 4.6
+    agent_tool: Antigravity
+events:
+- type: EDIT
+  outcome: changed
+  summary: Ground causal graph gene and protein nodes in PF01875 with verified UniProtKB
+    accessions (UniProtKB:Q9Y316)
+  details: 'Reviewed PF01875 causal_graphs and grounded gene/protein PERTURBATION,
+    ACTIVITY, and protein-complex STATE nodes across 9 causal graph(s) using verified
+    UniProtKB accessions from family_mapping:
+
+
+    - `human-copper-ascorbate-protection`: grounded memo1-with-copper-and-ascorbate
+    -> UniProtKB:Q9Y316
+
+    - `human-copper-amplex-protection`: grounded memo1-in-coupled-reaction -> UniProtKB:Q9Y316
+
+    - `human-h192a-historical-luminol`: grounded h192a -> UniProtKB:Q9Y316
+
+    - `human-copper-knockdown-mtt`: grounded simemo1-with-copper -> UniProtKB:Q9Y316
+
+    - `human-copper-knockdown-probe-responses`: grounded simemo1-with-copper -> UniProtKB:Q9Y316
+
+    - `human-iron-binding-substitutions`: grounded h49a -> UniProtKB:Q9Y316; c244s
+    -> UniProtKB:Q9Y316
+
+    - `human-knockout-basal-iron-and-mda`: grounded memo1-knockout -> UniProtKB:Q9Y316
+
+    - `human-knockout-rsl3-response`: grounded knockout-with-rsl3 -> UniProtKB:Q9Y316
+
+    - `human-knockout-deferoxamine-clustering`: grounded knockout-with-dfx -> UniProtKB:Q9Y316'
+  sections:
+  - causal_graphs

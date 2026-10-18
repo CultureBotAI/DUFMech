@@ -101,18 +101,28 @@ causal_graphs:
   - node_id: n-fragment-reaction
     label: GlnD 1-371 with GlnB, UTP and assay cofactors
     node_type: ACTIVITY
+    grounding:
+    - UniProtKB:P27249
   - node_id: delta-nt
     label: Replace full-length GlnD with the 329-890 deltaNT construct
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:P27249
   - node_id: g93l
     label: G93L substitution in full-length GlnD
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:P27249
   - node_id: g93v
     label: G93V substitution in full-length GlnD
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:P27249
   - node_id: g94d
     label: G94D substitution in full-length GlnD
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:P27249
   - node_id: glnb-ump
     label: GlnB uridylylation endpoint
     node_type: STATE
@@ -240,9 +250,13 @@ causal_graphs:
   - node_id: hd-aa
     label: GlnD H514A/D515A double substitution
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:P27249
   - node_id: hd-qn
     label: GlnD H514Q/D515N double substitution
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:P27249
   - node_id: glnb-demodification
     label: Extent of UMP removal from GlnB
     node_type: PROCESS
@@ -310,12 +324,18 @@ causal_graphs:
   - node_id: wt-modification
     label: Full-length enzyme GlnB uridylylation endpoint
     node_type: STATE
+    grounding:
+    - UniProtKB:P27249
   - node_id: hd-aa-modification
     label: HD-AA enzyme GlnB uridylylation endpoint
     node_type: STATE
+    grounding:
+    - UniProtKB:P27249
   - node_id: hd-qn-modification
     label: HD-QN enzyme GlnB uridylylation endpoint
     node_type: STATE
+    grounding:
+    - UniProtKB:P27249
   edges:
   - edge_id: glutamine-decreases-wt-modification
     subject: glutamine-wt
@@ -385,5 +405,13 @@ curation_events:
   outcome: needs_followup
   summary: Retain partial scientific self-review of GlnD assay and mapping boundaries
   history_record: history/records/PF01909/2026-10-12T001534Z-codex-860829.yaml
+  event_index: 0
+  llm_assisted: true
+- timestamp: '2026-10-18T02:54:46Z'
+  curator: Antigravity
+  action: EDIT
+  outcome: changed
+  summary: Ground causal graph gene and protein nodes in PF01909 with verified UniProtKB accessions (UniProtKB:P27249)
+  history_record: history/records/PF01909/2026-10-18T025446Z-antigravity-ac9391.yaml
   event_index: 0
   llm_assisted: true

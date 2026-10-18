@@ -1,0 +1,39 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01925
+  path: curation/families/PF01925.yaml
+session:
+  id: 2026-10-18T025446Z-antigravity-b5370d
+  timestamp: '2026-10-18T02:54:46Z'
+  actors:
+  - type: ai_agent
+    name: Antigravity
+    model: Claude Opus 4.6
+    agent_tool: Antigravity
+events:
+- type: EDIT
+  outcome: changed
+  summary: Ground causal graph gene and protein nodes in PF01925 with verified UniProtKB
+    accessions (UniProtKB:Q8NLX4, UniProtKB:Q2W8Q2, UniProtKB:E7BBJ3)
+  details: 'Reviewed PF01925 causal_graphs and grounded gene/protein PERTURBATION,
+    ACTIVITY, and protein-complex STATE nodes across 6 causal graph(s) using verified
+    UniProtKB accessions from family_mapping:
+
+    - `cgcysz-solid-growth-2005`: grounded rescue -> UniProtKB:Q8NLX4
+
+    - `mamo-r9-processing-2016`: grounded wt -> UniProtKB:Q2W8Q2; h116a -> UniProtKB:Q2W8Q2
+
+    - `mamo-single-processing-2016`: grounded wt -> UniProtKB:Q2W8Q2
+
+    - `mamo-limo-magnetism-2016`: grounded wt -> UniProtKB:Q2W8Q2; h116a -> UniProtKB:Q2W8Q2;
+    d149a -> UniProtKB:Q2W8Q2; t225a -> UniProtKB:Q2W8Q2; h148a -> UniProtKB:Q2W8Q2;
+    h263a -> UniProtKB:Q2W8Q2
+
+    - `pmpc-laca-pigment-2011`: grounded abc-vector -> UniProtKB:E7BBJ3; ac -> UniProtKB:E7BBJ3;
+    bc -> UniProtKB:E7BBJ3; abc-c -> UniProtKB:E7BBJ3
+
+    - `pmpc-pigs-pigment-2011`: grounded abc-vector -> UniProtKB:E7BBJ3; ac -> UniProtKB:E7BBJ3;
+    bc -> UniProtKB:E7BBJ3; abc-c -> UniProtKB:E7BBJ3'
+  sections:
+  - causal_graphs

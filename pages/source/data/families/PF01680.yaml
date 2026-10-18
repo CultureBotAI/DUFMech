@@ -255,6 +255,8 @@ causal_graphs:
   - node_id: k81r-preparation
     label: Substitute the Pdx1-His6 K81R preparation for WT
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:P37527
   edges:
   - edge_id: r5p-reaction-produces-early-adduct
     subject: wt-pdxs-r5p-incubation
@@ -474,5 +476,13 @@ curation_events:
   outcome: needs_followup
   summary: Retain partial scientific review of PdxS adduct and reconstitution graphs
   history_record: history/records/PF01680/2026-10-11T134053Z-codex-cd12d9.yaml
+  event_index: 0
+  llm_assisted: true
+- timestamp: '2026-10-18T02:54:46Z'
+  curator: Antigravity
+  action: EDIT
+  outcome: changed
+  summary: Ground causal graph gene and protein nodes in PF01680 with verified UniProtKB accessions (UniProtKB:P37527)
+  history_record: history/records/PF01680/2026-10-18T025446Z-antigravity-e8ea47.yaml
   event_index: 0
   llm_assisted: true

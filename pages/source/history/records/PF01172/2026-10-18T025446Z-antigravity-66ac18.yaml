@@ -1,0 +1,29 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01172
+  path: curation/families/PF01172.yaml
+session:
+  id: 2026-10-18T025446Z-antigravity-66ac18
+  timestamp: '2026-10-18T02:54:46Z'
+  actors:
+  - type: ai_agent
+    name: Antigravity
+    model: Claude Opus 4.6
+    agent_tool: Antigravity
+events:
+- type: EDIT
+  outcome: changed
+  summary: Ground causal graph gene and protein nodes in PF01172 with verified UniProtKB
+    accessions (UniProtKB:Q9Y3A5)
+  details: 'Reviewed PF01172 causal_graphs and grounded gene/protein PERTURBATION,
+    ACTIVITY, and protein-complex STATE nodes across 2 causal graph(s) using verified
+    UniProtKB accessions from family_mapping:
+
+    - `sbds-variants-rabbit-60s-gtp-hydrolysis`: grounded replace-wt-sbds-r126t ->
+    UniProtKB:Q9Y3A5; add-k151n-sbds-rabbit-60s -> UniProtKB:Q9Y3A5
+
+    - `sbds-variants-mouse-pre60s-release`: grounded r126t-in-mouse-release-assay
+    -> UniProtKB:Q9Y3A5; k151n-in-mouse-release-assay -> UniProtKB:Q9Y3A5'
+  sections:
+  - causal_graphs
