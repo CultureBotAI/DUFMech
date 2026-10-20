@@ -1,0 +1,48 @@
+PF01986 / DUF123 reference and domain boundaries
+Research date: 2026-10-16 UTC; downloaded public metadata, not new experiments.
+
+Frozen identity: Pfam:PF01986, DUF123, InterPro:IPR002837.
+Snapshot: interpro-pfam-duf-2026-10-10.
+The imported zinc-binding suggestion remains immutable source text, not approval.
+
+https://rest.uniprot.org/uniprotkb/Q58030.json
+Downloaded JSON SHA256:
+c85cc2f96c9d4d7788471ea3bb160d5838103863e001aa2dea2fbb63d5801135
+Q58030 entry 133, sequence 2, length 344 aa; entry update 2026-09-02,
+sequence update 1998-12-15. Gene nth; locus MJ0613.
+Methanocaldococcus jannaschii DSM 2661 / JAL-1 (NCBITaxon:243232).
+Sequence MD5: E36112506BB57CE33473562458100E0C.
+Sequence SHA256 (uppercase amino acids, no newline):
+daca64ae3507e2624fb4e0570eb229859c6c7cfbf560062dfb8f60f8f0bb9fd5
+Current RefSeq cross-reference: WP_010870118.1; ENA AAB98606.1 / L77117.1.
+
+https://www.ebi.ac.uk/ena/browser/api/embl/AAB98606.1?download=false
+Downloaded EMBL SHA256:
+5eb65609530e769a5a0cc5dd8d4a17bd4d210749fb6e605d258f7f54eae56552
+CDS: complement(L77117.1:543933..544967), table 11, codon_start 1.
+The CDS qualifier translation and independent translation of its 1035-nt
+sequence both equal the full 344-aa Q58030 sequence. The record links MJ_0613,
+old locus MJ0613, Q58030 and IPR002837. Reference correspondence does not prove
+an experimentally tested construct or functional activity.
+
+https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01986/
+Downloaded JSON SHA256:
+7caf93b1d4ef887b3996613eeab63409e050833d4cdcf55d124e534312bc880e
+Current integration IPR002837; clan CL0418 / GIY-YIG. Metadata has no literature
+list and retains an unpublished zinc-binding suggestion. Neither is assay proof.
+
+https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01986/protein/uniprot/Q58030/
+Downloaded JSON SHA256:
+9f83c05c371a444419afab87498f2dec53d43ff29f0ab76cedf71599b4a5bcb2
+PF01986 match: 233-343 inclusive, score 2.6e-30, protein length 344,
+organism 243232. This is a reference annotation, not isolated-domain testing.
+UniProt's GIY-YIG feature is 229-328, a different annotation boundary.
+The 2006 Figure 2 MJ0613/GI15668794 row omits 228 N-terminal residues;
+its initial NEKGTYILKIR segment matches current positions 229-239. Figure 1
+places Endonuclease III before GIY-YIG and a C-terminal His/Cys-rich region.
+
+UniProt's Endonuclease III function, cofactor and related catalytic annotations
+are ECO:0000255 / HAMAP-Rule:MF_00942, not direct assays of PF01986.
+Its [4Fe-4S] binding positions 184,190,193,201 lie outside 233-343 and must not
+be recast as experimental DUF123 zinc ligands. The listed genomic reference
+PMID:8688087 is not a biochemical characterization of the appended domain.

@@ -1579,14 +1579,16 @@
       ]
     },
     {
-      "curation_status": "SEEDED",
-      "edge_count": 0,
-      "graph_count": 0,
-      "graph_state": "ABSENT",
+      "curation_status": "IN_PROGRESS",
+      "edge_count": 2,
+      "graph_count": 2,
+      "graph_state": "PRESENT",
       "name": "DUF123",
       "pfam_id": "PF01986",
-      "record_digest": "2ecc94f1db79f59a36eea534b003443a3637184226c984c2696fe7261906e634",
-      "scope_statuses": []
+      "record_digest": "b3c60716859be55d21abc70488df04feb0dffd3658316dd8a5de3408614093d4",
+      "scope_statuses": [
+        "HYPOTHETICAL"
+      ]
     },
     {
       "curation_status": "SEEDED",
@@ -83308,8 +83310,8 @@
     }
   ],
   "graph_states": {
-    "ABSENT": 8162,
-    "PRESENT": 134
+    "ABSENT": 8161,
+    "PRESENT": 135
   },
   "kind": "structural_inventory_not_scientific_review",
   "records": 8296

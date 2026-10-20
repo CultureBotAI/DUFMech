@@ -1,0 +1,54 @@
+PF01986 scoped search, exclusions and discriminating follow-up
+Research date: 2026-10-16 UTC
+
+Local discovery used rg --no-ignore --hidden in curation, evidence, history,
+reviews, reports, docs, .claude and .agents. Before this edit only the structural
+inventory matched the exact family; DUF1231 and longer numeric names were not
+treated as DUF123. This is a bounded local search, not literature completeness.
+
+Web queries included exact PF01986, DUF123, COG1833, MJ0613 and MMP0538 paired
+with nuclease, enzyme activity, assay, glycosylase or experimental. Inspected
+the 2006 publisher full text/PDF, computational methods, COG1833 subsection and
+Figures 1-2; UniProt, InterPro, ENA and RCSB public metadata. These inspected
+sources did not supply a measured MJ0613 DUF123 causal reaction. This does not
+establish that no experiment exists in all literature or for every member.
+
+Excluded false family lead:
+The CMASA paper (doi:10.1186/1471-2105-11-439; PMC2936402) has a supplemental
+caption using DUF123 for PDB 3BDV. The primary PDB identity resolves that object
+to ECA3091 / Q6D2K4 / DUF1234, not PF01986. Its proposed serine-hydrolase
+residues are not adopted here. No claim about that algorithm's accuracy follows.
+https://www.rcsb.org/structure/3BDV
+https://data.rcsb.org/rest/v1/core/polymer_entity/3BDV/1
+RCSB entity JSON SHA256:
+73a0147fc947c717da8831c50b58642ac009c2a97ac1a6edaa3ff789ea77d43f
+RCSB maps entity 1 to Q6D2K4 and Pfam PF06821.
+https://rest.uniprot.org/uniprotkb/Q6D2K4.json
+UniProt JSON SHA256:
+f086ff251ccb8f845d19021552c5c1b75e4a63e10619115ba2d808055c5c7a8a
+This independent metadata record also maps ECA3091 to PF06821 / Ser_hydrolase.
+
+Other exclusions and access/coverage limits:
+- Clan membership, predicted structure, conservation and protein networks alone
+  do not supply causal edges. Vendor annotations and AnnoDUF UI examples are not
+  assays. Other GIY-YIG families' experimental activities are not transferred.
+- The 2006 paper's M. maripaludis GI45358100 / MMP0538 pairing has not been
+  reconciled to current sequence/locus data; no M. maripaludis graph is adopted.
+- Aravind et al. 1999 (PMID:9973609; doi:10.1093/nar/27.5.1223), cited for the
+  original domain prediction, remains a full-text coverage gap. PMC returned a
+  browser challenge and the attempted publisher page failed; no bypass used.
+- The JBC 2004 Endonuclease III engineering search lead and other primary member
+  studies were not fully inspected. No E. coli residue experiment is assigned
+  to the archaeal appended DUF. Searches are not a systematic citation census.
+- dbfetch returned HTML rather than FASTA; it was rejected. ENA's EMBL endpoint
+  supplied the parsed CDS instead. A successful HTTP response is not validation.
+
+Open work:
+1. Find and authenticate primary activity/perturbation studies and distinguish
+   full-length MJ0613 from its N-terminal Endonuclease III and appended DUF.
+2. Discriminate lesion-flanking cleavage from exonucleolysis using substrate and
+   product mapping, matched protein integrity controls and domain-specific tests;
+   establish metal dependence and residues only with appropriate interventions.
+3. Resolve additional member identities, standalone-domain partners and original
+   literature, without extrapolating one fusion's proposal to the full family.
+These are research gaps, not observed negative biological results.

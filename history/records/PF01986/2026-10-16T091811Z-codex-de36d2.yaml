@@ -1,0 +1,31 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01986
+  path: curation/families/PF01986.yaml
+session:
+  id: 2026-10-16T091811Z-codex-de36d2
+  timestamp: '2026-10-16T09:18:11Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Curate two explicitly hypothetical MJ0613 repair alternatives for DUF123.
+  details: Inspected the 2006 primary phylogenomic paper, COG1833 discussion and Figures
+    1-2; retained two separate HYPOTHETICAL graphs with UNRESOLVED/HYPOTHESIZED/COMPUTATIONAL
+    edges and joint prerequisites. Verified Q58030 sequence 2 against ENA AAB98606.1
+    CDS translation and PF01986 reference 233-343. Excluded the CMASA/3BDV false family
+    hit using independent PDB/UniProt PF06821 mapping. Native baseline passed for
+    8296 records with zero drift before authoring. Evidence ledgers and two OPEN discussions
+    retain missing assays, original-source access limits and member-coverage gaps.
+    An initial history command used an invalid actor enum and was rejected without
+    a sidecar; the dry run correctly rejected missing history. This corrected real
+    event precedes regeneration. No family-wide activity, REVIEWED status or publication
+    is claimed.
+links:
+  urls:
+  - https://doi.org/10.1186/1471-2164-7-98

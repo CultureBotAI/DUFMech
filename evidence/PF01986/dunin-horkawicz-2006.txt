@@ -1,0 +1,31 @@
+PF01986: published repair alternatives, not demonstrated DUF123 activities
+Research date: 2026-10-16 UTC
+Source: Dunin-Horkawicz S, Feder M, Bujnicki JM (2006).
+Phylogenomic analysis of the GIY-YIG nuclease superfamily. BMC Genomics 7:98.
+Published 2006-04-28. doi:10.1186/1471-2164-7-98
+https://link.springer.com/article/10.1186/1471-2164-7-98
+PDF: https://link.springer.com/content/pdf/10.1186/1471-2164-7-98.pdf
+PDF SHA256: ad1b3af8ae1cde76b0625c52883c1328a162191013b0ce128616bb45bb00fe8d
+The publisher PDF declares CC BY 2.0. Full PDF remains outside the repository.
+
+Inspected: computational methods; COG1833 subsection, PDF pp.10-11;
+Figure 1 architecture (p.4), Figure 2 alignment (p.5), and p.11 rendered images.
+The figures support a domain relationship, not an activity assay.
+
+Quotation anchors (16 words total), COG1833 subsection, p.11 left column:
+H1: "could use the AP lyase and nuclease functions"
+H2: "creates a single-stranded gap starting from the nick"
+
+Interpretation: the authors offer two alternatives for cooperation between
+Endonuclease III and a COG1833 GIY-YIG region: lesion-flanking cleavage or
+exonucleolytic extension of an AP-lyase nick. These are computationally motivated
+proposals, not perturbation results. This record instantiates them only for the
+named MJ0613 fusion, with joint prerequisites kept together. It does not assign
+standalone DUF123 glycosylase activity. Other repair roles remain possible.
+
+The discussion warns against transferring an Endonuclease III annotation to
+COG1833-only proteins. C-terminal Cys/His conservation motivates a structural
+metal-binding proposal, not a measured metal identity or catalytic requirement.
+Neither graph asserts active residues, strand polarity, a particular lesion,
+reaction conditions, physiological repair flux, or a completed repair pathway.
+The relation between these two proposals is alternative, not sequential.
