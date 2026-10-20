@@ -15,6 +15,8 @@ ROOT = Path(__file__).resolve().parents[1]
     ".claude/skills/curate-yaml-record/SKILL.md",
     ".claude/skills/curate-yaml-record/references/review-checklist.md",
     ".agents/skills/curate-yaml-record/SKILL.md",
+    ".claude/skills/dufmech-evolve-workflow/SKILL.md",
+    ".agents/skills/dufmech-evolve-workflow/SKILL.md",
     ".claude/skills/ground-causal-graph-proteins/SKILL.md",
     ".agents/skills/ground-causal-graph-proteins/SKILL.md",
     ".claude/skills/review-open-issues/SKILL.md",
