@@ -1,0 +1,32 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01935
+  path: curation/families/PF01935.yaml
+session:
+  id: 2026-10-21T073229Z-antigravity-80657c
+  timestamp: '2026-10-21T07:32:29Z'
+  actors:
+  - type: ai_agent
+    name: Antigravity
+    model: Claude Opus 4.6
+    agent_tool: Antigravity
+events:
+- type: EDIT
+  outcome: changed
+  summary: Ground Sso2251 and Sire_0064 HerA perturbation nodes to verified UniProtKB
+    accessions
+  details: Reviewed PF01935 causal_graphs against evidence/PF01935/rzechorzek-2014.txt
+    (PMID:25420454) and evidence/PF01935/huang-2015.txt (PMID:25880130). Grounded
+    Sso2251 HerA variant PERTURBATION nodes in sso2251-overhang-atpase-2014 (k154a,
+    r142a, r381a, k363a, d471a, double), sso2251-overhang-unwinding-2014 (k154a, r381a,
+    k363a), and sso2251-triplex-displacement-2014 (k154a, d471a, stop) to UniProtKB:Q97WG8,
+    and grounded Sire_0064 HerA variant PERTURBATION nodes in sire0064-overhang-exonuclease-2015
+    (d176e, e356d) to UniProtKB:F0NFK8, matching verified family_mapping and sibling
+    causal graphs.
+  sections:
+  - causal_graphs
+links:
+  urls:
+  - https://www.nature.com/articles/ncomms6506
+  - https://pmc.ncbi.nlm.nih.gov/articles/PMC4351679/

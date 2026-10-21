@@ -1,0 +1,31 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01936
+  path: curation/families/PF01936.yaml
+session:
+  id: 2026-10-21T073229Z-antigravity-e3e5a7
+  timestamp: '2026-10-21T07:32:29Z'
+  actors:
+  - type: ai_agent
+    name: Antigravity
+    model: Claude Opus 4.6
+    agent_tool: Antigravity
+events:
+- type: EDIT
+  outcome: changed
+  summary: Ground human and mouse MARF1 perturbation nodes to UniProtKB:Q9Y4F3 and
+    UniProtKB:Q8BJ34
+  details: Reviewed PF01936 causal_graphs against evidence/PF01936/nishimura-2018.txt
+    (PMID:30364987) and evidence/PF01936/yao-2018.txt (PMID:30333187). Grounded human
+    MARF1 PERTURBATION nodes in human-marf1-full-tethering-2018 (wt, dc, dn), human-marf1-nterm-tethering-2018
+    (wt, dn, mut), and human-marf1-internal-polya-reporter-2018 (wt, dc) to UniProtKB:Q9Y4F3,
+    and grounded mouse Marf1 PERTURBATION nodes in mouse-marf1-lotus-truncation-2018
+    (shorter), mouse-marf1-oocyte-resupply-2018 (wt), and mouse-marf1-knockin-phenotypes-2018
+    (knockin) to UniProtKB:Q8BJ34 per verified family_mapping and sibling graphs.
+  sections:
+  - causal_graphs
+links:
+  urls:
+  - https://pmc.ncbi.nlm.nih.gov/articles/PMC6294520/
+  - https://pmc.ncbi.nlm.nih.gov/articles/PMC6217404/

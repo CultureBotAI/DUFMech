@@ -1,0 +1,29 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01939
+  path: curation/families/PF01939.yaml
+session:
+  id: 2026-10-21T073229Z-antigravity-2adbb0
+  timestamp: '2026-10-21T07:32:29Z'
+  actors:
+  - type: ai_agent
+    name: Antigravity
+    model: Claude Opus 4.6
+    agent_tool: Antigravity
+events:
+- type: EDIT
+  outcome: changed
+  summary: Correct CglEndoMS node grounding in cgl-mutation-frequency-2018 to UniProtKB:Q8NR49
+  details: Reviewed PF01939 causal_graphs against evidence/PF01939/ishino-2018.txt
+    (PMID:29846672). In cgl-mutation-frequency-2018, family_mapping explicitly maps
+    C. glutamicum ATCC13032 NCgl1168/CGL_RS06055 via WP_011014205.1 to UniProtKB:Q8NR49
+    (matching sibling graph cgl-mutation-rate-2018). Replaced the erroneous UniProtKB:Q8NQE1
+    grounding on node `rescue` (superseding 2026-10-18T025446Z-antigravity-ade652
+    for that node) and grounded `deletion` and `tail` in cgl-mutation-frequency-2018
+    to UniProtKB:Q8NR49.
+  sections:
+  - causal_graphs
+links:
+  urls:
+  - https://pmc.ncbi.nlm.nih.gov/articles/PMC6159515/

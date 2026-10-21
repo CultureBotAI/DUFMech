@@ -1,0 +1,29 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01951
+  path: curation/families/PF01951.yaml
+session:
+  id: 2026-10-21T073229Z-antigravity-7eea02
+  timestamp: '2026-10-21T07:32:29Z'
+  actors:
+  - type: ai_agent
+    name: Antigravity
+    model: Claude Opus 4.6
+    agent_tool: Antigravity
+events:
+- type: EDIT
+  outcome: changed
+  summary: Ground RTCB guanylylation activation nodes in human Archease mutant graphs
+    to UniProtKB:Q9Y3I0
+  details: Reviewed PF01951 causal_graphs against evidence/PF01951/gerber-2024.txt
+    (PMID:38493148) and evidence/PF01951/popow-2014.txt (PMID:24870230). Grounded
+    the RTCB guanylylation readout node `activation` in human-archease-mutants-2024
+    and human-complex-archease-mutants-2014 to UniProtKB:Q9Y3I0, matching sibling
+    RTCB guanylylation graphs in PF01951.
+  sections:
+  - causal_graphs
+links:
+  urls:
+  - https://pmc.ncbi.nlm.nih.gov/articles/PMC10944509/
+  - https://pmc.ncbi.nlm.nih.gov/articles/PMC4417724/
