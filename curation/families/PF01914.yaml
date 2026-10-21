@@ -20,9 +20,13 @@ causal_graphs:
   - node_id: psa28
     label: AK430 expressing pSA28 relative to empty pUC119
     node_type: PERTURBATION
+    grounding:
+    - NCBIProtein:BAC53669.1
   - node_id: psa17
     label: AK430 expressing positive pSA17 derivative
     node_type: PERTURBATION
+    grounding:
+    - NCBIProtein:BAC53669.1
   - node_id: glycine-uptake
     label: Cell-associated radiolabeled glycine uptake
     node_type: PROCESS
@@ -78,6 +82,8 @@ causal_graphs:
   - node_id: upstream-truncation
     label: pSA14 upstream-truncated construct relative to pSA17
     node_type: PERTURBATION
+    grounding:
+    - NCBIProtein:BAC53669.1
   - node_id: glycine-uptake
     label: Qualitative glycine uptake
     node_type: PROCESS
@@ -329,6 +335,8 @@ causal_graphs:
   - node_id: snata-expression
     label: WAT9 carrying pSA28 relative to empty pUC119
     node_type: PERTURBATION
+    grounding:
+    - NCBIProtein:BAC53669.1
   - node_id: serine-growth
     label: Colony growth on L-serine medium
     node_type: PHENOTYPE
@@ -914,6 +922,8 @@ causal_graphs:
   - node_id: marc-construct
     label: TOP10/pZErO-2-marC relative to TOP10/pFF6
     node_type: PERTURBATION
+    grounding:
+    - NCBIProtein:AIL17056.1
   - node_id: cro
     label: Ceftriaxone MIC in TOP10
     node_type: PHENOTYPE

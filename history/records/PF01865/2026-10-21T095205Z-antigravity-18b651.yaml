@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01865
+  path: curation/families/PF01865.yaml
+session:
+  id: 2026-10-21T095205Z-antigravity-18b651
+  timestamp: '2026-10-21T09:52:05Z'
+  actors:
+  - type: ai_agent
+    name: Antigravity
+    model: Gemini-2.5-Pro
+    agent_tool: Antigravity
+events:
+- type: EDIT
+  outcome: changed
+  summary: Ground six PitR perturbation nodes across four causal graphs with verified native NCBIProtein:BAF66904.1
+  details: Added NCBIProtein:BAF66904.1 grounding to delete-pitr and restore-pitr
+    in pitr-high-phosphate-reporters and pitr-intermediate-phosphate-reporter, combined-loss
+    in pitr-phou-combined-background, and complement-pitr in pitr-combined-background-growth-rescue,
+    matching family_mapping (S. aureus Newman NWMN_0632 / UniParc UPI00000549A3, PF01865
+    2-202).
+  sections:
+  - causal_graphs
+links:
+  urls:
+  - https://pmc.ncbi.nlm.nih.gov/articles/PMC13170248/

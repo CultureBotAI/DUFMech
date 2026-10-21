@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01875
+  path: curation/families/PF01875.yaml
+session:
+  id: 2026-10-21T095210Z-antigravity-187501
+  timestamp: '2026-10-21T09:52:10Z'
+  actors:
+  - type: ai_agent
+    name: Antigravity
+    model: Gemini-2.5-Pro
+    agent_tool: Antigravity
+events:
+- type: EDIT
+  outcome: changed
+  summary: Ground simemo1 perturbation node in human-knockdown-wound-closure with verified UniProtKB:Q9Y316
+  details: Added UniProtKB:Q9Y316 grounding to simemo1 in human-knockdown-wound-closure,
+    matching family_mapping (endogenous human MEMO1 Q9Y316/NP_057039.1, PF01875 8-291)
+    and sibling Memo1 knockdown graphs.
+  sections:
+  - causal_graphs
+links:
+  urls:
+  - https://pmc.ncbi.nlm.nih.gov/articles/PMC9477392/

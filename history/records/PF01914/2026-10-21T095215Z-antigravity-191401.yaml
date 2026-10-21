@@ -1,0 +1,28 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01914
+  path: curation/families/PF01914.yaml
+session:
+  id: 2026-10-21T095215Z-antigravity-191401
+  timestamp: '2026-10-21T09:52:15Z'
+  actors:
+  - type: ai_agent
+    name: Antigravity
+    model: Gemini-2.5-Pro
+    agent_tool: Antigravity
+events:
+- type: EDIT
+  outcome: changed
+  summary: Ground five SnatA and MarC construct perturbation nodes with verified native NCBIProtein accessions
+  details: Added NCBIProtein:BAC53669.1 grounding to psa28 and psa17 in snata-expression-uptake-2003,
+    upstream-truncation in snata-upstream-construct-2003, and snata-expression in
+    snata-serine-growth-2003 (Thermococcus sp. KS-1 SnatA, retired Q8J305 / UniParc
+    UPI0000062A6D, PF01914 9-214), and NCBIProtein:AIL17056.1 to marc-construct in
+    marc-top10-mic-2018 (E. coli ATCC25922 DR76_3329 / UniParc UPI00000DEBB0, PF01914
+    5-217).
+  sections:
+  - causal_graphs
+links:
+  urls:
+  - https://doi.org/10.1093/jb/mvg021

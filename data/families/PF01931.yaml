@@ -92,15 +92,23 @@ causal_graphs:
   - node_id: xtp
     label: Purified YjjX with XTP and Mg
     node_type: STATE
+    grounding:
+    - UniProtKB:P39411
   - node_id: ditp
     label: Purified YjjX with dITP and Mg
     node_type: STATE
+    grounding:
+    - UniProtKB:P39411
   - node_id: gtp
     label: Purified YjjX with GTP and Mg
     node_type: STATE
+    grounding:
+    - UniProtKB:P39411
   - node_id: gdp
     label: Purified YjjX with GDP and Mg
     node_type: STATE
+    grounding:
+    - UniProtKB:P39411
   - node_id: phosphate
     label: Background-corrected phosphate release
     node_type: STATE
@@ -622,5 +630,13 @@ curation_events:
   outcome: changed
   summary: Ground causal graph gene and protein nodes in PF01931 with verified UniProtKB accessions (UniProtKB:Q96M27)
   history_record: history/records/PF01931/2026-10-18T025446Z-antigravity-77c514.yaml
+  event_index: 0
+  llm_assisted: true
+- timestamp: '2026-10-21T09:52:20Z'
+  curator: Antigravity
+  action: EDIT
+  outcome: changed
+  summary: Ground four purified YjjX substrate-reaction state nodes with verified UniProtKB:P39411
+  history_record: history/records/PF01931/2026-10-21T095220Z-antigravity-193101.yaml
   event_index: 0
   llm_assisted: true

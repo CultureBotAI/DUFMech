@@ -242,9 +242,13 @@ causal_graphs:
   - node_id: delete-pitr
     label: Delete pitR in Newman
     node_type: PERTURBATION
+    grounding:
+    - NCBIProtein:BAF66904.1
   - node_id: restore-pitr
     label: Complement the pitR deletion with native-promoter PitR on pKK30
     node_type: PERTURBATION
+    grounding:
+    - NCBIProtein:BAF66904.1
   - node_id: pst-reporter
     label: PpstS-yfp fluorescence per OD600 at 5 mM Pi
     node_type: PHENOTYPE
@@ -332,9 +336,13 @@ causal_graphs:
   - node_id: delete-pitr
     label: Delete pitR in Newman
     node_type: PERTURBATION
+    grounding:
+    - NCBIProtein:BAF66904.1
   - node_id: restore-pitr
     label: Complement delta-pitR with native-promoter PitR on pKK30
     node_type: PERTURBATION
+    grounding:
+    - NCBIProtein:BAF66904.1
   - node_id: npta-reporter
     label: PnptA-yfp fluorescence per OD600 at 500 uM Pi
     node_type: PHENOTYPE
@@ -388,6 +396,8 @@ causal_graphs:
   - node_id: combined-loss
     label: Combined pitR deletion and phoU::erm background relative to WT
     node_type: PERTURBATION
+    grounding:
+    - NCBIProtein:BAF66904.1
   - node_id: growth-delay
     label: Delay before OD600 growth increases
     node_type: PHENOTYPE
@@ -446,6 +456,8 @@ causal_graphs:
   - node_id: complement-pitr
     label: Restore PitR expression in the delta-pitR phoU::erm background
     node_type: PERTURBATION
+    grounding:
+    - NCBIProtein:BAF66904.1
   - node_id: high-pi-delay
     label: OD600 growth delay at 5 mM Pi
     node_type: PHENOTYPE

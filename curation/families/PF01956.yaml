@@ -824,9 +824,13 @@ causal_graphs:
   - node_id: tnko
     label: Joint TMCO1 and Nicalin knockout versus WT
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q9UM00
   - node_id: tcko
     label: Joint TMCO1 and CCDC47 knockout versus WT
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q9UM00
   - node_id: eaat1
     label: Endogenous EAAT1 whole-cell immunoblot abundance
     node_type: PHENOTYPE
@@ -1009,9 +1013,13 @@ causal_graphs:
   - node_id: tnko
     label: Joint TMCO1/Nicalin-knockout versus WT microsomes
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q9UM00
   - node_id: tcko
     label: Joint TMCO1/CCDC47-knockout versus WT microsomes
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q9UM00
   - node_id: glyco
     label: Glycosylated fraction of cell-free HA-YIPF1
     node_type: PHENOTYPE

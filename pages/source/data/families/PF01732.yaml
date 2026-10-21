@@ -108,15 +108,23 @@ causal_graphs:
   - node_id: joint-fab
     label: MIB plus WT MIP plus goat Fab
     node_type: ACTIVITY
+    grounding:
+    - NCBIProtein:ACU78687.1
+    - NCBIProtein:ACU78312.1
   - node_id: joint-fab2
     label: MIB plus WT MIP plus goat F(ab')2
     node_type: ACTIVITY
+    grounding:
+    - NCBIProtein:ACU78687.1
+    - NCBIProtein:ACU78312.1
   - node_id: omit-mib
     label: Omit MIB from the MIP-IgG reaction
     node_type: PERTURBATION
   - node_id: published-r0582a
     label: Replace WT MIP with published r-0582A
     node_type: PERTURBATION
+    grounding:
+    - NCBIProtein:ACU78687.1
   - node_id: igg-fragment
     label: Approximately 44-kDa IgG heavy-chain fragment
     node_type: STATE
@@ -236,6 +244,9 @@ causal_graphs:
   - node_id: inactive-joint-mixture
     label: Add MIB83 plus S759A MIP82 to the preassembled complex
     node_type: PERTURBATION
+    grounding:
+    - NCBIProtein:ACU78687.1
+    - NCBIProtein:ACU78312.1
   - node_id: transferrin-separated
     label: Transferrin separated from IgG-containing fractions
     node_type: STATE
@@ -569,5 +580,13 @@ curation_events:
   outcome: needs_followup
   summary: Retain partial scientific self-review of PF01732 causal contexts
   history_record: history/records/PF01732/2026-10-11T143638Z-codex-ebbba7.yaml
+  event_index: 0
+  llm_assisted: true
+- timestamp: '2026-10-21T09:52:00Z'
+  curator: Antigravity
+  action: EDIT
+  outcome: changed
+  summary: Ground four MIB-MIP causal-graph nodes with verified native NCBIProtein accessions
+  history_record: history/records/PF01732/2026-10-21T095200Z-antigravity-74aa49.yaml
   event_index: 0
   llm_assisted: true
