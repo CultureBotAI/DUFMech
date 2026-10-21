@@ -849,9 +849,13 @@ causal_graphs:
   - node_id: tnko
     label: Joint TMCO1 and Nicalin knockout versus WT
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q9UM00
   - node_id: tcko
     label: Joint TMCO1 and CCDC47 knockout versus WT
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q9UM00
   - node_id: eaat1
     label: Endogenous EAAT1 whole-cell immunoblot abundance
     node_type: PHENOTYPE
@@ -1034,9 +1038,13 @@ causal_graphs:
   - node_id: tnko
     label: Joint TMCO1/Nicalin-knockout versus WT microsomes
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q9UM00
   - node_id: tcko
     label: Joint TMCO1/CCDC47-knockout versus WT microsomes
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q9UM00
   - node_id: glyco
     label: Glycosylated fraction of cell-free HA-YIPF1
     node_type: PHENOTYPE
@@ -1295,5 +1303,13 @@ curation_events:
   outcome: changed
   summary: Ground causal graph gene and protein nodes in PF01956 with verified UniProtKB accessions (UniProtKB:Q9P0I2)
   history_record: history/records/PF01956/2026-10-18T025446Z-antigravity-dd721f.yaml
+  event_index: 0
+  llm_assisted: true
+- timestamp: '2026-10-21T09:52:25Z'
+  curator: Antigravity
+  action: EDIT
+  outcome: changed
+  summary: Ground four joint TMCO1 knockout perturbation nodes with verified UniProtKB:Q9UM00
+  history_record: history/records/PF01956/2026-10-21T095225Z-antigravity-195601.yaml
   event_index: 0
   llm_assisted: true

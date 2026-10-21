@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01956
+  path: curation/families/PF01956.yaml
+session:
+  id: 2026-10-21T095225Z-antigravity-195601
+  timestamp: '2026-10-21T09:52:25Z'
+  actors:
+  - type: ai_agent
+    name: Antigravity
+    model: Gemini-2.5-Pro
+    agent_tool: Antigravity
+events:
+- type: EDIT
+  outcome: changed
+  summary: Ground four joint TMCO1 knockout perturbation nodes with verified UniProtKB:Q9UM00
+  details: Added UniProtKB:Q9UM00 grounding to tnko and tcko perturbation nodes in
+    human-tmco1-eaat1-abundance-2020 and human-tmco1-yipf1-microsome-glycosylation-2022,
+    matching sibling tko nodes and family_mapping (human TMCO1 Q9UM00 v2, PF01956
+    59-216).
+  sections:
+  - causal_graphs
+links:
+  urls:
+  - https://pmc.ncbi.nlm.nih.gov/articles/PMC7505659/
+  - https://pmc.ncbi.nlm.nih.gov/articles/PMC9630114/
