@@ -267,6 +267,8 @@ causal_graphs:
   - node_id: partner-h170n-preparation
     label: Replace WT partner with the reported Pdx2-His6 H170N preparation
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:P37528
   edges:
   - edge_id: joint-reconstitution-produces-chromophore
     subject: joint-chromophore-reconstitution

@@ -1,0 +1,31 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01934
+  path: curation/families/PF01934.yaml
+session:
+  id: 2026-10-21T073229Z-antigravity-0612cb
+  timestamp: '2026-10-21T07:32:29Z'
+  actors:
+  - type: ai_agent
+    name: Antigravity
+    model: Claude Opus 4.6
+    agent_tool: Antigravity
+events:
+- type: EDIT
+  outcome: changed
+  summary: Ground SO_3166 and CL1_0071 HepT causal-graph nodes to verified UniProtKB
+    accessions
+  details: Reviewed PF01934 causal_graphs against evidence/PF01934/yao-2015.txt (PMID:26112399)
+    and evidence/PF01934/yao-2020.txt (PMID:33045733). Grounded SO_3166 HepT PERTURBATION
+    nodes in so3166-substitution-growth-2015 (r97g, h102a), so3166-modified-preparation-rnase-2020
+    (preparation), and so3166-modification-variant-rescue-2020 (toxin-mutant) to UniProtKB:Q8ECH6,
+    and grounded T. cleftensis CL1_0071 HepT nodes in thermococcus-variant-modification-2020
+    (hept-variant, modified) to UniProtKB:I3ZRF2 per verified family_mapping and sibling
+    graphs.
+  sections:
+  - causal_graphs
+links:
+  urls:
+  - https://pmc.ncbi.nlm.nih.gov/articles/PMC4621449/
+  - https://pmc.ncbi.nlm.nih.gov/articles/PMC7641770/

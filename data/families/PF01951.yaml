@@ -322,6 +322,8 @@ causal_graphs:
   - node_id: activation
     label: RTCB guanylylation signal
     node_type: ACTIVITY
+    grounding:
+    - UniProtKB:Q9Y3I0
   - node_id: ligation
     label: Isolated intron circularization
     node_type: ACTIVITY
@@ -1819,6 +1821,8 @@ causal_graphs:
   - node_id: activation
     label: RTCB guanylylation signal in the complex
     node_type: ACTIVITY
+    grounding:
+    - UniProtKB:Q9Y3I0
   edges:
   - edge_id: human-d39a-complex-ligation
     subject: d39a
@@ -2866,5 +2870,13 @@ curation_events:
   outcome: needs_followup
   summary: Retain partial scientific review of partner controls and XBP1 contexts
   history_record: history/records/PF01951/2026-10-12T102956Z-codex-6e237f.yaml
+  event_index: 0
+  llm_assisted: true
+- timestamp: '2026-10-21T07:32:29Z'
+  curator: Antigravity
+  action: EDIT
+  outcome: changed
+  summary: Ground RTCB guanylylation activation nodes in human Archease mutant graphs to UniProtKB:Q9Y3I0
+  history_record: history/records/PF01951/2026-10-21T073229Z-antigravity-7eea02.yaml
   event_index: 0
   llm_assisted: true

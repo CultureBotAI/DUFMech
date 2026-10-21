@@ -144,7 +144,7 @@ causal_graphs:
   nodes:
   - {node_id: d51a, label: Paper D51A versus WT Archease, node_type: PERTURBATION, grounding: ['UniProtKB:Q8IWT0']}
   - {node_id: k156a, label: Paper K156A versus WT Archease, node_type: PERTURBATION, grounding: ['UniProtKB:Q8IWT0']}
-  - {node_id: activation, label: RTCB guanylylation signal, node_type: ACTIVITY}
+  - {node_id: activation, label: RTCB guanylylation signal, node_type: ACTIVITY, grounding: ['UniProtKB:Q9Y3I0']}
   - {node_id: ligation, label: Isolated intron circularization, node_type: ACTIVITY}
   edges:
   - edge_id: d51a-activation
@@ -913,7 +913,7 @@ causal_graphs:
   - {node_id: d39a, label: Paper D39A Archease versus WT, node_type: PERTURBATION, grounding: ['UniProtKB:Q8IWT0']}
   - {node_id: k144a, label: Paper K144A Archease versus WT, node_type: PERTURBATION, grounding: ['UniProtKB:Q8IWT0']}
   - {node_id: ligation, label: Complex-mediated intron ligation products, node_type: ACTIVITY}
-  - {node_id: activation, label: RTCB guanylylation signal in the complex, node_type: ACTIVITY}
+  - {node_id: activation, label: RTCB guanylylation signal in the complex, node_type: ACTIVITY, grounding: ['UniProtKB:Q9Y3I0']}
   edges:
   - edge_id: human-d39a-complex-ligation
     subject: d39a

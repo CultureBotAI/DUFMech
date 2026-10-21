@@ -126,12 +126,18 @@ causal_graphs:
   - node_id: wt
     label: Tethered full MARF1 instead of LacZ
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q9Y4F3
   - node_id: dc
     label: Tethered delta-C MARF1 instead of LacZ
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q9Y4F3
   - node_id: dn
     label: Delta-NYN instead of tethered WT MARF1
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q9Y4F3
   - node_id: rna
     label: Normalized RL-5BoxB RNA abundance
     node_type: PHENOTYPE
@@ -199,12 +205,18 @@ causal_graphs:
   - node_id: wt
     label: WT N-terminal fragment instead of LacZ
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q9Y4F3
   - node_id: dn
     label: NYN-deleted instead of WT N-terminal fragment
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q9Y4F3
   - node_id: mut
     label: D426A/D427A instead of WT N-terminal fragment
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q9Y4F3
   - node_id: rna
     label: Normalized RL-5BoxB RNA abundance
     node_type: PHENOTYPE
@@ -271,9 +283,13 @@ causal_graphs:
   - node_id: wt
     label: Full MARF1 tethering instead of LacZ
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q9Y4F3
   - node_id: dc
     label: Delta-C MARF1 tethering instead of LacZ
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q9Y4F3
   - node_id: rna
     label: Normalized A114-N40-HHR reporter RNA
     node_type: PHENOTYPE
@@ -452,6 +468,8 @@ causal_graphs:
   - node_id: shorter
     label: Source158-690 instead of158-1381 preparation
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q8BJ34
   - node_id: processing
     label: H49 cleavage products at matched protein concentration
     node_type: PHENOTYPE
@@ -490,6 +508,8 @@ causal_graphs:
   - node_id: wt
     label: WT Marf1 mRNA resupply versus untreated gene-trap oocytes
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q8BJ34
   - node_id: ppp2cb
     label: Ppp2cb steady-state RNA abundance
     node_type: PHENOTYPE
@@ -530,6 +550,8 @@ causal_graphs:
   - node_id: knockin
     label: Homozygous source D272A knockin instead of WT
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q8BJ34
   - node_id: offspring
     label: Offspring production during female mating assay
     node_type: PHENOTYPE

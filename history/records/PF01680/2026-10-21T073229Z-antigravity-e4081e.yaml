@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01680
+  path: curation/families/PF01680.yaml
+session:
+  id: 2026-10-21T073229Z-antigravity-e4081e
+  timestamp: '2026-10-21T07:32:29Z'
+  actors:
+  - type: ai_agent
+    name: Antigravity
+    model: Claude Opus 4.6
+    agent_tool: Antigravity
+events:
+- type: EDIT
+  outcome: changed
+  summary: Ground Pdx2 H170N partner perturbation node in pdxs-chromophore-and-partner-h170n
+    to UniProtKB:P37528
+  details: Reviewed PF01680 causal_graphs against evidence/PF01680/raschle-2007-pdxs.txt
+    (PMID:17189272). Grounded partner-h170n-preparation in pdxs-chromophore-and-partner-h170n
+    to UniProtKB:P37528 per verified family_mapping and sibling PdxT/Pdx2 causal graphs
+    in PF01680.
+  sections:
+  - causal_graphs
+links:
+  urls:
+  - https://archive-ouverte.unige.ch/unige:89518

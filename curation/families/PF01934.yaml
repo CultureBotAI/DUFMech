@@ -174,9 +174,13 @@ causal_graphs:
   - node_id: r97g
     label: SO_3166 R97G instead of wild type
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q8ECH6
   - node_id: h102a
     label: SO_3166 H102A instead of wild type
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q8ECH6
   - node_id: growth
     label: DH5alpha growth on inducing plates
     node_type: PHENOTYPE
@@ -305,6 +309,8 @@ causal_graphs:
   - node_id: preparation
     label: Use AMP-modified rather than unmodified HepT preparation
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q8ECH6
   - node_id: cleavage
     label: ompA RNA cleavage in the matched assay
     node_type: ACTIVITY
@@ -341,6 +347,8 @@ causal_graphs:
   - node_id: toxin-mutant
     label: HepT Y104A with wild-type MntA instead of the wild-type pair
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q8ECH6
   - node_id: partner-mutant
     label: MntA D39E/D41E with wild-type HepT instead of the wild-type pair
     node_type: PERTURBATION
@@ -397,12 +405,16 @@ causal_graphs:
   - node_id: hept-variant
     label: HepT Y82F with wild-type MntA
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:I3ZRF2
   - node_id: mnta-variant
     label: MntA G33A/S34T with wild-type HepT
     node_type: PERTURBATION
   - node_id: modified
     label: Detectable AMP-modified HepT relative to the wild-type pair
     node_type: STATE
+    grounding:
+    - UniProtKB:I3ZRF2
   edges:
   - edge_id: y82f-modification-loss
     subject: hept-variant
