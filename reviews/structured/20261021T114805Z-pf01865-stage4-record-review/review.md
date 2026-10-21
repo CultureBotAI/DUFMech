@@ -1,0 +1,807 @@
+# PF01865 Stage 4 frozen-inventory causal-graph and grounding review
+
+- Review: 20261021T114805Z-pf01865-stage4-record-review
+- Repository: CultureBotAI/DUFMech
+- Started UTC: 2026-10-21T11:48:04Z
+- Finished UTC: 2026-10-21T11:48:05Z
+- Reviewer: Antigravity (self_review)
+- Completion: completed
+- Verdict: pass_with_limitations
+- Scientific review: true
+
+## Summary
+
+Eight phenotypic graphs retain seventeen indirect observed effects. Pap operon rescue and native/heterologous substitution effects remain distinct from Newman PitR reporter and combined-genotype growth/phosphate-pool effects. Verified reference mappings, thesis publication status, polar effects, nonzero residuals, source discrepancies and readout limits constrain interpretation. Remaining contexts and members require follow-up; retain IN_PROGRESS. Stage 3 (PR #334) grounded uropathogenic Escherichia coli J96 papBA phase-switching node papba-operon to UniProtKB:P04741 and UniProtKB:P0AD96 in ecoli-papi-papb-phase-switching-2000 from Xia et al. 2000 (PMID:10850996), preserving all PapI/PapB/Lrp and PitR graphs.
+
+## Scope And Provenance
+
+Scientific assessment of the retained edges, exact member mapping, primary evidence, context and causal limits.
+
+Selection: Hsieh2017 primary thesis Methods2.8/2.10, Tables2-1/2-4, original Figures3-15/16/21/29 and Table3-28; Vermilya2026 final article Methods, original Figures2/3, supplemental FigureS1 caption and TablesS2-S4. Other member papers remain bounded leads.
+Coverage: partial; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base d658f73e7e618d3938704cdb9c86597bf47fc15e.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| PF01865 | data/families/PF01865.yaml | generated | PF01865 |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Native projection and overlay validation | passed | True | PF01865 | Current projection validates and preserves the authored graph and discussion content exactly. |
+
+## Scientific And Domain Assessments
+
+### Protein, domain and experimental scope
+
+identity: supported. Targets: PF01865.
+
+Pap O30498 sequence version1 exactly matches NP_384293.1,214aa,PF01865 4-212; all retained substitution positions match. Newman NWMN_0632/BAF66904.1 exactly matches UPI00000549A3,205aa,PF01865 2-202. Published supplemental FigureS1 explicitly identifies NWMN_0632 as PitR. Reference identity is verified, not complete laboratory-stock resequencing. Conventional PhoU/PF01895 and the NptA domain are not treated as additional PF01865 members.
+
+### Directed effects and limits
+
+graph: supported. Targets: PF01865.
+
+All seventeen edges are PHENOTYPIC, INDIRECT and OBSERVED, scoped to measured intact-cell effects. Grouped single variants remain separate experiments; D90A/H96Y is explicitly combined. Operon architecture, vector copy context, donor versus host taxon, Pi concentrations, reporter normalization and phoU::erm backgrounds are retained. Exopolyphosphatase-treated lysate phosphate is not free cytosolic Pi or uptake velocity. No observed edge joins an enlarged phosphate pool to growth delay or binding to transporter activation.
+
+### Remaining family coverage
+
+completeness: concern. Targets: PF01865.
+
+Remaining Pap variants and member orthologs, kinetic/source inconsistencies, exact clone sequences, transporter abundance/processing and direct biochemical tests; Newman environmental/higher-order contexts and additional primary PitR/PhoU2 studies. These are partial assessments, not exhaustive family coverage or independent review.
+
+### Cycle 1 causal-graph partner and substrate protein grounding
+
+identity: supported. Targets: PF01865.
+
+Stage 3 (PR #334) grounded uropathogenic Escherichia coli J96 papBA phase-switching node papba-operon to UniProtKB:P04741 and UniProtKB:P0AD96 in ecoli-papi-papb-phase-switching-2000 from Xia et al. 2000 (PMID:10850996), preserving all PapI/PapB/Lrp and PitR graphs.
+
+## Findings
+
+### additional-contexts: Resolve member-specific and molecular attribution gaps before extending the family graph
+
+minor / open / confirmed; issue key: pf01865-causal-context-coverage.
+
+Review remaining Pap constructs and Bacteroides/Shewanella identities, resolve phnC/phoC and P75mis/P75fs nomenclature plus conflicting numeric/protein-band statements, and assess PitR environmental and additional member-specific experiments. Verify USA500 PhoU2 vector/identity and distinguish evolved multi-mutation isolates from single-allele tests. Preserve genotype and assay context; strengthen direct mechanism claims only with corresponding primary evidence.
+
+## Recommended Actions And Acceptance Checks
+
+### extend-contexts
+
+Review remaining Pap constructs and Bacteroides/Shewanella identities, resolve phnC/phoC and P75mis/P75fs nomenclature plus conflicting numeric/protein-band statements, and assess PitR environmental and additional member-specific experiments. Verify USA500 PhoU2 vector/identity and distinguish evolved multi-mutation isolates from single-allele tests. Preserve genotype and assay context; strengthen direct mechanism claims only with corresponding primary evidence.
+
+- Each added edge has member-specific primary evidence and explicit conditions.
+- Unsupported transfers and conflicting or negative results remain visible.
+- Native checks pass and a successor report states actual scope.
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| primary | https://macsphere.mcmaster.ca/handle/11375/22200; Thesis PDF39-40/45-48/57-66/93/98/118-119/124/131-132; printed103-104/109/116-117 original figures and uptake tables | supports | Operon-restoring integration, not pap alone, rescues the conditional host. Native P75A/R78A and heterologous separately tested substitutions lower measured uptake, with positive residuals and protein-band alternatives retained. Intact high-copy pap-pit expression rescues the deficient heterologous host; no purified Pap transport or direct activation is established. |
+| identity | https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01865/protein/uniprot/O30498/; Accession and domain locations; paired UniProt identity facts | supports | Pap O30498 sequence version1 exactly matches NP_384293.1,214aa,PF01865 4-212; all retained substitution positions match. Newman NWMN_0632/BAF66904.1 exactly matches UPI00000549A3,205aa,PF01865 2-202. Published supplemental FigureS1 explicitly identifies NWMN_0632 as PitR. Reference identity is verified, not complete laboratory-stock resequencing. Conventional PhoU/PF01895 and the NptA domain are not treated as additional PF01865 members. |
+| pitr-primary | https://pmc.ncbi.nlm.nih.gov/articles/PMC13170248/; Final2026 Figures2/3, associated Results and mutant/growth/expression/phosphate Methods | supports | PitR deletion and rescue alter phosphate-responsive reporter output; combined PitR/PhoU loss and rescue affect growth timing in defined Pi contexts. Protein-normalized phosphate after exopolyphosphatase includes polyP-derived Pi. Single-mutant and combined-genotype effects are kept separate. |
+| pitr-supplement | https://pmc.ncbi.nlm.nih.gov/articles/instance/13170248/bin/mbio.00203-26-s0002.pdf; PDF3 FigureS1 caption and PDF22-26 TablesS2-S4, retrieved through EuropePMC supplementaryFiles | supports | Primary PitR locus is NWMN_0632. Strain table explicitly retains phoU::erm despite deletion shorthand, and plasmid table confirms pKK30/native-promoter PitR. Table/prose discrepancies outside retained single-mutant comparisons remain follow-up. Independent sequencing reads were not inspected. |
+| coverage-ledger | evidence/PF01865/phou-div-gap-ledger.txt; Bounded searches, source-access resolution, contradictions and primary follow-up leads | supports | The downloaded final supplement resolves the primary locus/strain/plasmid bridge. Partial current UniProtKB query results are not protein absence; exact UniParc sequence mapping resolves family scope. Additional members, unresolved constructs and direct mechanisms remain open without invented graph edges. |
+| native | src/dufmech/records.py; Current projection validation and overlay equivalence in this retained-review session | supports | Closed schema, canonical history and applicable graph/evidence checks pass. Curated graphs and discussions match the overlay; scientific validity is assessed separately. |
+| stage4-prior-review | reviews/structured/20261011T171710Z-pf01865-pap-operon-and-pitr-condition-specific-effects/review.yaml; Predecessor structured review 20261011T171710Z-pf01865-pap-operon-and-pitr-condition-specific-effects | supports | Predecessor review 20261011T171710Z-pf01865-pap-operon-and-pitr-condition-specific-effects verified and linked for finding continuity and semantic-digest progression on PF01865. |
+| duf-projection-pf01865 | data/families/PF01865.yaml; dufmech-reviewed-projection-v1 | context_only | Byte-exact projection retained at save for digest verification, not scientific assessment. |
+
+## Limits And Additional Notes
+
+- Original thesis Figures3-15/16/21/29 and Table3-28, final2026 Figures2/3, and supplemental strain/plasmid tables on pages22/25 were visually inspected. Other selected text and tables were parsed. No complete thesis or literature review, raw-data reanalysis, clone resequencing, transport reconstitution or experimental replication is claimed. Rendered-page verification follows separately.
+- Same-agent assessment, not independent expert review or experimental replication.
+- Partial family coverage; status remains IN_PROGRESS. No full-corpus completion, publication or full publication-QC pass is claimed.
+- Assessments were authored from inspected primary evidence. Native inspection supplied provenance, not scientific conclusions.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261021T114805Z-pf01865-stage4-record-review
+title: PF01865 Stage 4 frozen-inventory causal-graph and grounding review
+started_at: '2026-10-21T11:48:04Z'
+finished_at: '2026-10-21T11:48:05Z'
+reviewer:
+  identity: Antigravity
+  kind: agent
+  model: Claude-Opus-4.6
+  independence: self_review
+  independence_basis: Stage 4 frozen-inventory record review by Antigravity auditing
+    prior Codex/Antigravity curation overlays, primary evidence caches, history events,
+    and current projections at Git revision d658f73e7e618d3938704cdb9c86597bf47fc15e.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: pass_with_limitations
+native_verdict: NEEDS_FOLLOWUP
+scientific_review: true
+summary: 'Eight phenotypic graphs retain seventeen indirect observed effects. Pap
+  operon rescue and native/heterologous substitution effects remain distinct from
+  Newman PitR reporter and combined-genotype growth/phosphate-pool effects. Verified
+  reference mappings, thesis publication status, polar effects, nonzero residuals,
+  source discrepancies and readout limits constrain interpretation. Remaining contexts
+  and members require follow-up; retain IN_PROGRESS. Stage 3 (PR #334) grounded uropathogenic
+  Escherichia coli J96 papBA phase-switching node papba-operon to UniProtKB:P04741
+  and UniProtKB:P0AD96 in ecoli-papi-papb-phase-switching-2000 from Xia et al. 2000
+  (PMID:10850996), preserving all PapI/PapB/Lrp and PitR graphs.'
+repository: CultureBotAI/DUFMech
+kind: record
+source:
+  git_revision: d658f73e7e618d3938704cdb9c86597bf47fc15e
+  state: working_tree
+  snapshot_id: interpro-pfam-duf-2026-10-10
+  inputs:
+  - path: curation/families/PF01865.yaml
+    sha256: d89ae693607232d99b0f63312c32fa678e7696a293ee945c918fe283140989e2
+    role: context
+  - path: data/families/PF01865.yaml
+    sha256: b0607027afc9abcc94c97730bea360bf9834074d8e8890f7608e7b6ea3a3efb2
+    role: target
+  - path: data/worklists/interpro-pfam-duf-2026-10-10.json
+    sha256: 17fb625876c9326ed284263a47bcd84e0d7844a31c040dc06cd2260c36f1c383
+    role: context
+  - path: data/worklists/interpro-pfam-duf-2026-10-10.manifest.json
+    sha256: 31c07ffb6a169c851ea0e6e9dd527a10c04028eafeb29187bd62dc2ae848696e
+    role: context
+  - path: data/worklists/interpro-pfam-duf-2026-10-10.tsv
+    sha256: be023c8dd9d8d3864926b5032d6f7e87a884b1a567391696822dbbecc692dae7
+    role: context
+  - path: evidence/PF01865/hsieh-2017-pap.txt
+    sha256: 4e00ce85a7f30f739a003e36de3048c10c79abb3e24322b07bcfd964019de613
+    role: context
+  - path: evidence/PF01865/phou-div-gap-ledger.txt
+    sha256: ee9760e0c99403d21003e979f4ff71915554191a27f5a01495aa05c1b1f3e1da
+    role: context
+  - path: evidence/PF01865/phou-div-identity.txt
+    sha256: dbe79562cab77d1d2b4b873b2c3e8e4ff71ca1574b594b325368705eebc1e271
+    role: context
+  - path: evidence/PF01865/vermilya-2026-pitr.txt
+    sha256: df865b470ebf99bfbade67fca32d606fd50326136b6f66a1925638033517bd1e
+    role: context
+  - path: evidence/PF01865/vermilya-2026-supplement.txt
+    sha256: 5efe765c399b5005dec2be2fe1c7d3fe10adce114b96dd316b33ece41e312a01
+    role: context
+  - path: reviews/structured/20261011T171710Z-pf01865-pap-operon-and-pitr-condition-specific-effects/review.yaml
+    sha256: 8d66ff0af06023a63a60b368e2237f152187a05f83e4891c83fbe4f09083a5a8
+    role: context
+targets:
+- target_id: PF01865
+  path: data/families/PF01865.yaml
+  label: PF01865
+  kind: generated
+  record_class: FamilyRecord
+  owner_paths:
+  - repository: CultureBotAI/DUFMech
+    path: curation/families/PF01865.yaml
+    role: Maintained scientific overlay; create only with authorized curation.
+  - repository: CultureBotAI/DUFMech
+    path: src/dufmech/records.py
+    role: Projection generator; frozen snapshot identity is not hand-edited.
+  semantic_digest:
+    algorithm: dufmech-record-content-v1
+    sha256: 54c62e1e66294e703efa7cb46dd1b733d9843ec6d180b2610b6928494fc38666
+    description: Canonical JSON SHA-256 of effective FamilyRecord excluding only curation_status,
+      review_id and curation_events.
+scope:
+  description: Scientific assessment of the retained edges, exact member mapping,
+    primary evidence, context and causal limits.
+  selection: Hsieh2017 primary thesis Methods2.8/2.10, Tables2-1/2-4, original Figures3-15/16/21/29
+    and Table3-28; Vermilya2026 final article Methods, original Figures2/3, supplemental
+    FigureS1 caption and TablesS2-S4. Other member papers remain bounded leads.
+  coverage: partial
+  population_size: 1
+  reviewed_target_ids:
+  - PF01865
+  exclusions:
+  - target: Remaining family members and uncurated experimental contexts
+    reason: Remaining Pap variants and member orthologs, kinetic/source inconsistencies,
+      exact clone sequences, transporter abundance/processing and direct biochemical
+      tests; Newman environmental/higher-order contexts and additional primary PitR/PhoU2
+      studies. These are partial assessments, not exhaustive family coverage or independent
+      review.
+checks:
+- check_id: native-projection
+  name: Native projection and overlay validation
+  command: validate_record(record, root); assert projection graphs and discussions
+    match overlay
+  status: passed
+  required: true
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Current projection validates and preserves the authored graph and discussion
+    content exactly.
+  target_ids:
+  - PF01865
+  evidence_ids:
+  - native
+evidence:
+- evidence_id: primary
+  kind: primary_source
+  reference: https://macsphere.mcmaster.ca/handle/11375/22200
+  locator: Thesis PDF39-40/45-48/57-66/93/98/118-119/124/131-132; printed103-104/109/116-117
+    original figures and uptake tables
+  accessed_at: '2026-10-11T17:17:10Z'
+  support: supports
+  snapshot_sha256: 4e00ce85a7f30f739a003e36de3048c10c79abb3e24322b07bcfd964019de613
+  summary: Operon-restoring integration, not pap alone, rescues the conditional host.
+    Native P75A/R78A and heterologous separately tested substitutions lower measured
+    uptake, with positive residuals and protein-band alternatives retained. Intact
+    high-copy pap-pit expression rescues the deficient heterologous host; no purified
+    Pap transport or direct activation is established.
+- evidence_id: identity
+  kind: database
+  reference: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01865/protein/uniprot/O30498/
+  locator: Accession and domain locations; paired UniProt identity facts
+  accessed_at: '2026-10-11T17:17:10Z'
+  support: supports
+  snapshot_sha256: dbe79562cab77d1d2b4b873b2c3e8e4ff71ca1574b594b325368705eebc1e271
+  summary: Pap O30498 sequence version1 exactly matches NP_384293.1,214aa,PF01865
+    4-212; all retained substitution positions match. Newman NWMN_0632/BAF66904.1
+    exactly matches UPI00000549A3,205aa,PF01865 2-202. Published supplemental FigureS1
+    explicitly identifies NWMN_0632 as PitR. Reference identity is verified, not complete
+    laboratory-stock resequencing. Conventional PhoU/PF01895 and the NptA domain are
+    not treated as additional PF01865 members.
+- evidence_id: pitr-primary
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC13170248/
+  locator: Final2026 Figures2/3, associated Results and mutant/growth/expression/phosphate
+    Methods
+  summary: PitR deletion and rescue alter phosphate-responsive reporter output; combined
+    PitR/PhoU loss and rescue affect growth timing in defined Pi contexts. Protein-normalized
+    phosphate after exopolyphosphatase includes polyP-derived Pi. Single-mutant and
+    combined-genotype effects are kept separate.
+  accessed_at: '2026-10-11T17:17:10Z'
+  support: supports
+  snapshot_sha256: df865b470ebf99bfbade67fca32d606fd50326136b6f66a1925638033517bd1e
+- evidence_id: pitr-supplement
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/instance/13170248/bin/mbio.00203-26-s0002.pdf
+  locator: PDF3 FigureS1 caption and PDF22-26 TablesS2-S4, retrieved through EuropePMC
+    supplementaryFiles
+  summary: Primary PitR locus is NWMN_0632. Strain table explicitly retains phoU::erm
+    despite deletion shorthand, and plasmid table confirms pKK30/native-promoter PitR.
+    Table/prose discrepancies outside retained single-mutant comparisons remain follow-up.
+    Independent sequencing reads were not inspected.
+  accessed_at: '2026-10-11T17:17:10Z'
+  support: supports
+  snapshot_sha256: 5efe765c399b5005dec2be2fe1c7d3fe10adce114b96dd316b33ece41e312a01
+- evidence_id: coverage-ledger
+  kind: search
+  reference: evidence/PF01865/phou-div-gap-ledger.txt
+  locator: Bounded searches, source-access resolution, contradictions and primary
+    follow-up leads
+  search_scope: PF01865/PhoU_div/DUF47/Pap/PitR alias and reference searches; primary2017
+    thesis and2026 article selected methods/results/figures; selected2020 sections,2022
+    results and2024 abstract leads; ignored/hidden-inclusive repository searches on2026-10-11.
+  summary: The downloaded final supplement resolves the primary locus/strain/plasmid
+    bridge. Partial current UniProtKB query results are not protein absence; exact
+    UniParc sequence mapping resolves family scope. Additional members, unresolved
+    constructs and direct mechanisms remain open without invented graph edges.
+  accessed_at: '2026-10-11T17:17:10Z'
+  support: supports
+  snapshot_sha256: ee9760e0c99403d21003e979f4ff71915554191a27f5a01495aa05c1b1f3e1da
+- evidence_id: native
+  kind: validation
+  reference: src/dufmech/records.py
+  locator: Current projection validation and overlay equivalence in this retained-review
+    session
+  accessed_at: '2026-10-11T17:17:10Z'
+  support: supports
+  summary: Closed schema, canonical history and applicable graph/evidence checks pass.
+    Curated graphs and discussions match the overlay; scientific validity is assessed
+    separately.
+- evidence_id: stage4-prior-review
+  kind: prior_review
+  reference: reviews/structured/20261011T171710Z-pf01865-pap-operon-and-pitr-condition-specific-effects/review.yaml
+  locator: Predecessor structured review 20261011T171710Z-pf01865-pap-operon-and-pitr-condition-specific-effects
+  accessed_at: '2026-10-21T11:48:05Z'
+  support: supports
+  snapshot_sha256: 8d66ff0af06023a63a60b368e2237f152187a05f83e4891c83fbe4f09083a5a8
+  summary: Predecessor review 20261011T171710Z-pf01865-pap-operon-and-pitr-condition-specific-effects
+    verified and linked for finding continuity and semantic-digest progression on
+    PF01865.
+- evidence_id: duf-projection-pf01865
+  kind: record_content
+  reference: data/families/PF01865.yaml
+  locator: dufmech-reviewed-projection-v1
+  accessed_at: '2026-10-21T11:48:05Z'
+  support: context_only
+  snapshot_sha256: b0607027afc9abcc94c97730bea360bf9834074d8e8890f7608e7b6ea3a3efb2
+  quote: "id: Pfam:PF01865\npfam_id: PF01865\nname: Protein of unknown function DUF47\n\
+    short_name: PhoU_div\nseed_status: EX_DUF\ncharacterization_status: UNSCORED\n\
+    curation_status: IN_PROGRESS\nsource_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01865\n\
+    counters:\n  proteins: 9082\n  matches: 9082\n  proteomes: 8245\n  taxa: 11416\n\
+    \  structures: 3\n  alphafold_models: 5897\n  domain_architectures: 10\nprovenance:\n\
+    \  snapshot_id: interpro-pfam-duf-2026-10-10\n  path: data/worklists/interpro-pfam-duf-2026-10-10.json\n\
+    \  sha256: 17fb625876c9326ed284263a47bcd84e0d7844a31c040dc06cd2260c36f1c383\n\
+    \  generated_at: '2026-10-10T07:44:21.614711Z'\n  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/\n\
+    interpro_id: InterPro:IPR018445\ndescription: This family includes prokaryotic\
+    \ proteins of unknown function, as well as a protein annotated\n  as the pit accessory\
+    \ protein from Sinorhizobium meliloti [swissprot:O30498]. However, the function\
+    \ of\n  this protein is also unknown (Pit stands for Phosphate transport). It\
+    \ is probably distantly related\n  to [pfam:PF01895] (personal obs:Yeats C).\n\
+    curation_history: history/records/PF01865\ndiscussions:\n- discussion_id: pap-operon-and-protein-attribution\n\
+    \  prompt: Resolve operon polarity and protein-state effects before assigning\
+    \ a direct Pap mechanism.\n  kind: CURATION_TODO\n  status: OPEN\n  rationale:\
+    \ Operon rescue and substitutions support scoped whole-cell effects, while pap-only\
+    \ failure\n    and altered bands prevent a direct isolated-domain activation claim.\n\
+    \  evidence:\n  - reference: https://macsphere.mcmaster.ca/handle/11375/22200\n\
+    \    supports: PARTIAL\n    evidence_source: thesis_methods_tables_and_original_figures\n\
+    \    explanation: Figures3-15/16/21/29 and Table3-28 establish the retained effects\
+    \ and expose prose/table\n      and protein-band discrepancies.\n  notes: See\
+    \ evidence/PF01865/phou-div-gap-ledger.txt. Resolve P75mis/P75fs identity, phnC/phoC\
+    \ naming,\n    remaining variants and heterologous member mappings. Do not convert\
+    \ dimerization or an unidentified-ligand\n    model into observed activation.\n\
+    \  posed_by: Codex\n  posed_date: '2026-10-11'\n- discussion_id: pitr-member-and-context-coverage\n\
+    \  prompt: Extend the PitR review with exact member and assay attribution.\n \
+    \ kind: CURATION_TODO\n  status: OPEN\n  rationale: Newman reporter and combined-genotype\
+    \ effects do not exhaust family evidence or establish\n    direct phosphate sensing.\n\
+    \  evidence:\n  - reference: PMID:42017666\n    supports: PARTIAL\n    evidence_source:\
+    \ final_publication_methods_results_and_original_figures_2_3\n    explanation:\
+    \ Retained edges distinguish single and combined genotypes, Pi concentrations,\
+    \ reporter\n      output, growth timing and exopolyphosphatase-treated lysate\
+    \ phosphate.\n  notes: Supplement FigureS1 and TablesS2-S4 confirm the PitR locus,\
+    \ strain backgrounds and plasmid design;\n    independent clone-sequence checks,\
+    \ environmental and higher-order contexts, and member-specific follow-up\n   \
+    \ remain. USA500 PhoU2, dimerization and evolved-isolate studies are leads, not\
+    \ completed graph assessments.\n    Keep IN_PROGRESS.\n  posed_by: Codex\n  posed_date:\
+    \ '2026-10-11'\ncausal_graphs:\n- graph_id: pap-operon-restoration\n  title: Restoring\
+    \ the pap-pit operon rescues the conditional deletion strain\n  scope: Hsieh 2017\
+    \ MSc thesis Figures 3-15 and 3-16, intact-cell complementation in RmP3924.\n\
+    \  context: S. meliloti RmP3924 delta-pap in the conditional Pho-regulon background;\
+    \ no IPTG after depletion.\n    Growth in MOPS-P2, 20 mM glucose and 2 mM Pi at\
+    \ 30 C; separate 33P uptake assay at 10 uM Pi. Compare\n    operon-restoring integration\
+    \ with pap-only integration.\n  family_mapping: Pap O30498 sequence version 1\
+    \ equals NP_384293.1, smc02862, 214 aa, PF01865 4-212. Rm1021-derived\n    experimental\
+    \ strains, not an isolated domain.\n  scope_status: PHENOTYPIC\n  taxon: NCBITaxon:266834\n\
+    \  limitations: Restoration includes operon architecture and downstream pit expression.\
+    \ Pap alone is not\n    sufficient. Polar effects remain unresolved; native transporter\
+    \ abundance is not established. Methods/Table2-1\n    disagree on phnC versus\
+    \ phoC background naming.\n  nodes:\n  - node_id: restore-operon\n    label: Integrate\
+    \ pap-pit-truncated to restore the native pap-pit operon\n    node_type: PERTURBATION\n\
+    \    grounding:\n    - UniProtKB:O30498\n  - node_id: growth-trajectory\n    label:\
+    \ OD600 growth trajectory relative to pap-only integration\n    node_type: PHENOTYPE\n\
+    \  - node_id: phosphate-uptake\n    label: Initial protein-normalized 33P-phosphate\
+    \ uptake velocity\n    node_type: PHENOTYPE\n  edges:\n  - edge_id: operon-restoration-increases-growth\n\
+    \    subject: restore-operon\n    predicate: increases\n    object: growth-trajectory\n\
+    \    mechanism: The operon-restoring recombinant recovers the growth trajectory\
+    \ of the full pap-pit control.\n      The alternative split-promoter recombinant\
+    \ does not rescue, so this is not proof of a direct Pap-to-Pit\n      activation\
+    \ step.\n    directness: INDIRECT\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n\
+    \    evidence:\n    - reference: https://macsphere.mcmaster.ca/handle/11375/22200\n\
+    \      source_url: https://macsphere.mcmaster.ca/bitstreams/ed9a228f-14c0-4a9d-a324-390c60d1e757/download\n\
+    \      snippet: Initial Pi uptake velocities\n      explanation: Original Figures3-15A/3-16A-C,\
+    \ printed103-104, show the growth comparisons and PCR-distinguished\n        recombinant\
+    \ architectures; Methods and strain table constrain scope.\n      cache_path:\
+    \ evidence/PF01865/hsieh-2017-pap.txt\n      cache_sha256: 4e00ce85a7f30f739a003e36de3048c10c79abb3e24322b07bcfd964019de613\n\
+    \  - edge_id: operon-restoration-increases-uptake\n    subject: restore-operon\n\
+    \    predicate: increases\n    object: phosphate-uptake\n    mechanism: Operon-restored\
+    \ uptake is 3.48 versus pap-only 0.78 nmol Pi/mg protein/min; full pap-pit\n \
+    \     gives 3.13. Figure3-15B assigns restored and pap-only values to different\
+    \ ANOVA/Tukey groups. Transport\n      is measured in cells, not reconstituted\
+    \ Pap.\n    directness: INDIRECT\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n\
+    \    evidence:\n    - reference: https://macsphere.mcmaster.ca/handle/11375/22200\n\
+    \      source_url: https://macsphere.mcmaster.ca/bitstreams/ed9a228f-14c0-4a9d-a324-390c60d1e757/download\n\
+    \      snippet: Initial Pi uptake velocities\n      explanation: Original Figure3-15B,\
+    \ printed103; uptake Methods2.10 distinguishes the 10 uM assay\n        from growth\
+    \ at 2 mM Pi.\n      cache_path: evidence/PF01865/hsieh-2017-pap.txt\n      cache_sha256:\
+    \ 4e00ce85a7f30f739a003e36de3048c10c79abb3e24322b07bcfd964019de613\n- graph_id:\
+    \ pap-native-single-substitutions\n  title: P75A and R78A alter native-host growth\
+    \ and phosphate uptake\n  scope: Hsieh2017 Figure3-21, separately tested single\
+    \ substitutions in intact pap-pit constructs.\n  context: RmP3926 delta-pap-pit,\
+    \ conditional Pho-regulon background, pUCP30T-derived native-promoter\n    operons.\
+    \ Growth at 30 C in MOPS-P2 with 2 mM Pi; separate uptake at 10 uM Pi. Each variant\
+    \ compared\n    with WT pap-pit.\n  family_mapping: O30498/NP_384293.1 Pap; PF01865\
+    \ 4-212 includes reference P75 and R78. Grouped node denotes\n    separate single\
+    \ mutants, not a double mutant.\n  scope_status: PHENOTYPIC\n  taxon: NCBITaxon:266834\n\
+    \  limitations: Whole-cell effects may involve protein abundance, folding or downstream\
+    \ Pit translation.\n    Positive residual uptake is not zero transport. Growth\
+    \ delay is not a permanent inability to grow,\n    and statistical significance\
+    \ is not asserted for unmarked comparisons.\n  nodes:\n  - node_id: pap-single-substitution\n\
+    \    label: Pap P75A or R78A, each tested separately\n    node_type: PERTURBATION\n\
+    \    grounding:\n    - UniProtKB:O30498\n  - node_id: early-growth\n    label:\
+    \ OD600 growth during the early and middle time course\n    node_type: PHENOTYPE\n\
+    \  - node_id: uptake-velocity\n    label: Initial 33P-phosphate uptake velocity\
+    \ at 10 uM Pi\n    node_type: PHENOTYPE\n  edges:\n  - edge_id: single-substitutions-delay-growth\n\
+    \    subject: pap-single-substitution\n    predicate: decreases\n    object: early-growth\n\
+    \    mechanism: Each single variant grows more slowly than the matched WT operon\
+    \ in the displayed time\n      course. P75A eventually approaches the WT OD, preventing\
+    \ an interpretation of complete growth loss.\n    directness: INDIRECT\n    support:\
+    \ OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference: https://macsphere.mcmaster.ca/handle/11375/22200\n\
+    \      source_url: https://macsphere.mcmaster.ca/bitstreams/ed9a228f-14c0-4a9d-a324-390c60d1e757/download\n\
+    \      snippet: Initial Pi uptake velocities\n      explanation: Original Figure3-21A,\
+    \ printed109, visually inspected; Table2-4 defines the individual\n        mutant\
+    \ constructs.\n      cache_path: evidence/PF01865/hsieh-2017-pap.txt\n      cache_sha256:\
+    \ 4e00ce85a7f30f739a003e36de3048c10c79abb3e24322b07bcfd964019de613\n  - edge_id:\
+    \ single-substitutions-lower-uptake\n    subject: pap-single-substitution\n  \
+    \  predicate: decreases\n    object: uptake-velocity\n    mechanism: P75A gives\
+    \ 0.198 +/-0.124 and R78A 0.983 +/-0.502 versus WT 3.12 +/-0.142 nmol Pi/mg protein/min,\n\
+    \      reported SD. The table's nonzero R78A value takes precedence over the prose's\
+    \ no-uptake wording.\n    directness: INDIRECT\n    support: OBSERVED\n    evidence_kind:\
+    \ EXPERIMENTAL\n    evidence:\n    - reference: https://macsphere.mcmaster.ca/handle/11375/22200\n\
+    \      source_url: https://macsphere.mcmaster.ca/bitstreams/ed9a228f-14c0-4a9d-a324-390c60d1e757/download\n\
+    \      snippet: Initial Pi uptake velocities\n      explanation: Original Table3-21B,\
+    \ printed109, with Results3.2.2 contradiction explicitly retained.\n      cache_path:\
+    \ evidence/PF01865/hsieh-2017-pap.txt\n      cache_sha256: 4e00ce85a7f30f739a003e36de3048c10c79abb3e24322b07bcfd964019de613\n\
+    - graph_id: pap-heterologous-operon\n  title: High-copy SmPapPit expression restores\
+    \ uptake in the deficient E. coli host\n  scope: Hsieh2017 Table3-28, heterologous\
+    \ whole-operon effect.\n  context: E. coli MT2006, MG1655-derived delta-pitA/delta-pitB/delta-phnC/delta-(pstSCAB-phoU);\
+    \ pUC119\n    lac-driven SmPapPit versus empty pUC119. 10 uM 33P-Pi assay at 37\
+    \ C; biological triplicates, protein-normalized\n    initial slope.\n  family_mapping:\
+    \ S. meliloti Pap O30498/NP_384293.1, PF01865 4-212, expressed with its Pit partner\
+    \ in\n    E. coli. Taxon identifies the donor reference, not the heterologous\
+    \ host.\n  scope_status: PHENOTYPIC\n  taxon: NCBITaxon:266834\n  limitations:\
+    \ Not Pap-only sufficiency. Low-copy pMW119 SmPapPit did not show the same rescue.\
+    \ This uptake\n    comparison is not growth in M9 with approximately 69 mM Pi\
+    \ or evidence that Pap itself transports\n    phosphate.\n  nodes:\n  - node_id:\
+    \ high-copy-pap-pit\n    label: Express intact SmPapPit from pUC119 construct\
+    \ pTH2826\n    node_type: PERTURBATION\n    grounding:\n    - UniProtKB:O30498\n\
+    \  - node_id: uptake-velocity\n    label: MT2006 initial protein-normalized phosphate\
+    \ uptake velocity\n    node_type: PHENOTYPE\n  edges:\n  - edge_id: high-copy-operon-increases-uptake\n\
+    \    subject: high-copy-pap-pit\n    predicate: increases\n    object: uptake-velocity\n\
+    \    mechanism: Uptake is 27.4 +/-3.16 with pTH2826 versus empty pUC119 0.348\
+    \ +/-0.119 nmol Pi/mg protein/min,\n      reported SD. Both Pap and Pit and the\
+    \ expression context are part of the intervention.\n    directness: INDIRECT\n\
+    \    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n    -\
+    \ reference: https://macsphere.mcmaster.ca/handle/11375/22200\n      source_url:\
+    \ https://macsphere.mcmaster.ca/bitstreams/ed9a228f-14c0-4a9d-a324-390c60d1e757/download\n\
+    \      snippet: Initial Pi uptake velocities\n      explanation: Original Table3-28,\
+    \ printed116; Tables2-1/2-4 and Methods2.10 establish host, vector,\n        substrate\
+    \ and readout.\n      cache_path: evidence/PF01865/hsieh-2017-pap.txt\n      cache_sha256:\
+    \ 4e00ce85a7f30f739a003e36de3048c10c79abb3e24322b07bcfd964019de613\n- graph_id:\
+    \ pap-heterologous-substitutions\n  title: Pap substitutions reduce uptake in\
+    \ the heterologous operon assay\n  scope: Hsieh2017 Table3-28, with protein-preparation\
+    \ limitations from Figure3-29.\n  context: MT2006 with pUC119 lac-driven intact\
+    \ SmPapPit, each mutant compared with WT pTH2826. 10 uM\n    33P-Pi, 37 C; protein-normalized\
+    \ initial uptake, biological triplicates.\n  family_mapping: Pap O30498/NP_384293.1\
+    \ reference numbering; PF01865 4-212 includes E54,D58,P75,R78,D93,D90,H96.\n \
+    \   D90A/H96Y is a double mutant, not an H96Y single-mutant test.\n  scope_status:\
+    \ PHENOTYPIC\n  taxon: NCBITaxon:266834\n  limitations: Grouped node denotes five\
+    \ separate single mutants. Figure3-29 shows altered Pap bands for\n    some variants;\
+    \ abundance, processing, folding and Pit translation remain alternatives to a\
+    \ catalytic-site\n    effect. The reported double-mutant residual is not zero.\n\
+    \  nodes:\n  - node_id: single-variants\n    label: E54A, D58A, P75A, R78A or\
+    \ D93A, each separately\n    node_type: PERTURBATION\n    grounding:\n    - UniProtKB:O30498\n\
+    \  - node_id: double-variant\n    label: Combined Pap D90A and H96Y substitutions\n\
+    \    node_type: PERTURBATION\n    grounding:\n    - UniProtKB:O30498\n  - node_id:\
+    \ uptake-velocity\n    label: Initial phosphate uptake relative to the WT SmPapPit\
+    \ construct\n    node_type: PHENOTYPE\n  edges:\n  - edge_id: five-single-variants-lower-uptake\n\
+    \    subject: single-variants\n    predicate: decreases\n    object: uptake-velocity\n\
+    \    mechanism: Point estimates are E54A 4.61, D58A 2.00, P75A 2.38, R78A 0.629\
+    \ and D93A 1.23 versus WT\n      27.4 nmol Pi/mg protein/min. Each is a separate\
+    \ comparison; retained source lists SDs and no exact\n      mechanistic ranking\
+    \ is inferred.\n    directness: INDIRECT\n    support: OBSERVED\n    evidence_kind:\
+    \ EXPERIMENTAL\n    evidence:\n    - reference: https://macsphere.mcmaster.ca/handle/11375/22200\n\
+    \      source_url: https://macsphere.mcmaster.ca/bitstreams/ed9a228f-14c0-4a9d-a324-390c60d1e757/download\n\
+    \      snippet: Initial Pi uptake velocities\n      explanation: Original Table3-28\
+    \ and Figure3-29, printed116-117; assay reduction is not an independently\n  \
+    \      demonstrated catalytic or metal-binding mechanism.\n      cache_path: evidence/PF01865/hsieh-2017-pap.txt\n\
+    \      cache_sha256: 4e00ce85a7f30f739a003e36de3048c10c79abb3e24322b07bcfd964019de613\n\
+    \  - edge_id: double-variant-lowers-uptake\n    subject: double-variant\n    predicate:\
+    \ decreases\n    object: uptake-velocity\n    mechanism: D90A/H96Y gives 7.86\
+    \ +/-0.590 versus WT 27.4 +/-3.16, reported SD. Single D90A gives 25.1\n     \
+    \ +/-2.55. The combined result cannot establish H96Y alone, and contradicts the\
+    \ prose's no-uptake\n      wording.\n    directness: INDIRECT\n    support: OBSERVED\n\
+    \    evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference: https://macsphere.mcmaster.ca/handle/11375/22200\n\
+    \      source_url: https://macsphere.mcmaster.ca/bitstreams/ed9a228f-14c0-4a9d-a324-390c60d1e757/download\n\
+    \      snippet: Initial Pi uptake velocities\n      explanation: Table3-28 quantitative\
+    \ rows and Table2-4 combined construct identity; Results printed50\n        uses\
+    \ incompatible zero-uptake language.\n      cache_path: evidence/PF01865/hsieh-2017-pap.txt\n\
+    \      cache_sha256: 4e00ce85a7f30f739a003e36de3048c10c79abb3e24322b07bcfd964019de613\n\
+    - graph_id: pitr-high-phosphate-reporters\n  title: PitR deletion and complementation\
+    \ alter phosphate-responsive reporter output\n  scope: Vermilya2026 Figures2A/B/D/E,\
+    \ Newman single-mutant reporter comparisons.\n  context: PFM9 pH7.4, 5 mM Pi,\
+    \ 37 C, 8 h; PpstS-yfp or PnptA-yfp fluorescence normalized to OD600. Deletion\n\
+    \    versus WT; native-promoter PitR on pKK30 versus empty vector in the deletion\
+    \ strain.\n  family_mapping: Newman NWMN_0632/BAF66904.1, 205 aa, exactly matches\
+    \ UniParc UPI00000549A3 with PF01865\n    2-202. This is the reference sequence,\
+    \ not an independently resequenced laboratory stock.\n  scope_status: PHENOTYPIC\n\
+    \  taxon: NCBITaxon:426430\n  limitations: Reporter output is not direct PhoPR\
+    \ phosphorylation, promoter binding or physical PitA\n    inhibition. Whole-gene\
+    \ perturbation does not establish isolated-domain sufficiency. Effects are conditional\n\
+    \    on medium and Pi concentration.\n  nodes:\n  - node_id: delete-pitr\n   \
+    \ label: Delete pitR in Newman\n    node_type: PERTURBATION\n    grounding:\n\
+    \    - NCBIProtein:BAF66904.1\n  - node_id: restore-pitr\n    label: Complement\
+    \ the pitR deletion with native-promoter PitR on pKK30\n    node_type: PERTURBATION\n\
+    \    grounding:\n    - NCBIProtein:BAF66904.1\n  - node_id: pst-reporter\n   \
+    \ label: PpstS-yfp fluorescence per OD600 at 5 mM Pi\n    node_type: PHENOTYPE\n\
+    \  - node_id: npta-reporter\n    label: PnptA-yfp fluorescence per OD600 at 5\
+    \ mM Pi\n    node_type: PHENOTYPE\n  edges:\n  - edge_id: pitr-deletion-increases-pst-reporter\n\
+    \    subject: delete-pitr\n    predicate: increases\n    object: pst-reporter\n\
+    \    mechanism: The single deletion increases normalized pst reporter output relative\
+    \ to WT in this high-Pi\n      condition; the molecular route remains unresolved.\n\
+    \    directness: INDIRECT\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n\
+    \    evidence:\n    - reference: PMID:42017666\n      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC13170248/\n\
+    \      snippet: Phosphate accumulation assays\n      explanation: Original Figure2A,\
+    \ 5 mM Pi single-mutant versus WT bars, and growth/expression Methods.\n     \
+    \ cache_path: evidence/PF01865/vermilya-2026-pitr.txt\n      cache_sha256: df865b470ebf99bfbade67fca32d606fd50326136b6f66a1925638033517bd1e\n\
+    \  - edge_id: pitr-deletion-increases-npta-reporter\n    subject: delete-pitr\n\
+    \    predicate: increases\n    object: npta-reporter\n    mechanism: The single\
+    \ deletion increases normalized nptA reporter output relative to WT; this is not\n\
+    \      a measured phosphate transport rate.\n    directness: INDIRECT\n    support:\
+    \ OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference: PMID:42017666\n\
+    \      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC13170248/\n      snippet:\
+    \ Phosphate accumulation assays\n      explanation: Original Figure2B, 5 mM Pi\
+    \ comparison; at least three biological replicates and the\n        reported statistical\
+    \ analysis.\n      cache_path: evidence/PF01865/vermilya-2026-pitr.txt\n     \
+    \ cache_sha256: df865b470ebf99bfbade67fca32d606fd50326136b6f66a1925638033517bd1e\n\
+    \  - edge_id: pitr-complementation-decreases-pst-reporter\n    subject: restore-pitr\n\
+    \    predicate: decreases\n    object: pst-reporter\n    mechanism: PitR complementation\
+    \ reduces the elevated pst reporter relative to the empty-vector deletion\n  \
+    \    strain. It supports genotype attribution without identifying a direct signaling\
+    \ interaction.\n    directness: INDIRECT\n    support: OBSERVED\n    evidence_kind:\
+    \ EXPERIMENTAL\n    evidence:\n    - reference: PMID:42017666\n      source_url:\
+    \ https://pmc.ncbi.nlm.nih.gov/articles/PMC13170248/\n      snippet: Phosphate\
+    \ accumulation assays\n      explanation: Original Figure2E single delta-pitR\
+    \ paired bars, not the higher-order mutant comparisons.\n      cache_path: evidence/PF01865/vermilya-2026-pitr.txt\n\
+    \      cache_sha256: df865b470ebf99bfbade67fca32d606fd50326136b6f66a1925638033517bd1e\n\
+    \  - edge_id: pitr-complementation-decreases-npta-reporter\n    subject: restore-pitr\n\
+    \    predicate: decreases\n    object: npta-reporter\n    mechanism: Complementation\
+    \ reduces the elevated nptA reporter toward the WT vector-control level under\n\
+    \      the matched high-Pi condition.\n    directness: INDIRECT\n    support:\
+    \ OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference: PMID:42017666\n\
+    \      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC13170248/\n      snippet:\
+    \ Phosphate accumulation assays\n      explanation: Original Figure2D paired single-mutant\
+    \ complementation comparison.\n      cache_path: evidence/PF01865/vermilya-2026-pitr.txt\n\
+    \      cache_sha256: df865b470ebf99bfbade67fca32d606fd50326136b6f66a1925638033517bd1e\n\
+    - graph_id: pitr-intermediate-phosphate-reporter\n  title: PitR also affects the\
+    \ nptA reporter at intermediate phosphate\n  scope: Vermilya2026 Figures2B/C,\
+    \ distinct from the high-phosphate assay.\n  context: Newman, PFM9 pH7.4, 500\
+    \ uM Pi, 37 C, 8 h; PnptA-yfp normalized to OD600. Deletion versus WT\n    and\
+    \ pKK30 PitR complementation versus empty vector.\n  family_mapping: NWMN_0632/BAF66904.1\
+    \ equals UPI00000549A3; PF01865 2-202.\n  scope_status: PHENOTYPIC\n  taxon: NCBITaxon:426430\n\
+    \  limitations: The pst reporter is similar in WT and single delta-pitR at 500\
+    \ uM, so no identical pst\n    edge is inferred. At 50 uM single-mutant reporter\
+    \ differences are largely absent. No direct transcriptional\n    mechanism is\
+    \ established.\n  nodes:\n  - node_id: delete-pitr\n    label: Delete pitR in\
+    \ Newman\n    node_type: PERTURBATION\n    grounding:\n    - NCBIProtein:BAF66904.1\n\
+    \  - node_id: restore-pitr\n    label: Complement delta-pitR with native-promoter\
+    \ PitR on pKK30\n    node_type: PERTURBATION\n    grounding:\n    - NCBIProtein:BAF66904.1\n\
+    \  - node_id: npta-reporter\n    label: PnptA-yfp fluorescence per OD600 at 500\
+    \ uM Pi\n    node_type: PHENOTYPE\n  edges:\n  - edge_id: deletion-increases-intermediate-pi-reporter\n\
+    \    subject: delete-pitr\n    predicate: increases\n    object: npta-reporter\n\
+    \    mechanism: The single mutant has increased nptA reporter output relative\
+    \ to WT at intermediate Pi;\n      no transport-rate or free-phosphate measurement\
+    \ is implied.\n    directness: INDIRECT\n    support: OBSERVED\n    evidence_kind:\
+    \ EXPERIMENTAL\n    evidence:\n    - reference: PMID:42017666\n      source_url:\
+    \ https://pmc.ncbi.nlm.nih.gov/articles/PMC13170248/\n      snippet: Phosphate\
+    \ accumulation assays\n      explanation: Original Figure2B 500 uM single-mutant\
+    \ comparison.\n      cache_path: evidence/PF01865/vermilya-2026-pitr.txt\n   \
+    \   cache_sha256: df865b470ebf99bfbade67fca32d606fd50326136b6f66a1925638033517bd1e\n\
+    \  - edge_id: complementation-decreases-intermediate-pi-reporter\n    subject:\
+    \ restore-pitr\n    predicate: decreases\n    object: npta-reporter\n    mechanism:\
+    \ The PitR plasmid lowers nptA reporter output relative to the mutant's empty-vector\
+    \ control,\n      consistent with complementation in this genetic background.\n\
+    \    directness: INDIRECT\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n\
+    \    evidence:\n    - reference: PMID:42017666\n      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC13170248/\n\
+    \      snippet: Phosphate accumulation assays\n      explanation: Original Figure2C\
+    \ paired single-mutant bars and mutant-construction Methods.\n      cache_path:\
+    \ evidence/PF01865/vermilya-2026-pitr.txt\n      cache_sha256: df865b470ebf99bfbade67fca32d606fd50326136b6f66a1925638033517bd1e\n\
+    - graph_id: pitr-phou-combined-background\n  title: Combined PitR and PhoU loss\
+    \ alters growth timing and the phosphate-pool readout\n  scope: Vermilya2026 Figures3A/G,\
+    \ explicitly combined genotype versus WT.\n  context: Newman delta-pitR phoU::erm,\
+    \ labeled delta-pitR delta-phoU in the paper; PFM9 pH7.4, 5 mM Pi,\n    37 C.\
+    \ OD600 growth time course and a separate protein-normalized lysate assay after\
+    \ exopolyphosphatase\n    treatment.\n  family_mapping: Only PitR BAF66904.1/UPI00000549A3\
+    \ is mapped here to PF01865 2-202. Conventional PhoU\n    is a second regulator,\
+    \ not another mapped PF01865 member.\n  scope_status: PHENOTYPIC\n  taxon: NCBITaxon:426430\n\
+    \  limitations: Joint loss is the intervention; single delta-pitR does not establish\
+    \ either effect. The\n    lysate readout includes polyphosphate-derived Pi, not\
+    \ free cytosolic Pi or uptake velocity. These\n    assays do not establish that\
+    \ an enlarged phosphate pool causes the growth delay.\n  nodes:\n  - node_id:\
+    \ combined-loss\n    label: Combined pitR deletion and phoU::erm background relative\
+    \ to WT\n    node_type: PERTURBATION\n    grounding:\n    - NCBIProtein:BAF66904.1\n\
+    \  - node_id: growth-delay\n    label: Delay before OD600 growth increases\n \
+    \   node_type: PHENOTYPE\n  - node_id: phosphate-pool-readout\n    label: Protein-normalized\
+    \ lysate phosphate after exopolyphosphatase treatment\n    node_type: PHENOTYPE\n\
+    \  edges:\n  - edge_id: combined-loss-increases-growth-delay\n    subject: combined-loss\n\
+    \    predicate: increases\n    object: growth-delay\n    mechanism: The combined\
+    \ mutant enters growth later than WT at 5 mM Pi but approaches a similar final\n\
+    \      OD. The phenotype cannot be assigned to loss of PitR alone or to a specific\
+    \ biochemical intermediate.\n    directness: INDIRECT\n    support: OBSERVED\n\
+    \    evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference: PMID:42017666\n\
+    \      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC13170248/\n      snippet:\
+    \ Phosphate accumulation assays\n      explanation: Original Figure3A double-mutant\
+    \ trajectory and single-mutant controls; Methods specifies\n        the phoU::erm\
+    \ allele.\n      cache_path: evidence/PF01865/vermilya-2026-pitr.txt\n      cache_sha256:\
+    \ df865b470ebf99bfbade67fca32d606fd50326136b6f66a1925638033517bd1e\n  - edge_id:\
+    \ combined-loss-increases-phosphate-pool-readout\n    subject: combined-loss\n\
+    \    predicate: increases\n    object: phosphate-pool-readout\n    mechanism:\
+    \ The double mutant gives more phosphate per total protein than WT in the 5 mM\
+    \ condition.\n      Exopolyphosphatase pretreatment means the assay does not separate\
+    \ free Pi from polyphosphate-derived\n      Pi; the 500 uM comparison is not increased.\n\
+    \    directness: INDIRECT\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n\
+    \    evidence:\n    - reference: PMID:42017666\n      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC13170248/\n\
+    \      snippet: Phosphate accumulation assays\n      explanation: Original Figure3G\
+    \ and phosphate-assay Methods; at least five biological replicates\n        and\
+    \ the reported ANOVA/Tukey comparison.\n      cache_path: evidence/PF01865/vermilya-2026-pitr.txt\n\
+    \      cache_sha256: df865b470ebf99bfbade67fca32d606fd50326136b6f66a1925638033517bd1e\n\
+    - graph_id: pitr-combined-background-growth-rescue\n  title: PitR complementation\
+    \ reduces growth delay in the combined-loss background\n  scope: Vermilya2026\
+    \ Figures3C/D, two separate phosphate concentrations.\n  context: Newman delta-pitR\
+    \ phoU::erm; native-promoter PitR on pKK30 versus empty pKK30. PFM9 pH7.4,\n \
+    \   37 C; 5 mM and 500 uM Pi are separate growth experiments, not a pooled dose\
+    \ response.\n  family_mapping: PitR NWMN_0632/BAF66904.1, exact UPI00000549A3\
+    \ sequence, PF01865 2-202; the phoU::erm\n    background remains part of both\
+    \ comparisons.\n  scope_status: PHENOTYPIC\n  taxon: NCBITaxon:426430\n  limitations:\
+    \ Growth rescue is not a directly measured rescue of the phosphate-pool assay\
+    \ or a physical\n    PitR-PhoU interaction. Final biomass and lag are different\
+    \ outcomes. The source's 500 mM prose typo\n    is not adopted; figure axes specify\
+    \ 500 uM.\n  nodes:\n  - node_id: complement-pitr\n    label: Restore PitR expression\
+    \ in the delta-pitR phoU::erm background\n    node_type: PERTURBATION\n    grounding:\n\
+    \    - NCBIProtein:BAF66904.1\n  - node_id: high-pi-delay\n    label: OD600 growth\
+    \ delay at 5 mM Pi\n    node_type: PHENOTYPE\n  - node_id: intermediate-pi-delay\n\
+    \    label: OD600 growth delay at 500 uM Pi\n    node_type: PHENOTYPE\n  edges:\n\
+    \  - edge_id: pitr-restoration-reduces-high-pi-delay\n    subject: complement-pitr\n\
+    \    predicate: decreases\n    object: high-pi-delay\n    mechanism: PitR complementation\
+    \ restores the double-mutant growth trajectory toward WT at 5 mM Pi\n      relative\
+    \ to the empty-vector mutant.\n    directness: INDIRECT\n    support: OBSERVED\n\
+    \    evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference: PMID:42017666\n\
+    \      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC13170248/\n      snippet:\
+    \ Phosphate accumulation assays\n      explanation: Original Figure3C double-mutant\
+    \ paired trajectories, separated from the triple-mutant\n        comparison.\n\
+    \      cache_path: evidence/PF01865/vermilya-2026-pitr.txt\n      cache_sha256:\
+    \ df865b470ebf99bfbade67fca32d606fd50326136b6f66a1925638033517bd1e\n  - edge_id:\
+    \ pitr-restoration-reduces-intermediate-pi-delay\n    subject: complement-pitr\n\
+    \    predicate: decreases\n    object: intermediate-pi-delay\n    mechanism: The\
+    \ corresponding 500 uM Pi experiment also shows restoration of the double-mutant\
+    \ growth\n      trajectory. This does not imply a phosphate-pool change, which\
+    \ is not elevated in that concentration's\n      separate assay.\n    directness:\
+    \ INDIRECT\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n\
+    \    - reference: PMID:42017666\n      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC13170248/\n\
+    \      snippet: Phosphate accumulation assays\n      explanation: Original Figure3D,\
+    \ with the distinct Figure3G phosphate measurement retained as a context\n   \
+    \     limit.\n      cache_path: evidence/PF01865/vermilya-2026-pitr.txt\n    \
+    \  cache_sha256: df865b470ebf99bfbade67fca32d606fd50326136b6f66a1925638033517bd1e\n\
+    curation_events:\n- timestamp: '2026-10-11T17:01:10Z'\n  curator: Codex\n  action:\
+    \ CREATE\n  outcome: changed\n  summary: Curate Pap and PitR assay-specific causal\
+    \ graphs for PF01865\n  history_record: history/records/PF01865/2026-10-11T170110Z-codex-1cb696.yaml\n\
+    \  event_index: 0\n  llm_assisted: true\n- timestamp: '2026-10-11T17:16:46Z'\n\
+    \  curator: Codex\n  action: REVIEW\n  outcome: needs_followup\n  summary: Retain\
+    \ scoped scientific review of PF01865 Pap and PitR causal effects\n  history_record:\
+    \ history/records/PF01865/2026-10-11T171646Z-codex-1ece8d.yaml\n  event_index:\
+    \ 0\n  llm_assisted: true\n- timestamp: '2026-10-18T02:54:46Z'\n  curator: Antigravity\n\
+    \  action: EDIT\n  outcome: changed\n  summary: Ground causal graph gene and protein\
+    \ nodes in PF01865 with verified UniProtKB accessions (UniProtKB:O30498)\n  history_record:\
+    \ history/records/PF01865/2026-10-18T025446Z-antigravity-34cdf9.yaml\n  event_index:\
+    \ 0\n  llm_assisted: true\n- timestamp: '2026-10-21T09:52:05Z'\n  curator: Antigravity\n\
+    \  action: EDIT\n  outcome: changed\n  summary: Ground six PitR perturbation nodes\
+    \ across four causal graphs with verified native NCBIProtein:BAF66904.1\n  history_record:\
+    \ history/records/PF01865/2026-10-21T095205Z-antigravity-18b651.yaml\n  event_index:\
+    \ 0\n  llm_assisted: true\n"
+  summary: Byte-exact projection retained at save for digest verification, not scientific
+    assessment.
+assessments:
+- assessment_id: member-identity
+  area: identity
+  topic: Protein, domain and experimental scope
+  outcome: supported
+  summary: Pap O30498 sequence version1 exactly matches NP_384293.1,214aa,PF01865
+    4-212; all retained substitution positions match. Newman NWMN_0632/BAF66904.1
+    exactly matches UPI00000549A3,205aa,PF01865 2-202. Published supplemental FigureS1
+    explicitly identifies NWMN_0632 as PitR. Reference identity is verified, not complete
+    laboratory-stock resequencing. Conventional PhoU/PF01895 and the NptA domain are
+    not treated as additional PF01865 members.
+  target_ids:
+  - PF01865
+  evidence_ids:
+  - identity
+  - primary
+  - pitr-primary
+  - pitr-supplement
+  - coverage-ledger
+- assessment_id: causal-scope
+  area: graph
+  topic: Directed effects and limits
+  outcome: supported
+  summary: All seventeen edges are PHENOTYPIC, INDIRECT and OBSERVED, scoped to measured
+    intact-cell effects. Grouped single variants remain separate experiments; D90A/H96Y
+    is explicitly combined. Operon architecture, vector copy context, donor versus
+    host taxon, Pi concentrations, reporter normalization and phoU::erm backgrounds
+    are retained. Exopolyphosphatase-treated lysate phosphate is not free cytosolic
+    Pi or uptake velocity. No observed edge joins an enlarged phosphate pool to growth
+    delay or binding to transporter activation.
+  target_ids:
+  - PF01865
+  evidence_ids:
+  - primary
+  - native
+  - pitr-primary
+  - pitr-supplement
+  - coverage-ledger
+- assessment_id: remaining-coverage
+  area: completeness
+  topic: Remaining family coverage
+  outcome: concern
+  summary: Remaining Pap variants and member orthologs, kinetic/source inconsistencies,
+    exact clone sequences, transporter abundance/processing and direct biochemical
+    tests; Newman environmental/higher-order contexts and additional primary PitR/PhoU2
+    studies. These are partial assessments, not exhaustive family coverage or independent
+    review.
+  target_ids:
+  - PF01865
+  evidence_ids:
+  - primary
+- assessment_id: cycle1-partner-grounding-verification
+  area: identity
+  topic: Cycle 1 causal-graph partner and substrate protein grounding
+  outcome: supported
+  summary: 'Stage 3 (PR #334) grounded uropathogenic Escherichia coli J96 papBA phase-switching
+    node papba-operon to UniProtKB:P04741 and UniProtKB:P0AD96 in ecoli-papi-papb-phase-switching-2000
+    from Xia et al. 2000 (PMID:10850996), preserving all PapI/PapB/Lrp and PitR graphs.'
+  target_ids:
+  - PF01865
+  evidence_ids:
+  - stage4-prior-review
+  - primary
+findings:
+- finding_id: additional-contexts
+  issue_key: pf01865-causal-context-coverage
+  category: completeness
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Resolve member-specific and molecular attribution gaps before extending the
+    family graph
+  description: Review remaining Pap constructs and Bacteroides/Shewanella identities,
+    resolve phnC/phoC and P75mis/P75fs nomenclature plus conflicting numeric/protein-band
+    statements, and assess PitR environmental and additional member-specific experiments.
+    Verify USA500 PhoU2 vector/identity and distinguish evolved multi-mutation isolates
+    from single-allele tests. Preserve genotype and assay context; strengthen direct
+    mechanism claims only with corresponding primary evidence.
+  target_ids:
+  - PF01865
+  field_paths:
+  - causal_graphs
+  evidence_ids:
+  - primary
+  - identity
+  - pitr-primary
+  - pitr-supplement
+  - coverage-ledger
+  owner_paths:
+  - repository: CultureBotAI/DUFMech
+    path: curation/families/PF01865.yaml
+    role: Human-owned scientific overlay
+  previous_occurrences:
+  - repository: CultureBotAI/DUFMech
+    review_id: 20261011T171710Z-pf01865-pap-operon-and-pitr-condition-specific-effects
+    finding_id: additional-contexts
+actions:
+- action_id: extend-contexts
+  description: Review remaining Pap constructs and Bacteroides/Shewanella identities,
+    resolve phnC/phoC and P75mis/P75fs nomenclature plus conflicting numeric/protein-band
+    statements, and assess PitR environmental and additional member-specific experiments.
+    Verify USA500 PhoU2 vector/identity and distinguish evolved multi-mutation isolates
+    from single-allele tests. Preserve genotype and assay context; strengthen direct
+    mechanism claims only with corresponding primary evidence.
+  finding_ids:
+  - additional-contexts
+  target_ids:
+  - PF01865
+  ownership_note: Curate overlay and minimal evidence; append actual history, regenerate
+    and retain successor review.
+  acceptance_checks:
+  - Each added edge has member-specific primary evidence and explicit conditions.
+  - Unsupported transfers and conflicting or negative results remain visible.
+  - Native checks pass and a successor report states actual scope.
+limitations:
+- Original thesis Figures3-15/16/21/29 and Table3-28, final2026 Figures2/3, and supplemental
+  strain/plasmid tables on pages22/25 were visually inspected. Other selected text
+  and tables were parsed. No complete thesis or literature review, raw-data reanalysis,
+  clone resequencing, transport reconstitution or experimental replication is claimed.
+  Rendered-page verification follows separately.
+- Same-agent assessment, not independent expert review or experimental replication.
+- Partial family coverage; status remains IN_PROGRESS. No full-corpus completion,
+  publication or full publication-QC pass is claimed.
+notes:
+- Assessments were authored from inspected primary evidence. Native inspection supplied
+  provenance, not scientific conclusions.
+```

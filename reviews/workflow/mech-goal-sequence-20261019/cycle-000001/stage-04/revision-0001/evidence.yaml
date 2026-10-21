@@ -1,0 +1,40 @@
+schema_version: 1.0.0
+repository_key: dufmech
+github_repository: CultureBotAI/DUFMech
+run_id: mech-goal-sequence-20261019
+cycle: 1
+stage: 4
+revision: 1
+outcome: completed
+summary: Audited all 141 maintained FamilyCuration overlays and all 8,296 generated FamilyRecord projections in the frozen InterPro/Pfam 2026-10-10 inventory. Saved 17 versioned per-record structured reviews and 1 cohort category review (18 bundles total in reviews/structured/) covering the 14 overlays updated in Cycle 1 Stages 2-3 and 3 overlays carrying newly identified open causal-graph taxon/grounding findings (PF01980, PF01985, PF02410), preserving all 3 open findings in carry_forward_ids for Stage 5 grouped remediation.
+source_revision: d658f73e7e618d3938704cdb9c86597bf47fc15e
+scope_frozen_at: 2026-10-21T11:48:00Z
+artifacts:
+- path: reviews/workflow/mech-goal-sequence-20261019/cycle-000001/stage-04/revision-0001/review_report.md
+  sha256: b8f502b2a88707727eb54de6adeea3d2b68547a3327f045d98de4d7fc5f4511e
+  kind: review_report
+- path: reviews/workflow/mech-goal-sequence-20261019/cycle-000001/stage-04/revision-0001/review_findings.md
+  sha256: ec6dcd0f25c4590eb59cf464660c5ca9955beb327baa401dbb1e4a09cf401a73
+  kind: review_findings
+- path: reviews/workflow/mech-goal-sequence-20261019/cycle-000001/stage-04/revision-0001/frozen_inventory_coverage.json
+  sha256: f528c0997eeb39e53c2e2909e65729ee2da56c4893222d7a93c34d5ddcc44b6b
+  kind: supporting
+findings:
+- finding_id: pf02410-media-shift-graph-missing-taxon
+  status: open
+  summary: 'Causal graph ecoli-rsfs-deletion-media-shift in curation/families/PF02410.yaml models whole-gene b0637 (rsfS, UniProtKB:P0AAT6, JW5090) deletion in Escherichia coli BW25113 derivatives (NCBITaxon:83333) from Hauser et al. 2012 (PMID:22829778) but omits taxon: NCBITaxon:83333 (evidence: curation/families/PF02410.yaml lines 318-360; reviews/structured/20261021T114833Z-pf02410-stage4-record-review/review.yaml).'
+  disposition: Carried forward to Stage 5 (resolve_review_findings) for grouped remediation.
+- finding_id: pf01980-ecoli-trmo-graphs-missing-taxon-and-thr-variant-grounding
+  status: open
+  summary: 'Ten Escherichia coli TrmO (YaeB, UniProtKB:P28634) causal graphs from Kimura et al. 2014 (PMID:24875475) in curation/families/PF01980.yaml omit taxon: NCBITaxon:83333, and ectrmo-thr3-identity-loss-2014 / ectrmo-thr4-identity-gain-2014 omit UniProtKB:P28634 grounding on signal (evidence: curation/families/PF01980.yaml lines 431-859; reviews/structured/20261021T114829Z-pf01980-stage4-record-review/review.yaml).'
+  disposition: Carried forward to Stage 5 (resolve_review_findings) for grouped remediation.
+- finding_id: pf01985-mcrs1-retention-state-nodes-missing-q9fyt6-grounding
+  status: open
+  summary: 'Zea mays mCRS1 (UniProtKB:Q9FYT6) causal graphs maize-mcrs1-magnesium-retention-2005 and maize-mcrs1-rna-deletions-2005 in curation/families/PF01985.yaml omit UniProtKB:Q9FYT6 grounding on the mature CRS1-bound RNA retention STATE nodes (evidence: curation/families/PF01985.yaml lines 473-582; reviews/structured/20261021T114831Z-pf01985-stage4-record-review/review.yaml).'
+  disposition: Carried forward to Stage 5 (resolve_review_findings) for grouped remediation.
+groups: []
+carry_forward_ids:
+- pf02410-media-shift-graph-missing-taxon
+- pf01980-ecoli-trmo-graphs-missing-taxon-and-thr-variant-grounding
+- pf01985-mcrs1-retention-state-nodes-missing-q9fyt6-grounding
+infra_tasks: []
