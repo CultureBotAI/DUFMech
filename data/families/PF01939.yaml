@@ -659,14 +659,18 @@ causal_graphs:
   - node_id: deletion
     label: Native nucS deletion instead of WT
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q8NR49
   - node_id: rescue
     label: WT nucS supplied to deletion strain
     node_type: PERTURBATION
     grounding:
-    - UniProtKB:Q8NQE1
+    - UniProtKB:Q8NR49
   - node_id: tail
     label: Native five-residue terminal truncation instead of WT
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q8NR49
   - node_id: frequency
     label: Measured spontaneous mutation frequency
     node_type: PHENOTYPE
@@ -943,5 +947,13 @@ curation_events:
   summary: Ground causal graph gene and protein nodes in PF01939 with verified UniProtKB accessions (UniProtKB:Q9V2E8,
     UniProtKB:Q5JER9, UniProtKB:Q8NR49, UniProtKB:Q8NQE1)
   history_record: history/records/PF01939/2026-10-18T025446Z-antigravity-ade652.yaml
+  event_index: 0
+  llm_assisted: true
+- timestamp: '2026-10-21T07:32:29Z'
+  curator: Antigravity
+  action: EDIT
+  outcome: changed
+  summary: Correct CglEndoMS node grounding in cgl-mutation-frequency-2018 to UniProtKB:Q8NR49
+  history_record: history/records/PF01939/2026-10-21T073229Z-antigravity-2adbb0.yaml
   event_index: 0
   llm_assisted: true

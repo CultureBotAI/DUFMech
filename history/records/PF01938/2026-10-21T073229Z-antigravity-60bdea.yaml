@@ -1,0 +1,29 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01938
+  path: curation/families/PF01938.yaml
+session:
+  id: 2026-10-21T073229Z-antigravity-60bdea
+  timestamp: '2026-10-21T07:32:29Z'
+  actors:
+  - type: ai_agent
+    name: Antigravity
+    model: Claude Opus 4.6
+    agent_tool: Antigravity
+events:
+- type: EDIT
+  outcome: changed
+  summary: Ground MMP0076/TRAM0076 perturbation nodes across four Li 2019 causal graphs
+    to UniProtKB:Q6M142
+  details: Reviewed PF01938 causal_graphs against evidence/PF01938/li-2019.txt (PMID:31404065).
+    Grounded MMP0076/TRAM0076 PERTURBATION nodes in tram0076-native-growth-22c-2019
+    (deletion), tram0076-rl211-reporter-2019 (wt, i33a, r35a, f39a, f42a, k62a, f63a,
+    f65a), tram0076-native-variant-growth-2019 (r35a, f39a, f42a, k62a, f63a, f65a),
+    and tram0076-native-utr-reporters-2019 (deletion) to UniProtKB:Q6M142, matching
+    verified family_mapping and sibling causal graphs.
+  sections:
+  - causal_graphs
+links:
+  urls:
+  - https://pmc.ncbi.nlm.nih.gov/articles/PMC6705878/

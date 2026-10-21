@@ -89,21 +89,33 @@ causal_graphs:
   - node_id: k154a
     label: K154A instead of wild-type HerA
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q97WG8
   - node_id: r142a
     label: R142A instead of wild-type HerA
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q97WG8
   - node_id: r381a
     label: R381A instead of wild-type HerA
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q97WG8
   - node_id: k363a
     label: K363A instead of wild-type HerA
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q97WG8
   - node_id: d471a
     label: D471A instead of wild-type HerA
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q97WG8
   - node_id: double
     label: R142A-R381A double substitution
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q97WG8
   - node_id: phosphate
     label: Phosphate released per HerA monomer on5-prime-overhang DNA
     node_type: PHENOTYPE
@@ -222,12 +234,18 @@ causal_graphs:
   - node_id: k154a
     label: K154A HerA with D58A NurA
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q97WG8
   - node_id: r381a
     label: R381A HerA with D58A NurA
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q97WG8
   - node_id: k363a
     label: K363A HerA with D58A NurA
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q97WG8
   - node_id: product
     label: Unwound labeled strand relative to WT complex
     node_type: PHENOTYPE
@@ -297,12 +315,18 @@ causal_graphs:
   - node_id: k154a
     label: K154A substitution versus WT
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q97WG8
   - node_id: d471a
     label: D471A substitution versus WT
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q97WG8
   - node_id: stop
     label: G465STOP truncation versus WT
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q97WG8
   - node_id: released
     label: Released triplex-forming oligonucleotide
     node_type: PHENOTYPE
@@ -557,9 +581,13 @@ causal_graphs:
   - node_id: d176e
     label: D176E HerA with WT NurA versus WT pair
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:F0NFK8
   - node_id: e356d
     label: E356D HerA with WT NurA versus WT pair
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:F0NFK8
   - node_id: product
     label: Exonuclease-class products from3-prime-overhang DNA
     node_type: PHENOTYPE
@@ -621,5 +649,13 @@ curation_events:
   summary: Ground causal graph gene and protein nodes in PF01935 with verified UniProtKB accessions (UniProtKB:Q97WG8,
     UniProtKB:F0NFK8)
   history_record: history/records/PF01935/2026-10-18T025446Z-antigravity-628c81.yaml
+  event_index: 0
+  llm_assisted: true
+- timestamp: '2026-10-21T07:32:29Z'
+  curator: Antigravity
+  action: EDIT
+  outcome: changed
+  summary: Ground Sso2251 and Sire_0064 HerA perturbation nodes to verified UniProtKB accessions
+  history_record: history/records/PF01935/2026-10-21T073229Z-antigravity-80657c.yaml
   event_index: 0
   llm_assisted: true

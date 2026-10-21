@@ -117,6 +117,8 @@ causal_graphs:
   - node_id: deletion
     label: MMP0076 deletion instead of parental S0001
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q6M142
   - node_id: growth
     label: Native exponential growth rate at22C
     node_type: PHENOTYPE
@@ -342,27 +344,43 @@ causal_graphs:
   - node_id: wt
     label: WT TRAM0076 instead of empty pINIII
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q6M142
   - node_id: i33a
     label: I33A instead of WT TRAM0076
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q6M142
   - node_id: r35a
     label: R35A instead of WT TRAM0076
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q6M142
   - node_id: f39a
     label: F39A instead of WT TRAM0076
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q6M142
   - node_id: f42a
     label: F42A instead of WT TRAM0076
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q6M142
   - node_id: k62a
     label: K62A instead of WT TRAM0076
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q6M142
   - node_id: f63a
     label: F63A instead of WT TRAM0076
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q6M142
   - node_id: f65a
     label: F65A instead of WT TRAM0076
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q6M142
   - node_id: growth
     label: Growth of induced RL211 on chloramphenicol
     node_type: PHENOTYPE
@@ -507,21 +525,33 @@ causal_graphs:
   - node_id: r35a
     label: R35A instead of WT complementation
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q6M142
   - node_id: f39a
     label: F39A instead of WT complementation
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q6M142
   - node_id: f42a
     label: F42A instead of WT complementation
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q6M142
   - node_id: k62a
     label: K62A instead of WT complementation
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q6M142
   - node_id: f63a
     label: F63A instead of WT complementation
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q6M142
   - node_id: f65a
     label: F65A instead of WT complementation
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q6M142
   - node_id: growth
     label: Growth kinetics restored by complementation at37C
     node_type: PHENOTYPE
@@ -635,6 +665,8 @@ causal_graphs:
   - node_id: deletion
     label: Delta0076 instead of parental S0001
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q6M142
   - node_id: leader
     label: UTR1515MT instead of WT1515 leader
     node_type: PERTURBATION

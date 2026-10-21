@@ -321,6 +321,8 @@ causal_graphs:
   - node_id: partner-h170n-preparation
     label: Replace WT partner with the reported Pdx2-His6 H170N preparation
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:P37528
   edges:
   - edge_id: joint-reconstitution-produces-chromophore
     subject: joint-chromophore-reconstitution
@@ -484,5 +486,13 @@ curation_events:
   outcome: changed
   summary: Ground causal graph gene and protein nodes in PF01680 with verified UniProtKB accessions (UniProtKB:P37527)
   history_record: history/records/PF01680/2026-10-18T025446Z-antigravity-e8ea47.yaml
+  event_index: 0
+  llm_assisted: true
+- timestamp: '2026-10-21T07:32:29Z'
+  curator: Antigravity
+  action: EDIT
+  outcome: changed
+  summary: Ground Pdx2 H170N partner perturbation node in pdxs-chromophore-and-partner-h170n to UniProtKB:P37528
+  history_record: history/records/PF01680/2026-10-21T073229Z-antigravity-e4081e.yaml
   event_index: 0
   llm_assisted: true

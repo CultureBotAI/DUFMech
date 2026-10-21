@@ -635,14 +635,18 @@ causal_graphs:
   - node_id: deletion
     label: Native nucS deletion instead of WT
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q8NR49
   - node_id: rescue
     label: WT nucS supplied to deletion strain
     node_type: PERTURBATION
     grounding:
-    - UniProtKB:Q8NQE1
+    - UniProtKB:Q8NR49
   - node_id: tail
     label: Native five-residue terminal truncation instead of WT
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q8NR49
   - node_id: frequency
     label: Measured spontaneous mutation frequency
     node_type: PHENOTYPE
