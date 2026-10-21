@@ -265,6 +265,7 @@ causal_graphs:
   - node_id: retained-rna
     label: Fraction of atpF RNA retained with protein
     node_type: STATE
+    grounding: [UniProtKB:Q9FYT6]
   edges:
   - edge_id: magnesium-increases-retention
     subject: magnesium-increase
@@ -296,18 +297,21 @@ causal_graphs:
   - node_id: d1-retention
     label: D1 RNA retention at2.5nM mature CRS1
     node_type: STATE
+    grounding: [UniProtKB:Q9FYT6]
   - node_id: d4-delete16
     label: Delete RNA nucleotides687-702 from D4(673-747)
     node_type: PERTURBATION
   - node_id: d4-retention
     label: D4 normalized RNA retention during CRS1 titration
     node_type: STATE
+    grounding: [UniProtKB:Q9FYT6]
   - node_id: loop-delete30
     label: Delete RNA nucleotides500-529 from111nt fragment(446-556)
     node_type: PERTURBATION
   - node_id: loop-retention
     label: 111nt-fragment normalized retention during CRS1 titration
     node_type: STATE
+    grounding: [UniProtKB:Q9FYT6]
   edges:
   - edge_id: d1-deletion-lowers-retention
     subject: d1-delete111

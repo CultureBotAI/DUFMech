@@ -65,6 +65,7 @@ causal_graphs:
     context: Overnight LB cultures diluted to OD600 0.005 in M9, 37 C and 200 rpm; OD600 monitored up to 40 h. Complementation uses cassette-excised mutants and tac-driven C-terminal His-tagged RsfS induced with 0.2 mM IPTG about 3 h after transfer.
     family_mapping: The paper identifies the deleted locus as b0637, corresponding to P0AAT6 and PF02410 at reference residues 9-104. This is not a domain-specific perturbation or independent resequencing of BW25113.
     scope_status: PHENOTYPIC
+    taxon: NCBITaxon:83333
     limitations: The phenotype is a prolonged growth plateau after initial growth, not immediate death or a measured energy deficit. Native-promoter complementation failed under the tested conditions, while induced tac expression rescued; the two are not conflated. No direct metabolic chain from the in-vitro assembly effect is asserted.
     nodes:
       - node_id: rsfs-deletion

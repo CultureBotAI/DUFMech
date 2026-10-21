@@ -1,0 +1,79 @@
+schema_version: 1.0.0
+repository_key: dufmech
+github_repository: CultureBotAI/DUFMech
+run_id: mech-goal-sequence-20261019
+cycle: 1
+stage: 5
+revision: 1
+outcome: completed
+summary: Consumed the accepted Stage 4 review outputs and all 3 carried-forward findings in DUFMech, grouped them into 3 root-cause remediation groups, deduplicated against all 183 open/closed GitHub issues, created Issues #336, #337, and #338, remediated curation/families/PF02410.yaml, PF01980.yaml, and PF01985.yaml with canonical EDIT history and native projection/inventory/export regeneration, and verified each resolution with fresh successor structured reviews (20261021T134500Z-pf02410-stage5-remediation-review, 20261021T134501Z-pf01980-stage5-remediation-review, 20261021T134502Z-pf01985-stage5-remediation-review) while preserving all original Stage 4 reports byte-identically.
+source_revision: 35b9a13da0689d7e262b05791d5f1d8e763f38f7
+scope_frozen_at: 2026-10-21T13:45:02Z
+previous_evidence:
+  path: reviews/workflow/mech-goal-sequence-20261019/cycle-000001/stage-04/revision-0001/evidence.yaml
+  sha256: b8fc7e4265e68f441f2a8e24f353b0c1f8b06aadcdeff1a592eefb28e73fc549
+artifacts:
+- path: reviews/workflow/mech-goal-sequence-20261019/cycle-000001/stage-05/revision-0001/issue_map.md
+  sha256: 70656faf2378b329b03abe9c193f7fa7afc7a0e9123a2473ab26571b6e054ab1
+  kind: issue_map
+- path: reviews/workflow/mech-goal-sequence-20261019/cycle-000001/stage-05/revision-0001/validation.md
+  sha256: 52ecc3a12a62eaf9fb1b10630de1bc0105767ad8162659cb4f477886cfd69ee4
+  kind: validation
+- path: reviews/workflow/mech-goal-sequence-20261019/cycle-000001/stage-05/revision-0001/remediation_coverage.json
+  sha256: 20e4adc5a44801a0a7c6aef5e2417f2b1492de0c1004150abc0491cd47ff9231
+  kind: supporting
+findings:
+- finding_id: pf02410-media-shift-graph-missing-taxon
+  status: resolved
+  summary: Added taxon NCBITaxon:83333 to ecoli-rsfs-deletion-media-shift in curation/families/PF02410.yaml, appended canonical EDIT history, regenerated data/families/PF02410.yaml, and verified in successor structured review 20261021T134500Z-pf02410-stage5-remediation-review.
+  carried_from: pf02410-media-shift-graph-missing-taxon
+  group_id: pf02410-rsfs-media-shift-taxon-remediation
+  issue_url: https://github.com/CultureBotAI/DUFMech/issues/336
+  disposition: Resolved in Issue #336 via native overlay curation, canonical EDIT history, projection regeneration, and fresh successor structured review.
+- finding_id: pf01980-ecoli-trmo-graphs-missing-taxon-and-thr-variant-grounding
+  status: resolved
+  summary: Added taxon NCBITaxon:83333 to all ten Kimura et al. 2014 E. coli TrmO causal graphs and grounded signal to UniProtKB:P28634 in ectrmo-thr3-identity-loss-2014 and ectrmo-thr4-identity-gain-2014 in curation/families/PF01980.yaml, appended canonical EDIT history, regenerated data/families/PF01980.yaml, and verified in successor structured review 20261021T134501Z-pf01980-stage5-remediation-review.
+  carried_from: pf01980-ecoli-trmo-graphs-missing-taxon-and-thr-variant-grounding
+  group_id: pf01980-ecoli-trmo-taxon-and-grounding-remediation
+  issue_url: https://github.com/CultureBotAI/DUFMech/issues/337
+  disposition: Resolved in Issue #337 via native overlay curation, canonical EDIT history, projection regeneration, and fresh successor structured review.
+- finding_id: pf01985-mcrs1-retention-state-nodes-missing-q9fyt6-grounding
+  status: resolved
+  summary: Grounded retained-rna in maize-mcrs1-magnesium-retention-2005 and d1-retention, d4-retention, and loop-retention in maize-mcrs1-rna-deletions-2005 to UniProtKB:Q9FYT6 in curation/families/PF01985.yaml, appended canonical EDIT history, regenerated data/families/PF01985.yaml, and verified in successor structured review 20261021T134502Z-pf01985-stage5-remediation-review.
+  carried_from: pf01985-mcrs1-retention-state-nodes-missing-q9fyt6-grounding
+  group_id: pf01985-mcrs1-retention-state-grounding-remediation
+  issue_url: https://github.com/CultureBotAI/DUFMech/issues/338
+  disposition: Resolved in Issue #338 via native overlay curation, canonical EDIT history, projection regeneration, and fresh successor structured review.
+groups:
+- group_id: pf02410-rsfs-media-shift-taxon-remediation
+  status: resolved
+  summary: Remediated missing taxon NCBITaxon:83333 on ecoli-rsfs-deletion-media-shift in PF02410 (Issue #336) and verified via native projection regeneration and successor structured review 20261021T134500Z-pf02410-stage5-remediation-review.
+  issue_url: https://github.com/CultureBotAI/DUFMech/issues/336
+  finding_ids:
+  - pf02410-media-shift-graph-missing-taxon
+  resolution_evidence:
+  - reviews/workflow/mech-goal-sequence-20261019/cycle-000001/stage-05/revision-0001/issue_map.md
+  - reviews/workflow/mech-goal-sequence-20261019/cycle-000001/stage-05/revision-0001/validation.md
+  - reviews/workflow/mech-goal-sequence-20261019/cycle-000001/stage-05/revision-0001/remediation_coverage.json
+- group_id: pf01980-ecoli-trmo-taxon-and-grounding-remediation
+  status: resolved
+  summary: Remediated missing taxon NCBITaxon:83333 on ten Kimura 2014 E. coli TrmO graphs and missing UniProtKB:P28634 grounding on signal in ectrmo-thr3-identity-loss-2014 and ectrmo-thr4-identity-gain-2014 in PF01980 (Issue #337) and verified via native projection regeneration and successor structured review 20261021T134501Z-pf01980-stage5-remediation-review.
+  issue_url: https://github.com/CultureBotAI/DUFMech/issues/337
+  finding_ids:
+  - pf01980-ecoli-trmo-graphs-missing-taxon-and-thr-variant-grounding
+  resolution_evidence:
+  - reviews/workflow/mech-goal-sequence-20261019/cycle-000001/stage-05/revision-0001/issue_map.md
+  - reviews/workflow/mech-goal-sequence-20261019/cycle-000001/stage-05/revision-0001/validation.md
+  - reviews/workflow/mech-goal-sequence-20261019/cycle-000001/stage-05/revision-0001/remediation_coverage.json
+- group_id: pf01985-mcrs1-retention-state-grounding-remediation
+  status: resolved
+  summary: Remediated missing UniProtKB:Q9FYT6 grounding on mature CRS1-bound RNA retention STATE nodes in maize-mcrs1-magnesium-retention-2005 and maize-mcrs1-rna-deletions-2005 in PF01985 (Issue #338) and verified via native projection regeneration and successor structured review 20261021T134502Z-pf01985-stage5-remediation-review.
+  issue_url: https://github.com/CultureBotAI/DUFMech/issues/338
+  finding_ids:
+  - pf01985-mcrs1-retention-state-nodes-missing-q9fyt6-grounding
+  resolution_evidence:
+  - reviews/workflow/mech-goal-sequence-20261019/cycle-000001/stage-05/revision-0001/issue_map.md
+  - reviews/workflow/mech-goal-sequence-20261019/cycle-000001/stage-05/revision-0001/validation.md
+  - reviews/workflow/mech-goal-sequence-20261019/cycle-000001/stage-05/revision-0001/remediation_coverage.json
+carry_forward_ids: []
+infra_tasks: []
