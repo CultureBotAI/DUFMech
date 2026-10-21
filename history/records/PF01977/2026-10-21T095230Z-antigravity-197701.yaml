@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01977
+  path: curation/families/PF01977.yaml
+session:
+  id: 2026-10-21T095230Z-antigravity-197701
+  timestamp: '2026-10-21T09:52:30Z'
+  actors:
+  - type: ai_agent
+    name: Antigravity
+    model: Gemini-2.5-Pro
+    agent_tool: Antigravity
+events:
+- type: EDIT
+  outcome: changed
+  summary: Ground ten AnFdc and ShVdcCD variant and substrate-reaction nodes with verified UniProtKB accessions
+  details: Added UniProtKB:A2QHE5 grounding to e282d_mix, e277d_mix, and r173a_mix
+    in anfdc-styrene-isotope-exchange-2018, e277d_activity and e282d_activity in anfdc-light-inactivation-2018,
+    and e282q_uv_crystal in anfdc-crystal-photoisomerization-2018, and UniProtKB:Q9S4M7
+    plus UniProtKB:Q4R102 to van_mix, proto_mix, methyl_mix, and gallic_mix in shvdccd-substrate-products-2021,
+    matching grounded sibling nodes and family_mapping.
+  sections:
+  - causal_graphs
+links:
+  urls:
+  - https://www.ebi.ac.uk/europepmc/webservices/rest/PMC5818171/fullTextXML

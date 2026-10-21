@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01931
+  path: curation/families/PF01931.yaml
+session:
+  id: 2026-10-21T095220Z-antigravity-193101
+  timestamp: '2026-10-21T09:52:20Z'
+  actors:
+  - type: ai_agent
+    name: Antigravity
+    model: Gemini-2.5-Pro
+    agent_tool: Antigravity
+events:
+- type: EDIT
+  outcome: changed
+  summary: Ground four purified YjjX substrate-reaction state nodes with verified UniProtKB:P39411
+  details: Added UniProtKB:P39411 grounding to xtp, ditp, gtp, and gdp state nodes
+    in yjjx-substrate-hydrolysis-2005, matching sibling itp node and family_mapping
+    (E. coli K-12 P39411 v2, PF01931 4-168).
+  sections:
+  - causal_graphs
+links:
+  urls:
+  - https://www.collectionscanada.gc.ca/obj/thesescanada/vol2/002/NR69981.PDF

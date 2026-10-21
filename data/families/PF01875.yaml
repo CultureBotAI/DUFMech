@@ -253,6 +253,8 @@ causal_graphs:
   - node_id: simemo1
     label: Apply the Memo1 siRNA pool
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q9Y316
   - node_id: wound-closure
     label: Recovered wound area at 24 hours
     node_type: PHENOTYPE
@@ -647,5 +649,13 @@ curation_events:
   outcome: changed
   summary: Ground causal graph gene and protein nodes in PF01875 with verified UniProtKB accessions (UniProtKB:Q9Y316)
   history_record: history/records/PF01875/2026-10-18T025446Z-antigravity-2dc42c.yaml
+  event_index: 0
+  llm_assisted: true
+- timestamp: '2026-10-21T09:52:10Z'
+  curator: Antigravity
+  action: EDIT
+  outcome: changed
+  summary: Ground simemo1 perturbation node in human-knockdown-wound-closure with verified UniProtKB:Q9Y316
+  history_record: history/records/PF01875/2026-10-21T095210Z-antigravity-187501.yaml
   event_index: 0
   llm_assisted: true

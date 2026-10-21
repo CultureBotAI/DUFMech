@@ -33,13 +33,34 @@ notes below keyed by the same stable task ID.
 <!-- mech-infra-tasks:start -->
 ```yaml
 schema_version: '1.0.0'
-tasks: []
+tasks:
+  - task_id: dufmech-infra-0001
+    summary: Include curated FamilyCuration UniProtKB accessions in protein_examples snapshots and FamilyRecord projection
+    status: open
+    issue_url: https://github.com/CultureBotAI/DUFMech/issues/333
 ```
 <!-- mech-infra-tasks:end -->
 
 ## Tasks
 
-No infrastructure tasks have been entered through this workflow yet. This empty
-bootstrap ledger is not an audit result or a claim that the repository has no
-infrastructure needs. Add evidence-backed entries as work exposes them.
+### `dufmech-infra-0001` — Include curated `FamilyCuration` `UniProtKB` accessions in `protein_examples` snapshots and `FamilyRecord` projection
+
+- **Originating run / cycle / goal**: `mech-goal-sequence-20261019`, cycle `1`, stage `3` (`protein_examples`, `goal-2456`)
+- **Status**: `open`
+- **Issue**: https://github.com/CultureBotAI/DUFMech/issues/333
+- **Priority**: Medium
+- **Dependencies**: None
+- **Evidence paths**:
+  - `src/dufmech/protein_examples.py`
+  - `src/dufmech/protein_discovery.py`
+  - `src/dufmech/schema/dufmech.yaml`
+  - `data/protein_examples/duf-protein-examples-direct-2026-10-13.json`
+  - `curation/families/PF*.yaml`
+- **Observation**:
+  - Across the `141` curated `curation/families/PF*.yaml` overlays, `271` unique verified `UniProtKB:...` accessions are referenced in `causal_graphs[].nodes[].grounding` (`243` unique accessions) and `assertions` (`271` total unique). However, only `59` of those `271` experimentally curated `UniProtKB:...` accessions appear in `data/protein_examples/duf-protein-examples-direct-2026-10-13.json`, leaving `212` curated `UniProtKB:...` accessions absent from the retained `protein_examples` snapshot.
+  - `src/dufmech/protein_examples.py` and `src/dufmech/protein_discovery.py` currently draw exclusively from sibling-Mech accession candidates (`data/cross_mech/`, covering `3,106` families) and top-3 annotation-score UniProt queries for `NO_SIBLING_CANDIDATE` families (`5,190` families), without harvesting or prioritizing the verified `UniProtKB:...` accessions curated in `curation/families/PF*.yaml`.
+  - Additionally, `FamilyRecord` in `src/dufmech/schema/dufmech.yaml` has no slot or summary pointer for `protein_examples`, so generated `data/families/PF*.yaml` projections do not surface verified sequence examples directly on the family record.
+- **Desired outcome**:
+  - Extend `dufmech.protein_examples` / `dufmech.protein_discovery` candidate harvesting to include verified `UniProtKB:...` accessions curated in `curation/families/PF*.yaml` (`causal_graphs[].nodes[].grounding` and `assertions`) when matching the family's Pfam domain and organism scope.
+  - Evaluate adding a governed read-only projection or pointer from `FamilyRecord` (`src/dufmech/schema/dufmech.yaml`) to verified `protein_examples` snapshot entries.
 

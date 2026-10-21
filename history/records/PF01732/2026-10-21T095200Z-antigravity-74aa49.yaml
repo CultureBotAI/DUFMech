@@ -1,0 +1,28 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01732
+  path: curation/families/PF01732.yaml
+session:
+  id: 2026-10-21T095200Z-antigravity-74aa49
+  timestamp: '2026-10-21T09:52:00Z'
+  actors:
+  - type: ai_agent
+    name: Antigravity
+    model: Gemini-2.5-Pro
+    agent_tool: Antigravity
+events:
+- type: EDIT
+  outcome: changed
+  summary: Ground four MIB-MIP causal-graph nodes with verified native NCBIProtein accessions
+  details: Added NCBIProtein:ACU78687.1 and NCBIProtein:ACU78312.1 groundings to joint-fab
+    and joint-fab2, NCBIProtein:ACU78687.1 to published-r0582a in gm12-recombinant-mib-mip-cleavage,
+    and NCBIProtein:ACU78687.1 plus NCBIProtein:ACU78312.1 to inactive-joint-mixture
+    in gm12-antigen-complex-dissociation, matching family_mapping (UniParc UPI0001793D5F)
+    and sibling grounded nodes.
+  sections:
+  - causal_graphs
+links:
+  urls:
+  - https://pmc.ncbi.nlm.nih.gov/articles/PMC4868467/
+  - https://pmc.ncbi.nlm.nih.gov/articles/PMC7935358/

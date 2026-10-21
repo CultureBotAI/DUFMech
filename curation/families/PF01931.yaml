@@ -68,15 +68,23 @@ causal_graphs:
   - node_id: xtp
     label: Purified YjjX with XTP and Mg
     node_type: STATE
+    grounding:
+    - UniProtKB:P39411
   - node_id: ditp
     label: Purified YjjX with dITP and Mg
     node_type: STATE
+    grounding:
+    - UniProtKB:P39411
   - node_id: gtp
     label: Purified YjjX with GTP and Mg
     node_type: STATE
+    grounding:
+    - UniProtKB:P39411
   - node_id: gdp
     label: Purified YjjX with GDP and Mg
     node_type: STATE
+    grounding:
+    - UniProtKB:P39411
   - node_id: phosphate
     label: Background-corrected phosphate release
     node_type: STATE
