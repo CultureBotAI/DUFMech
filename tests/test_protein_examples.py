@@ -12,6 +12,8 @@ from dufmech.pages import render_site
 from dufmech.protein_examples import (
     acquire,
     build_rows,
+    curation_overlay_candidates,
+    curation_overlay_mentions,
     digest,
     direct_family_candidates,
     load_snapshot,
@@ -359,3 +361,120 @@ def test_site_retains_sequence_and_fasta_without_claiming_function(tmp_path):
     assert payload["protein_examples"]["examples"][0]["sequence_sha256"] == digest(b"MACDEFGHIK")
     gap = BeautifulSoup((tmp_path / "families/PF00002.html").read_text(), "html.parser")
     assert "No sibling protein candidate" in gap.select_one("#protein-examples").get_text()
+
+
+def test_curation_overlay_harvests_member_groundings_skips_partners_and_flags_mismatched_claims(
+    tmp_path, monkeypatch,
+):
+    families, _, _, entries = fixture_rows()
+    entries["P37528"] = normalize_entry(entry("P37528", "PF01174"), "2026_03")
+    entries["Q58031"] = normalize_entry(entry("Q58031", "PF00001"), "2026_03")
+    entries["P99999"] = normalize_entry(entry("P99999", "PF09999"), "2026_03")
+    records = [
+        SourceRecord(
+            MechSource("DUFMech", "curation/families"),
+            "c" * 40,
+            "curation/families/PF04363.yaml",
+            """pfam_id: PF04363
+curation_status: IN_PROGRESS
+causal_graphs:
+  - graph_id: tmar_graph
+    family_mapping: "TmaR (UniProtKB:P0A8M6) maps to PF04363."
+    nodes:
+      - node_id: tmar
+        grounding: ["UniProtKB:P0A8M6"]
+      - node_id: partner
+        grounding: ["UniProtKB:P37528"]
+""",
+        ),
+        SourceRecord(
+            MechSource("DUFMech", "curation/families"),
+            "c" * 40,
+            "curation/families/PF00001.yaml",
+            """pfam_id: PF00001
+curation_status: IN_PROGRESS
+discussions:
+  - discussion_id: d1
+    evidence:
+      - reference: https://www.ebi.ac.uk/interpro/api/protein/uniprot/Q58031/entry/pfam/PF00001/
+""",
+        ),
+        SourceRecord(
+            MechSource("DUFMech", "curation/families"),
+            "c" * 40,
+            "curation/families/PF00002.yaml",
+            """pfam_id: PF00002
+curation_status: IN_PROGRESS
+causal_graphs:
+  - graph_id: g2
+    family_mapping: "Mismatched member UniProtKB:P99999."
+    nodes: []
+""",
+        ),
+    ]
+    monkeypatch.setattr(
+        "dufmech.protein_examples.iter_mech_records",
+        lambda root, mech, **kwargs: ("c" * 40, iter(records)),
+    )
+    pin = {
+        "commit": "c" * 40,
+        "repository": "https://github.com/CultureBotAI/DUFMech",
+        "data_dir": "curation/families",
+    }
+    mentions, mention_scope = curation_overlay_mentions(tmp_path / "DUFMech", pin, families)
+    assert mention_scope["overlays_inspected"] == 3
+    assert mention_scope["families_with_mentions"] == 3
+    assert mention_scope["unique_accessions"] == 4
+    overlay_rows, candidate_scope = curation_overlay_candidates(mentions, entries)
+    assert candidate_scope == {
+        "candidate_rows": 4,
+        "confirmed_family_member_pairs": 2,
+        "unresolved_member_or_lookup_pairs": 1,
+        "partner_or_non_member_pairs_skipped": 1,
+    }
+    sources = {"DUFMech": pin}
+    rows = build_rows(families, overlay_rows, sources, entries, {}, {})
+    validate_rows(rows, families)
+    by_id = {r["pfam_id"]: r for r in rows}
+    assert [e["uniprot_accession"] for e in by_id["PF04363"]["examples"]] == ["P0A8M6"]
+    assert by_id["PF04363"]["unresolved"] == []
+    assert {o["section"] for o in by_id["PF04363"]["examples"][0]["origins"]} == {
+        "causal_graphs.family_mapping",
+        "causal_graphs.nodes.grounding",
+    }
+    assert [e["uniprot_accession"] for e in by_id["PF00001"]["examples"]] == ["Q58031"]
+    assert by_id["PF00002"]["examples"] == []
+    assert by_id["PF00002"]["unresolved"][0]["uniprot_accession"] == "P99999"
+    assert by_id["PF00002"]["unresolved"][0]["reason"] == "PFAM_NOT_IN_CURRENT_ENTRY"
+
+
+def test_curation_overlay_requires_immutable_commit_and_worklist_membership(
+    tmp_path, monkeypatch,
+):
+    families, _, _, _ = fixture_rows()
+    with pytest.raises(ValueError, match="immutable commit"):
+        curation_overlay_mentions(
+            tmp_path / "DUFMech",
+            {"commit": "main", "repository": "https://github.com/CultureBotAI/DUFMech"},
+            families,
+        )
+    monkeypatch.setattr(
+        "dufmech.protein_examples.iter_mech_records",
+        lambda root, mech, **kwargs: (
+            "c" * 40,
+            iter([
+                SourceRecord(
+                    MechSource("DUFMech", "curation/families"),
+                    "c" * 40,
+                    "curation/families/PF99999.yaml",
+                    "pfam_id: PF99999\ncuration_status: IN_PROGRESS\n",
+                )
+            ]),
+        ),
+    )
+    with pytest.raises(ValueError, match="outside the worklist"):
+        curation_overlay_mentions(
+            tmp_path / "DUFMech",
+            {"commit": "c" * 40, "repository": "https://github.com/CultureBotAI/DUFMech"},
+            families,
+        )

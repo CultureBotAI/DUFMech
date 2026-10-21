@@ -28,6 +28,16 @@ URL = "https://rest.uniprot.org/uniprotkb/search"
 FIELDS = ("accession,reviewed,protein_name,organism_name,organism_id,sequence,length,"
           "sequence_version,xref_pfam")
 ACCESSION = re.compile(r"(?:[OPQ][0-9][A-Z0-9]{3}[0-9]|[A-NR-Z][0-9](?:[A-Z][A-Z0-9]{2}[0-9]){1,2})")
+OVERLAY_CURIE = re.compile(r"\bUniProtKB:([A-Z0-9]+(?:-\d+)?)\b")
+OVERLAY_UNIPROT_PFAM_URL = re.compile(
+    r"/protein/uniprot/([A-Z0-9]+(?:-\d+)?)/entry/pfam/(PF\d{5})\b"
+)
+OVERLAY_PFAM_UNIPROT_URL = re.compile(
+    r"/entry/pfam/(PF\d{5})/protein/uniprot/([A-Z0-9]+(?:-\d+)?)\b"
+)
+OVERLAY_UNIPROT_ENDPOINT_URL = re.compile(
+    r"(?:/entry/pfam/protein/uniprot/|/uniprotkb/)([A-Z0-9]+(?:-\d+)?)(?:[./]|$)"
+)
 REGISTRY = "data/grounding/protein_registry.jsonl"
 TSV_FIELDS = ["pfam_id", "short_name", "status", "candidate_count", "example_count",
               "accessions", "unresolved_accessions"]
@@ -224,6 +234,154 @@ def registry_candidates(registry: dict, entries: dict, families: list[dict]) -> 
     return rows, {"proteins_checked": len(registry), "family_protein_pairs": len(rows),
                   "no_exact_current_entry": unavailable,
                   "without_target_family_count": len(without_family)}
+
+
+def _record_overlay_mention(by_section: dict[tuple[str, str], dict],
+                            accession: str, section: str, basis: str,
+                            *, family_member_claim: bool) -> None:
+    entry = by_section.setdefault(
+        (accession, section),
+        {"bases": set(), "family_member_claim": False},
+    )
+    entry["bases"].add(basis)
+    if family_member_claim:
+        entry["family_member_claim"] = True
+
+
+def curation_overlay_mentions(repo: Path, pin: dict,
+                              families: list[dict]) -> tuple[list[dict], dict]:
+    """Harvest UniProtKB accessions from pinned DUFMech FamilyCuration overlays."""
+    commit = pin.get("commit", "")
+    if not re.fullmatch(r"[0-9a-f]{40}", commit):
+        raise ValueError("curation overlay harvesting requires an immutable commit")
+    data_dir = pin.get("data_dir", "curation/families")
+    catalogue = {r["pfam_id"] for r in families}
+    target_repo = repo.resolve() if not repo.name else repo
+    commit, records = iter_mech_records(
+        target_repo.parent, MechSource(target_repo.name, data_dir), ref=commit)
+    mentions = []
+    inspected = 0
+    families_with_mentions = set()
+    for record in records:
+        inspected += 1
+        payload = yaml.load(record.text, Loader=yaml.CSafeLoader) or {}
+        pfam_id = payload.get("pfam_id")
+        if pfam_id not in catalogue:
+            raise ValueError("curation overlay family is outside the worklist")
+        by_section: dict[tuple[str, str], dict] = {}
+        for graph in payload.get("causal_graphs") or []:
+            fm = graph.get("family_mapping")
+            mappings = [fm] if isinstance(fm, str) else (fm or [])
+            for mapping in mappings:
+                for acc in OVERLAY_CURIE.findall(str(mapping)):
+                    _record_overlay_mention(
+                        by_section, acc, "causal_graphs.family_mapping",
+                        "dufmech_causal_graph_family_mapping",
+                        family_member_claim=True)
+            for node in graph.get("nodes") or []:
+                for grounding in node.get("grounding") or []:
+                    for acc in OVERLAY_CURIE.findall(str(grounding)):
+                        _record_overlay_mention(
+                            by_section, acc, "causal_graphs.nodes.grounding",
+                            "dufmech_causal_graph_node_grounding",
+                            family_member_claim=False)
+        for section_key, scope_basis, evidence_basis in (
+            ("assertions", "dufmech_assertion_scope", "dufmech_assertion_evidence"),
+            ("discussions", "dufmech_discussion_scope", "dufmech_discussion_evidence"),
+        ):
+            for item in payload.get(section_key) or []:
+                for field in ("statement", "scope", "prompt", "rationale", "notes"):
+                    for acc in OVERLAY_CURIE.findall(str(item.get(field) or "")):
+                        _record_overlay_mention(
+                            by_section, acc, section_key, scope_basis,
+                            family_member_claim=False)
+                for evidence in item.get("evidence") or []:
+                    if isinstance(evidence, dict):
+                        texts = [str(evidence.get(k) or "")
+                                 for k in ("reference", "source_url", "explanation")]
+                    else:
+                        texts = [str(evidence)]
+                    ev_section = f"{section_key}.evidence"
+                    for text in texts:
+                        for acc in OVERLAY_CURIE.findall(text):
+                            _record_overlay_mention(
+                                by_section, acc, ev_section, evidence_basis,
+                                family_member_claim=False)
+                        for acc, url_pfam in OVERLAY_UNIPROT_PFAM_URL.findall(text):
+                            _record_overlay_mention(
+                                by_section, acc, ev_section, evidence_basis,
+                                family_member_claim=(url_pfam == pfam_id))
+                        for url_pfam, acc in OVERLAY_PFAM_UNIPROT_URL.findall(text):
+                            _record_overlay_mention(
+                                by_section, acc, ev_section, evidence_basis,
+                                family_member_claim=(url_pfam == pfam_id))
+                        for acc in OVERLAY_UNIPROT_ENDPOINT_URL.findall(text):
+                            _record_overlay_mention(
+                                by_section, acc, ev_section, evidence_basis,
+                                family_member_claim=False)
+        if by_section:
+            families_with_mentions.add(pfam_id)
+        for (accession, section), info in sorted(by_section.items()):
+            mentions.append({
+                "pfam_id": pfam_id,
+                "uniprot_accession": accession,
+                "source_mech": "DUFMech",
+                "source_record_id": f"Pfam:{pfam_id}",
+                "source_path": record.path,
+                "source_section": section,
+                "link_basis": sorted(info["bases"]),
+                "qualification_status": "CURATED_MECHANISM_OVERLAY",
+                "cited_uniprot_accession": "",
+                "family_member_claim": info["family_member_claim"],
+            })
+    return mentions, {
+        "commit": commit,
+        "repository": pin["repository"],
+        "data_dir": data_dir,
+        "overlays_inspected": inspected,
+        "families_with_mentions": len(families_with_mentions),
+        "mentions": len(mentions),
+        "unique_accessions": len({m["uniprot_accession"] for m in mentions}),
+    }
+
+
+def curation_overlay_candidates(mentions: list[dict],
+                                entries: dict[str, dict | None]) -> tuple[list[dict], dict]:
+    """Filter curated overlay mentions into target-family candidates vs partner groundings."""
+    grouped: dict[tuple[str, str], list[dict]] = defaultdict(list)
+    for mention in mentions:
+        grouped[(mention["pfam_id"], mention["uniprot_accession"])].append(mention)
+    rows = []
+    confirmed_pairs = 0
+    unresolved_pairs = 0
+    partner_pairs_skipped = 0
+    for (pfam_id, accession), group in sorted(grouped.items()):
+        current = entries.get(accession)
+        valid_accession = bool(ACCESSION.fullmatch(accession))
+        is_member = (valid_accession and current is not None
+                     and pfam_id in current.get("pfam_ids", ()))
+        has_member_claim = any(m.get("family_member_claim") for m in group)
+        if is_member:
+            confirmed_pairs += 1
+            selected = group
+        elif not valid_accession or current is None:
+            unresolved_pairs += 1
+            selected = group
+        elif has_member_claim:
+            unresolved_pairs += 1
+            selected = [m for m in group if m.get("family_member_claim")]
+        else:
+            partner_pairs_skipped += 1
+            continue
+        for item in selected:
+            row = {k: v for k, v in item.items() if k != "family_member_claim"}
+            rows.append(row)
+    return rows, {
+        "candidate_rows": len(rows),
+        "confirmed_family_member_pairs": confirmed_pairs,
+        "unresolved_member_or_lookup_pairs": unresolved_pairs,
+        "partner_or_non_member_pairs_skipped": partner_pairs_skipped,
+    }
 
 
 def build_rows(families: list[dict], candidates: list[dict], sources: dict,
@@ -483,7 +641,15 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument("--offline", action="store_true")
     parser.add_argument("--registry-scope", choices=("all", "referenced"), default="all",
                         help="all checks the entire PTM registry; referenced reproduces the pilot")
+    parser.add_argument("--dufmech-repo", type=Path,
+                        help="optional DUFMech repository path for FamilyCuration overlays")
+    parser.add_argument("--dufmech-commit",
+                        help="pinned 40-hex DUFMech commit for FamilyCuration overlays")
+    parser.add_argument("--dufmech-repository-url",
+                        default="https://github.com/CultureBotAI/DUFMech")
     args = parser.parse_args(argv)
+    if bool(args.dufmech_repo) != bool(args.dufmech_commit):
+        raise ValueError("both --dufmech-repo and --dufmech-commit are required together")
     stem = f"{STEM}-{date.fromisoformat(args.snapshot_date).isoformat()}"
     if any((args.out_dir / f"{stem}.{ext}").exists()
            or (args.out_dir / f"{stem}.{ext}").is_symlink()
@@ -494,15 +660,29 @@ def main(argv: list[str] | None = None) -> int:
     worklist_id = worklist["snapshot"]["id"]
     candidates, cross = load_cross_mech_snapshot(
         args.cross_mech_json, worklist_rows=families, worklist_snapshot_id=worklist_id)
-    sources = cross["source"]["mechs"]
+    sources = dict(cross["source"]["mechs"])
     registry, registry_source = read_registry(args.ptm_repo, sources["ProteinTraitsMech"])
     direct, direct_scope = direct_family_candidates(
         args.ptm_repo, sources["ProteinTraitsMech"], candidates)
     candidates.extend(direct)
+    overlay_mentions, overlay_scope = [], None
+    if args.dufmech_repo is not None:
+        dufmech_pin = {"commit": args.dufmech_commit,
+                       "repository": args.dufmech_repository_url,
+                       "data_dir": "curation/families"}
+        overlay_mentions, overlay_scope = curation_overlay_mentions(
+            args.dufmech_repo, dufmech_pin, families)
+        sources["DUFMech"] = {**dufmech_pin, "commit": overlay_scope["commit"]}
     registry_accessions = list(registry) if args.registry_scope == "all" else []
-    entries = acquire([*registry_accessions, *(r["uniprot_accession"] for r in candidates
-                       if r.get("pfam_id") and r.get("uniprot_accession"))],
+    entries = acquire([*registry_accessions,
+                       *(r["uniprot_accession"] for r in candidates
+                         if r.get("pfam_id") and r.get("uniprot_accession")),
+                       *(m["uniprot_accession"] for m in overlay_mentions)],
                       args.checkpoint, offline=args.offline)
+    if overlay_scope is not None:
+        overlay_rows, overlay_counts = curation_overlay_candidates(overlay_mentions, entries)
+        overlay_scope.update(overlay_counts)
+        candidates.extend(overlay_rows)
     registry_scope = {"mode": args.registry_scope}
     if args.registry_scope == "all":
         registry_rows, registry_counts = registry_candidates(registry, entries, families)
@@ -521,6 +701,7 @@ def main(argv: list[str] | None = None) -> int:
         "mechs": sources, "registry": registry_source,
         "ptm_direct_family_examples": direct_scope,
         "ptm_registry_discovery": registry_scope,
+        **({"dufmech_curation_overlays": overlay_scope} if overlay_scope is not None else {}),
         "checkpoint_sha256": digest(args.checkpoint.read_bytes()),
         "acquisition_started_at": fetched[0], "acquisition_finished_at": fetched[-1],
         "uniprot_releases": sorted({e["uniprot_release"] for e in entries.values() if e}),

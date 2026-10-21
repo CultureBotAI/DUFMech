@@ -36,8 +36,9 @@ schema_version: '1.0.0'
 tasks:
   - task_id: dufmech-infra-0001
     summary: Include curated FamilyCuration UniProtKB accessions in protein_examples snapshots and FamilyRecord projection
-    status: open
+    status: resolved
     issue_url: https://github.com/CultureBotAI/DUFMech/issues/333
+    disposition: Implemented curation_overlay_mentions and curation_overlay_candidates in src/dufmech/protein_examples.py (with --dufmech-repo / --dufmech-commit CLI integration and unit tests in tests/test_protein_examples.py) and documented the governed FamilyRecord vs site-render projection boundary.
 ```
 <!-- mech-infra-tasks:end -->
 
@@ -46,7 +47,7 @@ tasks:
 ### `dufmech-infra-0001` — Include curated `FamilyCuration` `UniProtKB` accessions in `protein_examples` snapshots and `FamilyRecord` projection
 
 - **Originating run / cycle / goal**: `mech-goal-sequence-20261019`, cycle `1`, stage `3` (`protein_examples`, `goal-2456`)
-- **Status**: `open`
+- **Status**: `resolved`
 - **Issue**: https://github.com/CultureBotAI/DUFMech/issues/333
 - **Priority**: Medium
 - **Dependencies**: None
@@ -54,8 +55,11 @@ tasks:
   - `src/dufmech/protein_examples.py`
   - `src/dufmech/protein_discovery.py`
   - `src/dufmech/schema/dufmech.yaml`
+  - `tests/test_protein_examples.py`
   - `data/protein_examples/duf-protein-examples-direct-2026-10-13.json`
   - `curation/families/PF*.yaml`
+  - `reviews/workflow/mech-goal-sequence-20261019/cycle-000001/stage-06/revision-0001/implementation_plan.md`
+  - `reviews/workflow/mech-goal-sequence-20261019/cycle-000001/stage-06/revision-0001/validation.md`
 - **Observation**:
   - Across the `141` curated `curation/families/PF*.yaml` overlays, `271` unique verified `UniProtKB:...` accessions are referenced in `causal_graphs[].nodes[].grounding` (`243` unique accessions) and `assertions` (`271` total unique). However, only `59` of those `271` experimentally curated `UniProtKB:...` accessions appear in `data/protein_examples/duf-protein-examples-direct-2026-10-13.json`, leaving `212` curated `UniProtKB:...` accessions absent from the retained `protein_examples` snapshot.
   - `src/dufmech/protein_examples.py` and `src/dufmech/protein_discovery.py` currently draw exclusively from sibling-Mech accession candidates (`data/cross_mech/`, covering `3,106` families) and top-3 annotation-score UniProt queries for `NO_SIBLING_CANDIDATE` families (`5,190` families), without harvesting or prioritizing the verified `UniProtKB:...` accessions curated in `curation/families/PF*.yaml`.
@@ -63,4 +67,11 @@ tasks:
 - **Desired outcome**:
   - Extend `dufmech.protein_examples` / `dufmech.protein_discovery` candidate harvesting to include verified `UniProtKB:...` accessions curated in `curation/families/PF*.yaml` (`causal_graphs[].nodes[].grounding` and `assertions`) when matching the family's Pfam domain and organism scope.
   - Evaluate adding a governed read-only projection or pointer from `FamilyRecord` (`src/dufmech/schema/dufmech.yaml`) to verified `protein_examples` snapshot entries.
+- **Resolution / Disposition** (`mech-goal-sequence-20261019`, cycle `1`, stage `6`):
+  - **Implemented in `src/dufmech/protein_examples.py` and `tests/test_protein_examples.py`**:
+    - Added `curation_overlay_mentions(repo, pin, families)` to harvest `UniProtKB:...` CURIEs and member-specific InterPro/UniProt reference URLs across pinned `curation/families/PF*.yaml` overlays (`causal_graphs.family_mapping`, `causal_graphs.nodes.grounding`, `assertions`, `assertions.evidence`, `discussions`, and `discussions.evidence`) at an immutable 40-hex `DUFMech` commit.
+    - Added `curation_overlay_candidates(mentions, entries)` to filter harvested mentions against resolved UniProt entries: confirmed target-family carriers (`pfam_id in current["pfam_ids"]`) are promoted as `CURATED_MECHANISM_OVERLAY` candidates with immutable `DUFMech` commit/blob provenance; missing/isoform accessions and mismatched explicit `family_mapping`/identity claims surface in `unresolved`; and verified interacting partner node groundings belonging to other families are counted in `partner_or_non_member_pairs_skipped` without polluting target-family `unresolved` buckets.
+    - Wired `--dufmech-repo`, `--dufmech-commit`, and `--dufmech-repository-url` into `dufmech.protein_examples.main()` and recorded `dufmech_curation_overlays` scope counts in snapshot manifests.
+  - **Evaluated `FamilyRecord` (`src/dufmech/schema/dufmech.yaml`) projection boundary**:
+    - `FamilyRecord` (`data/families/PF*.yaml`) validates strictly against `data/worklists/` (`SnapshotProvenance.path` pattern `^data/worklists/[A-Za-z0-9_-]+[.]json$`) and `curation/families/PF*.yaml` overlays, whereas `dufmech.pages.render_site` (`src/dufmech/pages.py`) and `dufmech.site` (`src/dufmech/site.py`) already join `data/protein_examples/` snapshots with `FamilyRecord` at site-render time into `pages/families/PF*.json`, `pages/families/PF*.html`, and `pages/families/PF*.fasta`. Keeping `data/protein_examples/` joined at the site/JSON projection layer avoids rewriting all `8,296` `data/families/PF*.yaml` records on every `protein_examples` snapshot refresh while preserving `evidence_scope: FAMILY_MEMBERSHIP_NOT_FUNCTION`.
 

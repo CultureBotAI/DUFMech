@@ -1,0 +1,36 @@
+{
+  "curation_overlay_harvesting_verification": {
+    "already_in_2026_10_13_checkpoints": 130,
+    "commit": "1795e5229d2d91cfdc34abe9e44838716587c1d8",
+    "data_dir": "curation/families",
+    "families_with_mentions": 138,
+    "mentions": 306,
+    "overlays_inspected": 141,
+    "queued_for_next_snapshot_refresh": 132,
+    "repository": "https://github.com/CultureBotAI/DUFMech",
+    "unique_accessions": 262
+  },
+  "cycle": 1,
+  "github_repository": "CultureBotAI/DUFMech",
+  "infra_scope": {
+    "frozen_at": "2026-10-21T18:40:51Z",
+    "notebook_path": "INFRA_TASKS.md",
+    "sha256": "a7cbce24f42eff092037df92a8541f651a8eff8e0a184e474b04613a616c9e3e",
+    "tasks_total": 1
+  },
+  "repository_key": "dufmech",
+  "revision": 1,
+  "run_id": "mech-goal-sequence-20261019",
+  "source_revision": "1795e5229d2d91cfdc34abe9e44838716587c1d8",
+  "stage": 6,
+  "tasks": [
+    {
+      "disposition": "Implemented curation_overlay_mentions and curation_overlay_candidates in src/dufmech/protein_examples.py (with --dufmech-repo / --dufmech-commit CLI integration and unit tests in tests/test_protein_examples.py) and documented the governed FamilyRecord vs site-render projection boundary.",
+      "issue_number": 333,
+      "issue_url": "https://github.com/CultureBotAI/DUFMech/issues/333",
+      "status": "resolved",
+      "summary": "Include curated FamilyCuration UniProtKB accessions in protein_examples snapshots and FamilyRecord projection",
+      "task_id": "dufmech-infra-0001"
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+schema_version: 1.0.0
+repository_key: dufmech
+github_repository: CultureBotAI/DUFMech
+run_id: mech-goal-sequence-20261019
+cycle: 1
+stage: 6
+revision: 1
+outcome: completed
+summary: Frozen INFRA_TASKS.md at 2026-10-21T18:40:51Z (sha256 a7cbce24f42eff092037df92a8541f651a8eff8e0a184e474b04613a616c9e3e), grouped and resolved dufmech-infra-0001 via GitHub Issue #333 by implementing curation_overlay_mentions and curation_overlay_candidates in src/dufmech/protein_examples.py with CLI integration and unit tests in tests/test_protein_examples.py, and validated repository QC and workflow contracts.
+source_revision: 1795e5229d2d91cfdc34abe9e44838716587c1d8
+scope_frozen_at: '2026-10-21T18:40:51Z'
+artifacts:
+- path: reviews/workflow/mech-goal-sequence-20261019/cycle-000001/stage-06/revision-0001/infra_snapshot.md
+  sha256: a7cbce24f42eff092037df92a8541f651a8eff8e0a184e474b04613a616c9e3e
+  kind: infra_snapshot
+- path: reviews/workflow/mech-goal-sequence-20261019/cycle-000001/stage-06/revision-0001/implementation_plan.md
+  sha256: d7c4331b531ffb54af891f52520a524e60d7efa61560f16c683684fd6e19ff89
+  kind: implementation_plan
+- path: reviews/workflow/mech-goal-sequence-20261019/cycle-000001/stage-06/revision-0001/validation.md
+  sha256: a01ee57c37e22d827bdb9d419b7ccf8ab4fe76402af51038942c0dc13e374e3e
+  kind: validation
+- path: reviews/workflow/mech-goal-sequence-20261019/cycle-000001/stage-06/revision-0001/stage6_infra_coverage.json
+  sha256: 2361bd01daa11469ea4eed0b1103e534be95dbc5e8c3bb95d6c4b4f23a119a43
+  kind: supporting
+findings: []
+groups: []
+carry_forward_ids: []
+infra_tasks:
+- task_id: dufmech-infra-0001
+  issue_url: https://github.com/CultureBotAI/DUFMech/issues/333
+  status: resolved
+  summary: Include curated FamilyCuration UniProtKB accessions in protein_examples snapshots and FamilyRecord projection
+  resolution_evidence:
+  - reviews/workflow/mech-goal-sequence-20261019/cycle-000001/stage-06/revision-0001/implementation_plan.md
+  - reviews/workflow/mech-goal-sequence-20261019/cycle-000001/stage-06/revision-0001/validation.md
+  - reviews/workflow/mech-goal-sequence-20261019/cycle-000001/stage-06/revision-0001/stage6_infra_coverage.json
+  disposition: Implemented curation_overlay_mentions and curation_overlay_candidates in src/dufmech/protein_examples.py (with --dufmech-repo / --dufmech-commit CLI integration and unit tests in tests/test_protein_examples.py) and documented the governed FamilyRecord vs site-render projection boundary.
