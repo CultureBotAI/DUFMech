@@ -1,0 +1,28 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01985
+  path: curation/families/PF01985.yaml
+session:
+  id: 2026-10-21T133502Z-antigravity-a13380
+  timestamp: '2026-10-21T13:35:02Z'
+  actors:
+  - type: ai_agent
+    name: Antigravity
+    model: Claude Opus 4.6
+    agent_tool: Antigravity
+events:
+- type: EDIT
+  outcome: changed
+  summary: Ground mature CRS1-bound RNA retention state nodes in maize-mcrs1-magnesium-retention-2005
+    and maize-mcrs1-rna-deletions-2005 to UniProtKB:Q9FYT6
+  details: 'Resolved Stage 4 review finding pf01985-mcrs1-retention-state-nodes-missing-q9fyt6-grounding
+    (Issue #338) in curation/families/PF01985.yaml by grounding retained-rna in maize-mcrs1-magnesium-retention-2005
+    and d1-retention, d4-retention, and loop-retention in maize-mcrs1-rna-deletions-2005
+    to UniProtKB:Q9FYT6 (Zea mays CRS1), matching the sibling protein-RNA retention
+    readout nodes across the Ostersetzer et al. 2005 graphs.'
+  sections:
+  - causal_graphs
+links:
+  issues:
+  - https://github.com/CultureBotAI/DUFMech/issues/338

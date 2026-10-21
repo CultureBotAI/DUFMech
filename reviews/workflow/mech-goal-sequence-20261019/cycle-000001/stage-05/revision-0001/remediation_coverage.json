@@ -1,0 +1,59 @@
+{
+  "run_id": "mech-goal-sequence-20261019",
+  "cycle": 1,
+  "stage": 5,
+  "stage_key": "resolve_review_findings",
+  "source_revision": "35b9a13da0689d7e262b05791d5f1d8e763f38f7",
+  "previous_evidence_path": "reviews/workflow/mech-goal-sequence-20261019/cycle-000001/stage-04/revision-0001/evidence.yaml",
+  "previous_evidence_sha256": "b8fc7e4265e68f441f2a8e24f353b0c1f8b06aadcdeff1a592eefb28e73fc549",
+  "carried_forward_findings_count": 3,
+  "resolved_findings_count": 3,
+  "remaining_carry_forward_ids": [],
+  "groups": [
+    {
+      "group_id": "pf02410-rsfs-media-shift-taxon-remediation",
+      "finding_ids": [
+        "pf02410-media-shift-graph-missing-taxon"
+      ],
+      "issue_number": 336,
+      "issue_url": "https://github.com/CultureBotAI/DUFMech/issues/336",
+      "status": "resolved",
+      "overlay_path": "curation/families/PF02410.yaml",
+      "projection_path": "data/families/PF02410.yaml",
+      "history_path": "history/records/PF02410/2026-10-21T133500Z-antigravity-a13360.yaml",
+      "predecessor_review_id": "20261021T114833Z-pf02410-stage4-record-review",
+      "successor_review_id": "20261021T134500Z-pf02410-stage5-remediation-review",
+      "successor_review_path": "reviews/structured/20261021T134500Z-pf02410-stage5-remediation-review/review.yaml"
+    },
+    {
+      "group_id": "pf01980-ecoli-trmo-taxon-and-grounding-remediation",
+      "finding_ids": [
+        "pf01980-ecoli-trmo-graphs-missing-taxon-and-thr-variant-grounding"
+      ],
+      "issue_number": 337,
+      "issue_url": "https://github.com/CultureBotAI/DUFMech/issues/337",
+      "status": "resolved",
+      "overlay_path": "curation/families/PF01980.yaml",
+      "projection_path": "data/families/PF01980.yaml",
+      "history_path": "history/records/PF01980/2026-10-21T133501Z-antigravity-a13370.yaml",
+      "predecessor_review_id": "20261021T114829Z-pf01980-stage4-record-review",
+      "successor_review_id": "20261021T134501Z-pf01980-stage5-remediation-review",
+      "successor_review_path": "reviews/structured/20261021T134501Z-pf01980-stage5-remediation-review/review.yaml"
+    },
+    {
+      "group_id": "pf01985-mcrs1-retention-state-grounding-remediation",
+      "finding_ids": [
+        "pf01985-mcrs1-retention-state-nodes-missing-q9fyt6-grounding"
+      ],
+      "issue_number": 338,
+      "issue_url": "https://github.com/CultureBotAI/DUFMech/issues/338",
+      "status": "resolved",
+      "overlay_path": "curation/families/PF01985.yaml",
+      "projection_path": "data/families/PF01985.yaml",
+      "history_path": "history/records/PF01985/2026-10-21T133502Z-antigravity-a13380.yaml",
+      "predecessor_review_id": "20261021T114831Z-pf01985-stage4-record-review",
+      "successor_review_id": "20261021T134502Z-pf01985-stage5-remediation-review",
+      "successor_review_path": "reviews/structured/20261021T134502Z-pf01985-stage5-remediation-review/review.yaml"
+    }
+  ]
+}

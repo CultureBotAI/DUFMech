@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF02410
+  path: curation/families/PF02410.yaml
+session:
+  id: 2026-10-21T133500Z-antigravity-a13360
+  timestamp: '2026-10-21T13:35:00Z'
+  actors:
+  - type: ai_agent
+    name: Antigravity
+    model: Claude Opus 4.6
+    agent_tool: Antigravity
+events:
+- type: EDIT
+  outcome: changed
+  summary: Add taxon NCBITaxon:83333 to ecoli-rsfs-deletion-media-shift causal graph
+  details: 'Resolved Stage 4 review finding pf02410-media-shift-graph-missing-taxon
+    (Issue #336) by adding taxon: NCBITaxon:83333 (Escherichia coli K-12) to the
+    ecoli-rsfs-deletion-media-shift causal graph in curation/families/PF02410.yaml,
+    matching the organism scope of PMID:22843840 and the sibling ecoli-rsfs-50s-binding-silencing
+    graph.'
+  sections:
+  - causal_graphs
+links:
+  issues:
+  - https://github.com/CultureBotAI/DUFMech/issues/336

@@ -76,6 +76,7 @@ causal_graphs:
   family_mapping: YaeB is renamed TrmO in the study. P28634 sequence2/entry158 is the 235-aa K-12 reference;
     PF01980 maps to 11-142, PF18389 to 159-234. Whole-gene deletion does not isolate either domain; see
     evidence/PF01980/member-mapping.txt.
+  taxon: NCBITaxon:83333
   scope_status: PHENOTYPIC
   limitations: No direct catalytic step is measured in cells. Increased ct6A and some t6A do not establish
     native flux or direct TcdA activation; ct6A can hydrolyze during handling. Reference sequence is not
@@ -135,6 +136,7 @@ causal_graphs:
     n3, SD.
   family_mapping: P28634 reference PF01980 11-142 within 235 aa; pHSG construct is distinct from the His-tagged
     pCA24N biochemical preparation. Complete physical insert is not independently verified.
+  taxon: NCBITaxon:83333
   scope_status: PHENOTYPIC
   limitations: Relative cellular peak height is not a catalytic rate or measurement of expression-normalized
     enzyme activity. Flanks probably include native promoter/terminator, but that is not direct promoter
@@ -173,6 +175,7 @@ causal_graphs:
     2 mM spermine, 37 C 30 min; native PAGE with RNA and protein stains.
   family_mapping: P28634 sequence2 reference maps PF01980 to 11-142; no isolated domain tested. Exact
     tag/linker-bearing assay body has not been independently sequenced here.
+  taxon: NCBITaxon:83333
   scope_status: MECHANISTIC
   limitations: Mobility shift establishes complex formation, not a Kd, stoichiometry, direct base contacts
     or methylation. Thr4 yields a smeared/unstable band. Lane9 is protein only despite the caption's blanket
@@ -235,6 +238,7 @@ causal_graphs:
     MgCl2, 1 mM DTT, 37 C 1 h; RNase T1/LCMS.
   family_mapping: P28634 sequence2, PF01980 11-142 and PF18389 159-234. Whole-enzyme preparation includes
     both domains and an N-terminal His tag; reference body does not prove exact physical insert.
+  taxon: NCBITaxon:83333
   scope_status: MECHANISTIC
   limitations: Joint enzyme/donor/substrate requirement, not independent sufficiency of any input. A37-Thr3
     binds but is not methylated. Endpoint conversion is not kcat/Km, native flux or an atomic trajectory.
@@ -273,6 +277,7 @@ causal_graphs:
     HEPES6.7/KCl/MgCl2/DTT, 37 C 1 h; matched no-TrmO comparison.
   family_mapping: P28634 reference PF01980 11-142 in the whole 235-aa protein; native RNA modification
     state is not a change to protein-domain mapping.
+  taxon: NCBITaxon:83333
   scope_status: MECHANISTIC
   limitations: The no-enzyme m6t6A peak includes author-identified WT-RNA probe carryover, not mutant
     residual synthesis. ct6A hydrolysis during handling contributes t6A. Unchanged ct6A is a condition-specific
@@ -313,6 +318,7 @@ causal_graphs:
     n3 and SD. Empty vector and WT strain are retained controls.
   family_mapping: P28634 sequence2 verifies Q25,R92,D125,K136 inside PF01980 11-142 and D194,R196 in PF18389
     159-234. P28634 position111 is V; AF0241 D111 is a different protein's numbering.
+  taxon: NCBITaxon:83333
   scope_status: PHENOTYPIC
   limitations: No matched abundance/folding or active-enzyme normalization established. Mutation effects
     do not directly demonstrate E. coli AdoMet contacts, RNA-binding defects or isolated-domain catalysis.
@@ -436,6 +442,7 @@ causal_graphs:
     37 C 5 min; TCA-retained methyl incorporation normalized to WT Thr3, n3 and SD.
   family_mapping: EcTrmO reference P28634, PF01980 11-142; RNA positions31/34/35/39 are tRNA numbering,
     not coordinates in PF01980. Whole tagged enzyme is held constant.
+  taxon: NCBITaxon:83333
   scope_status: PHENOTYPIC
   limitations: Relative endpoint incorporation does not identify direct base contacts or distinguish altered
     RNA folding from recognition. Small residual bars are preserved; other tested substitutions remain
@@ -462,6 +469,8 @@ causal_graphs:
   - node_id: signal
     label: Methyl incorporation relative to WT Thr3
     node_type: PHENOTYPE
+    grounding:
+    - UniProtKB:P28634
   edges:
   - edge_id: as4-lowers-incorporation
     subject: as4
@@ -567,6 +576,7 @@ causal_graphs:
     Plot normalization is to WT Thr3; comparison here is the Thr4 variants versus WT Thr4.
   family_mapping: P28634 reference PF01980 11-142; mutations are RNA positions in Thr4, not protein residues.
     The whole protein and donor are required assay inputs.
+  taxon: NCBITaxon:83333
   scope_status: PHENOTYPIC
   limitations: A31C/U39G alone and the labeled U34G control have low signals, but Table S2 prints identical
     WT and U34G-only primer strings, leaving that control's exact sequence unresolved. Combined effects
@@ -581,6 +591,8 @@ causal_graphs:
   - node_id: signal
     label: Methyl incorporation versus WT Thr4
     node_type: PHENOTYPE
+    grounding:
+    - UniProtKB:P28634
   edges:
   - edge_id: triple-increases-incorporation
     subject: triple
@@ -625,6 +637,7 @@ causal_graphs:
     luminescence normalized to culture OD600 and WT, n4 with SD.
   family_mapping: Whole trmO gene perturbation; P28634 reference PF01980 11-142 within the 235-aa multidomain
     protein. No isolated-domain perturbation.
+  taxon: NCBITaxon:83333
   scope_status: PHENOTYPIC
   limitations: About1.5-fold ThrL-Luc effect, while Luc remains near baseline. Proposed impaired decoding/attenuation
     is not a directly measured intermediate. This WT normalization is distinct from the delta-tcdA comparison.
@@ -663,6 +676,7 @@ causal_graphs:
     to delta-tcdA rather than WT; ThrL-Luc and attenuator-free Luc controls, n4 and SD.
   family_mapping: Whole trmO gene effect in a separate genetic background; P28634 reference PF01980 11-142.
     TcdA is a separate enzyme, not a PF01980 activity.
+  taxon: NCBITaxon:83333
   scope_status: PHENOTYPIC
   limitations: About2-fold ThrL-Luc change does not quantify ct6A versus t6A decoding on a common baseline
     with the WT-background graph. No direct ribosome stalling, native flux or isolated-domain mechanism
