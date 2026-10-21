@@ -29,14 +29,16 @@ relative to the latest retained worklist snapshot:
    - Inspect the latest retained worklist snapshot in
      `data/worklists/interpro-pfam-duf-*.json`, its companion `.manifest.json`,
      and the historical rename table in
-     `data/worklists/pfam-previous-unknown-names-*.json`.
+     `data/worklists/pfam-previous-unknown-names-*.json` (plus its `.manifest.json`).
    - Search ignored and hidden files (`rg --no-ignore --hidden`), aliases
-     (`pfam_short_name`, `previous_names`), `curation/families/PF*.yaml`
-     overlays, `data/families/PF*.yaml` projections, and `excluded` worklist
-     decisions before declaring any candidate absent.
+     (`short_name`, `previous_unknown_names`, `previous_ids`),
+     `curation/families/PF*.yaml` overlays, `data/families/PF*.yaml`
+     projections, and prior `FALSE_POSITIVE_TEXT_HIT` decisions recorded in
+     worklist `.manifest.json` files before declaring any candidate absent.
    - Confirm that every included `PFxxxxx` entry in the latest worklist snapshot
      (`UNKNOWN_CANDIDATE`, `KNOWN_HISTORICAL_DUF`, and `EX_DUF`) has a generated
-     canonical projection in `data/families/PFxxxxx.yaml`.
+     canonical projection in `data/families/PFxxxxx.yaml` and is listed in
+     `data/families/manifest.json`.
 2. **Query live InterPro and EBI Pfam within the bounded frontier**:
    - Query the InterPro Pfam endpoint
      `https://www.ebi.ac.uk/interpro/api/entry/pfam/?search=DUF&page_size=200`
@@ -46,13 +48,13 @@ relative to the latest retained worklist snapshot:
    - Check EBI Pfam FTP (`https://ftp.ebi.ac.uk/pub/databases/Pfam/releases/`)
      for any newer `Pfam*.*/Pfam-A.seed.gz` or `pfamA.txt.gz` release than the
      release recorded in `data/worklists/pfam-previous-unknown-names-*.json`.
-   - Run a dry-run reconciliation via `scripts/migrate_exduf_worklist.py`:
+   - Run a dry-run reconciliation via `scripts/migrate_exduf_worklist.py`
+     (dry-run is the default when `--apply` is omitted):
      ```bash
      uv run --locked python scripts/migrate_exduf_worklist.py \
-       --base-worklist data/worklists/interpro-pfam-duf-YYYY-MM-DD.json \
-       --previous-names data/worklists/pfam-previous-unknown-names-YYYY-MM-DD.json \
-       --snapshot-date YYYY-MM-DD \
-       --dry-run
+       --parent-json data/worklists/interpro-pfam-duf-YYYY-MM-DD.json \
+       --previous-names-json data/worklists/pfam-previous-unknown-names-YYYY-MM-DD.json \
+       --snapshot-date YYYY-MM-DD
      ```
 3. **Assign explicit per-candidate dispositions and re-run frontier**:
    - Record an explicit disposition for every evaluated candidate in the
@@ -81,12 +83,16 @@ When a new InterPro/Pfam release introduces genuinely new `DUF*`, `UPF*`, or
 
 1. **Refresh the worklist and protein-example snapshots**:
    - Generate the new date-stamped worklist snapshot under `data/worklists/`
-     using `scripts/migrate_exduf_worklist.py` (or the worklist harvesting
-     workflow in [docs/sources.md](../../../docs/sources.md)) so new `PFxxxxx`
-     entries receive validated `seed_status`, `curation_status`, `interpro_accession`,
-     `representative_taxon`, and `representative_uniprot` fields, while explicit
-     text-search false positives remain in `excluded` with
-     `FALSE_POSITIVE_TEXT_HIT`.
+     using `scripts/migrate_exduf_worklist.py --apply` (or the worklist
+     harvesting workflow in [docs/sources.md](../../../docs/sources.md)) so new
+     `PFxxxxx` `DufFamilyRow` entries receive validated `pfam_id`, `short_name`,
+     `name`, `interpro_id`, `unknown_status`, `candidate_reasons`,
+     `uniprot_protein_count`, `reviewed_protein_count`,
+     `unreviewed_protein_count`, `alphafold_count`, `structure_count`,
+     `taxonomy_id`, `taxonomy_name`, `description`, `source_url`, and optional
+     `previous_unknown_names` fields, while explicit text-search false positives
+     (`FALSE_POSITIVE_TEXT_HIT`) are filtered out and recorded in the companion
+     `.manifest.json`.
    - If representative proteins or cross-mech mappings changed, refresh
      `data/protein_examples/` and `data/cross_mech/` accordingly.
 2. **Project canonical family records**:
@@ -95,44 +101,69 @@ When a new InterPro/Pfam release introduces genuinely new `DUF*`, `UPF*`, or
      uv run --locked python -m dufmech.records --apply
      ```
    - Confirm that each new `PFxxxxx` family is projected into
-     `data/families/PFxxxxx.yaml` and recorded in `data/families/.records-manifest.json`.
+     `data/families/PFxxxxx.yaml` and recorded in `data/families/manifest.json`.
    - Never hand-edit `data/families/PFxxxxx.yaml`; it is always generated from
      the worklist, supporting snapshots, history, reviews, and any human overlay
      in `curation/families/PFxxxxx.yaml`.
 
 ## 3. Onboarding a New Curated Family Overlay (`curation/families/PFxxxxx.yaml`)
 
-When adding a new human-curated overlay for a `PFxxxxx` family (promoting a
+When adding a new curated overlay for a `PFxxxxx` family (promoting a
 seed-only record or curating a newly added DUF):
 
 1. **Verify identifier and scope**:
    - Confirm the target `PFxxxxx` accession exists in the latest
      `data/worklists/interpro-pfam-duf-*.json` snapshot and `data/families/PFxxxxx.yaml`.
-   - Verify Pfam short name, InterPro entry (`IPRxxxxxx`), representative
-     `UniProtKB` accession, and `NCBITaxon` identifier against local snapshots
-     and retained evidence in `evidence/PFxxxxx/`.
-2. **Retain primary evidence first**:
-   - Save durable text extracts under `evidence/PFxxxxx/` (PubMed/PMC metadata,
-     abstract/full-text extracts, UniProt/PDB identity extracts) before citing
-     any `PMID:...`, `DOI:...`, `UniProtKB:...`, or `PDB:...` identifier in
-     `curation/families/PFxxxxx.yaml`.
-3. **Author `curation/families/PFxxxxx.yaml`**:
-   - Include only human-owned overlay fields allowed by `dufmech.records` and
-     [src/dufmech/schema/dufmech.yaml](../../../src/dufmech/schema/dufmech.yaml):
-     `family_accession`, `curation_status`, `function_summary`,
-     `mechanism_summary`, `evidence_tier`, `confidence`, `go_terms`,
-     `function_categories`, `key_papers`, `structures`, `causal_graphs`, and
-     `notes`.
+   - Verify Pfam `short_name`, InterPro entry (`interpro_id`), experimentally
+     tested `UniProtKB` accession, and `NCBITaxon` identifier (`taxon`) against
+     local snapshots and primary literature. Preserve experimentally tested
+     protein and taxon scope: sequence availability and family membership do not
+     prove experimentally characterized function.
+2. **Author `curation/families/PFxxxxx.yaml` (`FamilyCuration`)**:
+   - `FamilyCuration` is validated with a closed schema
+     ([src/dufmech/schema/dufmech.yaml](../../../src/dufmech/schema/dufmech.yaml)).
+     Use only its allowed top-level slots:
+     - `pfam_id` (required, `PF\d{5}`)
+     - `curation_status` (required: `UNCURATED`, `IN_PROGRESS`, `REVIEWED`, or `SUPERSEDED`)
+     - `review_id` (only when `curation_status: REVIEWED`)
+     - `curation_history`
+     - `assertions` (list of `FamilyAssertion` objects carrying `function_summary`,
+       `mechanism_summary`, `confidence`, `go_terms`, `tested_proteins`,
+       `representative_structures`, and `evidence` items with `pmid`/`doi` and
+       verbatim `snippet`)
+     - `causal_graphs`
+     - `discussions`
+     - `datasets`
+     - `cross_corpus_links`
+   - **Enforce the `IN_PROGRESS` vs `REVIEWED` status gate**: New or edited
+     curation overlays must use `curation_status: IN_PROGRESS` unless a
+     completed review report (`reviews/PFxxxxx.md` or
+     `reviews/structured/PFxxxxx.yaml`), `review_id`, and matching `REVIEW`
+     history event targeting `data/families/PFxxxxx.yaml` already exist. Never
+     auto-promote a record to `REVIEWED` without an independent review artifact.
    - Ground gene or protein nodes in `causal_graphs` with verified
      `UniProtKB:...` accessions matching the experimental organism (`taxon`),
      without grounding non-protein assay readouts or oligonucleotide knockdown
      reagents as proteins.
-4. **Record canonical curation history**:
+3. **Record canonical curation history**:
    - Create a real history event under `history/records/PFxxxxx/` using
-     `uv run --locked python -m dufmech.history new` (`just new-history`) with
-     `--target curation/families/PFxxxxx.yaml`, `--event CREATE` (for a new
-     overlay) or `--event EDIT`, and `--outcome changed`.
-5. **Regenerate projections, causal-graph inventory, and source pins**:
+     `uv run --locked python -m dufmech.history new` (`just new-history`):
+     ```bash
+     uv run --locked python -m dufmech.history new \
+       --kind record \
+       --slug PFxxxxx \
+       --path curation/families/PFxxxxx.yaml \
+       --timestamp YYYY-MM-DDTHH:MM:SSZ \
+       --summary "Create PFxxxxx curation overlay" \
+       --details "Detailed provenance and evidence summary" \
+       --actor-name "Actor Name" \
+       --actor-type human \
+       --event CREATE \
+       --outcome changed
+     ```
+     (Use `--event EDIT` when updating an existing overlay, and supply `--model`
+     and `--agent-tool` when `--actor-type ai_agent`.)
+4. **Regenerate projections, causal-graph inventory, and source pins**:
    - Run:
      ```bash
      uv run --locked python -m dufmech.records --apply

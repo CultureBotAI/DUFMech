@@ -35,13 +35,34 @@ def test_add_record_skill_contract_and_router():
         "name: add-record",
         "data/worklists/interpro-pfam-duf-*.json",
         "scripts/migrate_exduf_worklist.py",
+        "--parent-json",
+        "--previous-names-json",
         "curation/families/PFxxxxx.yaml",
+        "data/families/manifest.json",
         "src/dufmech/schema/dufmech.yaml",
+        "pfam_id",
+        "assertions",
+        "IN_PROGRESS",
+        "REVIEWED",
+        "--kind record",
+        "--slug PFxxxxx",
+        "--path curation/families/PFxxxxx.yaml",
+        "already_present",
+        "rejected_with_evidence",
         "dufmech.records --apply",
         "dufmech.causal_graphs --apply",
         "dufmech.history check",
     ):
         assert required in text
+    for forbidden in (
+        "family_accession",
+        "--base-worklist",
+        "--previous-names ",
+        "--dry-run",
+        "--target curation/families/",
+        ".records-manifest.json",
+    ):
+        assert forbidden not in text
     router = ROOT / ".agents/skills/add-record/SKILL.md"
     target = "../../../.claude/skills/add-record/SKILL.md"
     assert f"]({target})" in router.read_text(encoding="utf-8")
@@ -62,6 +83,22 @@ def test_curate_causal_graphs_skill_contract_and_router():
         assert required in text
     router = ROOT / ".agents/skills/curate-causal-graphs/SKILL.md"
     target = "../../../.claude/skills/curate-causal-graphs/SKILL.md"
+    assert f"]({target})" in router.read_text(encoding="utf-8")
+    assert (router.parent / target).resolve() == adapter
+
+
+def test_dufmech_evolve_workflow_skill_contract_and_router():
+    adapter = ROOT / ".claude/skills/dufmech-evolve-workflow/SKILL.md"
+    text = adapter.read_text(encoding="utf-8")
+    for required in (
+        "name: dufmech-evolve-workflow",
+        "workflow/mech-workflow.yaml",
+        "INFRA_TASKS.md",
+        "kg_microbe_workflows validate",
+    ):
+        assert required in text
+    router = ROOT / ".agents/skills/dufmech-evolve-workflow/SKILL.md"
+    target = "../../../.claude/skills/dufmech-evolve-workflow/SKILL.md"
     assert f"]({target})" in router.read_text(encoding="utf-8")
     assert (router.parent / target).resolve() == adapter
 
