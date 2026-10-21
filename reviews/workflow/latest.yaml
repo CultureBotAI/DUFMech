@@ -1,19 +1,36 @@
 authority: verified_closure
 entries:
-- cycle: 1
-  goal_evidence:
-    path: reviews/workflow/mech-goal-sequence-20261019/cycle-000001/stage-04/revision-0001/evidence.yaml
-    sha256: b8fc7e4265e68f441f2a8e24f353b0c1f8b06aadcdeff1a592eefb28e73fc549
-  receipt_sha256: 7f95984479274af0d1efdffce1186caf28c60ccdf2dc3d85d9b968ac995fc666
-  stage: 4
-  verification:
-    checks:
-    - bucket: pass
-      name: qc
-      state: SUCCESS
-    head_sha: a72df4a6828583af569e171faf1be733c1fab479
-    merge_commit_sha: 35b9a13da0689d7e262b05791d5f1d8e763f38f7
-    merged_at: '2026-10-21T13:12:15Z'
-    pr_number: 335
-    status: merged
-    verified_at: '2026-10-21T13:20:14.704636+00:00'
+  - cycle: 1
+    goal_evidence:
+      path: reviews/workflow/mech-goal-sequence-20261019/cycle-000001/stage-04/revision-0001/evidence.yaml
+      sha256: b8fc7e4265e68f441f2a8e24f353b0c1f8b06aadcdeff1a592eefb28e73fc549
+    receipt_sha256: 7f95984479274af0d1efdffce1186caf28c60ccdf2dc3d85d9b968ac995fc666
+    stage: 4
+    verification:
+      checks:
+        - bucket: pass
+          name: qc
+          state: SUCCESS
+      head_sha: a72df4a6828583af569e171faf1be733c1fab479
+      merge_commit_sha: 35b9a13da0689d7e262b05791d5f1d8e763f38f7
+      merged_at: '2026-10-21T13:12:15Z'
+      pr_number: 335
+      status: merged
+      verified_at: '2026-10-21T13:20:14.704636+00:00'
+  - cycle: 1
+    goal_evidence:
+      path: reviews/workflow/mech-goal-sequence-20261019/cycle-000001/stage-05/revision-0001/evidence.yaml
+      sha256: 796b7f1e60b874a2753ec968d0589e1c5e877420a92c6ad89d64892cf3457db7
+    receipt_sha256: ad006d3ab98f6cb575b74d8e67624ae554de725a65dd83df57e49c16c52bc6cd
+    stage: 5
+    verification:
+      checks:
+        - bucket: pass
+          name: qc
+          state: SUCCESS
+      head_sha: c7e75efdef1bf1b6b9ac661052a508f410438151
+      merge_commit_sha: 1795e5229d2d91cfdc34abe9e44838716587c1d8
+      merged_at: '2026-10-21T14:42:12Z'
+      pr_number: 339
+      status: merged
+      verified_at: '2026-10-21T18:40:51.669030+00:00'
