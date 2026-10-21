@@ -1,6 +1,7 @@
 """Keep native agent entry points and fleet review dependencies available."""
 
 import re
+import subprocess
 from pathlib import Path
 
 import pytest
@@ -9,11 +10,29 @@ import yaml
 ROOT = Path(__file__).resolve().parents[1]
 
 
+def _tracked_skill_files(prefix: str) -> list[Path]:
+    result = subprocess.run(
+        ["git", "-C", str(ROOT), "ls-files", f"{prefix}/*/SKILL.md"],
+        capture_output=True,
+        text=True,
+        check=False,
+    )
+    if result.returncode == 0 and result.stdout.strip():
+        return sorted(ROOT / line.strip() for line in result.stdout.splitlines() if line.strip())
+    return sorted((ROOT / prefix).glob("*/SKILL.md"))
+
+
 @pytest.mark.parametrize("relative", [
     "AGENTS.md",
+    ".claude/skills/add-record/SKILL.md",
+    ".agents/skills/add-record/SKILL.md",
+    ".claude/skills/curate-causal-graphs/SKILL.md",
+    ".agents/skills/curate-causal-graphs/SKILL.md",
     ".claude/skills/curate-yaml-record/SKILL.md",
     ".claude/skills/curate-yaml-record/references/review-checklist.md",
     ".agents/skills/curate-yaml-record/SKILL.md",
+    ".claude/skills/dufmech-evolve-workflow/SKILL.md",
+    ".agents/skills/dufmech-evolve-workflow/SKILL.md",
     ".claude/skills/dufmech-protein-examples/SKILL.md",
     ".agents/skills/dufmech-protein-examples/SKILL.md",
     ".claude/skills/ground-causal-graph-proteins/SKILL.md",
@@ -41,8 +60,8 @@ def test_agents_md_local_links_resolve():
 
 
 def test_every_claude_skill_is_exposed_under_agents_skills():
-    claude_skills = sorted((ROOT / ".claude/skills").glob("*/SKILL.md"))
-    agents_skills = sorted((ROOT / ".agents/skills").glob("*/SKILL.md"))
+    claude_skills = _tracked_skill_files(".claude/skills")
+    agents_skills = _tracked_skill_files(".agents/skills")
     assert claude_skills
     assert {p.parent.name for p in agents_skills} == {p.parent.name for p in claude_skills}
     for adapter in claude_skills:
@@ -60,6 +79,81 @@ def test_every_claude_skill_is_exposed_under_agents_skills():
         target = f"../../../.claude/skills/{skill_name}/SKILL.md"
         assert f"]({target})" in text
         assert (router.parent / target).resolve() == adapter.resolve()
+
+
+def test_add_record_skill_contract_and_router():
+    adapter = ROOT / ".claude/skills/add-record/SKILL.md"
+    text = adapter.read_text(encoding="utf-8")
+    for required in (
+        "name: add-record",
+        "data/worklists/interpro-pfam-duf-*.json",
+        "scripts/migrate_exduf_worklist.py",
+        "--parent-json",
+        "--previous-names-json",
+        "curation/families/PFxxxxx.yaml",
+        "data/families/manifest.json",
+        "src/dufmech/schema/dufmech.yaml",
+        "pfam_id",
+        "assertions",
+        "IN_PROGRESS",
+        "REVIEWED",
+        "--kind record",
+        "--slug PFxxxxx",
+        "--path curation/families/PFxxxxx.yaml",
+        "already_present",
+        "rejected_with_evidence",
+        "dufmech.records --apply",
+        "dufmech.causal_graphs --apply",
+        "dufmech.history check",
+    ):
+        assert required in text
+    for forbidden in (
+        "family_accession",
+        "--base-worklist",
+        "--previous-names ",
+        "--dry-run",
+        "--target curation/families/",
+        ".records-manifest.json",
+    ):
+        assert forbidden not in text
+    router = ROOT / ".agents/skills/add-record/SKILL.md"
+    target = "../../../.claude/skills/add-record/SKILL.md"
+    assert f"]({target})" in router.read_text(encoding="utf-8")
+    assert (router.parent / target).resolve() == adapter
+
+
+def test_curate_causal_graphs_skill_contract_and_router():
+    adapter = ROOT / ".claude/skills/curate-causal-graphs/SKILL.md"
+    text = adapter.read_text(encoding="utf-8")
+    for required in (
+        "name: curate-causal-graphs",
+        "curation/families/PF*.yaml",
+        "src/dufmech/schema/dufmech.yaml",
+        "dufmech.causal_graphs --apply",
+        "dufmech.records --check",
+        "dufmech.history check",
+    ):
+        assert required in text
+    router = ROOT / ".agents/skills/curate-causal-graphs/SKILL.md"
+    target = "../../../.claude/skills/curate-causal-graphs/SKILL.md"
+    assert f"]({target})" in router.read_text(encoding="utf-8")
+    assert (router.parent / target).resolve() == adapter
+
+
+def test_dufmech_evolve_workflow_skill_contract_and_router():
+    adapter = ROOT / ".claude/skills/dufmech-evolve-workflow/SKILL.md"
+    text = adapter.read_text(encoding="utf-8")
+    for required in (
+        "name: dufmech-evolve-workflow",
+        "workflow/mech-workflow.yaml",
+        "INFRA_TASKS.md",
+        "kg_microbe_workflows validate",
+    ):
+        assert required in text
+    router = ROOT / ".agents/skills/dufmech-evolve-workflow/SKILL.md"
+    target = "../../../.claude/skills/dufmech-evolve-workflow/SKILL.md"
+    assert f"]({target})" in router.read_text(encoding="utf-8")
+    assert (router.parent / target).resolve() == adapter
 
 
 def test_issue_triage_skill_is_native_scoped_and_read_only():
