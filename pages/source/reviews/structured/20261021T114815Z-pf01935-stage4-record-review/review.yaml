@@ -1,0 +1,668 @@
+schema_version: 1.0.0
+review_id: 20261021T114815Z-pf01935-stage4-record-review
+title: PF01935 Stage 4 frozen-inventory causal-graph and grounding review
+started_at: '2026-10-21T11:48:14Z'
+finished_at: '2026-10-21T11:48:15Z'
+reviewer:
+  identity: Antigravity
+  kind: agent
+  model: Claude-Opus-4.6
+  independence: self_review
+  independence_basis: Stage 4 frozen-inventory record review by Antigravity auditing
+    prior Codex/Antigravity curation overlays, primary evidence caches, history events,
+    and current projections at Git revision d658f73e7e618d3938704cdb9c86597bf47fc15e.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: pass_with_limitations
+native_verdict: NEEDS_FOLLOWUP
+scientific_review: true
+summary: 'Six graphs retain21 OBSERVED effects:1 DIRECT,2 INDIRECT and18 UNRESOLVED
+  across1 MECHANISTIC and5 PHENOTYPIC contexts. Four ledgers and two OPEN discussions
+  preserve source and coverage limitations. Partial same-agent scientific review;
+  IN_PROGRESS, no family-wide completion or publication. Stage 2 (PR #319) grounded
+  Thermococcus kodakarensis DNA gyrase supercoiling node dna-supercoiling to UniProtKB:Q5JDW7
+  in thermococcus-hera-gyrase-supercoiling, preserving all Thermus thermophilus Hera
+  helicase domain-boundary and RNA/DNA assay graphs.'
+repository: CultureBotAI/DUFMech
+kind: record
+source:
+  git_revision: d658f73e7e618d3938704cdb9c86597bf47fc15e
+  state: working_tree
+  snapshot_id: interpro-pfam-duf-2026-10-10
+  inputs:
+  - path: curation/families/PF01935.yaml
+    sha256: 4090a3afd17374ec2364dbfc497596f5d0ad5c6b48ffb1d2bc48493f1b95d466
+    role: context
+  - path: data/families/PF01935.yaml
+    sha256: bdc431157f5bbe95b79f69377ed9217cd515dd62313033276f789ac2953e8b9b
+    role: target
+  - path: data/worklists/interpro-pfam-duf-2026-10-10.json
+    sha256: 17fb625876c9326ed284263a47bcd84e0d7844a31c040dc06cd2260c36f1c383
+    role: context
+  - path: data/worklists/interpro-pfam-duf-2026-10-10.manifest.json
+    sha256: 31c07ffb6a169c851ea0e6e9dd527a10c04028eafeb29187bd62dc2ae848696e
+    role: context
+  - path: data/worklists/interpro-pfam-duf-2026-10-10.tsv
+    sha256: be023c8dd9d8d3864926b5032d6f7e87a884b1a567391696822dbbecc692dae7
+    role: context
+  - path: evidence/PF01935/coverage.txt
+    sha256: 25390d2a34f3f39c0611bffeafcff107aa1b654fba180a16f46fc5cc260738fd
+    role: context
+  - path: evidence/PF01935/huang-2015.txt
+    sha256: b8366ed6c7b29e4239e9177e21e569acfd7d1483af3f569737dceaa80a3f861d
+    role: context
+  - path: evidence/PF01935/identity.txt
+    sha256: fca50ce10e99d26395b78a1a61f6e11a1a72b5611b68f452a8bb6a429a204111
+    role: context
+  - path: evidence/PF01935/rzechorzek-2014.txt
+    sha256: 177261d03cb53470db34e03f18c062c086ad016a2e9efd67d2552a46440fbfb1
+    role: context
+  - path: reviews/structured/20261012T044202Z-pf01935-hera-domain-boundaries-and-separated-assay-effects/review.yaml
+    sha256: 1b7305ffc3ef676e8461af92bd6bd9cdbeb15a20989ec08c4cf1b2c4c7e33eaa
+    role: context
+targets:
+- target_id: PF01935
+  path: data/families/PF01935.yaml
+  label: PF01935
+  kind: generated
+  record_class: FamilyRecord
+  owner_paths:
+  - repository: CultureBotAI/DUFMech
+    path: curation/families/PF01935.yaml
+    role: Maintained scientific overlay; create only with authorized curation.
+  - repository: CultureBotAI/DUFMech
+    path: src/dufmech/records.py
+    role: Projection generator; frozen snapshot identity is not hand-edited.
+  semantic_digest:
+    algorithm: dufmech-record-content-v1
+    sha256: 6e9d1a767bc1466569cf5972f0889ca9dcf28849ef482dc06293d3a7672f7562
+    description: Canonical JSON SHA-256 of effective FamilyRecord excluding only curation_status,
+      review_id and curation_events.
+scope:
+  description: Scientific assessment of the retained edges, exact member mapping,
+    primary evidence, context and causal limits.
+  selection: Ascending uncurated Pfam after PF01934; all8296 records and existing
+    follow-ups remain in scope.
+  coverage: partial
+  population_size: 1
+  reviewed_target_ids:
+  - PF01935
+  exclusions:
+  - target: Remaining family members and uncurated experimental contexts
+    reason: Other2004/2012 archaeal assays,2014 interface/doping/double-mutant and
+      assembly work,2015 alternative assays/supplements,2017 loading,Deinococcus and2024-2025
+      antiviral contexts remain open. PMID40010344 full text was located at the author
+      site but not inspected; EuropePMC500/PMC challenge is not evidence of no research.
+      DUF4297 is the partner, not DUF87. Reviewed UniProt8-entry sample is not all11479
+      frozen proteins.
+checks:
+- check_id: native-projection
+  name: Native projection and overlay validation
+  command: validate_record(record, root); assert projection graphs and discussions
+    match overlay
+  status: passed
+  required: true
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Current projection validates and preserves the authored graph and discussion
+    content exactly.
+  target_ids:
+  - PF01935
+  evidence_ids:
+  - native
+evidence:
+- evidence_id: primary
+  kind: primary_source
+  reference: https://www.nature.com/articles/ncomms6506
+  locator: Figure4A-D and supplementS4-S5 visually inspected; relevant primary Results/Methods
+    and supplement pp10-14 read.
+  accessed_at: '2026-10-12T04:42:02Z'
+  support: supports
+  snapshot_sha256: 177261d03cb53470db34e03f18c062c086ad016a2e9efd67d2552a46440fbfb1
+  summary: Full SSO2251/partner assay contexts separate phosphate release, short-duplex
+    unwinding, TFO displacement and long-DNA processing. One direct degradation edge
+    belongs to the complete HerA/NurA/ATP/Mn preparation, not HerA-intrinsic nuclease
+    chemistry. Variant effects have unresolved molecular directness.
+- evidence_id: identity
+  kind: database
+  reference: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01935/
+  locator: Accession and domain locations; paired UniProt identity facts
+  accessed_at: '2026-10-12T04:42:02Z'
+  support: supports
+  snapshot_sha256: fca50ce10e99d26395b78a1a61f6e11a1a72b5611b68f452a8bb6a429a204111
+  summary: Frozen DUF87/IPR002789/KNOWN_HISTORICAL_DUF identity and imported description
+    remain unchanged. Current Q97WG8v1 and F0NFK8v1 are500aa with PF01935 121-331
+    and PF09378 3-84. R142/K154/D176 are in the Pfam match, whereas E356/K363/R381/G465/D471
+    lie outside. Structural catalytic-domain labels do not enlarge the sequence match.
+    P2 functional variants are not the10-substitution crystallization construct. E233S
+    is a REY15A derivative with deletion/selection context, not unmodified strain
+    physiology.
+- evidence_id: cellular-and-overhang-contexts
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC4351679/
+  locator: Huang2015 Figures2/4/5 and genetic/biochemical Methods.
+  summary: Genetic deletion recovery and purified overhang product effects are separately
+    supported; selection, residual activities, alternative substrates and species
+    differences remain explicit.
+  accessed_at: '2026-10-12T04:42:02Z'
+  support: supports
+  snapshot_sha256: b8366ed6c7b29e4239e9177e21e569acfd7d1483af3f569737dceaa80a3f861d
+- evidence_id: source-coverage
+  kind: search
+  reference: evidence/PF01935/coverage.txt
+  locator: Search, access, unperformed followup and context ledger.
+  search_scope: PF01935,DUF87,HerA,NurA,primary family/member APIs and cited publications;
+    ignored/hidden-inclusive scoped local search; publisher full text and supplemental
+    figures.
+  summary: No all-family negative claim; source conflicts, uncurated branches and
+    available author-hosted antiviral followup preserved.
+  accessed_at: '2026-10-12T04:42:02Z'
+  support: supports
+  snapshot_sha256: 25390d2a34f3f39c0611bffeafcff107aa1b654fba180a16f46fc5cc260738fd
+- evidence_id: native
+  kind: validation
+  reference: src/dufmech/records.py
+  locator: Current projection validation and overlay equivalence in this retained-review
+    session
+  accessed_at: '2026-10-12T04:42:02Z'
+  support: supports
+  summary: Closed schema, canonical history and applicable graph/evidence checks pass.
+    Curated graphs and discussions match the overlay; scientific validity is assessed
+    separately.
+- evidence_id: stage4-prior-review
+  kind: prior_review
+  reference: reviews/structured/20261012T044202Z-pf01935-hera-domain-boundaries-and-separated-assay-effects/review.yaml
+  locator: Predecessor structured review 20261012T044202Z-pf01935-hera-domain-boundaries-and-separated-assay-effects
+  accessed_at: '2026-10-21T11:48:15Z'
+  support: supports
+  snapshot_sha256: 1b7305ffc3ef676e8461af92bd6bd9cdbeb15a20989ec08c4cf1b2c4c7e33eaa
+  summary: Predecessor review 20261012T044202Z-pf01935-hera-domain-boundaries-and-separated-assay-effects
+    verified and linked for finding continuity and semantic-digest progression on
+    PF01935.
+- evidence_id: duf-projection-pf01935
+  kind: record_content
+  reference: data/families/PF01935.yaml
+  locator: dufmech-reviewed-projection-v1
+  accessed_at: '2026-10-21T11:48:15Z'
+  support: context_only
+  snapshot_sha256: bdc431157f5bbe95b79f69377ed9217cd515dd62313033276f789ac2953e8b9b
+  quote: "id: Pfam:PF01935\npfam_id: PF01935\nname: Helicase HerA, central domain\n\
+    short_name: DUF87\nseed_status: KNOWN_HISTORICAL_DUF\ncharacterization_status:\
+    \ UNSCORED\ncuration_status: IN_PROGRESS\nsource_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01935\n\
+    counters:\n  proteins: 11479\n  matches: 11481\n  proteomes: 6966\n  taxa: 11524\n\
+    \  structures: 38\n  alphafold_models: 7658\n  domain_architectures: 87\nprovenance:\n\
+    \  snapshot_id: interpro-pfam-duf-2026-10-10\n  path: data/worklists/interpro-pfam-duf-2026-10-10.json\n\
+    \  sha256: 17fb625876c9326ed284263a47bcd84e0d7844a31c040dc06cd2260c36f1c383\n\
+    \  generated_at: '2026-10-10T07:44:21.614711Z'\n  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/\n\
+    interpro_id: InterPro:IPR002789\ndescription: This entry represents the central\
+    \ domain found in archaeal proteins such as DNA double-strand\n  break repair\
+    \ helicase HerA ([ec:3.6.4.12]). HerA is a helicase which is able to utilise either\
+    \ 3' or\n  5' single-stranded DNA extensions for loading and subsequent DNA duplex\
+    \ unwinding [[cite:PUB00076694]].\n  It forms a complex with NurA nuclease, this\
+    \ complex has the 5'-3' DNA end resection activity and is\n  essential for cell\
+    \ viability in the crenarchaeon Sulfolobus islandicus [[cite:PUB00076695]]. This\
+    \ domain\n  includes the the central RecA-like catalytic core and a flanking four-helix\
+    \ bundle [[cite:PUB00078094]].\n  The function of this prokaryotic domain is unknown.\
+    \ It contains several conserved aspartates and histidines\n  that could be metal\
+    \ ligands.\ncuration_history: history/records/PF01935\ndiscussions:\n- discussion_id:\
+    \ pf01935-motor-domain-and-assay-boundaries\n  prompt: Resolve assay and construct\
+    \ differences before generalizing a HerA chemo-mechanical cycle.\n  kind: CURATION_TODO\n\
+    \  status: OPEN\n  rationale: Pfam121-331 is narrower than the structural catalytic\
+    \ assembly; measured ATPase, unwinding,\n    triplex displacement and DNA destruction\
+    \ are not interchangeable.\n  evidence:\n  - reference: PMID:25420454\n    supports:\
+    \ PARTIAL\n    evidence_source: primary_assays_and_supplement\n    explanation:\
+    \ D471A raises ATP turnover and does not lower Figure4C unwinding, yet lowers\
+    \ triplex displacement\n      and DNA destruction. Preserve substrate/concentration\
+    \ and K142A/R142A label discrepancies.\n  - reference: PMID:25880130\n    supports:\
+    \ PARTIAL\n    evidence_source: primary_complementation_and_biochemistry\n   \
+    \ explanation: E233S complementation is a cellular selection outcome, not a directly\
+    \ measured consequence\n      of an individual purified reaction product.\n  posed_by:\
+    \ Codex\n  posed_date: '2026-10-12'\n  notes: Inspect2015 supplements and omitted2014\
+    \ mutants/doping/interface contexts. Retain no-DNA and\n    NurA-dependence differences\
+    \ across organisms; do not hand-correct the frozen description.\n- discussion_id:\
+    \ pf01935-bacterial-and-antiviral-coverage\n  prompt: Add accession-mapped bacterial\
+    \ and antiviral HerA contexts with primary assay evidence.\n  kind: CURATION_TODO\n\
+    \  status: OPEN\n  rationale: Two archaeal examples do not characterize11479 proteins\
+    \ across87 architectures.\n  evidence:\n  - reference: PMID:40010344\n    supports:\
+    \ PARTIAL\n    evidence_source: primary_abstract_and_full_text_lead\n    explanation:\
+    \ HerA-DUF4297 defense is a distinct partner context; author-hosted full text\
+    \ was located\n      but not inspected for curation.\n  - reference: PMID:25868646\n\
+    \    supports: PARTIAL\n    evidence_source: primary_abstract_followup\n    explanation:\
+    \ Deinococcus biochemical and physiological effects require separate mapping and\
+    \ assay\n      review.\n  posed_by: Codex\n  posed_date: '2026-10-12'\n  notes:\
+    \ Coverage ledger retains2004,2012,2014 assembly,2015 alternative assays,2017\
+    \ loading,2022 bacterial\n    and2024-2025 antiviral followups. DUF4297 is not\
+    \ DUF87.\ncausal_graphs:\n- graph_id: sso2251-overhang-atpase-2014\n  title: HerA\
+    \ substitutions change ATP turnover on overhang DNA\n  scope: Rzechorzek2014 Figure4A;\
+    \ full-length SSO2251 variants with nuclease-inactivated D58A NurA.\n  context:\
+    \ Select the5-prime15nt-overhang duplex comparison;30nM complex,400nM DNA,400uM\
+    \ ATP,5mM MgCl2,Tris\n    pH8,NaCl,glycerol;60C preassembly. Three independent\
+    \ repeats.\n  family_mapping: Q97WG8v1,500aa,P2 taxon273057,PF01935 121-331. R142/K154\
+    \ inside; K363/R381/D471 outside\n    current match. Full proteins, not isolated-domain\
+    \ ATPase assays or crystallization HerAm10.\n  taxon: NCBITaxon:273057\n  scope_status:\
+    \ PHENOTYPIC\n  limitations: Directional phosphate-release changes do not directly\
+    \ resolve folding, assembly or the\n    atomic coupling cycle. Other DNA substrates\
+    \ and no-DNA conditions remain separate. Increased ATP turnover\n    is not increased\
+    \ repair.\n  nodes:\n  - node_id: k154a\n    label: K154A instead of wild-type\
+    \ HerA\n    node_type: PERTURBATION\n    grounding:\n    - UniProtKB:Q97WG8\n\
+    \  - node_id: r142a\n    label: R142A instead of wild-type HerA\n    node_type:\
+    \ PERTURBATION\n    grounding:\n    - UniProtKB:Q97WG8\n  - node_id: r381a\n \
+    \   label: R381A instead of wild-type HerA\n    node_type: PERTURBATION\n    grounding:\n\
+    \    - UniProtKB:Q97WG8\n  - node_id: k363a\n    label: K363A instead of wild-type\
+    \ HerA\n    node_type: PERTURBATION\n    grounding:\n    - UniProtKB:Q97WG8\n\
+    \  - node_id: d471a\n    label: D471A instead of wild-type HerA\n    node_type:\
+    \ PERTURBATION\n    grounding:\n    - UniProtKB:Q97WG8\n  - node_id: double\n\
+    \    label: R142A-R381A double substitution\n    node_type: PERTURBATION\n   \
+    \ grounding:\n    - UniProtKB:Q97WG8\n  - node_id: phosphate\n    label: Phosphate\
+    \ released per HerA monomer on5-prime-overhang DNA\n    node_type: PHENOTYPE\n\
+    \  edges:\n  - edge_id: k154a-atpase-loss\n    subject: k154a\n    predicate:\
+    \ decreases\n    object: phosphate\n    mechanism: Replacing the Walker-A lysine\
+    \ lowers phosphate release to an undetectable level in this\n      complex assay.\n\
+    \    directness: UNRESOLVED\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n\
+    \    evidence:\n    - reference: PMID:25420454\n      source_url: https://www.nature.com/articles/ncomms6506\n\
+    \      snippet: K154A\n      explanation: Figure4A K154A versus WT; supplement\
+    \ pp13-14 ATPase conditions.\n      cache_path: evidence/PF01935/rzechorzek-2014.txt\n\
+    \      cache_sha256: 177261d03cb53470db34e03f18c062c086ad016a2e9efd67d2552a46440fbfb1\n\
+    \  - edge_id: r142a-atpase-increase\n    subject: r142a\n    predicate: increases\n\
+    \    object: phosphate\n    mechanism: R142A raises phosphate release on the selected\
+    \ overhang substrate despite a proposed regulatory\n      rather than obligatory\
+    \ catalytic role.\n    directness: UNRESOLVED\n    support: OBSERVED\n    evidence_kind:\
+    \ EXPERIMENTAL\n    evidence:\n    - reference: PMID:25420454\n      source_url:\
+    \ https://www.nature.com/articles/ncomms6506\n      snippet: K154A\n      explanation:\
+    \ Figure4A R142A versus WT5-prime-overhang bars; not a claim that the static arginine\n\
+    \        contact directly caused the increase.\n      cache_path: evidence/PF01935/rzechorzek-2014.txt\n\
+    \      cache_sha256: 177261d03cb53470db34e03f18c062c086ad016a2e9efd67d2552a46440fbfb1\n\
+    \  - edge_id: r381a-atpase-reduction\n    subject: r381a\n    predicate: decreases\n\
+    \    object: phosphate\n    mechanism: R381A lowers phosphate release relative\
+    \ to wild type on this substrate, without assuming\n      complete loss on every\
+    \ DNA geometry.\n    directness: UNRESOLVED\n    support: OBSERVED\n    evidence_kind:\
+    \ EXPERIMENTAL\n    evidence:\n    - reference: PMID:25420454\n      source_url:\
+    \ https://www.nature.com/articles/ncomms6506\n      snippet: K154A\n      explanation:\
+    \ Figure4A R381A5-prime-overhang bars, with higher residual response to blunt\
+    \ DNA kept\n        outside this edge.\n      cache_path: evidence/PF01935/rzechorzek-2014.txt\n\
+    \      cache_sha256: 177261d03cb53470db34e03f18c062c086ad016a2e9efd67d2552a46440fbfb1\n\
+    \  - edge_id: k363a-atpase-increase\n    subject: k363a\n    predicate: increases\n\
+    \    object: phosphate\n    mechanism: K363A raises phosphate release while separately\
+    \ reducing DNA-processing readouts; a direct\n      coupling explanation is not\
+    \ established by this bar plot.\n    directness: UNRESOLVED\n    support: OBSERVED\n\
+    \    evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference: PMID:25420454\n\
+    \      source_url: https://www.nature.com/articles/ncomms6506\n      snippet:\
+    \ K154A\n      explanation: Figure4A K363A versus WT5-prime-overhang condition.\n\
+    \      cache_path: evidence/PF01935/rzechorzek-2014.txt\n      cache_sha256: 177261d03cb53470db34e03f18c062c086ad016a2e9efd67d2552a46440fbfb1\n\
+    \  - edge_id: d471a-atpase-increase\n    subject: d471a\n    predicate: increases\n\
+    \    object: phosphate\n    mechanism: The brace substitution increases phosphate\
+    \ release; this is not evidence for increased\n      translocation or nuclease\
+    \ processing.\n    directness: UNRESOLVED\n    support: OBSERVED\n    evidence_kind:\
+    \ EXPERIMENTAL\n    evidence:\n    - reference: PMID:25420454\n      source_url:\
+    \ https://www.nature.com/articles/ncomms6506\n      snippet: K154A\n      explanation:\
+    \ Figure4A D471A versus WT5-prime-overhang condition, distinguished from4B-D.\n\
+    \      cache_path: evidence/PF01935/rzechorzek-2014.txt\n      cache_sha256: 177261d03cb53470db34e03f18c062c086ad016a2e9efd67d2552a46440fbfb1\n\
+    \  - edge_id: double-atpase-loss\n    subject: double\n    predicate: decreases\n\
+    \    object: phosphate\n    mechanism: Joint replacement of R142 and R381 lowers\
+    \ release to undetectable levels; it does not isolate\n      the contribution\
+    \ of either residue alone.\n    directness: UNRESOLVED\n    support: OBSERVED\n\
+    \    evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference: PMID:25420454\n\
+    \      source_url: https://www.nature.com/articles/ncomms6506\n      snippet:\
+    \ K154A\n      explanation: Figure4A R142A/R381A double-mutant versus WT bars.\n\
+    \      cache_path: evidence/PF01935/rzechorzek-2014.txt\n      cache_sha256: 177261d03cb53470db34e03f18c062c086ad016a2e9efd67d2552a46440fbfb1\n\
+    - graph_id: sso2251-overhang-unwinding-2014\n  title: HerA variants reduce unwound\
+    \ oligonucleotide product\n  scope: Rzechorzek2014 Figure4C and supplement FigureS5;\
+    \ WT or variant full HerA with D58A NurA.\n  context: 54bp duplex with25nt5-prime\
+    \ tail,10nM DNA,30min60C,3mM ATP,magnesium-containing buffer. Caption0.46uM\n\
+    \    complex versus Methods0.5uM; boiled and no-protein controls; three repeats.\n\
+    \  family_mapping: Q97WG8v1,P2,500aa,PF01935 121-331. K154 inside; K363/R381 outside.\
+    \ Nuclease-disabled\n    partner retained, not HerA alone.\n  taxon: NCBITaxon:273057\n\
+    \  scope_status: PHENOTYPIC\n  limitations: Gel separation measures product, not\
+    \ a directly observed atomic movement or physiological\n    repair. K363A reduction\
+    \ is partial. D471A does not reduce this readout and must not be pooled with\n\
+    \    its triplex/destruction effects.\n  nodes:\n  - node_id: k154a\n    label:\
+    \ K154A HerA with D58A NurA\n    node_type: PERTURBATION\n    grounding:\n   \
+    \ - UniProtKB:Q97WG8\n  - node_id: r381a\n    label: R381A HerA with D58A NurA\n\
+    \    node_type: PERTURBATION\n    grounding:\n    - UniProtKB:Q97WG8\n  - node_id:\
+    \ k363a\n    label: K363A HerA with D58A NurA\n    node_type: PERTURBATION\n \
+    \   grounding:\n    - UniProtKB:Q97WG8\n  - node_id: product\n    label: Unwound\
+    \ labeled strand relative to WT complex\n    node_type: PHENOTYPE\n  edges:\n\
+    \  - edge_id: k154a-unwinding-reduction\n    subject: k154a\n    predicate: decreases\n\
+    \    object: product\n    mechanism: K154A strongly reduces the separated labeled\
+    \ strand relative to wild-type HerA with the\n      same partner.\n    directness:\
+    \ UNRESOLVED\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n\
+    \    - reference: PMID:25420454\n      source_url: https://www.nature.com/articles/ncomms6506\n\
+    \      snippet: K154A\n      explanation: Figure4C lane4 versus3 and quantified\
+    \ triplicates; S5 gels.\n      cache_path: evidence/PF01935/rzechorzek-2014.txt\n\
+    \      cache_sha256: 177261d03cb53470db34e03f18c062c086ad016a2e9efd67d2552a46440fbfb1\n\
+    \  - edge_id: r381a-unwinding-reduction\n    subject: r381a\n    predicate: decreases\n\
+    \    object: product\n    mechanism: R381A strongly reduces the unwound product\
+    \ under the same comparison, without asserting\n      loss of all possible motor\
+    \ activity.\n    directness: UNRESOLVED\n    support: OBSERVED\n    evidence_kind:\
+    \ EXPERIMENTAL\n    evidence:\n    - reference: PMID:25420454\n      source_url:\
+    \ https://www.nature.com/articles/ncomms6506\n      snippet: K154A\n      explanation:\
+    \ Figure4C lane6 versus3 and S5 replicates.\n      cache_path: evidence/PF01935/rzechorzek-2014.txt\n\
+    \      cache_sha256: 177261d03cb53470db34e03f18c062c086ad016a2e9efd67d2552a46440fbfb1\n\
+    \  - edge_id: k363a-unwinding-reduction\n    subject: k363a\n    predicate: decreases\n\
+    \    object: product\n    mechanism: K363A gives a partial reduction in unwound\
+    \ product relative to wild type, not complete\n      inhibition.\n    directness:\
+    \ UNRESOLVED\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n\
+    \    - reference: PMID:25420454\n      source_url: https://www.nature.com/articles/ncomms6506\n\
+    \      snippet: K154A\n      explanation: Figure4C lane7 versus3 and quantified\
+    \ panel; direction retained without an invented\n        significance estimate.\n\
+    \      cache_path: evidence/PF01935/rzechorzek-2014.txt\n      cache_sha256: 177261d03cb53470db34e03f18c062c086ad016a2e9efd67d2552a46440fbfb1\n\
+    - graph_id: sso2251-triplex-displacement-2014\n  title: Brace and Walker-A variants\
+    \ reduce triplex displacement\n  scope: Rzechorzek2014 Figure4D; full HerA variants\
+    \ with D58A NurA.\n  context: SwaI-linearized pLKS5 with22nt TFO,5nM triplex,3mM\
+    \ ATP,10mM MgCl2,MES pH5.5,spermidine; preassembly60C30min,assay50C.\n    Boiled\
+    \ and no-protein controls.\n  family_mapping: Q97WG8v1,500aa,PF01935 121-331.\
+    \ K154 in match; D471/G465 outside. G465STOP removes the\n    C-terminal segment\
+    \ of the full protein rather than the PF01935 domain.\n  taxon: NCBITaxon:273057\n\
+    \  scope_status: PHENOTYPIC\n  limitations: TFO displacement is a translocation\
+    \ proxy, not a measured step size or velocity. Methods7500bp\n    plasmid and\
+    \ cartoon approximately5kb duplex differ. Variant folding/assembly alternatives\
+    \ are not\n    fully isolated.\n  nodes:\n  - node_id: k154a\n    label: K154A\
+    \ substitution versus WT\n    node_type: PERTURBATION\n    grounding:\n    - UniProtKB:Q97WG8\n\
+    \  - node_id: d471a\n    label: D471A substitution versus WT\n    node_type: PERTURBATION\n\
+    \    grounding:\n    - UniProtKB:Q97WG8\n  - node_id: stop\n    label: G465STOP\
+    \ truncation versus WT\n    node_type: PERTURBATION\n    grounding:\n    - UniProtKB:Q97WG8\n\
+    \  - node_id: released\n    label: Released triplex-forming oligonucleotide\n\
+    \    node_type: PHENOTYPE\n  edges:\n  - edge_id: k154a-displacement-reduction\n\
+    \    subject: k154a\n    predicate: decreases\n    object: released\n    mechanism:\
+    \ K154A lowers TFO release in the complete partner-containing reaction.\n    directness:\
+    \ UNRESOLVED\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n\
+    \    - reference: PMID:25420454\n      source_url: https://www.nature.com/articles/ncomms6506\n\
+    \      snippet: K154A\n      explanation: Figure4D lane4 versus3; supplement p13\
+    \ assay conditions.\n      cache_path: evidence/PF01935/rzechorzek-2014.txt\n\
+    \      cache_sha256: 177261d03cb53470db34e03f18c062c086ad016a2e9efd67d2552a46440fbfb1\n\
+    \  - edge_id: d471a-displacement-reduction\n    subject: d471a\n    predicate:\
+    \ decreases\n    object: released\n    mechanism: D471A lowers TFO release even\
+    \ though it increases phosphate release in a different substrate\n      assay.\n\
+    \    directness: UNRESOLVED\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n\
+    \    evidence:\n    - reference: PMID:25420454\n      source_url: https://www.nature.com/articles/ncomms6506\n\
+    \      snippet: K154A\n      explanation: Figure4D lane5 versus3; no direct edge\
+    \ from the4A ATPase result is asserted.\n      cache_path: evidence/PF01935/rzechorzek-2014.txt\n\
+    \      cache_sha256: 177261d03cb53470db34e03f18c062c086ad016a2e9efd67d2552a46440fbfb1\n\
+    \  - edge_id: truncation-displacement-reduction\n    subject: stop\n    predicate:\
+    \ decreases\n    object: released\n    mechanism: Truncation at G465 lowers release\
+    \ relative to the full-length wild-type preparation.\n    directness: UNRESOLVED\n\
+    \    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n    -\
+    \ reference: PMID:25420454\n      source_url: https://www.nature.com/articles/ncomms6506\n\
+    \      snippet: K154A\n      explanation: Figure4D lane6 versus3; the truncation\
+    \ removes more than the D471 side chain.\n      cache_path: evidence/PF01935/rzechorzek-2014.txt\n\
+    \      cache_sha256: 177261d03cb53470db34e03f18c062c086ad016a2e9efd67d2552a46440fbfb1\n\
+    - graph_id: sso2251-nura-dna-destruction-2014\n  title: The HerA-NurA reaction\
+    \ degrades long duplex DNA\n  scope: Rzechorzek2014 Figure4B and S4; WT or variant\
+    \ HerA with active WT NurA.\n  context: 1.25nM5.3kb DNA,3mM ATP,5mM MnCl2,Tris\
+    \ pH8,NaCl,DTT,glycerol,BSA,60C0-40min. Figure reports2uM\n    complex; differing\
+    \ preassembly/dilution descriptions retained in ledger.\n  family_mapping: Full\
+    \ SSO2251/Q97WG8v1,P2 taxon273057,PF01935 121-331; only K154 among the plotted\
+    \ loss\n    variants is inside the current match. NurA supplies partner nuclease\
+    \ activity.\n  taxon: NCBITaxon:273057\n  scope_status: MECHANISTIC\n  limitations:\
+    \ Joint reconstitution does not establish HerA-intrinsic nuclease activity or\
+    \ isolated-domain\n    chemistry. Main Methods5.5kb conflicts with figure/supplement5.3kb.\
+    \ R381A delays processing but approaches\n    WT at40min; do not label it completely\
+    \ inactive.\n  nodes:\n  - node_id: complete\n    label: WT HerA plus WT NurA\
+    \ and ATP in complete buffer\n    node_type: ACTIVITY\n    grounding:\n    - UniProtKB:Q97WG8\n\
+    \  - node_id: intact\n    label: Intact5.3kb duplex substrate\n    node_type:\
+    \ STATE\n  - node_id: k154a\n    label: K154A HerA versus WT with active NurA\n\
+    \    node_type: PERTURBATION\n    grounding:\n    - UniProtKB:Q97WG8\n  - node_id:\
+    \ r381a\n    label: R381A HerA versus WT with active NurA\n    node_type: PERTURBATION\n\
+    \    grounding:\n    - UniProtKB:Q97WG8\n  - node_id: k363a\n    label: K363A\
+    \ HerA versus WT with active NurA\n    node_type: PERTURBATION\n    grounding:\n\
+    \    - UniProtKB:Q97WG8\n  - node_id: d471a\n    label: D471A HerA versus WT with\
+    \ active NurA\n    node_type: PERTURBATION\n    grounding:\n    - UniProtKB:Q97WG8\n\
+    \  - node_id: processed\n    label: Fraction of duplex substrate processed during\
+    \ early timecourse\n    node_type: PHENOTYPE\n  edges:\n  - edge_id: complete-dna-degradation\n\
+    \    subject: complete\n    predicate: degrades\n    object: intact\n    mechanism:\
+    \ The complete purified reaction removes intact duplex substrate over time and\
+    \ generates\n      shorter products; it is a joint protein-and-cofactor condition.\n\
+    \    directness: DIRECT\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n\
+    \    evidence:\n    - reference: PMID:25420454\n      source_url: https://www.nature.com/articles/ncomms6506\n\
+    \      snippet: K154A\n      explanation: Figure4B WT timecourse and S4 triplicates/controls;\
+    \ not the Figure9 mechanistic cartoon.\n      cache_path: evidence/PF01935/rzechorzek-2014.txt\n\
+    \      cache_sha256: 177261d03cb53470db34e03f18c062c086ad016a2e9efd67d2552a46440fbfb1\n\
+    \  - edge_id: k154a-processing-reduction\n    subject: k154a\n    predicate: decreases\n\
+    \    object: processed\n    mechanism: K154A leaves substantially more intact\
+    \ substrate than the WT partner-containing reaction.\n    directness: UNRESOLVED\n\
+    \    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n    -\
+    \ reference: PMID:25420454\n      source_url: https://www.nature.com/articles/ncomms6506\n\
+    \      snippet: K154A\n      explanation: Figure4B lanes6-10 versus1-5 and S4;\
+    \ measured substrate processing not a direct atomic\n        role.\n      cache_path:\
+    \ evidence/PF01935/rzechorzek-2014.txt\n      cache_sha256: 177261d03cb53470db34e03f18c062c086ad016a2e9efd67d2552a46440fbfb1\n\
+    \  - edge_id: r381a-processing-delay\n    subject: r381a\n    predicate: decreases\n\
+    \    object: processed\n    mechanism: R381A delays early substrate loss, particularly5-10min,\
+    \ although its40min extent approaches\n      WT.\n    directness: UNRESOLVED\n\
+    \    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n    -\
+    \ reference: PMID:25420454\n      source_url: https://www.nature.com/articles/ncomms6506\n\
+    \      snippet: K154A\n      explanation: Figure4B lanes16-20 and quantified timecourse;\
+    \ endpoint qualification checked visually.\n      cache_path: evidence/PF01935/rzechorzek-2014.txt\n\
+    \      cache_sha256: 177261d03cb53470db34e03f18c062c086ad016a2e9efd67d2552a46440fbfb1\n\
+    \  - edge_id: k363a-processing-reduction\n    subject: k363a\n    predicate: decreases\n\
+    \    object: processed\n    mechanism: K363A lowers duplex processing relative\
+    \ to WT despite increased ATP turnover in the separate4A\n      assay.\n    directness:\
+    \ UNRESOLVED\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n\
+    \    - reference: PMID:25420454\n      source_url: https://www.nature.com/articles/ncomms6506\n\
+    \      snippet: K154A\n      explanation: Figure4B lanes21-25 versus1-5 with S4\
+    \ replicates.\n      cache_path: evidence/PF01935/rzechorzek-2014.txt\n      cache_sha256:\
+    \ 177261d03cb53470db34e03f18c062c086ad016a2e9efd67d2552a46440fbfb1\n  - edge_id:\
+    \ d471a-processing-reduction\n    subject: d471a\n    predicate: decreases\n \
+    \   object: processed\n    mechanism: D471A lowers duplex processing relative\
+    \ to WT, consistent with impaired coordination but\n      not proof of the proposed\
+    \ brace-motion mechanism.\n    directness: UNRESOLVED\n    support: OBSERVED\n\
+    \    evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference: PMID:25420454\n\
+    \      source_url: https://www.nature.com/articles/ncomms6506\n      snippet:\
+    \ K154A\n      explanation: Figure4B lanes26-30 versus1-5; ATPase and short-duplex\
+    \ unwinding do not have the same\n        direction.\n      cache_path: evidence/PF01935/rzechorzek-2014.txt\n\
+    \      cache_sha256: 177261d03cb53470db34e03f18c062c086ad016a2e9efd67d2552a46440fbfb1\n\
+    - graph_id: sire0064-deletion-complementation-2015\n  title: WT and D176E plasmids\
+    \ permit herA-deletion recovery\n  scope: Huang2015 Figure2A-B; E233S pMID-herA-T\
+    \ genetic complementation and counterselection.\n  context: REY15A delta-pyrEF\
+    \ delta-lacS derivative,75C; pSSR plasmids,12uM simvastatin selection then5-FOA/uracil/simvastatin.\n\
+    \    Flanking PCR and plasmid sequencing distinguish deletion recovery from empty-vector\
+    \ marker escape.\n  family_mapping: SiRe_0064 reference F0NFK8v1,500aa,taxon930945,PF01935\
+    \ 121-331; D176 inside match. Whole-gene\n    plasmid expression, not isolated-domain\
+    \ rescue or WT-strain physiology.\n  taxon: NCBITaxon:930945\n  scope_status:\
+    \ PHENOTYPIC\n  limitations: Selected colony recovery is indirect and not a direct\
+    \ end-resection measurement. Other\n    five mutant transformants failed earlier\
+    \ in transformation, so no clean established-deletion comparison\n    is asserted\
+    \ for them. Protein dosage and dominant-negative alternatives remain open.\n \
+    \ nodes:\n  - node_id: wt\n    label: Supply WT herA on pSSR rather than empty\
+    \ vector\n    node_type: PERTURBATION\n    grounding:\n    - UniProtKB:F0NFK8\n\
+    \  - node_id: d176e\n    label: Supply D176E herA on pSSR rather than empty vector\n\
+    \    node_type: PERTURBATION\n    grounding:\n    - UniProtKB:F0NFK8\n  - node_id:\
+    \ recovery\n    label: Recovery of verified chromosomal herA-deletion cells\n\
+    \    node_type: PHENOTYPE\n  edges:\n  - edge_id: wt-deletion-recovery\n    subject:\
+    \ wt\n    predicate: enables\n    object: recovery\n    mechanism: Ectopic WT\
+    \ herA permits recovery of verified deletion cells under the tested counterselection\n\
+    \      scheme.\n    directness: INDIRECT\n    support: OBSERVED\n    evidence_kind:\
+    \ EXPERIMENTAL\n    evidence:\n    - reference: PMID:25880130\n      source_url:\
+    \ https://pmc.ncbi.nlm.nih.gov/articles/PMC4351679/\n      snippet: D176E\n  \
+    \    explanation: Figure2B deletion PCR band and plasmid sequence verification;\
+    \ empty-vector escape is\n        not successful deletion rescue.\n      cache_path:\
+    \ evidence/PF01935/huang-2015.txt\n      cache_sha256: b8366ed6c7b29e4239e9177e21e569acfd7d1483af3f569737dceaa80a3f861d\n\
+    \  - edge_id: d176e-deletion-recovery\n    subject: d176e\n    predicate: enables\n\
+    \    object: recovery\n    mechanism: The D176E allele also permits verified chromosomal\
+    \ deletion recovery despite reduced ATPase\n      activity in a separate purified\
+    \ assay.\n    directness: INDIRECT\n    support: OBSERVED\n    evidence_kind:\
+    \ EXPERIMENTAL\n    evidence:\n    - reference: PMID:25880130\n      source_url:\
+    \ https://pmc.ncbi.nlm.nih.gov/articles/PMC4351679/\n      snippet: D176E\n  \
+    \    explanation: Figure2A-B D176E complementation and sequencing; not a direct\
+    \ edge from the Figure5\n        product fraction to viability.\n      cache_path:\
+    \ evidence/PF01935/huang-2015.txt\n      cache_sha256: b8366ed6c7b29e4239e9177e21e569acfd7d1483af3f569737dceaa80a3f861d\n\
+    - graph_id: sire0064-overhang-exonuclease-2015\n  title: HerA variants change\
+    \ NurA-associated exonuclease products\n  scope: Huang2015 Figures4B-C and5A;\
+    \ full HerA D176E or E356D with WT NurA on34/84nt3-prime-overhang\n    DNA.\n\
+    \  context: 27.8nM HerA hexamer,83.4nM NurA dimer,1nM DNA,1mM ATP,10mM MgCl2,Tris\
+    \ pH8,NaCl,DTT,BSA,65C;30min\n    endpoint and0-30min timecourse. Native and denaturing\
+    \ gels; three repeats.\n  family_mapping: F0NFK8v1,500aa,PF01935 121-331,REY15A\
+    \ taxon930945. D176 inside and E356 outside match.\n    Partner NurA is not the\
+    \ PF01935 protein; excess partner concentration is not complex stoichiometry.\n\
+    \  taxon: NCBITaxon:930945\n  scope_status: PHENOTYPIC\n  limitations: No direct\
+    \ atomic catalytic effect is inferred from whole-protein substitutions. E356D\
+    \ retains\n    endonuclease-class activity. D176E increase is specific to the\
+    \ overhang comparison; blunt-DNA exonuclease\n    activity is approximatelyWT.\n\
+    \  nodes:\n  - node_id: d176e\n    label: D176E HerA with WT NurA versus WT pair\n\
+    \    node_type: PERTURBATION\n    grounding:\n    - UniProtKB:F0NFK8\n  - node_id:\
+    \ e356d\n    label: E356D HerA with WT NurA versus WT pair\n    node_type: PERTURBATION\n\
+    \    grounding:\n    - UniProtKB:F0NFK8\n  - node_id: product\n    label: Exonuclease-class\
+    \ products from3-prime-overhang DNA\n    node_type: PHENOTYPE\n  edges:\n  - edge_id:\
+    \ d176e-overhang-product-increase\n    subject: d176e\n    predicate: increases\n\
+    \    object: product\n    mechanism: D176E/NurA produces more exonuclease-class\
+    \ products than the WT pair under the selected\n      overhang assay.\n    directness:\
+    \ UNRESOLVED\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n\
+    \    - reference: PMID:25880130\n      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC4351679/\n\
+    \      snippet: D176E\n      explanation: Figure4C lanes6 versus4 and Figure5A\
+    \ product/timecourse; Figure5B blunt result separately\n        qualified.\n \
+    \     cache_path: evidence/PF01935/huang-2015.txt\n      cache_sha256: b8366ed6c7b29e4239e9177e21e569acfd7d1483af3f569737dceaa80a3f861d\n\
+    \  - edge_id: e356d-overhang-product-reduction\n    subject: e356d\n    predicate:\
+    \ decreases\n    object: product\n    mechanism: E356D/NurA yields fewer exonuclease-class\
+    \ products than WT without eliminating the separately\n      measured endonuclease\
+    \ products.\n    directness: UNRESOLVED\n    support: OBSERVED\n    evidence_kind:\
+    \ EXPERIMENTAL\n    evidence:\n    - reference: PMID:25880130\n      source_url:\
+    \ https://pmc.ncbi.nlm.nih.gov/articles/PMC4351679/\n      snippet: D176E\n  \
+    \    explanation: Figure4C lanes8 versus4 and Figure5A exonuclease curve, not\
+    \ its endonuclease curve.\n      cache_path: evidence/PF01935/huang-2015.txt\n\
+    \      cache_sha256: b8366ed6c7b29e4239e9177e21e569acfd7d1483af3f569737dceaa80a3f861d\n\
+    curation_events:\n- timestamp: '2026-10-12T04:29:16Z'\n  curator: Codex\n  action:\
+    \ CREATE\n  outcome: needs_followup\n  summary: Curate selected archaeal HerA\
+    \ causal assay contexts with explicit domain and partner boundaries\n  history_record:\
+    \ history/records/PF01935/2026-10-12T042916Z-codex-48cd65.yaml\n  event_index:\
+    \ 0\n  llm_assisted: true\n- timestamp: '2026-10-12T04:42:21Z'\n  curator: Codex\n\
+    \  action: REVIEW\n  outcome: needs_followup\n  summary: Retain partial HerA causal-graph\
+    \ scientific self-review with open member and assay followups\n  history_record:\
+    \ history/records/PF01935/2026-10-12T044221Z-codex-05713d.yaml\n  event_index:\
+    \ 0\n  llm_assisted: true\n- timestamp: '2026-10-18T02:54:46Z'\n  curator: Antigravity\n\
+    \  action: EDIT\n  outcome: changed\n  summary: Ground causal graph gene and protein\
+    \ nodes in PF01935 with verified UniProtKB accessions (UniProtKB:Q97WG8,\n   \
+    \ UniProtKB:F0NFK8)\n  history_record: history/records/PF01935/2026-10-18T025446Z-antigravity-628c81.yaml\n\
+    \  event_index: 0\n  llm_assisted: true\n- timestamp: '2026-10-21T07:32:29Z'\n\
+    \  curator: Antigravity\n  action: EDIT\n  outcome: changed\n  summary: Ground\
+    \ Sso2251 and Sire_0064 HerA perturbation nodes to verified UniProtKB accessions\n\
+    \  history_record: history/records/PF01935/2026-10-21T073229Z-antigravity-80657c.yaml\n\
+    \  event_index: 0\n  llm_assisted: true\n"
+  summary: Byte-exact projection retained at save for digest verification, not scientific
+    assessment.
+assessments:
+- assessment_id: member-identity
+  area: identity
+  topic: Protein, domain and experimental scope
+  outcome: supported
+  summary: Frozen DUF87/IPR002789/KNOWN_HISTORICAL_DUF identity and imported description
+    remain unchanged. Current Q97WG8v1 and F0NFK8v1 are500aa with PF01935 121-331
+    and PF09378 3-84. R142/K154/D176 are in the Pfam match, whereas E356/K363/R381/G465/D471
+    lie outside. Structural catalytic-domain labels do not enlarge the sequence match.
+    P2 functional variants are not the10-substitution crystallization construct. E233S
+    is a REY15A derivative with deletion/selection context, not unmodified strain
+    physiology.
+  target_ids:
+  - PF01935
+  evidence_ids:
+  - identity
+  - primary
+  - cellular-and-overhang-contexts
+  - source-coverage
+- assessment_id: causal-scope
+  area: graph
+  topic: Directed effects and limits
+  outcome: supported
+  summary: The native graph preserves each experimental comparison without joining
+    biochemical products to viability. D471A raises phosphate release and does not
+    lower the short-duplex unwinding result, while lowering triplex displacement and
+    destruction. R381A delays early long-DNA processing but approaches WT at40min.
+    K363A unwinding loss is partial. E233S WT/D176E rescue edges distinguish deletion
+    PCR from empty-vector marker escape; failed initial transformation of other variants
+    is not misrepresented as a clean deletion-rescue comparison. D176E overhang exonuclease
+    increase is not generalized to blunt DNA, and E356D retains endonuclease-class
+    activity.
+  target_ids:
+  - PF01935
+  evidence_ids:
+  - primary
+  - native
+  - cellular-and-overhang-contexts
+  - source-coverage
+- assessment_id: remaining-coverage
+  area: completeness
+  topic: Remaining family coverage
+  outcome: concern
+  summary: Other2004/2012 archaeal assays,2014 interface/doping/double-mutant and
+    assembly work,2015 alternative assays/supplements,2017 loading,Deinococcus and2024-2025
+    antiviral contexts remain open. PMID40010344 full text was located at the author
+    site but not inspected; EuropePMC500/PMC challenge is not evidence of no research.
+    DUF4297 is the partner, not DUF87. Reviewed UniProt8-entry sample is not all11479
+    frozen proteins.
+  target_ids:
+  - PF01935
+  evidence_ids:
+  - primary
+- assessment_id: cycle1-partner-grounding-verification
+  area: identity
+  topic: Cycle 1 causal-graph partner and substrate protein grounding
+  outcome: supported
+  summary: 'Stage 2 (PR #319) grounded Thermococcus kodakarensis DNA gyrase supercoiling
+    node dna-supercoiling to UniProtKB:Q5JDW7 in thermococcus-hera-gyrase-supercoiling,
+    preserving all Thermus thermophilus Hera helicase domain-boundary and RNA/DNA
+    assay graphs.'
+  target_ids:
+  - PF01935
+  evidence_ids:
+  - stage4-prior-review
+  - primary
+findings:
+- finding_id: additional-contexts
+  issue_key: pf01935-causal-context-coverage
+  category: completeness
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Extend accession-mapped bacterial, antiviral and archaeal contexts
+  description: Inspect the located antiviral full text and map its proteins/Pfam coordinates,
+    review bacterial experimental phenotypes separately from archaeal essentiality,
+    and extend omitted archaeal assays with exact constructs/cofactors. Inspect2015
+    supplements and retain2014 concentration/substrate/primer-label discrepancies.
+    Treat the proposed atomic coupling cycle as an inference until direct evidence
+    supports each step; preserve IN_PROGRESS and all current followups.
+  target_ids:
+  - PF01935
+  field_paths:
+  - causal_graphs
+  evidence_ids:
+  - primary
+  - identity
+  - cellular-and-overhang-contexts
+  - source-coverage
+  owner_paths:
+  - repository: CultureBotAI/DUFMech
+    path: curation/families/PF01935.yaml
+    role: Human-owned scientific overlay
+  previous_occurrences:
+  - repository: CultureBotAI/DUFMech
+    review_id: 20261012T044202Z-pf01935-hera-domain-boundaries-and-separated-assay-effects
+    finding_id: additional-contexts
+actions:
+- action_id: extend-contexts
+  description: Inspect the located antiviral full text and map its proteins/Pfam coordinates,
+    review bacterial experimental phenotypes separately from archaeal essentiality,
+    and extend omitted archaeal assays with exact constructs/cofactors. Inspect2015
+    supplements and retain2014 concentration/substrate/primer-label discrepancies.
+    Treat the proposed atomic coupling cycle as an inference until direct evidence
+    supports each step; preserve IN_PROGRESS and all current followups.
+  finding_ids:
+  - additional-contexts
+  target_ids:
+  - PF01935
+  ownership_note: Curate overlay and minimal evidence; append actual history, regenerate
+    and retain successor review.
+  acceptance_checks:
+  - Each added edge has member-specific primary evidence and explicit conditions.
+  - Unsupported transfers and conflicting or negative results remain visible.
+  - Native checks pass and a successor report states actual scope.
+limitations:
+- Visually inspected2014 Figure4A-D and supplementS4-S5,2015 Figures2/4/5. Primary2012,2014
+  and2015 text and2014 supplement methods were read;2015 supplements and2025 author
+  PDF not inspected. No raw-data reanalysis, clone resequencing, exhaustive member
+  coverage or experimental replication. Optional lxml/Pillow imports failed; stdlib
+  XML and an existing temporary PDF/Pillow tool environment completed the scoped inspections
+  without repository dependency changes.
+- Same-agent assessment, not independent expert review or experimental replication.
+- Partial family coverage; status remains IN_PROGRESS. No full-corpus completion,
+  publication or full publication-QC pass is claimed.
+notes:
+- Assessments were authored from inspected primary evidence. Native inspection supplied
+  provenance, not scientific conclusions.
