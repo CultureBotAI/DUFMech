@@ -1,0 +1,31 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01980
+  path: curation/families/PF01980.yaml
+session:
+  id: 2026-10-21T133501Z-antigravity-a13370
+  timestamp: '2026-10-21T13:35:01Z'
+  actors:
+  - type: ai_agent
+    name: Antigravity
+    model: Claude Opus 4.6
+    agent_tool: Antigravity
+events:
+- type: EDIT
+  outcome: changed
+  summary: Add NCBITaxon:83333 to ten Kimura 2014 E. coli TrmO causal graphs and ground
+    Thr3/Thr4 methylation readout nodes to UniProtKB:P28634
+  details: 'Resolved Stage 4 review finding pf01980-ecoli-trmo-graphs-missing-taxon-and-thr-variant-grounding
+    (Issue #337) in curation/families/PF01980.yaml by adding taxon: NCBITaxon:83333
+    (Escherichia coli K-12) to all ten Kimura et al. 2014 E. coli TrmO causal graphs
+    (ectrmo-native-trna-deletion-2014, ectrmo-complementation-2014, ectrmo-thr3-binding-2014,
+    ectrmo-thr3-methylation-2014, ectrmo-native-mixed-substrate-2014, ectrmo-residue-perturbations-2014,
+    ectrmo-thr3-identity-loss-2014, ectrmo-thr4-identity-gain-2014, ectrmo-thrl-reporter-wt-background-2014,
+    ectrmo-thrl-reporter-tcda-background-2014) and grounding the signal (STATE) node
+    in ectrmo-thr3-identity-loss-2014 and ectrmo-thr4-identity-gain-2014 to UniProtKB:P28634.'
+  sections:
+  - causal_graphs
+links:
+  issues:
+  - https://github.com/CultureBotAI/DUFMech/issues/337
