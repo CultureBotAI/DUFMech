@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01973
+  path: curation/families/PF01973.yaml
+session:
+  id: 2026-10-22T023500Z-antigravity-0d2518
+  timestamp: '2026-10-22T02:35:00Z'
+  actors:
+  - type: ai_agent
+    name: Antigravity
+    model: Claude Opus 4.6
+    agent_tool: Antigravity
+events:
+- type: EDIT
+  outcome: changed
+  summary: Add NCBITaxon:211586 to the 18 native Shewanella oneidensis MR-1 causal
+    graphs in PF01973
+  details: Added verified strain taxon NCBITaxon:211586 (pinned in evidence/PF01973/unay-2024-member-mapping.txt)
+    to the 18 native Shewanella oneidensis MR-1 causal graphs in PF01973 while preserving
+    omitted taxon on the 14 heterologous/interspecies BACTH, Caulobacter crescentus
+    NA1000, E. coli Ec100, S. putrefaciens CN-32, Kurthia sp. 11kri321, and Pseudomonas
+    sp. Irchel 3E13 graphs.
+  sections:
+  - causal_graphs
