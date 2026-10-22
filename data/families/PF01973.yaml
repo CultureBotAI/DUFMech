@@ -630,6 +630,7 @@ causal_graphs:
     differ in incubation schedule; see evidence ledger.
   family_mapping: Maf1 SO_3273/AAN56271.1 = UniProtKB:Q8EC71 sequence1, 822aa; PF01973 174-338. S6 synthetic
     Maf1 matches the reference; CTD constructs extend beyond or exclude that profile. See evidence/PF01973/unay-2024-member-mapping.txt.
+  taxon: NCBITaxon:211586
   scope_status: PHENOTYPIC
   limitations: Whole-gene effects do not identify the molecular transfer step. Site preference is not
     exclusivity; sheared signal is not a measured secretion rate.
@@ -736,6 +737,7 @@ causal_graphs:
   family_mapping: Maf2 SO_3259/AAN56257.1 = UniProtKB:Q8EC85 sequence1, 441aa; PF01973 182-352. Native
     genomic and synthetic expression lineages must be distinguished. S6 synthetic Maf2 encodes L230S relative
     to the reference; the physical plasmid sequence is unresolved. See evidence/PF01973/unay-2024-member-mapping.txt.
+  taxon: NCBITaxon:211586
   scope_status: PHENOTYPIC
   limitations: Do not generalize the FlaA S105-containing-peptide result to absolute loss at every FlaB
     site. Table1 retains a rare FlaB +538 match; native filament length is not assumed identical to WT.
@@ -799,6 +801,7 @@ causal_graphs:
     Maf2 SO_3259/AAN56257.1 = UniProtKB:Q8EC85 sequence1, 441aa; PF01973 182-352. Native genomic and synthetic
     expression lineages must be distinguished. S6 synthetic Maf2 encodes L230S relative to the reference;
     the physical plasmid sequence is unresolved. See evidence/PF01973/unay-2024-member-mapping.txt.
+  taxon: NCBITaxon:211586
   scope_status: PHENOTYPIC
   limitations: One rare modified FlaB peptide remains in Table1; do not call all glycosylation absolutely
     abolished. Filaments and spread are not direct catalytic readouts.
@@ -879,6 +882,7 @@ causal_graphs:
     0.5mM IPTG condition for motility comparison. Anti-HA controls show detectable variant protein.
   family_mapping: Maf1 SO_3273/AAN56271.1 = UniProtKB:Q8EC71 sequence1, 822aa; PF01973 174-338. S6 synthetic
     Maf1 matches the reference; CTD constructs extend beyond or exclude that profile. See evidence/PF01973/unay-2024-member-mapping.txt.
+  taxon: NCBITaxon:211586
   scope_status: PHENOTYPIC
   limitations: Plasmid rescue is conditional on the recipient and intact donor/acceptor machinery. It
     does not establish isolated PF01973 sufficiency or native expression-normalized catalysis.
@@ -939,6 +943,7 @@ causal_graphs:
   family_mapping: Maf2 SO_3259/AAN56257.1 = UniProtKB:Q8EC85 sequence1, 441aa; PF01973 182-352. Native
     genomic and synthetic expression lineages must be distinguished. S6 synthetic Maf2 encodes L230S relative
     to the reference; the physical plasmid sequence is unresolved. See evidence/PF01973/unay-2024-member-mapping.txt.
+  taxon: NCBITaxon:211586
   scope_status: PHENOTYPIC
   limitations: Synthetic-sequence L230S discrepancy is unresolved. The labeled WT construct in the figure
     is not certified sequence-identical to Q8EC85; rescue does not resolve atomic chemistry.
@@ -979,6 +984,7 @@ causal_graphs:
     0.5mM IPTG condition for motility comparison. Anti-HA controls show detectable variant protein.
   family_mapping: Maf1 SO_3273/AAN56271.1 = UniProtKB:Q8EC71 sequence1, 822aa; PF01973 174-338. S6 synthetic
     Maf1 matches the reference; CTD constructs extend beyond or exclude that profile. See evidence/PF01973/unay-2024-member-mapping.txt.
+  taxon: NCBITaxon:211586
   scope_status: PHENOTYPIC
   limitations: Detectable anti-HA signal excludes complete absence of the tagged product, not misfolding
     or altered localization. No acid/base, metal-binding or direct donor-contact role is established.
@@ -1040,6 +1046,7 @@ causal_graphs:
     0.5mM IPTG condition for motility comparison. Anti-HA controls show detectable variant protein.
   family_mapping: Maf1 SO_3273/AAN56271.1 = UniProtKB:Q8EC71 sequence1, 822aa; PF01973 174-338. S6 synthetic
     Maf1 matches the reference; CTD constructs extend beyond or exclude that profile. See evidence/PF01973/unay-2024-member-mapping.txt.
+  taxon: NCBITaxon:211586
   scope_status: PHENOTYPIC
   limitations: Detectable anti-HA signal excludes complete absence of the tagged product, not misfolding
     or altered localization. No acid/base, metal-binding or direct donor-contact role is established.
@@ -1102,6 +1109,7 @@ causal_graphs:
   family_mapping: Maf2 SO_3259/AAN56257.1 = UniProtKB:Q8EC85 sequence1, 441aa; PF01973 182-352. Native
     genomic and synthetic expression lineages must be distinguished. S6 synthetic Maf2 encodes L230S relative
     to the reference; the physical plasmid sequence is unresolved. See evidence/PF01973/unay-2024-member-mapping.txt.
+  taxon: NCBITaxon:211586
   scope_status: PHENOTYPIC
   limitations: Detectable anti-HA signal excludes complete absence of the tagged product, not misfolding
     or altered localization. No acid/base, metal-binding or direct donor-contact role is established.
@@ -1164,6 +1172,7 @@ causal_graphs:
   family_mapping: Maf2 SO_3259/AAN56257.1 = UniProtKB:Q8EC85 sequence1, 441aa; PF01973 182-352. Native
     genomic and synthetic expression lineages must be distinguished. S6 synthetic Maf2 encodes L230S relative
     to the reference; the physical plasmid sequence is unresolved. See evidence/PF01973/unay-2024-member-mapping.txt.
+  taxon: NCBITaxon:211586
   scope_status: PHENOTYPIC
   limitations: Detectable anti-HA signal excludes complete absence of the tagged product, not misfolding
     or altered localization. No acid/base, metal-binding or direct donor-contact role is established.
@@ -1225,6 +1234,7 @@ causal_graphs:
     0.5mM IPTG condition for motility comparison. Anti-HA controls show detectable variant protein.
   family_mapping: Maf1 SO_3273/AAN56271.1 = UniProtKB:Q8EC71 sequence1, 822aa; PF01973 174-338. S6 synthetic
     Maf1 matches the reference; CTD constructs extend beyond or exclude that profile. See evidence/PF01973/unay-2024-member-mapping.txt.
+  taxon: NCBITaxon:211586
   scope_status: PHENOTYPIC
   limitations: The truncation contains more than PF01973 and may change folding. Anti-HA shows production.
     Maf1(1-699) does not establish full rescue; BACTH experiments are represented separately.
@@ -1283,6 +1293,7 @@ causal_graphs:
     0.5mM IPTG condition for motility comparison. Anti-HA controls show detectable variant protein.
   family_mapping: Maf1 SO_3273/AAN56271.1 = UniProtKB:Q8EC71 sequence1, 822aa; PF01973 174-338. S6 synthetic
     Maf1 matches the reference; CTD constructs extend beyond or exclude that profile. See evidence/PF01973/unay-2024-member-mapping.txt.
+  taxon: NCBITaxon:211586
   scope_status: PHENOTYPIC
   limitations: The truncation contains more than PF01973 and may change folding. Anti-HA shows production.
     Maf1(1-699) does not establish full rescue; BACTH experiments are represented separately.
@@ -1492,6 +1503,7 @@ causal_graphs:
     genomic and synthetic expression lineages must be distinguished. S6 synthetic Maf2 encodes L230S relative
     to the reference; the physical plasmid sequence is unresolved. See evidence/PF01973/unay-2024-member-mapping.txt.
     GlfM Q8EC84/SO_3260 is PF26154, a separate partner.
+  taxon: NCBITaxon:211586
   scope_status: PHENOTYPIC
   limitations: The targeted gene is a partner, not PF01973. Genetic effects do not show direct Maf2 activation;
     FlaA peptide detection is not a universal occupancy result.
@@ -1553,6 +1565,7 @@ causal_graphs:
     genomic and synthetic expression lineages must be distinguished. S6 synthetic Maf2 encodes L230S relative
     to the reference; the physical plasmid sequence is unresolved. See evidence/PF01973/unay-2024-member-mapping.txt.
     Maf1 Q8EC71 is absent; GlfM is a distinct PF26154 partner.
+  taxon: NCBITaxon:211586
   scope_status: PHENOTYPIC
   limitations: A mobility shift is not an exact glycan structure or a molecular transfer measurement.
     This double background is not interchangeable with WT.
@@ -1597,6 +1610,7 @@ causal_graphs:
     genomic and synthetic expression lineages must be distinguished. S6 synthetic Maf2 encodes L230S relative
     to the reference; the physical plasmid sequence is unresolved. See evidence/PF01973/unay-2024-member-mapping.txt.
     Q8EC84/GlfM is the non-PF01973 partner; Q8EC71/Maf1 remains present only in the single-deletion host.
+  taxon: NCBITaxon:211586
   scope_status: PHENOTYPIC
   limitations: Rescue in delta-maf1 delta-glfM restores the delta-maf1 parental pattern, not WT-like complete
     modification. Donor pathway and Maf2 remain necessary context.
@@ -1669,6 +1683,7 @@ causal_graphs:
     genomic and synthetic expression lineages must be distinguished. S6 synthetic Maf2 encodes L230S relative
     to the reference; the physical plasmid sequence is unresolved. See evidence/PF01973/unay-2024-member-mapping.txt.
     GlfM Q8EC84 D77 is verified; it is not a residue in the PF01973 carrier.
+  taxon: NCBITaxon:211586
   scope_status: PHENOTYPIC
   limitations: The variant is detectable on anti-FLAG blots. Folding, localization and direct partner-contact
     chemistry are not resolved; the result is not proof that GlfM Asp77 is a catalytic residue.
@@ -1712,6 +1727,7 @@ causal_graphs:
     genomic and synthetic expression lineages must be distinguished. S6 synthetic Maf2 encodes L230S relative
     to the reference; the physical plasmid sequence is unresolved. See evidence/PF01973/unay-2024-member-mapping.txt.
     Partner Q8EC84 reference residues F24/R25/E80 verified; synthetic C-terminal SPOT-tag constructs pJU0033/0034/0036.
+  taxon: NCBITaxon:211586
   scope_status: PHENOTYPIC
   limitations: Positive rescue is condition-specific; residues are not declared universally dispensable.
     Figure4G shows two clones per variant, not quantified catalytic efficiencies.
@@ -2111,6 +2127,7 @@ causal_graphs:
     expression lineages must be distinguished. S6 synthetic Maf2 encodes L230S relative to the reference;
     the physical plasmid sequence is unresolved. See evidence/PF01973/unay-2024-member-mapping.txt. FlaA
     Q8ECA5 is the PF00669/PF00700 acceptor, not a PF01973 protein.
+  taxon: NCBITaxon:211586
   scope_status: PHENOTYPIC
   limitations: Gel mobility is not a site-resolved stoichiometry measurement. Multi-site changes cannot
     establish the effect of each individual substitution. The 143/171/185 pattern does not fully phenocopy
@@ -2245,6 +2262,7 @@ causal_graphs:
     expression lineages must be distinguished. S6 synthetic Maf2 encodes L230S relative to the reference;
     the physical plasmid sequence is unresolved. See evidence/PF01973/unay-2024-member-mapping.txt. PseI/PseC
     are donor-pathway proteins, not assigned to PF01973 by this graph.
+  taxon: NCBITaxon:211586
   scope_status: PHENOTYPIC
   limitations: Pathway dependence does not prove donor stereochemistry, direct Maf-substrate contacts
     or sufficient activity of either isolated Maf.
@@ -2781,5 +2799,13 @@ curation_events:
   summary: Ground causal graph gene and protein nodes in PF01973 with verified UniProtKB accessions (UniProtKB:Q8EC71,
     UniProtKB:Q8ECA5, UniProtKB:Q8ECA6, UniProtKB:Q8EC85, UniProtKB:Q8EC84)
   history_record: history/records/PF01973/2026-10-18T025446Z-antigravity-546c26.yaml
+  event_index: 0
+  llm_assisted: true
+- timestamp: '2026-10-22T02:35:00Z'
+  curator: Antigravity
+  action: EDIT
+  outcome: changed
+  summary: Add NCBITaxon:211586 to the 18 native Shewanella oneidensis MR-1 causal graphs in PF01973
+  history_record: history/records/PF01973/2026-10-22T023500Z-antigravity-0d2518.yaml
   event_index: 0
   llm_assisted: true
