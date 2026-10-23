@@ -1,0 +1,598 @@
+# PF01345 Cycle 2 Stage 4 frozen-inventory causal-graph and grounding review
+
+- Review: 20261023T092536Z-pf01345-c2s4-record-review
+- Repository: CultureBotAI/DUFMech
+- Started UTC: 2026-10-23T09:25:35Z
+- Finished UTC: 2026-10-23T09:25:36Z
+- Reviewer: Antigravity (self_review)
+- Completion: completed
+- Verdict: pass_with_limitations
+- Scientific review: true
+
+## Summary
+
+Three DIRECT OBSERVED purified-fragment effects retain lower thermal-transition temperature, reduced CD recovery and reduced intact-band survival for K715A. Table S6 confirms the single intended substitution, but encodes N748/D749 rather than the paper's proposed Asp748. Biochemical tag processing and native functions remain qualified. Partial scientific self-review; IN_PROGRESS. Stage 3 (PR #344) grounded the intact-clipper-band node in asilvestris-clipper-k715a-proteolysis to Aedes silvestris Clipper (UniProtKB:A0A1Y3CHT7).
+
+## Scope And Provenance
+
+Scientific assessment of the retained edges, exact member mapping, primary evidence, context and causal limits.
+
+Selection: PF01345 CLIPPER/former DUF11, next accession-ordered SEEDED family, assessed through Costa 2025 experiments, synthetic coding sequences and exact reference/deposited-fragment mapping; CaT2 is a separate scope-qualification lead.
+Coverage: partial; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base fde7d143a6b952fbc63b390cbfc27de38ac7701b.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| PF01345 | data/families/PF01345.yaml | generated | PF01345 |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Native projection and overlay validation | passed | True | PF01345 | Current projection validates and preserves the authored graph and discussion content exactly. |
+
+## Scientific And Domain Assessments
+
+### Protein, domain and experimental scope
+
+identity: supported. Targets: PF01345.
+
+A0A1Y3CHT7/B9T28_05395, sequence version 1, matches the InterPro sequence and maps the tested PF01345 repeat to 712-812. The construct is 708-828. Both Table S6 coding sequences translate to this segment, differing only at K715A; 9IFR polymer is GP plus the exact WT segment. Both synthetic/reference sequences encode N748/D749, conflicting with the Asp748 label. Main K517A labels are inconsistent with the sequence-verified intended mutation. Actual aliquot tag processing remains unresolved.
+
+### Directed effects and limits
+
+graph: supported. Targets: PF01345.
+
+Each edge describes a directly measured mutation effect in a purified-domain assay. Heating, cooling and proteolysis are separately contextualized; four CD scans are not four independent preparations. Gel endpoints remain qualitative. No exact melting constant, D748/D749 catalytic microstep, force-resistance mechanism, unique bond-mediated explanation or native aggregation chain is adopted. The sequence discrepancy does not change the verified K715 target.
+
+### Remaining family coverage
+
+completeness: concern. Targets: PF01345.
+
+Full experimental aliquot/tag records, thermal scan timing, independent-preparation uncertainty and raw biophysical data remain unverified. The reported crosslink structure is not a bond-formation trajectory, and the Asp748 numbering needs reconciliation. Other repeats, CLIPPER_2, full adhesins, native bacterial/archaeal functions and CaT2 mutant controls are outside this partial review.
+
+### Cycle 2 causal-graph protein-node grounding
+
+identity: supported. Targets: PF01345.
+
+Stage 3 (PR #344) grounded the intact-clipper-band node in asilvestris-clipper-k715a-proteolysis to Aedes silvestris Clipper (UniProtKB:A0A1Y3CHT7).
+
+## Findings
+
+### additional-contexts: Reconcile catalytic numbering and biochemical processing before extending native CLIPPER mechanisms
+
+minor / open / confirmed; issue key: pf01345-causal-context-coverage.
+
+Resolve the paper's Asp748 versus sequence N748/D749 discrepancy and K517A labels with primary construct records, establish the tag state of biochemical preparations, and obtain direct crosslink-specific or native-context interventions. Preserve the verified K715A fragment effects and inspect other repeats and organisms independently. Retain a successor review with actual scope rather than converting sequence conservation or aggregation association into observed causality.
+
+## Recommended Actions And Acceptance Checks
+
+### extend-contexts
+
+Resolve the paper's Asp748 versus sequence N748/D749 discrepancy and K517A labels with primary construct records, establish the tag state of biochemical preparations, and obtain direct crosslink-specific or native-context interventions. Preserve the verified K715A fragment effects and inspect other repeats and organisms independently. Retain a successor review with actual scope rather than converting sequence conservation or aggregation association into observed causality.
+
+- Each added edge has member-specific primary evidence and explicit conditions.
+- Unsupported transfers and conflicting or negative results remain visible.
+- Native checks pass and a successor report states actual scope.
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| primary | https://pmc.ncbi.nlm.nih.gov/articles/PMC12617251/; Results 2.3-2.4, Discussion, experimental Methods 4.7-4.11, Table 2 and supplemental Table S6; Figures 5/6/S8 visually inspected | supports | K715A and WT fragments initially exhibit folded-like CD spectra and similar SEC peaks. The mutant transitions at lower temperatures, recovers its initial CD spectrum less well after cooling and retains less intact-domain band after matched Proteinase K treatment. These purified-domain comparisons do not prove exclusive mediation by the isopeptide bond or native adhesion. |
+| identity | https://www.ebi.ac.uk/interpro/api/protein/uniprot/A0A1Y3CHT7/entry/pfam/PF01345/; Accession and domain locations; paired UniProt identity facts | supports | A0A1Y3CHT7/B9T28_05395, sequence version 1, matches the InterPro sequence and maps the tested PF01345 repeat to 712-812. The construct is 708-828. Both Table S6 coding sequences translate to this segment, differing only at K715A; 9IFR polymer is GP plus the exact WT segment. Both synthetic/reference sequences encode N748/D749, conflicting with the Asp748 label. Main K517A labels are inconsistent with the sequence-verified intended mutation. Actual aliquot tag processing remains unresolved. |
+| synthetic-constructs | https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12617251/supplementaryFiles; Supplemental Table S6 coding sequences and Figure S8 | supports | Both 363-nt coding sequences translate to 121-aa constructs with only K715A differing; both encode N748/D749. Similar SEC peaks and dominant domain bands support gross folding/purity controls, not identical atomic structures. |
+| deposited-fragment | https://files.rcsb.org/download/9IFR.cif; Polymer sequence and struct_ref_seq alignment; no raw-data re-refinement | supports | Deposited GP-plus-708-828 sequence matches the current reference exactly; polymer, author and full-length numbering remain distinguished. The crystal's remnant is not silently assigned to the biophysical aliquots. |
+| cat2-scope-lead | https://pmc.ncbi.nlm.nih.gov/articles/PMC6759345/; Selected MTCT_1020 domain-analysis Results and corresponding Discussion only | supports | Whole-protein aggregation is not an experimentally isolated DUF11-domain effect. Other regions and whole architecture are alternatives; complete CaT2 methods, controls and member mapping remain unreviewed. |
+| native | src/dufmech/records.py; Current projection validation and overlay equivalence in this retained-review session | supports | Closed schema, canonical history and applicable graph/evidence checks pass. Curated graphs and discussions match the overlay; scientific validity is assessed separately. |
+| stage4-prior-review | reviews/structured/20261011T105305Z-pf01345-clipper-stability-and-residue-numbering/review.yaml; Predecessor structured review 20261011T105305Z-pf01345-clipper-stability-and-residue-numbering | supports | Predecessor review 20261011T105305Z-pf01345-clipper-stability-and-residue-numbering verified and linked for finding continuity and semantic-digest progression on PF01345. |
+| duf-projection-pf01345 | data/families/PF01345.yaml; dufmech-reviewed-projection-v1 | context_only | Byte-exact projection retained at save for digest verification, not scientific assessment. |
+
+## Limits And Additional Notes
+
+- Figures 5/6/S8 were visually checked and Table S6 coding sequences translated. The displayed electron-density figure and deposited sequence were inspected, not raw diffraction refinement or raw spectra/gels. The initial supplemental download timed out; a later complete Europe PMC archive succeeded. PMC direct HTML and several direct supplement routes returned challenge/403 responses; Europe PMC XML and the complete supplement supplied the inspected primary material.
+- Same-agent assessment, not independent expert review or experimental replication.
+- Partial family coverage; status remains IN_PROGRESS. No full-corpus completion, publication or full publication-QC pass is claimed.
+- Assessments were authored from inspected primary evidence. Native inspection supplied provenance, not scientific conclusions.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261023T092536Z-pf01345-c2s4-record-review
+title: PF01345 Cycle 2 Stage 4 frozen-inventory causal-graph and grounding review
+started_at: '2026-10-23T09:25:35Z'
+finished_at: '2026-10-23T09:25:36Z'
+reviewer:
+  identity: Antigravity
+  kind: agent
+  model: Claude-Opus-4.6
+  independence: self_review
+  independence_basis: Cycle 2 Stage 4 frozen-inventory record review by Antigravity
+    auditing prior Codex/Antigravity curation overlays, primary evidence caches, history
+    events, and current projections at Git revision fde7d143a6b952fbc63b390cbfc27de38ac7701b.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: pass_with_limitations
+native_verdict: NEEDS_FOLLOWUP
+scientific_review: true
+summary: 'Three DIRECT OBSERVED purified-fragment effects retain lower thermal-transition
+  temperature, reduced CD recovery and reduced intact-band survival for K715A. Table
+  S6 confirms the single intended substitution, but encodes N748/D749 rather than
+  the paper''s proposed Asp748. Biochemical tag processing and native functions remain
+  qualified. Partial scientific self-review; IN_PROGRESS. Stage 3 (PR #344) grounded
+  the intact-clipper-band node in asilvestris-clipper-k715a-proteolysis to Aedes silvestris
+  Clipper (UniProtKB:A0A1Y3CHT7).'
+repository: CultureBotAI/DUFMech
+kind: record
+source:
+  git_revision: fde7d143a6b952fbc63b390cbfc27de38ac7701b
+  state: working_tree
+  snapshot_id: interpro-pfam-duf-2026-10-10
+  inputs:
+  - path: curation/families/PF01345.yaml
+    sha256: 2d6f19d5863f3f63a590dbfb48f9a0d6ef3655bf84c6931001dc7988dad72ff1
+    role: context
+  - path: data/families/PF01345.yaml
+    sha256: 6b48fee17d8d0005d760c5cb50781a30e8032a70bb9bd5f152c118ce0a4321e3
+    role: target
+  - path: data/worklists/interpro-pfam-duf-2026-10-10.json
+    sha256: 17fb625876c9326ed284263a47bcd84e0d7844a31c040dc06cd2260c36f1c383
+    role: context
+  - path: data/worklists/interpro-pfam-duf-2026-10-10.manifest.json
+    sha256: 31c07ffb6a169c851ea0e6e9dd527a10c04028eafeb29187bd62dc2ae848696e
+    role: context
+  - path: data/worklists/interpro-pfam-duf-2026-10-10.tsv
+    sha256: be023c8dd9d8d3864926b5032d6f7e87a884b1a567391696822dbbecc692dae7
+    role: context
+  - path: evidence/PF01345/CLIPPER-identity.txt
+    sha256: e00458f43a64ae0fc9c8183e42bdbd37309904318b116396ca62e602885d4683
+    role: context
+  - path: evidence/PF01345/cat2-2019-scope-lead.txt
+    sha256: fab8f8faedae5778deedc8dbd9ea714fd6e965c692bfee65967fe586899a0a9a
+    role: context
+  - path: evidence/PF01345/costa-2025-biophysics.txt
+    sha256: dc7d1bc0178d1ffe06307c4102f0ffc8dba496c530efa2d72e92ef98989c95d6
+    role: context
+  - path: reviews/structured/20261011T105305Z-pf01345-clipper-stability-and-residue-numbering/review.yaml
+    sha256: b4fb50bc3de71f2f72f5a75d9b8834eb8b97e8aa1ed893005621bb69b42ba953
+    role: context
+targets:
+- target_id: PF01345
+  path: data/families/PF01345.yaml
+  label: PF01345
+  kind: generated
+  record_class: FamilyRecord
+  owner_paths:
+  - repository: CultureBotAI/DUFMech
+    path: curation/families/PF01345.yaml
+    role: Maintained scientific overlay; create only with authorized curation.
+  - repository: CultureBotAI/DUFMech
+    path: src/dufmech/records.py
+    role: Projection generator; frozen snapshot identity is not hand-edited.
+  semantic_digest:
+    algorithm: dufmech-record-content-v1
+    sha256: 3a4660b4b2276f3d94e02a96678ecbf7cfb3428f9bf89afb17227d957f6a40e5
+    description: Canonical JSON SHA-256 of effective FamilyRecord excluding only curation_status,
+      review_id and curation_events.
+scope:
+  description: Scientific assessment of the retained edges, exact member mapping,
+    primary evidence, context and causal limits.
+  selection: PF01345 CLIPPER/former DUF11, next accession-ordered SEEDED family, assessed
+    through Costa 2025 experiments, synthetic coding sequences and exact reference/deposited-fragment
+    mapping; CaT2 is a separate scope-qualification lead.
+  coverage: partial
+  population_size: 1
+  reviewed_target_ids:
+  - PF01345
+  exclusions:
+  - target: Remaining family members and uncurated experimental contexts
+    reason: Full experimental aliquot/tag records, thermal scan timing, independent-preparation
+      uncertainty and raw biophysical data remain unverified. The reported crosslink
+      structure is not a bond-formation trajectory, and the Asp748 numbering needs
+      reconciliation. Other repeats, CLIPPER_2, full adhesins, native bacterial/archaeal
+      functions and CaT2 mutant controls are outside this partial review.
+checks:
+- check_id: native-projection
+  name: Native projection and overlay validation
+  command: validate_record(record, root); assert projection graphs and discussions
+    match overlay
+  status: passed
+  required: true
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Current projection validates and preserves the authored graph and discussion
+    content exactly.
+  target_ids:
+  - PF01345
+  evidence_ids:
+  - native
+evidence:
+- evidence_id: primary
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC12617251/
+  locator: Results 2.3-2.4, Discussion, experimental Methods 4.7-4.11, Table 2 and
+    supplemental Table S6; Figures 5/6/S8 visually inspected
+  accessed_at: '2026-10-11T10:53:05Z'
+  support: supports
+  snapshot_sha256: dc7d1bc0178d1ffe06307c4102f0ffc8dba496c530efa2d72e92ef98989c95d6
+  summary: K715A and WT fragments initially exhibit folded-like CD spectra and similar
+    SEC peaks. The mutant transitions at lower temperatures, recovers its initial
+    CD spectrum less well after cooling and retains less intact-domain band after
+    matched Proteinase K treatment. These purified-domain comparisons do not prove
+    exclusive mediation by the isopeptide bond or native adhesion.
+- evidence_id: identity
+  kind: database
+  reference: https://www.ebi.ac.uk/interpro/api/protein/uniprot/A0A1Y3CHT7/entry/pfam/PF01345/
+  locator: Accession and domain locations; paired UniProt identity facts
+  accessed_at: '2026-10-11T10:53:05Z'
+  support: supports
+  snapshot_sha256: e00458f43a64ae0fc9c8183e42bdbd37309904318b116396ca62e602885d4683
+  summary: A0A1Y3CHT7/B9T28_05395, sequence version 1, matches the InterPro sequence
+    and maps the tested PF01345 repeat to 712-812. The construct is 708-828. Both
+    Table S6 coding sequences translate to this segment, differing only at K715A;
+    9IFR polymer is GP plus the exact WT segment. Both synthetic/reference sequences
+    encode N748/D749, conflicting with the Asp748 label. Main K517A labels are inconsistent
+    with the sequence-verified intended mutation. Actual aliquot tag processing remains
+    unresolved.
+- evidence_id: synthetic-constructs
+  kind: primary_source
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12617251/supplementaryFiles
+  locator: Supplemental Table S6 coding sequences and Figure S8
+  summary: Both 363-nt coding sequences translate to 121-aa constructs with only K715A
+    differing; both encode N748/D749. Similar SEC peaks and dominant domain bands
+    support gross folding/purity controls, not identical atomic structures.
+  accessed_at: '2026-10-11T10:53:05Z'
+  support: supports
+  snapshot_sha256: e00458f43a64ae0fc9c8183e42bdbd37309904318b116396ca62e602885d4683
+- evidence_id: deposited-fragment
+  kind: database
+  reference: https://files.rcsb.org/download/9IFR.cif
+  locator: Polymer sequence and struct_ref_seq alignment; no raw-data re-refinement
+  summary: Deposited GP-plus-708-828 sequence matches the current reference exactly;
+    polymer, author and full-length numbering remain distinguished. The crystal's
+    remnant is not silently assigned to the biophysical aliquots.
+  accessed_at: '2026-10-11T10:53:05Z'
+  support: supports
+  snapshot_sha256: e00458f43a64ae0fc9c8183e42bdbd37309904318b116396ca62e602885d4683
+- evidence_id: cat2-scope-lead
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC6759345/
+  locator: Selected MTCT_1020 domain-analysis Results and corresponding Discussion
+    only
+  summary: Whole-protein aggregation is not an experimentally isolated DUF11-domain
+    effect. Other regions and whole architecture are alternatives; complete CaT2 methods,
+    controls and member mapping remain unreviewed.
+  accessed_at: '2026-10-11T10:53:05Z'
+  support: supports
+  snapshot_sha256: fab8f8faedae5778deedc8dbd9ea714fd6e965c692bfee65967fe586899a0a9a
+- evidence_id: native
+  kind: validation
+  reference: src/dufmech/records.py
+  locator: Current projection validation and overlay equivalence in this retained-review
+    session
+  accessed_at: '2026-10-11T10:53:05Z'
+  support: supports
+  summary: Closed schema, canonical history and applicable graph/evidence checks pass.
+    Curated graphs and discussions match the overlay; scientific validity is assessed
+    separately.
+- evidence_id: stage4-prior-review
+  kind: prior_review
+  reference: reviews/structured/20261011T105305Z-pf01345-clipper-stability-and-residue-numbering/review.yaml
+  locator: Predecessor structured review 20261011T105305Z-pf01345-clipper-stability-and-residue-numbering
+  accessed_at: '2026-10-23T09:25:36Z'
+  support: supports
+  snapshot_sha256: b4fb50bc3de71f2f72f5a75d9b8834eb8b97e8aa1ed893005621bb69b42ba953
+  summary: Predecessor review 20261011T105305Z-pf01345-clipper-stability-and-residue-numbering
+    verified and linked for finding continuity and semantic-digest progression on
+    PF01345.
+- evidence_id: duf-projection-pf01345
+  kind: record_content
+  reference: data/families/PF01345.yaml
+  locator: dufmech-reviewed-projection-v1
+  accessed_at: '2026-10-23T09:25:36Z'
+  support: context_only
+  snapshot_sha256: 6b48fee17d8d0005d760c5cb50781a30e8032a70bb9bd5f152c118ce0a4321e3
+  quote: "id: Pfam:PF01345\npfam_id: PF01345\nname: CLIPPER domain\nshort_name: CLIPPER\n\
+    seed_status: EX_DUF\ncharacterization_status: UNSCORED\ncuration_status: IN_PROGRESS\n\
+    source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01345\ncounters:\n\
+    \  proteins: 12543\n  matches: 33340\n  proteomes: 5220\n  taxa: 8073\n  structures:\
+    \ 1\n  alphafold_models: 5072\n  domain_architectures: 3336\nprovenance:\n  snapshot_id:\
+    \ interpro-pfam-duf-2026-10-10\n  path: data/worklists/interpro-pfam-duf-2026-10-10.json\n\
+    \  sha256: 17fb625876c9326ed284263a47bcd84e0d7844a31c040dc06cd2260c36f1c383\n\
+    \  generated_at: '2026-10-10T07:44:21.614711Z'\n  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/\n\
+    interpro_id: InterPro:IPR001434\ndescription: This entry, previously known as\
+    \ DUF11, represents the CLIPPER domain, (Cross-Linked IsoPeptide\n  Protein in\
+    \ the Extracellular Region) which is usually found in multiple copies in a number\
+    \ of archaebacterial\n  proteins. CLIPPER domain adopts an Ig-like fold and contains\
+    \ a conserved N-terminal lysine and a C-terminal\n  asparagine with central aspartate/glutamate\
+    \ residues that form an intramolecular isopeptide bond [[cite:PUB00163642]].\n\
+    \  The positions of the residues predicted to form isopeptide bonds are not universally\
+    \ conserved suggesting\n  that some domains appear to lack the intramolecular\
+    \ isopeptide bonds. CLIPPER domains are found in proteins\n  from Gram-positive\
+    \ and Gram-negative bacteria. Some have also been identified in multiple cell-surface\n\
+    \  proteins from archaea. In Methanothermobacter sp. CaT2, this domain plays a\
+    \ key role as a membrane-bound\n  adhesion protein in the aggregation of CaT2\
+    \ [[cite:PUB00097782]].\ncuration_history: history/records/PF01345\ndiscussions:\n\
+    - discussion_id: clipper-residue-labels-and-native-contexts\n  prompt: Reconcile\
+    \ residue labels and biochemical processing, and test transfer from a purified\
+    \ repeat\n    to native CLIPPER-bearing proteins.\n  kind: CURATION_TODO\n  status:\
+    \ OPEN\n  rationale: Table S6 and 9IFR resolve the intended fragment, but do not\
+    \ validate the proposed catalytic\n    Asp748 label or every biochemical aliquot.\
+    \ Three measured substitution effects do not establish native\n    adhesion, force\
+    \ response, bond-formation kinetics or a shared function across all repeats.\n\
+    \  evidence:\n  - reference: PMID:41236442\n    supports: PARTIAL\n    evidence_source:\
+    \ full_text_and_supplement\n    explanation: Figures 5/6/S8 were visually inspected\
+    \ and Table S6 coding sequences translated. K715A\n      is the only encoded protein\
+    \ change; N748/D749 conflicts with the proposed Asp748 label. Raw diffraction\n\
+    \      and biophysical data were not reanalyzed.\n  - reference: PMID:31189768\n\
+    \    supports: PARTIAL\n    evidence_source: selected_full_text\n    explanation:\
+    \ Selected CaT2 Results and Discussion distinguish whole MTCT_1020 aggregation\
+    \ from domain-specific\n      DUF11 causality. Other regions or full-protein architecture\
+    \ remain alternative explanations; no\n      archaeal edge is imported here.\n\
+    \  posed_by: Codex\n  posed_date: '2026-10-11'\n  notes: Obtain experimental clone/tag\
+    \ records and reconciled residue numbering; examine additional bacterial\n   \
+    \ and archaeal members with their own interventions. Comparative absence of aggregation\
+    \ is not a universal\n    negative. Partial scientific self-review; IN_PROGRESS.\n\
+    causal_graphs:\n- graph_id: asilvestris-clipper-k715a-thermal-unfolding\n  title:\
+    \ K715A lowers the CLIPPER fragment's thermal transition temperature\n  scope:\
+    \ Purified synthetic B9T28_05395 residues 708-828 from Acinetobacter silvestris\
+    \ ANC4999 in Costa\n    2025; a single repeat, not the full adhesin or all CLIPPER\
+    \ domains.\n  context: Compare WT with K715A by circular dichroism during heating\
+    \ from 5 to 95 C in 5-C increments.\n    Samples contain 0.36 mg/ml WT or 0.38\
+    \ mg/ml mutant in 10 mM sodium phosphate, 100 mM sodium fluoride,\n    pH 7.4;\
+    \ 300 ul in a 1-mm cuvette. Spectra span 180-280 nm and average four repeat scans.\
+    \ pOPINF/BL21(DE3)\n    constructs were purified by nickel affinity and SEC; tag\
+    \ removal is explicit for crystallography,\n    not unambiguously for these aliquots.\n\
+    \  family_mapping: UniProtKB:A0A1Y3CHT7, B9T28_05395, is 2129 aa, sequence version\
+    \ 1. Its sequence matches\n    InterPro; the tested PF01345 match is 712-812 within\
+    \ the 708-828 construct. Table S6 WT DNA translates\n    exactly to that 121-aa\
+    \ segment; mutant DNA differs only at K715A. Deposited 9IFR polymer is GP plus\n\
+    \    the same WT segment. Other repeats do not inherit the assay.\n  scope_status:\
+    \ MECHANISTIC\n  taxon: NCBITaxon:1977882\n  limitations: Both starting spectra\
+    \ resemble folded beta-sheet proteins, but the comparison does not\n    isolate\
+    \ a single atomic cause. The source reports a K715-N806 isopeptide bond; local\
+    \ mutation effects\n    and the C818/C821 disulfide are not separately excluded.\
+    \ Main text/Figure 5 say Asp748, whereas both\n    reference and synthetic sequences\
+    \ encode N748/D749. Methods also say K517A in places despite Table\n    S6 confirming\
+    \ K715A. No catalytic microstep, fitted thermodynamic melting constant, force\
+    \ resistance\n    or native adhesion is asserted.\n  nodes:\n  - node_id: clipper-k715a-heating\n\
+    \    label: K715A rather than WT in the 708-828 CLIPPER fragment during the heating\
+    \ assay\n    node_type: PERTURBATION\n    grounding:\n    - UniProtKB:A0A1Y3CHT7\n\
+    \  - node_id: clipper-cd-transition-temperature\n    label: Temperature of the\
+    \ unfolding-associated CD spectral transition\n    node_type: STATE\n  edges:\n\
+    \  - edge_id: k715a-lowers-cd-transition-temperature\n    subject: clipper-k715a-heating\n\
+    \    predicate: decreases\n    object: clipper-cd-transition-temperature\n   \
+    \ mechanism: The purified mutant undergoes the spectral transition at lower temperatures\
+    \ than WT in\n      Figure 6a/c. Initial folded-like spectra and similar SEC behavior\
+    \ support a domain-level substitution\n      effect, without establishing that\
+    \ loss of the isopeptide bond is its sole physical cause.\n    directness: DIRECT\n\
+    \    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n    -\
+    \ reference: PMID:41236442\n      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC12617251/\n\
+    \      snippet: comparable\n      explanation: Figure 6a/c, Results 2.4 and Methods\
+    \ 4.10 support the relative transition and initial\n        folding control. Four\
+    \ spectral scans do not establish four independent protein preparations.\n   \
+    \   cache_path: evidence/PF01345/costa-2025-biophysics.txt\n      cache_sha256:\
+    \ dc7d1bc0178d1ffe06307c4102f0ffc8dba496c530efa2d72e92ef98989c95d6\n    - reference:\
+    \ https://www.ebi.ac.uk/interpro/api/protein/uniprot/A0A1Y3CHT7/entry/pfam/PF01345/\n\
+    \      source_url: https://www.ebi.ac.uk/interpro/api/protein/uniprot/A0A1Y3CHT7/entry/pfam/PF01345/\n\
+    \      snippet: 'Pfam:PF01345; tested repeat interval: 712-812, inclusive.'\n\
+    \      explanation: Exact reference, synthetic coding-sequence and deposited polymer\
+    \ comparisons locate\n        the tested repeat; database mapping alone does not\
+    \ prove stability or adhesion.\n      cache_path: evidence/PF01345/CLIPPER-identity.txt\n\
+    \      cache_sha256: e00458f43a64ae0fc9c8183e42bdbd37309904318b116396ca62e602885d4683\n\
+    - graph_id: asilvestris-clipper-k715a-cooling-recovery\n  title: K715A reduces\
+    \ recovery of the initial CLIPPER CD spectrum after heating\n  scope: The same\
+    \ purified 708-828 A. silvestris construct comparison in Costa 2025, assessed\
+    \ during cooling\n    rather than as a cellular repair process.\n  context: After\
+    \ heating to 95 C, cool to 5 C in 5-C increments. CD uses 10 mM sodium phosphate,\
+    \ 100 mM\n    sodium fluoride, pH 7.4, with WT 0.36 mg/ml and K715A 0.38 mg/ml;\
+    \ four repeat scans per spectrum.\n    The 203-nm trace and full spectra are interpreted\
+    \ relative to each preparation's initial spectrum.\n  family_mapping: A0A1Y3CHT7\
+    \ reference residues 708-828 contain PF01345 712-812. Table S6 independently\n\
+    \    identifies K715A as the only protein change; the K517A Methods label is inconsistent\
+    \ with those sequences.\n    The crystal's GP remnant does not establish biochemical\
+    \ tag processing.\n  scope_status: MECHANISTIC\n  taxon: NCBITaxon:1977882\n \
+    \ limitations: The mutant's return toward the initial CD spectrum is incomplete,\
+    \ not an absence of every\n    structural recovery. No single-molecule refolding\
+    \ trajectory or exclusive crosslink mechanism follows\n    from these population\
+    \ spectra. Thermal dwell times, independent preparation uncertainty and raw traces\n\
+    \    remain unverified; the Asp748 versus N748/D749 discrepancy is not resolved\
+    \ by this assay.\n  nodes:\n  - node_id: clipper-k715a-cooling\n    label: K715A\
+    \ rather than WT during cooling after the 95-C excursion\n    node_type: PERTURBATION\n\
+    \    grounding:\n    - UniProtKB:A0A1Y3CHT7\n  - node_id: initial-spectrum-recovery\n\
+    \    label: Return toward the initial folded-like CD spectrum on cooling\n   \
+    \ node_type: STATE\n  edges:\n  - edge_id: k715a-reduces-cd-recovery\n    subject:\
+    \ clipper-k715a-cooling\n    predicate: decreases\n    object: initial-spectrum-recovery\n\
+    \    mechanism: Figure 6b/c shows less recovery toward the starting spectrum for\
+    \ the mutant than WT, including\n      failure to regain positive ellipticity\
+    \ near 203 nm. This is an observed purified-domain spectral\n      effect, not\
+    \ proof of a uniquely crosslink-driven microscopic refolding pathway.\n    directness:\
+    \ DIRECT\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n\
+    \    - reference: PMID:41236442\n      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC12617251/\n\
+    \      snippet: incomplete\n      explanation: Visually inspected cooling spectra\
+    \ and 203-nm traces support reduced recovery. Main\n        experimental Methods\
+    \ provide buffer, temperature range and averaging, but not independent-batch\n\
+    \        statistics.\n      cache_path: evidence/PF01345/costa-2025-biophysics.txt\n\
+    \      cache_sha256: dc7d1bc0178d1ffe06307c4102f0ffc8dba496c530efa2d72e92ef98989c95d6\n\
+    - graph_id: asilvestris-clipper-k715a-proteolysis\n  title: K715A lowers intact\
+    \ CLIPPER-domain survival during protease treatment\n  scope: Purified WT and\
+    \ K715A A. silvestris B9T28_05395 708-828 fragments in Costa 2025 Figure 6d; not\n\
+    \    native-cell aggregation or all proteases.\n  context: Mix 10 ul of 1 mg/ml\
+    \ domain preparation with 10 ul of 1 mg/ml Proteinase K in PBS, then incubate\n\
+    \    1 h at 20, 30, 40 or 50 C before SDS-PAGE. Calculated final concentrations\
+    \ are 0.5 mg/ml each. PBS\n    is 137 mM NaCl, 3 mM KCl, 10 mM Na2HPO4, 1.8 mM\
+    \ KH2PO4, pH 7.4. Compare matched-temperature mutant\n    and WT lanes; separate\
+    \ domain-only and protease-only lanes identify the bands.\n  family_mapping: Reference\
+    \ A0A1Y3CHT7 contains the tested PF01345 repeat at 712-812. The 708-828 synthetic\n\
+    \    sequences translate exactly to WT or its single K715A substitution. The full-length\
+    \ protein's other\n    repeats and the archaeal MTCT_1020 system are distinct\
+    \ targets.\n  scope_status: MECHANISTIC\n  taxon: NCBITaxon:1977882\n  limitations:\
+    \ The displayed gel is qualitative; no degradation-rate constant, independent\
+    \ replicate confidence\n    or complete digestion is assigned. Tag status of the\
+    \ biochemical aliquots remains ambiguous. A substitution\n    effect is compatible\
+    \ with crosslink stabilization but does not isolate it from local packing or other\n\
+    \    covalent features. No adhesion-to-proteolysis causal chain or universal family\
+    \ protection is inferred.\n  nodes:\n  - node_id: clipper-k715a-with-protease\n\
+    \    label: K715A rather than WT fragment in a matched Proteinase K treatment\n\
+    \    node_type: PERTURBATION\n    grounding:\n    - UniProtKB:A0A1Y3CHT7\n  -\
+    \ node_id: intact-clipper-band\n    label: Intact domain band remaining after\
+    \ protease treatment\n    node_type: STATE\n    grounding:\n    - UniProtKB:A0A1Y3CHT7\n\
+    \  edges:\n  - edge_id: k715a-decreases-intact-domain-band\n    subject: clipper-k715a-with-protease\n\
+    \    predicate: decreases\n    object: intact-clipper-band\n    mechanism: Figure\
+    \ 6d shows less intact mutant-domain band than WT after the matched protease incubations.\n\
+    \      The endpoint directly tests susceptibility of the purified fragment while\
+    \ leaving the exclusive\n      physical contribution of its isopeptide bond unresolved.\n\
+    \    directness: DIRECT\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n\
+    \    evidence:\n    - reference: PMID:41236442\n      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC12617251/\n\
+    \      snippet: proteolytic susceptibility\n      explanation: Figure 6d and Methods\
+    \ 4.11 support the direction and matched treatment conditions,\n        including\
+    \ mixing volumes. The image does not supply independently quantified rates.\n\
+    \      cache_path: evidence/PF01345/costa-2025-biophysics.txt\n      cache_sha256:\
+    \ dc7d1bc0178d1ffe06307c4102f0ffc8dba496c530efa2d72e92ef98989c95d6\ncuration_events:\n\
+    - timestamp: '2026-10-11T10:41:56Z'\n  curator: Codex\n  action: CREATE\n  outcome:\
+    \ changed\n  summary: Curate CLIPPER K715A thermal and proteolysis effects with\
+    \ sequence-qualified scope\n  history_record: history/records/PF01345/2026-10-11T104156Z-codex-3defc2.yaml\n\
+    \  event_index: 0\n  llm_assisted: true\n- timestamp: '2026-10-11T10:53:19Z'\n\
+    \  curator: Codex\n  action: REVIEW\n  outcome: needs_followup\n  summary: Retain\
+    \ partial CLIPPER scientific self-review with construct and numbering qualifications\n\
+    \  history_record: history/records/PF01345/2026-10-11T105319Z-codex-ffc7c3.yaml\n\
+    \  event_index: 0\n  llm_assisted: true\n- timestamp: '2026-10-23T07:48:02Z'\n\
+    \  curator: Antigravity\n  action: EDIT\n  outcome: changed\n  summary: Ground\
+    \ intact-clipper-band node in asilvestris-clipper-k715a-proteolysis to UniProtKB:A0A1Y3CHT7\n\
+    \  history_record: history/records/PF01345/2026-10-23T074802Z-antigravity-134503.yaml\n\
+    \  event_index: 0\n  llm_assisted: true\n"
+  summary: Byte-exact projection retained at save for digest verification, not scientific
+    assessment.
+assessments:
+- assessment_id: member-identity
+  area: identity
+  topic: Protein, domain and experimental scope
+  outcome: supported
+  summary: A0A1Y3CHT7/B9T28_05395, sequence version 1, matches the InterPro sequence
+    and maps the tested PF01345 repeat to 712-812. The construct is 708-828. Both
+    Table S6 coding sequences translate to this segment, differing only at K715A;
+    9IFR polymer is GP plus the exact WT segment. Both synthetic/reference sequences
+    encode N748/D749, conflicting with the Asp748 label. Main K517A labels are inconsistent
+    with the sequence-verified intended mutation. Actual aliquot tag processing remains
+    unresolved.
+  target_ids:
+  - PF01345
+  evidence_ids:
+  - identity
+  - primary
+  - synthetic-constructs
+  - deposited-fragment
+  - cat2-scope-lead
+- assessment_id: causal-scope
+  area: graph
+  topic: Directed effects and limits
+  outcome: supported
+  summary: Each edge describes a directly measured mutation effect in a purified-domain
+    assay. Heating, cooling and proteolysis are separately contextualized; four CD
+    scans are not four independent preparations. Gel endpoints remain qualitative.
+    No exact melting constant, D748/D749 catalytic microstep, force-resistance mechanism,
+    unique bond-mediated explanation or native aggregation chain is adopted. The sequence
+    discrepancy does not change the verified K715 target.
+  target_ids:
+  - PF01345
+  evidence_ids:
+  - primary
+  - native
+  - synthetic-constructs
+  - deposited-fragment
+  - cat2-scope-lead
+- assessment_id: remaining-coverage
+  area: completeness
+  topic: Remaining family coverage
+  outcome: concern
+  summary: Full experimental aliquot/tag records, thermal scan timing, independent-preparation
+    uncertainty and raw biophysical data remain unverified. The reported crosslink
+    structure is not a bond-formation trajectory, and the Asp748 numbering needs reconciliation.
+    Other repeats, CLIPPER_2, full adhesins, native bacterial/archaeal functions and
+    CaT2 mutant controls are outside this partial review.
+  target_ids:
+  - PF01345
+  evidence_ids:
+  - primary
+- assessment_id: cycle2-partner-grounding-verification
+  area: identity
+  topic: Cycle 2 causal-graph protein-node grounding
+  outcome: supported
+  summary: 'Stage 3 (PR #344) grounded the intact-clipper-band node in asilvestris-clipper-k715a-proteolysis
+    to Aedes silvestris Clipper (UniProtKB:A0A1Y3CHT7).'
+  target_ids:
+  - PF01345
+  evidence_ids:
+  - stage4-prior-review
+findings:
+- finding_id: additional-contexts
+  issue_key: pf01345-causal-context-coverage
+  category: completeness
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Reconcile catalytic numbering and biochemical processing before extending
+    native CLIPPER mechanisms
+  description: Resolve the paper's Asp748 versus sequence N748/D749 discrepancy and
+    K517A labels with primary construct records, establish the tag state of biochemical
+    preparations, and obtain direct crosslink-specific or native-context interventions.
+    Preserve the verified K715A fragment effects and inspect other repeats and organisms
+    independently. Retain a successor review with actual scope rather than converting
+    sequence conservation or aggregation association into observed causality.
+  target_ids:
+  - PF01345
+  field_paths:
+  - causal_graphs
+  evidence_ids:
+  - primary
+  - identity
+  - synthetic-constructs
+  - deposited-fragment
+  - cat2-scope-lead
+  owner_paths:
+  - repository: CultureBotAI/DUFMech
+    path: curation/families/PF01345.yaml
+    role: Human-owned scientific overlay
+  previous_occurrences:
+  - repository: CultureBotAI/DUFMech
+    review_id: 20261011T105305Z-pf01345-clipper-stability-and-residue-numbering
+    finding_id: additional-contexts
+actions:
+- action_id: extend-contexts
+  description: Resolve the paper's Asp748 versus sequence N748/D749 discrepancy and
+    K517A labels with primary construct records, establish the tag state of biochemical
+    preparations, and obtain direct crosslink-specific or native-context interventions.
+    Preserve the verified K715A fragment effects and inspect other repeats and organisms
+    independently. Retain a successor review with actual scope rather than converting
+    sequence conservation or aggregation association into observed causality.
+  finding_ids:
+  - additional-contexts
+  target_ids:
+  - PF01345
+  ownership_note: Curate overlay and minimal evidence; append actual history, regenerate
+    and retain successor review.
+  acceptance_checks:
+  - Each added edge has member-specific primary evidence and explicit conditions.
+  - Unsupported transfers and conflicting or negative results remain visible.
+  - Native checks pass and a successor report states actual scope.
+limitations:
+- Figures 5/6/S8 were visually checked and Table S6 coding sequences translated. The
+  displayed electron-density figure and deposited sequence were inspected, not raw
+  diffraction refinement or raw spectra/gels. The initial supplemental download timed
+  out; a later complete Europe PMC archive succeeded. PMC direct HTML and several
+  direct supplement routes returned challenge/403 responses; Europe PMC XML and the
+  complete supplement supplied the inspected primary material.
+- Same-agent assessment, not independent expert review or experimental replication.
+- Partial family coverage; status remains IN_PROGRESS. No full-corpus completion,
+  publication or full publication-QC pass is claimed.
+notes:
+- Assessments were authored from inspected primary evidence. Native inspection supplied
+  provenance, not scientific conclusions.
+```
