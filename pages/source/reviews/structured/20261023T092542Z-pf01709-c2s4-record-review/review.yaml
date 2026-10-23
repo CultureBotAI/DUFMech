@@ -1,0 +1,653 @@
+schema_version: 1.0.0
+review_id: 20261023T092542Z-pf01709-c2s4-record-review
+title: PF01709 Cycle 2 Stage 4 frozen-inventory causal-graph and grounding review
+started_at: '2026-10-23T09:25:41Z'
+finished_at: '2026-10-23T09:25:42Z'
+reviewer:
+  identity: Antigravity
+  kind: agent
+  model: Claude-Opus-4.6
+  independence: self_review
+  independence_basis: Cycle 2 Stage 4 frozen-inventory record review by Antigravity
+    auditing prior Codex/Antigravity curation overlays, primary evidence caches, history
+    events, and current projections at Git revision fde7d143a6b952fbc63b390cbfc27de38ac7701b.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: pass_with_limitations
+native_verdict: NEEDS_FOLLOWUP
+scientific_review: true
+summary: 'Five graphs retain fourteen observed effects, four direct biochemical preparation
+  effects and ten indirect genotype/profiling effects. Mouse probe B binding and grouped
+  mutations are separated from adult liver/heart pulse products, human KO/rescue COX1/COX3
+  pulses and normalized proline-window occupancies. Versioned protein identities and
+  current domain boundaries are verified, while clone, assay and transfer limits remain
+  explicit. Frozen source wording is preserved and qualified by the translation evidence;
+  status remains IN_PROGRESS. Stage 3 (PR #347) grounded Synechocystis sp. PCC 6803
+  RbcL (UniProtKB:P54205) in syn6803-rbcx-chaperone-assisted-rbcl-folding.'
+repository: CultureBotAI/DUFMech
+kind: record
+source:
+  git_revision: fde7d143a6b952fbc63b390cbfc27de38ac7701b
+  state: working_tree
+  snapshot_id: interpro-pfam-duf-2026-10-10
+  inputs:
+  - path: curation/families/PF01709.yaml
+    sha256: 03008c5a4f30bf608c5c2499fa7a2f143b945abf28817fe666771ee2b67b1e9f
+    role: context
+  - path: data/families/PF01709.yaml
+    sha256: 63d8d7aa24a5b4b6bbe30b6d73a0ff83581c378684391a8fddae645a94e7715c
+    role: target
+  - path: data/worklists/interpro-pfam-duf-2026-10-10.json
+    sha256: 17fb625876c9326ed284263a47bcd84e0d7844a31c040dc06cd2260c36f1c383
+    role: context
+  - path: data/worklists/interpro-pfam-duf-2026-10-10.manifest.json
+    sha256: 31c07ffb6a169c851ea0e6e9dd527a10c04028eafeb29187bd62dc2ae848696e
+    role: context
+  - path: data/worklists/interpro-pfam-duf-2026-10-10.tsv
+    sha256: be023c8dd9d8d3864926b5032d6f7e87a884b1a567391696822dbbecc692dae7
+    role: context
+  - path: evidence/PF01709/TACO1-identity.txt
+    sha256: a60e72632916b4d0938e349997639ecb471d0bd98627789f0f5b5a67f082b657
+    role: context
+  - path: evidence/PF01709/brischigliaro-2024-taco1.txt
+    sha256: 6c460a01ff99e93a44fe1d5ec1be9bccefd9057aa221480fca642e886d62c4ba
+    role: context
+  - path: evidence/PF01709/richman-2016-taco1.txt
+    sha256: bb24eb2f26a7eda8664721aa95858433f624b599b872721a0870c6421229c474
+    role: context
+  - path: evidence/PF01709/taco1-followup-ledger.txt
+    sha256: 7e24ad75a8252b5caf91db35b61c9f54e7ae0af055cdc1e7ff947912dbda5462
+    role: context
+  - path: reviews/structured/20261011T141903Z-pf01709-taco1-binding-and-translation-contexts/review.yaml
+    sha256: 72a0245c2302e14f31afb20ebfb3f64c95433411ab70e4c8ac930ce8e530c7e5
+    role: context
+targets:
+- target_id: PF01709
+  path: data/families/PF01709.yaml
+  label: PF01709
+  kind: generated
+  record_class: FamilyRecord
+  owner_paths:
+  - repository: CultureBotAI/DUFMech
+    path: curation/families/PF01709.yaml
+    role: Maintained scientific overlay; create only with authorized curation.
+  - repository: CultureBotAI/DUFMech
+    path: src/dufmech/records.py
+    role: Projection generator; frozen snapshot identity is not hand-edited.
+  semantic_digest:
+    algorithm: dufmech-record-content-v1
+    sha256: 03b9fdd9dd599d781aa1fb651ed8f442c3e65cb9a7a42954f778ae19b8d8979d
+    description: Canonical JSON SHA-256 of effective FamilyRecord excluding only curation_status,
+      review_id and curation_events.
+scope:
+  description: Scientific assessment of the retained edges, exact member mapping,
+    primary evidence, context and causal limits.
+  selection: Pending PF01709 within all8296 frozen families; selected mammalian assays
+    are a partial family assessment, not completion.
+  coverage: partial
+  population_size: 1
+  reviewed_target_ids:
+  - PF01709
+  exclusions:
+  - target: Remaining family members and uncurated experimental contexts
+    reason: Per-panel human rescue constructs and exact lesions, mouse mutant folding
+      and tag controls, pulse isotope/emetine/P-site-offset discrepancies, additional2024
+      motifs/bL27m experiments,2026 human structural/GTP-probe data and bacterial/plant
+      members remain open. The2026 supplement text was surveyed but its figures were
+      not visually inspected.2025 bacterial early text and2026 plant downloaded XML
+      are leads, not adopted edge evidence. Family-wide transcription or translation
+      specificity is not inferred.
+checks:
+- check_id: native-projection
+  name: Native projection and overlay validation
+  command: validate_record(record, root); assert projection graphs and discussions
+    match overlay
+  status: passed
+  required: true
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Current projection validates and preserves the authored graph and discussion
+    content exactly.
+  target_ids:
+  - PF01709
+  evidence_ids:
+  - native
+evidence:
+- evidence_id: primary
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC4915168/
+  locator: Richman2016 selected Results, Methods, Discussion and captions; visually
+    inspected Figures2/3/6, with publisher supplement text survey but not complete
+    visual review.
+  accessed_at: '2026-10-11T14:19:03Z'
+  support: supports
+  snapshot_sha256: bb24eb2f26a7eda8664721aa95858433f624b599b872721a0870c6421229c474
+  summary: Mature mouse His/GST-TACO1 aa27-294 forms an EMSA complex with mt-Co1 probeB;
+    three grouped substitutions lower binding. Adult homozygous I164N mitochondria
+    give reduced liver and heart COXI pulse products. Whole-protein, tag, domain-boundary,
+    folding and isotope-description limits are retained.
+- evidence_id: identity
+  kind: database
+  reference: https://www.ebi.ac.uk/interpro/api/protein/uniprot/Q8K0Z7/entry/pfam/PF01709/
+  locator: Accession and domain locations; paired UniProt identity facts
+  accessed_at: '2026-10-11T14:19:03Z'
+  support: supports
+  snapshot_sha256: a60e72632916b4d0938e349997639ecb471d0bd98627789f0f5b5a67f082b657
+  summary: Mouse Q8K0Z7 is294aa with PF01709 134-293; human Q9BSH4 is297aa with PF01709
+    136-296. Current InterPro sequences and versioned NP_081622.1/NP_057444.2 match
+    their UniProt references exactly. The mouse study explicitly names aa27-294 NP_081622.1,
+    and residue checks confirm two N-terminal mutant groups outside PF01709, the K162/Y163/K167
+    group and I164 inside. Neither complete historical clones nor exact human exon1
+    lesions are independently verified. Historical DUF28 nomenclature is not the current
+    whole-protein domain boundary.
+- evidence_id: human-translation-and-profiling
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC11381339/
+  locator: Brischigliaro2024 selected Methods/Results and visually inspected Figures1/2,
+    supplementS3 PDFp4 and TableS4 PDFp9; resource and motif tables read.
+  summary: Human TACO1 KO/rescue changes COX1/COX3 pulse products and normalized proline-window
+    footprint bins. Gene-wide effects, incomplete three-Pro restoration, contextual
+    nonstalling PP motifs and P-site-offset discrepancy remain visible. Neither direct
+    kinetic constants nor universal polyproline rescue is established.
+  accessed_at: '2026-10-11T14:19:03Z'
+  support: supports
+  snapshot_sha256: 6c460a01ff99e93a44fe1d5ec1be9bccefd9057aa221480fca642e886d62c4ba
+- evidence_id: newer-mechanism-followups
+  kind: primary_source
+  reference: https://www.nature.com/articles/s41467-026-69156-y
+  locator: Selected2026 human structural Results/nucleotide Methods and supplementS7
+    caption text only; companion bacterial/plant leads explicitly bounded in the ledger.
+  summary: Newer structural and fluorescent nucleotide-probe findings motivate further
+    assessment, not native GTPase, displacement or atomic elongation edges. Detailed
+    constructs, controls and visual inspection remain incomplete.
+  accessed_at: '2026-10-11T14:19:03Z'
+  support: supports
+  snapshot_sha256: 7e24ad75a8252b5caf91db35b61c9f54e7ae0af055cdc1e7ff947912dbda5462
+- evidence_id: native
+  kind: validation
+  reference: src/dufmech/records.py
+  locator: Current projection validation and overlay equivalence in this retained-review
+    session
+  accessed_at: '2026-10-11T14:19:03Z'
+  support: supports
+  summary: Closed schema, canonical history and applicable graph/evidence checks pass.
+    Curated graphs and discussions match the overlay; scientific validity is assessed
+    separately.
+- evidence_id: stage4-prior-review
+  kind: prior_review
+  reference: reviews/structured/20261011T141903Z-pf01709-taco1-binding-and-translation-contexts/review.yaml
+  locator: Predecessor structured review 20261011T141903Z-pf01709-taco1-binding-and-translation-contexts
+  accessed_at: '2026-10-23T09:25:42Z'
+  support: supports
+  snapshot_sha256: 72a0245c2302e14f31afb20ebfb3f64c95433411ab70e4c8ac930ce8e530c7e5
+  summary: Predecessor review 20261011T141903Z-pf01709-taco1-binding-and-translation-contexts
+    verified and linked for finding continuity and semantic-digest progression on
+    PF01709.
+- evidence_id: duf-projection-pf01709
+  kind: record_content
+  reference: data/families/PF01709.yaml
+  locator: dufmech-reviewed-projection-v1
+  accessed_at: '2026-10-23T09:25:42Z'
+  support: context_only
+  snapshot_sha256: 63d8d7aa24a5b4b6bbe30b6d73a0ff83581c378684391a8fddae645a94e7715c
+  quote: "id: Pfam:PF01709\npfam_id: PF01709\nname: TACO1/YebC second and third domain\n\
+    short_name: Transcrip_reg\nseed_status: EX_DUF\ncharacterization_status: UNSCORED\n\
+    curation_status: IN_PROGRESS\nsource_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01709\n\
+    counters:\n  proteins: 23092\n  matches: 23105\n  proteomes: 20420\n  taxa: 32390\n\
+    \  structures: 12\n  alphafold_models: 15841\n  domain_architectures: 67\nprovenance:\n\
+    \  snapshot_id: interpro-pfam-duf-2026-10-10\n  path: data/worklists/interpro-pfam-duf-2026-10-10.json\n\
+    \  sha256: 17fb625876c9326ed284263a47bcd84e0d7844a31c040dc06cd2260c36f1c383\n\
+    \  generated_at: '2026-10-10T07:44:21.614711Z'\n  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/\n\
+    interpro_id: InterPro:IPR048300\ndescription: This is a family of transcriptional\
+    \ regulators. In mammals, it activates the transcription\n  of mitochondrially-encoded\
+    \ COX1 [[cite:PUB00057436]]. In bacteria, it negatively regulates the quorum-sensing\n\
+    \  response regulator by binding to its promoter region [[cite:PUB00057437]].\
+    \ This entry represents the\n  second and third domains in this protein, with\
+    \ one domain nested within the other.\ncuration_history: history/records/PF01709\n\
+    discussions:\n- discussion_id: taco1-translation-not-transcription-and-domain-scope\n\
+    \  prompt: Correct the mammalian interpretation while preserving imported source\
+    \ identity and domain boundaries.\n  kind: CURATION_TODO\n  status: OPEN\n  rationale:\
+    \ The frozen description says mammalian TACO1 activates COX1 transcription. Inspected\
+    \ mouse\n    and human experiments concern translation; the2024 profiling evidence\
+    \ further qualifies older initiation\n    models. Current PF01709 covers the second/third\
+    \ domains, not all of mature TACO1 or historical DUF28.\n  evidence:\n  - reference:\
+    \ PMID:27319982\n    supports: PARTIAL\n    evidence_source: inspected_primary_methods_and_figures\n\
+    \    explanation: Mouse RNA-binding and I164N translation effects are supported,\
+    \ with two binding-mutation\n      groups outside PF01709 and one inside; no isolated-domain\
+    \ sufficiency.\n  - reference: PMID:39036954\n    supports: PARTIAL\n    evidence_source:\
+    \ inspected_primary_methods_figures_and_supplement\n    explanation: Human KO/rescue\
+    \ pulse products and proline-window occupancy support a translation role.\n  \
+    \    Occupancy is not a kinetic constant, and neither all PP motifs nor every\
+    \ family member has the same\n      effect.\n  notes: Keep the frozen description\
+    \ bytes unchanged. Resolve per-panel human rescue sequence/promoter/tag,\n   \
+    \ exact CRISPR lesions,2016 pulse isotope discrepancy and2024 emetine/P-site-offset\
+    \ details. Quantitative\n    RNA affinities, mutation-specific folding and isolated-domain\
+    \ tests remain open. Independent source\n    annotation correction belongs in\
+    \ a separate authorized source-update workflow.\n  posed_by: Codex\n  posed_date:\
+    \ '2026-10-11'\n- discussion_id: taco1-yebc-mechanism-and-member-coverage\n  prompt:\
+    \ Assess newer structural and bacterial/plant evidence before extending the mechanism.\n\
+    \  kind: CURATION_TODO\n  status: OPEN\n  rationale: Five graphs retain fourteen\
+    \ observed effects in selected mouse/human contexts, not complete\n    family\
+    \ coverage or a resolved atomic elongation pathway.\n  evidence:\n  - reference:\
+    \ PMID:41663403\n    supports: PARTIAL\n    evidence_source: selected_primary_text_and_supplement_caption_only\n\
+    \    explanation: The2026 human structural work and nucleotide-binding Methods\
+    \ motivate follow-up; its\n      figures, commercial construct and probe controls\
+    \ were not fully assessed, so no new molecular transition\n      or GTPase edge\
+    \ is adopted.\n  - reference: DOI:10.1038/s41467-025-60687-4\n    supports: PARTIAL\n\
+    \    evidence_source: primary_abstract_introduction_and_early_results_only\n \
+    \   explanation: Bacterial YebC translation is a member-specific research lead;\
+    \ exact mapping, perturbation\n      controls and figures remain to be assessed\
+    \ independently.\n  notes: Retained evidence/PF01709/taco1-followup-ledger.txt\
+    \ records inspected versus unassessed sources.\n    Inspect2024 bL27m interactions\
+    \ and other motifs,2026 human structures/GTP-probe evidence,2025 bacterial\n \
+    \   translation and2026 plant TACO1 before curation. Plant full XML was obtained\
+    \ but not substantively\n    assessed. Older PmpR/promoter and Borrelia vlsE claims\
+    \ are not disproved by mammalian translation\n    data. Keep IN_PROGRESS and partial\
+    \ scientific self-review; do not infer universal transcriptional\n    regulation,\
+    \ GTP hydrolysis, mtEF-Tu displacement kinetics or collision-induced cleavage.\n\
+    \  posed_by: Codex\n  posed_date: '2026-10-11'\ncausal_graphs:\n- graph_id: mouse-taco1-probeb-binding\n\
+    \  title: Mature mouse TACO1 preparation forms a complex with mt-Co1 probe B\n\
+    \  scope: Richman 2016 Figure3A, purified recombinant mouse TACO1 aa27-294, not\
+    \ an isolated PF01709 fragment\n    or a mitochondrial translation reaction.\n\
+    \  context: Joint protein and ATTO680-labelled mt-Co1 probe B, mouse mtDNA5446-5632;\
+    \ RNA100ng/ul, protein\n    equimolar through eightfold excess,30min room temperature,10mM\
+    \ HEPES pH8,1mM EDTA,50mM KCl,2mM DTT,0.1mg/ml\n    BSA,0.02% Tween20;10% PAGE\
+    \ in TAE.\n  family_mapping: NP_081622.1 exactly matches Q8K0Z7,294aa, with current\
+    \ PF01709 134-293. The aa27-294\n    His/GST fusion was expressed in E. coli ER2566\
+    \ and nickel/gel-filtration purified. Tag cleavage is\n    described for crystallization\
+    \ only, not this binding preparation.\n  scope_status: MECHANISTIC\n  taxon: NCBITaxon:10090\n\
+    \  limitations: DIRECT denotes the joint biochemical preparation-to-complex observation.\
+    \ No tag-only control,\n    absolute affinity or exclusive transcript specificity\
+    \ is established here. Whole mature TACO1 includes\n    an N-terminal domain outside\
+    \ PF01709; binding does not by itself prove translation activation.\n  nodes:\n\
+    \  - node_id: mouse-taco1-and-probeb\n    label: Joint mature TACO1 preparation\
+    \ and mt-Co1 probe B\n    node_type: ACTIVITY\n    grounding:\n    - UniProtKB:Q8K0Z7\n\
+    \  - node_id: probeb-complex\n    label: Retarded TACO1-associated probe B complex\n\
+    \    node_type: STATE\n    grounding:\n    - UniProtKB:Q8K0Z7\n  edges:\n  - edge_id:\
+    \ joint-preparation-produces-rna-complex\n    subject: mouse-taco1-and-probeb\n\
+    \    predicate: produces\n    object: probeb-complex\n    mechanism: Increasing\
+    \ protein in the supplied probe B reaction gives a retarded RNA-containing band\n\
+    \      relative to the no-protein lane. Control mt-Atp8/6 and mt-Co2 probes lack\
+    \ a comparable shift under\n      these conditions.\n    directness: DIRECT\n\
+    \    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n    -\
+    \ reference: PMID:27319982\n      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC4915168/\n\
+    \      snippet: RNA-protein complex\n      explanation: Visually inspected Figure3A\
+    \ and recombinant expression/RNA EMSA Methods establish the\n        preparation,\
+    \ probe B coordinates and complex formation; no isolated-domain function is inferred.\n\
+    \      cache_path: evidence/PF01709/richman-2016-taco1.txt\n      cache_sha256:\
+    \ bb24eb2f26a7eda8664721aa95858433f624b599b872721a0870c6421229c474\n- graph_id:\
+    \ mouse-taco1-grouped-binding-substitutions\n  title: Grouped mouse TACO1 substitutions\
+    \ reduce probe B binding\n  scope: Richman 2016 Figure6C compares three multi-residue\
+    \ constructs with WT mature aa27-294 mouse TACO1\n    in the same purified-protein\
+    \ EMSA.\n  context: His/GST fusion preparation, ATTO680 mt-Co1 probe B at100ng/ul,\
+    \ increasing equimolar-to-eightfold\n    protein,30min room temperature in HEPES\
+    \ pH8/KCl/EDTA/DTT/BSA/Tween20; matched WT and mutant lanes.\n  family_mapping:\
+    \ Verified Q8K0Z7/NP_081622.1 numbering places R74/S75/R76/S79/K80 and K112/N113/K116/S117\n\
+    \    outside current PF01709 134-293. K162/Y163/K167 are inside. All tests use\
+    \ the larger mature protein,\n    not an isolated domain.\n  scope_status: MECHANISTIC\n\
+    \  taxon: NCBITaxon:10090\n  limitations: Each grouped substitution is one perturbation,\
+    \ not proof that every individual residue\n    directly contacts RNA. DIRECT is\
+    \ the biochemical intervention-to-binding readout; folding, active\n    fraction\
+    \ and tag contributions remain unresolved. Gels are qualitative, without fitted\
+    \ affinities\n    or displayed replicate uncertainty.\n  nodes:\n  - node_id:\
+    \ nterminal-quintuple-alanine\n    label: R74A/S75A/R76A/S79A/K80A grouped substitution\n\
+    \    node_type: PERTURBATION\n    grounding:\n    - UniProtKB:Q8K0Z7\n  - node_id:\
+    \ nterminal-quadruple-alanine\n    label: K112A/N113A/K116A/S117A grouped substitution\n\
+    \    node_type: PERTURBATION\n    grounding:\n    - UniProtKB:Q8K0Z7\n  - node_id:\
+    \ domain-triple-alanine\n    label: K162A/Y163A/K167A grouped substitution\n \
+    \   node_type: PERTURBATION\n    grounding:\n    - UniProtKB:Q8K0Z7\n  - node_id:\
+    \ probeb-bound-fraction\n    label: Probe B bound fraction at the displayed protein\
+    \ concentrations\n    node_type: STATE\n  edges:\n  - edge_id: quintuple-substitution-decreases-binding\n\
+    \    subject: nterminal-quintuple-alanine\n    predicate: decreases\n    object:\
+    \ probeb-bound-fraction\n    mechanism: The quintuple preparation leaves substantially\
+    \ more free probe and less shifted RNA than\n      WT, supporting a group-level\
+    \ reduction without assigning individual residue contacts.\n    directness: DIRECT\n\
+    \    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n    -\
+    \ reference: PMID:27319982\n      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC4915168/\n\
+    \      snippet: mt-Co1 probe B\n      explanation: Figure6C WT versus quintuple\
+    \ EMSA, visually checked; verified residues74-80 are outside\n        current\
+    \ PF01709. The displayed probe label resolves the otherwise generic caption.\n\
+    \      cache_path: evidence/PF01709/richman-2016-taco1.txt\n      cache_sha256:\
+    \ bb24eb2f26a7eda8664721aa95858433f624b599b872721a0870c6421229c474\n  - edge_id:\
+    \ quadruple-substitution-decreases-binding\n    subject: nterminal-quadruple-alanine\n\
+    \    predicate: decreases\n    object: probeb-bound-fraction\n    mechanism: The\
+    \ quadruple preparation shows a smaller binding reduction than the quintuple construct\n\
+    \      relative to WT, with more free probe retained at the displayed concentrations;\
+    \ not a complete binding\n      loss.\n    directness: DIRECT\n    support: OBSERVED\n\
+    \    evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference: PMID:27319982\n\
+    \      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC4915168/\n      snippet:\
+    \ mt-Co1 probe B\n      explanation: Figure6C lower-left mutant gel versus WT\
+    \ and associated Results; residues112-117 are\n        outside current PF01709,\
+    \ and the multi-residue effect is not decomposed.\n      cache_path: evidence/PF01709/richman-2016-taco1.txt\n\
+    \      cache_sha256: bb24eb2f26a7eda8664721aa95858433f624b599b872721a0870c6421229c474\n\
+    \  - edge_id: triple-substitution-decreases-binding\n    subject: domain-triple-alanine\n\
+    \    predicate: decreases\n    object: probeb-bound-fraction\n    mechanism: The\
+    \ triple preparation retains more free probe than WT and shows reduced binding,\
+    \ without\n      establishing which residue accounts for the change or whether\
+    \ protein conformation contributes.\n    directness: DIRECT\n    support: OBSERVED\n\
+    \    evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference: PMID:27319982\n\
+    \      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC4915168/\n      snippet:\
+    \ mt-Co1 probe B\n      explanation: Visually inspected Figure6C lower-right gel\
+    \ and associated Results; K162/Y163/K167\n        fall within current PF01709\
+    \ in the whole mature construct.\n      cache_path: evidence/PF01709/richman-2016-taco1.txt\n\
+    \      cache_sha256: bb24eb2f26a7eda8664721aa95858433f624b599b872721a0870c6421229c474\n\
+    - graph_id: mouse-taco1-i164n-mitochondrial-pulse\n  title: Homozygous mouse Taco1\
+    \ I164N lowers mitochondrial COXI pulse labelling\n  scope: Richman 2016 Figure2D,\
+    \ adult male mice on a C57BL/6J background; liver and heart mitochondria\n   \
+    \ are separate measured preparations.\n  context: Homozygous ENU T491A/I164N,\
+    \ backcrossed8-10generations,30weeks, versus age/littermate-matched\n    WT. Methods\
+    \ specify500ug mitochondria,150uCi35S-methionine,60min37C;50ug protein per SDS-PAGE\
+    \ lane\n    and Coomassie loading check. Caption/Results mention methionine plus\
+    \ cysteine whereas Methods specify\n    methionine alone.\n  family_mapping: Mouse\
+    \ Q8K0Z7/NP_081622.1 is294aa; I164 is inside current PF01709 134-293. Whole-organism\n\
+    \    point mutation and mitochondrial assays do not isolate the domain. Sequence\
+    \ and Results specify Ile164\n    despite a Leu164 typo in Figure5's caption.\n\
+    \  scope_status: PHENOTYPIC\n  taxon: NCBITaxon:10090\n  limitations: INDIRECT\
+    \ genotype-to-pulse effects do not identify a catalytic reaction, protein half-life\n\
+    \    or exact translation step. Figure2D reports three biological experiments;\
+    \ no mouse genetic rescue\n    is adopted. Unchanged steady RNA abundance in Figure2B\
+    \ does not measure RNA stability kinetics.\n  nodes:\n  - node_id: homozygous-taco1-i164n\n\
+    \    label: Homozygous Taco1 I164N versus matched WT\n    node_type: PERTURBATION\n\
+    \    grounding:\n    - UniProtKB:Q8K0Z7\n  - node_id: liver-coxi-pulse\n    label:\
+    \ Newly labelled COXI in adult liver mitochondria\n    node_type: STATE\n  - node_id:\
+    \ heart-coxi-pulse\n    label: Newly labelled COXI in adult heart mitochondria\n\
+    \    node_type: STATE\n  edges:\n  - edge_id: i164n-decreases-liver-coxi-pulse\n\
+    \    subject: homozygous-taco1-i164n\n    predicate: decreases\n    object: liver-coxi-pulse\n\
+    \    mechanism: Mutant liver mitochondria give a weaker COXI pulse band than matched\
+    \ WT at equal loaded\n      mitochondrial protein, consistent with impaired net\
+    \ production during the pulse.\n    directness: INDIRECT\n    support: OBSERVED\n\
+    \    evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference: PMID:27319982\n\
+    \      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC4915168/\n      snippet:\
+    \ Protein synthesis\n      explanation: Visually inspected Figure2D liver lanes,\
+    \ loading panel, caption and mitochondrial pulse\n        Methods; isotope description\
+    \ discrepancy is preserved.\n      cache_path: evidence/PF01709/richman-2016-taco1.txt\n\
+    \      cache_sha256: bb24eb2f26a7eda8664721aa95858433f624b599b872721a0870c6421229c474\n\
+    \  - edge_id: i164n-decreases-heart-coxi-pulse\n    subject: homozygous-taco1-i164n\n\
+    \    predicate: decreases\n    object: heart-coxi-pulse\n    mechanism: Mutant\
+    \ heart mitochondria give a weaker COXI pulse band than matched WT at equal protein\n\
+    \      loading, without separately measuring initiation, elongation or nascent-chain\
+    \ decay rates.\n    directness: INDIRECT\n    support: OBSERVED\n    evidence_kind:\
+    \ EXPERIMENTAL\n    evidence:\n    - reference: PMID:27319982\n      source_url:\
+    \ https://pmc.ncbi.nlm.nih.gov/articles/PMC4915168/\n      snippet: Protein synthesis\n\
+    \      explanation: Figure2D adult-heart lanes and loading control, visually checked;\
+    \ do not substitute\n        the distinct young-heart supplemental experiment.\n\
+    \      cache_path: evidence/PF01709/richman-2016-taco1.txt\n      cache_sha256:\
+    \ bb24eb2f26a7eda8664721aa95858433f624b599b872721a0870c6421229c474\n- graph_id:\
+    \ human-taco1-knockout-rescue-pulse\n  title: Human TACO1 knockout and rescue\
+    \ alter COX1 and COX3 pulse products\n  scope: Brischigliaro 2024 Figure1C-D,\
+    \ HEK293T WT, TACO1 exon1 CRISPR knockout plus empty vector, and\n    TACO1-reconstituted\
+    \ knockout cells.\n  context: Cells grown at37C/5%CO2 in supplemented high-glucose\
+    \ DMEM;100uCi35S-methionine for30min after\n    methionine-free preincubation\
+    \ with emetine blocking cytosolic translation,17.5% SDS-PAGE/autoradiography,\n\
+    \    beta-actin-normalized quantification. Methods print100ul/ml emetine without\
+    \ stock strength; no mass\n    concentration is substituted.\n  family_mapping:\
+    \ Human reference Q9BSH4/NP_057444.2,297aa, has PF01709 136-296. CRISPR targets\
+    \ exon1\n    of the whole gene. OriGene ORF rescue is labelled TACO1, distinct\
+    \ from FLAG/OE conditions; complete\n    historical clone sequence, exact lesions\
+    \ and per-panel promoter/tag specification remain unverified.\n  scope_status:\
+    \ PHENOTYPIC\n  taxon: NCBITaxon:9606\n  limitations: Whole-cell INDIRECT effects,\
+    \ not isolated-domain translation activity or absolute rate\n    constants. Three\
+    \ biological replicates, mean/SD and two-way ANOVA/Dunnett are reported. Rescue\
+    \ supports\n    gene involvement but does not assign the exact elongation microstep.\
+    \ COX1 RNA is not reduced, and\n    extra pulse bands do not establish each termination\
+    \ position.\n  nodes:\n  - node_id: human-taco1-ko-versus-wt\n    label: TACO1\
+    \ knockout plus empty vector versus WT\n    node_type: PERTURBATION\n    grounding:\n\
+    \    - UniProtKB:Q9BSH4\n  - node_id: human-taco1-rescue-versus-ko\n    label:\
+    \ TACO1 reconstitution versus knockout plus empty vector\n    node_type: PERTURBATION\n\
+    \    grounding:\n    - UniProtKB:Q9BSH4\n  - node_id: human-full-cox1-pulse\n\
+    \    label: Full-length COX1 pulse-labelled product\n    node_type: STATE\n  -\
+    \ node_id: human-full-cox3-pulse\n    label: Full-length COX3 pulse-labelled product\n\
+    \    node_type: STATE\n  edges:\n  - edge_id: ko-decreases-cox1-pulse\n    subject:\
+    \ human-taco1-ko-versus-wt\n    predicate: decreases\n    object: human-full-cox1-pulse\n\
+    \    mechanism: The knockout reduces newly labelled full-length COX1 to roughly\
+    \ one tenth of WT in the\n      matched pulse assay, without proving that initiation\
+    \ is abolished.\n    directness: INDIRECT\n    support: OBSERVED\n    evidence_kind:\
+    \ EXPERIMENTAL\n    evidence:\n    - reference: PMID:39036954\n      source_url:\
+    \ https://pmc.ncbi.nlm.nih.gov/articles/PMC11381339/\n      snippet: newly synthesized\n\
+    \      explanation: Visually inspected Figure1C-D WT/KO lanes and COX1 quantification\
+    \ with beta-actin control;\n        Methods define the pulse and cell context.\n\
+    \      cache_path: evidence/PF01709/brischigliaro-2024-taco1.txt\n      cache_sha256:\
+    \ 6c460a01ff99e93a44fe1d5ec1be9bccefd9057aa221480fca642e886d62c4ba\n  - edge_id:\
+    \ ko-decreases-cox3-pulse\n    subject: human-taco1-ko-versus-wt\n    predicate:\
+    \ decreases\n    object: human-full-cox3-pulse\n    mechanism: The knockout gives\
+    \ a smaller but detectable reduction of the COX3 pulse product relative\n    \
+    \  to WT; other products are not automatically assigned the same effect.\n   \
+    \ directness: INDIRECT\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n\
+    \    evidence:\n    - reference: PMID:39036954\n      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC11381339/\n\
+    \      snippet: newly synthesized\n      explanation: Figure1C-D COX3 band and\
+    \ WT/KO quantification, visually inspected; gene-wide perturbation\n        rather\
+    \ than domain-specific loss.\n      cache_path: evidence/PF01709/brischigliaro-2024-taco1.txt\n\
+    \      cache_sha256: 6c460a01ff99e93a44fe1d5ec1be9bccefd9057aa221480fca642e886d62c4ba\n\
+    \  - edge_id: rescue-increases-cox1-pulse\n    subject: human-taco1-rescue-versus-ko\n\
+    \    predicate: increases\n    object: human-full-cox1-pulse\n    mechanism: Reconstituting\
+    \ TACO1 raises full-length COX1 pulse signal toward WT relative to the knockout\n\
+    \      empty-vector condition.\n    directness: INDIRECT\n    support: OBSERVED\n\
+    \    evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference: PMID:39036954\n\
+    \      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC11381339/\n      snippet:\
+    \ newly synthesized\n      explanation: Figure1C-D reconstituted-versus-empty-vector\
+    \ knockout COX1 comparison; preserve the\n        limited per-panel construct\
+    \ specification.\n      cache_path: evidence/PF01709/brischigliaro-2024-taco1.txt\n\
+    \      cache_sha256: 6c460a01ff99e93a44fe1d5ec1be9bccefd9057aa221480fca642e886d62c4ba\n\
+    \  - edge_id: rescue-increases-cox3-pulse\n    subject: human-taco1-rescue-versus-ko\n\
+    \    predicate: increases\n    object: human-full-cox3-pulse\n    mechanism: Reconstituting\
+    \ TACO1 restores the reduced COX3 pulse signal toward WT relative to the knockout\n\
+    \      empty-vector condition.\n    directness: INDIRECT\n    support: OBSERVED\n\
+    \    evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference: PMID:39036954\n\
+    \      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC11381339/\n      snippet:\
+    \ newly synthesized\n      explanation: Visually inspected Figure1C-D KO/rescue\
+    \ COX3 comparison and reported biological-replicate\n        statistics; no autonomous\
+    \ PF01709 sufficiency.\n      cache_path: evidence/PF01709/brischigliaro-2024-taco1.txt\n\
+    \      cache_sha256: 6c460a01ff99e93a44fe1d5ec1be9bccefd9057aa221480fca642e886d62c4ba\n\
+    - graph_id: human-taco1-proline-window-occupancy\n  title: Human TACO1 perturbations\
+    \ alter footprints in proline-rich windows\n  scope: Brischigliaro 2024 Figure2D,\
+    \ whole mitochondrial transcriptome profiling of HEK293T WT, TACO1\n    knockout\
+    \ and reconstituted cells; two-Pro and three-Pro bins are separate readouts.\n\
+    \  context: RNaseI footprints from55S monosomes,25-45nt retained reads aligned\
+    \ to mitochondrial transcripts;\n    codon counts normalized within transcript,\
+    \ sliding5-aa windows grouped by proline count, summed occupancies\n    then normalized\
+    \ to WT. Cells harvested at80%confluence. Reference Q9BSH4 contains PF01709 136-296.\n\
+    \  family_mapping: Whole human TACO1 exon1 knockout and ORF reconstitution, not\
+    \ a domain deletion. Q9BSH4/NP_057444.2\n    is the297-aa reference; historical\
+    \ clone sequence and precise per-panel rescue promoter/tag remain\n    unverified.\n\
+    \  scope_status: PHENOTYPIC\n  taxon: NCBITaxon:9606\n  limitations: INDIRECT\
+    \ effects on normalized footprint occupancy, not measured transit times or absolute\n\
+    \    ribosome numbers. Two prolines in five residues need not be adjacent. No\
+    \ displayed replicate dispersion\n    is claimed. The three-Pro rescue remains\
+    \ above WT. Methods15-18nt versus Results12nt P-site offsets\n    are unresolved;\
+    \ raw reads were not reprocessed. Some PP motifs do not stall and some non-Pro-rich\n\
+    \    sites do; no universal motif rule or collision-to-cleavage chain is asserted.\n\
+    \  nodes:\n  - node_id: profiling-taco1-ko\n    label: TACO1 knockout versus WT\
+    \ in profiling\n    node_type: PERTURBATION\n    grounding:\n    - UniProtKB:Q9BSH4\n\
+    \  - node_id: profiling-taco1-rescue\n    label: TACO1 reconstitution versus knockout\
+    \ in profiling\n    node_type: PERTURBATION\n    grounding:\n    - UniProtKB:Q9BSH4\n\
+    \  - node_id: two-pro-window-occupancy\n    label: Normalized occupancy in two-Pro\
+    \ five-residue windows\n    node_type: STATE\n  - node_id: three-pro-window-occupancy\n\
+    \    label: Normalized occupancy in three-Pro five-residue windows\n    node_type:\
+    \ STATE\n  edges:\n  - edge_id: ko-increases-two-pro-occupancy\n    subject: profiling-taco1-ko\n\
+    \    predicate: increases\n    object: two-pro-window-occupancy\n    mechanism:\
+    \ The two-Pro bin has elevated normalized ribosome occupancy in the knockout relative\
+    \ to\n      WT, consistent with increased pausing but not itself a measured elongation-rate\
+    \ constant.\n    directness: INDIRECT\n    support: OBSERVED\n    evidence_kind:\
+    \ EXPERIMENTAL\n    evidence:\n    - reference: PMID:39036954\n      source_url:\
+    \ https://pmc.ncbi.nlm.nih.gov/articles/PMC11381339/\n      snippet: Relative\
+    \ ribosome\n      explanation: Visually inspected Figure2D two-Pro bars and sliding-window\
+    \ Methods; TableS4 and FigureS3\n        constrain extrapolation to individual\
+    \ motifs.\n      cache_path: evidence/PF01709/brischigliaro-2024-taco1.txt\n \
+    \     cache_sha256: 6c460a01ff99e93a44fe1d5ec1be9bccefd9057aa221480fca642e886d62c4ba\n\
+    \  - edge_id: ko-increases-three-pro-occupancy\n    subject: profiling-taco1-ko\n\
+    \    predicate: increases\n    object: three-pro-window-occupancy\n    mechanism:\
+    \ The three-Pro bin is strongly elevated in knockout cells relative to WT in the\
+    \ normalized\n      footprint distribution, not an absolute count of stalled ribosomes.\n\
+    \    directness: INDIRECT\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n\
+    \    evidence:\n    - reference: PMID:39036954\n      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC11381339/\n\
+    \      snippet: Relative ribosome\n      explanation: Figure2D three-Pro KO/WT\
+    \ bars, visually inspected; Figure2C and supplementS3B provide\n        site-profile\
+    \ context without independent raw-data reproduction.\n      cache_path: evidence/PF01709/brischigliaro-2024-taco1.txt\n\
+    \      cache_sha256: 6c460a01ff99e93a44fe1d5ec1be9bccefd9057aa221480fca642e886d62c4ba\n\
+    \  - edge_id: rescue-decreases-two-pro-occupancy\n    subject: profiling-taco1-rescue\n\
+    \    predicate: decreases\n    object: two-pro-window-occupancy\n    mechanism:\
+    \ TACO1 reconstitution lowers the two-Pro occupancy bin toward WT compared with\
+    \ knockout\n      cells, retaining the same relative-normalization definition.\n\
+    \    directness: INDIRECT\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n\
+    \    evidence:\n    - reference: PMID:39036954\n      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC11381339/\n\
+    \      snippet: Relative ribosome\n      explanation: Figure2D rescue/KO two-Pro\
+    \ bars and profiling Methods; no conversion from occupancy\n        to a kinetic\
+    \ rate is made.\n      cache_path: evidence/PF01709/brischigliaro-2024-taco1.txt\n\
+    \      cache_sha256: 6c460a01ff99e93a44fe1d5ec1be9bccefd9057aa221480fca642e886d62c4ba\n\
+    \  - edge_id: rescue-decreases-three-pro-occupancy\n    subject: profiling-taco1-rescue\n\
+    \    predicate: decreases\n    object: three-pro-window-occupancy\n    mechanism:\
+    \ Reconstitution lowers the elevated three-Pro occupancy bin relative to knockout,\
+    \ but does\n      not restore the plotted value completely to WT.\n    directness:\
+    \ INDIRECT\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n\
+    \    - reference: PMID:39036954\n      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC11381339/\n\
+    \      snippet: Relative ribosome\n      explanation: Visually inspected Figure2D\
+    \ three-Pro rescue bar remains above the WT baseline; retain\n        incomplete\
+    \ restoration instead of an absolute stall-elimination claim.\n      cache_path:\
+    \ evidence/PF01709/brischigliaro-2024-taco1.txt\n      cache_sha256: 6c460a01ff99e93a44fe1d5ec1be9bccefd9057aa221480fca642e886d62c4ba\n\
+    curation_events:\n- timestamp: '2026-10-11T14:16:17Z'\n  curator: Codex\n  action:\
+    \ CREATE\n  outcome: changed\n  summary: Curate five TACO1 mouse and human causal\
+    \ contexts with fourteen observed effects.\n  history_record: history/records/PF01709/2026-10-11T141617Z-codex-a4b823.yaml\n\
+    \  event_index: 0\n  llm_assisted: true\n- timestamp: '2026-10-11T14:19:10Z'\n\
+    \  curator: Codex\n  action: REVIEW\n  outcome: needs_followup\n  summary: Retain\
+    \ partial TACO1 causal evidence self-review with follow-up requirements.\n  history_record:\
+    \ history/records/PF01709/2026-10-11T141910Z-codex-55ffa0.yaml\n  event_index:\
+    \ 0\n  llm_assisted: true\n- timestamp: '2026-10-18T02:54:46Z'\n  curator: Antigravity\n\
+    \  action: EDIT\n  outcome: changed\n  summary: Ground causal graph gene and protein\
+    \ nodes in PF01709 with verified UniProtKB accessions (UniProtKB:Q8K0Z7,\n   \
+    \ UniProtKB:Q9BSH4)\n  history_record: history/records/PF01709/2026-10-18T025446Z-antigravity-6ee97e.yaml\n\
+    \  event_index: 0\n  llm_assisted: true\n- timestamp: '2026-10-23T07:48:05Z'\n\
+    \  curator: Antigravity\n  action: EDIT\n  outcome: changed\n  summary: Ground\
+    \ probeb-complex node in mouse-taco1-probeb-binding to UniProtKB:Q8K0Z7\n  history_record:\
+    \ history/records/PF01709/2026-10-23T074805Z-antigravity-170903.yaml\n  event_index:\
+    \ 0\n  llm_assisted: true\n"
+  summary: Byte-exact projection retained at save for digest verification, not scientific
+    assessment.
+assessments:
+- assessment_id: member-identity
+  area: identity
+  topic: Protein, domain and experimental scope
+  outcome: supported
+  summary: Mouse Q8K0Z7 is294aa with PF01709 134-293; human Q9BSH4 is297aa with PF01709
+    136-296. Current InterPro sequences and versioned NP_081622.1/NP_057444.2 match
+    their UniProt references exactly. The mouse study explicitly names aa27-294 NP_081622.1,
+    and residue checks confirm two N-terminal mutant groups outside PF01709, the K162/Y163/K167
+    group and I164 inside. Neither complete historical clones nor exact human exon1
+    lesions are independently verified. Historical DUF28 nomenclature is not the current
+    whole-protein domain boundary.
+  target_ids:
+  - PF01709
+  evidence_ids:
+  - identity
+  - primary
+  - human-translation-and-profiling
+  - newer-mechanism-followups
+- assessment_id: causal-scope
+  area: graph
+  topic: Directed effects and limits
+  outcome: supported
+  summary: Four DIRECT observed edges are limited to recombinant preparation-to-complex
+    formation and group-level binding decreases, not individual atomic contacts or
+    isolated-domain sufficiency. Ten INDIRECT observed effects preserve separate mouse
+    liver/heart pulses, human KO/rescue COX1/COX3 products and human two-Pro/three-Pro
+    five-aa-window occupancies. The latter are normalized footprint bins, not absolute
+    rates, with incomplete three-Pro rescue and unaffected PP motifs retained. No
+    causal chain silently joins species, RNA-binding assays, initiation claims, collision
+    hypotheses or newer structural models. The mammalian frozen transcription wording
+    is explicitly qualified in the maintained discussion without changing the source
+    snapshot.
+  target_ids:
+  - PF01709
+  evidence_ids:
+  - primary
+  - native
+  - human-translation-and-profiling
+  - newer-mechanism-followups
+- assessment_id: remaining-coverage
+  area: completeness
+  topic: Remaining family coverage
+  outcome: concern
+  summary: Per-panel human rescue constructs and exact lesions, mouse mutant folding
+    and tag controls, pulse isotope/emetine/P-site-offset discrepancies, additional2024
+    motifs/bL27m experiments,2026 human structural/GTP-probe data and bacterial/plant
+    members remain open. The2026 supplement text was surveyed but its figures were
+    not visually inspected.2025 bacterial early text and2026 plant downloaded XML
+    are leads, not adopted edge evidence. Family-wide transcription or translation
+    specificity is not inferred.
+  target_ids:
+  - PF01709
+  evidence_ids:
+  - primary
+- assessment_id: cycle2-partner-grounding-verification
+  area: identity
+  topic: Cycle 2 causal-graph partner and substrate protein grounding
+  outcome: supported
+  summary: 'Stage 3 (PR #347) grounded Synechocystis sp. PCC 6803 RbcL (UniProtKB:P54205)
+    in syn6803-rbcx-chaperone-assisted-rbcl-folding.'
+  target_ids:
+  - PF01709
+  evidence_ids:
+  - stage4-prior-review
+findings:
+- finding_id: additional-contexts
+  issue_key: pf01709-causal-context-coverage
+  category: completeness
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Resolve construct and assay gaps and assess newer TACO1/YebC mechanisms
+  description: Verify historical protein and rescue constructs, exact human exon1
+    lesions and assay discrepancies without silently correcting printed methods. Assess
+    mutant folding and tag-only controls where available, and separately evaluate2024
+    remaining motifs/bL27m,2026 human structure/nucleotide evidence and2025 bacterial/2026
+    plant contexts with exact member mappings and inspected figures. Retain the distinction
+    between footprints and rates, structural contacts and causal transitions, and
+    whole protein versus PF01709. Preserve partial coverage in a successor review.
+  target_ids:
+  - PF01709
+  field_paths:
+  - causal_graphs
+  evidence_ids:
+  - primary
+  - identity
+  - human-translation-and-profiling
+  - newer-mechanism-followups
+  owner_paths:
+  - repository: CultureBotAI/DUFMech
+    path: curation/families/PF01709.yaml
+    role: Human-owned scientific overlay
+  previous_occurrences:
+  - repository: CultureBotAI/DUFMech
+    review_id: 20261011T141903Z-pf01709-taco1-binding-and-translation-contexts
+    finding_id: additional-contexts
+actions:
+- action_id: extend-contexts
+  description: Verify historical protein and rescue constructs, exact human exon1
+    lesions and assay discrepancies without silently correcting printed methods. Assess
+    mutant folding and tag-only controls where available, and separately evaluate2024
+    remaining motifs/bL27m,2026 human structure/nucleotide evidence and2025 bacterial/2026
+    plant contexts with exact member mappings and inspected figures. Retain the distinction
+    between footprints and rates, structural contacts and causal transitions, and
+    whole protein versus PF01709. Preserve partial coverage in a successor review.
+  finding_ids:
+  - additional-contexts
+  target_ids:
+  - PF01709
+  ownership_note: Curate overlay and minimal evidence; append actual history, regenerate
+    and retain successor review.
+  acceptance_checks:
+  - Each added edge has member-specific primary evidence and explicit conditions.
+  - Unsupported transfers and conflicting or negative results remain visible.
+  - Native checks pass and a successor report states actual scope.
+limitations:
+- Main Richman2016 Figures2/3/6 and Brischigliaro2024 Figures1/2 plus supplementS3/TableS4
+  were visually inspected. Other2016 supplements were text-surveyed, not fully visually
+  assessed.2024 separate interaction tables/SD1 and2026 figures were not analyzed.
+  PMC supplements returned HTML challenges; publisher versions succeeded. No raw profiling
+  reanalysis, clone resequencing, calibrated densitometry, independent experiments
+  or exhaustive family survey was performed.
+- Same-agent assessment, not independent expert review or experimental replication.
+- Partial family coverage; status remains IN_PROGRESS. No full-corpus completion,
+  publication or full publication-QC pass is claimed.
+notes:
+- Assessments were authored from inspected primary evidence. Native inspection supplied
+  provenance, not scientific conclusions.
