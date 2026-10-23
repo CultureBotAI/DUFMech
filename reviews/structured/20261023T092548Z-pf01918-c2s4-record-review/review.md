@@ -1,0 +1,1447 @@
+# PF01918 Cycle 2 Stage 4 frozen-inventory causal-graph and grounding review
+
+- Review: 20261023T092548Z-pf01918-c2s4-record-review
+- Repository: CultureBotAI/DUFMech
+- Started UTC: 2026-10-23T09:25:47Z
+- Finished UTC: 2026-10-23T09:25:48Z
+- Reviewer: Antigravity (self_review)
+- Completion: completed
+- Verdict: pass_with_limitations
+- Scientific review: true
+
+## Summary
+
+Sixteen scoped graphs retain53 OBSERVED effects:46 DIRECT biochemical/physical readouts and7 INDIRECT transcription/growth effects. Fourteen MECHANISTIC and two PHENOTYPIC graphs distinguish proteins, constructs, substrates and conditions. Native archaeal K16-acetylation counterevidence is retained separately from directly measured in-vitro Pat acetylation. Status stays IN_PROGRESS; same-agent scientific review is partial, not independent expert endorsement or family completion. This successor replaces the five DNA-binding display quotations with the actual Bell2002 Figure3 excerpt; graph directions and counts are unchanged. Prior review reviews/structured/20261012T011947Z-pf01918-alba-dna-rna-and-nuclease-assay-contexts/review.yaml and its digest4f351def61ebe6a038c11381f47d61d8b24efeb25578bb8e428d02d163df092d remain intact. Stage 2 (PR #343) grounded Methanocaldococcus jannaschii EF-1alpha (UniProtKB:Q58635) in mj0062-ef1a-gtp-dependence-2011 and Saccharomyces cerevisiae eEF1A/Tef1 (UniProtKB:P02994) in tvg150-diphthamide-requirement-2011.
+
+## Scope And Provenance
+
+Scientific assessment of the retained edges, exact member mapping, primary evidence, context and causal limits.
+
+Selection: Ascending remaining frozen Pfam accession; former DUF78 PF01918 selected after PF01914. All 8296 families remain in the corpus-wide goal.
+Coverage: partial; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base fde7d143a6b952fbc63b390cbfc27de38ac7701b.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| PF01918 | data/families/PF01918.yaml | generated | PF01918 |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Native projection and overlay validation | passed | True | PF01918 | Current projection validates and preserves the authored graph and discussion content exactly. |
+
+## Scientific And Domain Assessments
+
+### Protein, domain and experimental scope
+
+identity: supported. Targets: PF01918.
+
+Frozen PF01918/Alba/IPR002775 and former DUF78 mapping are preserved. P60849v2 and F0NHH1v1 map10-72 but represent different organisms; Q97ZF4v1 maps6-69, human Q9BUL9v1 maps37-100 and parasite Q8IJX8v1 maps14-83. Human Rpp20 O75817 belongs to PF12328, not PF01918. Reference residues and the PfAlba3 7-29 peptide match inspected sequences; historical clones and AAK41236 alternative initiation are not silently equated with current references.
+
+### Directed effects and limits
+
+graph: supported. Targets: PF01918.
+
+Every edge has a resolved endpoint, directional predicate, assay-specific mechanism, minimal verified quotation and hash-anchored evidence. DNA binding, architecture and stiffness are separate from transcription; Sis10b biochemical effects are not joined to growth as an observed pathway. Rpp25 complex/P3 assembly does not assert RNA cleavage. PfAlba3 single-mutant plasmid effects are distinct from double-mutant SPR/THF assays and from peptide deacetylation. The immunoblot effect is a measured signal decrease, not direct product chemistry or observed nuclease rescue. Cross-panel WT plasmid comparison, residual activity, mixed acetylation sites, tags and printed-unit discrepancies are stated. Rechecked all five new quotations against the Figure3 source and preserved the earlier transcript-specific quotation only for transcription edges.
+
+### Remaining family coverage
+
+completeness: concern. Targets: PF01918.
+
+Coverage is limited to the explicitly inspected experiments, not all8285 frozen proteins or all49 current reviewed UniProt entries. Cao2018 is primary-abstract counterevidence with inaccessible full text. Additional archaeal topology/RNA, eukaryotic Pop6/plant/parasite contexts, cross-species nuclease constructs, author-core boundaries, historical tags/clones and Goyal2012 supplementary transcription/MS remain open.
+
+### Cycle 2 causal-graph partner and substrate protein grounding
+
+identity: supported. Targets: PF01918.
+
+Stage 2 (PR #343) grounded Methanocaldococcus jannaschii EF-1alpha (UniProtKB:Q58635) in mj0062-ef1a-gtp-dependence-2011 and Saccharomyces cerevisiae eEF1A/Tef1 (UniProtKB:P02994) in tvg150-diphthamide-requirement-2011.
+
+## Findings
+
+### additional-contexts: Resolve native PTM and construct gaps, then extend Alba-family contexts
+
+minor / open / confirmed; issue key: pf01918-causal-context-coverage.
+
+Inspect Cao2018 full PTM spectra/conditions; resolve Banerjee NAD and U28 notation, historical AAK41236 start and exact core/cross-species constructs. Curate remaining experimentally mapped members and Goyal2012 supplementary contexts with native versus in-vitro and peptide versus whole-protein boundaries. Do not infer family-wide DNA/RNA function, native BER, drug targeting or a conserved acetylation switch from this partial pass.
+
+## Recommended Actions And Acceptance Checks
+
+### extend-contexts
+
+Inspect Cao2018 full PTM spectra/conditions; resolve Banerjee NAD and U28 notation, historical AAK41236 start and exact core/cross-species constructs. Curate remaining experimentally mapped members and Goyal2012 supplementary contexts with native versus in-vitro and peptide versus whole-protein boundaries. Do not infer family-wide DNA/RNA function, native BER, drug targeting or a conserved acetylation switch from this partial pass.
+
+- Each added edge has member-specific primary evidence and explicit conditions.
+- Unsupported transfers and conflicting or negative results remain visible.
+- Native checks pass and a successor report states actual scope.
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| primary | https://doi.org/10.1016/j.celrep.2023.112292; Banerjee2023 Figures1,2,4-7, STAR Methods and original SupplementS5C; supplementary construct primers and cross-species limits. Separate source ledgers cover Bell2002, Marsh2005, Laurens2012, Zhang2020, Hands-Taylor2010 and Goyal2012. | supports | Untagged whole PfAlba3 binds TARE6 and cleaves AP/THF probes; single and double lysine mutants retain residual cleavage. Mixed-site Pat acetylation reduces AP28 cleavage; PfSir2a decreases a K23-acetyl-specific signal without a measured nuclease-restoration step. The printed NAD unit and unresolved core/cross-species constructs remain explicit. |
+| identity | https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01918/; Accession and domain locations; paired UniProt identity facts | supports | Frozen PF01918/Alba/IPR002775 and former DUF78 mapping are preserved. P60849v2 and F0NHH1v1 map10-72 but represent different organisms; Q97ZF4v1 maps6-69, human Q9BUL9v1 maps37-100 and parasite Q8IJX8v1 maps14-83. Human Rpp20 O75817 belongs to PF12328, not PF01918. Reference residues and the PfAlba3 7-29 peptide match inspected sequences; historical clones and AAK41236 alternative initiation are not silently equated with current references. |
+| bell | https://rcn.montana.edu/Publications/Pdf/2002/Alba%20Science.pdf; Methods, Results and figure/table locators in the retained source ledger | supports | Primary experiment ledger preserves measured effects, controls, tested constructs and source-specific limits. |
+| marsh | https://rcn.montana.edu/Publications/Pdf/2005/JBC%20Pat.pdf; Methods, Results and figure/table locators in the retained source ledger | supports | Primary experiment ledger preserves measured effects, controls, tested constructs and source-specific limits. |
+| laurens | https://pmc.ncbi.nlm.nih.gov/articles/PMC3535426/; Methods, Results and figure/table locators in the retained source ledger | supports | Primary experiment ledger preserves measured effects, controls, tested constructs and source-specific limits. |
+| cao | https://doi.org/10.1111/mmi.13973; Primary abstract only; full Wiley PDF returned403 | supports | Native K16 acetylation is challenged; abstract-level evidence does not negate the in-vitro Pat reaction. |
+| zhang | https://pmc.ncbi.nlm.nih.gov/articles/PMC7498313/; Methods, Results and figure/table locators in the retained source ledger | supports | Primary experiment ledger preserves measured effects, controls, tested constructs and source-specific limits. |
+| hands | https://pmc.ncbi.nlm.nih.gov/articles/PMC2896528/; Methods, Results and figure/table locators in the retained source ledger | supports | Primary experiment ledger preserves measured effects, controls, tested constructs and source-specific limits. |
+| goyal | https://pmc.ncbi.nlm.nih.gov/articles/PMC3273813/; Methods, Results and figure/table locators in the retained source ledger | supports | Primary experiment ledger preserves measured effects, controls, tested constructs and source-specific limits. |
+| coverage | evidence/PF01918/coverage.txt; Scoped source/mapping and access ledger | supports | Uncurated family branches, exact construct uncertainties and access limits remain explicit. |
+| bell-binding-quotation | https://rcn.montana.edu/Publications/Pdf/2002/Alba%20Science.pdf; Original Figure3 and caption, journalpage150; independently verified source quotation | supports | DNA-binding edges now display the relevant binding excerpt, with original curve-specific locators and effects unchanged; original transcription ledger remains in use. |
+| native | src/dufmech/records.py; Current projection validation and overlay equivalence in this retained-review session | supports | Closed schema, canonical history and applicable graph/evidence checks pass. Curated graphs and discussions match the overlay; scientific validity is assessed separately. |
+| stage4-prior-review | reviews/structured/20261012T012924Z-pf01918-assay-specific-dna-evidence-and-alba-contexts/review.yaml; Predecessor structured review 20261012T012924Z-pf01918-assay-specific-dna-evidence-and-alba-contexts | supports | Predecessor review 20261012T012924Z-pf01918-assay-specific-dna-evidence-and-alba-contexts verified and linked for finding continuity and semantic-digest progression on PF01918. |
+| duf-projection-pf01918 | data/families/PF01918.yaml; dufmech-reviewed-projection-v1 | context_only | Byte-exact projection retained at save for digest verification, not scientific assessment. |
+
+## Limits And Additional Notes
+
+- Original Bell Figures3-4, Marsh Figures2C/4/5, Laurens Figures1-2, Zhang Figures1/3/4/5, Hands-Taylor Figure5, Goyal Figure5 and Banerjee Figures1/4-7 plus SupplementS5 were visually inspected, with relevant Methods/tables. No original Cao2018 figures or raw datasets were available; no independent experimental replication. Later page-layout and whole-corpus checks are reported separately, not implied by this saved review.
+- Same-agent assessment, not independent expert review or experimental replication.
+- Partial family coverage; status remains IN_PROGRESS. No full-corpus completion, publication or full publication-QC pass is claimed.
+- Assessments were authored from inspected primary evidence. Native inspection supplied provenance, not scientific conclusions.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261023T092548Z-pf01918-c2s4-record-review
+title: PF01918 Cycle 2 Stage 4 frozen-inventory causal-graph and grounding review
+started_at: '2026-10-23T09:25:47Z'
+finished_at: '2026-10-23T09:25:48Z'
+reviewer:
+  identity: Antigravity
+  kind: agent
+  model: Claude-Opus-4.6
+  independence: self_review
+  independence_basis: Cycle 2 Stage 4 frozen-inventory record review by Antigravity
+    auditing prior Codex/Antigravity curation overlays, primary evidence caches, history
+    events, and current projections at Git revision fde7d143a6b952fbc63b390cbfc27de38ac7701b.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: pass_with_limitations
+native_verdict: NEEDS_FOLLOWUP
+scientific_review: true
+summary: 'Sixteen scoped graphs retain53 OBSERVED effects:46 DIRECT biochemical/physical
+  readouts and7 INDIRECT transcription/growth effects. Fourteen MECHANISTIC and two
+  PHENOTYPIC graphs distinguish proteins, constructs, substrates and conditions. Native
+  archaeal K16-acetylation counterevidence is retained separately from directly measured
+  in-vitro Pat acetylation. Status stays IN_PROGRESS; same-agent scientific review
+  is partial, not independent expert endorsement or family completion. This successor
+  replaces the five DNA-binding display quotations with the actual Bell2002 Figure3
+  excerpt; graph directions and counts are unchanged. Prior review reviews/structured/20261012T011947Z-pf01918-alba-dna-rna-and-nuclease-assay-contexts/review.yaml
+  and its digest4f351def61ebe6a038c11381f47d61d8b24efeb25578bb8e428d02d163df092d remain
+  intact. Stage 2 (PR #343) grounded Methanocaldococcus jannaschii EF-1alpha (UniProtKB:Q58635)
+  in mj0062-ef1a-gtp-dependence-2011 and Saccharomyces cerevisiae eEF1A/Tef1 (UniProtKB:P02994)
+  in tvg150-diphthamide-requirement-2011.'
+repository: CultureBotAI/DUFMech
+kind: record
+source:
+  git_revision: fde7d143a6b952fbc63b390cbfc27de38ac7701b
+  state: working_tree
+  snapshot_id: interpro-pfam-duf-2026-10-10
+  inputs:
+  - path: curation/families/PF01918.yaml
+    sha256: c51694da7e3808266a432d4beadef2280b9c9c4ea7c4ca79b33db8d0f9124d48
+    role: context
+  - path: data/families/PF01918.yaml
+    sha256: 61fb4b7455b58d5497b57ddfbba42e1972b67b6c7eccfb3d766392f30b1049e6
+    role: target
+  - path: data/worklists/interpro-pfam-duf-2026-10-10.json
+    sha256: 17fb625876c9326ed284263a47bcd84e0d7844a31c040dc06cd2260c36f1c383
+    role: context
+  - path: data/worklists/interpro-pfam-duf-2026-10-10.manifest.json
+    sha256: 31c07ffb6a169c851ea0e6e9dd527a10c04028eafeb29187bd62dc2ae848696e
+    role: context
+  - path: data/worklists/interpro-pfam-duf-2026-10-10.tsv
+    sha256: be023c8dd9d8d3864926b5032d6f7e87a884b1a567391696822dbbecc692dae7
+    role: context
+  - path: evidence/PF01918/banerjee-2023.txt
+    sha256: a34b731777e7104df3e69578f689b8437a905a0268a3d7bf9243d883e8e3958b
+    role: context
+  - path: evidence/PF01918/bell-2002-binding-quotation.txt
+    sha256: bee289675c73cfa821546495c8c832b08ea22f80c5681b8ae5e6fe004cd1e52b
+    role: context
+  - path: evidence/PF01918/bell-2002.txt
+    sha256: 5d94829ee724c38e4300066d95d97acbbcce227abbd5d464df30291c7523daa4
+    role: context
+  - path: evidence/PF01918/cao-2018-native-ptm.txt
+    sha256: 8bf6081c5c9d63cd4ad3169cee1de2c6636b06a4e8845873ee7bb39d5f76b720
+    role: context
+  - path: evidence/PF01918/coverage.txt
+    sha256: 6ba254bc5219d4c9ff4eedfcacb81fd5ee3aad969ac16fbfadc7d99c3fe511be
+    role: context
+  - path: evidence/PF01918/goyal-2012.txt
+    sha256: f4eff880ac21de51496f03046becd9b5ffe61e609a518770cbc6a30559cf0530
+    role: context
+  - path: evidence/PF01918/hands-taylor-2010.txt
+    sha256: dd74bce9753535aaa0bd82f00f31badd082eb51cebeff80ff15a1365695b9b36
+    role: context
+  - path: evidence/PF01918/identity.txt
+    sha256: b833aa651fe3fa1b0b9f3f264c648f0ff111062a57add80facc62749bc327bc7
+    role: context
+  - path: evidence/PF01918/laurens-2012.txt
+    sha256: 9395ecfc22d2dcd0e4af7962c921ad952a43ef05f6766460629a1ef1cc7b244f
+    role: context
+  - path: evidence/PF01918/marsh-2005.txt
+    sha256: 2de8751a54ad2063d1b451f4786b2e25964798a23734348e28663f09f2ef806b
+    role: context
+  - path: evidence/PF01918/zhang-2020.txt
+    sha256: f677ecf56c33d338f883f60f55e8f464e1a2b189aa40fe268d753b21d44be6a9
+    role: context
+  - path: reviews/structured/20261012T012924Z-pf01918-assay-specific-dna-evidence-and-alba-contexts/review.yaml
+    sha256: f60dba6fdf605266a0d0801b204008af3e872d79d00e5d47090a0afcf7631781
+    role: context
+targets:
+- target_id: PF01918
+  path: data/families/PF01918.yaml
+  label: PF01918
+  kind: generated
+  record_class: FamilyRecord
+  owner_paths:
+  - repository: CultureBotAI/DUFMech
+    path: curation/families/PF01918.yaml
+    role: Maintained scientific overlay; create only with authorized curation.
+  - repository: CultureBotAI/DUFMech
+    path: src/dufmech/records.py
+    role: Projection generator; frozen snapshot identity is not hand-edited.
+  semantic_digest:
+    algorithm: dufmech-record-content-v1
+    sha256: 9d150212434e5e4c211c08b71d8774743f2ed1a8278b61832669863a2753790f
+    description: Canonical JSON SHA-256 of effective FamilyRecord excluding only curation_status,
+      review_id and curation_events.
+scope:
+  description: Scientific assessment of the retained edges, exact member mapping,
+    primary evidence, context and causal limits.
+  selection: Ascending remaining frozen Pfam accession; former DUF78 PF01918 selected
+    after PF01914. All 8296 families remain in the corpus-wide goal.
+  coverage: partial
+  population_size: 1
+  reviewed_target_ids:
+  - PF01918
+  exclusions:
+  - target: Remaining family members and uncurated experimental contexts
+    reason: Coverage is limited to the explicitly inspected experiments, not all8285
+      frozen proteins or all49 current reviewed UniProt entries. Cao2018 is primary-abstract
+      counterevidence with inaccessible full text. Additional archaeal topology/RNA,
+      eukaryotic Pop6/plant/parasite contexts, cross-species nuclease constructs,
+      author-core boundaries, historical tags/clones and Goyal2012 supplementary transcription/MS
+      remain open.
+checks:
+- check_id: native-projection
+  name: Native projection and overlay validation
+  command: validate_record(record, root); assert projection graphs and discussions
+    match overlay
+  status: passed
+  required: true
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Current projection validates and preserves the authored graph and discussion
+    content exactly.
+  target_ids:
+  - PF01918
+  evidence_ids:
+  - native
+evidence:
+- evidence_id: primary
+  kind: primary_source
+  reference: https://doi.org/10.1016/j.celrep.2023.112292
+  locator: Banerjee2023 Figures1,2,4-7, STAR Methods and original SupplementS5C; supplementary
+    construct primers and cross-species limits. Separate source ledgers cover Bell2002,
+    Marsh2005, Laurens2012, Zhang2020, Hands-Taylor2010 and Goyal2012.
+  accessed_at: '2026-10-12T01:29:24Z'
+  support: supports
+  snapshot_sha256: a34b731777e7104df3e69578f689b8437a905a0268a3d7bf9243d883e8e3958b
+  summary: Untagged whole PfAlba3 binds TARE6 and cleaves AP/THF probes; single and
+    double lysine mutants retain residual cleavage. Mixed-site Pat acetylation reduces
+    AP28 cleavage; PfSir2a decreases a K23-acetyl-specific signal without a measured
+    nuclease-restoration step. The printed NAD unit and unresolved core/cross-species
+    constructs remain explicit.
+- evidence_id: identity
+  kind: database
+  reference: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01918/
+  locator: Accession and domain locations; paired UniProt identity facts
+  accessed_at: '2026-10-12T01:29:24Z'
+  support: supports
+  snapshot_sha256: b833aa651fe3fa1b0b9f3f264c648f0ff111062a57add80facc62749bc327bc7
+  summary: Frozen PF01918/Alba/IPR002775 and former DUF78 mapping are preserved. P60849v2
+    and F0NHH1v1 map10-72 but represent different organisms; Q97ZF4v1 maps6-69, human
+    Q9BUL9v1 maps37-100 and parasite Q8IJX8v1 maps14-83. Human Rpp20 O75817 belongs
+    to PF12328, not PF01918. Reference residues and the PfAlba3 7-29 peptide match
+    inspected sequences; historical clones and AAK41236 alternative initiation are
+    not silently equated with current references.
+- evidence_id: bell
+  kind: primary_source
+  reference: https://rcn.montana.edu/Publications/Pdf/2002/Alba%20Science.pdf
+  locator: Methods, Results and figure/table locators in the retained source ledger
+  summary: Primary experiment ledger preserves measured effects, controls, tested
+    constructs and source-specific limits.
+  accessed_at: '2026-10-12T01:29:24Z'
+  support: supports
+  snapshot_sha256: 5d94829ee724c38e4300066d95d97acbbcce227abbd5d464df30291c7523daa4
+- evidence_id: marsh
+  kind: primary_source
+  reference: https://rcn.montana.edu/Publications/Pdf/2005/JBC%20Pat.pdf
+  locator: Methods, Results and figure/table locators in the retained source ledger
+  summary: Primary experiment ledger preserves measured effects, controls, tested
+    constructs and source-specific limits.
+  accessed_at: '2026-10-12T01:29:24Z'
+  support: supports
+  snapshot_sha256: 2de8751a54ad2063d1b451f4786b2e25964798a23734348e28663f09f2ef806b
+- evidence_id: laurens
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC3535426/
+  locator: Methods, Results and figure/table locators in the retained source ledger
+  summary: Primary experiment ledger preserves measured effects, controls, tested
+    constructs and source-specific limits.
+  accessed_at: '2026-10-12T01:29:24Z'
+  support: supports
+  snapshot_sha256: 9395ecfc22d2dcd0e4af7962c921ad952a43ef05f6766460629a1ef1cc7b244f
+- evidence_id: cao
+  kind: primary_source
+  reference: https://doi.org/10.1111/mmi.13973
+  locator: Primary abstract only; full Wiley PDF returned403
+  summary: Native K16 acetylation is challenged; abstract-level evidence does not
+    negate the in-vitro Pat reaction.
+  accessed_at: '2026-10-12T01:29:24Z'
+  support: supports
+  snapshot_sha256: 8bf6081c5c9d63cd4ad3169cee1de2c6636b06a4e8845873ee7bb39d5f76b720
+- evidence_id: zhang
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC7498313/
+  locator: Methods, Results and figure/table locators in the retained source ledger
+  summary: Primary experiment ledger preserves measured effects, controls, tested
+    constructs and source-specific limits.
+  accessed_at: '2026-10-12T01:29:24Z'
+  support: supports
+  snapshot_sha256: f677ecf56c33d338f883f60f55e8f464e1a2b189aa40fe268d753b21d44be6a9
+- evidence_id: hands
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC2896528/
+  locator: Methods, Results and figure/table locators in the retained source ledger
+  summary: Primary experiment ledger preserves measured effects, controls, tested
+    constructs and source-specific limits.
+  accessed_at: '2026-10-12T01:29:24Z'
+  support: supports
+  snapshot_sha256: dd74bce9753535aaa0bd82f00f31badd082eb51cebeff80ff15a1365695b9b36
+- evidence_id: goyal
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC3273813/
+  locator: Methods, Results and figure/table locators in the retained source ledger
+  summary: Primary experiment ledger preserves measured effects, controls, tested
+    constructs and source-specific limits.
+  accessed_at: '2026-10-12T01:29:24Z'
+  support: supports
+  snapshot_sha256: f4eff880ac21de51496f03046becd9b5ffe61e609a518770cbc6a30559cf0530
+- evidence_id: coverage
+  kind: search
+  reference: evidence/PF01918/coverage.txt
+  locator: Scoped source/mapping and access ledger
+  search_scope: PF01918/DUF78/Alba and selected member-specific primary sources; ignored/hidden-inclusive
+    local search and documented source/construct limits.
+  summary: Uncurated family branches, exact construct uncertainties and access limits
+    remain explicit.
+  accessed_at: '2026-10-12T01:29:24Z'
+  support: supports
+  snapshot_sha256: 6ba254bc5219d4c9ff4eedfcacb81fd5ee3aad969ac16fbfadc7d99c3fe511be
+- evidence_id: bell-binding-quotation
+  kind: primary_source
+  reference: https://rcn.montana.edu/Publications/Pdf/2002/Alba%20Science.pdf
+  locator: Original Figure3 and caption, journalpage150; independently verified source
+    quotation
+  summary: DNA-binding edges now display the relevant binding excerpt, with original
+    curve-specific locators and effects unchanged; original transcription ledger remains
+    in use.
+  accessed_at: '2026-10-12T01:29:24Z'
+  support: supports
+  snapshot_sha256: bee289675c73cfa821546495c8c832b08ea22f80c5681b8ae5e6fe004cd1e52b
+- evidence_id: native
+  kind: validation
+  reference: src/dufmech/records.py
+  locator: Current projection validation and overlay equivalence in this retained-review
+    session
+  accessed_at: '2026-10-12T01:29:24Z'
+  support: supports
+  summary: Closed schema, canonical history and applicable graph/evidence checks pass.
+    Curated graphs and discussions match the overlay; scientific validity is assessed
+    separately.
+- evidence_id: stage4-prior-review
+  kind: prior_review
+  reference: reviews/structured/20261012T012924Z-pf01918-assay-specific-dna-evidence-and-alba-contexts/review.yaml
+  locator: Predecessor structured review 20261012T012924Z-pf01918-assay-specific-dna-evidence-and-alba-contexts
+  accessed_at: '2026-10-23T09:25:48Z'
+  support: supports
+  snapshot_sha256: f60dba6fdf605266a0d0801b204008af3e872d79d00e5d47090a0afcf7631781
+  summary: Predecessor review 20261012T012924Z-pf01918-assay-specific-dna-evidence-and-alba-contexts
+    verified and linked for finding continuity and semantic-digest progression on
+    PF01918.
+- evidence_id: duf-projection-pf01918
+  kind: record_content
+  reference: data/families/PF01918.yaml
+  locator: dufmech-reviewed-projection-v1
+  accessed_at: '2026-10-23T09:25:48Z'
+  support: context_only
+  snapshot_sha256: 61fb4b7455b58d5497b57ddfbba42e1972b67b6c7eccfb3d766392f30b1049e6
+  quote: "id: Pfam:PF01918\npfam_id: PF01918\nname: Alba\nshort_name: Alba\nseed_status:\
+    \ EX_DUF\ncharacterization_status: UNSCORED\ncuration_status: IN_PROGRESS\nsource_url:\
+    \ https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01918\ncounters:\n  proteins:\
+    \ 8285\n  matches: 8303\n  proteomes: 2523\n  taxa: 7180\n  structures: 36\n \
+    \ alphafold_models: 7010\n  domain_architectures: 155\nprovenance:\n  snapshot_id:\
+    \ interpro-pfam-duf-2026-10-10\n  path: data/worklists/interpro-pfam-duf-2026-10-10.json\n\
+    \  sha256: 17fb625876c9326ed284263a47bcd84e0d7844a31c040dc06cd2260c36f1c383\n\
+    \  generated_at: '2026-10-10T07:44:21.614711Z'\n  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/\n\
+    interpro_id: InterPro:IPR002775\ndescription: Alba is a novel chromosomal protein\
+    \ that coats archaeal DNA without compacting it.\ncuration_history: history/records/PF01918\n\
+    discussions:\n- discussion_id: alba-native-ptm-and-assay-conflicts\n  prompt:\
+    \ Resolve native archaeal lysine modification and source-condition discrepancies\
+    \ before asserting\n    a conserved acetylation switch.\n  kind: CURATION_TODO\n\
+    \  status: OPEN\n  rationale: Native PTM counterevidence, in-vitro chemical reactions\
+    \ and peptide versus whole-protein\n    assays address different questions.\n\
+    \  evidence:\n  - reference: PMID:29679495\n    supports: PARTIAL\n    evidence_source:\
+    \ primary_abstract_counterevidence\n    explanation: Cao2018 reports no K16 acetylation\
+    \ in Sis10b or Sso10b; full figures/spectra remain to\n      be inspected.\n \
+    \ - reference: PMID:15824122\n    supports: SUPPORT\n    evidence_source: primary_in_vitro_ms\n\
+    \    explanation: Marsh2005 directly identifies K16 acetylation after Pat treatment;\
+    \ not a native-cell\n      modification measurement.\n  - reference: PMID:36947546\n\
+    \    supports: PARTIAL\n    evidence_source: primary_methods_and_figures\n   \
+    \ explanation: Mixed K23/K32 acetylation and a separate anti-K23 signal assay\
+    \ do not isolate a physiological\n      switch; Methods prints500mM NAD.\n  posed_by:\
+    \ Codex\n  posed_date: '2026-10-12'\n  notes: Inspect Cao2018 full Methods/raw\
+    \ PTM spectra, resolve Banerjee NAD and U28 notation, compare\n    matched substrates\
+    \ and constructs, and retain negative controls. Goyal2012 K22-preferring peptide\n\
+    \    conversion does not contradict all K23 whole-protein deacetylation. Do not\
+    \ silently correct source\n    units or join these studies into an observed conserved\
+    \ cascade.\n- discussion_id: alba-family-and-construct-coverage\n  prompt: Extend\
+    \ mapped Alba-family branches and resolve outstanding construct boundaries.\n\
+    \  kind: CURATION_TODO\n  status: OPEN\n  rationale: Selected DNA, RNA and nuclease\
+    \ experiments do not characterize all8285 frozen proteins or\n    every PF01918\
+    \ interval.\n  evidence:\n  - reference: PMID:32761152\n    supports: PARTIAL\n\
+    \    evidence_source: selected_primary_rna_and_growth_assays\n    explanation:\
+    \ Sis10b biochemical effects and growth rescue remain separate; heterologous reporter\
+    \ and\n      additional mutations need further curation.\n  - reference: PMID:20215441\n\
+    \    supports: PARTIAL\n    evidence_source: primary_complex_assembly\n    explanation:\
+    \ Rpp25-Rpp20 P3 binding is not RNase catalytic activity; yeast Pop6 and other\
+    \ eukaryotic\n      branches remain.\n  - reference: PMID:36947546\n    supports:\
+    \ PARTIAL\n    evidence_source: cross_species_and_core_construct_leads\n    explanation:\
+    \ Cross-species tagged preparations and author-defined core fragment need exact\
+    \ mapping;\n      current P60849 differs at initiation from AAK41236.1.\n  posed_by:\
+    \ Codex\n  posed_date: '2026-10-12'\n  notes: Resolve historical tags/clone sequences,\
+    \ independently map Sso10b/LdAlba/TbAlba3/OsAlba1 tested\n    constructs, inspect\
+    \ additional DNA-topology and RNA studies, and finish Goyal2012 supplementary\
+    \ transcription/MS\n    checks. Maintain IN_PROGRESS and partial coverage. No\
+    \ family-wide catalytic, native repair, clinical,\n    or isolated-domain claim\
+    \ follows from graph presence.\ncausal_graphs:\n- graph_id: ssoalba-dna-binding-2002\n\
+    \  title: Alba lysine substitutions lower DNA-binding affinity\n  scope: Bell2002\
+    \ recombinant S. solfataricus Alba and individual K16A/K16E/K17A/K17E substitutions.\n\
+    \  context: Original Figure 3; purified proteins binding a 50-bp DNA duplex, triplicate\
+    \ apparent Kd estimates\n    with standard errors. Comparisons are within this\
+    \ protein/probe titration, not across later studies.\n  family_mapping: S. solfataricus\
+    \ P2 Alba1 P60849 sequence version 2, SSO0962, 97 aa; PF01918 10-72 includes\n\
+    \    K16/K17/F60. This is current reference mapping, not independent historical\
+    \ clone sequencing or proof\n    of isolated 10-72 sufficiency.\n  scope_status:\
+    \ MECHANISTIC\n  taxon: NCBITaxon:273057\n  limitations: Mutations can affect\
+    \ conformation as well as a nucleic-acid contact; they are not acetyl-lysine\n\
+    \    mimic proofs. Native preparation Kd 1100+/-330 nM versus recombinant 33+/-10\
+    \ nM is retained separately\n    because preparation/PTM differences are confounded.\
+    \ No native K16-acetylation claim is adopted, given\n    Cao2018 counterevidence.\n\
+    \  nodes:\n  - node_id: wt-dna\n    label: Recombinant Alba with the 50-bp DNA\
+    \ probe\n    node_type: ACTIVITY\n    grounding:\n    - UniProtKB:P60849\n  -\
+    \ node_id: complex\n    label: Alba-DNA complex formation\n    node_type: STATE\n\
+    \    grounding:\n    - UniProtKB:P60849\n  - node_id: affinity\n    label: Apparent\
+    \ DNA-binding affinity\n    node_type: STATE\n  - node_id: k16a\n    label: K16A\
+    \ substitution in full-length Alba\n    node_type: PERTURBATION\n    grounding:\n\
+    \    - UniProtKB:P60849\n  - node_id: k16e\n    label: K16E substitution in full-length\
+    \ Alba\n    node_type: PERTURBATION\n    grounding:\n    - UniProtKB:P60849\n\
+    \  - node_id: k17a\n    label: K17A substitution in full-length Alba\n    node_type:\
+    \ PERTURBATION\n    grounding:\n    - UniProtKB:P60849\n  - node_id: k17e\n  \
+    \  label: K17E substitution in full-length Alba\n    node_type: PERTURBATION\n\
+    \    grounding:\n    - UniProtKB:P60849\n  edges:\n  - edge_id: wt-produces-complex\n\
+    \    subject: wt-dna\n    predicate: produces\n    object: complex\n    mechanism:\
+    \ Titrating recombinant Alba produces shifted DNA complexes, with apparent Kd\
+    \ 33+/-10 nM;\n      assembly alone does not establish repression.\n    directness:\
+    \ DIRECT\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n\
+    \    - reference: PMID:11935028\n      source_url: https://rcn.montana.edu/Publications/Pdf/2002/Alba%20Science.pdf\n\
+    \      snippet: Recombinant Alba binds a 50-oligomer DNA duplex\n      explanation:\
+    \ Figure 3 original binding plot and caption.\n      cache_path: evidence/PF01918/bell-2002-binding-quotation.txt\n\
+    \      cache_sha256: bee289675c73cfa821546495c8c832b08ea22f80c5681b8ae5e6fe004cd1e52b\n\
+    \  - edge_id: k16a-decreases-affinity\n    subject: k16a\n    predicate: decreases\n\
+    \    object: affinity\n    mechanism: K16A increases apparent Kd to 220+/-18 nM\
+    \ relative to WT 33+/-10 nM, indicating lower affinity.\n      This is a tested\
+    \ substitution effect, not an observed chemical acetylation reaction.\n    directness:\
+    \ DIRECT\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n\
+    \    - reference: PMID:11935028\n      source_url: https://rcn.montana.edu/Publications/Pdf/2002/Alba%20Science.pdf\n\
+    \      snippet: Recombinant Alba binds a 50-oligomer DNA duplex\n      explanation:\
+    \ Figure 3 original K16A curve and apparent-Kd legend; triplicate standard errors.\n\
+    \      cache_path: evidence/PF01918/bell-2002-binding-quotation.txt\n      cache_sha256:\
+    \ bee289675c73cfa821546495c8c832b08ea22f80c5681b8ae5e6fe004cd1e52b\n  - edge_id:\
+    \ k16e-decreases-affinity\n    subject: k16e\n    predicate: decreases\n    object:\
+    \ affinity\n    mechanism: K16E increases apparent Kd to 1300+/-280 nM relative\
+    \ to WT 33+/-10 nM, indicating lower\n      affinity. This is a tested substitution\
+    \ effect, not an observed chemical acetylation reaction.\n    directness: DIRECT\n\
+    \    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n    -\
+    \ reference: PMID:11935028\n      source_url: https://rcn.montana.edu/Publications/Pdf/2002/Alba%20Science.pdf\n\
+    \      snippet: Recombinant Alba binds a 50-oligomer DNA duplex\n      explanation:\
+    \ Figure 3 original K16E curve and apparent-Kd legend; triplicate standard errors.\n\
+    \      cache_path: evidence/PF01918/bell-2002-binding-quotation.txt\n      cache_sha256:\
+    \ bee289675c73cfa821546495c8c832b08ea22f80c5681b8ae5e6fe004cd1e52b\n  - edge_id:\
+    \ k17a-decreases-affinity\n    subject: k17a\n    predicate: decreases\n    object:\
+    \ affinity\n    mechanism: K17A increases apparent Kd to 480+/-90 nM relative\
+    \ to WT 33+/-10 nM, indicating lower affinity.\n      This is a tested substitution\
+    \ effect, not an observed chemical acetylation reaction.\n    directness: DIRECT\n\
+    \    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n    -\
+    \ reference: PMID:11935028\n      source_url: https://rcn.montana.edu/Publications/Pdf/2002/Alba%20Science.pdf\n\
+    \      snippet: Recombinant Alba binds a 50-oligomer DNA duplex\n      explanation:\
+    \ Figure 3 original K17A curve and apparent-Kd legend; triplicate standard errors.\n\
+    \      cache_path: evidence/PF01918/bell-2002-binding-quotation.txt\n      cache_sha256:\
+    \ bee289675c73cfa821546495c8c832b08ea22f80c5681b8ae5e6fe004cd1e52b\n  - edge_id:\
+    \ k17e-decreases-affinity\n    subject: k17e\n    predicate: decreases\n    object:\
+    \ affinity\n    mechanism: K17E increases apparent Kd to 1400+/-300 nM relative\
+    \ to WT 33+/-10 nM, indicating lower\n      affinity. This is a tested substitution\
+    \ effect, not an observed chemical acetylation reaction.\n    directness: DIRECT\n\
+    \    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n    -\
+    \ reference: PMID:11935028\n      source_url: https://rcn.montana.edu/Publications/Pdf/2002/Alba%20Science.pdf\n\
+    \      snippet: Recombinant Alba binds a 50-oligomer DNA duplex\n      explanation:\
+    \ Figure 3 original K17E curve and apparent-Kd legend; triplicate standard errors.\n\
+    \      cache_path: evidence/PF01918/bell-2002-binding-quotation.txt\n      cache_sha256:\
+    \ bee289675c73cfa821546495c8c832b08ea22f80c5681b8ae5e6fe004cd1e52b\n- graph_id:\
+    \ ssoalba-transcription-2002\n  title: Alba preparations alter reconstituted T6\
+    \ transcription\n  scope: Bell2002 purified-component SSV1 T6 transcription reactions\
+    \ with recombinant Alba or a distinct\n    native Alba/Sir2/NAD treatment.\n \
+    \ context: Figure 4A/B recombinant Alba 1/3/10 ug; Figure 4E native preparation\
+    \ plus 1 ug WT Sir2 and\n    200 uM NAD, 20 min preincubation at 65 C before NTP\
+    \ addition to 200 uM.\n  family_mapping: S. solfataricus P2 Alba1 P60849 sequence\
+    \ version 2, SSO0962, 97 aa; PF01918 10-72 includes\n    K16/K17/F60. This is\
+    \ current reference mapping, not independent historical clone sequencing or proof\n\
+    \    of isolated 10-72 sufficiency.\n  scope_status: PHENOTYPIC\n  taxon: NCBITaxon:273057\n\
+    \  limitations: A multi-component transcription endpoint is INDIRECT, not direct\
+    \ detection of DNA occlusion\n    or a deacetylation product. Native Alba was\
+    \ labeled Ac-Alba by the authors, but native K16 acetylation\n    is disputed\
+    \ by Cao2018. This graph does not assert a native Sir2-to-chromatin silencing\
+    \ pathway.\n  nodes:\n  - node_id: recombinant\n    label: Add recombinant Alba\
+    \ to the T6 transcription reaction\n    node_type: PERTURBATION\n    grounding:\n\
+    \    - UniProtKB:P60849\n  - node_id: native-sir2-nad\n    label: Joint native\
+    \ Alba, WT Sir2 and NAD treatment\n    node_type: PERTURBATION\n    grounding:\n\
+    \    - UniProtKB:P60849\n  - node_id: rna\n    label: Full-length T6 transcript\
+    \ output\n    node_type: STATE\n  edges:\n  - edge_id: recombinant-lowers-rna\n\
+    \    subject: recombinant\n    predicate: decreases\n    object: rna\n    mechanism:\
+    \ Recombinant Alba lowers full-length RNA output relative to the no-Alba reaction;\
+    \ comparable\n      Sso7d additions do not show the same repression.\n    directness:\
+    \ INDIRECT\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n\
+    \    - reference: PMID:11935028\n      source_url: https://rcn.montana.edu/Publications/Pdf/2002/Alba%20Science.pdf\n\
+    \      snippet: SSV1 T6 promoter in vitro\n      explanation: Original Figure\
+    \ 4A/B, dose series and Sso7d control.\n      cache_path: evidence/PF01918/bell-2002.txt\n\
+    \      cache_sha256: 5d94829ee724c38e4300066d95d97acbbcce227abbd5d464df30291c7523daa4\n\
+    \  - edge_id: joint-treatment-lowers-rna\n    subject: native-sir2-nad\n    predicate:\
+    \ decreases\n    object: rna\n    mechanism: The joint treatment lowers RNA relative\
+    \ to native Alba without active Sir2/NAD. H116Y and\n      minus-NAD controls\
+    \ do not reproduce repression. This retains the measured endpoint without asserting\n\
+    \      which native modification was removed.\n    directness: INDIRECT\n    support:\
+    \ OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference: PMID:11935028\n\
+    \      source_url: https://rcn.montana.edu/Publications/Pdf/2002/Alba%20Science.pdf\n\
+    \      snippet: SSV1 T6 promoter in vitro\n      explanation: Original Figure\
+    \ 4D/E, naked-DNA Sir2 control, H116Y and NAD comparisons.\n      cache_path:\
+    \ evidence/PF01918/bell-2002.txt\n      cache_sha256: 5d94829ee724c38e4300066d95d97acbbcce227abbd5d464df30291c7523daa4\n\
+    - graph_id: ssoalba-pat-acetylation-2005\n  title: Pat treatment acetylates Alba\
+    \ and reduces nucleic-acid affinity\n  scope: Marsh2005 purified S. solfataricus\
+    \ Alba with the separate SSO2813 Pat acetyltransferase.\n  context: 'Figures 2C/4:\
+    \ radiolabel assay in 10 mM Tris pH8/150 mM NaCl, 65 C for 1 h; Figure 4A 3 ug\n\
+    \    Pat/2 ug Alba. MS/EMSA preparation: paired aliquots with/without 100 uM acetyl-CoA,\
+    \ 60 C for 1 h.\n    Figure 5 binding uses DNA or dsRNA 20mers, about1 fmol probe\
+    \ and 0-10 pmol protein, 60 C for 10 min.'\n  family_mapping: S. solfataricus\
+    \ P2 Alba1 P60849 sequence version 2, SSO0962, 97 aa; PF01918 10-72 includes\n\
+    \    K16/K17/F60. This is current reference mapping, not independent historical\
+    \ clone sequencing or proof\n    of isolated 10-72 sufficiency.\n  scope_status:\
+    \ MECHANISTIC\n  taxon: NCBITaxon:273057\n  limitations: The chemical reaction\
+    \ is in vitro; later failure to find native K16 acetylation does not\n    erase\
+    \ this result. Thermal background and K17E retained incorporation are controls.\
+    \ Twofold treated/mock\n    affinity differences cannot be substituted for Bell2002\
+    \ native/recombinant estimates or a physiological\n    transcription effect.\n\
+    \  nodes:\n  - node_id: pat-reaction\n    label: Alba plus Pat and acetyl-CoA\
+    \ under the assay conditions\n    node_type: ACTIVITY\n    grounding:\n    - UniProtKB:P60849\n\
+    \  - node_id: k16-ac\n    label: K16-acetylated Alba product\n    node_type: STATE\n\
+    \    grounding:\n    - UniProtKB:P60849\n  - node_id: k16e\n    label: K16E substitution\
+    \ in the Pat labeling reaction\n    node_type: PERTURBATION\n    grounding:\n\
+    \    - UniProtKB:P60849\n  - node_id: label\n    label: Acetyl-label incorporation\
+    \ into Alba\n    node_type: STATE\n    grounding:\n    - UniProtKB:P60849\n  -\
+    \ node_id: acetyl-treatment\n    label: Pat/acetyl-CoA treatment versus Pat-only\
+    \ mock treatment\n    node_type: PERTURBATION\n    grounding:\n    - UniProtKB:P60849\n\
+    \  - node_id: dna-affinity\n    label: 20-bp DNA-binding affinity\n    node_type:\
+    \ STATE\n  - node_id: rna-affinity\n    label: 20-bp dsRNA-binding affinity\n\
+    \    node_type: STATE\n  edges:\n  - edge_id: pat-produces-k16-ac\n    subject:\
+    \ pat-reaction\n    predicate: produces\n    object: k16-ac\n    mechanism: Pat-containing\
+    \ reaction produces labeled Alba; tandem MS localizes acetylation to K16 in\n\
+    \      the treated preparation.\n    directness: DIRECT\n    support: OBSERVED\n\
+    \    evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference: PMID:15824122\n\
+    \      source_url: https://rcn.montana.edu/Publications/Pdf/2005/JBC%20Pat.pdf\n\
+    \      snippet: the residue in Alba acetylated by Pat was Lys-16\n      explanation:\
+    \ Figures 2C and 4B, original gels/MS assignments; MS preparation Methods.\n \
+    \     cache_path: evidence/PF01918/marsh-2005.txt\n      cache_sha256: 2de8751a54ad2063d1b451f4786b2e25964798a23734348e28663f09f2ef806b\n\
+    \  - edge_id: k16e-lowers-incorporation\n    subject: k16e\n    predicate: decreases\n\
+    \    object: label\n    mechanism: K16E strongly reduces incorporation relative\
+    \ to WT under matched labeling conditions; K17E\n      retains labeling. The substitution\
+    \ does not identify a catalytic role for K16.\n    directness: DIRECT\n    support:\
+    \ OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference: PMID:15824122\n\
+    \      source_url: https://rcn.montana.edu/Publications/Pdf/2005/JBC%20Pat.pdf\n\
+    \      snippet: the residue in Alba acetylated by Pat was Lys-16\n      explanation:\
+    \ Figure 4A original Coomassie and radiolabel panels.\n      cache_path: evidence/PF01918/marsh-2005.txt\n\
+    \      cache_sha256: 2de8751a54ad2063d1b451f4786b2e25964798a23734348e28663f09f2ef806b\n\
+    \  - edge_id: acetylation-lowers-dna-affinity\n    subject: acetyl-treatment\n\
+    \    predicate: decreases\n    object: dna-affinity\n    mechanism: The treated\
+    \ preparation needs about twice as much protein for comparable DNA shifting,\n\
+    \      supporting lower apparent binding affinity.\n    directness: DIRECT\n \
+    \   support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference:\
+    \ PMID:15824122\n      source_url: https://rcn.montana.edu/Publications/Pdf/2005/JBC%20Pat.pdf\n\
+    \      snippet: the residue in Alba acetylated by Pat was Lys-16\n      explanation:\
+    \ Figure 5 left DNA panel and paired pretreatment Methods.\n      cache_path:\
+    \ evidence/PF01918/marsh-2005.txt\n      cache_sha256: 2de8751a54ad2063d1b451f4786b2e25964798a23734348e28663f09f2ef806b\n\
+    \  - edge_id: acetylation-lowers-rna-affinity\n    subject: acetyl-treatment\n\
+    \    predicate: decreases\n    object: rna-affinity\n    mechanism: The same paired\
+    \ treatment lowers dsRNA-binding affinity by about twofold under this separate\n\
+    \      probe condition.\n    directness: DIRECT\n    support: OBSERVED\n    evidence_kind:\
+    \ EXPERIMENTAL\n    evidence:\n    - reference: PMID:15824122\n      source_url:\
+    \ https://rcn.montana.edu/Publications/Pdf/2005/JBC%20Pat.pdf\n      snippet:\
+    \ the residue in Alba acetylated by Pat was Lys-16\n      explanation: Figure\
+    \ 5 right dsRNA panel and accompanying Results.\n      cache_path: evidence/PF01918/marsh-2005.txt\n\
+    \      cache_sha256: 2de8751a54ad2063d1b451f4786b2e25964798a23734348e28663f09f2ef806b\n\
+    - graph_id: alba-afm-architecture-2012\n  title: Alba complexes produce concentration-specific\
+    \ DNA architectures\n  scope: Laurens2012 purified Alba1, F60A and a 1:1 Alba1:Alba2\
+    \ mixture with nicked pRD24.\n  context: AFM:90 ng DNA, 10 ul 40 mM HEPES pH7.5/25\
+    \ mM NaCl, 30 min about23 C; tenfold dilution into\n    1 mM MgCl2 for deposition.\
+    \ Protein ratios below are dimer:bp.\n  family_mapping: S. solfataricus P2 Alba1\
+    \ P60849 sequence version 2, SSO0962, 97 aa; PF01918 10-72 includes\n    K16/K17/F60.\
+    \ This is current reference mapping, not independent historical clone sequencing\
+    \ or proof\n    of isolated 10-72 sufficiency. Alba2 Q97ZF4 sequence version 1,\
+    \ SSO6877, 89 aa, PF01918 6-69. The\n    two paralogs are not interchangeable.\n\
+    \  scope_status: MECHANISTIC\n  taxon: NCBITaxon:273057\n  limitations: AFM images\
+    \ support directly visualized architectures, not their atomic contact mechanism\n\
+    \    or a quantified cellular compaction effect. Protein purification cites earlier\
+    \ work; exact residual\n    tags remain unverified. The 1:1 mixture is assigned\
+    \ as heterodimer on prior evidence. Frozen wording\n    about coating without\
+    \ compaction remains unchanged, with these assay-specific results added separately.\n\
+    \  nodes:\n  - node_id: wt-low\n    label: Alba1 with DNA at 1:30 dimer:bp\n \
+    \   node_type: ACTIVITY\n    grounding:\n    - UniProtKB:P60849\n  - node_id:\
+    \ wt-mid\n    label: Alba1 with DNA at 1:15 dimer:bp\n    node_type: ACTIVITY\n\
+    \    grounding:\n    - UniProtKB:P60849\n  - node_id: hetero-high\n    label:\
+    \ Alba1:Alba2 mixture with DNA at 1:7.5 dimer:bp\n    node_type: ACTIVITY\n  \
+    \  grounding:\n    - UniProtKB:P60849\n    - UniProtKB:Q97ZF4\n  - node_id: f60a\n\
+    \    label: Alba1 F60A with DNA at 1:30 dimer:bp\n    node_type: ACTIVITY\n  \
+    \  grounding:\n    - UniProtKB:P60849\n  - node_id: bridges\n    label: Bridged\
+    \ DNA segments\n    node_type: STATE\n  - node_id: condensed\n    label: Condensed\
+    \ DNA morphology\n    node_type: STATE\n  edges:\n  - edge_id: wt-produces-bridges\n\
+    \    subject: wt-low\n    predicate: produces\n    object: bridges\n    mechanism:\
+    \ Alba1 incubation produces extended bridged patches compared with bare nicked\
+    \ DNA; this\n      does not specify which contacts connect the duplexes.\n   \
+    \ directness: DIRECT\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n\
+    \    evidence:\n    - reference: PMID:23271660\n      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC3535426/\n\
+    \      snippet: binding of Alba1 stiffens the DNA molecule\n      explanation:\
+    \ Original Figure 1a/c; AFM classification Methods.\n      cache_path: evidence/PF01918/laurens-2012.txt\n\
+    \      cache_sha256: 9395ecfc22d2dcd0e4af7962c921ad952a43ef05f6766460629a1ef1cc7b244f\n\
+    \  - edge_id: wt-produces-condensation\n    subject: wt-mid\n    predicate: produces\n\
+    \    object: condensed\n    mechanism: At the separately tested 1:15 ratio, Alba1\
+    \ produces condensed patches involving multiple\n      DNA segments.\n    directness:\
+    \ DIRECT\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n\
+    \    - reference: PMID:23271660\n      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC3535426/\n\
+    \      snippet: binding of Alba1 stiffens the DNA molecule\n      explanation:\
+    \ Original Figure 1d and AFM classification criteria.\n      cache_path: evidence/PF01918/laurens-2012.txt\n\
+    \      cache_sha256: 9395ecfc22d2dcd0e4af7962c921ad952a43ef05f6766460629a1ef1cc7b244f\n\
+    \  - edge_id: heterodimer-produces-condensation\n    subject: hetero-high\n  \
+    \  predicate: produces\n    object: condensed\n    mechanism: The 1:1 Alba1/Alba2\
+    \ mixture produces condensed structures at 1:7.5; this is not pooled\n      with\
+    \ the stiff/open Alba1-only condition.\n    directness: DIRECT\n    support: OBSERVED\n\
+    \    evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference: PMID:23271660\n\
+    \      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC3535426/\n      snippet:\
+    \ binding of Alba1 stiffens the DNA molecule\n      explanation: Original Figure\
+    \ 1f/j versus 1e.\n      cache_path: evidence/PF01918/laurens-2012.txt\n     \
+    \ cache_sha256: 9395ecfc22d2dcd0e4af7962c921ad952a43ef05f6766460629a1ef1cc7b244f\n\
+    \  - edge_id: f60a-produces-bridges\n    subject: f60a\n    predicate: produces\n\
+    \    object: bridges\n    mechanism: F60A retains bridging at 1:30, excluding\
+    \ a universal loss-of-DNA-interaction interpretation\n      for this mutant.\n\
+    \    directness: DIRECT\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n\
+    \    evidence:\n    - reference: PMID:23271660\n      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC3535426/\n\
+    \      snippet: binding of Alba1 stiffens the DNA molecule\n      explanation:\
+    \ Original Figure 1k/m and Results.\n      cache_path: evidence/PF01918/laurens-2012.txt\n\
+    \      cache_sha256: 9395ecfc22d2dcd0e4af7962c921ad952a43ef05f6766460629a1ef1cc7b244f\n\
+    - graph_id: alba-dna-stiffness-2012\n  title: Alba composition changes measured\
+    \ DNA stiffness\n  scope: Laurens2012 lambda-DNA force-distance experiments with\
+    \ Alba1, Alba1 F60A and Alba1:Alba2 mixture.\n  context: Optical tweezers at about23\
+    \ C; 10 mM Tris pH7.9,1 mM EDTA,3.5 mM DTT,60 mM KCl,10 mM MgCl2.\n    About2-min\
+    \ untensioned incubation. WT addition uses2 uM versus bare DNA; variant comparisons\
+    \ use matched1\n    uM.\n  family_mapping: S. solfataricus P2 Alba1 P60849 sequence\
+    \ version 2, SSO0962, 97 aa; PF01918 10-72 includes\n    K16/K17/F60. This is\
+    \ current reference mapping, not independent historical clone sequencing or proof\n\
+    \    of isolated 10-72 sufficiency. Alba2 Q97ZF4 sequence version 1, SSO6877,\
+    \ 89 aa, PF01918 6-69. The\n    two paralogs are not interchangeable.\n  scope_status:\
+    \ MECHANISTIC\n  taxon: NCBITaxon:273057\n  limitations: Persistence length is\
+    \ fitted from force-distance data, not a directly resolved side-chain\n    relay.\
+    \ F60A and heterodimers still bind/bridge DNA; no absence of all activity is claimed.\
+    \ Figure\n    4 structural arrangement and cooperative-binding fits remain models.\
+    \ The reported association-constant\n    units are not reinterpreted.\n  nodes:\n\
+    \  - node_id: wt\n    label: Add 2 uM Alba1 to lambda DNA\n    node_type: PERTURBATION\n\
+    \    grounding:\n    - UniProtKB:P60849\n  - node_id: f60a\n    label: Replace\
+    \ Alba1 with F60A at matched 1 uM\n    node_type: PERTURBATION\n    grounding:\n\
+    \    - UniProtKB:P60849\n  - node_id: hetero\n    label: Replace Alba1 with Alba1:Alba2\
+    \ mixture at matched 1 uM\n    node_type: PERTURBATION\n    grounding:\n    -\
+    \ UniProtKB:P60849\n    - UniProtKB:Q97ZF4\n  - node_id: stiffness\n    label:\
+    \ Fitted DNA persistence length\n    node_type: STATE\n  edges:\n  - edge_id:\
+    \ wt-increases-stiffness\n    subject: wt\n    predicate: increases\n    object:\
+    \ stiffness\n    mechanism: WT raises persistence length from bare DNA 49+/-2\
+    \ nm to 260+/-30 nm at2 uM, SEM, supporting\n      a stiffness change under these\
+    \ conditions.\n    directness: DIRECT\n    support: OBSERVED\n    evidence_kind:\
+    \ EXPERIMENTAL\n    evidence:\n    - reference: PMID:23271660\n      source_url:\
+    \ https://pmc.ncbi.nlm.nih.gov/articles/PMC3535426/\n      snippet: binding of\
+    \ Alba1 stiffens the DNA molecule\n      explanation: Original Figure 2b/c and\
+    \ mechanical-properties Results.\n      cache_path: evidence/PF01918/laurens-2012.txt\n\
+    \      cache_sha256: 9395ecfc22d2dcd0e4af7962c921ad952a43ef05f6766460629a1ef1cc7b244f\n\
+    \  - edge_id: f60a-lowers-stiffness\n    subject: f60a\n    predicate: decreases\n\
+    \    object: stiffness\n    mechanism: At the matched1 uM point, F60A produces\
+    \ a smaller persistence-length increase than WT;\n      retained binding is not\
+    \ equivalent to WT cooperative filament behavior.\n    directness: DIRECT\n  \
+    \  support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference:\
+    \ PMID:23271660\n      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC3535426/\n\
+    \      snippet: binding of Alba1 stiffens the DNA molecule\n      explanation:\
+    \ Original Figure 2c green squares versus black circles.\n      cache_path: evidence/PF01918/laurens-2012.txt\n\
+    \      cache_sha256: 9395ecfc22d2dcd0e4af7962c921ad952a43ef05f6766460629a1ef1cc7b244f\n\
+    \  - edge_id: heterodimer-lowers-stiffness\n    subject: hetero\n    predicate:\
+    \ decreases\n    object: stiffness\n    mechanism: At the matched1 uM point, the\
+    \ 1:1 mixture produces lower persistence length than Alba1\n      alone. This\
+    \ does not imply the same effect at physiological minor Alba2 fractions.\n   \
+    \ directness: DIRECT\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n\
+    \    evidence:\n    - reference: PMID:23271660\n      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC3535426/\n\
+    \      snippet: binding of Alba1 stiffens the DNA molecule\n      explanation:\
+    \ Original Figure 2c magenta triangles versus black circles; 1:20 mixture negative\
+    \ in\n        Results.\n      cache_path: evidence/PF01918/laurens-2012.txt\n\
+    \      cache_sha256: 9395ecfc22d2dcd0e4af7962c921ad952a43ef05f6766460629a1ef1cc7b244f\n\
+    - graph_id: sis10b-rna-binding-2020\n  title: Sis10b binds RNA and lysine substitutions\
+    \ alter affinity\n  scope: Zhang2020 recombinant Sis10b WT and individual K16A/K17A\
+    \ substitutions.\n  context: Figure1 EMSA:44-bp dsRNA or44-nt ssRNA,30 min at55\
+    \ C,12% native gels at55 C; reported apparent\n    Kd averages three measurements.\n\
+    \  family_mapping: S. islandicus REY15A Sis10b F0NHH1 sequence version 1, SiRe_1125/ADX85192.1,\
+    \ 97 aa,\n    PF01918 10-72. Its reference sequence equals P60849 but the organism\
+    \ and experiments differ. DeltaN12\n    deletes residues 1-12; M20E/L24E/L27E/F60E\
+    \ is one quadruple mutant, not four single substitutions.\n  scope_status: MECHANISTIC\n\
+    \  taxon: NCBITaxon:930945\n  limitations: 'Binding is distinct from RNA unwinding\
+    \ and native growth. No universal high-temperature\n    preference is claimed:\
+    \ lower-temperature assays differ. K17A retains binding, particularly dsRNA,\n\
+    \    and K17R largely retains the WT preference. Mutant folding equivalence is\
+    \ not established.'\n  nodes:\n  - node_id: wt-ds\n    label: WT Sis10b with 44-bp\
+    \ dsRNA\n    node_type: ACTIVITY\n    grounding:\n    - UniProtKB:F0NHH1\n  -\
+    \ node_id: wt-ss\n    label: WT Sis10b with 44-nt ssRNA\n    node_type: ACTIVITY\n\
+    \    grounding:\n    - UniProtKB:F0NHH1\n  - node_id: ds-complex\n    label: Sis10b-dsRNA\
+    \ complexes\n    node_type: STATE\n    grounding:\n    - UniProtKB:F0NHH1\n  -\
+    \ node_id: ss-complex\n    label: Sis10b-ssRNA complexes\n    node_type: STATE\n\
+    \    grounding:\n    - UniProtKB:F0NHH1\n  - node_id: k16a\n    label: K16A substitution\
+    \ under the dsRNA protocol\n    node_type: PERTURBATION\n    grounding:\n    -\
+    \ UniProtKB:F0NHH1\n  - node_id: k17a\n    label: K17A substitution under the\
+    \ ssRNA protocol\n    node_type: PERTURBATION\n    grounding:\n    - UniProtKB:F0NHH1\n\
+    \  - node_id: ds-affinity\n    label: dsRNA-binding affinity\n    node_type: STATE\n\
+    \  - node_id: ss-affinity\n    label: ssRNA-binding affinity\n    node_type: STATE\n\
+    \  edges:\n  - edge_id: wt-binds-dsrna\n    subject: wt-ds\n    predicate: produces\n\
+    \    object: ds-complex\n    mechanism: WT produces shifted dsRNA complexes, with\
+    \ apparent Kd about29.4 nM.\n    directness: DIRECT\n    support: OBSERVED\n \
+    \   evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference: PMID:32761152\n\
+    \      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC7498313/\n      snippet:\
+    \ Sis10b is capable of RNA unfolding/unwinding and strand exchange\n      explanation:\
+    \ Original Figure 1A WT lane series.\n      cache_path: evidence/PF01918/zhang-2020.txt\n\
+    \      cache_sha256: f677ecf56c33d338f883f60f55e8f464e1a2b189aa40fe268d753b21d44be6a9\n\
+    \  - edge_id: wt-binds-ssrna\n    subject: wt-ss\n    predicate: produces\n  \
+    \  object: ss-complex\n    mechanism: WT produces shifted ssRNA complexes, with\
+    \ apparent Kd about5.3 nM at55 C.\n    directness: DIRECT\n    support: OBSERVED\n\
+    \    evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference: PMID:32761152\n\
+    \      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC7498313/\n      snippet:\
+    \ Sis10b is capable of RNA unfolding/unwinding and strand exchange\n      explanation:\
+    \ Original Figure 1B WT lane series.\n      cache_path: evidence/PF01918/zhang-2020.txt\n\
+    \      cache_sha256: f677ecf56c33d338f883f60f55e8f464e1a2b189aa40fe268d753b21d44be6a9\n\
+    \  - edge_id: k16a-lowers-dsrna-affinity\n    subject: k16a\n    predicate: decreases\n\
+    \    object: ds-affinity\n    mechanism: K16A raises dsRNA apparent Kd to about59.3\
+    \ nM versus29.4 nM WT, a modest affinity reduction.\n    directness: DIRECT\n\
+    \    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n    -\
+    \ reference: PMID:32761152\n      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC7498313/\n\
+    \      snippet: Sis10b is capable of RNA unfolding/unwinding and strand exchange\n\
+    \      explanation: Original Figure 1A K16A and WT.\n      cache_path: evidence/PF01918/zhang-2020.txt\n\
+    \      cache_sha256: f677ecf56c33d338f883f60f55e8f464e1a2b189aa40fe268d753b21d44be6a9\n\
+    \  - edge_id: k17a-lowers-ssrna-affinity\n    subject: k17a\n    predicate: decreases\n\
+    \    object: ss-affinity\n    mechanism: K17A raises ssRNA apparent Kd to about53.4\
+    \ nM versus5.3 nM WT, losing the strong ssRNA\n      preference while retaining\
+    \ binding.\n    directness: DIRECT\n    support: OBSERVED\n    evidence_kind:\
+    \ EXPERIMENTAL\n    evidence:\n    - reference: PMID:32761152\n      source_url:\
+    \ https://pmc.ncbi.nlm.nih.gov/articles/PMC7498313/\n      snippet: Sis10b is\
+    \ capable of RNA unfolding/unwinding and strand exchange\n      explanation: Original\
+    \ Figure 1B K17A/WT; Figure 1A K17A dsRNA control.\n      cache_path: evidence/PF01918/zhang-2020.txt\n\
+    \      cache_sha256: f677ecf56c33d338f883f60f55e8f464e1a2b189aa40fe268d753b21d44be6a9\n\
+    - graph_id: sis10b-rna-unwinding-2020\n  title: Sis10b variants change the RNA-unwinding\
+    \ reporter\n  scope: Zhang2020 WT, K17A, deltaN12 and M20E/L24E/L27E/F60E on a\
+    \ forked partial RNA duplex.\n  context: Figure3 molecular beacon:20 uM protein,0.1\
+    \ uM probe,30 min,200 mM Tris pH7.4/10 mM MgCl2; each\n    comparison within the\
+    \ same37 C or55 C condition. Heat-denatured probe normalized to100%.\n  family_mapping:\
+    \ S. islandicus REY15A Sis10b F0NHH1 sequence version 1, SiRe_1125/ADX85192.1,\
+    \ 97 aa,\n    PF01918 10-72. Its reference sequence equals P60849 but the organism\
+    \ and experiments differ. DeltaN12\n    deletes residues 1-12; M20E/L24E/L27E/F60E\
+    \ is one quadruple mutant, not four single substitutions.\n  scope_status: MECHANISTIC\n\
+    \  taxon: NCBITaxon:930945\n  limitations: Fluorescence is an RNA-unwinding proxy,\
+    \ not a directly quantified released-RNA yield. K16A/K17R\n    retain substantial\
+    \ activity. DeltaN12 and quadruple-mutant oligomerization differ from WT, so reduced\n\
+    \    output is not assigned to a specific catalytic relay. Do not join this in-vitro\
+    \ result to growth as\n    an observed intracellular chain.\n  nodes:\n  - node_id:\
+    \ wt\n    label: Add WT Sis10b to the annealed RNA beacon\n    node_type: PERTURBATION\n\
+    \    grounding:\n    - UniProtKB:F0NHH1\n  - node_id: k17a\n    label: Replace\
+    \ WT with K17A\n    node_type: PERTURBATION\n    grounding:\n    - UniProtKB:F0NHH1\n\
+    \  - node_id: dn12\n    label: Replace WT with deltaN12\n    node_type: PERTURBATION\n\
+    \    grounding:\n    - UniProtKB:F0NHH1\n  - node_id: quad\n    label: Replace\
+    \ WT with M20E/L24E/L27E/F60E\n    node_type: PERTURBATION\n    grounding:\n \
+    \   - UniProtKB:F0NHH1\n  - node_id: signal\n    label: Normalized RNA-beacon\
+    \ fluorescence\n    node_type: STATE\n  edges:\n  - edge_id: wt-increases-signal\n\
+    \    subject: wt\n    predicate: increases\n    object: signal\n    mechanism:\
+    \ WT raises fluorescence to35% at37 C and71% at55 C versus annealed controls15/16%,\
+    \ consistent\n      with unwinding.\n    directness: DIRECT\n    support: OBSERVED\n\
+    \    evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference: PMID:32761152\n\
+    \      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC7498313/\n      snippet:\
+    \ Sis10b is capable of RNA unfolding/unwinding and strand exchange\n      explanation:\
+    \ Original Figure 3B, WT and annealed/heat-denatured controls.\n      cache_path:\
+    \ evidence/PF01918/zhang-2020.txt\n      cache_sha256: f677ecf56c33d338f883f60f55e8f464e1a2b189aa40fe268d753b21d44be6a9\n\
+    \  - edge_id: k17a-lowers-signal\n    subject: k17a\n    predicate: decreases\n\
+    \    object: signal\n    mechanism: K17A gives17/25% at37/55 C, below WT35/71%,\
+    \ without proving zero activity at55 C.\n    directness: DIRECT\n    support:\
+    \ OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference: PMID:32761152\n\
+    \      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC7498313/\n      snippet:\
+    \ Sis10b is capable of RNA unfolding/unwinding and strand exchange\n      explanation:\
+    \ Original Figure 3B K17A versus WT.\n      cache_path: evidence/PF01918/zhang-2020.txt\n\
+    \      cache_sha256: f677ecf56c33d338f883f60f55e8f464e1a2b189aa40fe268d753b21d44be6a9\n\
+    \  - edge_id: dn12-lowers-signal\n    subject: dn12\n    predicate: decreases\n\
+    \    object: signal\n    mechanism: DeltaN12 gives fluorescence near the annealed\
+    \ baseline at both temperatures, below WT under\n      matched conditions.\n \
+    \   directness: DIRECT\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n\
+    \    evidence:\n    - reference: PMID:32761152\n      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC7498313/\n\
+    \      snippet: Sis10b is capable of RNA unfolding/unwinding and strand exchange\n\
+    \      explanation: Original Figure 3B deltaN12; Figure 1C assembly qualification.\n\
+    \      cache_path: evidence/PF01918/zhang-2020.txt\n      cache_sha256: f677ecf56c33d338f883f60f55e8f464e1a2b189aa40fe268d753b21d44be6a9\n\
+    \  - edge_id: quad-lowers-signal\n    subject: quad\n    predicate: decreases\n\
+    \    object: signal\n    mechanism: The combined four-residue mutant gives near-baseline\
+    \ signal, not four independently measured\n      single-residue effects.\n   \
+    \ directness: DIRECT\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n\
+    \    evidence:\n    - reference: PMID:32761152\n      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC7498313/\n\
+    \      snippet: Sis10b is capable of RNA unfolding/unwinding and strand exchange\n\
+    \      explanation: Original Figure 3B combined mutant; Figure 1C altered oligomerization.\n\
+    \      cache_path: evidence/PF01918/zhang-2020.txt\n      cache_sha256: f677ecf56c33d338f883f60f55e8f464e1a2b189aa40fe268d753b21d44be6a9\n\
+    - graph_id: sis10b-strand-exchange-2020\n  title: Sis10b promotes RNA strand exchange\n\
+    \  scope: Zhang2020 WT and K17A/deltaN12/quadruple-mutant strand-exchange reactions.\n\
+    \  context: Figure4:400 pM labeled partial duplex plus20 nM unlabeled SA,37 C;30-min\
+    \ protein-dose series\n    and1 uM-protein0-120min time courses. Native PAGE resolves\
+    \ released labeled SA.\n  family_mapping: S. islandicus REY15A Sis10b F0NHH1 sequence\
+    \ version 1, SiRe_1125/ADX85192.1, 97 aa,\n    PF01918 10-72. Its reference sequence\
+    \ equals P60849 but the organism and experiments differ. DeltaN12\n    deletes\
+    \ residues 1-12; M20E/L24E/L27E/F60E is one quadruple mutant, not four single\
+    \ substitutions.\n  scope_status: MECHANISTIC\n  taxon: NCBITaxon:930945\n  limitations:\
+    \ This tests exchange with excess competitor RNA, not ATP-dependent helicase activity.\
+    \ The\n    Methods BSA concentration and fitted rate units are retained as printed\
+    \ in the source ledger rather\n    than silently corrected. No precise novel kinetic\
+    \ constants are derived. K16A/K17R retain substantial\n    activity; multiple\
+    \ binding-defective mutants provide additional controls.\n  nodes:\n  - node_id:\
+    \ wt\n    label: WT Sis10b with labeled duplex and excess unlabeled SA\n    node_type:\
+    \ ACTIVITY\n    grounding:\n    - UniProtKB:F0NHH1\n  - node_id: k17a\n    label:\
+    \ Replace WT with K17A at matched protein concentration\n    node_type: PERTURBATION\n\
+    \    grounding:\n    - UniProtKB:F0NHH1\n  - node_id: dn12\n    label: Replace\
+    \ WT with deltaN12\n    node_type: PERTURBATION\n    grounding:\n    - UniProtKB:F0NHH1\n\
+    \  - node_id: quad\n    label: Replace WT with the quadruple mutant\n    node_type:\
+    \ PERTURBATION\n    grounding:\n    - UniProtKB:F0NHH1\n  - node_id: exchange\n\
+    \    label: Release of labeled SA through strand exchange\n    node_type: PROCESS\n\
+    \  edges:\n  - edge_id: wt-promotes-exchange\n    subject: wt\n    predicate:\
+    \ increases\n    object: exchange\n    mechanism: WT accelerates release of labeled\
+    \ SA above the no-protein reaction in the dose and time-course\n      assays.\n\
+    \    directness: DIRECT\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n\
+    \    evidence:\n    - reference: PMID:32761152\n      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC7498313/\n\
+    \      snippet: Sis10b is capable of RNA unfolding/unwinding and strand exchange\n\
+    \      explanation: Original Figure 4B-D and strand-exchange Methods.\n      cache_path:\
+    \ evidence/PF01918/zhang-2020.txt\n      cache_sha256: f677ecf56c33d338f883f60f55e8f464e1a2b189aa40fe268d753b21d44be6a9\n\
+    \  - edge_id: k17a-lowers-exchange\n    subject: k17a\n    predicate: decreases\n\
+    \    object: exchange\n    mechanism: K17A has about6.6-fold lower apparent exchange\
+    \ rate than WT; activity is reduced, not completely\n      absent.\n    directness:\
+    \ DIRECT\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n\
+    \    - reference: PMID:32761152\n      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC7498313/\n\
+    \      snippet: Sis10b is capable of RNA unfolding/unwinding and strand exchange\n\
+    \      explanation: Original Figure 4C/D K17A versus WT.\n      cache_path: evidence/PF01918/zhang-2020.txt\n\
+    \      cache_sha256: f677ecf56c33d338f883f60f55e8f464e1a2b189aa40fe268d753b21d44be6a9\n\
+    \  - edge_id: dn12-lowers-exchange\n    subject: dn12\n    predicate: decreases\n\
+    \    object: exchange\n    mechanism: DeltaN12 is nearly inactive in the matched\
+    \ time-course assay, with no isolated-Pfam-domain\n      attribution.\n    directness:\
+    \ DIRECT\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n\
+    \    - reference: PMID:32761152\n      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC7498313/\n\
+    \      snippet: Sis10b is capable of RNA unfolding/unwinding and strand exchange\n\
+    \      explanation: Original Figure 4B-D deltaN12.\n      cache_path: evidence/PF01918/zhang-2020.txt\n\
+    \      cache_sha256: f677ecf56c33d338f883f60f55e8f464e1a2b189aa40fe268d753b21d44be6a9\n\
+    \  - edge_id: quad-lowers-exchange\n    subject: quad\n    predicate: decreases\n\
+    \    object: exchange\n    mechanism: The combined M20E/L24E/L27E/F60E protein\
+    \ is nearly inactive relative to WT, with assembly\n      changes remaining an\
+    \ alternative explanation.\n    directness: DIRECT\n    support: OBSERVED\n  \
+    \  evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference: PMID:32761152\n\
+    \      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC7498313/\n      snippet:\
+    \ Sis10b is capable of RNA unfolding/unwinding and strand exchange\n      explanation:\
+    \ Original Figure 4B-D combined mutant; Figure 1C.\n      cache_path: evidence/PF01918/zhang-2020.txt\n\
+    \      cache_sha256: f677ecf56c33d338f883f60f55e8f464e1a2b189aa40fe268d753b21d44be6a9\n\
+    - graph_id: sis10b-native-growth-2020\n  title: Sis10b promoter and complementation\
+    \ changes alter growth\n  scope: Zhang2020 S. islandicus E234-derived NZ1 promoter-replacement\
+    \ strain and pSeSD complementation\n    constructs.\n  context: Figure5 liquid\
+    \ ACVy with arabinose; OD600 growth curves in triplicate. NZ1 is a knockdown retaining\n\
+    \    chromosomal sis10b, not a null. Compare NZ1 with E234, WT-complemented NZ1\
+    \ with NZ1, and each mutant-complemented\n    NZ1 with WT-complemented NZ1.\n\
+    \  family_mapping: S. islandicus REY15A Sis10b F0NHH1 sequence version 1, SiRe_1125/ADX85192.1,\
+    \ 97 aa,\n    PF01918 10-72. Its reference sequence equals P60849 but the organism\
+    \ and experiments differ. DeltaN12\n    deletes residues 1-12; M20E/L24E/L27E/F60E\
+    \ is one quadruple mutant, not four single substitutions.\n  scope_status: PHENOTYPIC\n\
+    \  taxon: NCBITaxon:930945\n  limitations: INDIRECT cellular growth effects do\
+    \ not prove that RNA chaperoning is the causal intracellular\n    intermediate.\
+    \ Immunoblots quantify total residual chromosomal plus plasmid protein, not isolated\
+    \ mutant\n    abundance or folding. K17A/deltaN12 can retain partial rescue; no\
+    \ binary all-or-none essentiality\n    is encoded. K16A/K17R substantially rescue\
+    \ and the triple mutant has no obtained transformant, not\n    a measured growth\
+    \ curve.\n  nodes:\n  - node_id: knockdown\n    label: Replace the native sis10b\
+    \ promoter to produce NZ1\n    node_type: PERTURBATION\n    grounding:\n    -\
+    \ UniProtKB:F0NHH1\n  - node_id: rescue\n    label: Add WT pSeSD-sis10b to NZ1\n\
+    \    node_type: PERTURBATION\n    grounding:\n    - UniProtKB:F0NHH1\n  - node_id:\
+    \ k17a\n    label: Use K17A instead of WT in NZ1 complementation\n    node_type:\
+    \ PERTURBATION\n    grounding:\n    - UniProtKB:F0NHH1\n  - node_id: dn12\n  \
+    \  label: Use deltaN12 instead of WT in NZ1 complementation\n    node_type: PERTURBATION\n\
+    \    grounding:\n    - UniProtKB:F0NHH1\n  - node_id: quad\n    label: Use the\
+    \ quadruple mutant instead of WT in NZ1 complementation\n    node_type: PERTURBATION\n\
+    \    grounding:\n    - UniProtKB:F0NHH1\n  - node_id: growth\n    label: Liquid-culture\
+    \ OD600 trajectory\n    node_type: PROCESS\n  edges:\n  - edge_id: knockdown-lowers-growth\n\
+    \    subject: knockdown\n    predicate: decreases\n    object: growth\n    mechanism:\
+    \ NZ1 reaches a lower OD600 trajectory than parentalE234 under the same arabinose-containing\n\
+    \      conditions.\n    directness: INDIRECT\n    support: OBSERVED\n    evidence_kind:\
+    \ EXPERIMENTAL\n    evidence:\n    - reference: PMID:32761152\n      source_url:\
+    \ https://pmc.ncbi.nlm.nih.gov/articles/PMC7498313/\n      snippet: Sis10b is\
+    \ capable of RNA unfolding/unwinding and strand exchange\n      explanation: Original\
+    \ Figure 5A/B/C; promoter replacement Methods.\n      cache_path: evidence/PF01918/zhang-2020.txt\n\
+    \      cache_sha256: f677ecf56c33d338f883f60f55e8f464e1a2b189aa40fe268d753b21d44be6a9\n\
+    \  - edge_id: wt-rescue-increases-growth\n    subject: rescue\n    predicate:\
+    \ increases\n    object: growth\n    mechanism: WT plasmid complementation restores\
+    \ growth toward parental levels compared with NZ1, providing\n      a gene-specific\
+    \ rescue in this background.\n    directness: INDIRECT\n    support: OBSERVED\n\
+    \    evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference: PMID:32761152\n\
+    \      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC7498313/\n      snippet:\
+    \ Sis10b is capable of RNA unfolding/unwinding and strand exchange\n      explanation:\
+    \ Original Figure 5A WT-Sis10b/NZ1/E234 and total-protein controls.\n      cache_path:\
+    \ evidence/PF01918/zhang-2020.txt\n      cache_sha256: f677ecf56c33d338f883f60f55e8f464e1a2b189aa40fe268d753b21d44be6a9\n\
+    \  - edge_id: k17a-lowers-rescue\n    subject: k17a\n    predicate: decreases\n\
+    \    object: growth\n    mechanism: K17A complementation gives lower growth than\
+    \ WT complementation, despite similar or higher\n      total Sis10b signal. This\
+    \ does not resolve the molecular cause or exclude partial rescue.\n    directness:\
+    \ INDIRECT\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n\
+    \    - reference: PMID:32761152\n      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC7498313/\n\
+    \      snippet: Sis10b is capable of RNA unfolding/unwinding and strand exchange\n\
+    \      explanation: Original Figure 5A matched complementation curves; Figure\
+    \ 5B/C total Sis10b immunoblots.\n      cache_path: evidence/PF01918/zhang-2020.txt\n\
+    \      cache_sha256: f677ecf56c33d338f883f60f55e8f464e1a2b189aa40fe268d753b21d44be6a9\n\
+    \  - edge_id: dn12-lowers-rescue\n    subject: dn12\n    predicate: decreases\n\
+    \    object: growth\n    mechanism: DeltaN12 complementation gives lower growth\
+    \ than WT complementation, despite similar or\n      higher total Sis10b signal.\
+    \ This does not resolve the molecular cause or exclude partial rescue.\n    directness:\
+    \ INDIRECT\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n\
+    \    - reference: PMID:32761152\n      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC7498313/\n\
+    \      snippet: Sis10b is capable of RNA unfolding/unwinding and strand exchange\n\
+    \      explanation: Original Figure 5A matched complementation curves; Figure\
+    \ 5B/C total Sis10b immunoblots.\n      cache_path: evidence/PF01918/zhang-2020.txt\n\
+    \      cache_sha256: f677ecf56c33d338f883f60f55e8f464e1a2b189aa40fe268d753b21d44be6a9\n\
+    \  - edge_id: quad-lowers-rescue\n    subject: quad\n    predicate: decreases\n\
+    \    object: growth\n    mechanism: The combined four-residue mutant complementation\
+    \ gives lower growth than WT complementation,\n      despite similar or higher\
+    \ total Sis10b signal. This does not resolve the molecular cause or exclude\n\
+    \      partial rescue.\n    directness: INDIRECT\n    support: OBSERVED\n    evidence_kind:\
+    \ EXPERIMENTAL\n    evidence:\n    - reference: PMID:32761152\n      source_url:\
+    \ https://pmc.ncbi.nlm.nih.gov/articles/PMC7498313/\n      snippet: Sis10b is\
+    \ capable of RNA unfolding/unwinding and strand exchange\n      explanation: Original\
+    \ Figure 5A matched complementation curves; Figure 5B/C total Sis10b immunoblots.\n\
+    \      cache_path: evidence/PF01918/zhang-2020.txt\n      cache_sha256: f677ecf56c33d338f883f60f55e8f464e1a2b189aa40fe268d753b21d44be6a9\n\
+    - graph_id: rpp25-rpp20-assembly-2010\n  title: Human Rpp25 and Rpp20 form a protein\
+    \ complex\n  scope: Hands-Taylor2010 full-length and double-truncated recombinant\
+    \ human proteins, assayed separately.\n  context: Table2 ITC at25 C in bufferA:10\
+    \ mM phosphate,2.7 mM KCl,137 mM NaCl,pH7,1 mM DTE. Rpp20 titrated\n    into Rpp25;\
+    \ fitted association constants averaged over three measurements.\n  family_mapping:\
+    \ Human RPP25 Q9BUL9 sequence version 1, 199 aa, PF01918 37-100; full 1-199 and\
+    \ truncated\n    25-170 exceed this match. Partner RPP20 O75817 sequence version\
+    \ 2, 140 aa, belongs to PF12328, not\n    PF01918. Author-verified constructs\
+    \ are not independently resequenced here.\n  scope_status: MECHANISTIC\n  taxon:\
+    \ NCBITaxon:9606\n  limitations: Rpp25 tags are removed; Rpp20(35-140) retains\
+    \ its His tag. Some full Rpp20 preparations\n    are refolded, with CD controls.\
+    \ The 25-170 Rpp25 fragment is not isolated PF01918 37-100. Complex\n    formation\
+    \ alone does not establish RNase catalysis or a mandatory in-vivo assembly pathway.\n\
+    \  nodes:\n  - node_id: full\n    label: Full Rpp25 and full Rpp20 together\n\
+    \    node_type: ACTIVITY\n    grounding:\n    - UniProtKB:Q9BUL9\n    - UniProtKB:O75817\n\
+    \  - node_id: trunc\n    label: Rpp25(25-170) and Rpp20(35-140) together\n   \
+    \ node_type: ACTIVITY\n    grounding:\n    - UniProtKB:Q9BUL9\n    - UniProtKB:O75817\n\
+    \  - node_id: full-complex\n    label: Full-length protein heterocomplex\n   \
+    \ node_type: STATE\n    grounding:\n    - UniProtKB:Q9BUL9\n    - UniProtKB:O75817\n\
+    \  - node_id: trunc-complex\n    label: Double-truncated protein heterocomplex\n\
+    \    node_type: STATE\n    grounding:\n    - UniProtKB:Q9BUL9\n    - UniProtKB:O75817\n\
+    \  edges:\n  - edge_id: full-produces-complex\n    subject: full\n    predicate:\
+    \ produces\n    object: full-complex\n    mechanism: The full proteins bind with\
+    \ association constant Kb5.3e7 M^-1 and near1:1 stoichiometry\n      under the\
+    \ ITC protocol.\n    directness: DIRECT\n    support: OBSERVED\n    evidence_kind:\
+    \ EXPERIMENTAL\n    evidence:\n    - reference: PMID:20215441\n      source_url:\
+    \ https://pmc.ncbi.nlm.nih.gov/articles/PMC2896528/\n      snippet: each Rpp20/Rpp25\
+    \ heterodimer binds to one molecule of 50 nt P3 RNA\n      explanation: Table2\
+    \ full Rpp25/Rpp20 row; ITC and construct Methods.\n      cache_path: evidence/PF01918/hands-taylor-2010.txt\n\
+    \      cache_sha256: dd74bce9753535aaa0bd82f00f31badd082eb51cebeff80ff15a1365695b9b36\n\
+    \  - edge_id: trunc-produces-complex\n    subject: trunc\n    predicate: produces\n\
+    \    object: trunc-complex\n    mechanism: The double-truncated pair retains association,\
+    \ Kb4.9e7 M^-1; this supports sufficiency\n      of these larger constructs, not\
+    \ the minimal Pfam interval.\n    directness: DIRECT\n    support: OBSERVED\n\
+    \    evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference: PMID:20215441\n\
+    \      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC2896528/\n      snippet:\
+    \ each Rpp20/Rpp25 heterodimer binds to one molecule of 50 nt P3 RNA\n      explanation:\
+    \ Table2 Rpp25(25-170)/Rpp20(35-140) row; tag and truncation Methods.\n      cache_path:\
+    \ evidence/PF01918/hands-taylor-2010.txt\n      cache_sha256: dd74bce9753535aaa0bd82f00f31badd082eb51cebeff80ff15a1365695b9b36\n\
+    - graph_id: rpp25-mrp-p3-binding-2010\n  title: Preassembled Rpp25-Rpp20 complexes\
+    \ bind MRP P3 RNA\n  scope: Hands-Taylor2010 full-length versus double-truncated\
+    \ human protein complexes with the50-nt RNaseMRP\n    P3 arm.\n  context: Figure5\
+    \ and Table2, bufferA/25 C; preassembled complex20 uM. RNA titrant is170 uM in\
+    \ Methods\n    versus180 uM in Figure5 caption, retained as a minor source discrepancy.\n\
+    \  family_mapping: Human RPP25 Q9BUL9 sequence version 1, 199 aa, PF01918 37-100;\
+    \ full 1-199 and truncated\n    25-170 exceed this match. Partner RPP20 O75817\
+    \ sequence version 2, 140 aa, belongs to PF12328, not\n    PF01918. Author-verified\
+    \ constructs are not independently resequenced here.\n  scope_status: MECHANISTIC\n\
+    \  taxon: NCBITaxon:9606\n  limitations: Individual Rpp20 and Rpp25 have null-to-weak\
+    \ P3 binding under this assay, not universal\n    inability to bind RNA. MRP P3\
+    \ binding does not measure RNA cleavage or RNaseP H1 binding. Association\n  \
+    \  constants are not Kd values. No direct chain from complex assembly to catalysis\
+    \ is inferred.\n  nodes:\n  - node_id: full-rna\n    label: Full Rpp25-Rpp20 complex\
+    \ with P3 RNA\n    node_type: ACTIVITY\n    grounding:\n    - UniProtKB:Q9BUL9\n\
+    \    - UniProtKB:O75817\n  - node_id: trunc-rna\n    label: Double-truncated complex\
+    \ with P3 RNA\n    node_type: ACTIVITY\n    grounding:\n    - UniProtKB:Q9BUL9\n\
+    \    - UniProtKB:O75817\n  - node_id: full-bound\n    label: Full complex bound\
+    \ to P3 RNA\n    node_type: STATE\n    grounding:\n    - UniProtKB:Q9BUL9\n  \
+    \  - UniProtKB:O75817\n  - node_id: trunc-bound\n    label: Truncated complex\
+    \ bound to P3 RNA\n    node_type: STATE\n    grounding:\n    - UniProtKB:Q9BUL9\n\
+    \    - UniProtKB:O75817\n  edges:\n  - edge_id: full-binds-p3\n    subject: full-rna\n\
+    \    predicate: produces\n    object: full-bound\n    mechanism: Preassembled\
+    \ full complex binds P3 with Kb1.3e7 M^-1 and approximately one RNA per heterodimer,\n\
+    \      unlike the weak individual-subunit titrations.\n    directness: DIRECT\n\
+    \    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n    -\
+    \ reference: PMID:20215441\n      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC2896528/\n\
+    \      snippet: each Rpp20/Rpp25 heterodimer binds to one molecule of 50 nt P3\
+    \ RNA\n      explanation: Original Figure5A-C/E-G/J and Table2 full-complex/P3\
+    \ row.\n      cache_path: evidence/PF01918/hands-taylor-2010.txt\n      cache_sha256:\
+    \ dd74bce9753535aaa0bd82f00f31badd082eb51cebeff80ff15a1365695b9b36\n  - edge_id:\
+    \ trunc-binds-p3\n    subject: trunc-rna\n    predicate: produces\n    object:\
+    \ trunc-bound\n    mechanism: The double-truncated complex retains P3 binding\
+    \ at Kb6.3e6 M^-1. Its lower affinity is\n      not proof of a particular terminal-residue\
+    \ contact.\n    directness: DIRECT\n    support: OBSERVED\n    evidence_kind:\
+    \ EXPERIMENTAL\n    evidence:\n    - reference: PMID:20215441\n      source_url:\
+    \ https://pmc.ncbi.nlm.nih.gov/articles/PMC2896528/\n      snippet: each Rpp20/Rpp25\
+    \ heterodimer binds to one molecule of 50 nt P3 RNA\n      explanation: Original\
+    \ Figure5D/H and Table2 truncated-complex/P3 row.\n      cache_path: evidence/PF01918/hands-taylor-2010.txt\n\
+    \      cache_sha256: dd74bce9753535aaa0bd82f00f31badd082eb51cebeff80ff15a1365695b9b36\n\
+    - graph_id: pfalba3-tare6-binding-2023\n  title: PfAlba3 binds TARE6 and a double\
+    \ substitution lowers affinity\n  scope: Banerjee2023 whole untagged WT PfAlba3\
+    \ and K22/23R double mutant.\n  context: Figures1A/B and4C/D SPR on79-bp biotin-TARE6\
+    \ DNA,20 mM Tris pH7.5/100 mM NaCl, triplicate technical\n    measurements; reference\
+    \ surface subtraction.\n  family_mapping: P. falciparum 3D7 PfAlba3 Q8IJX8 sequence\
+    \ version 1, PF3D7_1006200 (older Pf10_0063),\n    107 aa, PF01918 14-83. K22/K23/K32\
+    \ lie within the match. Whole-protein effects do not establish isolated-domain\n\
+    \    sufficiency or catalytic microsteps.\n  scope_status: MECHANISTIC\n  taxon:\
+    \ NCBITaxon:36329\n  limitations: Apparent binding constants and Hill coefficients\
+    \ do not identify an atomic binding relay.\n    The SPR mutant is the double substitution,\
+    \ not independent K22R and K23R assays. DNA binding alone\n    does not prove\
+    \ telomeric silencing or a DNA-repair role.\n  nodes:\n  - node_id: wt\n    label:\
+    \ WT PfAlba3 with TARE6 probe\n    node_type: ACTIVITY\n    grounding:\n    -\
+    \ UniProtKB:Q8IJX8\n  - node_id: bound\n    label: PfAlba3-TARE6 complex\n   \
+    \ node_type: STATE\n    grounding:\n    - UniProtKB:Q8IJX8\n  - node_id: double\n\
+    \    label: K22/23R double substitution\n    node_type: PERTURBATION\n    grounding:\n\
+    \    - UniProtKB:Q8IJX8\n  - node_id: affinity\n    label: Apparent TARE6-binding\
+    \ affinity\n    node_type: STATE\n  edges:\n  - edge_id: wt-binds-tare6\n    subject:\
+    \ wt\n    predicate: produces\n    object: bound\n    mechanism: WT binds the\
+    \ immobilized probe with reported apparent Kd304.9 nM and Hill1.79.\n    directness:\
+    \ DIRECT\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n\
+    \    - reference: PMID:36947546\n      source_url: https://doi.org/10.1016/j.celrep.2023.112292\n\
+    \      snippet: PfAlba3 exhibits hydrolytic cleavage mechanism\n      explanation:\
+    \ Figures1A/B, SPR Methods and TableS1 TARE6.\n      cache_path: evidence/PF01918/banerjee-2023.txt\n\
+    \      cache_sha256: a34b731777e7104df3e69578f689b8437a905a0268a3d7bf9243d883e8e3958b\n\
+    \  - edge_id: double-lowers-affinity\n    subject: double\n    predicate: decreases\n\
+    \    object: affinity\n    mechanism: K22/23R raises apparent Kd to821.22 nM versus304.9\
+    \ nM WT; Hill0.98 differs from WT1.79.\n      This is not direct evidence of a\
+    \ catalytic lysine.\n    directness: DIRECT\n    support: OBSERVED\n    evidence_kind:\
+    \ EXPERIMENTAL\n    evidence:\n    - reference: PMID:36947546\n      source_url:\
+    \ https://doi.org/10.1016/j.celrep.2023.112292\n      snippet: PfAlba3 exhibits\
+    \ hydrolytic cleavage mechanism\n      explanation: Original Figure4C/D compared\
+    \ with Figure1A/B.\n      cache_path: evidence/PF01918/banerjee-2023.txt\n   \
+    \   cache_sha256: a34b731777e7104df3e69578f689b8437a905a0268a3d7bf9243d883e8e3958b\n\
+    - graph_id: pfalba3-abasic-cleavage-2023\n  title: PfAlba3 cleaves abasic and\
+    \ THF-containing DNA probes\n  scope: Banerjee2023 WT and K22/23R untagged PfAlba3\
+    \ on defined oligonucleotides.\n  context: Figures4E-G and5E/F:author-labeled28mers\
+    \ AP28/THF28,0.1 pmol probe,5 ug WT enzyme,20 ul10 mM\n    Tris pH7.5/2.5 mM MgCl2/0.5\
+    \ mM CaCl2,37 C for1h. Double-mutant comparison includes matched5 ug. Denaturing\n\
+    \    PAGE resolves labeled products.\n  family_mapping: P. falciparum 3D7 PfAlba3\
+    \ Q8IJX8 sequence version 1, PF3D7_1006200 (older Pf10_0063),\n    107 aa, PF01918\
+    \ 14-83. K22/K23/K32 lie within the match. Whole-protein effects do not establish\
+    \ isolated-domain\n    sufficiency or catalytic microsteps.\n  scope_status: MECHANISTIC\n\
+    \  taxon: NCBITaxon:36329\n  limitations: Major product migration and THF processing\
+    \ support hydrolytic cleavage, not a directly\n    observed lysine Schiff-base\
+    \ intermediate. C28 is not cleaved under this protocol; other damaged substrates\n\
+    \    are not excluded. EndoIII/IV standards use their own buffers. TableS1 U28\
+    \ length notation is inconsistent.\n    These high-protein in-vitro assays do\
+    \ not establish native parasite BER or survival.\n  nodes:\n  - node_id: ap-reaction\n\
+    \    label: WT PfAlba3 with AP28 and divalent-ion buffer\n    node_type: ACTIVITY\n\
+    \    grounding:\n    - UniProtKB:Q8IJX8\n  - node_id: thf-reaction\n    label:\
+    \ WT PfAlba3 with THF28 and divalent-ion buffer\n    node_type: ACTIVITY\n   \
+    \ grounding:\n    - UniProtKB:Q8IJX8\n  - node_id: ap-product\n    label: Shorter\
+    \ AP28 cleavage products\n    node_type: STATE\n  - node_id: thf-product\n   \
+    \ label: Shorter THF28 cleavage product\n    node_type: STATE\n  - node_id: double\n\
+    \    label: Replace WT with K22/23R under the THF28 protocol\n    node_type: PERTURBATION\n\
+    \    grounding:\n    - UniProtKB:Q8IJX8\n  - node_id: cleavage\n    label: THF28\
+    \ cleavage extent\n    node_type: PROCESS\n  edges:\n  - edge_id: wt-cleaves-ap28\n\
+    \    subject: ap-reaction\n    predicate: produces\n    object: ap-product\n \
+    \   mechanism: The reaction generates a major shorter product migrating with EndoIV\
+    \ product and minor\n      products; it is not a perfectly exclusive single-cut\
+    \ assay.\n    directness: DIRECT\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n\
+    \    evidence:\n    - reference: PMID:36947546\n      source_url: https://doi.org/10.1016/j.celrep.2023.112292\n\
+    \      snippet: PfAlba3 exhibits hydrolytic cleavage mechanism\n      explanation:\
+    \ Original Figure4E; AP-endonuclease Methods.\n      cache_path: evidence/PF01918/banerjee-2023.txt\n\
+    \      cache_sha256: a34b731777e7104df3e69578f689b8437a905a0268a3d7bf9243d883e8e3958b\n\
+    \  - edge_id: wt-cleaves-thf28\n    subject: thf-reaction\n    predicate: produces\n\
+    \    object: thf-product\n    mechanism: WT processes the synthetic THF site,\
+    \ supporting hydrolytic cleavage rather than solely\n      AP-lyase chemistry;\
+    \ unmodified C28 remains a negative.\n    directness: DIRECT\n    support: OBSERVED\n\
+    \    evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference: PMID:36947546\n\
+    \      source_url: https://doi.org/10.1016/j.celrep.2023.112292\n      snippet:\
+    \ PfAlba3 exhibits hydrolytic cleavage mechanism\n      explanation: Original\
+    \ Figure4F/G and Figure5E.\n      cache_path: evidence/PF01918/banerjee-2023.txt\n\
+    \      cache_sha256: a34b731777e7104df3e69578f689b8437a905a0268a3d7bf9243d883e8e3958b\n\
+    \  - edge_id: double-lowers-thf-cleavage\n    subject: double\n    predicate:\
+    \ decreases\n    object: cleavage\n    mechanism: The double mutant processes\
+    \ less THF28 than WT at matched5 ug and remains incomplete even\n      at higher\
+    \ doses. This is not complete loss of activity or a single-residue THF result.\n\
+    \    directness: DIRECT\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n\
+    \    evidence:\n    - reference: PMID:36947546\n      source_url: https://doi.org/10.1016/j.celrep.2023.112292\n\
+    \      snippet: PfAlba3 exhibits hydrolytic cleavage mechanism\n      explanation:\
+    \ Original Figure5F, WT5 ug versus K22/23R2.5/5/10/20 ug; caption.\n      cache_path:\
+    \ evidence/PF01918/banerjee-2023.txt\n      cache_sha256: a34b731777e7104df3e69578f689b8437a905a0268a3d7bf9243d883e8e3958b\n\
+    - graph_id: pfalba3-plasmid-cleavage-2023\n  title: PfAlba3 lysine variants reduce\
+    \ extensive plasmid cleavage\n  scope: Banerjee2023 WT, K22R, K23R and K22/23R\
+    \ tested separately on pBR322.\n  context: Original Figures4A/B:0.5 ug pBR322\
+    \ and5 ug enzyme; WT appears in Figure4A and the lysine variants\n    in Figure4B.\
+    \ Standard DNase buffer10 mM Tris pH7.5,2.5 mM MgCl2,0.5 mM CaCl2,37 C/1h. Agarose-gel\n\
+    \    DNA degradation endpoint; qualitative comparison across the separate panels.\n\
+    \  family_mapping: P. falciparum 3D7 PfAlba3 Q8IJX8 sequence version 1, PF3D7_1006200\
+    \ (older Pf10_0063),\n    107 aa, PF01918 14-83. K22/K23/K32 lie within the match.\
+    \ Whole-protein effects do not establish isolated-domain\n    sufficiency or catalytic\
+    \ microsteps.\n  scope_status: MECHANISTIC\n  taxon: NCBITaxon:36329\n  limitations:\
+    \ Residual nicked/linear products remain for the lysine variants; reduced extensive\
+    \ degradation\n    is not no cleavage. Plasmid lesions/topology differ from defined\
+    \ AP28/THF28. Gel-refolding controls\n    reduce contamination concerns but are\
+    \ not independent replication. These effects do not identify K22\n    or K23 as\
+    \ the catalytic nucleophile.\n  nodes:\n  - node_id: wt\n    label: WT PfAlba3\
+    \ with plasmid and metal-ion buffer\n    node_type: ACTIVITY\n    grounding:\n\
+    \    - UniProtKB:Q8IJX8\n  - node_id: fragments\n    label: Extensive pBR322 fragmentation\n\
+    \    node_type: STATE\n  - node_id: k22r\n    label: K22R substitution in the\
+    \ plasmid assay\n    node_type: PERTURBATION\n    grounding:\n    - UniProtKB:Q8IJX8\n\
+    \  - node_id: k23r\n    label: K23R substitution in the plasmid assay\n    node_type:\
+    \ PERTURBATION\n    grounding:\n    - UniProtKB:Q8IJX8\n  - node_id: k22-23r\n\
+    \    label: K22/23R substitution in the plasmid assay\n    node_type: PERTURBATION\n\
+    \    grounding:\n    - UniProtKB:Q8IJX8\n  edges:\n  - edge_id: wt-fragments-plasmid\n\
+    \    subject: wt\n    predicate: produces\n    object: fragments\n    mechanism:\
+    \ WT-containing reaction yields extensive loss of intact plasmid and shorter products\
+    \ relative\n      to plasmid alone.\n    directness: DIRECT\n    support: OBSERVED\n\
+    \    evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference: PMID:36947546\n\
+    \      source_url: https://doi.org/10.1016/j.celrep.2023.112292\n      snippet:\
+    \ PfAlba3 exhibits hydrolytic cleavage mechanism\n      explanation: Original\
+    \ Figure4A WT lane, Figure4B plasmid-only lane1, and Figure2F WT/refolding controls;\n\
+    \        nuclease Methods. WT is not a labeled lane in Figure4B.\n      cache_path:\
+    \ evidence/PF01918/banerjee-2023.txt\n      cache_sha256: a34b731777e7104df3e69578f689b8437a905a0268a3d7bf9243d883e8e3958b\n\
+    \  - edge_id: k22r-lowers-fragmentation\n    subject: k22r\n    predicate: decreases\n\
+    \    object: fragments\n    mechanism: K22R reduces extensive plasmid degradation\
+    \ under the matched protocol while retaining nicking/linear\n      products. The\
+    \ single and double constructs are distinguished.\n    directness: DIRECT\n  \
+    \  support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference:\
+    \ PMID:36947546\n      source_url: https://doi.org/10.1016/j.celrep.2023.112292\n\
+    \      snippet: PfAlba3 exhibits hydrolytic cleavage mechanism\n      explanation:\
+    \ Original Figure4B K22R lane and Supplement TableS2 corresponding mutant primers.\n\
+    \      cache_path: evidence/PF01918/banerjee-2023.txt\n      cache_sha256: a34b731777e7104df3e69578f689b8437a905a0268a3d7bf9243d883e8e3958b\n\
+    \  - edge_id: k23r-lowers-fragmentation\n    subject: k23r\n    predicate: decreases\n\
+    \    object: fragments\n    mechanism: K23R reduces extensive plasmid degradation\
+    \ under the matched protocol while retaining nicking/linear\n      products. The\
+    \ single and double constructs are distinguished.\n    directness: DIRECT\n  \
+    \  support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference:\
+    \ PMID:36947546\n      source_url: https://doi.org/10.1016/j.celrep.2023.112292\n\
+    \      snippet: PfAlba3 exhibits hydrolytic cleavage mechanism\n      explanation:\
+    \ Original Figure4B K23R lane and Supplement TableS2 corresponding mutant primers.\n\
+    \      cache_path: evidence/PF01918/banerjee-2023.txt\n      cache_sha256: a34b731777e7104df3e69578f689b8437a905a0268a3d7bf9243d883e8e3958b\n\
+    \  - edge_id: k22-23r-lowers-fragmentation\n    subject: k22-23r\n    predicate:\
+    \ decreases\n    object: fragments\n    mechanism: K22/23R reduces extensive plasmid\
+    \ degradation under the matched protocol while retaining\n      nicking/linear\
+    \ products. The single and double constructs are distinguished.\n    directness:\
+    \ DIRECT\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n\
+    \    - reference: PMID:36947546\n      source_url: https://doi.org/10.1016/j.celrep.2023.112292\n\
+    \      snippet: PfAlba3 exhibits hydrolytic cleavage mechanism\n      explanation:\
+    \ Original Figure4B K22/23R lane and Supplement TableS2 corresponding mutant primers.\n\
+    \      cache_path: evidence/PF01918/banerjee-2023.txt\n      cache_sha256: a34b731777e7104df3e69578f689b8437a905a0268a3d7bf9243d883e8e3958b\n\
+    - graph_id: pfalba3-pat-sir2-assays-2023\n  title: Acetylation and Sir2 treatments\
+    \ alter distinct PfAlba3 readouts\n  scope: Banerjee2023 in-vitro archaeal Pat\
+    \ acetylation of parasite PfAlba3 and a separate PfSir2a treatment\n    of acetylated\
+    \ protein.\n  context: Acetylation:20 ug PfAlba3,5 ug SSO2813 Pat plus acetyl-CoA,20\
+    \ ul10 mM Tris pH8/150 mM NaCl,65\n    C/1h. AP28 assay in SupplementS5C at37\
+    \ C/1h. Deacetylation:10 ug each protein,50 ul50 mM Tris pH8/4\n    mM MgCl2/0.2\
+    \ mM DTT,37 C/2h; published Methods prints500 mM NAD+, an unresolved unit issue.\n\
+    \  family_mapping: P. falciparum 3D7 PfAlba3 Q8IJX8 sequence version 1, PF3D7_1006200\
+    \ (older Pf10_0063),\n    107 aa, PF01918 14-83. K22/K23/K32 lie within the match.\
+    \ Whole-protein effects do not establish isolated-domain\n    sufficiency or catalytic\
+    \ microsteps.\n  scope_status: MECHANISTIC\n  taxon: NCBITaxon:36329\n  limitations:\
+    \ Pat is a heterologous enzyme, not an identified parasite acetyltransferase.\
+    \ The mixed K23/K32\n    acetylation treatment does not isolate a K23-only cleavage\
+    \ effect. Sir2 readout is loss of an acetyl-specific\n    antibody signal, not\
+    \ direct quantification of a deacetylated product or demonstrated recovery of\
+    \ nuclease\n    activity. Colocalization is not an intracellular causal interaction.\
+    \ The NAD unit is not silently\n    corrected to500 uM.\n  nodes:\n  - node_id:\
+    \ pat\n    label: PfAlba3 plus Pat and acetyl-CoA\n    node_type: ACTIVITY\n \
+    \   grounding:\n    - UniProtKB:Q8IJX8\n  - node_id: acetylated\n    label: PfAlba3\
+    \ bearing K23 and/or K32 acetylation\n    node_type: STATE\n    grounding:\n \
+    \   - UniProtKB:Q8IJX8\n  - node_id: pretreatment\n    label: Use the acetylation-treated\
+    \ preparation in the AP28 assay\n    node_type: PERTURBATION\n    grounding:\n\
+    \    - UniProtKB:Q8IJX8\n  - node_id: cleavage\n    label: AP28 cleavage extent\n\
+    \    node_type: PROCESS\n  - node_id: sir2\n    label: Treat acetylated PfAlba3\
+    \ with PfSir2a and NAD\n    node_type: PERTURBATION\n  - node_id: signal\n   \
+    \ label: K23-acetylated-PfAlba3 immunoblot signal\n    node_type: STATE\n    grounding:\n\
+    \    - UniProtKB:Q8IJX8\n  edges:\n  - edge_id: pat-produces-acetylated-protein\n\
+    \    subject: pat\n    predicate: produces\n    object: acetylated\n    mechanism:\
+    \ MS/MS of the treated protein identifies singly and doubly acetylated peptide\
+    \ forms at K23\n      and K32; this is a mixed-product preparation.\n    directness:\
+    \ DIRECT\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n\
+    \    - reference: PMID:36947546\n      source_url: https://doi.org/10.1016/j.celrep.2023.112292\n\
+    \      snippet: PfAlba3 exhibits hydrolytic cleavage mechanism\n      explanation:\
+    \ Original Figure6 and SupplementS5D; acetylation/MS Methods.\n      cache_path:\
+    \ evidence/PF01918/banerjee-2023.txt\n      cache_sha256: a34b731777e7104df3e69578f689b8437a905a0268a3d7bf9243d883e8e3958b\n\
+    \  - edge_id: acetylation-lowers-ap-cleavage\n    subject: pretreatment\n    predicate:\
+    \ decreases\n    object: cleavage\n    mechanism: The treated preparation cleaves\
+    \ less AP28 than untreated PfAlba3 under the paired assay;\n      site-specific\
+    \ causality remains unresolved.\n    directness: DIRECT\n    support: OBSERVED\n\
+    \    evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference: PMID:36947546\n\
+    \      source_url: https://doi.org/10.1016/j.celrep.2023.112292\n      snippet:\
+    \ PfAlba3 exhibits hydrolytic cleavage mechanism\n      explanation: Original\
+    \ SupplementS5C, PfAlba3 versus Ac-PfAlba3 lanes.\n      cache_path: evidence/PF01918/banerjee-2023.txt\n\
+    \      cache_sha256: a34b731777e7104df3e69578f689b8437a905a0268a3d7bf9243d883e8e3958b\n\
+    \  - edge_id: sir2-lowers-acetyl-signal\n    subject: sir2\n    predicate: decreases\n\
+    \    object: signal\n    mechanism: PfSir2a treatment decreases acetyl-specific\
+    \ immunoblot signal relative to untreated acetylated\n      protein. This measured\
+    \ signal supports deacetylation but is not encoded as observed nuclease restoration.\n\
+    \    directness: DIRECT\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n\
+    \    evidence:\n    - reference: PMID:36947546\n      source_url: https://doi.org/10.1016/j.celrep.2023.112292\n\
+    \      snippet: PfAlba3 exhibits hydrolytic cleavage mechanism\n      explanation:\
+    \ Original Figure7C/D and deacetylation Methods; SupplementS6 antibody specificity.\n\
+    \      cache_path: evidence/PF01918/banerjee-2023.txt\n      cache_sha256: a34b731777e7104df3e69578f689b8437a905a0268a3d7bf9243d883e8e3958b\n\
+    - graph_id: pfalba3-peptide-deacetylation-2012\n  title: PfSir2A deacetylates\
+    \ two defined PfAlba3-derived peptides\n  scope: Goyal2012 synthetic PfAlba3 residues7-29\
+    \ separately acetylated atK22 orK23, with recombinant\n    PfSir2A.\n  context:\
+    \ Figure5 HPLC;10 ug peptide,2.5-10 ug PfSir2A,50 ul50 mM Tris pH8,4 mM MgCl2,0.2\
+    \ mM DTT,37 C,4-6h\n    (introductory Methods says6h); NAD20/100/500 uM. Each\
+    \ edge uses the joint enzyme/NAD reaction and\n    its minus-NAD control.\n  family_mapping:\
+    \ P. falciparum 3D7 PfAlba3 Q8IJX8 sequence version 1, PF3D7_1006200 (older Pf10_0063),\n\
+    \    107 aa, PF01918 14-83. K22/K23/K32 lie within the match. Whole-protein effects\
+    \ do not establish isolated-domain\n    sufficiency or catalytic microsteps. The\
+    \ synthetic7-29 peptide contains only part of14-83 and is not\n    a complete\
+    \ domain or whole-protein assay.\n  scope_status: MECHANISTIC\n  taxon: NCBITaxon:36329\n\
+    \  limitations: No physiological peptide substrate or equivalent whole-protein\
+    \ efficiencies are claimed.\n    At500 uM NAD the reported conversion favors K22\
+    \ (about60%) overK23 (less than20%), but K23 conversion\n    is not absent. Product\
+    \ identity is reported MS-confirmed; supplementary raw MS panels were not independently\n\
+    \    checked. Do not merge with the distinct Banerjee2023 full-protein protocol.\n\
+    \  nodes:\n  - node_id: k22-reaction\n    label: K22-acetylated peptide with PfSir2A\
+    \ and NAD\n    node_type: ACTIVITY\n  - node_id: k23-reaction\n    label: K23-acetylated\
+    \ peptide with PfSir2A and NAD\n    node_type: ACTIVITY\n  - node_id: k22-product\n\
+    \    label: Deacetylated product from the K22-acetylated substrate\n    node_type:\
+    \ STATE\n  - node_id: k23-product\n    label: Deacetylated product from the K23-acetylated\
+    \ substrate\n    node_type: STATE\n  edges:\n  - edge_id: sir2-deacetylates-k22-peptide\n\
+    \    subject: k22-reaction\n    predicate: produces\n    object: k22-product\n\
+    \    mechanism: The joint reaction produces a new HPLC peak assigned to deacetylated\
+    \ peptide, increasing\n      with NAD; enzyme without NAD lacks the new peak.\n\
+    \    directness: DIRECT\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n\
+    \    evidence:\n    - reference: PMID:22006844\n      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC3273813/\n\
+    \      snippet: deacetylation was selectively favored at K22\n      explanation:\
+    \ Original Figure5A-E, deacetylation Methods and reported product MS assignment.\n\
+    \      cache_path: evidence/PF01918/goyal-2012.txt\n      cache_sha256: f4eff880ac21de51496f03046becd9b5ffe61e609a518770cbc6a30559cf0530\n\
+    \  - edge_id: sir2-deacetylates-k23-peptide\n    subject: k23-reaction\n    predicate:\
+    \ produces\n    object: k23-product\n    mechanism: A smaller deacetylated-product\
+    \ peak appears for the K23-acetylated peptide with enzyme\n      and NAD; lower\
+    \ conversion is not absence of deacetylation.\n    directness: DIRECT\n    support:\
+    \ OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference: PMID:22006844\n\
+    \      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC3273813/\n      snippet:\
+    \ deacetylation was selectively favored at K22\n      explanation: Original Figure5F-J,\
+    \ especially500 uM NAD, and matching minus-NAD control.\n      cache_path: evidence/PF01918/goyal-2012.txt\n\
+    \      cache_sha256: f4eff880ac21de51496f03046becd9b5ffe61e609a518770cbc6a30559cf0530\n\
+    curation_events:\n- timestamp: '2026-10-12T01:08:10Z'\n  curator: Codex\n  action:\
+    \ CREATE\n  outcome: changed\n  summary: Curate Alba DUF78 DNA, RNA and nuclease\
+    \ assay graphs with separate protein and PTM contexts\n  history_record: history/records/PF01918/2026-10-12T010810Z-codex-f7107f.yaml\n\
+    \  event_index: 0\n  llm_assisted: true\n- timestamp: '2026-10-12T01:19:43Z'\n\
+    \  curator: Codex\n  action: REVIEW\n  outcome: needs_followup\n  summary: Review\
+    \ scoped Alba graphs and preserve native PTM, construct and family-coverage gaps\n\
+    \  history_record: history/records/PF01918/2026-10-12T011943Z-codex-d7d8d8.yaml\n\
+    \  event_index: 0\n  llm_assisted: true\n- timestamp: '2026-10-12T01:24:42Z'\n\
+    \  curator: Codex\n  action: EDIT\n  outcome: changed\n  summary: Use assay-specific\
+    \ DNA-binding quotation for five Alba edges\n  history_record: history/records/PF01918/2026-10-12T012442Z-codex-a12bec.yaml\n\
+    \  event_index: 0\n  llm_assisted: true\n- timestamp: '2026-10-12T01:29:21Z'\n\
+    \  curator: Codex\n  action: REVIEW\n  outcome: needs_followup\n  summary: Retain\
+    \ successor Alba review with assay-specific DNA-binding quotations\n  history_record:\
+    \ history/records/PF01918/2026-10-12T012921Z-codex-691a7b.yaml\n  event_index:\
+    \ 0\n  llm_assisted: true\n- timestamp: '2026-10-18T02:54:46Z'\n  curator: Antigravity\n\
+    \  action: EDIT\n  outcome: changed\n  summary: Ground causal graph gene and protein\
+    \ nodes in PF01918 with verified UniProtKB accessions (UniProtKB:P60849,\n   \
+    \ UniProtKB:Q97ZF4, UniProtKB:F0NHH1, UniProtKB:Q9BUL9, UniProtKB:O75817, UniProtKB:Q8IJX8)\n\
+    \  history_record: history/records/PF01918/2026-10-18T025446Z-antigravity-965f18.yaml\n\
+    \  event_index: 0\n  llm_assisted: true\n- timestamp: '2026-10-23T07:48:08Z'\n\
+    \  curator: Antigravity\n  action: EDIT\n  outcome: changed\n  summary: Ground\
+    \ Alba acetylation product nodes in ssoalba-pat-acetylation-2005 to UniProtKB:P60849\n\
+    \  history_record: history/records/PF01918/2026-10-23T074808Z-antigravity-191803.yaml\n\
+    \  event_index: 0\n  llm_assisted: true\n"
+  summary: Byte-exact projection retained at save for digest verification, not scientific
+    assessment.
+assessments:
+- assessment_id: member-identity
+  area: identity
+  topic: Protein, domain and experimental scope
+  outcome: supported
+  summary: Frozen PF01918/Alba/IPR002775 and former DUF78 mapping are preserved. P60849v2
+    and F0NHH1v1 map10-72 but represent different organisms; Q97ZF4v1 maps6-69, human
+    Q9BUL9v1 maps37-100 and parasite Q8IJX8v1 maps14-83. Human Rpp20 O75817 belongs
+    to PF12328, not PF01918. Reference residues and the PfAlba3 7-29 peptide match
+    inspected sequences; historical clones and AAK41236 alternative initiation are
+    not silently equated with current references.
+  target_ids:
+  - PF01918
+  evidence_ids:
+  - identity
+  - primary
+  - bell
+  - marsh
+  - laurens
+  - cao
+  - zhang
+  - hands
+  - goyal
+  - coverage
+  - bell-binding-quotation
+- assessment_id: causal-scope
+  area: graph
+  topic: Directed effects and limits
+  outcome: supported
+  summary: Every edge has a resolved endpoint, directional predicate, assay-specific
+    mechanism, minimal verified quotation and hash-anchored evidence. DNA binding,
+    architecture and stiffness are separate from transcription; Sis10b biochemical
+    effects are not joined to growth as an observed pathway. Rpp25 complex/P3 assembly
+    does not assert RNA cleavage. PfAlba3 single-mutant plasmid effects are distinct
+    from double-mutant SPR/THF assays and from peptide deacetylation. The immunoblot
+    effect is a measured signal decrease, not direct product chemistry or observed
+    nuclease rescue. Cross-panel WT plasmid comparison, residual activity, mixed acetylation
+    sites, tags and printed-unit discrepancies are stated. Rechecked all five new
+    quotations against the Figure3 source and preserved the earlier transcript-specific
+    quotation only for transcription edges.
+  target_ids:
+  - PF01918
+  evidence_ids:
+  - primary
+  - native
+  - bell
+  - marsh
+  - laurens
+  - cao
+  - zhang
+  - hands
+  - goyal
+  - coverage
+  - bell-binding-quotation
+- assessment_id: remaining-coverage
+  area: completeness
+  topic: Remaining family coverage
+  outcome: concern
+  summary: Coverage is limited to the explicitly inspected experiments, not all8285
+    frozen proteins or all49 current reviewed UniProt entries. Cao2018 is primary-abstract
+    counterevidence with inaccessible full text. Additional archaeal topology/RNA,
+    eukaryotic Pop6/plant/parasite contexts, cross-species nuclease constructs, author-core
+    boundaries, historical tags/clones and Goyal2012 supplementary transcription/MS
+    remain open.
+  target_ids:
+  - PF01918
+  evidence_ids:
+  - primary
+- assessment_id: cycle2-partner-grounding-verification
+  area: identity
+  topic: Cycle 2 causal-graph partner and substrate protein grounding
+  outcome: supported
+  summary: 'Stage 2 (PR #343) grounded Methanocaldococcus jannaschii EF-1alpha (UniProtKB:Q58635)
+    in mj0062-ef1a-gtp-dependence-2011 and Saccharomyces cerevisiae eEF1A/Tef1 (UniProtKB:P02994)
+    in tvg150-diphthamide-requirement-2011.'
+  target_ids:
+  - PF01918
+  evidence_ids:
+  - stage4-prior-review
+findings:
+- finding_id: additional-contexts
+  issue_key: pf01918-causal-context-coverage
+  category: completeness
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Resolve native PTM and construct gaps, then extend Alba-family contexts
+  description: Inspect Cao2018 full PTM spectra/conditions; resolve Banerjee NAD and
+    U28 notation, historical AAK41236 start and exact core/cross-species constructs.
+    Curate remaining experimentally mapped members and Goyal2012 supplementary contexts
+    with native versus in-vitro and peptide versus whole-protein boundaries. Do not
+    infer family-wide DNA/RNA function, native BER, drug targeting or a conserved
+    acetylation switch from this partial pass.
+  target_ids:
+  - PF01918
+  field_paths:
+  - causal_graphs
+  evidence_ids:
+  - primary
+  - identity
+  - bell
+  - marsh
+  - laurens
+  - cao
+  - zhang
+  - hands
+  - goyal
+  - coverage
+  - bell-binding-quotation
+  owner_paths:
+  - repository: CultureBotAI/DUFMech
+    path: curation/families/PF01918.yaml
+    role: Human-owned scientific overlay
+  previous_occurrences:
+  - repository: CultureBotAI/DUFMech
+    review_id: 20261012T012924Z-pf01918-assay-specific-dna-evidence-and-alba-contexts
+    finding_id: additional-contexts
+actions:
+- action_id: extend-contexts
+  description: Inspect Cao2018 full PTM spectra/conditions; resolve Banerjee NAD and
+    U28 notation, historical AAK41236 start and exact core/cross-species constructs.
+    Curate remaining experimentally mapped members and Goyal2012 supplementary contexts
+    with native versus in-vitro and peptide versus whole-protein boundaries. Do not
+    infer family-wide DNA/RNA function, native BER, drug targeting or a conserved
+    acetylation switch from this partial pass.
+  finding_ids:
+  - additional-contexts
+  target_ids:
+  - PF01918
+  ownership_note: Curate overlay and minimal evidence; append actual history, regenerate
+    and retain successor review.
+  acceptance_checks:
+  - Each added edge has member-specific primary evidence and explicit conditions.
+  - Unsupported transfers and conflicting or negative results remain visible.
+  - Native checks pass and a successor report states actual scope.
+limitations:
+- Original Bell Figures3-4, Marsh Figures2C/4/5, Laurens Figures1-2, Zhang Figures1/3/4/5,
+  Hands-Taylor Figure5, Goyal Figure5 and Banerjee Figures1/4-7 plus SupplementS5
+  were visually inspected, with relevant Methods/tables. No original Cao2018 figures
+  or raw datasets were available; no independent experimental replication. Later page-layout
+  and whole-corpus checks are reported separately, not implied by this saved review.
+- Same-agent assessment, not independent expert review or experimental replication.
+- Partial family coverage; status remains IN_PROGRESS. No full-corpus completion,
+  publication or full publication-QC pass is claimed.
+notes:
+- Assessments were authored from inspected primary evidence. Native inspection supplied
+  provenance, not scientific conclusions.
+```

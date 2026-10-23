@@ -1,0 +1,56 @@
+schema_version: 1.0.0
+repository_key: dufmech
+github_repository: CultureBotAI/DUFMech
+run_id: mech-goal-sequence-20261019
+cycle: 2
+stage: 4
+revision: 1
+outcome: completed
+summary: Audited all 141 maintained FamilyCuration overlays and all 8,296 generated FamilyRecord projections
+  in the frozen InterPro/Pfam 2026-10-10 inventory. Saved 20 versioned per-record structured reviews and
+  1 cohort category review (21 bundles total in reviews/structured/) covering all 19 overlays updated
+  in Cycle 2 Stages 2-3 plus PF01923, and preserving 3 newly identified open causal-graph protein-grounding
+  findings (PF01923, PF01934, PF01982) in carry_forward_ids for Stage 5 grouped remediation.
+source_revision: fde7d143a6b952fbc63b390cbfc27de38ac7701b
+scope_frozen_at: '2026-10-23T09:26:18Z'
+previous_evidence:
+  path: reviews/workflow/mech-goal-sequence-20261019/cycle-000001/stage-05/revision-0001/evidence.yaml
+  sha256: 796b7f1e60b874a2753ec968d0589e1c5e877420a92c6ad89d64892cf3457db7
+artifacts:
+- path: reviews/workflow/mech-goal-sequence-20261019/cycle-000002/stage-04/revision-0001/review_report.md
+  sha256: 2f5c8349fa496ce1085d8fdce1e5359d799450f00109355184ea094bfdc94321
+  kind: review_report
+- path: reviews/workflow/mech-goal-sequence-20261019/cycle-000002/stage-04/revision-0001/review_findings.md
+  sha256: a9f70d8bd30ce8f3bebc32582c972022d14b0091d55b881aa1bde3e0099644a5
+  kind: review_findings
+- path: reviews/workflow/mech-goal-sequence-20261019/cycle-000002/stage-04/revision-0001/frozen_inventory_coverage.json
+  sha256: 111840ab0d6a1393e38ee523a594c0a5dff48ad6fccae4218bca02db2045974e
+  kind: supporting
+findings:
+- finding_id: pf01923-sepduo-and-seeutt-assays-missing-protein-grounding
+  status: open
+  summary: 'Three Salmonella enterica LT2 (NCBITaxon:99287) causal graphs in curation/families/PF01923.yaml
+    (sepduo-inhibition-2004, sepduo-metal-additions-2004, seeutt-metal-oxygen-2014) omit UniProtKB:Q8ZNR5
+    (PduO) and UniProtKB:Q9ZFV4 (EutT) grounding on their AdoCbl-forming activity STATE nodes (evidence:
+    curation/families/PF01923.yaml lines 314-528, 1185-1265; reviews/structured/20261023T092550Z-pf01923-c2s4-record-review/review.yaml).'
+  disposition: Carried forward to Stage 5 (resolve_review_findings) for grouped remediation.
+- finding_id: pf01934-fhepta-native-cfu-uniprot-grounding-and-cleavage-nodes
+  status: open
+  summary: 'Causal graph fhepta-fragment-native-cfu-2026 in curation/families/PF01934.yaml grounds fragment
+    only to RefSeq:WP_164925653.1 without paired UniProtKB:Q8EGZ7, and RNase readout nodes in fhepta-fragment-rna-redox-2026
+    and so3166-modified-preparation-rnase-2020 omit protein grounding (evidence: curation/families/PF01934.yaml
+    lines 316-318, 585-603, 771-773; reviews/structured/20261023T092556Z-pf01934-c2s4-record-review/review.yaml).'
+  disposition: Carried forward to Stage 5 (resolve_review_findings) for grouped remediation.
+- finding_id: pf01982-pyrbkr-effectors-and-temperature-grounding
+  status: open
+  summary: 'Pyrobaculum sp. WP30 pyRbkR (GenBank:AKT35049.1) graphs pyrbkr-flavin-binding-2017 and pyrbkr-temperature-response-2017
+    in curation/families/PF01982.yaml omit GenBank:AKT35049.1 grounding on fp and activity, and myrbkr-effector-binding-2017
+    omits UniProtKB:H2C8H2 on ribb and ribt (evidence: curation/families/PF01982.yaml lines 616-640, 705-812;
+    reviews/structured/20261023T092608Z-pf01982-c2s4-record-review/review.yaml).'
+  disposition: Carried forward to Stage 5 (resolve_review_findings) for grouped remediation.
+groups: []
+carry_forward_ids:
+- pf01923-sepduo-and-seeutt-assays-missing-protein-grounding
+- pf01934-fhepta-native-cfu-uniprot-grounding-and-cleavage-nodes
+- pf01982-pyrbkr-effectors-and-temperature-grounding
+infra_tasks: []
