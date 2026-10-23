@@ -1,0 +1,23 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01984
+  path: curation/families/PF01984.yaml
+session:
+  id: 2026-10-23T074817Z-antigravity-198403
+  timestamp: "2026-10-23T07:48:17Z"
+  actors:
+    - type: ai_agent
+      name: Antigravity
+      model: Claude Opus 4.6
+      agent_tool: Antigravity
+events:
+  - type: EDIT
+    outcome: changed
+    summary: Ground PDCD5 native-complex signal nodes in PF01984 causal graphs to UniProtKB:O14737
+    details: Grounded pdcd5-complex-signal (STATE) in human-pdcd5-rkk-native-2025 and ten-minute-complex-signal (STATE) in human-pdcd5-il-early-native-2025 to UniProtKB:O14737 (Homo sapiens PDCD5, NCBITaxon:9606), matching the recombinant human PDCD5-His6 constructs grounded on rkk-substitution and il-substitution in Xing et al. 2025 (PMID:39663456).
+    sections:
+      - causal_graphs
+links:
+  urls:
+    - https://pmc.ncbi.nlm.nih.gov/articles/PMC11754096/

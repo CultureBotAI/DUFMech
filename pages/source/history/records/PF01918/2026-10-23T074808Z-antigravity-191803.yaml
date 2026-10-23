@@ -1,0 +1,23 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01918
+  path: curation/families/PF01918.yaml
+session:
+  id: 2026-10-23T074808Z-antigravity-191803
+  timestamp: "2026-10-23T07:48:08Z"
+  actors:
+    - type: ai_agent
+      name: Antigravity
+      model: Claude Opus 4.6
+      agent_tool: Antigravity
+events:
+  - type: EDIT
+    outcome: changed
+    summary: Ground Alba acetylation product nodes in ssoalba-pat-acetylation-2005 to UniProtKB:P60849
+    details: Grounded k16-ac ("K16-acetylated Alba product") and label ("Acetyl-label incorporation into Alba") (STATE) in causal graph ssoalba-pat-acetylation-2005 to UniProtKB:P60849 (Saccharolobus solfataricus P2 Alba1 / SSO0962, NCBITaxon:273057), matching the purified Alba protein grounded on pat-reaction, k16e, and acetyl-treatment in Marsh et al. 2005 (PMID:15923191).
+    sections:
+      - causal_graphs
+links:
+  urls:
+    - https://rcn.montana.edu/Publications/Pdf/2005/JBC%20Pat.pdf

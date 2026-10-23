@@ -295,6 +295,8 @@ causal_graphs:
   - node_id: reaction
     label: Individual Cys variant with DNA and assay cofactors
     node_type: STATE
+    grounding:
+    - UniProtKB:A3MTK6
   - node_id: products
     label: Retained DNA cleavage products
     node_type: STATE
@@ -353,6 +355,8 @@ causal_graphs:
   - node_id: complex
     label: Fully shifted prespacer complex
     node_type: STATE
+    grounding:
+    - UniProtKB:Q74H36
   edges:
   - edge_id: full-complex
     subject: pam
@@ -667,5 +671,13 @@ curation_events:
   outcome: changed
   summary: Ground causal graph gene and protein nodes in PF01930 with verified UniProtKB accessions (UniProtKB:Q74H36)
   history_record: history/records/PF01930/2026-10-18T025446Z-antigravity-a6904c.yaml
+  event_index: 0
+  llm_assisted: true
+- timestamp: '2026-10-23T07:48:10Z'
+  curator: Antigravity
+  action: EDIT
+  outcome: changed
+  summary: Ground reaction and prespacer complex nodes in PF01930 causal graphs
+  history_record: history/records/PF01930/2026-10-23T074810Z-antigravity-193003.yaml
   event_index: 0
   llm_assisted: true

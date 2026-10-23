@@ -702,6 +702,8 @@ causal_graphs:
   - node_id: label
     label: TMEM19-associated probe-labeling band
     node_type: STATE
+    grounding:
+    - UniProtKB:Q91W52
   edges:
   - edge_id: probe-label-formation
     subject: probe
@@ -938,5 +940,13 @@ curation_events:
   outcome: changed
   summary: Ground causal graph gene and protein nodes in PF01940 with verified UniProtKB accessions (UniProtKB:Q9SYM0)
   history_record: history/records/PF01940/2026-10-18T025446Z-antigravity-194f87.yaml
+  event_index: 0
+  llm_assisted: true
+- timestamp: '2026-10-23T07:48:13Z'
+  curator: Antigravity
+  action: EDIT
+  outcome: changed
+  summary: Ground TMEM19-associated probe-labeling band node in tmem19-mouse-probe-labeling-2026 to UniProtKB:Q91W52
+  history_record: history/records/PF01940/2026-10-23T074813Z-antigravity-194003.yaml
   event_index: 0
   llm_assisted: true

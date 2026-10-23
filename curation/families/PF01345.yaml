@@ -91,6 +91,8 @@ causal_graphs:
       - node_id: intact-clipper-band
         label: Intact domain band remaining after protease treatment
         node_type: STATE
+        grounding:
+          - UniProtKB:A0A1Y3CHT7
     edges:
       - edge_id: k715a-decreases-intact-domain-band
         subject: clipper-k715a-with-protease

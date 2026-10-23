@@ -165,9 +165,13 @@ causal_graphs:
   - node_id: complex1
     label: Shifted PP1 RNA complex
     node_type: STATE
+    grounding:
+    - UniProtKB:Q6M142
   - node_id: complex10
     label: Shifted PP10 RNA complex
     node_type: STATE
+    grounding:
+    - UniProtKB:Q6M142
   edges:
   - edge_id: pp1-complex-formation
     subject: pp1

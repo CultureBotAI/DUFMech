@@ -19,6 +19,8 @@ causal_graphs:
       - node_id: copza-operator-occupancy
         label: CsoR occupancy of the synthetic copZA operator
         node_type: STATE
+        grounding:
+          - UniProtKB:O32222
     edges:
       - edge_id: copper-decreases-operator-binding
         subject: csor-copper-loaded

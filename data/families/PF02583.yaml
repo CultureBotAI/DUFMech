@@ -78,6 +78,8 @@ causal_graphs:
   - node_id: copza-operator-occupancy
     label: CsoR occupancy of the synthetic copZA operator
     node_type: STATE
+    grounding:
+    - UniProtKB:O32222
   edges:
   - edge_id: copper-decreases-operator-binding
     subject: csor-copper-loaded
@@ -172,5 +174,13 @@ curation_events:
   outcome: needs_followup
   summary: Retain partial scientific self-review of CsoR causal contexts
   history_record: history/records/PF02583/2026-10-11T060649Z-codex-211874.yaml
+  event_index: 0
+  llm_assisted: true
+- timestamp: '2026-10-23T07:48:18Z'
+  curator: Antigravity
+  action: EDIT
+  outcome: changed
+  summary: Ground copza-operator-occupancy node in bsub-csor-copper-operator-binding to UniProtKB:O32222
+  history_record: history/records/PF02583/2026-10-23T074818Z-antigravity-258303.yaml
   event_index: 0
   llm_assisted: true

@@ -107,9 +107,13 @@ causal_graphs:
   - node_id: thiamine-complex
     label: TM0486-thiamine binding complex
     node_type: STATE
+    grounding:
+    - UniProtKB:Q9WYV6
   - node_id: tpp-complex
     label: TM0486-TPP binding complex
     node_type: STATE
+    grounding:
+    - UniProtKB:Q9WYV6
   edges:
   - edge_id: thiamine-binding
     subject: protein-thiamine
@@ -812,5 +816,13 @@ curation_events:
   summary: Ground causal graph gene and protein nodes in PF01910 with verified UniProtKB accessions (UniProtKB:Q9WYV6,
     UniProtKB:P35195, UniProtKB:J9VTN7)
   history_record: history/records/PF01910/2026-10-18T025446Z-antigravity-46e707.yaml
+  event_index: 0
+  llm_assisted: true
+- timestamp: '2026-10-23T07:48:07Z'
+  curator: Antigravity
+  action: EDIT
+  outcome: changed
+  summary: Ground TM0486 ligand-complex nodes in tm0486-ligand-binding-2010 to UniProtKB:Q9WYV6
+  history_record: history/records/PF01910/2026-10-23T074807Z-antigravity-191003.yaml
   event_index: 0
   llm_assisted: true

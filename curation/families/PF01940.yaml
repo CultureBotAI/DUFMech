@@ -677,6 +677,8 @@ causal_graphs:
   - node_id: label
     label: TMEM19-associated probe-labeling band
     node_type: STATE
+    grounding:
+    - UniProtKB:Q91W52
   edges:
   - edge_id: probe-label-formation
     subject: probe

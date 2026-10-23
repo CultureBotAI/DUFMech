@@ -98,6 +98,9 @@ causal_graphs:
   - node_id: complex
     label: Stable purified CTD heterodimer
     node_type: STATE
+    grounding:
+    - UniProtKB:P34607
+    - UniProtKB:Q19672
   edges:
   - edge_id: pair-complex
     subject: pair
@@ -147,6 +150,8 @@ causal_graphs:
   - node_id: retained
     label: MUT-8 CTD recovered in MBP eluate
     node_type: STATE
+    grounding:
+    - UniProtKB:Q19672
   edges:
   - edge_id: double-loss
     subject: double
@@ -206,6 +211,10 @@ causal_graphs:
   - node_id: capture
     label: MUT-7/MUT-8 recovered with MUT-16 bait
     node_type: STATE
+    grounding:
+    - UniProtKB:P34607
+    - UniProtKB:Q19672
+    - UniProtKB:O62011
   edges:
   - edge_id: joint-capture
     subject: joint
@@ -887,5 +896,13 @@ curation_events:
   outcome: needs_followup
   summary: Retain partial PF01927 causal evidence self-review.
   history_record: history/records/PF01927/2026-10-12T024223Z-codex-0ae9df.yaml
+  event_index: 0
+  llm_assisted: true
+- timestamp: '2026-10-23T07:48:09Z'
+  curator: Antigravity
+  action: EDIT
+  outcome: changed
+  summary: Ground purified CeMUT-7/MUT-8/MUT-16 complex state nodes in PF01927 causal graphs
+  history_record: history/records/PF01927/2026-10-23T074809Z-antigravity-192703.yaml
   event_index: 0
   llm_assisted: true

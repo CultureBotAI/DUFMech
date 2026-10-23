@@ -1,0 +1,23 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01978
+  path: curation/families/PF01978.yaml
+session:
+  id: 2026-10-23T074814Z-antigravity-197803
+  timestamp: "2026-10-23T07:48:14Z"
+  actors:
+    - type: ai_agent
+      name: Antigravity
+      model: Claude Opus 4.6
+      agent_tool: Antigravity
+events:
+  - type: EDIT
+    outcome: changed
+    summary: Ground TrmBL1 promoter occupancy state nodes in trmbl1-regional-recognition-model to UniProtKB:Q8U4G4
+    details: Grounded tgm_occupancy ("TrmBL1 occupancy of the tested source-assigned PFK/FBPase fragments") and own_occupancy ("TrmBL1 occupancy of its own PF0124 promoter") (STATE) in causal graph trmbl1-regional-recognition-model to UniProtKB:Q8U4G4 (Pyrococcus furiosus PF0124 / TrmBL1, NCBITaxon:2261), matching the first_region and second_region nodes in Surma 2010.
+    sections:
+      - causal_graphs
+links:
+  urls:
+    - https://epub.uni-regensburg.de/14529/1/Dissertation_Melanie_Surma.pdf

@@ -103,6 +103,8 @@ causal_graphs:
   - node_id: probeb-complex
     label: Retarded TACO1-associated probe B complex
     node_type: STATE
+    grounding:
+    - UniProtKB:Q8K0Z7
   edges:
   - edge_id: joint-preparation-produces-rna-complex
     subject: mouse-taco1-and-probeb
@@ -502,5 +504,13 @@ curation_events:
   summary: Ground causal graph gene and protein nodes in PF01709 with verified UniProtKB accessions (UniProtKB:Q8K0Z7,
     UniProtKB:Q9BSH4)
   history_record: history/records/PF01709/2026-10-18T025446Z-antigravity-6ee97e.yaml
+  event_index: 0
+  llm_assisted: true
+- timestamp: '2026-10-23T07:48:05Z'
+  curator: Antigravity
+  action: EDIT
+  outcome: changed
+  summary: Ground probeb-complex node in mouse-taco1-probeb-binding to UniProtKB:Q8K0Z7
+  history_record: history/records/PF01709/2026-10-23T074805Z-antigravity-170903.yaml
   event_index: 0
   llm_assisted: true

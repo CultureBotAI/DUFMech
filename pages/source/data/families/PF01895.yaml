@@ -280,6 +280,8 @@ causal_graphs:
   - node_id: pellet-phou
     label: PhoU immunoblot signal in the membrane pellet
     node_type: STATE
+    grounding:
+    - UniProtKB:P0A9K7
   edges:
   - edge_id: e100a-decreases-pellet-signal
     subject: e100a
@@ -889,5 +891,13 @@ curation_events:
   outcome: needs_followup
   summary: Retain partial scientific self-review of the PhoU causal graphs
   history_record: history/records/PF01895/2026-10-11T212456Z-codex-6da354.yaml
+  event_index: 0
+  llm_assisted: true
+- timestamp: '2026-10-23T07:48:06Z'
+  curator: Antigravity
+  action: EDIT
+  outcome: changed
+  summary: Ground pellet-phou node in ec-phou-fractionation to UniProtKB:P0A9K7
+  history_record: history/records/PF01895/2026-10-23T074806Z-antigravity-189503.yaml
   event_index: 0
   llm_assisted: true

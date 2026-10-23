@@ -1,0 +1,24 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01638
+  path: curation/families/PF01638.yaml
+session:
+  id: 2026-10-23T074804Z-antigravity-163803
+  timestamp: "2026-10-23T07:48:04Z"
+  actors:
+    - type: ai_agent
+      name: Antigravity
+      model: Claude Opus 4.6
+      agent_tool: Antigravity
+events:
+  - type: EDIT
+    outcome: changed
+    summary: Ground plus12-hxlr-species node in hxlr-formaldehyde-intact-mass-product to UniProtKB:P42406
+    details: Grounded the plus12-hxlr-species (STATE) node in causal graph hxlr-formaldehyde-intact-mass-product to UniProtKB:P42406 (Bacillus subtilis 168 HxlR, NCBITaxon:224308), matching the purified intact HxlR protein grounded on formaldehyde-purified-hxlr in Zhu et al. 2021 (PMID:33483495).
+    sections:
+      - causal_graphs
+links:
+  urls:
+    - https://www.nature.com/articles/s41467-020-20754-4
+    - https://www.ebi.ac.uk/interpro/api/protein/uniprot/P42406/entry/pfam/PF01638/

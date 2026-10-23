@@ -89,6 +89,8 @@ causal_graphs:
   - node_id: wt-current-at-plus100
     label: WT BEST1 current at +100 mV
     node_type: ACTIVITY
+    grounding:
+    - UniProtKB:A0A8V0ZZU7
   edges:
   - edge_id: bilateral-egta-decreases-current
     subject: bilateral-egta-in-wt-bilayer
@@ -388,5 +390,13 @@ curation_events:
   outcome: needs_followup
   summary: Retain partial scientific self-review of chicken BEST1 assays
   history_record: history/records/PF01062/2026-10-11T090754Z-codex-48cf50.yaml
+  event_index: 0
+  llm_assisted: true
+- timestamp: '2026-10-23T07:48:01Z'
+  curator: Antigravity
+  action: EDIT
+  outcome: changed
+  summary: Ground wt-current-at-plus100 node in best1-bilateral-egta-current-loss to UniProtKB:A0A8V0ZZU7
+  history_record: history/records/PF01062/2026-10-23T074801Z-antigravity-106203.yaml
   event_index: 0
   llm_assisted: true

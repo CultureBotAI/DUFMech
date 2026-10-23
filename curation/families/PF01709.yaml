@@ -26,6 +26,8 @@ causal_graphs:
   - node_id: probeb-complex
     label: Retarded TACO1-associated probe B complex
     node_type: STATE
+    grounding:
+    - UniProtKB:Q8K0Z7
   edges:
   - edge_id: joint-preparation-produces-rna-complex
     subject: mouse-taco1-and-probeb

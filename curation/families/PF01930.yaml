@@ -272,6 +272,8 @@ causal_graphs:
   - node_id: reaction
     label: Individual Cys variant with DNA and assay cofactors
     node_type: STATE
+    grounding:
+    - UniProtKB:A3MTK6
   - node_id: products
     label: Retained DNA cleavage products
     node_type: STATE
@@ -330,6 +332,8 @@ causal_graphs:
   - node_id: complex
     label: Fully shifted prespacer complex
     node_type: STATE
+    grounding:
+    - UniProtKB:Q74H36
   edges:
   - edge_id: full-complex
     subject: pam
