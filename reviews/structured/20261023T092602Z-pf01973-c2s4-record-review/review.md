@@ -11,7 +11,7 @@
 
 ## Summary
 
-Six graphs add eight observed, host-specific cellular effects after exact PF01973 mapping of Kurthia and Irchel Maf references. The prior36 graphs and two hypotheses remain unchanged. Kurthia design bodies match their references, but Irchel synthetic and all physical plasmid sequences remain unresolved. Residual GlfM-independent Kurthia shifts and different host knockouts are explicit. All three earlier scientific findings stay open; no status promotion. Stage 2 (PR #343) grounded Saccharomyces cerevisiae Dbp5 (UniProtKB:P20449), Gle1 (UniProtKB:Q12315), and Nup42 (UniProtKB:P49687) across sc-gle1-dbp5-atpase-2011 and sc-nup42-gle1-release-2011.
+Six graphs add eight observed, host-specific cellular effects after exact PF01973 mapping of Kurthia and Irchel Maf references. The prior36 graphs and two hypotheses remain unchanged. Kurthia design bodies match their references, but Irchel synthetic and all physical plasmid sequences remain unresolved. Residual GlfM-independent Kurthia shifts and different host knockouts are explicit. All three earlier scientific findings stay open; no status promotion. Stage 2 (PR #343) added NCBITaxon:211586 to the 18 native Shewanella oneidensis MR-1 causal graphs in PF01973.
 
 ## Scope And Provenance
 
@@ -62,11 +62,11 @@ completeness: concern. Targets: PF01973.
 
 This bounded ortholog extension is not a complete PF01973 assessment. All three predecessor findings and the full8296-family objective remain open.
 
-### Cycle 2 causal-graph partner and substrate protein grounding
+### Cycle 2 causal-graph taxon grounding
 
 identity: supported. Targets: PF01973.
 
-Stage 2 (PR #343) grounded Saccharomyces cerevisiae Dbp5 (UniProtKB:P20449), Gle1 (UniProtKB:Q12315), and Nup42 (UniProtKB:P49687) across sc-gle1-dbp5-atpase-2011 and sc-nup42-gle1-release-2011.
+Stage 2 (PR #343) added NCBITaxon:211586 to the 18 native Shewanella oneidensis MR-1 causal graphs in PF01973.
 
 ## Findings
 
@@ -134,6 +134,29 @@ The sibling review.yaml is authoritative.
 ```yaml
 schema_version: 1.0.0
 review_id: 20261023T092602Z-pf01973-c2s4-record-review
+title: PF01973 Cycle 2 Stage 4 frozen-inventory causal-graph and grounding review
+started_at: '2026-10-23T09:26:01Z'
+finished_at: '2026-10-23T09:26:02Z'
+reviewer:
+  identity: Antigravity
+  kind: agent
+  model: Claude-Opus-4.6
+  independence: self_review
+  independence_basis: Cycle 2 Stage 4 frozen-inventory record review by Antigravity
+    auditing prior Codex/Antigravity curation overlays, primary evidence caches, history
+    events, and current projections at Git revision fde7d143a6b952fbc63b390cbfc27de38ac7701b.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: pass_with_limitations
+native_verdict: NEEDS_FOLLOWUP
+scientific_review: true
+summary: 'Six graphs add eight observed, host-specific cellular effects after exact
+  PF01973 mapping of Kurthia and Irchel Maf references. The prior36 graphs and two
+  hypotheses remain unchanged. Kurthia design bodies match their references, but Irchel
+  synthetic and all physical plasmid sequences remain unresolved. Residual GlfM-independent
+  Kurthia shifts and different host knockouts are explicit. All three earlier scientific
+  findings stay open; no status promotion. Stage 2 (PR #343) added NCBITaxon:211586
+  to the 18 native Shewanella oneidensis MR-1 causal graphs in PF01973.'
 repository: CultureBotAI/DUFMech
 kind: record
 source:
@@ -201,30 +224,6 @@ targets:
     sha256: b767f7b054f7ca979c74b43d431a56239e0b38e15c8ce5054253c0eb4e36fecb
     description: Canonical JSON SHA-256 of effective FamilyRecord excluding only curation_status,
       review_id and curation_events.
-title: PF01973 Cycle 2 Stage 4 frozen-inventory causal-graph and grounding review
-started_at: '2026-10-23T09:26:01Z'
-finished_at: '2026-10-23T09:26:02Z'
-reviewer:
-  identity: Antigravity
-  kind: agent
-  model: Claude-Opus-4.6
-  independence: self_review
-  independence_basis: Cycle 2 Stage 4 frozen-inventory record review by Antigravity
-    auditing prior Codex/Antigravity curation overlays, primary evidence caches, history
-    events, and current projections at Git revision fde7d143a6b952fbc63b390cbfc27de38ac7701b.
-skill: .claude/skills/review-yaml-record/SKILL.md
-completion: completed
-verdict: pass_with_limitations
-native_verdict: NEEDS_FOLLOWUP
-scientific_review: true
-summary: 'Six graphs add eight observed, host-specific cellular effects after exact
-  PF01973 mapping of Kurthia and Irchel Maf references. The prior36 graphs and two
-  hypotheses remain unchanged. Kurthia design bodies match their references, but Irchel
-  synthetic and all physical plasmid sequences remain unresolved. Residual GlfM-independent
-  Kurthia shifts and different host knockouts are explicit. All three earlier scientific
-  findings stay open; no status promotion. Stage 2 (PR #343) grounded Saccharomyces
-  cerevisiae Dbp5 (UniProtKB:P20449), Gle1 (UniProtKB:Q12315), and Nup42 (UniProtKB:P49687)
-  across sc-gle1-dbp5-atpase-2011 and sc-nup42-gle1-release-2011.'
 scope:
   description: Assess Unay2024 Figure5D and S5A/B with full legends, relevant Results/Methods,
     TablesS1-S4/S6, exact PF01973.24 HMM mapping and Kurthia design translation. Challenge
@@ -2225,11 +2224,10 @@ assessments:
     three predecessor findings and the full8296-family objective remain open.
 - assessment_id: cycle2-partner-grounding-verification
   area: identity
-  topic: Cycle 2 causal-graph partner and substrate protein grounding
+  topic: Cycle 2 causal-graph taxon grounding
   outcome: supported
-  summary: 'Stage 2 (PR #343) grounded Saccharomyces cerevisiae Dbp5 (UniProtKB:P20449),
-    Gle1 (UniProtKB:Q12315), and Nup42 (UniProtKB:P49687) across sc-gle1-dbp5-atpase-2011
-    and sc-nup42-gle1-release-2011.'
+  summary: 'Stage 2 (PR #343) added NCBITaxon:211586 to the 18 native Shewanella oneidensis
+    MR-1 causal graphs in PF01973.'
   target_ids:
   - PF01973
   evidence_ids:

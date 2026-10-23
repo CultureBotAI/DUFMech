@@ -11,7 +11,7 @@
 
 ## Summary
 
-Thirteen graphs retain17 OBSERVED effects,11 DIRECT,4 UNRESOLVED and2 INDIRECT, in10 MECHANISTIC and3 PHENOTYPIC contexts. Four evidence ledgers and two OPEN discussions preserve source conflicts, native-function questions and other members. Same-agent scoped scientific review; IN_PROGRESS, not full family review. Stage 2 (PR #343) grounded Saccharomyces cerevisiae Ecm33 (UniProtKB:P38248) in sc-kex2-ecm33-cleavage-2022.
+Thirteen graphs retain17 OBSERVED effects,11 DIRECT,4 UNRESOLVED and2 INDIRECT, in10 MECHANISTIC and3 PHENOTYPIC contexts. Four evidence ledgers and two OPEN discussions preserve source conflicts, native-function questions and other members. Same-agent scoped scientific review; IN_PROGRESS, not full family review. Stage 3 (PR #344) grounded reaction and prespacer complex state nodes in PF01930 causal graphs to Pyrobaculum calidifontis Cas4-1 (UniProtKB:A3MTK6) and Geobacter sulfurreducens Cas4-1 (UniProtKB:Q74H36).
 
 ## Scope And Provenance
 
@@ -52,11 +52,11 @@ completeness: concern. Targets: PF01930.
 
 Pcal metal assignment and inaccessible supplement, precise retained tags and pET28a/b naming, ED4g contradiction, native Gsu trimming nuclease and native Pcal role remain open. B.halodurans Cas4 and Thermoproteus paralog mapping, prior Gsu cellular study, Pyrococcus,Synechocystis,MbCas4/1,Haloferax,DNA2 and later2026 sources require further primary review. No family-wide negative or all-member characterization is claimed.
 
-### Cycle 2 causal-graph partner and substrate protein grounding
+### Cycle 2 causal-graph protein-node grounding
 
 identity: supported. Targets: PF01930.
 
-Stage 2 (PR #343) grounded Saccharomyces cerevisiae Ecm33 (UniProtKB:P38248) in sc-kex2-ecm33-cleavage-2022.
+Stage 3 (PR #344) grounded reaction and prespacer complex state nodes in PF01930 causal graphs to Pyrobaculum calidifontis Cas4-1 (UniProtKB:A3MTK6) and Geobacter sulfurreducens Cas4-1 (UniProtKB:Q74H36).
 
 ## Findings
 
@@ -124,8 +124,10 @@ scientific_review: true
 summary: 'Thirteen graphs retain17 OBSERVED effects,11 DIRECT,4 UNRESOLVED and2 INDIRECT,
   in10 MECHANISTIC and3 PHENOTYPIC contexts. Four evidence ledgers and two OPEN discussions
   preserve source conflicts, native-function questions and other members. Same-agent
-  scoped scientific review; IN_PROGRESS, not full family review. Stage 2 (PR #343)
-  grounded Saccharomyces cerevisiae Ecm33 (UniProtKB:P38248) in sc-kex2-ecm33-cleavage-2022.'
+  scoped scientific review; IN_PROGRESS, not full family review. Stage 3 (PR #344)
+  grounded reaction and prespacer complex state nodes in PF01930 causal graphs to
+  Pyrobaculum calidifontis Cas4-1 (UniProtKB:A3MTK6) and Geobacter sulfurreducens
+  Cas4-1 (UniProtKB:Q74H36).'
 repository: CultureBotAI/DUFMech
 kind: record
 source:
@@ -714,10 +716,11 @@ assessments:
   - primary
 - assessment_id: cycle2-partner-grounding-verification
   area: identity
-  topic: Cycle 2 causal-graph partner and substrate protein grounding
+  topic: Cycle 2 causal-graph protein-node grounding
   outcome: supported
-  summary: 'Stage 2 (PR #343) grounded Saccharomyces cerevisiae Ecm33 (UniProtKB:P38248)
-    in sc-kex2-ecm33-cleavage-2022.'
+  summary: 'Stage 3 (PR #344) grounded reaction and prespacer complex state nodes
+    in PF01930 causal graphs to Pyrobaculum calidifontis Cas4-1 (UniProtKB:A3MTK6)
+    and Geobacter sulfurreducens Cas4-1 (UniProtKB:Q74H36).'
   target_ids:
   - PF01930
   evidence_ids:

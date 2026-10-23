@@ -1,3 +1,30 @@
+schema_version: 1.0.0
+review_id: 20261023T092608Z-pf01982-c2s4-record-review
+title: PF01982 Cycle 2 Stage 4 frozen-inventory causal-graph and grounding review
+started_at: '2026-10-23T09:26:07Z'
+finished_at: '2026-10-23T09:26:08Z'
+reviewer:
+  identity: Antigravity
+  kind: agent
+  model: Claude-Opus-4.6
+  independence: self_review
+  independence_basis: Cycle 2 Stage 4 frozen-inventory record review by Antigravity
+    auditing prior Codex/Antigravity curation overlays, primary evidence caches, history
+    events, and current projections at Git revision fde7d143a6b952fbc63b390cbfc27de38ac7701b.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: pass_with_limitations
+native_verdict: NEEDS_FOLLOWUP
+scientific_review: true
+summary: 'Three added graphs distinguish four reported assay effects from four contextual
+  hypotheses. The original13 graphs/25 edges are preserved. A four-residue reference
+  offset maps historical E107 to current E103, without proving physical insert identity
+  or base chemistry. Three predecessor findings remain open with evidence-backed partial
+  advances; PF01982 remains IN_PROGRESS. Stage 3 (PR #344) grounded RibK and RbkR
+  kinase activity, DNA-complex, and catalytic-cycle state nodes across eight PF01982
+  causal graphs to UniProtKB:Q60365, UniProtKB:H2C8H2, GenBank:AKT35049.1, and UniProtKB:Q9HJA6.
+  Stage 4 audit also identified an open grounding finding (pf01982-pyrbkr-effectors-and-temperature-grounding)
+  on pyRbkR and myRbkR assay readout nodes preserved for Stage 5 grouped remediation.'
 repository: CultureBotAI/DUFMech
 kind: record
 source:
@@ -65,32 +92,6 @@ targets:
     sha256: 3af65b453e5cc1243dd416fcc9ac2a594ec92fe99666c625cbfd28f95493535f
     description: Canonical JSON SHA-256 of effective FamilyRecord excluding only curation_status,
       review_id and curation_events.
-schema_version: 1.0.0
-review_id: 20261023T092608Z-pf01982-c2s4-record-review
-title: PF01982 Cycle 2 Stage 4 frozen-inventory causal-graph and grounding review
-started_at: '2026-10-23T09:26:07Z'
-finished_at: '2026-10-23T09:26:08Z'
-reviewer:
-  identity: Antigravity
-  kind: agent
-  model: Claude-Opus-4.6
-  independence: self_review
-  independence_basis: Cycle 2 Stage 4 frozen-inventory record review by Antigravity
-    auditing prior Codex/Antigravity curation overlays, primary evidence caches, history
-    events, and current projections at Git revision fde7d143a6b952fbc63b390cbfc27de38ac7701b.
-skill: .claude/skills/review-yaml-record/SKILL.md
-completion: completed
-verdict: pass_with_limitations
-native_verdict: NEEDS_FOLLOWUP
-scientific_review: true
-summary: 'Three added graphs distinguish four reported assay effects from four contextual
-  hypotheses. The original13 graphs/25 edges are preserved. A four-residue reference
-  offset maps historical E107 to current E103, without proving physical insert identity
-  or base chemistry. Three predecessor findings remain open with evidence-backed partial
-  advances; PF01982 remains IN_PROGRESS. Stage 2 (PR #343) grounded Leptospira interrogans
-  LexA (UniProtKB:Q8F4A6) in lbrbkr-lexa-relief-2017. Stage 4 audit also identified
-  an open grounding finding (pf01982-pyrbkr-effectors-and-temperature-grounding) on
-  pyRbkR and myRbkR assay readout nodes preserved for Stage 5 grouped remediation.'
 scope:
   description: Scientific assessment of the eight new relations, three discussion
     updates, source dependence, reference-coordinate mapping and preservation of earlier

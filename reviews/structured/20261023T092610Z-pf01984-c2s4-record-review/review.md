@@ -11,7 +11,7 @@
 
 ## Summary
 
-Six graphs retain seven observed effects from distinct human PDCD5 experiments. Two biochemical association/separation effects are DIRECT, three mutation-readout effects UNRESOLVED and two whole-cell thermal phenotypes INDIRECT. Full-family and additional-primary-source coverage remain incomplete; IN_PROGRESS is preserved. Stage 3 (PR #347) grounded Methanothermobacter thermautotrophicus Mth0212 (UniProtKB:O26314) in mt0213-mth0212-complex-formation.
+Six graphs retain seven observed effects from distinct human PDCD5 experiments. Two biochemical association/separation effects are DIRECT, three mutation-readout effects UNRESOLVED and two whole-cell thermal phenotypes INDIRECT. Full-family and additional-primary-source coverage remain incomplete; IN_PROGRESS is preserved. Stage 3 (PR #344) grounded the pdcd5-complex-signal and ten-minute-complex-signal PDCD5 native-complex state nodes in PF01984 causal graphs to Homo sapiens PDCD5 (UniProtKB:O14737).
 
 ## Scope And Provenance
 
@@ -75,11 +75,11 @@ completeness: concern. Targets: PF01984.
 
 Exact constructs, replicate summary, native-gel Al/F preparation, variant controls, KO rescue and archaeal/2014/2026/apoptosis primary coverage remain follow-ups.
 
-### Cycle 2 causal-graph partner and substrate protein grounding
+### Cycle 2 causal-graph protein-node grounding
 
 identity: supported. Targets: PF01984.
 
-Stage 3 (PR #347) grounded Methanothermobacter thermautotrophicus Mth0212 (UniProtKB:O26314) in mt0213-mth0212-complex-formation.
+Stage 3 (PR #344) grounded the pdcd5-complex-signal and ten-minute-complex-signal PDCD5 native-complex state nodes in PF01984 causal graphs to Homo sapiens PDCD5 (UniProtKB:O14737).
 
 ## Findings
 
@@ -141,6 +141,31 @@ Resolve the named primary and experimental gaps through scoped successor curatio
 The sibling review.yaml is authoritative.
 
 ```yaml
+schema_version: 1.0.0
+review_id: 20261023T092610Z-pf01984-c2s4-record-review
+title: PF01984 Cycle 2 Stage 4 frozen-inventory causal-graph and grounding review
+started_at: '2026-10-23T09:26:09Z'
+finished_at: '2026-10-23T09:26:10Z'
+reviewer:
+  identity: Antigravity
+  kind: agent
+  model: Claude-Opus-4.6
+  independence: self_review
+  independence_basis: Cycle 2 Stage 4 frozen-inventory record review by Antigravity
+    auditing prior Codex/Antigravity curation overlays, primary evidence caches, history
+    events, and current projections at Git revision fde7d143a6b952fbc63b390cbfc27de38ac7701b.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: pass_with_limitations
+native_verdict: NEEDS_FOLLOWUP
+scientific_review: true
+summary: 'Six graphs retain seven observed effects from distinct human PDCD5 experiments.
+  Two biochemical association/separation effects are DIRECT, three mutation-readout
+  effects UNRESOLVED and two whole-cell thermal phenotypes INDIRECT. Full-family and
+  additional-primary-source coverage remain incomplete; IN_PROGRESS is preserved.
+  Stage 3 (PR #344) grounded the pdcd5-complex-signal and ten-minute-complex-signal
+  PDCD5 native-complex state nodes in PF01984 causal graphs to Homo sapiens PDCD5
+  (UniProtKB:O14737).'
 repository: CultureBotAI/DUFMech
 kind: record
 source:
@@ -205,30 +230,6 @@ targets:
     sha256: e9ba04992dfbe2525720fc6556c411771c472209427e72782581162525125b6b
     description: Canonical JSON SHA-256 of effective FamilyRecord excluding only curation_status,
       review_id and curation_events.
-schema_version: 1.0.0
-review_id: 20261023T092610Z-pf01984-c2s4-record-review
-title: PF01984 Cycle 2 Stage 4 frozen-inventory causal-graph and grounding review
-started_at: '2026-10-23T09:26:09Z'
-finished_at: '2026-10-23T09:26:10Z'
-reviewer:
-  identity: Antigravity
-  kind: agent
-  model: Claude-Opus-4.6
-  independence: self_review
-  independence_basis: Cycle 2 Stage 4 frozen-inventory record review by Antigravity
-    auditing prior Codex/Antigravity curation overlays, primary evidence caches, history
-    events, and current projections at Git revision fde7d143a6b952fbc63b390cbfc27de38ac7701b.
-skill: .claude/skills/review-yaml-record/SKILL.md
-completion: completed
-verdict: pass_with_limitations
-native_verdict: NEEDS_FOLLOWUP
-scientific_review: true
-summary: 'Six graphs retain seven observed effects from distinct human PDCD5 experiments.
-  Two biochemical association/separation effects are DIRECT, three mutation-readout
-  effects UNRESOLVED and two whole-cell thermal phenotypes INDIRECT. Full-family and
-  additional-primary-source coverage remain incomplete; IN_PROGRESS is preserved.
-  Stage 3 (PR #347) grounded Methanothermobacter thermautotrophicus Mth0212 (UniProtKB:O26314)
-  in mt0213-mth0212-complex-formation.'
 scope:
   description: Scientific review of all seven adopted PF01984 relations, reference
     mapping, assay boundaries and evidence ledgers. Partial source/member coverage
@@ -694,10 +695,11 @@ assessments:
   - coverage
 - assessment_id: cycle2-partner-grounding-verification
   area: identity
-  topic: Cycle 2 causal-graph partner and substrate protein grounding
+  topic: Cycle 2 causal-graph protein-node grounding
   outcome: supported
-  summary: 'Stage 3 (PR #347) grounded Methanothermobacter thermautotrophicus Mth0212
-    (UniProtKB:O26314) in mt0213-mth0212-complex-formation.'
+  summary: 'Stage 3 (PR #344) grounded the pdcd5-complex-signal and ten-minute-complex-signal
+    PDCD5 native-complex state nodes in PF01984 causal graphs to Homo sapiens PDCD5
+    (UniProtKB:O14737).'
   target_ids:
   - PF01984
   evidence_ids:

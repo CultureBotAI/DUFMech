@@ -11,7 +11,7 @@
 
 ## Summary
 
-Three DIRECT OBSERVED purified-fragment effects retain lower thermal-transition temperature, reduced CD recovery and reduced intact-band survival for K715A. Table S6 confirms the single intended substitution, but encodes N748/D749 rather than the paper's proposed Asp748. Biochemical tag processing and native functions remain qualified. Partial scientific self-review; IN_PROGRESS. Stage 3 (PR #347) grounded Homo sapiens pro-IL-1beta (UniProtKB:P01584), caspase-1 (UniProtKB:P29466), and IKKbeta (UniProtKB:O14920) across pydc1-suppresses-pro-il1b-maturation and pydc1-suppresses-tnf-and-ikkb-driven-nfkb-reporter.
+Three DIRECT OBSERVED purified-fragment effects retain lower thermal-transition temperature, reduced CD recovery and reduced intact-band survival for K715A. Table S6 confirms the single intended substitution, but encodes N748/D749 rather than the paper's proposed Asp748. Biochemical tag processing and native functions remain qualified. Partial scientific self-review; IN_PROGRESS. Stage 3 (PR #344) grounded the intact-clipper-band node in asilvestris-clipper-k715a-proteolysis to Aedes silvestris Clipper (UniProtKB:A0A1Y3CHT7).
 
 ## Scope And Provenance
 
@@ -52,11 +52,11 @@ completeness: concern. Targets: PF01345.
 
 Full experimental aliquot/tag records, thermal scan timing, independent-preparation uncertainty and raw biophysical data remain unverified. The reported crosslink structure is not a bond-formation trajectory, and the Asp748 numbering needs reconciliation. Other repeats, CLIPPER_2, full adhesins, native bacterial/archaeal functions and CaT2 mutant controls are outside this partial review.
 
-### Cycle 2 causal-graph partner and substrate protein grounding
+### Cycle 2 causal-graph protein-node grounding
 
 identity: supported. Targets: PF01345.
 
-Stage 3 (PR #347) grounded Homo sapiens pro-IL-1beta (UniProtKB:P01584), caspase-1 (UniProtKB:P29466), and IKKbeta (UniProtKB:O14920) across pydc1-suppresses-pro-il1b-maturation and pydc1-suppresses-tnf-and-ikkb-driven-nfkb-reporter.
+Stage 3 (PR #344) grounded the intact-clipper-band node in asilvestris-clipper-k715a-proteolysis to Aedes silvestris Clipper (UniProtKB:A0A1Y3CHT7).
 
 ## Findings
 
@@ -126,9 +126,9 @@ summary: 'Three DIRECT OBSERVED purified-fragment effects retain lower thermal-t
   temperature, reduced CD recovery and reduced intact-band survival for K715A. Table
   S6 confirms the single intended substitution, but encodes N748/D749 rather than
   the paper''s proposed Asp748. Biochemical tag processing and native functions remain
-  qualified. Partial scientific self-review; IN_PROGRESS. Stage 3 (PR #347) grounded
-  Homo sapiens pro-IL-1beta (UniProtKB:P01584), caspase-1 (UniProtKB:P29466), and
-  IKKbeta (UniProtKB:O14920) across pydc1-suppresses-pro-il1b-maturation and pydc1-suppresses-tnf-and-ikkb-driven-nfkb-reporter.'
+  qualified. Partial scientific self-review; IN_PROGRESS. Stage 3 (PR #344) grounded
+  the intact-clipper-band node in asilvestris-clipper-k715a-proteolysis to Aedes silvestris
+  Clipper (UniProtKB:A0A1Y3CHT7).'
 repository: CultureBotAI/DUFMech
 kind: record
 source:
@@ -523,11 +523,10 @@ assessments:
   - primary
 - assessment_id: cycle2-partner-grounding-verification
   area: identity
-  topic: Cycle 2 causal-graph partner and substrate protein grounding
+  topic: Cycle 2 causal-graph protein-node grounding
   outcome: supported
-  summary: 'Stage 3 (PR #347) grounded Homo sapiens pro-IL-1beta (UniProtKB:P01584),
-    caspase-1 (UniProtKB:P29466), and IKKbeta (UniProtKB:O14920) across pydc1-suppresses-pro-il1b-maturation
-    and pydc1-suppresses-tnf-and-ikkb-driven-nfkb-reporter.'
+  summary: 'Stage 3 (PR #344) grounded the intact-clipper-band node in asilvestris-clipper-k715a-proteolysis
+    to Aedes silvestris Clipper (UniProtKB:A0A1Y3CHT7).'
   target_ids:
   - PF01345
   evidence_ids:

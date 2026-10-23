@@ -8,9 +8,10 @@ revision: 1
 outcome: completed
 summary: Audited all 141 maintained FamilyCuration overlays and all 8,296 generated FamilyRecord projections
   in the frozen InterPro/Pfam 2026-10-10 inventory. Saved 20 versioned per-record structured reviews and
-  1 cohort category review (21 bundles total in reviews/structured/) covering all 19 overlays updated
-  in Cycle 2 Stages 2-3 plus PF01923, and preserving 3 newly identified open causal-graph protein-grounding
-  findings (PF01923, PF01934, PF01982) in carry_forward_ids for Stage 5 grouped remediation.
+  1 cohort category review (21 bundles total in reviews/structured/) covering the 1 overlay updated in
+  Cycle 2 Stage 2 (PF01973) and all 18 overlays updated in Cycle 2 Stage 3 plus PF01923, and preserving
+  3 newly identified open causal-graph protein-grounding findings (PF01923, PF01934, PF01982) in carry_forward_ids
+  for Stage 5 grouped remediation.
 source_revision: fde7d143a6b952fbc63b390cbfc27de38ac7701b
 scope_frozen_at: '2026-10-23T09:26:18Z'
 previous_evidence:
@@ -18,13 +19,13 @@ previous_evidence:
   sha256: 796b7f1e60b874a2753ec968d0589e1c5e877420a92c6ad89d64892cf3457db7
 artifacts:
 - path: reviews/workflow/mech-goal-sequence-20261019/cycle-000002/stage-04/revision-0001/review_report.md
-  sha256: 2f5c8349fa496ce1085d8fdce1e5359d799450f00109355184ea094bfdc94321
+  sha256: b4068e8d50d8db40a716009f2b964fdc884e39c294339a5d4c00b7afb01a8245
   kind: review_report
 - path: reviews/workflow/mech-goal-sequence-20261019/cycle-000002/stage-04/revision-0001/review_findings.md
   sha256: a9f70d8bd30ce8f3bebc32582c972022d14b0091d55b881aa1bde3e0099644a5
   kind: review_findings
 - path: reviews/workflow/mech-goal-sequence-20261019/cycle-000002/stage-04/revision-0001/frozen_inventory_coverage.json
-  sha256: 111840ab0d6a1393e38ee523a594c0a5dff48ad6fccae4218bca02db2045974e
+  sha256: 7f2987f4b35b06fca9c02e173e705b3860d4863cf815dd3fe193f613fb35996f
   kind: supporting
 findings:
 - finding_id: pf01923-sepduo-and-seeutt-assays-missing-protein-grounding

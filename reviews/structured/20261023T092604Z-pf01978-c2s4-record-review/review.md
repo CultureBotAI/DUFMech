@@ -11,7 +11,7 @@
 
 ## Summary
 
-Three new graphs retain six author-reported experimental effects, with molecular mechanisms unresolved. PF01978 has42 graphs/96 edges:89 observed/seven hypothesized. All39 earlier graphs are preserved. Three scientific findings remain OPEN; status remains IN_PROGRESS. Stage 2 (PR #343) grounded Saccharomyces cerevisiae Rrp47 (UniProtKB:P38792), Rrp6 (UniProtKB:Q12149), and Mtr4 (UniProtKB:P47047) across five Rrp47/Rrp6/Mtr4 interaction and RNA-processing graphs.
+Three new graphs retain six author-reported experimental effects, with molecular mechanisms unresolved. PF01978 has42 graphs/96 edges:89 observed/seven hypothesized. All39 earlier graphs are preserved. Three scientific findings remain OPEN; status remains IN_PROGRESS. Stage 3 (PR #344) grounded the tgm_occupancy and own_occupancy TrmBL1 promoter occupancy state nodes in trmbl1-regional-recognition-model to Pyrococcus furiosus TrmBL1 (UniProtKB:Q8U4G4).
 
 ## Scope And Provenance
 
@@ -71,11 +71,11 @@ completeness: concern. Targets: PF01978.
 
 Text-based adoption advances the original-paper assessment but cannot close original figure, physical-construct, quantitative-control, other-member or native-context gaps. Presence counts are not reviewed-family completion.
 
-### Cycle 2 causal-graph partner and substrate protein grounding
+### Cycle 2 causal-graph protein-node grounding
 
 identity: supported. Targets: PF01978.
 
-Stage 2 (PR #343) grounded Saccharomyces cerevisiae Rrp47 (UniProtKB:P38792), Rrp6 (UniProtKB:Q12149), and Mtr4 (UniProtKB:P47047) across five Rrp47/Rrp6/Mtr4 interaction and RNA-processing graphs.
+Stage 3 (PR #344) grounded the tgm_occupancy and own_occupancy TrmBL1 promoter occupancy state nodes in trmbl1-regional-recognition-model to Pyrococcus furiosus TrmBL1 (UniProtKB:Q8U4G4).
 
 ## Findings
 
@@ -136,8 +136,10 @@ The sibling review.yaml is authoritative.
 
 ```yaml
 schema_version: 1.0.0
+review_id: 20261023T092604Z-pf01978-c2s4-record-review
 title: PF01978 Cycle 2 Stage 4 frozen-inventory causal-graph and grounding review
 started_at: '2026-10-23T09:26:03Z'
+finished_at: '2026-10-23T09:26:04Z'
 reviewer:
   identity: Antigravity
   kind: agent
@@ -154,230 +156,11 @@ scientific_review: true
 summary: 'Three new graphs retain six author-reported experimental effects, with molecular
   mechanisms unresolved. PF01978 has42 graphs/96 edges:89 observed/seven hypothesized.
   All39 earlier graphs are preserved. Three scientific findings remain OPEN; status
-  remains IN_PROGRESS. Stage 2 (PR #343) grounded Saccharomyces cerevisiae Rrp47 (UniProtKB:P38792),
-  Rrp6 (UniProtKB:Q12149), and Mtr4 (UniProtKB:P47047) across five Rrp47/Rrp6/Mtr4
-  interaction and RNA-processing graphs.'
-scope:
-  description: Assess six new edges against the original Lee2007 publisher Results,
-    captions and methods, reused exact-member mapping and retained source conflicts.
-    This is a text-and-methods review, not independent trace/lane interpretation.
-    Prior39 graphs receive preservation checks, not fresh full scientific reassessment.
-  selection: Continue PF01978 with the original paper's SEC, radioligand competition
-    and mutant MD-EMSA reports, separately from thesis preparations.
-  coverage: partial
-  population_size: 1
-  reviewed_target_ids:
-  - PF01978
-  exclusions:
-  - target: Original Figure3/10 images, remaining original-paper contexts and full
-      family/corpus science
-    reason: Original figure-image download failed with HTTP403; no image-based quantification
-      is claimed. Other experiments, members and native physiology remain unreviewed.
-  - target: Canonical publication and independent replication
-    reason: Local unpinned preview only; published Pages/pins remain at the previous
-      release. Publication is not part of this scientific continuation.
-assessments:
-- assessment_id: identity
-  area: identity
-  topic: Reference mapping versus actual tagged preparations
-  outcome: supported
-  summary: Pinned Q8U4G4 sequence1/entry96 and complete three-Pfam mapping support
-    Y49/D50 inside PF01978. Construct/tag uncertainty is retained; no isolated-domain
-    or family-universal claim is made.
-  evidence_ids:
-  - identity
-  - primary
-  target_ids:
-  - PF01978
-- assessment_id: causality
-  area: graph
-  topic: Reported experimental outcomes without unresolved molecular leaps
-  outcome: supported
-  summary: All six new edges are PHENOTYPIC graph effects with OBSERVED/UNRESOLVED/EXPERIMENTAL
-    support. They stop at SEC distribution, specific retained tracer and MD-probe
-    retardation. No tetramer-to-octamer conversion, fitted affinity, direct residue-base
-    contact, epistasis or stitched sugar-to-transcription chain is asserted.
-  evidence_ids:
-  - primary
-  - validation
-  target_ids:
-  - PF01978
-- assessment_id: conflicts
-  area: evidence
-  topic: Confounds and access limits
-  outcome: supported
-  summary: The original WT/mutant tag ambiguity, fructose/sucrose discrepancy, weak
-    signal, unmatched sugar doses, unavailable raw replicates and uninspected figures
-    remain explicit. Apparent loss of signal is not zero affinity. The two-source
-    contexts are not declared independent replication.
-  evidence_ids:
-  - primary
-  target_ids:
-  - PF01978
-- assessment_id: preservation
-  area: provenance
-  topic: Owner-scoped curation and retained historical evidence
-  outcome: supported
-  summary: Scientific edits are limited to the PF01978 overlay/projection, its manifest
-    and native inventory, with one new ledger and actual history. All39 earlier graphs,
-    eight prior events, prior discussion notes, older ledgers/reviews and other8295
-    records are preserved. Canonical Pages/pins, code and frozen sources remain unchanged;
-    the review is retained separately.
-  evidence_ids:
-  - validation
-  - predecessor
-  target_ids:
-  - PF01978
-- assessment_id: coverage
-  area: completeness
-  topic: Remaining primary and family coverage
-  outcome: concern
-  summary: Text-based adoption advances the original-paper assessment but cannot close
-    original figure, physical-construct, quantitative-control, other-member or native-context
-    gaps. Presence counts are not reviewed-family completion.
-  evidence_ids:
-  - primary
-  - predecessor
-  target_ids:
-  - PF01978
-- assessment_id: cycle2-partner-grounding-verification
-  area: identity
-  topic: Cycle 2 causal-graph partner and substrate protein grounding
-  outcome: supported
-  summary: 'Stage 2 (PR #343) grounded Saccharomyces cerevisiae Rrp47 (UniProtKB:P38792),
-    Rrp6 (UniProtKB:Q12149), and Mtr4 (UniProtKB:P47047) across five Rrp47/Rrp6/Mtr4
-    interaction and RNA-processing graphs.'
-  target_ids:
-  - PF01978
-  evidence_ids:
-  - stage4-prior-review
-findings:
-- finding_id: construct-and-domain-boundaries
-  issue_key: pf01978-construct-and-domain-boundaries
-  title: Resolve assay-specific tags and complete physical constructs
-  description: Lee2007 specifies C-His6 pSL242-derived mutants but general N-His6
-    WT DNA assays. Figure10 comparator and SEC/radioligand tags remain unresolved.
-    Pinned Y49/D50 lie within PF01978, but reference sequence is not complete experimental-insert
-    verification. Earlier TrmB/thesis construct conflicts remain open under issue228.
-  category: completeness
-  severity: minor
-  status: open
-  certainty: confirmed
-  target_ids:
-  - PF01978
-  field_paths:
-  - causal_graphs
-  - discussions
-  evidence_ids:
-  - primary
-  - identity
-  - predecessor
-  owner_paths:
-  - path: curation/families/PF01978.yaml
-    repository: CultureBotAI/DUFMech
-    role: Maintained scientific overlay; generated records are not hand-edited.
-  previous_occurrences:
-  - repository: CultureBotAI/DUFMech
-    review_id: 20261015T193546Z-pf01978-lee2007-reported-assays
-    finding_id: construct-and-domain-boundaries
-- finding_id: assay-context-and-residual-activity
-  issue_key: pf01978-assay-context-and-residual-activity
-  title: Resolve quantitative assay controls and contradictory sugar identity
-  description: SEC apparent mass does not count subunits; weak tracer competition
-    cannot supply fitted Kd/Km. Results fructose versus Methods sucrose remains unresolved.
-    Original figure images, raw replicates, active fractions and mutant folding/assembly
-    controls were not inspected. Existing carryover/residual-activity findings remain
-    open under issue229.
-  category: completeness
-  severity: minor
-  status: open
-  certainty: confirmed
-  target_ids:
-  - PF01978
-  field_paths:
-  - causal_graphs
-  - discussions
-  evidence_ids:
-  - primary
-  - identity
-  - predecessor
-  owner_paths:
-  - path: curation/families/PF01978.yaml
-    repository: CultureBotAI/DUFMech
-    role: Maintained scientific overlay; generated records are not hand-edited.
-  previous_occurrences:
-  - repository: CultureBotAI/DUFMech
-    review_id: 20261015T193546Z-pf01978-lee2007-reported-assays
-    finding_id: assay-context-and-residual-activity
-- finding_id: family-and-promoter-coverage
-  issue_key: pf01978-family-and-promoter-coverage
-  title: Continue primary-paper figures and independent member contexts
-  description: Three original-paper reported-assay graphs advance coverage, but do
-    not complete remaining promoter/transcription assays, original Figure3/10 image
-    review, other members or native physiology. Distinct paper/thesis representations
-    are not treated as independent replication. Issue230 and the full8296-record objective
-    remain open.
-  category: completeness
-  severity: minor
-  status: open
-  certainty: confirmed
-  target_ids:
-  - PF01978
-  field_paths:
-  - causal_graphs
-  - discussions
-  evidence_ids:
-  - primary
-  - identity
-  - predecessor
-  owner_paths:
-  - path: curation/families/PF01978.yaml
-    repository: CultureBotAI/DUFMech
-    role: Maintained scientific overlay; generated records are not hand-edited.
-  previous_occurrences:
-  - repository: CultureBotAI/DUFMech
-    review_id: 20261015T193546Z-pf01978-lee2007-reported-assays
-    finding_id: family-and-promoter-coverage
-actions:
-- action_id: continue-primary-and-member-evidence
-  description: Continue evidence review while preserving current bounded effects and
-    stable open-finding lineage.
-  finding_ids:
-  - construct-and-domain-boundaries
-  - assay-context-and-residual-activity
-  - family-and-promoter-coverage
-  target_ids:
-  - PF01978
-  owner_paths:
-  - path: curation/families/PF01978.yaml
-    repository: CultureBotAI/DUFMech
-    role: Maintained scientific overlay; generated records are not hand-edited.
-  acceptance_checks:
-  - Obtain inspectable original Figures3/10 and determine WT comparator/SEC/radioligand
-    tags from primary records; retain inaccessible evidence as unverified.
-  - Resolve the fructose/sucrose discrepancy, raw signal/replicate controls and physical
-    insert/folding alternatives when evidence permits; do not infer fitted affinity
-    or exact oligomer stoichiometry.
-  - Assess remaining original promoter/transcription and separately mapped paralog/native-cell
-    contexts; preserve old graphs/history and keep IN_PROGRESS until full scientific
-    review is actually supported.
-limitations:
-- Partial scientific self-review, not independent approval or full family/corpus completion.
-  The full8296-record goal remains active.
-- Original2007 figure images were not inspected. The graph support enum OBSERVED denotes
-  reported experimental outcomes, not a claim that this agent inspected raw traces/lanes.
-- The first dry run rejected two overstrong MECHANISTIC graph scopes; both were corrected
-  to PHENOTYPIC rather than relabeling unresolved edges as direct. Initial history
-  creation rejected actor enum AI; the accepted event uses ai_agent.
-- An export check before completed regeneration correctly reported two stale projections;
-  the final post-generation export check passed. Readability edits were followed by
-  fresh generation and inspection, not reuse of stale source hashes.
-- Full release QC, source checkpoint retention, canonical rendering, CI and publication
-  are not performed in this tranche; current source-pin/Pages refresh remains a separate
-  publication step.
-- Issues228-230 remain OPEN; no REVIEWED promotion or invented scientific closure.
-kind: record
+  remains IN_PROGRESS. Stage 3 (PR #344) grounded the tgm_occupancy and own_occupancy
+  TrmBL1 promoter occupancy state nodes in trmbl1-regional-recognition-model to Pyrococcus
+  furiosus TrmBL1 (UniProtKB:Q8U4G4).'
 repository: CultureBotAI/DUFMech
+kind: record
 source:
   git_revision: fde7d143a6b952fbc63b390cbfc27de38ac7701b
   state: working_tree
@@ -428,8 +211,25 @@ targets:
     sha256: e09970657329a128441ad19fed4c25580eee4c193273b57bbafc2cd587845615
     description: Canonical JSON SHA-256 of effective FamilyRecord excluding only curation_status,
       review_id and curation_events.
-review_id: 20261023T092604Z-pf01978-c2s4-record-review
-finished_at: '2026-10-23T09:26:04Z'
+scope:
+  description: Assess six new edges against the original Lee2007 publisher Results,
+    captions and methods, reused exact-member mapping and retained source conflicts.
+    This is a text-and-methods review, not independent trace/lane interpretation.
+    Prior39 graphs receive preservation checks, not fresh full scientific reassessment.
+  selection: Continue PF01978 with the original paper's SEC, radioligand competition
+    and mutant MD-EMSA reports, separately from thesis preparations.
+  coverage: partial
+  population_size: 1
+  reviewed_target_ids:
+  - PF01978
+  exclusions:
+  - target: Original Figure3/10 images, remaining original-paper contexts and full
+      family/corpus science
+    reason: Original figure-image download failed with HTTP403; no image-based quantification
+      is claimed. Other experiments, members and native physiology remain unreviewed.
+  - target: Canonical publication and independent replication
+    reason: Local unpinned preview only; published Pages/pins remain at the previous
+      release. Publication is not part of this scientific continuation.
 checks:
 - check_id: generation
   name: generation
@@ -2548,4 +2348,204 @@ evidence:
     \  event_index: 0\n  llm_assisted: true\n"
   summary: Byte-exact projection retained at save for digest verification, not scientific
     assessment.
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Reference mapping versus actual tagged preparations
+  outcome: supported
+  summary: Pinned Q8U4G4 sequence1/entry96 and complete three-Pfam mapping support
+    Y49/D50 inside PF01978. Construct/tag uncertainty is retained; no isolated-domain
+    or family-universal claim is made.
+  evidence_ids:
+  - identity
+  - primary
+  target_ids:
+  - PF01978
+- assessment_id: causality
+  area: graph
+  topic: Reported experimental outcomes without unresolved molecular leaps
+  outcome: supported
+  summary: All six new edges are PHENOTYPIC graph effects with OBSERVED/UNRESOLVED/EXPERIMENTAL
+    support. They stop at SEC distribution, specific retained tracer and MD-probe
+    retardation. No tetramer-to-octamer conversion, fitted affinity, direct residue-base
+    contact, epistasis or stitched sugar-to-transcription chain is asserted.
+  evidence_ids:
+  - primary
+  - validation
+  target_ids:
+  - PF01978
+- assessment_id: conflicts
+  area: evidence
+  topic: Confounds and access limits
+  outcome: supported
+  summary: The original WT/mutant tag ambiguity, fructose/sucrose discrepancy, weak
+    signal, unmatched sugar doses, unavailable raw replicates and uninspected figures
+    remain explicit. Apparent loss of signal is not zero affinity. The two-source
+    contexts are not declared independent replication.
+  evidence_ids:
+  - primary
+  target_ids:
+  - PF01978
+- assessment_id: preservation
+  area: provenance
+  topic: Owner-scoped curation and retained historical evidence
+  outcome: supported
+  summary: Scientific edits are limited to the PF01978 overlay/projection, its manifest
+    and native inventory, with one new ledger and actual history. All39 earlier graphs,
+    eight prior events, prior discussion notes, older ledgers/reviews and other8295
+    records are preserved. Canonical Pages/pins, code and frozen sources remain unchanged;
+    the review is retained separately.
+  evidence_ids:
+  - validation
+  - predecessor
+  target_ids:
+  - PF01978
+- assessment_id: coverage
+  area: completeness
+  topic: Remaining primary and family coverage
+  outcome: concern
+  summary: Text-based adoption advances the original-paper assessment but cannot close
+    original figure, physical-construct, quantitative-control, other-member or native-context
+    gaps. Presence counts are not reviewed-family completion.
+  evidence_ids:
+  - primary
+  - predecessor
+  target_ids:
+  - PF01978
+- assessment_id: cycle2-partner-grounding-verification
+  area: identity
+  topic: Cycle 2 causal-graph protein-node grounding
+  outcome: supported
+  summary: 'Stage 3 (PR #344) grounded the tgm_occupancy and own_occupancy TrmBL1
+    promoter occupancy state nodes in trmbl1-regional-recognition-model to Pyrococcus
+    furiosus TrmBL1 (UniProtKB:Q8U4G4).'
+  target_ids:
+  - PF01978
+  evidence_ids:
+  - stage4-prior-review
+findings:
+- finding_id: construct-and-domain-boundaries
+  issue_key: pf01978-construct-and-domain-boundaries
+  title: Resolve assay-specific tags and complete physical constructs
+  description: Lee2007 specifies C-His6 pSL242-derived mutants but general N-His6
+    WT DNA assays. Figure10 comparator and SEC/radioligand tags remain unresolved.
+    Pinned Y49/D50 lie within PF01978, but reference sequence is not complete experimental-insert
+    verification. Earlier TrmB/thesis construct conflicts remain open under issue228.
+  category: completeness
+  severity: minor
+  status: open
+  certainty: confirmed
+  target_ids:
+  - PF01978
+  field_paths:
+  - causal_graphs
+  - discussions
+  evidence_ids:
+  - primary
+  - identity
+  - predecessor
+  owner_paths:
+  - path: curation/families/PF01978.yaml
+    repository: CultureBotAI/DUFMech
+    role: Maintained scientific overlay; generated records are not hand-edited.
+  previous_occurrences:
+  - repository: CultureBotAI/DUFMech
+    review_id: 20261015T193546Z-pf01978-lee2007-reported-assays
+    finding_id: construct-and-domain-boundaries
+- finding_id: assay-context-and-residual-activity
+  issue_key: pf01978-assay-context-and-residual-activity
+  title: Resolve quantitative assay controls and contradictory sugar identity
+  description: SEC apparent mass does not count subunits; weak tracer competition
+    cannot supply fitted Kd/Km. Results fructose versus Methods sucrose remains unresolved.
+    Original figure images, raw replicates, active fractions and mutant folding/assembly
+    controls were not inspected. Existing carryover/residual-activity findings remain
+    open under issue229.
+  category: completeness
+  severity: minor
+  status: open
+  certainty: confirmed
+  target_ids:
+  - PF01978
+  field_paths:
+  - causal_graphs
+  - discussions
+  evidence_ids:
+  - primary
+  - identity
+  - predecessor
+  owner_paths:
+  - path: curation/families/PF01978.yaml
+    repository: CultureBotAI/DUFMech
+    role: Maintained scientific overlay; generated records are not hand-edited.
+  previous_occurrences:
+  - repository: CultureBotAI/DUFMech
+    review_id: 20261015T193546Z-pf01978-lee2007-reported-assays
+    finding_id: assay-context-and-residual-activity
+- finding_id: family-and-promoter-coverage
+  issue_key: pf01978-family-and-promoter-coverage
+  title: Continue primary-paper figures and independent member contexts
+  description: Three original-paper reported-assay graphs advance coverage, but do
+    not complete remaining promoter/transcription assays, original Figure3/10 image
+    review, other members or native physiology. Distinct paper/thesis representations
+    are not treated as independent replication. Issue230 and the full8296-record objective
+    remain open.
+  category: completeness
+  severity: minor
+  status: open
+  certainty: confirmed
+  target_ids:
+  - PF01978
+  field_paths:
+  - causal_graphs
+  - discussions
+  evidence_ids:
+  - primary
+  - identity
+  - predecessor
+  owner_paths:
+  - path: curation/families/PF01978.yaml
+    repository: CultureBotAI/DUFMech
+    role: Maintained scientific overlay; generated records are not hand-edited.
+  previous_occurrences:
+  - repository: CultureBotAI/DUFMech
+    review_id: 20261015T193546Z-pf01978-lee2007-reported-assays
+    finding_id: family-and-promoter-coverage
+actions:
+- action_id: continue-primary-and-member-evidence
+  description: Continue evidence review while preserving current bounded effects and
+    stable open-finding lineage.
+  finding_ids:
+  - construct-and-domain-boundaries
+  - assay-context-and-residual-activity
+  - family-and-promoter-coverage
+  target_ids:
+  - PF01978
+  owner_paths:
+  - path: curation/families/PF01978.yaml
+    repository: CultureBotAI/DUFMech
+    role: Maintained scientific overlay; generated records are not hand-edited.
+  acceptance_checks:
+  - Obtain inspectable original Figures3/10 and determine WT comparator/SEC/radioligand
+    tags from primary records; retain inaccessible evidence as unverified.
+  - Resolve the fructose/sucrose discrepancy, raw signal/replicate controls and physical
+    insert/folding alternatives when evidence permits; do not infer fitted affinity
+    or exact oligomer stoichiometry.
+  - Assess remaining original promoter/transcription and separately mapped paralog/native-cell
+    contexts; preserve old graphs/history and keep IN_PROGRESS until full scientific
+    review is actually supported.
+limitations:
+- Partial scientific self-review, not independent approval or full family/corpus completion.
+  The full8296-record goal remains active.
+- Original2007 figure images were not inspected. The graph support enum OBSERVED denotes
+  reported experimental outcomes, not a claim that this agent inspected raw traces/lanes.
+- The first dry run rejected two overstrong MECHANISTIC graph scopes; both were corrected
+  to PHENOTYPIC rather than relabeling unresolved edges as direct. Initial history
+  creation rejected actor enum AI; the accepted event uses ai_agent.
+- An export check before completed regeneration correctly reported two stale projections;
+  the final post-generation export check passed. Readability edits were followed by
+  fresh generation and inspection, not reuse of stale source hashes.
+- Full release QC, source checkpoint retention, canonical rendering, CI and publication
+  are not performed in this tranche; current source-pin/Pages refresh remains a separate
+  publication step.
+- Issues228-230 remain OPEN; no REVIEWED promotion or invented scientific closure.
 ```

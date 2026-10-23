@@ -11,7 +11,7 @@
 
 ## Summary
 
-Seven observed effects are retained in four graphs, separating intact-mass chemistry, WT/C11A EMSA, the lower-range K13A EMSA and heterologous GFP reporter responses. C11/K13 are outside current PF01638; the allosteric trajectory is not represented as directly observed. Stage 3 (PR #347) grounded Escherichia coli K-12 CsgD (UniProtKB:P52106), StpA (UniProtKB:P0ACG1), and H-NS (UniProtKB:P0ACF8) across ecoli-ycgd-represses-csgd-expression and ecoli-ycgd-stpa-hns-interaction.
+Seven observed effects are retained in four graphs, separating intact-mass chemistry, WT/C11A EMSA, the lower-range K13A EMSA and heterologous GFP reporter responses. C11/K13 are outside current PF01638; the allosteric trajectory is not represented as directly observed. Stage 3 (PR #344) grounded the plus12-hxlr-species node in hxlr-formaldehyde-intact-mass-product to Bacillus subtilis HxlR (UniProtKB:P42406).
 
 ## Scope And Provenance
 
@@ -52,11 +52,11 @@ completeness: concern. Targets: PF01638.
 
 Native B. subtilis operon regulation, the 2005 cited study, exact pBAD N-terminal sequence, EMSA concentration discrepancy, reversibility, FAsor fusion contexts and other HxlR-like family ligands remain incomplete. Current protein-level evidence does not establish isolated-domain sufficiency or a universal DUF24 mechanism.
 
-### Cycle 2 causal-graph partner and substrate protein grounding
+### Cycle 2 causal-graph protein-node grounding
 
 identity: supported. Targets: PF01638.
 
-Stage 3 (PR #347) grounded Escherichia coli K-12 CsgD (UniProtKB:P52106), StpA (UniProtKB:P0ACG1), and H-NS (UniProtKB:P0ACF8) across ecoli-ycgd-represses-csgd-expression and ecoli-ycgd-stpa-hns-interaction.
+Stage 3 (PR #344) grounded the plus12-hxlr-species node in hxlr-formaldehyde-intact-mass-product to Bacillus subtilis HxlR (UniProtKB:P42406).
 
 ## Findings
 
@@ -122,9 +122,8 @@ scientific_review: true
 summary: 'Seven observed effects are retained in four graphs, separating intact-mass
   chemistry, WT/C11A EMSA, the lower-range K13A EMSA and heterologous GFP reporter
   responses. C11/K13 are outside current PF01638; the allosteric trajectory is not
-  represented as directly observed. Stage 3 (PR #347) grounded Escherichia coli K-12
-  CsgD (UniProtKB:P52106), StpA (UniProtKB:P0ACG1), and H-NS (UniProtKB:P0ACF8) across
-  ecoli-ycgd-represses-csgd-expression and ecoli-ycgd-stpa-hns-interaction.'
+  represented as directly observed. Stage 3 (PR #344) grounded the plus12-hxlr-species
+  node in hxlr-formaldehyde-intact-mass-product to Bacillus subtilis HxlR (UniProtKB:P42406).'
 repository: CultureBotAI/DUFMech
 kind: record
 source:
@@ -548,11 +547,10 @@ assessments:
   - primary
 - assessment_id: cycle2-partner-grounding-verification
   area: identity
-  topic: Cycle 2 causal-graph partner and substrate protein grounding
+  topic: Cycle 2 causal-graph protein-node grounding
   outcome: supported
-  summary: 'Stage 3 (PR #347) grounded Escherichia coli K-12 CsgD (UniProtKB:P52106),
-    StpA (UniProtKB:P0ACG1), and H-NS (UniProtKB:P0ACF8) across ecoli-ycgd-represses-csgd-expression
-    and ecoli-ycgd-stpa-hns-interaction.'
+  summary: 'Stage 3 (PR #344) grounded the plus12-hxlr-species node in hxlr-formaldehyde-intact-mass-product
+    to Bacillus subtilis HxlR (UniProtKB:P42406).'
   target_ids:
   - PF01638
   evidence_ids:

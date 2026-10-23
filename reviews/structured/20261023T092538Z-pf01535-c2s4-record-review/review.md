@@ -11,7 +11,7 @@
 
 ## Summary
 
-Four observed purified-fusion binding effects are supported in two separate mutant-background graphs. Local K426 mapping falls within current PF01535, whereas N464 does not. Partial rescue, apparent-affinity interpretation and inaccessible supplementary construct/gels remain explicit; native cellular and family-wide mechanisms are not established. Stage 3 (PR #347) grounded Zea mays CRS2 (UniProtKB:Q9M5P2), CAF2 (UniProtKB:Q6J9G1), and CAF1 (UniProtKB:Q56P18) across crs2-caf2-complex-formation and crs2-caf1-complex-formation.
+Four observed purified-fusion binding effects are supported in two separate mutant-background graphs. Local K426 mapping falls within current PF01535, whereas N464 does not. Partial rescue, apparent-affinity interpretation and inaccessible supplementary construct/gels remain explicit; native cellular and family-wide mechanisms are not established. Stage 3 (PR #344) grounded the dd120-binding-k12n-series and dd120-binding-n12r-series RNA-binding readout nodes in PF01535 causal graphs to Arabidopsis thaliana HCF152 (UniProtKB:Q9SF38).
 
 ## Scope And Provenance
 
@@ -52,11 +52,11 @@ completeness: concern. Targets: PF01535.
 
 Complete mini-protein endpoints, linker/primer sequences, underlying gels, purity and mutant-folding controls remain unverified. Other substitutions, full-length HCF152 cellular perturbations, other PPR proteins and the Pet309 family-mapping discrepancy need separate assessment.
 
-### Cycle 2 causal-graph partner and substrate protein grounding
+### Cycle 2 causal-graph protein-node grounding
 
 identity: supported. Targets: PF01535.
 
-Stage 3 (PR #347) grounded Zea mays CRS2 (UniProtKB:Q9M5P2), CAF2 (UniProtKB:Q6J9G1), and CAF1 (UniProtKB:Q56P18) across crs2-caf2-complex-formation and crs2-caf1-complex-formation.
+Stage 3 (PR #344) grounded the dd120-binding-k12n-series and dd120-binding-n12r-series RNA-binding readout nodes in PF01535 causal graphs to Arabidopsis thaliana HCF152 (UniProtKB:Q9SF38).
 
 ## Findings
 
@@ -123,9 +123,9 @@ summary: 'Four observed purified-fusion binding effects are supported in two sep
   mutant-background graphs. Local K426 mapping falls within current PF01535, whereas
   N464 does not. Partial rescue, apparent-affinity interpretation and inaccessible
   supplementary construct/gels remain explicit; native cellular and family-wide mechanisms
-  are not established. Stage 3 (PR #347) grounded Zea mays CRS2 (UniProtKB:Q9M5P2),
-  CAF2 (UniProtKB:Q6J9G1), and CAF1 (UniProtKB:Q56P18) across crs2-caf2-complex-formation
-  and crs2-caf1-complex-formation.'
+  are not established. Stage 3 (PR #344) grounded the dd120-binding-k12n-series and
+  dd120-binding-n12r-series RNA-binding readout nodes in PF01535 causal graphs to
+  Arabidopsis thaliana HCF152 (UniProtKB:Q9SF38).'
 repository: CultureBotAI/DUFMech
 kind: record
 source:
@@ -467,10 +467,11 @@ assessments:
   - primary
 - assessment_id: cycle2-partner-grounding-verification
   area: identity
-  topic: Cycle 2 causal-graph partner and substrate protein grounding
+  topic: Cycle 2 causal-graph protein-node grounding
   outcome: supported
-  summary: 'Stage 3 (PR #347) grounded Zea mays CRS2 (UniProtKB:Q9M5P2), CAF2 (UniProtKB:Q6J9G1),
-    and CAF1 (UniProtKB:Q56P18) across crs2-caf2-complex-formation and crs2-caf1-complex-formation.'
+  summary: 'Stage 3 (PR #344) grounded the dd120-binding-k12n-series and dd120-binding-n12r-series
+    RNA-binding readout nodes in PF01535 causal graphs to Arabidopsis thaliana HCF152
+    (UniProtKB:Q9SF38).'
   target_ids:
   - PF01535
   evidence_ids:

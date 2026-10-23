@@ -23,8 +23,8 @@ summary: 'Twelve graphs retain24 OBSERVED effects, four DIRECT purified-system r
   conjunction is explicit; unchanged SenX3 autophosphorylation prevents an unsupported
   kinase-inhibition arrow. Unequal protein doses and whole-protein repeated-domain
   scope remain visible. IN_PROGRESS and partial family coverage are appropriate. Stage
-  2 (PR #343) grounded Drosophila melanogaster Rab5 (UniProtKB:Q9V3I2) and Syntaxin-7/Avalanche
-  (UniProtKB:Q9V3E6) in drosophila-stealth-defects.'
+  3 (PR #344) grounded the pellet-phou node in ec-phou-fractionation to Escherichia
+  coli PhoU (UniProtKB:P0A9K7).'
 repository: CultureBotAI/DUFMech
 kind: record
 source:
@@ -838,10 +838,10 @@ assessments:
   - primary
 - assessment_id: cycle2-partner-grounding-verification
   area: identity
-  topic: Cycle 2 causal-graph partner and substrate protein grounding
+  topic: Cycle 2 causal-graph protein-node grounding
   outcome: supported
-  summary: 'Stage 2 (PR #343) grounded Drosophila melanogaster Rab5 (UniProtKB:Q9V3I2)
-    and Syntaxin-7/Avalanche (UniProtKB:Q9V3E6) in drosophila-stealth-defects.'
+  summary: 'Stage 3 (PR #344) grounded the pellet-phou node in ec-phou-fractionation
+    to Escherichia coli PhoU (UniProtKB:P0A9K7).'
   target_ids:
   - PF01895
   evidence_ids:

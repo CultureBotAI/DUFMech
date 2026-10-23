@@ -11,7 +11,7 @@
 
 ## Summary
 
-Two original-source reporter contexts extend PF01980 to14 graphs/26edges,25observed and1hypothesis. All12 prior graphs are unchanged. Three scientific findings retain explicit predecessor lineage and remain OPEN; IN_PROGRESS without a REVIEWED pointer. Stage 2 (PR #343) grounded Escherichia coli K-12 ThrL (UniProtKB:P0AD86), ThrA (UniProtKB:P00561), and TcdA (UniProtKB:Q46927) across four thrL/thrA leader attenuation reporter graphs.
+Two original-source reporter contexts extend PF01980 to14 graphs/26edges,25observed and1hypothesis. All12 prior graphs are unchanged. Three scientific findings retain explicit predecessor lineage and remain OPEN; IN_PROGRESS without a REVIEWED pointer. Stage 3 (PR #344) grounded the modified_complex and unmodified_complex EcTrmO Thr3 complex state nodes in ectrmo-thr3-binding-2014 to Escherichia coli TrmO (UniProtKB:P28634).
 
 ## Scope And Provenance
 
@@ -69,11 +69,11 @@ completeness: concern. Targets: PF01980.
 
 The original-paper component advances issue242, but issues240-242 remain open. This is not full family coverage.
 
-### Cycle 2 causal-graph partner and substrate protein grounding
+### Cycle 2 causal-graph protein-node grounding
 
 identity: supported. Targets: PF01980.
 
-Stage 2 (PR #343) grounded Escherichia coli K-12 ThrL (UniProtKB:P0AD86), ThrA (UniProtKB:P00561), and TcdA (UniProtKB:Q46927) across four thrL/thrA leader attenuation reporter graphs.
+Stage 3 (PR #344) grounded the modified_complex and unmodified_complex EcTrmO Thr3 complex state nodes in ectrmo-thr3-binding-2014 to Escherichia coli TrmO (UniProtKB:P28634).
 
 ## Findings
 
@@ -137,6 +137,29 @@ Continue the three existing scientific follow-ups without inflating this partial
 The sibling review.yaml is authoritative.
 
 ```yaml
+schema_version: 1.0.0
+review_id: 20261023T092606Z-pf01980-c2s4-record-review
+title: PF01980 Cycle 2 Stage 4 frozen-inventory causal-graph and grounding review
+started_at: '2026-10-23T09:26:05Z'
+finished_at: '2026-10-23T09:26:06Z'
+reviewer:
+  identity: Antigravity
+  kind: agent
+  model: Claude-Opus-4.6
+  independence: self_review
+  independence_basis: Cycle 2 Stage 4 frozen-inventory record review by Antigravity
+    auditing prior Codex/Antigravity curation overlays, primary evidence caches, history
+    events, and current projections at Git revision fde7d143a6b952fbc63b390cbfc27de38ac7701b.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: pass_with_limitations
+native_verdict: NEEDS_FOLLOWUP
+scientific_review: true
+summary: 'Two original-source reporter contexts extend PF01980 to14 graphs/26edges,25observed
+  and1hypothesis. All12 prior graphs are unchanged. Three scientific findings retain
+  explicit predecessor lineage and remain OPEN; IN_PROGRESS without a REVIEWED pointer.
+  Stage 3 (PR #344) grounded the modified_complex and unmodified_complex EcTrmO Thr3
+  complex state nodes in ectrmo-thr3-binding-2014 to Escherichia coli TrmO (UniProtKB:P28634).'
 repository: CultureBotAI/DUFMech
 kind: record
 source:
@@ -207,29 +230,6 @@ targets:
     sha256: 977772c08c98ac3d504c3d3f5a15cf392fb45a76858ad3fe83652c5f6ec206ce
     description: Canonical JSON SHA-256 of effective FamilyRecord excluding only curation_status,
       review_id and curation_events.
-schema_version: 1.0.0
-review_id: 20261023T092606Z-pf01980-c2s4-record-review
-title: PF01980 Cycle 2 Stage 4 frozen-inventory causal-graph and grounding review
-started_at: '2026-10-23T09:26:05Z'
-finished_at: '2026-10-23T09:26:06Z'
-reviewer:
-  identity: Antigravity
-  kind: agent
-  model: Claude-Opus-4.6
-  independence: self_review
-  independence_basis: Cycle 2 Stage 4 frozen-inventory record review by Antigravity
-    auditing prior Codex/Antigravity curation overlays, primary evidence caches, history
-    events, and current projections at Git revision fde7d143a6b952fbc63b390cbfc27de38ac7701b.
-skill: .claude/skills/review-yaml-record/SKILL.md
-completion: completed
-verdict: pass_with_limitations
-native_verdict: NEEDS_FOLLOWUP
-scientific_review: true
-summary: 'Two original-source reporter contexts extend PF01980 to14 graphs/26edges,25observed
-  and1hypothesis. All12 prior graphs are unchanged. Three scientific findings retain
-  explicit predecessor lineage and remain OPEN; IN_PROGRESS without a REVIEWED pointer.
-  Stage 2 (PR #343) grounded Escherichia coli K-12 ThrL (UniProtKB:P0AD86), ThrA (UniProtKB:P00561),
-  and TcdA (UniProtKB:Q46927) across four thrL/thrA leader attenuation reporter graphs.'
 scope:
   description: Assess the two new reporter comparisons and exclusion/negative ledger
     against Qian1998 Methods, Table1, Results, Discussion and inspected Figure2; check
@@ -1037,11 +1037,11 @@ assessments:
   - prior
 - assessment_id: cycle2-partner-grounding-verification
   area: identity
-  topic: Cycle 2 causal-graph partner and substrate protein grounding
+  topic: Cycle 2 causal-graph protein-node grounding
   outcome: supported
-  summary: 'Stage 2 (PR #343) grounded Escherichia coli K-12 ThrL (UniProtKB:P0AD86),
-    ThrA (UniProtKB:P00561), and TcdA (UniProtKB:Q46927) across four thrL/thrA leader
-    attenuation reporter graphs.'
+  summary: 'Stage 3 (PR #344) grounded the modified_complex and unmodified_complex
+    EcTrmO Thr3 complex state nodes in ectrmo-thr3-binding-2014 to Escherichia coli
+    TrmO (UniProtKB:P28634).'
   target_ids:
   - PF01980
   evidence_ids:

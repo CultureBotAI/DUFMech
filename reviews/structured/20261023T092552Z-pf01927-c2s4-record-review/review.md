@@ -11,7 +11,7 @@
 
 ## Summary
 
-Four evidence ledgers support14 graphs with24 OBSERVED edges:19 DIRECT biochemical or physical assembly effects,3 INDIRECT cellular effects and2 UNRESOLVED coexpression recovery effects. Eleven graphs are MECHANISTIC and three PHENOTYPIC. Native overlay integrity and all24 primary quotations pass, using25 unique quoted words jointly from the paper. Same-agent partial scientific assessment; two OPEN discussions and IN_PROGRESS status retain coverage and construct uncertainties. Stage 2 (PR #343) grounded Arabidopsis thaliana BRI1 (UniProtKB:O22476) in at3g05800-bl-bri1-complex-2013 and at3g05800-kinase-phosphorylation-2013.
+Four evidence ledgers support14 graphs with24 OBSERVED edges:19 DIRECT biochemical or physical assembly effects,3 INDIRECT cellular effects and2 UNRESOLVED coexpression recovery effects. Eleven graphs are MECHANISTIC and three PHENOTYPIC. Native overlay integrity and all24 primary quotations pass, using25 unique quoted words jointly from the paper. Same-agent partial scientific assessment; two OPEN discussions and IN_PROGRESS status retain coverage and construct uncertainties. Stage 3 (PR #344) grounded purified CeMUT-7/MUT-8/MUT-16 complex state nodes (complex, retained, and capture) across three PF01927 causal graphs to Caenorhabditis elegans MUT-7 (UniProtKB:P34607), RDE-2/MUT-8 (UniProtKB:Q19672), and MUT-16 (UniProtKB:O62011).
 
 ## Scope And Provenance
 
@@ -52,11 +52,11 @@ completeness: concern. Targets: PF01927.
 
 The 2024 study and inspected supplement do not characterize all5065 frozen proteins. Original1999/2005 genetics,2021 neuronal contexts,2025 MUT-16/MUT-8 study,plantWEX and prokaryotic members need full primary-assay review. Thermococcus RNA binding is predicted and Nibbler lacks the CTD; neither is an observed Pfam edge. Exact per-panel full-length clone/tag assignments, binding-fit and allele-numbering discrepancies, actual imaging reagent, native substrate identity and isolated-Pfam sufficiency remain open.
 
-### Cycle 2 causal-graph partner and substrate protein grounding
+### Cycle 2 causal-graph protein-node grounding
 
 identity: supported. Targets: PF01927.
 
-Stage 2 (PR #343) grounded Arabidopsis thaliana BRI1 (UniProtKB:O22476) in at3g05800-bl-bri1-complex-2013 and at3g05800-kinase-phosphorylation-2013.
+Stage 3 (PR #344) grounded purified CeMUT-7/MUT-8/MUT-16 complex state nodes (complex, retained, and capture) across three PF01927 causal graphs to Caenorhabditis elegans MUT-7 (UniProtKB:P34607), RDE-2/MUT-8 (UniProtKB:Q19672), and MUT-16 (UniProtKB:O62011).
 
 ## Findings
 
@@ -127,9 +127,10 @@ summary: 'Four evidence ledgers support14 graphs with24 OBSERVED edges:19 DIRECT
   recovery effects. Eleven graphs are MECHANISTIC and three PHENOTYPIC. Native overlay
   integrity and all24 primary quotations pass, using25 unique quoted words jointly
   from the paper. Same-agent partial scientific assessment; two OPEN discussions and
-  IN_PROGRESS status retain coverage and construct uncertainties. Stage 2 (PR #343)
-  grounded Arabidopsis thaliana BRI1 (UniProtKB:O22476) in at3g05800-bl-bri1-complex-2013
-  and at3g05800-kinase-phosphorylation-2013.'
+  IN_PROGRESS status retain coverage and construct uncertainties. Stage 3 (PR #344)
+  grounded purified CeMUT-7/MUT-8/MUT-16 complex state nodes (complex, retained, and
+  capture) across three PF01927 causal graphs to Caenorhabditis elegans MUT-7 (UniProtKB:P34607),
+  RDE-2/MUT-8 (UniProtKB:Q19672), and MUT-16 (UniProtKB:O62011).'
 repository: CultureBotAI/DUFMech
 kind: record
 source:
@@ -881,10 +882,11 @@ assessments:
   - primary
 - assessment_id: cycle2-partner-grounding-verification
   area: identity
-  topic: Cycle 2 causal-graph partner and substrate protein grounding
+  topic: Cycle 2 causal-graph protein-node grounding
   outcome: supported
-  summary: 'Stage 2 (PR #343) grounded Arabidopsis thaliana BRI1 (UniProtKB:O22476)
-    in at3g05800-bl-bri1-complex-2013 and at3g05800-kinase-phosphorylation-2013.'
+  summary: 'Stage 3 (PR #344) grounded purified CeMUT-7/MUT-8/MUT-16 complex state
+    nodes (complex, retained, and capture) across three PF01927 causal graphs to Caenorhabditis
+    elegans MUT-7 (UniProtKB:P34607), RDE-2/MUT-8 (UniProtKB:Q19672), and MUT-16 (UniProtKB:O62011).'
   target_ids:
   - PF01927
   evidence_ids:

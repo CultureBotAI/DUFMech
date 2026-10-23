@@ -11,7 +11,7 @@
 
 ## Summary
 
-Five graphs retain fourteen observed effects, four direct biochemical preparation effects and ten indirect genotype/profiling effects. Mouse probe B binding and grouped mutations are separated from adult liver/heart pulse products, human KO/rescue COX1/COX3 pulses and normalized proline-window occupancies. Versioned protein identities and current domain boundaries are verified, while clone, assay and transfer limits remain explicit. Frozen source wording is preserved and qualified by the translation evidence; status remains IN_PROGRESS. Stage 3 (PR #347) grounded Synechocystis sp. PCC 6803 RbcL (UniProtKB:P54205) in syn6803-rbcx-chaperone-assisted-rbcl-folding.
+Five graphs retain fourteen observed effects, four direct biochemical preparation effects and ten indirect genotype/profiling effects. Mouse probe B binding and grouped mutations are separated from adult liver/heart pulse products, human KO/rescue COX1/COX3 pulses and normalized proline-window occupancies. Versioned protein identities and current domain boundaries are verified, while clone, assay and transfer limits remain explicit. Frozen source wording is preserved and qualified by the translation evidence; status remains IN_PROGRESS. Stage 3 (PR #344) grounded the probeb-complex node in mouse-taco1-probeb-binding to Mus musculus TACO1 (UniProtKB:Q8K0Z7).
 
 ## Scope And Provenance
 
@@ -52,11 +52,11 @@ completeness: concern. Targets: PF01709.
 
 Per-panel human rescue constructs and exact lesions, mouse mutant folding and tag controls, pulse isotope/emetine/P-site-offset discrepancies, additional2024 motifs/bL27m experiments,2026 human structural/GTP-probe data and bacterial/plant members remain open. The2026 supplement text was surveyed but its figures were not visually inspected.2025 bacterial early text and2026 plant downloaded XML are leads, not adopted edge evidence. Family-wide transcription or translation specificity is not inferred.
 
-### Cycle 2 causal-graph partner and substrate protein grounding
+### Cycle 2 causal-graph protein-node grounding
 
 identity: supported. Targets: PF01709.
 
-Stage 3 (PR #347) grounded Synechocystis sp. PCC 6803 RbcL (UniProtKB:P54205) in syn6803-rbcx-chaperone-assisted-rbcl-folding.
+Stage 3 (PR #344) grounded the probeb-complex node in mouse-taco1-probeb-binding to Mus musculus TACO1 (UniProtKB:Q8K0Z7).
 
 ## Findings
 
@@ -127,8 +127,8 @@ summary: 'Five graphs retain fourteen observed effects, four direct biochemical 
   pulses and normalized proline-window occupancies. Versioned protein identities and
   current domain boundaries are verified, while clone, assay and transfer limits remain
   explicit. Frozen source wording is preserved and qualified by the translation evidence;
-  status remains IN_PROGRESS. Stage 3 (PR #347) grounded Synechocystis sp. PCC 6803
-  RbcL (UniProtKB:P54205) in syn6803-rbcx-chaperone-assisted-rbcl-folding.'
+  status remains IN_PROGRESS. Stage 3 (PR #344) grounded the probeb-complex node in
+  mouse-taco1-probeb-binding to Mus musculus TACO1 (UniProtKB:Q8K0Z7).'
 repository: CultureBotAI/DUFMech
 kind: record
 source:
@@ -684,10 +684,10 @@ assessments:
   - primary
 - assessment_id: cycle2-partner-grounding-verification
   area: identity
-  topic: Cycle 2 causal-graph partner and substrate protein grounding
+  topic: Cycle 2 causal-graph protein-node grounding
   outcome: supported
-  summary: 'Stage 3 (PR #347) grounded Synechocystis sp. PCC 6803 RbcL (UniProtKB:P54205)
-    in syn6803-rbcx-chaperone-assisted-rbcl-folding.'
+  summary: 'Stage 3 (PR #344) grounded the probeb-complex node in mouse-taco1-probeb-binding
+    to Mus musculus TACO1 (UniProtKB:Q8K0Z7).'
   target_ids:
   - PF01709
   evidence_ids:
