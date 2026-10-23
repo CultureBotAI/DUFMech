@@ -19,6 +19,8 @@ causal_graphs:
       - node_id: wt-current-at-plus100
         label: WT BEST1 current at +100 mV
         node_type: ACTIVITY
+        grounding:
+          - UniProtKB:A0A8V0ZZU7
     edges:
       - edge_id: bilateral-egta-decreases-current
         subject: bilateral-egta-in-wt-bilayer

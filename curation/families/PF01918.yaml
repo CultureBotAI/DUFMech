@@ -217,6 +217,8 @@ causal_graphs:
   - node_id: k16-ac
     label: K16-acetylated Alba product
     node_type: STATE
+    grounding:
+    - UniProtKB:P60849
   - node_id: k16e
     label: K16E substitution in the Pat labeling reaction
     node_type: PERTURBATION
@@ -225,6 +227,8 @@ causal_graphs:
   - node_id: label
     label: Acetyl-label incorporation into Alba
     node_type: STATE
+    grounding:
+    - UniProtKB:P60849
   - node_id: acetyl-treatment
     label: Pat/acetyl-CoA treatment versus Pat-only mock treatment
     node_type: PERTURBATION

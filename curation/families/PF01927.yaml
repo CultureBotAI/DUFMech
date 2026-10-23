@@ -75,6 +75,9 @@ causal_graphs:
   - node_id: complex
     label: Stable purified CTD heterodimer
     node_type: STATE
+    grounding:
+    - UniProtKB:P34607
+    - UniProtKB:Q19672
   edges:
   - edge_id: pair-complex
     subject: pair
@@ -124,6 +127,8 @@ causal_graphs:
   - node_id: retained
     label: MUT-8 CTD recovered in MBP eluate
     node_type: STATE
+    grounding:
+    - UniProtKB:Q19672
   edges:
   - edge_id: double-loss
     subject: double
@@ -183,6 +188,10 @@ causal_graphs:
   - node_id: capture
     label: MUT-7/MUT-8 recovered with MUT-16 bait
     node_type: STATE
+    grounding:
+    - UniProtKB:P34607
+    - UniProtKB:Q19672
+    - UniProtKB:O62011
   edges:
   - edge_id: joint-capture
     subject: joint

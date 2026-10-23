@@ -2689,9 +2689,13 @@ causal_graphs:
   - node_id: tgm_occupancy
     label: TrmBL1 occupancy of the tested source-assigned PFK/FBPase fragments
     node_type: STATE
+    grounding:
+    - UniProtKB:Q8U4G4
   - node_id: own_occupancy
     label: TrmBL1 occupancy of its own PF0124 promoter
     node_type: STATE
+    grounding:
+    - UniProtKB:Q8U4G4
   edges:
   - edge_id: proposed-first-region-contribution
     subject: first_region

@@ -189,6 +189,8 @@ causal_graphs:
   - node_id: modified_complex
     label: TrmO complex with t6A37-bearing Thr3
     node_type: STATE
+    grounding:
+    - UniProtKB:P28634
   - node_id: unmodified_mix
     label: EcTrmO plus unmodified A37 Thr3
     node_type: PROCESS
@@ -197,6 +199,8 @@ causal_graphs:
   - node_id: unmodified_complex
     label: TrmO complex with A37 Thr3
     node_type: STATE
+    grounding:
+    - UniProtKB:P28634
   edges:
   - edge_id: binds-modified-thr3
     subject: modified_mix

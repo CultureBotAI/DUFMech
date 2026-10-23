@@ -186,6 +186,8 @@ causal_graphs:
   - node_id: intact-clipper-band
     label: Intact domain band remaining after protease treatment
     node_type: STATE
+    grounding:
+    - UniProtKB:A0A1Y3CHT7
   edges:
   - edge_id: k715a-decreases-intact-domain-band
     subject: clipper-k715a-with-protease
@@ -220,5 +222,13 @@ curation_events:
   outcome: needs_followup
   summary: Retain partial CLIPPER scientific self-review with construct and numbering qualifications
   history_record: history/records/PF01345/2026-10-11T105319Z-codex-ffc7c3.yaml
+  event_index: 0
+  llm_assisted: true
+- timestamp: '2026-10-23T07:48:02Z'
+  curator: Antigravity
+  action: EDIT
+  outcome: changed
+  summary: Ground intact-clipper-band node in asilvestris-clipper-k715a-proteolysis to UniProtKB:A0A1Y3CHT7
+  history_record: history/records/PF01345/2026-10-23T074802Z-antigravity-134503.yaml
   event_index: 0
   llm_assisted: true

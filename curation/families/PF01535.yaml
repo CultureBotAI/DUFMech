@@ -24,6 +24,8 @@ causal_graphs:
       - node_id: dd120-binding-k12n-series
         label: Dd120 RNA binding in the HCF/5&6 fusion titration
         node_type: ACTIVITY
+        grounding:
+          - UniProtKB:Q9SF38
     edges:
       - edge_id: motif5-k12n-decreases-binding
         subject: motif5-k12n-versus-wt
@@ -83,6 +85,8 @@ causal_graphs:
       - node_id: dd120-binding-n12r-series
         label: Dd120 RNA binding in the N12R-background fusion titration
         node_type: ACTIVITY
+        grounding:
+          - UniProtKB:Q9SF38
     edges:
       - edge_id: motif6-n12r-decreases-binding
         subject: motif6-n12r-versus-wt

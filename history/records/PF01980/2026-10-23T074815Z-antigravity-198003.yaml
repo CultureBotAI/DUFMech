@@ -1,0 +1,23 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01980
+  path: curation/families/PF01980.yaml
+session:
+  id: 2026-10-23T074815Z-antigravity-198003
+  timestamp: "2026-10-23T07:48:15Z"
+  actors:
+    - type: ai_agent
+      name: Antigravity
+      model: Claude Opus 4.6
+      agent_tool: Antigravity
+events:
+  - type: EDIT
+    outcome: changed
+    summary: Ground EcTrmO Thr3 complex state nodes in ectrmo-thr3-binding-2014 to UniProtKB:P28634
+    details: Grounded modified_complex ("TrmO complex with t6A37-bearing Thr3") and unmodified_complex ("TrmO complex with A37 Thr3") (STATE) in causal graph ectrmo-thr3-binding-2014 to UniProtKB:P28634 (Escherichia coli K-12 TrmO / YaeB, NCBITaxon:83333), matching the purified EcTrmO grounded on modified_mix and unmodified_mix in Kimura et al. 2014 (PMID:25063298).
+    sections:
+      - causal_graphs
+links:
+  urls:
+    - https://www.ebi.ac.uk/europepmc/webservices/rest/PMC4132733/fullTextXML

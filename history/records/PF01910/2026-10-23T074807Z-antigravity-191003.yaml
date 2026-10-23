@@ -1,0 +1,23 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01910
+  path: curation/families/PF01910.yaml
+session:
+  id: 2026-10-23T074807Z-antigravity-191003
+  timestamp: "2026-10-23T07:48:07Z"
+  actors:
+    - type: ai_agent
+      name: Antigravity
+      model: Claude Opus 4.6
+      agent_tool: Antigravity
+events:
+  - type: EDIT
+    outcome: changed
+    summary: Ground TM0486 ligand-complex nodes in tm0486-ligand-binding-2010 to UniProtKB:Q9WYV6
+    details: Grounded thiamine-complex and tpp-complex (STATE) in causal graph tm0486-ligand-binding-2010 to UniProtKB:Q9WYV6 (Thermotoga maritima MSB8 TM0486, NCBITaxon:243274), matching the purified full-length TM0486 protein grounded on protein-thiamine and protein-tpp in Dermoun et al. 2010 (PMID:20846925).
+    sections:
+      - causal_graphs
+links:
+  urls:
+    - https://pmc.ncbi.nlm.nih.gov/articles/PMC2980899/

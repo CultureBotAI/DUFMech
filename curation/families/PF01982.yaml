@@ -174,6 +174,8 @@ causal_graphs:
   - node_id: activity
     label: RibK activity relative to CTP condition
     node_type: ACTIVITY
+    grounding:
+    - UniProtKB:Q60365
   edges:
   - edge_id: atp-lowers-activity
     subject: atp
@@ -237,6 +239,8 @@ causal_graphs:
   - node_id: activity
     label: FMN-producing specific activity
     node_type: ACTIVITY
+    grounding:
+    - UniProtKB:Q60365
   edges:
   - edge_id: manganese-lowers-activity
     subject: mn
@@ -336,6 +340,8 @@ causal_graphs:
   - node_id: residual
     label: Residual kinase activity after dilution
     node_type: ACTIVITY
+    grounding:
+    - UniProtKB:Q60365
   edges:
   - edge_id: lowers-residual-activity
     subject: acid
@@ -452,6 +458,8 @@ causal_graphs:
   - node_id: ribb_complex
     label: ribB-probe protein complex detected by FP
     node_type: STATE
+    grounding:
+    - UniProtKB:H2C8H2
   - node_id: ribt_mix
     label: Purified myRbkR added to ribT probe in binding buffer
     node_type: ACTIVITY
@@ -460,6 +468,8 @@ causal_graphs:
   - node_id: ribt_complex
     label: ribT-probe protein complex detected by FP
     node_type: STATE
+    grounding:
+    - UniProtKB:H2C8H2
   edges:
   - edge_id: forms-ribb-complex
     subject: ribb_mix
@@ -515,6 +525,8 @@ causal_graphs:
   - node_id: arfa_complex
     label: arfA-probe protein association
     node_type: STATE
+    grounding:
+    - GenBank:AKT35049.1
   - node_id: ribb_mix
     label: Purified pyRbkR plus the defined ribB-region probe
     node_type: ACTIVITY
@@ -523,6 +535,8 @@ causal_graphs:
   - node_id: ribb_complex
     label: ribB-probe protein association
     node_type: STATE
+    grounding:
+    - GenBank:AKT35049.1
   edges:
   - edge_id: forms-arfa-complex
     subject: arfa_mix
@@ -579,6 +593,8 @@ causal_graphs:
   - node_id: complex
     label: ribT-probe protein association detected by FP
     node_type: STATE
+    grounding:
+    - UniProtKB:Q9HJA6
   edges:
   - edge_id: forms-ribt-complex
     subject: mix
@@ -863,6 +879,8 @@ causal_graphs:
   - node_id: fmn
     label: Reported FMN formation relative to the CTP condition
     node_type: ACTIVITY
+    grounding:
+    - UniProtKB:Q60365
   edges:
   - edge_id: atp-lowers-product
     subject: atp
@@ -941,12 +959,18 @@ causal_graphs:
   - node_id: nucleotide_loaded
     label: Proposed MgCTP-loaded alpha0 state with riboflavin available
     node_type: STATE
+    grounding:
+    - UniProtKB:Q60365
   - node_id: closed_complex
     label: Proposed closed MJ0056-MgCTP-riboflavin complex
     node_type: STATE
+    grounding:
+    - UniProtKB:Q60365
   - node_id: activated_complex
     label: Proposed closed complex with E107-activated riboflavin 5-prime hydroxyl
     node_type: STATE
+    grounding:
+    - UniProtKB:Q60365
   - node_id: products
     label: Proposed phosphate-transfer product state with FMN and CDP
     node_type: STATE

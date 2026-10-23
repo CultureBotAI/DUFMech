@@ -30,6 +30,8 @@ causal_graphs:
   - node_id: plus12-hxlr-species
     label: HxlR species with a plus-12-Da intact mass shift
     node_type: STATE
+    grounding:
+    - UniProtKB:P42406
   edges:
   - edge_id: formaldehyde-produces-plus12-species
     subject: formaldehyde-purified-hxlr

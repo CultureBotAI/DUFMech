@@ -219,6 +219,8 @@ causal_graphs:
   - node_id: modified_complex
     label: TrmO complex with t6A37-bearing Thr3
     node_type: STATE
+    grounding:
+    - UniProtKB:P28634
   - node_id: unmodified_mix
     label: EcTrmO plus unmodified A37 Thr3
     node_type: PROCESS
@@ -227,6 +229,8 @@ causal_graphs:
   - node_id: unmodified_complex
     label: TrmO complex with A37 Thr3
     node_type: STATE
+    grounding:
+    - UniProtKB:P28634
   edges:
   - edge_id: binds-modified-thr3
     subject: modified_mix
@@ -953,5 +957,13 @@ curation_events:
   summary: Add NCBITaxon:83333 to ten Kimura 2014 E. coli TrmO causal graphs and ground Thr3/Thr4 methylation
     readout nodes to UniProtKB:P28634
   history_record: history/records/PF01980/2026-10-21T133501Z-antigravity-a13370.yaml
+  event_index: 0
+  llm_assisted: true
+- timestamp: '2026-10-23T07:48:15Z'
+  curator: Antigravity
+  action: EDIT
+  outcome: changed
+  summary: Ground EcTrmO Thr3 complex state nodes in ectrmo-thr3-binding-2014 to UniProtKB:P28634
+  history_record: history/records/PF01980/2026-10-23T074815Z-antigravity-198003.yaml
   event_index: 0
   llm_assisted: true

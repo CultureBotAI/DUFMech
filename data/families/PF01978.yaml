@@ -2712,9 +2712,13 @@ causal_graphs:
   - node_id: tgm_occupancy
     label: TrmBL1 occupancy of the tested source-assigned PFK/FBPase fragments
     node_type: STATE
+    grounding:
+    - UniProtKB:Q8U4G4
   - node_id: own_occupancy
     label: TrmBL1 occupancy of its own PF0124 promoter
     node_type: STATE
+    grounding:
+    - UniProtKB:Q8U4G4
   edges:
   - edge_id: proposed-first-region-contribution
     subject: first_region
@@ -3039,5 +3043,13 @@ curation_events:
   outcome: changed
   summary: Ground causal graph gene and protein nodes in PF01978 with verified UniProtKB accessions (UniProtKB:Q7LYW4)
   history_record: history/records/PF01978/2026-10-18T025446Z-antigravity-bc5921.yaml
+  event_index: 0
+  llm_assisted: true
+- timestamp: '2026-10-23T07:48:14Z'
+  curator: Antigravity
+  action: EDIT
+  outcome: changed
+  summary: Ground TrmBL1 promoter occupancy state nodes in trmbl1-regional-recognition-model to UniProtKB:Q8U4G4
+  history_record: history/records/PF01978/2026-10-23T074814Z-antigravity-197803.yaml
   event_index: 0
   llm_assisted: true

@@ -307,6 +307,8 @@ causal_graphs:
   - node_id: product
     label: HepT species carrying up to three AMP units
     node_type: STATE
+    grounding:
+    - UniProtKB:Q8ECH6
   edges:
   - edge_id: amp-product
     subject: reaction
@@ -675,6 +677,8 @@ causal_graphs:
   - node_id: modified
     label: Detectable AMP-modified fusion protein
     node_type: STATE
+    grounding:
+    - UniProtKB:Q8EGZ7
   edges:
   - edge_id: ntase-mutant-modification-loss
     subject: donor-mutant
@@ -725,12 +729,18 @@ causal_graphs:
   - node_id: deletion
     label: Delete linker AQNHFIIL in FhepTA
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q8EGZ7
   - node_id: replacement
     label: Replace SAQNHFIIL with FAQSLFIIL in FhepTA
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q8EGZ7
   - node_id: modification
     label: Detectable AMP-modified fusion relative to wild type
     node_type: STATE
+    grounding:
+    - UniProtKB:Q8EGZ7
   edges:
   - edge_id: linker-deletion-loss
     subject: deletion
@@ -893,6 +903,8 @@ causal_graphs:
   - node_id: bands
     label: High-molecular-weight fragment bands on SDS-PAGE
     node_type: STATE
+    grounding:
+    - UniProtKB:Q8EGZ7
   edges:
   - edge_id: reducing-high-mass-loss
     subject: reducing
@@ -966,5 +978,14 @@ curation_events:
   outcome: changed
   summary: Ground SO_3166 and CL1_0071 HepT causal-graph nodes to verified UniProtKB accessions
   history_record: history/records/PF01934/2026-10-21T073229Z-antigravity-0612cb.yaml
+  event_index: 0
+  llm_assisted: true
+- timestamp: '2026-10-23T07:48:11Z'
+  curator: Antigravity
+  action: EDIT
+  outcome: changed
+  summary: Ground HepT and FhepTA modification and fragment state/perturbation nodes in PF01934 causal
+    graphs
+  history_record: history/records/PF01934/2026-10-23T074811Z-antigravity-193403.yaml
   event_index: 0
   llm_assisted: true

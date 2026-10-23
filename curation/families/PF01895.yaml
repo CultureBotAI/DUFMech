@@ -144,6 +144,7 @@ causal_graphs:
       - node_id: pellet-phou
         label: PhoU immunoblot signal in the membrane pellet
         node_type: STATE
+        grounding: [UniProtKB:P0A9K7]
     edges:
       - edge_id: e100a-decreases-pellet-signal
         subject: e100a

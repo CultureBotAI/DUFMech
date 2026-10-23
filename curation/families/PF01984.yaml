@@ -90,6 +90,7 @@ causal_graphs:
   - node_id: pdcd5-complex-signal
     label: PDCD5 native-gel signal at the TRiC complex
     node_type: STATE
+    grounding: [UniProtKB:O14737]
   edges:
   - edge_id: rkk-lowers-native-association
     subject: rkk-substitution
@@ -122,6 +123,7 @@ causal_graphs:
   - node_id: ten-minute-complex-signal
     label: PDCD5 native-complex signal after10min
     node_type: STATE
+    grounding: [UniProtKB:O14737]
   edges:
   - edge_id: il-lowers-early-signal
     subject: il-substitution
