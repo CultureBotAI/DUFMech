@@ -11,7 +11,7 @@
 
 ## Summary
 
-Five MECHANISTIC graphs retain eight DIRECT OBSERVED effects for bilateral chelation, trans calcium reactivation, DIDS inhibition, three normalized neck-mutant current comparisons and two coupled flux effects. Historical and current sequences match exactly in the tested region despite full-length differences. Conditions, orientation and readout limits remain explicit; partial scientific self-review and IN_PROGRESS. Stage 3 (PR #347) grounded Homo sapiens CaV1.3 (CACNA1D, UniProtKB:Q01668) and CaVbeta4 (CACNB4, UniProtKB:O00305) in best1-proline-motif-variants-shift-cav13-inhibition.
+Five MECHANISTIC graphs retain eight DIRECT OBSERVED effects for bilateral chelation, trans calcium reactivation, DIDS inhibition, three normalized neck-mutant current comparisons and two coupled flux effects. Historical and current sequences match exactly in the tested region despite full-length differences. Conditions, orientation and readout limits remain explicit; partial scientific self-review and IN_PROGRESS. Stage 3 (PR #344) grounded the wt-current-at-plus100 node in best1-bilateral-egta-current-loss to Gallus gallus BEST1 (UniProtKB:A0A8V0ZZU7).
 
 ## Scope And Provenance
 
@@ -52,11 +52,11 @@ completeness: concern. Targets: PF01062.
 
 Exact mutant clone sequences, flux replicate counts and recording temperature, incorporation controls and raw single-channel behavior remain incomplete. Aperture-selectivity, remaining substitutions, full-length protein, other taxa, later inactivation, cryo-EM and GABA contexts require separate primary assessment. The cited earlier method was read for protocol details, not curated as an independent graph. This is not complete family coverage.
 
-### Cycle 2 causal-graph partner and substrate protein grounding
+### Cycle 2 causal-graph protein-node grounding
 
 identity: supported. Targets: PF01062.
 
-Stage 3 (PR #347) grounded Homo sapiens CaV1.3 (CACNA1D, UniProtKB:Q01668) and CaVbeta4 (CACNB4, UniProtKB:O00305) in best1-proline-motif-variants-shift-cav13-inhibition.
+Stage 3 (PR #344) grounded the wt-current-at-plus100 node in best1-bilateral-egta-current-loss to Gallus gallus BEST1 (UniProtKB:A0A8V0ZZU7).
 
 ## Findings
 
@@ -126,8 +126,8 @@ summary: 'Five MECHANISTIC graphs retain eight DIRECT OBSERVED effects for bilat
   current comparisons and two coupled flux effects. Historical and current sequences
   match exactly in the tested region despite full-length differences. Conditions,
   orientation and readout limits remain explicit; partial scientific self-review and
-  IN_PROGRESS. Stage 3 (PR #347) grounded Homo sapiens CaV1.3 (CACNA1D, UniProtKB:Q01668)
-  and CaVbeta4 (CACNB4, UniProtKB:O00305) in best1-proline-motif-variants-shift-cav13-inhibition.'
+  IN_PROGRESS. Stage 3 (PR #344) grounded the wt-current-at-plus100 node in best1-bilateral-egta-current-loss
+  to Gallus gallus BEST1 (UniProtKB:A0A8V0ZZU7).'
 repository: CultureBotAI/DUFMech
 kind: record
 source:
@@ -620,10 +620,10 @@ assessments:
   - primary
 - assessment_id: cycle2-partner-grounding-verification
   area: identity
-  topic: Cycle 2 causal-graph partner and substrate protein grounding
+  topic: Cycle 2 causal-graph protein-node grounding
   outcome: supported
-  summary: 'Stage 3 (PR #347) grounded Homo sapiens CaV1.3 (CACNA1D, UniProtKB:Q01668)
-    and CaVbeta4 (CACNB4, UniProtKB:O00305) in best1-proline-motif-variants-shift-cav13-inhibition.'
+  summary: 'Stage 3 (PR #344) grounded the wt-current-at-plus100 node in best1-bilateral-egta-current-loss
+    to Gallus gallus BEST1 (UniProtKB:A0A8V0ZZU7).'
   target_ids:
   - PF01062
   evidence_ids:

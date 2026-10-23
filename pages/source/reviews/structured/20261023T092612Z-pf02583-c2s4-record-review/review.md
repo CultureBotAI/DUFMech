@@ -11,7 +11,7 @@
 
 ## Summary
 
-Retain a direct purified-protein copper-dependent decrease in operator binding separately from an indirect complemented csoR-null reporter phenotype. Both effects are supported within their tested contexts; the family remains IN_PROGRESS with incomplete member and mechanism coverage. Stage 3 (PR #347) grounded Sus scrofa myoglobin (UniProtKB:P02189) in ecoli-ygba-pcr-inhibition-reversal.
+Retain a direct purified-protein copper-dependent decrease in operator binding separately from an indirect complemented csoR-null reporter phenotype. Both effects are supported within their tested contexts; the family remains IN_PROGRESS with incomplete member and mechanism coverage. Stage 3 (PR #344) grounded the copza-operator-occupancy node in bsub-csor-copper-operator-binding to Bacillus subtilis CsoR (UniProtKB:O32222).
 
 ## Scope And Provenance
 
@@ -52,11 +52,11 @@ completeness: concern. Targets: PF02583.
 
 Partial review of one B. subtilis protein and two experimental contexts. Exact purified tag/construct details, quantitative fit identifiability, other target promoters and members, and direct structural allosteric steps remain outside established coverage. Weak Ni/Zn coupling is not a universal negative; no continuous observed copper-to-growth pathway is inferred.
 
-### Cycle 2 causal-graph partner and substrate protein grounding
+### Cycle 2 causal-graph protein-node grounding
 
 identity: supported. Targets: PF02583.
 
-Stage 3 (PR #347) grounded Sus scrofa myoglobin (UniProtKB:P02189) in ecoli-ygba-pcr-inhibition-reversal.
+Stage 3 (PR #344) grounded the copza-operator-occupancy node in bsub-csor-copper-operator-binding to Bacillus subtilis CsoR (UniProtKB:O32222).
 
 ## Findings
 
@@ -123,8 +123,8 @@ scientific_review: true
 summary: 'Retain a direct purified-protein copper-dependent decrease in operator binding
   separately from an indirect complemented csoR-null reporter phenotype. Both effects
   are supported within their tested contexts; the family remains IN_PROGRESS with
-  incomplete member and mechanism coverage. Stage 3 (PR #347) grounded Sus scrofa
-  myoglobin (UniProtKB:P02189) in ecoli-ygba-pcr-inhibition-reversal.'
+  incomplete member and mechanism coverage. Stage 3 (PR #344) grounded the copza-operator-occupancy
+  node in bsub-csor-copper-operator-binding to Bacillus subtilis CsoR (UniProtKB:O32222).'
 repository: CultureBotAI/DUFMech
 kind: record
 source:
@@ -446,10 +446,10 @@ assessments:
   - primary
 - assessment_id: cycle2-partner-grounding-verification
   area: identity
-  topic: Cycle 2 causal-graph partner and substrate protein grounding
+  topic: Cycle 2 causal-graph protein-node grounding
   outcome: supported
-  summary: 'Stage 3 (PR #347) grounded Sus scrofa myoglobin (UniProtKB:P02189) in
-    ecoli-ygba-pcr-inhibition-reversal.'
+  summary: 'Stage 3 (PR #344) grounded the copza-operator-occupancy node in bsub-csor-copper-operator-binding
+    to Bacillus subtilis CsoR (UniProtKB:O32222).'
   target_ids:
   - PF02583
   evidence_ids:

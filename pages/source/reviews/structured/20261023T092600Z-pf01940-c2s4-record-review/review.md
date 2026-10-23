@@ -11,7 +11,7 @@
 
 ## Summary
 
-Thirteen graphs contain 33 edges, 32 OBSERVED and one HYPOTHESIZED, with three DIRECT, 18 INDIRECT and 12 UNRESOLVED relationships. Three MECHANISTIC preparation-level contexts, nine PHENOTYPIC contexts and one HYPOTHETICAL context are retained with six evidence ledgers and two OPEN discussions. Same-agent scientific review is partial; status remains IN_PROGRESS. Stage 2 (PR #343) grounded Homo sapiens EZH2 (UniProtKB:Q15910) in hs-lcor-pali1-prc2-methyltransferase-2018.
+Thirteen graphs contain 33 edges, 32 OBSERVED and one HYPOTHESIZED, with three DIRECT, 18 INDIRECT and 12 UNRESOLVED relationships. Three MECHANISTIC preparation-level contexts, nine PHENOTYPIC contexts and one HYPOTHETICAL context are retained with six evidence ledgers and two OPEN discussions. Same-agent scientific review is partial; status remains IN_PROGRESS. Stage 3 (PR #344) grounded the TMEM19-associated probe-labeling band node (label) in tmem19-mouse-probe-labeling-2026 to Mus musculus TMEM19 (UniProtKB:Q91W52).
 
 ## Scope And Provenance
 
@@ -52,11 +52,11 @@ completeness: concern. Targets: PF01940.
 
 The ten reviewed UniProt hits are not exhaustive coverage of 6136 snapshot proteins or 97 architectures. VTE6 phylloquinone/PSI, seed storage, exact constructs, microbial sll0875/MJ0933 and fusions; PGR full 2011 Methods, analog-sugar data, AtSTKL/bHLH104 and plant defense; and TMEM19 additional controls, antibody experiments, source data, tetraspanin screens and nonmammalian members remain open. Access failures are not negative biological findings.
 
-### Cycle 2 causal-graph partner and substrate protein grounding
+### Cycle 2 causal-graph protein-node grounding
 
 identity: supported. Targets: PF01940.
 
-Stage 2 (PR #343) grounded Homo sapiens EZH2 (UniProtKB:Q15910) in hs-lcor-pali1-prc2-methyltransferase-2018.
+Stage 3 (PR #344) grounded the TMEM19-associated probe-labeling band node (label) in tmem19-mouse-probe-labeling-2026 to Mus musculus TMEM19 (UniProtKB:Q91W52).
 
 ## Findings
 
@@ -127,8 +127,8 @@ summary: 'Thirteen graphs contain 33 edges, 32 OBSERVED and one HYPOTHESIZED, wi
   three DIRECT, 18 INDIRECT and 12 UNRESOLVED relationships. Three MECHANISTIC preparation-level
   contexts, nine PHENOTYPIC contexts and one HYPOTHETICAL context are retained with
   six evidence ledgers and two OPEN discussions. Same-agent scientific review is partial;
-  status remains IN_PROGRESS. Stage 2 (PR #343) grounded Homo sapiens EZH2 (UniProtKB:Q15910)
-  in hs-lcor-pali1-prc2-methyltransferase-2018.'
+  status remains IN_PROGRESS. Stage 3 (PR #344) grounded the TMEM19-associated probe-labeling
+  band node (label) in tmem19-mouse-probe-labeling-2026 to Mus musculus TMEM19 (UniProtKB:Q91W52).'
 repository: CultureBotAI/DUFMech
 kind: record
 source:
@@ -880,9 +880,10 @@ assessments:
   - primary
 - assessment_id: cycle2-partner-grounding-verification
   area: identity
-  topic: Cycle 2 causal-graph partner and substrate protein grounding
+  topic: Cycle 2 causal-graph protein-node grounding
   outcome: supported
-  summary: 'Stage 2 (PR #343) grounded Homo sapiens EZH2 (UniProtKB:Q15910) in hs-lcor-pali1-prc2-methyltransferase-2018.'
+  summary: 'Stage 3 (PR #344) grounded the TMEM19-associated probe-labeling band node
+    (label) in tmem19-mouse-probe-labeling-2026 to Mus musculus TMEM19 (UniProtKB:Q91W52).'
   target_ids:
   - PF01940
   evidence_ids:

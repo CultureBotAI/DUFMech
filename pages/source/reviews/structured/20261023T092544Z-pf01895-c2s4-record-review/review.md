@@ -11,7 +11,7 @@
 
 ## Summary
 
-Twelve graphs retain24 OBSERVED effects, four DIRECT purified-system readouts and20 INDIRECT cellular outcomes. E. coli uptake, engineered-probe fluorescence, dosage-dependent signaling, fractionation, growth yield and BACTH remain separate from mycobacterial paralog reporters and net RegX3 phosphorylation. The Pi/PhoU1 conjunction is explicit; unchanged SenX3 autophosphorylation prevents an unsupported kinase-inhibition arrow. Unequal protein doses and whole-protein repeated-domain scope remain visible. IN_PROGRESS and partial family coverage are appropriate. Stage 2 (PR #343) grounded Drosophila melanogaster Rab5 (UniProtKB:Q9V3I2) and Syntaxin-7/Avalanche (UniProtKB:Q9V3E6) in drosophila-stealth-defects.
+Twelve graphs retain24 OBSERVED effects, four DIRECT purified-system readouts and20 INDIRECT cellular outcomes. E. coli uptake, engineered-probe fluorescence, dosage-dependent signaling, fractionation, growth yield and BACTH remain separate from mycobacterial paralog reporters and net RegX3 phosphorylation. The Pi/PhoU1 conjunction is explicit; unchanged SenX3 autophosphorylation prevents an unsupported kinase-inhibition arrow. Unequal protein doses and whole-protein repeated-domain scope remain visible. IN_PROGRESS and partial family coverage are appropriate. Stage 3 (PR #344) grounded the pellet-phou node in ec-phou-fractionation to Escherichia coli PhoU (UniProtKB:P0A9K7).
 
 ## Scope And Provenance
 
@@ -52,11 +52,11 @@ completeness: concern. Targets: PF01895.
 
 Three reference proteins in two species do not cover24850 frozen family proteins. The2014 supplement was unavailable through Europe PMC; Mg/SEC curves remain uninspected. Exact2015 fusion orientation/dose and Figure2 LB-versus-MOPS discrepancy remain unresolved. Actual insert sequences, raw measurements, physiological metal/Pi occupancy, catalytic partitioning and other persistence/virulence/structural homolog contexts need additional work. E. coli and mycobacterial Pst requirements are not tested under matched conditions. No exhaustive or independent expert review.
 
-### Cycle 2 causal-graph partner and substrate protein grounding
+### Cycle 2 causal-graph protein-node grounding
 
 identity: supported. Targets: PF01895.
 
-Stage 2 (PR #343) grounded Drosophila melanogaster Rab5 (UniProtKB:Q9V3I2) and Syntaxin-7/Avalanche (UniProtKB:Q9V3E6) in drosophila-stealth-defects.
+Stage 3 (PR #344) grounded the pellet-phou node in ec-phou-fractionation to Escherichia coli PhoU (UniProtKB:P0A9K7).
 
 ## Findings
 
@@ -129,8 +129,8 @@ summary: 'Twelve graphs retain24 OBSERVED effects, four DIRECT purified-system r
   conjunction is explicit; unchanged SenX3 autophosphorylation prevents an unsupported
   kinase-inhibition arrow. Unequal protein doses and whole-protein repeated-domain
   scope remain visible. IN_PROGRESS and partial family coverage are appropriate. Stage
-  2 (PR #343) grounded Drosophila melanogaster Rab5 (UniProtKB:Q9V3I2) and Syntaxin-7/Avalanche
-  (UniProtKB:Q9V3E6) in drosophila-stealth-defects.'
+  3 (PR #344) grounded the pellet-phou node in ec-phou-fractionation to Escherichia
+  coli PhoU (UniProtKB:P0A9K7).'
 repository: CultureBotAI/DUFMech
 kind: record
 source:
@@ -944,10 +944,10 @@ assessments:
   - primary
 - assessment_id: cycle2-partner-grounding-verification
   area: identity
-  topic: Cycle 2 causal-graph partner and substrate protein grounding
+  topic: Cycle 2 causal-graph protein-node grounding
   outcome: supported
-  summary: 'Stage 2 (PR #343) grounded Drosophila melanogaster Rab5 (UniProtKB:Q9V3I2)
-    and Syntaxin-7/Avalanche (UniProtKB:Q9V3E6) in drosophila-stealth-defects.'
+  summary: 'Stage 3 (PR #344) grounded the pellet-phou node in ec-phou-fractionation
+    to Escherichia coli PhoU (UniProtKB:P0A9K7).'
   target_ids:
   - PF01895
   evidence_ids:

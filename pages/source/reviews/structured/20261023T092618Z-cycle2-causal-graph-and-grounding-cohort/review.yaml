@@ -16,12 +16,13 @@ completion: completed
 verdict: pass_with_limitations
 native_verdict: NEEDS_FOLLOWUP
 scientific_review: true
-summary: Cohort review of 20 maintained DUFMech family records (19 updated in Cycle
-  2 Stages 2-3 for causal-graph and UniProtKB partner/substrate grounding plus PF01923,
-  which together with PF01934 and PF01982 carries newly identified open causal-graph
-  protein-grounding findings). All 20 families retain distinct Pfam boundaries and
-  assay-separated causal graphs; 3 actionable protein-grounding findings remain open
-  for Stage 5 grouped remediation.
+summary: Cohort review of 20 maintained DUFMech family records (1 updated in Cycle
+  2 Stage 2 for native Shewanella oneidensis MR-1 taxon grounding and 18 updated in
+  Cycle 2 Stage 3 for causal-graph protein-node grounding, plus PF01923, which together
+  with PF01934 and PF01982 carries newly identified open causal-graph protein-grounding
+  findings). All 20 families retain distinct Pfam boundaries and assay-separated causal
+  graphs; 3 actionable protein-grounding findings remain open for Stage 5 grouped
+  remediation.
 repository: CultureBotAI/DUFMech
 kind: category
 source:
@@ -589,8 +590,9 @@ evidence:
   support: supports
   snapshot_sha256: 7a946a11f96996ae09d5d4e8ef1d5dc342fd9bf79015dc60e4d90e316b8715fe
   summary: Inspection of all 20 maintained overlays confirms assay-scoped causal graphs
-    and verified Cycle 2 Stage 2/3 UniProtKB groundings on the 19 updated records,
-    while identifying 3 open protein-grounding gaps on PF01923, PF01934, and PF01982.
+    and verified Cycle 2 Stage 2 taxon grounding (PF01973) and Stage 3 protein-node
+    groundings (18 overlays), while identifying 3 open protein-grounding gaps on PF01923,
+    PF01934, and PF01982.
 - evidence_id: duf-projection-pf01062
   kind: record_content
   reference: data/families/PF01062.yaml
@@ -12829,9 +12831,9 @@ assessments:
   topic: Cohort family boundaries and separated assay causal graphs
   outcome: supported
   summary: All 20 reviewed Pfam families represent distinct evolutionary domains and
-    biochemical or cellular mechanisms. Cycle 2 Stage 2 and Stage 3 partner/substrate
-    UniProtKB groundings on the 19 updated overlays preserve exact tested organism
-    and construct scope without cross-species or cross-assay overreach.
+    biochemical or cellular mechanisms. Cycle 2 Stage 2 taxon grounding on PF01973
+    and Stage 3 protein-node UniProtKB groundings across 18 overlays preserve exact
+    tested organism and construct scope without cross-species or cross-assay overreach.
   target_ids:
   - PF01062
   - PF01345

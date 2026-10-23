@@ -11,7 +11,7 @@
 
 ## Summary
 
-Sixteen graphs retain28 OBSERVED effects:4 DIRECT,15 INDIRECT and9 UNRESOLVED across4 MECHANISTIC and12 PHENOTYPIC contexts. Six ledgers and two OPEN discussions preserve source, construct, access and member limits. Partial same-agent scientific review; IN_PROGRESS, not family-wide completion. Stage 3 (PR #347) grounded Shewanella oneidensis MR-1 MntA (SO_3165, UniProtKB:Q8ECH7) across four HepT-MntA AMPylation, stoichiometry, and neutralization causal graphs. Stage 4 audit also identified an open grounding finding (pf01934-fhepta-native-cfu-uniprot-grounding-and-cleavage-nodes) preserved for Stage 5 grouped remediation.
+Sixteen graphs retain28 OBSERVED effects:4 DIRECT,15 INDIRECT and9 UNRESOLVED across4 MECHANISTIC and12 PHENOTYPIC contexts. Six ledgers and two OPEN discussions preserve source, construct, access and member limits. Partial same-agent scientific review; IN_PROGRESS, not family-wide completion. Stage 3 (PR #344) grounded HepT (UniProtKB:Q8ECH6) and FhepTA (UniProtKB:Q8EGZ7) modification and fragment state and perturbation nodes across four PF01934 causal graphs. Stage 4 audit also identified an open grounding finding (pf01934-fhepta-native-cfu-uniprot-grounding-and-cleavage-nodes) preserved for Stage 5 grouped remediation.
 
 ## Scope And Provenance
 
@@ -132,10 +132,10 @@ scientific_review: true
 summary: 'Sixteen graphs retain28 OBSERVED effects:4 DIRECT,15 INDIRECT and9 UNRESOLVED
   across4 MECHANISTIC and12 PHENOTYPIC contexts. Six ledgers and two OPEN discussions
   preserve source, construct, access and member limits. Partial same-agent scientific
-  review; IN_PROGRESS, not family-wide completion. Stage 3 (PR #347) grounded Shewanella
-  oneidensis MR-1 MntA (SO_3165, UniProtKB:Q8ECH7) across four HepT-MntA AMPylation,
-  stoichiometry, and neutralization causal graphs. Stage 4 audit also identified an
-  open grounding finding (pf01934-fhepta-native-cfu-uniprot-grounding-and-cleavage-nodes)
+  review; IN_PROGRESS, not family-wide completion. Stage 3 (PR #344) grounded HepT
+  (UniProtKB:Q8ECH6) and FhepTA (UniProtKB:Q8EGZ7) modification and fragment state
+  and perturbation nodes across four PF01934 causal graphs. Stage 4 audit also identified
+  an open grounding finding (pf01934-fhepta-native-cfu-uniprot-grounding-and-cleavage-nodes)
   preserved for Stage 5 grouped remediation.'
 repository: CultureBotAI/DUFMech
 kind: record

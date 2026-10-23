@@ -11,7 +11,7 @@
 
 ## Summary
 
-Sixteen scoped graphs retain53 OBSERVED effects:46 DIRECT biochemical/physical readouts and7 INDIRECT transcription/growth effects. Fourteen MECHANISTIC and two PHENOTYPIC graphs distinguish proteins, constructs, substrates and conditions. Native archaeal K16-acetylation counterevidence is retained separately from directly measured in-vitro Pat acetylation. Status stays IN_PROGRESS; same-agent scientific review is partial, not independent expert endorsement or family completion. This successor replaces the five DNA-binding display quotations with the actual Bell2002 Figure3 excerpt; graph directions and counts are unchanged. Prior review reviews/structured/20261012T011947Z-pf01918-alba-dna-rna-and-nuclease-assay-contexts/review.yaml and its digest4f351def61ebe6a038c11381f47d61d8b24efeb25578bb8e428d02d163df092d remain intact. Stage 2 (PR #343) grounded Methanocaldococcus jannaschii EF-1alpha (UniProtKB:Q58635) in mj0062-ef1a-gtp-dependence-2011 and Saccharomyces cerevisiae eEF1A/Tef1 (UniProtKB:P02994) in tvg150-diphthamide-requirement-2011.
+Sixteen scoped graphs retain53 OBSERVED effects:46 DIRECT biochemical/physical readouts and7 INDIRECT transcription/growth effects. Fourteen MECHANISTIC and two PHENOTYPIC graphs distinguish proteins, constructs, substrates and conditions. Native archaeal K16-acetylation counterevidence is retained separately from directly measured in-vitro Pat acetylation. Status stays IN_PROGRESS; same-agent scientific review is partial, not independent expert endorsement or family completion. This successor replaces the five DNA-binding display quotations with the actual Bell2002 Figure3 excerpt; graph directions and counts are unchanged. Prior review reviews/structured/20261012T011947Z-pf01918-alba-dna-rna-and-nuclease-assay-contexts/review.yaml and its digest4f351def61ebe6a038c11381f47d61d8b24efeb25578bb8e428d02d163df092d remain intact. Stage 3 (PR #344) grounded the k16-ac and label Alba acetylation product nodes in ssoalba-pat-acetylation-2005 to Saccharolobus solfataricus Alba (UniProtKB:P60849).
 
 ## Scope And Provenance
 
@@ -52,11 +52,11 @@ completeness: concern. Targets: PF01918.
 
 Coverage is limited to the explicitly inspected experiments, not all8285 frozen proteins or all49 current reviewed UniProt entries. Cao2018 is primary-abstract counterevidence with inaccessible full text. Additional archaeal topology/RNA, eukaryotic Pop6/plant/parasite contexts, cross-species nuclease constructs, author-core boundaries, historical tags/clones and Goyal2012 supplementary transcription/MS remain open.
 
-### Cycle 2 causal-graph partner and substrate protein grounding
+### Cycle 2 causal-graph protein-node grounding
 
 identity: supported. Targets: PF01918.
 
-Stage 2 (PR #343) grounded Methanocaldococcus jannaschii EF-1alpha (UniProtKB:Q58635) in mj0062-ef1a-gtp-dependence-2011 and Saccharomyces cerevisiae eEF1A/Tef1 (UniProtKB:P02994) in tvg150-diphthamide-requirement-2011.
+Stage 3 (PR #344) grounded the k16-ac and label Alba acetylation product nodes in ssoalba-pat-acetylation-2005 to Saccharolobus solfataricus Alba (UniProtKB:P60849).
 
 ## Findings
 
@@ -137,9 +137,8 @@ summary: 'Sixteen scoped graphs retain53 OBSERVED effects:46 DIRECT biochemical/
   replaces the five DNA-binding display quotations with the actual Bell2002 Figure3
   excerpt; graph directions and counts are unchanged. Prior review reviews/structured/20261012T011947Z-pf01918-alba-dna-rna-and-nuclease-assay-contexts/review.yaml
   and its digest4f351def61ebe6a038c11381f47d61d8b24efeb25578bb8e428d02d163df092d remain
-  intact. Stage 2 (PR #343) grounded Methanocaldococcus jannaschii EF-1alpha (UniProtKB:Q58635)
-  in mj0062-ef1a-gtp-dependence-2011 and Saccharomyces cerevisiae eEF1A/Tef1 (UniProtKB:P02994)
-  in tvg150-diphthamide-requirement-2011.'
+  intact. Stage 3 (PR #344) grounded the k16-ac and label Alba acetylation product
+  nodes in ssoalba-pat-acetylation-2005 to Saccharolobus solfataricus Alba (UniProtKB:P60849).'
 repository: CultureBotAI/DUFMech
 kind: record
 source:
@@ -1367,11 +1366,10 @@ assessments:
   - primary
 - assessment_id: cycle2-partner-grounding-verification
   area: identity
-  topic: Cycle 2 causal-graph partner and substrate protein grounding
+  topic: Cycle 2 causal-graph protein-node grounding
   outcome: supported
-  summary: 'Stage 2 (PR #343) grounded Methanocaldococcus jannaschii EF-1alpha (UniProtKB:Q58635)
-    in mj0062-ef1a-gtp-dependence-2011 and Saccharomyces cerevisiae eEF1A/Tef1 (UniProtKB:P02994)
-    in tvg150-diphthamide-requirement-2011.'
+  summary: 'Stage 3 (PR #344) grounded the k16-ac and label Alba acetylation product
+    nodes in ssoalba-pat-acetylation-2005 to Saccharolobus solfataricus Alba (UniProtKB:P60849).'
   target_ids:
   - PF01918
   evidence_ids:

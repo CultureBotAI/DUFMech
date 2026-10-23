@@ -20,8 +20,9 @@ summary: 'Twelve graphs retain24 OBSERVED/EXPERIMENTAL effects: two DIRECT bindi
   edges and22 INDIRECT assembly, RNA or phenotype edges. One graph is MECHANISTIC
   and11 are PHENOTYPIC. Four minimal ledgers and two OPEN discussions preserve boundaries
   and source inconsistencies. Partial same-agent scientific self-review yields NEEDS_FOLLOWUP;
-  IN_PROGRESS is retained, not full family characterization or approval. Stage 2 (PR
-  #343) grounded Escherichia coli K-12 MiaB (UniProtKB:P0AEI1) in ecoli-ycef-miab-contextual-growth.'
+  IN_PROGRESS is retained, not full family characterization or approval. Stage 3 (PR
+  #344) grounded the thiamine-complex and tpp-complex nodes in tm0486-ligand-binding-2010
+  to Thermotoga maritima TM0486 (UniProtKB:Q9WYV6).'
 repository: CultureBotAI/DUFMech
 kind: record
 source:
@@ -735,10 +736,10 @@ assessments:
   - primary
 - assessment_id: cycle2-partner-grounding-verification
   area: identity
-  topic: Cycle 2 causal-graph partner and substrate protein grounding
+  topic: Cycle 2 causal-graph protein-node grounding
   outcome: supported
-  summary: 'Stage 2 (PR #343) grounded Escherichia coli K-12 MiaB (UniProtKB:P0AEI1)
-    in ecoli-ycef-miab-contextual-growth.'
+  summary: 'Stage 3 (PR #344) grounded the thiamine-complex and tpp-complex nodes
+    in tm0486-ligand-binding-2010 to Thermotoga maritima TM0486 (UniProtKB:Q9WYV6).'
   target_ids:
   - PF01910
   evidence_ids:

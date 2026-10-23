@@ -22,8 +22,8 @@ summary: 'Five graphs retain fourteen observed effects, four direct biochemical 
   pulses and normalized proline-window occupancies. Versioned protein identities and
   current domain boundaries are verified, while clone, assay and transfer limits remain
   explicit. Frozen source wording is preserved and qualified by the translation evidence;
-  status remains IN_PROGRESS. Stage 3 (PR #347) grounded Synechocystis sp. PCC 6803
-  RbcL (UniProtKB:P54205) in syn6803-rbcx-chaperone-assisted-rbcl-folding.'
+  status remains IN_PROGRESS. Stage 3 (PR #344) grounded the probeb-complex node in
+  mouse-taco1-probeb-binding to Mus musculus TACO1 (UniProtKB:Q8K0Z7).'
 repository: CultureBotAI/DUFMech
 kind: record
 source:
@@ -579,10 +579,10 @@ assessments:
   - primary
 - assessment_id: cycle2-partner-grounding-verification
   area: identity
-  topic: Cycle 2 causal-graph partner and substrate protein grounding
+  topic: Cycle 2 causal-graph protein-node grounding
   outcome: supported
-  summary: 'Stage 3 (PR #347) grounded Synechocystis sp. PCC 6803 RbcL (UniProtKB:P54205)
-    in syn6803-rbcx-chaperone-assisted-rbcl-folding.'
+  summary: 'Stage 3 (PR #344) grounded the probeb-complex node in mouse-taco1-probeb-binding
+    to Mus musculus TACO1 (UniProtKB:Q8K0Z7).'
   target_ids:
   - PF01709
   evidence_ids:

@@ -11,7 +11,7 @@
 
 ## Summary
 
-Ten graphs retain32 OBSERVED effects,6 DIRECT,5 INDIRECT and21 UNRESOLVED across3 MECHANISTIC and7 PHENOTYPIC contexts. Four ledgers and two OPEN discussions retain assay-chemistry,construct,induction and coverage limits. Partial same-agent scientific review; IN_PROGRESS,not complete family characterization or publication. Stage 3 (PR #347) grounded Saccharomyces cerevisiae Trl1 (UniProtKB:P09880) in sc-trl1-healing-step-2019.
+Ten graphs retain32 OBSERVED effects,6 DIRECT,5 INDIRECT and21 UNRESOLVED across3 MECHANISTIC and7 PHENOTYPIC contexts. Four ledgers and two OPEN discussions retain assay-chemistry,construct,induction and coverage limits. Partial same-agent scientific review; IN_PROGRESS,not complete family characterization or publication. Stage 3 (PR #344) grounded the complex1 and complex10 shifted RNA complex nodes in tram0076-rna-complexes-2019 to Methanococcus maripaludis TRAM0076 (UniProtKB:Q6M142).
 
 ## Scope And Provenance
 
@@ -52,11 +52,11 @@ completeness: concern. Targets: PF01938.
 
 R15 member accession mapping and2017 figures/supplement remain followups;2017 uninduced3066 reporter activity versus induced inhibition is compatible with the2019 induced negative and is not unconditional contradiction. Ctr3 and2025 PyTRAM require primary assay/mapping work. Multidomain MiaB,RimO,RumA,RlmCD,Trm2,CDKAL1/CDK5RAP1 contexts remain open. One capped500-entry UniProt page is not a census; raw RNA-seq/RIP and all35071 family proteins were not reviewed exhaustively.
 
-### Cycle 2 causal-graph partner and substrate protein grounding
+### Cycle 2 causal-graph protein-node grounding
 
 identity: supported. Targets: PF01938.
 
-Stage 3 (PR #347) grounded Saccharomyces cerevisiae Trl1 (UniProtKB:P09880) in sc-trl1-healing-step-2019.
+Stage 3 (PR #344) grounded the complex1 and complex10 shifted RNA complex nodes in tram0076-rna-complexes-2019 to Methanococcus maripaludis TRAM0076 (UniProtKB:Q6M142).
 
 ## Findings
 
@@ -125,7 +125,8 @@ summary: 'Ten graphs retain32 OBSERVED effects,6 DIRECT,5 INDIRECT and21 UNRESOL
   across3 MECHANISTIC and7 PHENOTYPIC contexts. Four ledgers and two OPEN discussions
   retain assay-chemistry,construct,induction and coverage limits. Partial same-agent
   scientific review; IN_PROGRESS,not complete family characterization or publication.
-  Stage 3 (PR #347) grounded Saccharomyces cerevisiae Trl1 (UniProtKB:P09880) in sc-trl1-healing-step-2019.'
+  Stage 3 (PR #344) grounded the complex1 and complex10 shifted RNA complex nodes
+  in tram0076-rna-complexes-2019 to Methanococcus maripaludis TRAM0076 (UniProtKB:Q6M142).'
 repository: CultureBotAI/DUFMech
 kind: record
 source:
@@ -852,10 +853,10 @@ assessments:
   - primary
 - assessment_id: cycle2-partner-grounding-verification
   area: identity
-  topic: Cycle 2 causal-graph partner and substrate protein grounding
+  topic: Cycle 2 causal-graph protein-node grounding
   outcome: supported
-  summary: 'Stage 3 (PR #347) grounded Saccharomyces cerevisiae Trl1 (UniProtKB:P09880)
-    in sc-trl1-healing-step-2019.'
+  summary: 'Stage 3 (PR #344) grounded the complex1 and complex10 shifted RNA complex
+    nodes in tram0076-rna-complexes-2019 to Methanococcus maripaludis TRAM0076 (UniProtKB:Q6M142).'
   target_ids:
   - PF01938
   evidence_ids:
