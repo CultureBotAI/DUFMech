@@ -1,0 +1,24 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01934
+  path: curation/families/PF01934.yaml
+session:
+  id: 2026-10-23T074811Z-antigravity-193403
+  timestamp: "2026-10-23T07:48:11Z"
+  actors:
+    - type: ai_agent
+      name: Antigravity
+      model: Claude Opus 4.6
+      agent_tool: Antigravity
+events:
+  - type: EDIT
+    outcome: changed
+    summary: Ground HepT and FhepTA modification and fragment state/perturbation nodes in PF01934 causal graphs
+    details: Grounded product (STATE) in so3166-mnta-amp-transfer-2020 to UniProtKB:Q8ECH6 (Shewanella oneidensis MR-1 SO_3166 HepT, NCBITaxon:211586, Yao et al. 2020 PMID:33108776), and grounded modified (STATE) in fhepta-modification-variants-2026, deletion, replacement, and modification in fhepta-linker-modification-2026, and bands (STATE) in fhepta-redox-band-states-2026 to UniProtKB:Q8EGZ7 (FhepTA exact-segment reference, Yao et al. 2026 PMID:41854079).
+    sections:
+      - causal_graphs
+links:
+  urls:
+    - https://pmc.ncbi.nlm.nih.gov/articles/PMC7641770/
+    - https://pmc.ncbi.nlm.nih.gov/articles/PMC13000451/

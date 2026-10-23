@@ -79,6 +79,8 @@ causal_graphs:
   - node_id: plus12-hxlr-species
     label: HxlR species with a plus-12-Da intact mass shift
     node_type: STATE
+    grounding:
+    - UniProtKB:P42406
   edges:
   - edge_id: formaldehyde-produces-plus12-species
     subject: formaldehyde-purified-hxlr
@@ -344,5 +346,13 @@ curation_events:
   outcome: changed
   summary: Ground causal graph gene and protein nodes in PF01638 with verified UniProtKB accessions (UniProtKB:P42406)
   history_record: history/records/PF01638/2026-10-18T025446Z-antigravity-794a65.yaml
+  event_index: 0
+  llm_assisted: true
+- timestamp: '2026-10-23T07:48:04Z'
+  curator: Antigravity
+  action: EDIT
+  outcome: changed
+  summary: Ground plus12-hxlr-species node in hxlr-formaldehyde-intact-mass-product to UniProtKB:P42406
+  history_record: history/records/PF01638/2026-10-23T074804Z-antigravity-163803.yaml
   event_index: 0
   llm_assisted: true

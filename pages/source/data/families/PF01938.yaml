@@ -188,9 +188,13 @@ causal_graphs:
   - node_id: complex1
     label: Shifted PP1 RNA complex
     node_type: STATE
+    grounding:
+    - UniProtKB:Q6M142
   - node_id: complex10
     label: Shifted PP10 RNA complex
     node_type: STATE
+    grounding:
+    - UniProtKB:Q6M142
   edges:
   - edge_id: pp1-complex-formation
     subject: pp1
@@ -932,5 +936,13 @@ curation_events:
   outcome: changed
   summary: Ground MMP0076/TRAM0076 perturbation nodes across four Li 2019 causal graphs to UniProtKB:Q6M142
   history_record: history/records/PF01938/2026-10-21T073229Z-antigravity-60bdea.yaml
+  event_index: 0
+  llm_assisted: true
+- timestamp: '2026-10-23T07:48:12Z'
+  curator: Antigravity
+  action: EDIT
+  outcome: changed
+  summary: Ground shifted RNA complex nodes in tram0076-rna-complexes-2019 to UniProtKB:Q6M142
+  history_record: history/records/PF01938/2026-10-23T074812Z-antigravity-193803.yaml
   event_index: 0
   llm_assisted: true

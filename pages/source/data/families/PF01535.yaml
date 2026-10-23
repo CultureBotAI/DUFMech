@@ -93,6 +93,8 @@ causal_graphs:
   - node_id: dd120-binding-k12n-series
     label: Dd120 RNA binding in the HCF/5&6 fusion titration
     node_type: ACTIVITY
+    grounding:
+    - UniProtKB:Q9SF38
   edges:
   - edge_id: motif5-k12n-decreases-binding
     subject: motif5-k12n-versus-wt
@@ -171,6 +173,8 @@ causal_graphs:
   - node_id: dd120-binding-n12r-series
     label: Dd120 RNA binding in the N12R-background fusion titration
     node_type: ACTIVITY
+    grounding:
+    - UniProtKB:Q9SF38
   edges:
   - edge_id: motif6-n12r-decreases-binding
     subject: motif6-n12r-versus-wt
@@ -224,5 +228,13 @@ curation_events:
   outcome: needs_followup
   summary: Reviewed four HCF152 mini-PPR binding effects and local repeat mapping.
   history_record: history/records/PF01535/2026-10-11T112957Z-codex-551cff.yaml
+  event_index: 0
+  llm_assisted: true
+- timestamp: '2026-10-23T07:48:03Z'
+  curator: Antigravity
+  action: EDIT
+  outcome: changed
+  summary: Ground HCF/5&6 Dd120 RNA-binding readout nodes in PF01535 causal graphs to UniProtKB:Q9SF38
+  history_record: history/records/PF01535/2026-10-23T074803Z-antigravity-153503.yaml
   event_index: 0
   llm_assisted: true

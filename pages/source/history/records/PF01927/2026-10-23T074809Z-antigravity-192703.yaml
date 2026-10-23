@@ -1,0 +1,23 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01927
+  path: curation/families/PF01927.yaml
+session:
+  id: 2026-10-23T074809Z-antigravity-192703
+  timestamp: "2026-10-23T07:48:09Z"
+  actors:
+    - type: ai_agent
+      name: Antigravity
+      model: Claude Opus 4.6
+      agent_tool: Antigravity
+events:
+  - type: EDIT
+    outcome: changed
+    summary: Ground purified CeMUT-7/MUT-8/MUT-16 complex state nodes in PF01927 causal graphs
+    details: Grounded complex (STATE) in cemut7-ctd-complex-2024 to [UniProtKB:P34607, UniProtKB:Q19672], retained (STATE) in cemut7-interface-pulldown-2024 to [UniProtKB:Q19672], and capture (STATE) in cemut7-mut16-capture-2024 to [UniProtKB:P34607, UniProtKB:Q19672, UniProtKB:O62011] (Caenorhabditis elegans MUT-7, MUT-8, and MUT-16, NCBITaxon:6239) in Busetto et al. 2024 (PMID:39188014).
+    sections:
+      - causal_graphs
+links:
+  urls:
+    - https://pmc.ncbi.nlm.nih.gov/articles/PMC11347159/

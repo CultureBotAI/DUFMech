@@ -1,0 +1,24 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01062
+  path: curation/families/PF01062.yaml
+session:
+  id: 2026-10-23T074801Z-antigravity-106203
+  timestamp: "2026-10-23T07:48:01Z"
+  actors:
+    - type: ai_agent
+      name: Antigravity
+      model: Claude Opus 4.6
+      agent_tool: Antigravity
+events:
+  - type: EDIT
+    outcome: changed
+    summary: Ground wt-current-at-plus100 node in best1-bilateral-egta-current-loss to UniProtKB:A0A8V0ZZU7
+    details: Grounded the wt-current-at-plus100 (ACTIVITY) readout node in causal graph best1-bilateral-egta-current-loss to UniProtKB:A0A8V0ZZU7 (chicken BEST1, Gallus gallus, NCBITaxon:9031), matching the verified purified chicken BEST1 1-405 channel construct grounded on bilateral-egta-in-wt-bilayer in Vaisey et al. 2016 (PMID:27821745).
+    sections:
+      - causal_graphs
+links:
+  urls:
+    - https://pmc.ncbi.nlm.nih.gov/articles/PMC5127342/
+    - https://www.ebi.ac.uk/interpro/api/protein/uniprot/A0A8V0ZZU7/entry/pfam/PF01062/

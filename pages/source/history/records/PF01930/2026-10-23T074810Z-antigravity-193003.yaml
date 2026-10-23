@@ -1,0 +1,24 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01930
+  path: curation/families/PF01930.yaml
+session:
+  id: 2026-10-23T074810Z-antigravity-193003
+  timestamp: "2026-10-23T07:48:10Z"
+  actors:
+    - type: ai_agent
+      name: Antigravity
+      model: Claude Opus 4.6
+      agent_tool: Antigravity
+events:
+  - type: EDIT
+    outcome: changed
+    summary: Ground reaction and prespacer complex nodes in PF01930 causal graphs
+    details: Grounded reaction (STATE) in pcal-cysteine-contexts-2014 to UniProtKB:A3MTK6 (Pyrobaculum calidifontis Pcal_0546, NCBITaxon:410359, Lemak et al. 2014 PMID:25200083) and complex (STATE) in gsu-pam-assembly-2021 to UniProtKB:Q74H36 (Geobacter sulfurreducens GSU0057 Cas4/Cas1, NCBITaxon:243231, Hu et al. 2021 PMID:34039981).
+    sections:
+      - causal_graphs
+links:
+  urls:
+    - https://pmc.ncbi.nlm.nih.gov/articles/PMC4176176/
+    - https://pmc.ncbi.nlm.nih.gov/articles/PMC9164213/

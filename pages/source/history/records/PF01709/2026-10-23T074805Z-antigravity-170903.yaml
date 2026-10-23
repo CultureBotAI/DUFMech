@@ -1,0 +1,23 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01709
+  path: curation/families/PF01709.yaml
+session:
+  id: 2026-10-23T074805Z-antigravity-170903
+  timestamp: "2026-10-23T07:48:05Z"
+  actors:
+    - type: ai_agent
+      name: Antigravity
+      model: Claude Opus 4.6
+      agent_tool: Antigravity
+events:
+  - type: EDIT
+    outcome: changed
+    summary: Ground probeb-complex node in mouse-taco1-probeb-binding to UniProtKB:Q8K0Z7
+    details: Grounded the probeb-complex (STATE) node in causal graph mouse-taco1-probeb-binding to UniProtKB:Q8K0Z7 (Mus musculus TACO1, NCBITaxon:10090), matching the purified mature mouse TACO1 (aa 27-294) protein grounded on mouse-taco1-and-probeb in Richman et al. 2016 (PMID:27279396).
+    sections:
+      - causal_graphs
+links:
+  urls:
+    - https://pmc.ncbi.nlm.nih.gov/articles/PMC4915168/

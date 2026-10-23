@@ -143,6 +143,8 @@ causal_graphs:
   - node_id: pdcd5-complex-signal
     label: PDCD5 native-gel signal at the TRiC complex
     node_type: STATE
+    grounding:
+    - UniProtKB:O14737
   edges:
   - edge_id: rkk-lowers-native-association
     subject: rkk-substitution
@@ -183,6 +185,8 @@ causal_graphs:
   - node_id: ten-minute-complex-signal
     label: PDCD5 native-complex signal after10min
     node_type: STATE
+    grounding:
+    - UniProtKB:O14737
   edges:
   - edge_id: il-lowers-early-signal
     subject: il-substitution
@@ -364,5 +368,13 @@ curation_events:
   outcome: needs_followup
   summary: Review seven scoped PDCD5 causal effects with explicit scientific follow-ups.
   history_record: history/records/PF01984/2026-10-16T051059Z-codex-622678.yaml
+  event_index: 0
+  llm_assisted: true
+- timestamp: '2026-10-23T07:48:17Z'
+  curator: Antigravity
+  action: EDIT
+  outcome: changed
+  summary: Ground PDCD5 native-complex signal nodes in PF01984 causal graphs to UniProtKB:O14737
+  history_record: history/records/PF01984/2026-10-23T074817Z-antigravity-198403.yaml
   event_index: 0
   llm_assisted: true
