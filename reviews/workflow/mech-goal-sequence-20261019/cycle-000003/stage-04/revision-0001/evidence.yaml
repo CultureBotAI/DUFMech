@@ -1,0 +1,72 @@
+schema_version: 1.0.0
+repository_key: dufmech
+github_repository: CultureBotAI/DUFMech
+run_id: mech-goal-sequence-20261019
+cycle: 3
+stage: 4
+revision: 1
+outcome: completed
+summary: Audited all 141 maintained FamilyCuration overlays and all 8,296 generated FamilyRecord projections
+  in the frozen InterPro/Pfam 2026-10-10 inventory. Saved 24 versioned per-record structured reviews and
+  1 cohort category review (25 bundles total in reviews/structured/) covering the 6 overlays updated in
+  Cycle 3 Stage 2 and 19 overlays updated in Cycle 3 Stage 3 (24 unique families, with PF01861 updated
+  in both stages), and preserving 4 newly identified open causal-graph partner-protein grounding findings
+  (PF01174, PF01680, PF01867, PF01977) in carry_forward_ids for Stage 5 grouped remediation.
+source_revision: 0e26e9cdab5214d838db4f53ddefbf83772241fb
+scope_frozen_at: '2026-10-25T13:21:15Z'
+previous_evidence:
+  path: reviews/workflow/mech-goal-sequence-20261019/cycle-000002/stage-05/revision-0001/evidence.yaml
+  sha256: a9758d9f291d887f6a96a99bce9bb59c5d141c5d6f68df0c330d519c2ad14c44
+artifacts:
+- path: reviews/workflow/mech-goal-sequence-20261019/cycle-000003/stage-04/revision-0001/review_report.md
+  sha256: b37b19ad2a94c29ffa02e47847312fe0d8fde6c6586fddcdd95b612b56e160c5
+  kind: review_report
+- path: reviews/workflow/mech-goal-sequence-20261019/cycle-000003/stage-04/revision-0001/review_findings.md
+  sha256: f4b848128a722cded615dd4fafc9e521cc1cadbc9e4ce43b31715cb4cd73a6ba
+  kind: review_findings
+- path: reviews/workflow/mech-goal-sequence-20261019/cycle-000003/stage-04/revision-0001/frozen_inventory_coverage.json
+  sha256: 70fbfdd6c3b467b1ade91844053395f938109070d1de5616372c97deb87d2df7
+  kind: supporting
+findings:
+- finding_id: pf01174-pdxst-partner-and-acivicin-nodes-missing-grounding
+  status: open
+  summary: 'Four Bacillus subtilis 168 (NCBITaxon:224308) causal graphs in curation/families/PF01174.yaml
+    (pdxst-glutamine-dependent-plp-product node joint-pdxst-glutamine-carbohydrate-reaction, pdxt-ribulose-ammonium-dependent-synthase-readout
+    node add-yaae-ribulose-ammonium, pdxt-acivicin-glutaminase-inhibition nodes acivicin-pretreat-glutaminase-mixture
+    and acivicin-assay-glutaminase-readout, and pdxst-acivicin-plp-signal-inhibition nodes acivicin-pretreat-plp-mixture
+    and residual-glutamine-plp-signal) omit verified partner YaaD/PdxS (UniProtKB:P37527) and/or YaaE/PdxT
+    (UniProtKB:P37528) grounding (evidence: curation/families/PF01174.yaml lines 47-176; reviews/structured/20261025T132021Z-pf01174-c3s4-record-review/review.yaml).'
+  disposition: Carried forward to Stage 5 (resolve_review_findings) for grouped remediation.
+- finding_id: pf01680-joint-pdx1-pdx2-nodes-missing-partner-grounding
+  status: open
+  summary: 'Four Bacillus subtilis 168 (NCBITaxon:224308) causal graphs in curation/families/PF01680.yaml
+    (pdxs-partner-glutaminase-readout node add-pdxs-to-pdxt-glutamine, pdxs-ribulose-partner-effect node
+    add-pdxt-ribulose-ammonium, pdxs-chromophore-and-partner-h170n node joint-chromophore-reconstitution,
+    and pdxs-joint-phosphate-release node joint-r5p-phosphate-reaction) ground only one subunit of the
+    paired Pdx1/Pdx2 (UniProtKB:P37527 / UniProtKB:P37528) complex (evidence: curation/families/PF01680.yaml
+    lines 11-52, 140-172, 244-309, 372-413; reviews/structured/20261025T132031Z-pf01680-c3s4-record-review/review.yaml).'
+  disposition: Carried forward to Stage 5 (resolve_review_findings) for grouped remediation.
+- finding_id: pf01867-cas2-partner-and-complex-nodes-missing-grounding
+  status: open
+  summary: 'Six Escherichia coli K-12 MG1655 (NCBITaxon:83333) Cas2 and Cas1-Cas2 complex nodes across
+    four causal graphs in curation/families/PF01867.yaml (joint-reaction and cas2-deletion in cas1-cas2-purified-integration,
+    add-cas2 in cas2-enhancement-in-manganese, coexpress-cas1-cas2 in cas1-cas2-cellular-acquisition,
+    and r252e and cas2-recovery in cas1-r252e-lysate-coisolation) omit verified partner E. coli K-12 Cas2
+    (UniProtKB:P45956, CAS2_ECOLI) grounding (evidence: curation/families/PF01867.yaml lines 5-150, 269-308,
+    412-451; reviews/structured/20261025T132039Z-pf01867-c3s4-record-review/review.yaml).'
+  disposition: Carried forward to Stage 5 (resolve_review_findings) for grouped remediation.
+- finding_id: pf01977-shvdccd-cognate-partner-and-l182v-missing-partner-grounding
+  status: open
+  summary: 'Three Sedimentibacter hydroxybenzoicus ShVdcCD (NCBITaxon:29345; ShC UniProtKB:Q9S4M7, ShD
+    UniProtKB:Q4R102) causal graphs in curation/families/PF01977.yaml (shvdccd-cognate-partner-2021 node
+    add_d, shvdccd-l182v-syringate-2021 node l182v, and shvdccd-domain-closure-model-2021 nodes closure_int2/strained_int2/quinoid)
+    omit one subunit of the paired ShCD complex (evidence: curation/families/PF01977.yaml lines 1223-1280,
+    1767-1897; reviews/structured/20261025T132055Z-pf01977-c3s4-record-review/review.yaml).'
+  disposition: Carried forward to Stage 5 (resolve_review_findings) for grouped remediation.
+groups: []
+carry_forward_ids:
+- pf01174-pdxst-partner-and-acivicin-nodes-missing-grounding
+- pf01680-joint-pdx1-pdx2-nodes-missing-partner-grounding
+- pf01867-cas2-partner-and-complex-nodes-missing-grounding
+- pf01977-shvdccd-cognate-partner-and-l182v-missing-partner-grounding
+infra_tasks: []

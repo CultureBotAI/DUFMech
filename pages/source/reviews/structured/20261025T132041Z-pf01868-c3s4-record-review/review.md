@@ -1,0 +1,766 @@
+# PF01868 Cycle 3 Stage 4 frozen-inventory causal-graph and grounding review
+
+- Review: 20261025T132041Z-pf01868-c3s4-record-review
+- Repository: CultureBotAI/DUFMech
+- Started UTC: 2026-10-25T13:20:40Z
+- Finished UTC: 2026-10-25T13:20:41Z
+- Reviewer: Antigravity (self_review)
+- Completion: completed
+- Verdict: pass_with_limitations
+- Scientific review: true
+
+## Summary
+
+Seven graphs retain twelve observed direct preparation-level or composite-protocol effects. Three reference/domain mappings, published primers and original assay plots constrain scope. Mth terminal-primer uncertainty, Pfu outside-domain deletions, pH normalization and unequal ionic/dose/time protocols remain explicit. Binding, fitted KM, activity and fidelity are separate endpoints; retain IN_PROGRESS. Cycle 3 Stage 3 (PR #357) grounded the two Rpp29-Rpp21 interaction state nodes (nmr-response and itc-response) to the PF01868 family member Pyrococcus furiosus Rpp29 (UniProtKB:Q8U007; non-PF01868 RNase P subunits Rpp21/Pop5/Rpp30 belong to separate Pfam families). Stage 4 frozen-inventory review verified all causal graphs and grounded nodes against primary evidence caches.
+
+## Scope And Provenance
+
+Scientific assessment of the retained edges, exact member mapping, primary evidence, context and causal limits.
+
+Selection: Chen2010 main Methods/Results/Table1/Figure7 and complete supplement text with original TableS1/S4/S5/S6; Chen2011 Results/Methods/Tables2-3 and original Figures4/6/7; Chen2012 Results/Methods/Table2 and original Figures1/2. Xu2009 expression methods, alignment identities and deposited sequences inform construct scope.
+Coverage: partial; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base 0e26e9cdab5214d838db4f53ddefbf83772241fb.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| PF01868 | data/families/PF01868.yaml | generated | PF01868 |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Native projection and overlay validation | passed | True | PF01868 | Current projection validates and preserves the authored graph and discussion content exactly. |
+
+## Scientific And Domain Assessments
+
+### Protein, domain and experimental scope
+
+identity: concern. Targets: PF01868.
+
+Pfu Q8U007 sequence version1 equals NP_579545.1 and2KI7 entity1,127 aa,PF01868 41-123; delta17/24/31 remove only outside-match residues and encode initiating M before retained native sequence. Mth O26119/WP_010875653.1 maps6-88 and Mja Q57903/NP_247439.1 maps6-87. Published MTH11 reverse primer predicts terminal W rather than reference P93; actual clone sequence is unresolved. Tagged1OQK cannot settle tag-free2010 identity. All claims remain scoped to named preparations, not exact independently resequenced batches or isolated domains.
+
+### Directed effects and limits
+
+graph: supported. Targets: PF01868.
+
+All twelve edges are direct experimental preparation/protocol contrasts in seven MECHANISTIC graphs, not twelve independently isolated protein effects. Optimized buffers are in the intervention, the low-Mg rate retains pH correction, NMR and ITC are separate readouts, and two/four-RPP activity comparisons have their own WT baselines. Fidelity uses only cleaved products; unchanged pair kobs and61% four-RPP amplitude remain visible. No protein-alone cleavage, observed RNA-mediated binding rescue or family-wide sufficiency is asserted.
+
+### Remaining family coverage
+
+completeness: concern. Targets: PF01868.
+
+Unresolved Mth terminal-primer discrepancy, exact assay-batch sequences and Rpp21 residual tag sequence need clarification. Mja deltaU rescue,2009 footprinting/interface variants, model substrates, other archaeal members, L7Ae-containing complexes, eukaryotic RNaseP/MRP and human chromatin contexts remain uncurated. These are evidence/coverage gaps, not negative functional results.
+
+### Cycle 3 causal-graph and protein-node grounding verification
+
+representation: supported. Targets: PF01868.
+
+Cycle 3 Stage 3 (PR #357) grounded the two Rpp29-Rpp21 interaction state nodes (nmr-response and itc-response) to the PF01868 family member Pyrococcus furiosus Rpp29 (UniProtKB:Q8U007; non-PF01868 RNase P subunits Rpp21/Pop5/Rpp30 belong to separate Pfam families). Stage 4 frozen-inventory review verified all causal graphs and grounded nodes against primary evidence caches.
+
+## Findings
+
+### additional-contexts: Resolve Rpp29 construct uncertainty and extend member-specific causal coverage
+
+minor / open / confirmed; issue key: pf01868-causal-context-coverage.
+
+Obtain sequence evidence or author clarification for the Mth terminal primer before asserting canonical-WT identity. Preserve extra-domain Pfu deletion scope, residual activity and unequal protocol contrasts. Review further archaeal and exact human POP4 experiments with primary methods/figures before adding edges; do not confuse POP4 with PRR29 or treat partially purified plant RNaseP as an individually identified Rpp29 assay.
+
+## Recommended Actions And Acceptance Checks
+
+### extend-contexts
+
+Obtain sequence evidence or author clarification for the Mth terminal primer before asserting canonical-WT identity. Preserve extra-domain Pfu deletion scope, residual activity and unequal protocol contrasts. Review further archaeal and exact human POP4 experiments with primary methods/figures before adding edges; do not confuse POP4 with PRR29 or treat partially purified plant RNaseP as an individually identified Rpp29 assay.
+
+- Each added edge has member-specific primary evidence and explicit conditions.
+- Unsupported transfers and conflicting or negative results remain visible.
+- Native checks pass and a successor report states actual scope.
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| primary | https://pmc.ncbi.nlm.nih.gov/articles/PMC3143260/; Figure3 reference identity,Table3 primers,original Figures4/6/7,NMR/ITC and trans-processing Methods | supports | Delta24 reduces partner-induced NMR changes and ITC-detectable binding, yet retains57% or56% processing activity with two or four RPPs. Delta31 retains8% or4%. Delta17 is largely retained. The caption/image panel mismatch and absence of a delta24 ITC trace are recorded; no direct assembly-rescue trajectory is inferred. |
+| identity | https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01868/protein/uniprot/Q8U007/; Accession and domain locations; paired UniProt identity facts | supports | Pfu Q8U007 sequence version1 equals NP_579545.1 and2KI7 entity1,127 aa,PF01868 41-123; delta17/24/31 remove only outside-match residues and encode initiating M before retained native sequence. Mth O26119/WP_010875653.1 maps6-88 and Mja Q57903/NP_247439.1 maps6-87. Published MTH11 reverse primer predicts terminal W rather than reference P93; actual clone sequence is unresolved. Tagged1OQK cannot settle tag-free2010 identity. All claims remain scoped to named preparations, not exact independently resequenced batches or isolated domains. |
+| kinetic-primary | https://pmc.ncbi.nlm.nih.gov/articles/PMC3001054/; Table1,Figure7,24-page supplement Methods/TableS1-S4/FiguresS4-S6 | supports | Optimized pair/buffer lowers fitted KM without raising maximum kobs. At30 mM Mg adding the pair to the other pair raises pH-normalized kobs. Supplement verifies clone IDs, the conflicting printed primer and kinetic controls; incomplete amplitude and20-versus30 mM Mg pH-control scope remain explicit. |
+| fidelity-primary | https://pmc.ncbi.nlm.nih.gov/articles/PMC3378863/; Original Figures1C/2,Table2,substrate construction and trans/cis assay Methods | supports | Pfu trans and Mja cis protocols increase correct-site fractions, but dose/time/salts vary and the denominator is cleaved products. Mja pair kobs is unchanged; four-RPP amplitude is lower. Apparent path rates are model-derived rather than directly observed microscopic steps. |
+| gaps-and-source-conflicts | evidence/PF01868/rpp29-gap-ledger.txt; Construct conflicts,causal-attribution limits,primary follow-up leads and resolved2010 supplement access | supports | No preexisting PF01868 curated material was found in the searched repository owners including ignored/hidden files. Exact clone uncertainty and unreviewed functional contexts are retained. The author's linked ZIP resolved the failed direct PMC/EuropePMC supplement fetches; failures are not negative biological evidence. |
+| native | src/dufmech/records.py; Current projection validation and overlay equivalence in this retained-review session | supports | Closed schema, canonical history and applicable graph/evidence checks pass. Curated graphs and discussions match the overlay; scientific validity is assessed separately. |
+| stage4-prior-review | reviews/structured/20261011T175537Z-pf01868-rpp29-binding-processing-and-fidelity-contexts/review.yaml; Predecessor structured review 20261011T175537Z-pf01868-rpp29-binding-processing-and-fidelity-contexts | supports | Predecessor review 20261011T175537Z-pf01868-rpp29-binding-processing-and-fidelity-contexts verified and linked for finding continuity and semantic-digest progression on PF01868. |
+| duf-projection-pf01868 | data/families/PF01868.yaml; dufmech-reviewed-projection-v1 | context_only | Byte-exact projection retained at save for digest verification, not scientific assessment. |
+
+## Limits And Additional Notes
+
+- Original2010 Figure7 and supplement TableS1/FiguresS4-S6,2011 Figures4/6/7 and2012 Figures1/2 were visually inspected. Delta24 ITC is reported without a displayed thermogram;2011 Figure4 captions conflict with image panel labels. No raw-data refit, experimental replication or independent clone sequencing. Human papers are search/abstract leads only. Rendered-page verification follows separately.
+- Same-agent assessment, not independent expert review or experimental replication.
+- Partial family coverage; status remains IN_PROGRESS. No full-corpus completion, publication or full publication-QC pass is claimed.
+- Assessments were authored from inspected primary evidence. Native inspection supplied provenance, not scientific conclusions.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261025T132041Z-pf01868-c3s4-record-review
+title: PF01868 Cycle 3 Stage 4 frozen-inventory causal-graph and grounding review
+started_at: '2026-10-25T13:20:40Z'
+finished_at: '2026-10-25T13:20:41Z'
+reviewer:
+  identity: Antigravity
+  kind: agent
+  model: Claude-Opus-4.6
+  independence: self_review
+  independence_basis: Cycle 3 Stage 4 frozen-inventory record review by Antigravity
+    auditing prior curation overlays, primary evidence caches, history events, and
+    current projections at Git revision 0e26e9cdab5214d838db4f53ddefbf83772241fb.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: pass_with_limitations
+native_verdict: NEEDS_FOLLOWUP
+scientific_review: true
+summary: 'Seven graphs retain twelve observed direct preparation-level or composite-protocol
+  effects. Three reference/domain mappings, published primers and original assay plots
+  constrain scope. Mth terminal-primer uncertainty, Pfu outside-domain deletions,
+  pH normalization and unequal ionic/dose/time protocols remain explicit. Binding,
+  fitted KM, activity and fidelity are separate endpoints; retain IN_PROGRESS. Cycle
+  3 Stage 3 (PR #357) grounded the two Rpp29-Rpp21 interaction state nodes (nmr-response
+  and itc-response) to the PF01868 family member Pyrococcus furiosus Rpp29 (UniProtKB:Q8U007;
+  non-PF01868 RNase P subunits Rpp21/Pop5/Rpp30 belong to separate Pfam families).
+  Stage 4 frozen-inventory review verified all causal graphs and grounded nodes against
+  primary evidence caches.'
+repository: CultureBotAI/DUFMech
+kind: record
+source:
+  git_revision: 0e26e9cdab5214d838db4f53ddefbf83772241fb
+  state: working_tree
+  snapshot_id: interpro-pfam-duf-2026-10-10
+  inputs:
+  - path: curation/families/PF01868.yaml
+    sha256: 605871ba7542c04c6faa7d42e347359406160d07a5f51dace1a1dd565202944c
+    role: context
+  - path: data/families/PF01868.yaml
+    sha256: 12f71f7e9ef46c3aa02f3861263a2298ddcb8da94906803f759dbab466904150
+    role: target
+  - path: data/worklists/interpro-pfam-duf-2026-10-10.json
+    sha256: 17fb625876c9326ed284263a47bcd84e0d7844a31c040dc06cd2260c36f1c383
+    role: context
+  - path: data/worklists/interpro-pfam-duf-2026-10-10.manifest.json
+    sha256: 31c07ffb6a169c851ea0e6e9dd527a10c04028eafeb29187bd62dc2ae848696e
+    role: context
+  - path: data/worklists/interpro-pfam-duf-2026-10-10.tsv
+    sha256: be023c8dd9d8d3864926b5032d6f7e87a884b1a567391696822dbbecc692dae7
+    role: context
+  - path: evidence/PF01868/chen-2010-kinetics.txt
+    sha256: 9c5971f41847ade662e681f724590dd58d32f47947e47ccf199a2542a636a129
+    role: context
+  - path: evidence/PF01868/chen-2011-truncations.txt
+    sha256: c0bc049acf97ea4f10068fa61eebeed547b0c5803506225f7ecb79c68d413580
+    role: context
+  - path: evidence/PF01868/chen-2012-fidelity.txt
+    sha256: 95f54062a8a3d8b96f4487062346885a4feb90c07f572f54acc7c5b02697c9fc
+    role: context
+  - path: evidence/PF01868/rpp29-gap-ledger.txt
+    sha256: deb9837cf01abe3329b56297de0a23997786443493ff84f6467c881fa445e4fb
+    role: context
+  - path: evidence/PF01868/rpp29-identity.txt
+    sha256: d40b0b1111b60f42a3918c79b680b58f654a0cd0fec2e80be5559c9a5574d394
+    role: context
+  - path: reviews/structured/20261011T175537Z-pf01868-rpp29-binding-processing-and-fidelity-contexts/review.yaml
+    sha256: ed4ea341f070c1f86d1d9e23fb0fee61b461acb734309fa7d6ffd3b655b75e15
+    role: context
+targets:
+- target_id: PF01868
+  path: data/families/PF01868.yaml
+  label: PF01868
+  kind: generated
+  record_class: FamilyRecord
+  owner_paths:
+  - repository: CultureBotAI/DUFMech
+    path: curation/families/PF01868.yaml
+    role: Maintained scientific overlay; create only with authorized curation.
+  - repository: CultureBotAI/DUFMech
+    path: src/dufmech/records.py
+    role: Projection generator; frozen snapshot identity is not hand-edited.
+  semantic_digest:
+    algorithm: dufmech-record-content-v1
+    sha256: ff5ab1a0dfd1503c7ae1a1bd1639c2734dd4643e4aa759bfcc2a72c680d6e393
+    description: Canonical JSON SHA-256 of effective FamilyRecord excluding only curation_status,
+      review_id and curation_events.
+scope:
+  description: Scientific assessment of the retained edges, exact member mapping,
+    primary evidence, context and causal limits.
+  selection: Chen2010 main Methods/Results/Table1/Figure7 and complete supplement
+    text with original TableS1/S4/S5/S6; Chen2011 Results/Methods/Tables2-3 and original
+    Figures4/6/7; Chen2012 Results/Methods/Table2 and original Figures1/2. Xu2009
+    expression methods, alignment identities and deposited sequences inform construct
+    scope.
+  coverage: partial
+  population_size: 1
+  reviewed_target_ids:
+  - PF01868
+  exclusions:
+  - target: Remaining family members and uncurated experimental contexts
+    reason: Unresolved Mth terminal-primer discrepancy, exact assay-batch sequences
+      and Rpp21 residual tag sequence need clarification. Mja deltaU rescue,2009 footprinting/interface
+      variants, model substrates, other archaeal members, L7Ae-containing complexes,
+      eukaryotic RNaseP/MRP and human chromatin contexts remain uncurated. These are
+      evidence/coverage gaps, not negative functional results.
+checks:
+- check_id: native-projection
+  name: Native projection and overlay validation
+  command: validate_record(record, root); assert projection graphs and discussions
+    match overlay
+  status: passed
+  required: true
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Current projection validates and preserves the authored graph and discussion
+    content exactly.
+  target_ids:
+  - PF01868
+  evidence_ids:
+  - native
+evidence:
+- evidence_id: primary
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC3143260/
+  locator: Figure3 reference identity,Table3 primers,original Figures4/6/7,NMR/ITC
+    and trans-processing Methods
+  accessed_at: '2026-10-11T17:55:37Z'
+  support: supports
+  snapshot_sha256: c0bc049acf97ea4f10068fa61eebeed547b0c5803506225f7ecb79c68d413580
+  summary: Delta24 reduces partner-induced NMR changes and ITC-detectable binding,
+    yet retains57% or56% processing activity with two or four RPPs. Delta31 retains8%
+    or4%. Delta17 is largely retained. The caption/image panel mismatch and absence
+    of a delta24 ITC trace are recorded; no direct assembly-rescue trajectory is inferred.
+- evidence_id: identity
+  kind: database
+  reference: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01868/protein/uniprot/Q8U007/
+  locator: Accession and domain locations; paired UniProt identity facts
+  accessed_at: '2026-10-11T17:55:37Z'
+  support: supports
+  snapshot_sha256: d40b0b1111b60f42a3918c79b680b58f654a0cd0fec2e80be5559c9a5574d394
+  summary: Pfu Q8U007 sequence version1 equals NP_579545.1 and2KI7 entity1,127 aa,PF01868
+    41-123; delta17/24/31 remove only outside-match residues and encode initiating
+    M before retained native sequence. Mth O26119/WP_010875653.1 maps6-88 and Mja
+    Q57903/NP_247439.1 maps6-87. Published MTH11 reverse primer predicts terminal
+    W rather than reference P93; actual clone sequence is unresolved. Tagged1OQK cannot
+    settle tag-free2010 identity. All claims remain scoped to named preparations,
+    not exact independently resequenced batches or isolated domains.
+- evidence_id: kinetic-primary
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC3001054/
+  locator: Table1,Figure7,24-page supplement Methods/TableS1-S4/FiguresS4-S6
+  summary: Optimized pair/buffer lowers fitted KM without raising maximum kobs. At30
+    mM Mg adding the pair to the other pair raises pH-normalized kobs. Supplement
+    verifies clone IDs, the conflicting printed primer and kinetic controls; incomplete
+    amplitude and20-versus30 mM Mg pH-control scope remain explicit.
+  accessed_at: '2026-10-11T17:55:37Z'
+  support: supports
+  snapshot_sha256: 9c5971f41847ade662e681f724590dd58d32f47947e47ccf199a2542a636a129
+- evidence_id: fidelity-primary
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC3378863/
+  locator: Original Figures1C/2,Table2,substrate construction and trans/cis assay
+    Methods
+  summary: Pfu trans and Mja cis protocols increase correct-site fractions, but dose/time/salts
+    vary and the denominator is cleaved products. Mja pair kobs is unchanged; four-RPP
+    amplitude is lower. Apparent path rates are model-derived rather than directly
+    observed microscopic steps.
+  accessed_at: '2026-10-11T17:55:37Z'
+  support: supports
+  snapshot_sha256: 95f54062a8a3d8b96f4487062346885a4feb90c07f572f54acc7c5b02697c9fc
+- evidence_id: gaps-and-source-conflicts
+  kind: search
+  reference: evidence/PF01868/rpp29-gap-ledger.txt
+  locator: Construct conflicts,causal-attribution limits,primary follow-up leads and
+    resolved2010 supplement access
+  search_scope: PF01868,Rpp29,RNase_P-MRP_p29; Pfu/Mth/Mja references and published
+    primers; exact2009-2012 primary titles and Rpp29/H3.3 leads; ignored/hidden-inclusive
+    search of curation,evidence,history/records,reviews/structured,.agents,.claude
+    on2026-10-11.
+  summary: No preexisting PF01868 curated material was found in the searched repository
+    owners including ignored/hidden files. Exact clone uncertainty and unreviewed
+    functional contexts are retained. The author's linked ZIP resolved the failed
+    direct PMC/EuropePMC supplement fetches; failures are not negative biological
+    evidence.
+  accessed_at: '2026-10-11T17:55:37Z'
+  support: supports
+  snapshot_sha256: deb9837cf01abe3329b56297de0a23997786443493ff84f6467c881fa445e4fb
+- evidence_id: native
+  kind: validation
+  reference: src/dufmech/records.py
+  locator: Current projection validation and overlay equivalence in this retained-review
+    session
+  accessed_at: '2026-10-11T17:55:37Z'
+  support: supports
+  summary: Closed schema, canonical history and applicable graph/evidence checks pass.
+    Curated graphs and discussions match the overlay; scientific validity is assessed
+    separately.
+- evidence_id: stage4-prior-review
+  kind: prior_review
+  reference: reviews/structured/20261011T175537Z-pf01868-rpp29-binding-processing-and-fidelity-contexts/review.yaml
+  locator: Predecessor structured review 20261011T175537Z-pf01868-rpp29-binding-processing-and-fidelity-contexts
+  accessed_at: '2026-10-25T13:20:41Z'
+  support: supports
+  snapshot_sha256: ed4ea341f070c1f86d1d9e23fb0fee61b461acb734309fa7d6ffd3b655b75e15
+  summary: Predecessor review 20261011T175537Z-pf01868-rpp29-binding-processing-and-fidelity-contexts
+    verified and linked for finding continuity and semantic-digest progression on
+    PF01868.
+- evidence_id: duf-projection-pf01868
+  kind: record_content
+  reference: data/families/PF01868.yaml
+  locator: dufmech-reviewed-projection-v1
+  accessed_at: '2026-10-25T13:20:41Z'
+  support: context_only
+  snapshot_sha256: 12f71f7e9ef46c3aa02f3861263a2298ddcb8da94906803f759dbab466904150
+  quote: "id: Pfam:PF01868\npfam_id: PF01868\nname: Ribonuclease P/MRP, subunit p29\n\
+    short_name: RNase_P-MRP_p29\nseed_status: EX_DUF\ncharacterization_status: UNSCORED\n\
+    curation_status: IN_PROGRESS\nsource_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01868\n\
+    counters:\n  proteins: 4328\n  matches: 4328\n  proteomes: 3725\n  taxa: 9455\n\
+    \  structures: 19\n  alphafold_models: 3775\n  domain_architectures: 51\nprovenance:\n\
+    \  snapshot_id: interpro-pfam-duf-2026-10-10\n  path: data/worklists/interpro-pfam-duf-2026-10-10.json\n\
+    \  sha256: 17fb625876c9326ed284263a47bcd84e0d7844a31c040dc06cd2260c36f1c383\n\
+    \  generated_at: '2026-10-10T07:44:21.614711Z'\n  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/\n\
+    interpro_id: InterPro:IPR002730\ndescription: This family consists of several\
+    \ archaeal and eukaryotic proteins. The archaeal proteins are\n  found to be expressed\
+    \ within ribosomal operons and several of the sequences are described as ribonuclease\n\
+    \  P protein subunit p29 proteins [[cite:PUB00042726],[cite:PUB00028005]]. The\
+    \ structure of the RNase P\n  subunit, Rpp29, from Methanobacterium thermoautotrophicum\
+    \ has been determined. Mth Rpp29 is a member\n  of the oligonucleotide/oligosaccharide\
+    \ binding fold family. It contains a structured beta-barrel core\n  and unstructured\
+    \ N- and C-terminal extensions bearing several highly conserved amino acid residues\
+    \ that\n  could be involved in RNA contacts in the protein-RNA complex [[cite:PUB00028005]].\
+    \ Rpp29 catalyses the\n  endonucleolytic cleavage of RNA, removing 5'-extranucleotides\
+    \ from tRNA precursor. It interacts with\n  the Rpp25 and Pop5 subunits.\ncuration_history:\
+    \ history/records/PF01868\ndiscussions:\n- discussion_id: rpp29-construct-and-protocol-boundaries\n\
+    \  prompt: Resolve the Mth primer discrepancy and maintain preparation-specific\
+    \ causal attribution.\n  kind: CURATION_TODO\n  status: OPEN\n  rationale: Published\
+    \ MTH11 reverse primer predicts P93W relative to O26119, while tag-free cloning\
+    \ is\n    described. Pfu truncations remove extra-domain sequence, and optimized\
+    \ protocols change more than\n    protein composition.\n  evidence:\n  - reference:\
+    \ PMID:20705647\n    supports: PARTIAL\n    evidence_source: primary_methods_and_original_supplement\n\
+    \    explanation: TableS1 was visually verified; literal primer translation conflicts\
+    \ with the current\n      terminal residue. S6 normalization is measured at20\
+    \ rather than30 mM Mg.\n  - reference: PMID:21683084\n    supports: PARTIAL\n\
+    \    evidence_source: primary_construct_table_and_original_figures\n    explanation:\
+    \ Delta24 impairs free-pair binding but retains substantial RNA-complex activity.\
+    \ The Figure4\n      panel-caption mismatch and undisplayed delta24 ITC trace\
+    \ remain explicit.\n  notes: See evidence/PF01868/rpp29-identity.txt and rpp29-gap-ledger.txt.\
+    \ No protein-alone catalysis,\n    isolated-domain sufficiency, directly observed\
+    \ assembly rescue or exact Mth canonical-WT clone claim.\n    Keep fitted KM,\
+    \ kobs, binding and correct-product fraction distinct.\n  posed_by: Codex\n  posed_date:\
+    \ '2026-10-11'\n- discussion_id: rpp29-unreviewed-family-contexts\n  prompt: Extend\
+    \ coverage to further archaeal and verified eukaryotic RNase P-MRP contexts.\n\
+    \  kind: CURATION_TODO\n  status: OPEN\n  rationale: Seven graphs cover selected\
+    \ archaeal preparations, not all PF01868 members or RNA-processing\n    and chromatin\
+    \ functions.\n  evidence:\n  - reference: PMID:22298511\n    supports: PARTIAL\n\
+    \    evidence_source: primary_methods_results_and_figures\n    explanation: Partially\
+    \ purified plant nuclear RNase P does not individually establish the tested Rpp29\n\
+    \      identity; its results are not transferred here.\n  notes: Review Mja P4-bulged-U\
+    \ rescue, model substrates,2009 footprinting/interface experiments and L7Ae-containing\n\
+    \    systems separately. Human hPop4 PMID10352175 and H3.3 papers PMID26842893/29921582\
+    \ remain leads, not\n    completed reviews. Human POP4 is not PRR29. Retain IN_PROGRESS\
+    \ and partial same-agent assessment.\n  posed_by: Codex\n  posed_date: '2026-10-11'\n\
+    causal_graphs:\n- graph_id: mth-optimized-protocol-km\n  title: The RPP21-RPP29\
+    \ optimized protocol lowers fitted substrate KM\n  scope: Chen2010 Table1 and\
+    \ Figure7, Mth RNA titration under separately optimized conditions.\n  context:\
+    \ 55 C,50 mM MES pH5.8,0.3-20 uM RPR,about2 nM internally labeled E.coli pre-tRNATyr.\
+    \ RPR alone\n    uses2 M NH4/500 mM Mg; RPR plus twice-molar RPP21/RPP29 uses0.8\
+    \ M NH4/120 mM Mg. Denaturing PAGE and\n    fitted single-turnover rates.\n  family_mapping:\
+    \ Published MTH11 preparation maps to O26119/WP_010875653.1,93 aa,PF01868 6-88.\
+    \ Printed\n    reverse primer predicts terminal W rather than reference P93; actual\
+    \ clone equality is unresolved.\n    No isolated-domain experiment.\n  scope_status:\
+    \ MECHANISTIC\n  taxon: NCBITaxon:187420\n  limitations: Composite protein-and-buffer\
+    \ intervention, not isolated Rpp29 affinity. KM(STO) is fitted\n    from RNA titration,\
+    \ not protein Kd. Maximum kobs remains0.13/min; two-RPP amplitude can be about40%.\n\
+    \    The tagged1OQK structure is not this assay preparation.\n  nodes:\n  - node_id:\
+    \ pair-and-buffer\n    label: Supply RPP21-RPP29 and use its lower-salt optimized\
+    \ protocol\n    node_type: PERTURBATION\n    grounding:\n    - UniProtKB:O26119\n\
+    \  - node_id: fitted-km\n    label: Fitted single-turnover substrate KM\n    node_type:\
+    \ STATE\n  edges:\n  - edge_id: pair-protocol-decreases-km\n    subject: pair-and-buffer\n\
+    \    predicate: decreases\n    object: fitted-km\n    mechanism: The joint protocol\
+    \ lowers KM(STO) from21.3 +/-2.6 to1.4 +/-0.2 uM. Dilution controls support\n\
+    \      rapid substrate escape relative to cleavage, but do not independently isolate\
+    \ the protein contribution\n      from salt changes.\n    directness: DIRECT\n\
+    \    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n    -\
+    \ reference: PMID:20705647\n      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC3001054/\n\
+    \      snippet: Single-turnover kinetic studies\n      explanation: Table1, original\
+    \ Figure7 and supplementS4/S5; the edge targets the measured composite-protocol\n\
+    \        endpoint rather than an unobserved binding microstep.\n      cache_path:\
+    \ evidence/PF01868/chen-2010-kinetics.txt\n      cache_sha256: 9c5971f41847ade662e681f724590dd58d32f47947e47ccf199a2542a636a129\n\
+    - graph_id: mth-low-magnesium-normalized-rate\n  title: RPP21-RPP29 increases\
+    \ the normalized rate with POP5-RPP30 at low magnesium\n  scope: Chen2010 Table1\
+    \ right-hand comparison at3 uM Mth RPR.\n  context: 55 C,3 uM RPR,about2 nM E.coli\
+    \ pre-tRNATyr,30 mM Mg and0.8 M NH4,twice-molar proteins. Four-RPP\n    kobs measured\
+    \ atpH5.4 is multiplied by2.5 for comparison withpH5.8; these are not two raw\
+    \ same-pH\n    rates.\n  family_mapping: MTH11/O26119,PF01868 6-88; terminal-primer\
+    \ conflict remains unresolved. Both protein\n    pairs act with catalytic RNA;\
+    \ Rpp29-alone cleavage is not tested.\n  scope_status: MECHANISTIC\n  taxon: NCBITaxon:187420\n\
+    \  limitations: The pH dependence control used20 mM Mg rather than30 mM and a\
+    \ fitted slope1.1. Retain the\n    authors' normalization without interpreting\
+    \ it as a directly measured elementary chemical rate or\n    a general344-fold\
+    \ effect.\n  nodes:\n  - node_id: add-pair-normalized-protocol\n    label: Add\
+    \ RPP21-RPP29 to RPR-POP5-RPP30 with published pH normalization\n    node_type:\
+    \ PERTURBATION\n    grounding:\n    - UniProtKB:O26119\n  - node_id: cleavage-kobs\n\
+    \    label: Reported pH5.8-equivalent cleavage kobs\n    node_type: ACTIVITY\n\
+    \  edges:\n  - edge_id: pair-protocol-increases-normalized-rate\n    subject:\
+    \ add-pair-normalized-protocol\n    predicate: increases\n    object: cleavage-kobs\n\
+    \    mechanism: Under this protocol the reported rate changes from0.016 +/-0.0004\
+    \ to5.5 +/-0.18/min. The\n      endpoint supports a preparation-level contribution\
+    \ in the other pair's presence, not independent\n      sufficiency of Rpp29 or\
+    \ proof of a particular catalytic microstep.\n    directness: DIRECT\n    support:\
+    \ OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference: PMID:20705647\n\
+    \      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC3001054/\n      snippet:\
+    \ Single-turnover kinetic studies\n      explanation: Table1 fixed30 mM Mg comparison\
+    \ and footnote c, single-turnover Methods and original\n        supplementS6 distinguish\
+    \ corrected from raw rates.\n      cache_path: evidence/PF01868/chen-2010-kinetics.txt\n\
+    \      cache_sha256: 9c5971f41847ade662e681f724590dd58d32f47947e47ccf199a2542a636a129\n\
+    - graph_id: pfu-delta24-partner-association-readouts\n  title: Pfu delta24 weakens\
+    \ two separately measured partner-association readouts\n  scope: Chen2011 Figure4\
+    \ and ITC Results, deletion versus full-length Rpp29.\n  context: NMR at55 C,about0.3\
+    \ mM labeled Rpp29 plus small excess unlabeled Rpp21. Separate ITC at55 C,20\n\
+    \    mM cacodylate pH6.7,10 mM KCl,0.3 mM ZnCl2,0.02%NaN3; about20 uM Rpp21 in\
+    \ cell and200 uM Rpp29 in\n    syringe.\n  family_mapping: Pfu PF1816,Q8U007/NP_579545.1,127\
+    \ aa,PF01868 41-123. Delta24 removes residues1-24 outside\n    PF01868 and has\
+    \ primer-encoded initiating M before retained G25. Reference equals2KI7 entity1;\
+    \ the2011\n    batch was not independently sequenced.\n  scope_status: MECHANISTIC\n\
+    \  taxon: NCBITaxon:186497\n  limitations: Folded-core spectra persist. Weak NMR\
+    \ perturbations are not zero binding. Delta24 ITC has\n    no displayed thermogram.\
+    \ Rpp21 uses an earlier affinity-purification/thrombin method; exact residual\n\
+    \    cloning residues in this batch remain unverified. Neither binding assay observes\
+    \ RNA cleavage.\n  nodes:\n  - node_id: delta24\n    label: Replace full-length\
+    \ Pfu Rpp29 with delta24\n    node_type: PERTURBATION\n    grounding:\n    - UniProtKB:Q8U007\n\
+    \  - node_id: nmr-response\n    label: Rpp21-induced Rpp29 NMR chemical-shift\
+    \ response\n    node_type: STATE\n    grounding:\n    - UniProtKB:Q8U007\n  -\
+    \ node_id: itc-response\n    label: Detectable Rpp21-Rpp29 binding response by\
+    \ ITC\n    node_type: STATE\n    grounding:\n    - UniProtKB:Q8U007\n  edges:\n\
+    \  - edge_id: delta24-decreases-nmr-response\n    subject: delta24\n    predicate:\
+    \ decreases\n    object: nmr-response\n    mechanism: The deletion leaves only\
+    \ small partner-induced shifts compared with full-length protein.\n      It supports\
+    \ impaired association in this solution assay, not complete loss of binding under\
+    \ all\n      conditions or a domain-specific catalytic defect.\n    directness:\
+    \ DIRECT\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n\
+    \    - reference: PMID:21683084\n      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC3143260/\n\
+    \      snippet: NMR and ITC studies\n      explanation: Original Figure4 labels\
+    \ show free WT/delta17/delta24 inA/B/C and partner-addedD/E/F;\n        the caption\
+    \ pairing differs. Delta17 preserves the strong response and limits deletion generalization.\n\
+    \      cache_path: evidence/PF01868/chen-2011-truncations.txt\n      cache_sha256:\
+    \ c0bc049acf97ea4f10068fa61eebeed547b0c5803506225f7ecb79c68d413580\n  - edge_id:\
+    \ delta24-decreases-itc-response\n    subject: delta24\n    predicate: decreases\n\
+    \    object: itc-response\n    mechanism: Binding becomes undetectable by ITC\
+    \ under the stated conditions; this is a detection-limited\n      result, not\
+    \ measured infinite Kd. WT and delta17 fitted Kd values are0.25 +/-0.01 and0.23\
+    \ +/-0.01\n      uM.\n    directness: DIRECT\n    support: OBSERVED\n    evidence_kind:\
+    \ EXPERIMENTAL\n    evidence:\n    - reference: PMID:21683084\n      source_url:\
+    \ https://pmc.ncbi.nlm.nih.gov/articles/PMC3143260/\n      snippet: NMR and ITC\
+    \ studies\n      explanation: ITC Results and Figure6/Table2 report delta24 nondetection;\
+    \ original Figure6 displays\n        only WT and delta17 traces. The negative\
+    \ assay is text-supported, not visually confirmed from\n        a delta24 trace.\n\
+    \      cache_path: evidence/PF01868/chen-2011-truncations.txt\n      cache_sha256:\
+    \ c0bc049acf97ea4f10068fa61eebeed547b0c5803506225f7ecb79c68d413580\n- graph_id:\
+    \ pfu-two-rpp-truncation-activity\n  title: Pfu Rpp29 truncations reduce processing\
+    \ with Rpp21 and catalytic RNA\n  scope: Chen2011 Figure7 white bars, two separate\
+    \ deletion comparisons.\n  context: Pfu RPR plus RPP21 and WT or mutant RPP29;\
+    \ E.coli pre-tRNATyr at about2.5 times KM,55 C,50\n    mM Tris pH7.1,100 mM NH4/120\
+    \ mM Mg. Initial velocity from less than30% cleavage; WT turnover reference0.54\n\
+    \    +/-0.03/min.\n  family_mapping: Q8U007/NP_579545.1,PF01868 41-123. Delta24\
+    \ and delta31 remove outside-match N-terminal\n    residues and encode initiating\
+    \ M before retained G25 orG32. These are intact-protein variants, not\n    isolated\
+    \ Pfam domains.\n  scope_status: MECHANISTIC\n  taxon: NCBITaxon:186497\n  limitations:\
+    \ 'Substrate is not proved saturating; relative activity is not an elementary\
+    \ rate constant.\n    Each variant is separate. Delta17 retains84% with broad\
+    \ errors. No observed edge joins impaired free-pair\n    binding to inactivity:\
+    \ delta24 retains substantial RNP activity.'\n  nodes:\n  - node_id: delta24\n\
+    \    label: Substitute Rpp29 delta24 in the two-RPP reaction\n    node_type: PERTURBATION\n\
+    \    grounding:\n    - UniProtKB:Q8U007\n  - node_id: delta31\n    label: Substitute\
+    \ Rpp29 delta31 in the two-RPP reaction\n    node_type: PERTURBATION\n    grounding:\n\
+    \    - UniProtKB:Q8U007\n  - node_id: processing-activity\n    label: Relative\
+    \ pre-tRNATyr processing activity\n    node_type: ACTIVITY\n  edges:\n  - edge_id:\
+    \ delta24-decreases-processing\n    subject: delta24\n    predicate: decreases\n\
+    \    object: processing-activity\n    mechanism: Delta24 retains57% of its matched\
+    \ WT activity. This is incomplete loss in the RNA-containing\n      preparation;\
+    \ RNA-mediated assembly rescue remains an interpretation rather than an observed\
+    \ intermediate.\n    directness: DIRECT\n    support: OBSERVED\n    evidence_kind:\
+    \ EXPERIMENTAL\n    evidence:\n    - reference: PMID:21683084\n      source_url:\
+    \ https://pmc.ncbi.nlm.nih.gov/articles/PMC3143260/\n      snippet: NMR and ITC\
+    \ studies\n      explanation: Original Figure7 white delta24 bar, reconstitution\
+    \ Results and trans-assay Methods;\n        mean and SD from three independent\
+    \ experiments.\n      cache_path: evidence/PF01868/chen-2011-truncations.txt\n\
+    \      cache_sha256: c0bc049acf97ea4f10068fa61eebeed547b0c5803506225f7ecb79c68d413580\n\
+    \  - edge_id: delta31-decreases-processing\n    subject: delta31\n    predicate:\
+    \ decreases\n    object: processing-activity\n    mechanism: Delta31 retains8%\
+    \ of matched WT activity. The longer deletion has a stronger endpoint effect,\n\
+    \      without proving which lost residue or unmeasured assembly step causes it.\n\
+    \    directness: DIRECT\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n\
+    \    evidence:\n    - reference: PMID:21683084\n      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC3143260/\n\
+    \      snippet: NMR and ITC studies\n      explanation: Original Figure7 white\
+    \ delta31 bar and reconstitution Results; residual processing\n        is preserved\
+    \ rather than reported as zero.\n      cache_path: evidence/PF01868/chen-2011-truncations.txt\n\
+    \      cache_sha256: c0bc049acf97ea4f10068fa61eebeed547b0c5803506225f7ecb79c68d413580\n\
+    - graph_id: pfu-four-rpp-truncation-activity\n  title: Pfu truncation effects\
+    \ persist in the four-RPP preparation\n  scope: Chen2011 Figure7 grey bars, variants\
+    \ with POP5-RPP30 added.\n  context: Pfu RPR,RPP21,WT or mutant RPP29,POP5 and\
+    \ RPP30; pre-tRNATyr at about2.5 times KM,55 C,50 mM\n    Tris pH7.1,800 mM NH4/30\
+    \ mM Mg. Initial-velocity protocol,WT turnover reference8.9 +/-1.6/min.\n  family_mapping:\
+    \ Pfu Q8U007/NP_579545.1,PF01868 41-123; deletions1-24 or1-31 are outside-match\
+    \ perturbations\n    of a larger protein. No separate domain sufficiency claim.\n\
+    \  scope_status: MECHANISTIC\n  taxon: NCBITaxon:186497\n  limitations: Different\
+    \ salt conditions and WT absolute activity from the two-RPP graph. Similar percentages\n\
+    \    do not mean equal absolute rates. RNA-dependent binding rescue and individual\
+    \ residue roles are not\n    observed. Rpp29 is one of four protein components.\n\
+    \  nodes:\n  - node_id: delta24\n    label: Substitute Rpp29 delta24 in the four-RPP\
+    \ reaction\n    node_type: PERTURBATION\n    grounding:\n    - UniProtKB:Q8U007\n\
+    \  - node_id: delta31\n    label: Substitute Rpp29 delta31 in the four-RPP reaction\n\
+    \    node_type: PERTURBATION\n    grounding:\n    - UniProtKB:Q8U007\n  - node_id:\
+    \ processing-activity\n    label: Relative pre-tRNATyr processing activity\n \
+    \   node_type: ACTIVITY\n  edges:\n  - edge_id: delta24-decreases-processing\n\
+    \    subject: delta24\n    predicate: decreases\n    object: processing-activity\n\
+    \    mechanism: Delta24 retains56% of the four-RPP WT activity. Residual output\
+    \ prevents treating the free-protein\n      binding defect as obligatory complete\
+    \ complex inactivation.\n    directness: DIRECT\n    support: OBSERVED\n    evidence_kind:\
+    \ EXPERIMENTAL\n    evidence:\n    - reference: PMID:21683084\n      source_url:\
+    \ https://pmc.ncbi.nlm.nih.gov/articles/PMC3143260/\n      snippet: NMR and ITC\
+    \ studies\n      explanation: Original Figure7 grey delta24 bar and corresponding\
+    \ reconstitution Results; compare\n        only to the grey WT reference.\n  \
+    \    cache_path: evidence/PF01868/chen-2011-truncations.txt\n      cache_sha256:\
+    \ c0bc049acf97ea4f10068fa61eebeed547b0c5803506225f7ecb79c68d413580\n  - edge_id:\
+    \ delta31-decreases-processing\n    subject: delta31\n    predicate: decreases\n\
+    \    object: processing-activity\n    mechanism: Delta31 retains4% of the four-RPP\
+    \ WT activity. The retained small signal is not zero; the\n      experiment does\
+    \ not identify an elementary catalytic defect.\n    directness: DIRECT\n    support:\
+    \ OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference: PMID:21683084\n\
+    \      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC3143260/\n      snippet:\
+    \ NMR and ITC studies\n      explanation: Original Figure7 grey delta31 bar and\
+    \ reconstitution Results; delta17 retains84% and\n        is not assigned a significant\
+    \ loss.\n      cache_path: evidence/PF01868/chen-2011-truncations.txt\n      cache_sha256:\
+    \ c0bc049acf97ea4f10068fa61eebeed547b0c5803506225f7ecb79c68d413580\n- graph_id:\
+    \ pfu-trans-cleavage-fidelity-protocols\n  title: Protein-containing Pfu protocols\
+    \ increase the fraction of correctly cleaved products\n  scope: Chen2012 Figure1C\
+    \ left panel, nonconsensus pre-tRNAGln in trans.\n  context: 55 C,2 nM5-prime-labeled\
+    \ SynechocystisPCC6803 pre-tRNAGln. RNA-only uses15 uM RPR for9 h; protein-containing\n\
+    \    protocols use200 nM RPR and2 uM RPPs. Pair incubation9 h,four-RPP10 min;\
+    \ separately optimized buffers.\n  family_mapping: Pfu PF1816/Q8U007/NP_579545.1,PF01868\
+    \ 41-123,with the named partner proteins and catalytic\n    RNA. The2010 coexpression\
+    \ protocol specifies tag-free pairs; no independent2012 clone resequencing.\n\
+    \  scope_status: MECHANISTIC\n  taxon: NCBITaxon:186497\n  limitations: Composite\
+    \ protocols change RNA dose and buffer as well as protein composition; the four-RPP\n\
+    \    comparison also changes time. Fraction correct uses cleaved products as denominator,\
+    \ not all starting\n    substrate. This is not a protein-only rate assay.\n  nodes:\n\
+    \  - node_id: pair-protocol\n    label: Replace RNA-only protocol with RPP21-RPP29\
+    \ protocol\n    node_type: PERTURBATION\n    grounding:\n    - UniProtKB:Q8U007\n\
+    \  - node_id: four-rpp-protocol\n    label: Replace RNA-only protocol with four-RPP\
+    \ protocol\n    node_type: PERTURBATION\n    grounding:\n    - UniProtKB:Q8U007\n\
+    \  - node_id: correct-fraction\n    label: Correct-site fraction among cleaved\
+    \ products\n    node_type: STATE\n  edges:\n  - edge_id: pair-protocol-increases-correct-fraction\n\
+    \    subject: pair-protocol\n    predicate: increases\n    object: correct-fraction\n\
+    \    mechanism: The reported correct-product fraction rises from0.11 +/-0.03 to0.57\
+    \ +/-0.03 in the pair-containing\n      protocol. Attribution is to the composite\
+    \ protocol, not independently sufficient Rpp29.\n    directness: DIRECT\n    support:\
+    \ OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference: PMID:22298511\n\
+    \      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC3378863/\n      snippet:\
+    \ Data analysis\n      explanation: Original Figure1C left lanes2/3, associated\
+    \ Results, and single-turnover trans Methods\n        distinguish dose and time\
+    \ from the separate Mja cis experiment.\n      cache_path: evidence/PF01868/chen-2012-fidelity.txt\n\
+    \      cache_sha256: 95f54062a8a3d8b96f4487062346885a4feb90c07f572f54acc7c5b02697c9fc\n\
+    \  - edge_id: four-rpp-protocol-increases-correct-fraction\n    subject: four-rpp-protocol\n\
+    \    predicate: increases\n    object: correct-fraction\n    mechanism: The four-protein\
+    \ protocol raises the correct-product fraction to0.92 +/-0.01 relative to0.11\n\
+    \      +/-0.03 for RNA alone. This does not resolve each protein's individual\
+    \ contribution or establish\n      complete substrate conversion.\n    directness:\
+    \ DIRECT\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n\
+    \    - reference: PMID:22298511\n      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC3378863/\n\
+    \      snippet: Data analysis\n      explanation: Original Figure1C left lanes2/5\
+    \ and associated Results; the POP5-RPP30-only fraction0.59\n        +/-0.01 is\
+    \ a distinct comparator, not an omitted zero control.\n      cache_path: evidence/PF01868/chen-2012-fidelity.txt\n\
+    \      cache_sha256: 95f54062a8a3d8b96f4487062346885a4feb90c07f572f54acc7c5b02697c9fc\n\
+    - graph_id: mja-cis-cleavage-fidelity-protocols\n  title: Optimized Mja RNP protocols\
+    \ improve cis-cleavage fidelity without guaranteeing yield\n  scope: Chen2012\
+    \ Figure2 and Table2, tethered pre-tRNAGln-AAU-RPR.\n  context: 55 C,pH6,50 nM\
+    \ cis transcript,500 nM proteins. RNA-only uses2.5 M NH4/500 mM Mg; RPP21-RPP29\n\
+    \    uses0.8 M NH4/200 mM Mg. Four-RPP assembly uses25 mM Ca followed by nominal100\
+    \ mM Mg/0.8 M NH4 cleavage\n    conditions.\n  family_mapping: Mja MJ0464,Q57903/NP_247439.1,95\
+    \ aa,PF01868 6-87; reference taxon243232. Tag-free pair\n    design is supported\
+    \ by2010 Methods/TableS1/S2; no isolated-domain assay or independent batch sequencing.\n\
+    \  scope_status: MECHANISTIC\n  taxon: NCBITaxon:243232\n  limitations: Separately\
+    \ optimized ionic/assembly protocols, not same-buffer protein additions. Correct\n\
+    \    fraction is among products. Earlier referenced Methods contains concentration/mixing\
+    \ ambiguities.\n    Rate components are model-derived; no arrow describes observed\
+    \ microscopic docking or RNA rescue.\n  nodes:\n  - node_id: pair-protocol\n \
+    \   label: Switch RNA-only cis assay to optimized RPP21-RPP29 protocol\n    node_type:\
+    \ PERTURBATION\n    grounding:\n    - UniProtKB:Q57903\n  - node_id: four-rpp-protocol\n\
+    \    label: Switch RNA-only cis assay to optimized four-RPP protocol\n    node_type:\
+    \ PERTURBATION\n    grounding:\n    - UniProtKB:Q57903\n  - node_id: correct-fraction\n\
+    \    label: Correct-site fraction among cleaved cis products\n    node_type: STATE\n\
+    \  edges:\n  - edge_id: pair-protocol-increases-correct-fraction\n    subject:\
+    \ pair-protocol\n    predicate: increases\n    object: correct-fraction\n    mechanism:\
+    \ The pair protocol increases the correct-product fraction from0.18 +/-0.01 to0.47\
+    \ +/-0.02,\n      while overall kobs remains0.004/min. Improved fidelity is not\
+    \ increased overall cleavage rate; total\n      amplitudes are93% and86% respectively.\n\
+    \    directness: DIRECT\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n\
+    \    evidence:\n    - reference: PMID:22298511\n      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC3378863/\n\
+    \      snippet: Data analysis\n      explanation: Original Figure2 upper panels\
+    \ and Table2 time-course means; do not substitute Figure1's\n        representative\
+    \ single-timepoint fractions.\n      cache_path: evidence/PF01868/chen-2012-fidelity.txt\n\
+    \      cache_sha256: 95f54062a8a3d8b96f4487062346885a4feb90c07f572f54acc7c5b02697c9fc\n\
+    \  - edge_id: four-rpp-protocol-increases-correct-fraction\n    subject: four-rpp-protocol\n\
+    \    predicate: increases\n    object: correct-fraction\n    mechanism: The four-RPP\
+    \ protocol increases the fraction to0.84 +/-0.03 from0.18 +/-0.01 for RNA alone,\n\
+    \      but total amplitude is61% rather than93%. Higher fidelity therefore does\
+    \ not establish complete\n      yield or individually sufficient Rpp29 action.\n\
+    \    directness: DIRECT\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n\
+    \    evidence:\n    - reference: PMID:22298511\n      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC3378863/\n\
+    \      snippet: Data analysis\n      explanation: Original Figure2 lower-right\
+    \ versus upper-left, Table2 and amplitude analysis. The\n        separately observed\
+    \ POP5-RPP30 fraction0.43 +/-0.01 is retained as context, not conflated with\n\
+    \        the RNA-only comparator.\n      cache_path: evidence/PF01868/chen-2012-fidelity.txt\n\
+    \      cache_sha256: 95f54062a8a3d8b96f4487062346885a4feb90c07f572f54acc7c5b02697c9fc\n\
+    curation_events:\n- timestamp: '2026-10-11T17:42:02Z'\n  curator: Codex\n  action:\
+    \ CREATE\n  outcome: changed\n  summary: Curate Rpp29 preparation-specific binding,\
+    \ processing and fidelity graphs\n  history_record: history/records/PF01868/2026-10-11T174202Z-codex-e0097c.yaml\n\
+    \  event_index: 0\n  llm_assisted: true\n- timestamp: '2026-10-11T17:55:14Z'\n\
+    \  curator: Codex\n  action: REVIEW\n  outcome: needs_followup\n  summary: Retain\
+    \ scoped scientific review of Rpp29 causal graphs\n  history_record: history/records/PF01868/2026-10-11T175514Z-codex-18acb8.yaml\n\
+    \  event_index: 0\n  llm_assisted: true\n- timestamp: '2026-10-18T02:54:46Z'\n\
+    \  curator: Antigravity\n  action: EDIT\n  outcome: changed\n  summary: Ground\
+    \ causal graph gene and protein nodes in PF01868 with verified UniProtKB accessions\
+    \ (UniProtKB:O26119,\n    UniProtKB:Q8U007, UniProtKB:Q57903)\n  history_record:\
+    \ history/records/PF01868/2026-10-18T025446Z-antigravity-14255b.yaml\n  event_index:\
+    \ 0\n  llm_assisted: true\n- timestamp: '2026-10-25T11:15:00Z'\n  curator: Antigravity\n\
+    \  action: EDIT\n  outcome: changed\n  summary: Ground PF01868 causal-graph protein/gene/complex\
+    \ nodes with UniProtKB:Q8U007\n  history_record: history/records/PF01868/2026-10-25T111500Z-antigravity-700fbb.yaml\n\
+    \  event_index: 0\n  llm_assisted: true\n"
+  summary: Byte-exact projection retained at save for digest verification, not scientific
+    assessment.
+assessments:
+- assessment_id: member-identity
+  area: identity
+  topic: Protein, domain and experimental scope
+  outcome: concern
+  summary: Pfu Q8U007 sequence version1 equals NP_579545.1 and2KI7 entity1,127 aa,PF01868
+    41-123; delta17/24/31 remove only outside-match residues and encode initiating
+    M before retained native sequence. Mth O26119/WP_010875653.1 maps6-88 and Mja
+    Q57903/NP_247439.1 maps6-87. Published MTH11 reverse primer predicts terminal
+    W rather than reference P93; actual clone sequence is unresolved. Tagged1OQK cannot
+    settle tag-free2010 identity. All claims remain scoped to named preparations,
+    not exact independently resequenced batches or isolated domains.
+  target_ids:
+  - PF01868
+  evidence_ids:
+  - identity
+  - primary
+  - kinetic-primary
+  - fidelity-primary
+  - gaps-and-source-conflicts
+- assessment_id: causal-scope
+  area: graph
+  topic: Directed effects and limits
+  outcome: supported
+  summary: All twelve edges are direct experimental preparation/protocol contrasts
+    in seven MECHANISTIC graphs, not twelve independently isolated protein effects.
+    Optimized buffers are in the intervention, the low-Mg rate retains pH correction,
+    NMR and ITC are separate readouts, and two/four-RPP activity comparisons have
+    their own WT baselines. Fidelity uses only cleaved products; unchanged pair kobs
+    and61% four-RPP amplitude remain visible. No protein-alone cleavage, observed
+    RNA-mediated binding rescue or family-wide sufficiency is asserted.
+  target_ids:
+  - PF01868
+  evidence_ids:
+  - primary
+  - native
+  - kinetic-primary
+  - fidelity-primary
+  - gaps-and-source-conflicts
+- assessment_id: remaining-coverage
+  area: completeness
+  topic: Remaining family coverage
+  outcome: concern
+  summary: Unresolved Mth terminal-primer discrepancy, exact assay-batch sequences
+    and Rpp21 residual tag sequence need clarification. Mja deltaU rescue,2009 footprinting/interface
+    variants, model substrates, other archaeal members, L7Ae-containing complexes,
+    eukaryotic RNaseP/MRP and human chromatin contexts remain uncurated. These are
+    evidence/coverage gaps, not negative functional results.
+  target_ids:
+  - PF01868
+  evidence_ids:
+  - primary
+- assessment_id: cycle3-partner-grounding-verification
+  area: representation
+  topic: Cycle 3 causal-graph and protein-node grounding verification
+  outcome: supported
+  summary: 'Cycle 3 Stage 3 (PR #357) grounded the two Rpp29-Rpp21 interaction state
+    nodes (nmr-response and itc-response) to the PF01868 family member Pyrococcus
+    furiosus Rpp29 (UniProtKB:Q8U007; non-PF01868 RNase P subunits Rpp21/Pop5/Rpp30
+    belong to separate Pfam families). Stage 4 frozen-inventory review verified all
+    causal graphs and grounded nodes against primary evidence caches.'
+  target_ids:
+  - PF01868
+  evidence_ids:
+  - stage4-prior-review
+findings:
+- finding_id: additional-contexts
+  issue_key: pf01868-causal-context-coverage
+  category: completeness
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Resolve Rpp29 construct uncertainty and extend member-specific causal coverage
+  description: Obtain sequence evidence or author clarification for the Mth terminal
+    primer before asserting canonical-WT identity. Preserve extra-domain Pfu deletion
+    scope, residual activity and unequal protocol contrasts. Review further archaeal
+    and exact human POP4 experiments with primary methods/figures before adding edges;
+    do not confuse POP4 with PRR29 or treat partially purified plant RNaseP as an
+    individually identified Rpp29 assay.
+  target_ids:
+  - PF01868
+  field_paths:
+  - causal_graphs
+  evidence_ids:
+  - primary
+  - identity
+  - kinetic-primary
+  - fidelity-primary
+  - gaps-and-source-conflicts
+  owner_paths:
+  - repository: CultureBotAI/DUFMech
+    path: curation/families/PF01868.yaml
+    role: Human-owned scientific overlay
+  previous_occurrences:
+  - repository: CultureBotAI/DUFMech
+    review_id: 20261011T175537Z-pf01868-rpp29-binding-processing-and-fidelity-contexts
+    finding_id: additional-contexts
+actions:
+- action_id: extend-contexts
+  description: Obtain sequence evidence or author clarification for the Mth terminal
+    primer before asserting canonical-WT identity. Preserve extra-domain Pfu deletion
+    scope, residual activity and unequal protocol contrasts. Review further archaeal
+    and exact human POP4 experiments with primary methods/figures before adding edges;
+    do not confuse POP4 with PRR29 or treat partially purified plant RNaseP as an
+    individually identified Rpp29 assay.
+  finding_ids:
+  - additional-contexts
+  target_ids:
+  - PF01868
+  ownership_note: Curate overlay and minimal evidence; append actual history, regenerate
+    and retain successor review.
+  acceptance_checks:
+  - Each added edge has member-specific primary evidence and explicit conditions.
+  - Unsupported transfers and conflicting or negative results remain visible.
+  - Native checks pass and a successor report states actual scope.
+limitations:
+- Original2010 Figure7 and supplement TableS1/FiguresS4-S6,2011 Figures4/6/7 and2012
+  Figures1/2 were visually inspected. Delta24 ITC is reported without a displayed
+  thermogram;2011 Figure4 captions conflict with image panel labels. No raw-data refit,
+  experimental replication or independent clone sequencing. Human papers are search/abstract
+  leads only. Rendered-page verification follows separately.
+- Same-agent assessment, not independent expert review or experimental replication.
+- Partial family coverage; status remains IN_PROGRESS. No full-corpus completion,
+  publication or full publication-QC pass is claimed.
+notes:
+- Assessments were authored from inspected primary evidence. Native inspection supplied
+  provenance, not scientific conclusions.
+```

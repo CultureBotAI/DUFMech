@@ -1,0 +1,786 @@
+schema_version: 1.0.0
+review_id: 20261025T132045Z-pf01875-c3s4-record-review
+title: PF01875 Cycle 3 Stage 4 frozen-inventory causal-graph and grounding review
+started_at: '2026-10-25T13:20:44Z'
+finished_at: '2026-10-25T13:20:45Z'
+reviewer:
+  identity: Antigravity
+  kind: agent
+  model: Claude-Opus-4.6
+  independence: self_review
+  independence_basis: Cycle 3 Stage 4 frozen-inventory record review by Antigravity
+    auditing prior curation overlays, primary evidence caches, history events, and
+    current projections at Git revision 0e26e9cdab5214d838db4f53ddefbf83772241fb.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: pass_with_limitations
+native_verdict: NEEDS_FOLLOWUP
+scientific_review: true
+summary: 'Eleven graphs retain sixteen observed effects, six direct purified-preparation
+  readouts and ten indirect cellular effects. Human reference and domain mapping are
+  verified; assay-dependent redox interpretations, construct uncertainty and conditional
+  cell endpoints remain explicit. These are not one conserved enzymatic cycle. Retain
+  IN_PROGRESS. Cycle 3 Stage 3 (PR #357) grounded the MEMO1 iron-binding calorimetric
+  state node iron-binding-response (''WT-like iron-binding calorimetric response'')
+  to Homo sapiens MEMO1 (UniProtKB:Q9Y316). Stage 4 frozen-inventory review verified
+  all causal graphs and grounded nodes against primary evidence caches.'
+repository: CultureBotAI/DUFMech
+kind: record
+source:
+  git_revision: 0e26e9cdab5214d838db4f53ddefbf83772241fb
+  state: working_tree
+  snapshot_id: interpro-pfam-duf-2026-10-10
+  inputs:
+  - path: curation/families/PF01875.yaml
+    sha256: 110630bba038e58746fd48e21c960147f2f165c4510c9467e561c764401aedcb
+    role: context
+  - path: data/families/PF01875.yaml
+    sha256: dd0f80590cdf745e3042a0c93279f93ff6ef79b0d05c2c108409b6485d6401d6
+    role: target
+  - path: data/worklists/interpro-pfam-duf-2026-10-10.json
+    sha256: 17fb625876c9326ed284263a47bcd84e0d7844a31c040dc06cd2260c36f1c383
+    role: context
+  - path: data/worklists/interpro-pfam-duf-2026-10-10.manifest.json
+    sha256: 31c07ffb6a169c851ea0e6e9dd527a10c04028eafeb29187bd62dc2ae848696e
+    role: context
+  - path: data/worklists/interpro-pfam-duf-2026-10-10.tsv
+    sha256: be023c8dd9d8d3864926b5032d6f7e87a884b1a567391696822dbbecc692dae7
+    role: context
+  - path: evidence/PF01875/dolgova-2024-iron.txt
+    sha256: 4ec645f69dfa8a2322b9a4787920cb82e3e839d665c56c611220f417126c0192
+    role: context
+  - path: evidence/PF01875/macdonald-2014-redox.txt
+    sha256: 1e0ff6cdf32f8ae9d417a0f73d708313fcad09190f26417593e1f1eab75ab06a
+    role: context
+  - path: evidence/PF01875/memo-gap-ledger.txt
+    sha256: b4356da2d7598ed31365b68249429c2aa1d6975c5948ceef9e13269760169b00
+    role: context
+  - path: evidence/PF01875/memo-identity.txt
+    sha256: 44304d08dda2226aee231accc6b5d59b657ebdd247d832a27e1905cccff34301
+    role: context
+  - path: evidence/PF01875/zhang-2022-copper.txt
+    sha256: 2783429c7d1a1131f429a8827815a968092026fdaf28751601f097773509900d
+    role: context
+  - path: evidence/PF01875/zhang-2023-cellular.txt
+    sha256: dba865a6921c55734d2fd38f424e5b7e527309e7b0a50a5dfd9b88d8a79ce8ae
+    role: context
+  - path: reviews/structured/20261021T114807Z-pf01875-stage4-record-review/review.yaml
+    sha256: 28f511dff3c1eb65718f0b672148bef2ce70380a9d495e58efc2d1bd761a4fad
+    role: context
+targets:
+- target_id: PF01875
+  path: data/families/PF01875.yaml
+  label: PF01875
+  kind: generated
+  record_class: FamilyRecord
+  owner_paths:
+  - repository: CultureBotAI/DUFMech
+    path: curation/families/PF01875.yaml
+    role: Maintained scientific overlay; create only with authorized curation.
+  - repository: CultureBotAI/DUFMech
+    path: src/dufmech/records.py
+    role: Projection generator; frozen snapshot identity is not hand-edited.
+  semantic_digest:
+    algorithm: dufmech-record-content-v1
+    sha256: c935209e06971158c18aae39e402c11f28842f8806bb822baf4e412375e7ebf5
+    description: Canonical JSON SHA-256 of effective FamilyRecord excluding only curation_status,
+      review_id and curation_events.
+scope:
+  description: Scientific assessment of the retained edges, exact member mapping,
+    primary evidence, context and causal limits.
+  selection: Zhang2022 main Methods/Results and original Figures1/2, supplementary
+    Methods and FigureS1; Zhang2023 main Methods/Results and original Figures1-3;
+    Dolgova2024 relevant Methods/Results and original Figures4/5 plus Figure5 supplement1;
+    MacDonald2014 Methods/Results and original Figure4 in the public author-thesis
+    reprint. Current reference/domain APIs, versioned RefSeq and deposited PDB sequence
+    establish identity scope.
+  coverage: partial
+  population_size: 1
+  reviewed_target_ids:
+  - PF01875
+  exclusions:
+  - target: Remaining family members and uncurated experimental contexts
+    reason: Resolve exact purified constructs, clonal alleles, rescue and siRNA specificity;
+      inspect additional ErbB2/RhoA/cytoskeleton, renal/FGF23, C.elegans and microbial
+      member experiments. The frozen6407 proteins remain in scope. Selected human
+      assays and negative or disputed interpretations do not establish a family-wide
+      reaction or absence of microbial functions.
+checks:
+- check_id: native-projection
+  name: Native projection and overlay validation
+  command: validate_record(record, root); assert projection graphs and discussions
+    match overlay
+  status: passed
+  required: true
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Current projection validates and preserves the authored graph and discussion
+    content exactly.
+  target_ids:
+  - PF01875
+  evidence_ids:
+  - native
+evidence:
+- evidence_id: primary
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC11081632/
+  locator: Relevant protein/ITC/CRISPR/ICP-MS/MDA/cytotoxicity/imaging Methods and
+    original Figures4/5 plus Figure5 supplement1
+  accessed_at: '2026-10-11T18:52:12Z'
+  support: supports
+  snapshot_sha256: 4ec645f69dfa8a2322b9a4787920cb82e3e839d665c56c611220f417126c0192
+  summary: H49A and C244S reduce the glutathione-conditioned iron ITC response with
+    folded-state NMR controls. M67-9 knockout lowers iron in two fractions but increases
+    basal MDA, increases normalized metabolic signal at intermediate RSL3 doses and
+    enhances chelator-conditioned mitochondrial clustering. Separate endpoints do
+    not establish an iron-to-ferroptosis chain.
+- evidence_id: identity
+  kind: database
+  reference: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01875/protein/uniprot/Q9Y316/
+  locator: Accession and domain locations; paired UniProt identity facts
+  accessed_at: '2026-10-11T18:52:12Z'
+  support: supports
+  snapshot_sha256: 44304d08dda2226aee231accc6b5d59b657ebdd247d832a27e1905cccff34301
+  summary: Human Q9Y316 sequence version1 exactly equals NP_057039.1/NM_015955.5,
+    297 aa, PF01875 8-291. H49/H81/H131/D189/H192/C244 are inside this match. Deposited7KQ8
+    entity1 is canonical4-297, not full297 aa. Native numbering is preserved. The2014
+    3C-cleaved,2022 His-affinity and2024 intein-cleaved preparations remain separate;
+    exact assay-batch termini, siRNA details and clonal alleles are not independently
+    verified.
+- evidence_id: copper-protection
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC9477392/
+  locator: Original Figures1/2, supplementary FigureS1 and supplementary Methods pp2-7
+  summary: Memo competes for reduced copper and lowers copper-dependent ascorbate
+    loss and Amplex signal under specified ratios. siRNA reduces24-hour recovered
+    wound area. Model affinity, protein tags, Cu concentration, wavelengths and time
+    labels constrain interpretation; Atox proximity is not directed intracellular
+    flux.
+  accessed_at: '2026-10-11T18:52:12Z'
+  support: supports
+  snapshot_sha256: 2783429c7d1a1131f429a8827815a968092026fdaf28751601f097773509900d
+- evidence_id: cellular-copper
+  kind: primary_source
+  reference: https://research.chalmers.se/publication/536802/file/536802_Fulltext.pdf
+  locator: Main Methods PDFp5 and original Figures1-3 PDFpp3-4
+  summary: At matched350-uM external copper, Memo1 knockdown lowers MTT and increases
+    three distinct probe readouts. Basal knockdown effects prevent a copper-specific
+    interaction claim. ROS-Glo adds6-hour substrate incubation; flow probes do not
+    resolve individual oxidation products.
+  accessed_at: '2026-10-11T18:52:12Z'
+  support: supports
+  snapshot_sha256: dba865a6921c55734d2fd38f424e5b7e527309e7b0a50a5dfd9b88d8a79ce8ae
+- evidence_id: historical-redox
+  kind: primary_source
+  reference: https://edoc.unibas.ch/server/api/core/bitstreams/c0c17b7d-7fb3-449d-9a5c-4beb4c2168b2/content
+  locator: MacDonald2014 reprint in AnnaFrei2015 thesis chapter3.3, printed pp94-95/105-107
+    and original Figure4 printedp119/PDFp122
+  summary: H192A reduces but does not abolish copper-containing luminol signal; SOD
+    lowers WT and mutant responses. Protein amount in the unpreloaded panel remains
+    unresolved. Later protection experiments dispute a universal catalytic interpretation
+    but do not prove that the older preparation was artifactual. Figure4F efficiencies
+    do not support prose implying greater WT catalytic efficiency; Km is not Kd.
+  accessed_at: '2026-10-11T18:52:12Z'
+  support: supports
+  snapshot_sha256: 1e0ff6cdf32f8ae9d417a0f73d708313fcad09190f26417593e1f1eab75ab06a
+- evidence_id: gaps-and-access
+  kind: search
+  reference: evidence/PF01875/memo-gap-ledger.txt
+  locator: Bounded source search, condition conflicts, public-source access recovery
+    and unreviewed contexts
+  search_scope: PF01875, MEMO1, Memo-like, copper redox2014/2022/2023 and iron homeostasis2024;
+    ignored/hidden-inclusive curation,evidence,history/records,reviews/structured,.agents,.claude
+    search before edits on2026-10-11; current reference/domain APIs and versioned
+    sequence/deposited-construct comparisons. Not an exhaustive literature or family
+    search.
+  summary: No earlier target-specific curation was found within searched owners, including
+    ignored files. Preserved limits include construct and allele specificity, distinct
+    preparations, Cu/Fe protocol differences, probe chemistry and additional organism
+    contexts. Access failures were resolved through public copies, not treated as
+    negative functional evidence.
+  accessed_at: '2026-10-11T18:52:12Z'
+  support: supports
+  snapshot_sha256: b4356da2d7598ed31365b68249429c2aa1d6975c5948ceef9e13269760169b00
+- evidence_id: native
+  kind: validation
+  reference: src/dufmech/records.py
+  locator: Current projection validation and overlay equivalence in this retained-review
+    session
+  accessed_at: '2026-10-11T18:52:12Z'
+  support: supports
+  summary: Closed schema, canonical history and applicable graph/evidence checks pass.
+    Curated graphs and discussions match the overlay; scientific validity is assessed
+    separately.
+- evidence_id: stage4-prior-review
+  kind: prior_review
+  reference: reviews/structured/20261021T114807Z-pf01875-stage4-record-review/review.yaml
+  locator: Predecessor structured review 20261021T114807Z-pf01875-stage4-record-review
+  accessed_at: '2026-10-25T13:20:45Z'
+  support: supports
+  snapshot_sha256: 28f511dff3c1eb65718f0b672148bef2ce70380a9d495e58efc2d1bd761a4fad
+  summary: Predecessor review 20261021T114807Z-pf01875-stage4-record-review verified
+    and linked for finding continuity and semantic-digest progression on PF01875.
+- evidence_id: duf-projection-pf01875
+  kind: record_content
+  reference: data/families/PF01875.yaml
+  locator: dufmech-reviewed-projection-v1
+  accessed_at: '2026-10-25T13:20:45Z'
+  support: context_only
+  snapshot_sha256: dd0f80590cdf745e3042a0c93279f93ff6ef79b0d05c2c108409b6485d6401d6
+  quote: "id: Pfam:PF01875\npfam_id: PF01875\nname: Memo-like protein\nshort_name:\
+    \ Memo\nseed_status: EX_DUF\ncharacterization_status: UNSCORED\ncuration_status:\
+    \ IN_PROGRESS\nsource_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01875\n\
+    counters:\n  proteins: 6407\n  matches: 6527\n  proteomes: 5074\n  taxa: 12387\n\
+    \  structures: 5\n  alphafold_models: 5333\n  domain_architectures: 85\nprovenance:\n\
+    \  snapshot_id: interpro-pfam-duf-2026-10-10\n  path: data/worklists/interpro-pfam-duf-2026-10-10.json\n\
+    \  sha256: 17fb625876c9326ed284263a47bcd84e0d7844a31c040dc06cd2260c36f1c383\n\
+    \  generated_at: '2026-10-10T07:44:21.614711Z'\n  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/\n\
+    interpro_id: InterPro:IPR002737\ndescription: This family contains members from\
+    \ all branches of life. The molecular function of this protein\n  is unknown,\
+    \ but Memo (mediator of ErbB2-driven cell motility) a human protein is included\
+    \ in this family\n  [[cite:PUB00044702]]. It has been suggested that Memo controls\
+    \ cell migration by relaying extracellular\n  chemotactic signals to the microtubule\
+    \ cytoskeleton [[cite:PUB00044702]].\ncuration_history: history/records/PF01875\n\
+    discussions:\n- discussion_id: memo-metal-redox-interpretation\n  prompt: Resolve\
+    \ preparation and assay differences before assigning a conserved Memo redox reaction.\n\
+    \  kind: CURATION_TODO\n  status: OPEN\n  rationale: Older luminol/Cu-reduction\
+    \ interpretation differs from later copper protection and glutathione-conditioned\n\
+    \    iron binding. Binding,reporter effects and cellular phenotypes are separate\
+    \ observations,not one proven\n    catalytic cycle.\n  evidence:\n  - reference:\
+    \ PMID:24917593\n    supports: PARTIAL\n    evidence_source: primary_author_reprint_methods_and_original_figure\n\
+    \    explanation: Figure4D supports H192A-dependent signal reduction,not an unqualified\
+    \ enzyme mechanism.\n      Figure4F efficiency values do not support prose implying\
+    \ a superior WT kcat/Km.\n  - reference: PMID:36067318\n    supports: PARTIAL\n\
+    \    evidence_source: primary_main_and_supplementary_methods_and_figures\n   \
+    \ explanation: Low-ratio copper assays support protection; proposed free-Cu/precipitation\
+    \ explanations\n      do not directly diagnose the older preparation.\n  notes:\
+    \ Compare matched tag-cleaved proteins,folding,metal occupancy,Cu ratios,redox\
+    \ buffers and orthogonal\n    products. Resolve BCA10/20-uM and Amplex wavelength\
+    \ discrepancies. Atox1 proximity is not directed\n    intracellular metal flux;\
+    \ model-based Cu affinities and GSH-conditioned Fe affinities are not interchangeable.\n\
+    \  posed_by: Codex\n  posed_date: '2026-10-11'\n- discussion_id: memo-genotype-and-family-coverage\n\
+    \  prompt: Verify constructs and perturbation specificity and extend beyond selected\
+    \ human assays.\n  kind: CURATION_TODO\n  status: OPEN\n  rationale: The human\
+    \ reference maps8-291 while deposited7KQ8 is4-297. Whole-cell knockdown/knockout\n\
+    \    does not establish domain sufficiency; exact alleles,rescue and additional\
+    \ family members remain open.\n  evidence:\n  - reference: PMID:38640016\n   \
+    \ supports: PARTIAL\n    evidence_source: primary_methods_and_original_figures\n\
+    \    explanation: Basal MDA increases despite lower iron and higher RSL3 metabolic\
+    \ viability. These separate\n      assays do not demonstrate a linear ferroptosis\
+    \ mechanism.\n  notes: See evidence/PF01875/memo-gap-ledger.txt. Resolve the2022\
+    \ wound time labels and2023 siRNA details;review\n    original ErbB2/cytoskeleton,renal/FGF23,C.elegans\
+    \ and microbial member studies with exact mappings.\n    Preserve IN_PROGRESS\
+    \ and partial same-agent review for the6407-protein family.\n  posed_by: Codex\n\
+    \  posed_date: '2026-10-11'\ncausal_graphs:\n- graph_id: human-copper-bca-competition\n\
+    \  title: Purified Memo1 competes for reduced copper in a BCA assay\n  scope:\
+    \ Zhang2022 Figure1C/D, human Memo1 added to preformed Cu(I)-BCA2 under anaerobic\
+    \ conditions.\n  context: N2 glovebox stocks; CuCl stock stabilized with ascorbate;\
+    \ BCA to Cu ratio 2.5. Figure1 says\n    10 uM Cu; supplementary Methods says\
+    \ 20 uM Cu and 50 uM BCA for Memo1. This discrepancy remains unresolved.\n  family_mapping:\
+    \ Human Q9Y316 sequence version1 equals NP_057039.1/NM_015955.5, 297 aa, PF01875\
+    \ 8-291.\n    pET28a/BL21(DE3), His-affinity and SEC preparation, Western identity\
+    \ check; exact insert and tag cleavage\n    are not independently verified. Whole\
+    \ preparation, not isolated domain.\n  scope_status: MECHANISTIC\n  taxon: NCBITaxon:9606\n\
+    \  limitations: Decreased chromophore supports competition for Cu(I), not catalysis.\
+    \ Two equal-affinity\n    sites and 4e-15 M are model assumptions/estimate; unequal\
+    \ sites remain possible. Do not compare directly\n    with glutathione-containing\
+    \ 2024 ITC affinities.\n  nodes:\n  - node_id: add-memo1\n    label: Increase\
+    \ purified Memo1 in the Cu(I)-BCA2 mixture\n    node_type: PERTURBATION\n    grounding:\n\
+    \    - UniProtKB:Q9Y316\n  - node_id: cu-bca-chromophore\n    label: Cu(I)-BCA2\
+    \ absorbance at 562 nm\n    node_type: STATE\n  edges:\n  - edge_id: memo1-decreases-cu-bca-signal\n\
+    \    subject: add-memo1\n    predicate: decreases\n    object: cu-bca-chromophore\n\
+    \    mechanism: Increasing the protein concentration lowers the preformed copper-chelator\
+    \ chromophore.\n      Reverse competition and retained ICP-MS observations support\
+    \ metal binding; they do not identify\n      an enzymatic substrate or a physiological\
+    \ transfer direction.\n    directness: DIRECT\n    support: OBSERVED\n    evidence_kind:\
+    \ EXPERIMENTAL\n    evidence:\n    - reference: PMID:36067318\n      source_url:\
+    \ https://pmc.ncbi.nlm.nih.gov/articles/PMC9477392/\n      snippet: BCA competition\
+    \ assay\n      explanation: Original Figure1C/D and supplementary Methods pp4-5;\
+    \ retain the 10/20-uM discrepancy\n        and model-dependent stoichiometry rather\
+    \ than silently choosing a concentration or microscopic\n        affinity.\n \
+    \     cache_path: evidence/PF01875/zhang-2022-copper.txt\n      cache_sha256:\
+    \ 2783429c7d1a1131f429a8827815a968092026fdaf28751601f097773509900d\n- graph_id:\
+    \ human-copper-ascorbate-protection\n  title: Memo1 reduces copper-dependent ascorbate\
+    \ consumption\n  scope: Zhang2022 Figure2A, purified Memo1 versus no protein in\
+    \ matched copper/ascorbate reactions.\n  context: 8 uM Memo1, 35 uM ascorbate,\
+    \ 4 or 8 uM Cu(II), 25 mM HEPES pH7.4, 200 mM NaCl, air, room temperature;\n \
+    \   A265 every 2 min through 20 min.\n  family_mapping: Human pET28a Memo1 preparation\
+    \ assigned to Q9Y316/NP_057039.1, PF01875 8-291. His-affinity\n    purified; no\
+    \ tag removal is described in inspected Methods. Not the 2014 3C-cleaved or 2024\
+    \ intein-cleaved\n    preparation.\n  scope_status: MECHANISTIC\n  taxon: NCBITaxon:9606\n\
+    \  limitations: This is the supplied copper/reductant protocol, not universal\
+    \ antioxidant activity. Higher\n    Cu to protein ratios precipitate. Binding/chelation\
+    \ explains the result but no atomistic redox trajectory\n    is directly observed.\n\
+    \  nodes:\n  - node_id: memo1-with-copper-and-ascorbate\n    label: Add Memo1\
+    \ to copper and ascorbate in air\n    node_type: PERTURBATION\n    grounding:\n\
+    \    - UniProtKB:Q9Y316\n  - node_id: ascorbate-consumption\n    label: Ascorbate\
+    \ consumption inferred from A265 loss\n    node_type: PROCESS\n  edges:\n  - edge_id:\
+    \ memo1-decreases-ascorbate-consumption\n    subject: memo1-with-copper-and-ascorbate\n\
+    \    predicate: decreases\n    object: ascorbate-consumption\n    mechanism: Protein-containing\
+    \ reactions retain substantially more A265 signal than copper-containing\n   \
+    \   no-protein reactions. The measured protection applies to these component ratios\
+    \ and is not proof\n      that every reported Memo redox assay is artifactual.\n\
+    \    directness: DIRECT\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n\
+    \    evidence:\n    - reference: PMID:36067318\n      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC9477392/\n\
+    \      snippet: Ascorbate oxidation assay\n      explanation: Original Figure2A\
+    \ and supplement pp5-6; no-copper/protein controls and distinct 35-uM\n      \
+    \  ascorbate concentration are retained.\n      cache_path: evidence/PF01875/zhang-2022-copper.txt\n\
+    \      cache_sha256: 2783429c7d1a1131f429a8827815a968092026fdaf28751601f097773509900d\n\
+    - graph_id: human-copper-amplex-protection\n  title: Memo1 lowers the copper-dependent\
+    \ Amplex Red readout\n  scope: Zhang2022 Figure2B, matched purified-protein versus\
+    \ no-protein reactions.\n  context: 8 uM Memo1, 50 uM ascorbate, 50 uM Amplex\
+    \ Red, 3.55 U/ml HRP, 4 or 8 uM Cu(II), 100 ul; fluorescence\n    followed through\
+    \ 60 min. Main legend gives 571/585 nm; supplement gives 544/590 nm.\n  family_mapping:\
+    \ Human pET28a Memo1 preparation, Q9Y316/NP_057039.1 reference, PF01875 8-291.\
+    \ Exact tag\n    and batch sequence remain unverified; whole preparation, not\
+    \ domain-only chemistry.\n  scope_status: MECHANISTIC\n  taxon: NCBITaxon:9606\n\
+    \  limitations: Wavelength disagreement remains open. The endpoint is a coupled\
+    \ HRP/probe signal; no independent\n    interference control was verified. Low\
+    \ signal is near protein-only background, not literally zero\n    fluorescence\
+    \ or proof of zero ROS of every kind.\n  nodes:\n  - node_id: memo1-in-coupled-reaction\n\
+    \    label: Add Memo1 to the copper/ascorbate/HRP/Amplex mixture\n    node_type:\
+    \ PERTURBATION\n    grounding:\n    - UniProtKB:Q9Y316\n  - node_id: resorufin-signal\n\
+    \    label: H2O2-linked resorufin fluorescence\n    node_type: STATE\n  edges:\n\
+    \  - edge_id: memo1-decreases-resorufin-signal\n    subject: memo1-in-coupled-reaction\n\
+    \    predicate: decreases\n    object: resorufin-signal\n    mechanism: Adding\
+    \ Memo1 lowers the reporter signal relative to copper/ascorbate without protein.\
+    \ The\n      independent ascorbate experiment supports protection against redox\
+    \ cycling, but this edge preserves\n      the actual coupled-assay readout.\n\
+    \    directness: DIRECT\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n\
+    \    evidence:\n    - reference: PMID:36067318\n      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC9477392/\n\
+    \      snippet: Amplex\n      explanation: Original Figure2B and supplementary\
+    \ p6; background signal, reagent conjunction and\n        wavelength inconsistency\
+    \ constrain the interpretation.\n      cache_path: evidence/PF01875/zhang-2022-copper.txt\n\
+    \      cache_sha256: 2783429c7d1a1131f429a8827815a968092026fdaf28751601f097773509900d\n\
+    - graph_id: human-h192a-historical-luminol\n  title: H192A lowers the historical\
+    \ copper-containing luminol response\n  scope: MacDonald2014 Figure4D, WT versus\
+    \ H192A recombinant human Memo, author thesis reprint printed\n    p119/PDFp122.\n\
+    \  context: 50 uM CuCl2, luminol detection, matched no-Cu and 4-U SOD controls;\
+    \ four independent experiments.\n    Protein amount for this unpreloaded panel\
+    \ is not independently resolved; the separate preloading recipe\n    is not silently\
+    \ substituted.\n  family_mapping: Human cDNA in pOPINF/BL21(DE3), Ni-NTA, 3C cleavage\
+    \ and SEC. Q9Y316/NP_057039.1 reference\n    maps PF01875 8-291 and H192 inside;\
+    \ exact batch sequence and residual tag are not independently verified.\n  scope_status:\
+    \ MECHANISTIC\n  taxon: NCBITaxon:9606\n  limitations: H192A retains substantial\
+    \ signal. This is an observed preparation-dependent reporter effect,\n    not\
+    \ unqualified intrinsic Cu(II)-reductase activity. The older catalytic interpretation\
+    \ is disputed\n    by later protection results under different conditions. No\
+    \ matched 2014 folding/metal-occupancy control\n    was verified.\n  nodes:\n\
+    \  - node_id: h192a\n    label: Replace WT Memo with H192A in the copper-containing\
+    \ assay\n    node_type: PERTURBATION\n    grounding:\n    - UniProtKB:Q9Y316\n\
+    \  - node_id: luminol-response\n    label: Blank-corrected luminol response\n\
+    \    node_type: STATE\n  edges:\n  - edge_id: h192a-decreases-luminol-response\n\
+    \    subject: h192a\n    predicate: decreases\n    object: luminol-response\n\
+    \    mechanism: The H192A preparation produces less luminol signal than WT in\
+    \ the Cu-containing comparison;\n      SOD decreases both. Reporter dependence\
+    \ is retained without deciding that the protein alone catalyzes\n      the proposed\
+    \ redox cycle.\n    directness: DIRECT\n    support: OBSERVED\n    evidence_kind:\
+    \ EXPERIMENTAL\n    evidence:\n    - reference: PMID:24917593\n      source_url:\
+    \ https://edoc.unibas.ch/server/api/core/bitstreams/c0c17b7d-7fb3-449d-9a5c-4beb4c2168b2/content\n\
+    \      snippet: Superoxide detection assays\n      explanation: Reprinted Figure4D\
+    \ and printed pp105-107 Methods; preserve residual activity, uncertain\n     \
+    \   panel protein dose and alternative explanations from later work. Kinetic Km\
+    \ is not an equilibrium\n        binding Kd.\n      cache_path: evidence/PF01875/macdonald-2014-redox.txt\n\
+    \      cache_sha256: 1e0ff6cdf32f8ae9d417a0f73d708313fcad09190f26417593e1f1eab75ab06a\n\
+    - graph_id: human-knockdown-wound-closure\n  title: Memo1 knockdown reduces 24-hour\
+    \ wound closure\n  scope: Zhang2022 Supplementary FigureS1, MDA-MB-231 siMemo1\
+    \ versus AllStars siCtrl.\n  context: DMEM with 10% heat-inactivated FBS, 37 C/5%\
+    \ CO2; 1e5 cells/24-well, siRNA 24 h after seeding,\n    scratch 24 h later; ImageJ\
+    \ recovered area at 24 h after scratching. Four-siRNA Qiagen pool, RNAiMAX,\n\
+    \    Western/actin control.\n  family_mapping: Endogenous human MEMO1 locus, Q9Y316/NP_057039.1\
+    \ reference, PF01875 8-291. Whole-protein\n    depletion, not isolated-domain\
+    \ perturbation; exact siRNA sequence/dose and batch genotype are not\n    verified.\n\
+    \  scope_status: PHENOTYPIC\n  taxon: NCBITaxon:9606\n  limitations: Wound closure\
+    \ can include proliferation as well as migration. No proliferation block or\n\
+    \    rescue was verified. Methods lists 8/12/24 h, caption 8/24 h and plot 8/24/48\
+    \ h; only the common 24-hour\n    comparison is retained.\n  nodes:\n  - node_id:\
+    \ simemo1\n    label: Apply the Memo1 siRNA pool\n    node_type: PERTURBATION\n\
+    \    grounding:\n    - UniProtKB:Q9Y316\n  - node_id: wound-closure\n    label:\
+    \ Recovered wound area at 24 hours\n    node_type: PHENOTYPE\n  edges:\n  - edge_id:\
+    \ knockdown-decreases-wound-closure\n    subject: simemo1\n    predicate: decreases\n\
+    \    object: wound-closure\n    mechanism: Knockdown cultures recover less wound\
+    \ area than negative-control cultures at the shared\n      24-hour time point.\
+    \ This does not independently measure migration speed or resolve a cytoskeletal\n\
+    \      pathway.\n    directness: INDIRECT\n    support: OBSERVED\n    evidence_kind:\
+    \ EXPERIMENTAL\n    evidence:\n    - reference: PMID:36067318\n      source_url:\
+    \ https://pmc.ncbi.nlm.nih.gov/articles/PMC9477392/\n      snippet: Wound healing\
+    \ assay\n      explanation: Original supplementary FigureS1 and Methods pp6-7;\
+    \ ten micrographs are not silently\n        treated as ten independent biological\
+    \ experiments.\n      cache_path: evidence/PF01875/zhang-2022-copper.txt\n   \
+    \   cache_sha256: 2783429c7d1a1131f429a8827815a968092026fdaf28751601f097773509900d\n\
+    - graph_id: human-copper-knockdown-mtt\n  title: Memo1 knockdown lowers MTT signal\
+    \ during copper exposure\n  scope: Zhang2023 Figure1A, MDA-MB-231 siMemo1 versus\
+    \ siCtrl at matched 350 uM external CuCl2.\n  context: Four-siRNA Qiagen pool/RNAiMAX,\
+    \ AllStars control, Western-confirmed 70-80% knockdown; 1e4 cells/well\n    seeded\
+    \ 24 h, CuCl2 exposure 18 h, MTT 4 h in serum-free medium, DMSO and A570.\n  family_mapping:\
+    \ Human endogenous MEMO1, Q9Y316/NP_057039.1 reference and PF01875 8-291. Not\
+    \ complete\n    knockout or an isolated-domain assay; exact siRNA sequences/dose\
+    \ and interval before assay are not\n    specified in inspected Methods.\n  scope_status:\
+    \ PHENOTYPIC\n  taxon: NCBITaxon:9606\n  limitations: MTT measures metabolic viability,\
+    \ not direct cell-death counts. Knockdown also lowers signal\n    without added\
+    \ Cu; a Cu-specific statistical interaction is not established. Two biological\
+    \ repeats\n    and four technical replicates per condition; no rescue verified.\n\
+    \  nodes:\n  - node_id: simemo1-with-copper\n    label: Knock down Memo1 during\
+    \ 350-uM CuCl2 exposure\n    node_type: PERTURBATION\n    grounding:\n    - UniProtKB:Q9Y316\n\
+    \  - node_id: mtt-signal\n    label: MTT absorbance at 570 nm\n    node_type:\
+    \ PHENOTYPE\n  edges:\n  - edge_id: knockdown-decreases-mtt-signal\n    subject:\
+    \ simemo1-with-copper\n    predicate: decreases\n    object: mtt-signal\n    mechanism:\
+    \ At matched external copper concentration the knockdown has lower MTT signal\
+    \ than siCtrl.\n      The broader titration includes a basal knockdown effect\
+    \ and does not isolate copper-specific death\n      or an intracellular chelation\
+    \ mechanism.\n    directness: INDIRECT\n    support: OBSERVED\n    evidence_kind:\
+    \ EXPERIMENTAL\n    evidence:\n    - reference: PMID:37487298\n      source_url:\
+    \ https://research.chalmers.se/publication/536802/file/536802_Fulltext.pdf\n \
+    \     snippet: Cell viability analysis\n      explanation: Original Figure1A and\
+    \ main Methods, PDFpp3/5; preserve the metabolic endpoint and matched350-uM\n\
+    \        comparison rather than equating lower signal with measured death rate.\n\
+    \      cache_path: evidence/PF01875/zhang-2023-cellular.txt\n      cache_sha256:\
+    \ dba865a6921c55734d2fd38f424e5b7e527309e7b0a50a5dfd9b88d8a79ce8ae\n- graph_id:\
+    \ human-copper-knockdown-probe-responses\n  title: Memo1 knockdown increases three\
+    \ copper-conditioned probe responses\n  scope: Zhang2023 Figures2/3, MDA-MB-231\
+    \ siMemo1 versus siCtrl, 350 uM external CuCl2 for 18 h.\n  context: Same pooled-siRNA\
+    \ protocol and 70-80% Western reduction. Separate ROS-Glo, CellROX Green and\n\
+    \    MitoSOX Red assays, two biological repeats with four technical replicates\
+    \ per condition. ROS-Glo substrate\n    incubates another 6 h, then detection\
+    \ reagent 20 min.\n  family_mapping: Endogenous human MEMO1, Q9Y316/NP_057039.1\
+    \ reference, PF01875 8-291. Whole-protein knockdown\n    with unresolved individual\
+    \ siRNA specificity, not domain-specific chemistry.\n  scope_status: PHENOTYPIC\n\
+    \  taxon: NCBITaxon:9606\n  limitations: Probe signals are not product-resolved\
+    \ ROS chemistry or molecular production rates. At\n    zero added Cu, ROS-Glo\
+    \ is unchanged and MitoSOX differs in only one repeat; CellROX differs in both.\n\
+    \    No direct intracellular Cu flux, chelation or Atox1 epistasis is demonstrated.\n\
+    \  nodes:\n  - node_id: simemo1-with-copper\n    label: Knock down Memo1 during\
+    \ 350-uM CuCl2 exposure\n    node_type: PERTURBATION\n    grounding:\n    - UniProtKB:Q9Y316\n\
+    \  - node_id: ros-glo-signal\n    label: ROS-Glo H2O2-linked luminescence\n  \
+    \  node_type: STATE\n  - node_id: cellrox-signal\n    label: CellROX Green flow\
+    \ fluorescence\n    node_type: STATE\n  - node_id: mitosox-signal\n    label:\
+    \ MitoSOX Red flow fluorescence\n    node_type: STATE\n  edges:\n  - edge_id:\
+    \ knockdown-increases-ros-glo\n    subject: simemo1-with-copper\n    predicate:\
+    \ increases\n    object: ros-glo-signal\n    mechanism: Knockdown increases the\
+    \ peroxide-linked luminescence in both biological repeats under high\n      external\
+    \ copper. The substrate-incubation period prevents treating this as an instantaneous\
+    \ 18-hour\n      peroxide concentration.\n    directness: INDIRECT\n    support:\
+    \ OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference: PMID:37487298\n\
+    \      source_url: https://research.chalmers.se/publication/536802/file/536802_Fulltext.pdf\n\
+    \      snippet: ROS measurements\n      explanation: Original Figure2, PDFp3,\
+    \ and ROS-Glo Methods p5; basal no-Cu comparison is not significant\n        and\
+    \ is not generalized into this edge.\n      cache_path: evidence/PF01875/zhang-2023-cellular.txt\n\
+    \      cache_sha256: dba865a6921c55734d2fd38f424e5b7e527309e7b0a50a5dfd9b88d8a79ce8ae\n\
+    \  - edge_id: knockdown-increases-cellrox\n    subject: simemo1-with-copper\n\
+    \    predicate: increases\n    object: cellrox-signal\n    mechanism: CellROX\
+    \ Green fluorescence increases with Memo1 knockdown at the matched copper exposure\n\
+    \      in both repeats. The result is a bulk cellular probe readout, not the localized\
+    \ protrusion signal\n      examined in older work.\n    directness: INDIRECT\n\
+    \    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n    -\
+    \ reference: PMID:37487298\n      source_url: https://research.chalmers.se/publication/536802/file/536802_Fulltext.pdf\n\
+    \      snippet: ROS measurements\n      explanation: Original Figure3A-C and Methods;\
+    \ 5 uM CellROX for30 min, approximately1e4 cells per\n        flow sample. Probe\
+    \ specificity and localization remain limits.\n      cache_path: evidence/PF01875/zhang-2023-cellular.txt\n\
+    \      cache_sha256: dba865a6921c55734d2fd38f424e5b7e527309e7b0a50a5dfd9b88d8a79ce8ae\n\
+    \  - edge_id: knockdown-increases-mitosox\n    subject: simemo1-with-copper\n\
+    \    predicate: increases\n    object: mitosox-signal\n    mechanism: MitoSOX\
+    \ Red fluorescence increases under the high-copper knockdown condition in both\
+    \ repeats.\n      This does not identify the oxidized probe product or directly\
+    \ quantify mitochondrial superoxide\n      production rate.\n    directness: INDIRECT\n\
+    \    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n    -\
+    \ reference: PMID:37487298\n      source_url: https://research.chalmers.se/publication/536802/file/536802_Fulltext.pdf\n\
+    \      snippet: ROS measurements\n      explanation: Original Figure3D-F and Methods;\
+    \ 5 uM probe for10 min, approximately6000 cells per\n        sample. Basal behavior\
+    \ differs between repeats and is not asserted as a uniform effect.\n      cache_path:\
+    \ evidence/PF01875/zhang-2023-cellular.txt\n      cache_sha256: dba865a6921c55734d2fd38f424e5b7e527309e7b0a50a5dfd9b88d8a79ce8ae\n\
+    - graph_id: human-iron-binding-substitutions\n  title: H49A and C244S reduce the\
+    \ iron-binding calorimetric response\n  scope: Dolgova2024 Figure5A, independently\
+    \ purified WT and mutant human MEMO1 preparations.\n  context: 25 C ITC, 25 uM\
+    \ protein, 0.5 mM FeSO4 titrant, 50 mM HEPES pH7.4, 150 mM NaCl, 9.5 mM GSH/0.5\n\
+    \    mM GSSG under argon;1.5-2.5 ul injections300 s apart; dilution-heat subtraction.\n\
+    \  family_mapping: Q9Y316/NP_057039.1, PF01875 8-291. Deposited 7KQ8 entity1 is\
+    \ exactly canonical4-297,\n    not full297 aa. pTYB12 intein-cleaved preparation;\
+    \ H49/C244 use native reference numbering and lie\n    inside the Pfam match.\
+    \ Assay-batch N termini are not independently sequenced.\n  scope_status: MECHANISTIC\n\
+    \  taxon: NCBITaxon:9606\n  limitations: NMR supports folded mutants but not identical\
+    \ local geometry. Loss of detectable ITC binding\n    response does not establish\
+    \ infinite Kd or loss of a known enzymatic reaction. WT apparent Kd5.0+/-2.6\n\
+    \    uM is conditional on glutathione; H192A/D189N retain binding.\n  nodes:\n\
+    \  - node_id: h49a\n    label: Substitute H49A in the purified protein\n    node_type:\
+    \ PERTURBATION\n    grounding:\n    - UniProtKB:Q9Y316\n  - node_id: c244s\n \
+    \   label: Substitute C244S in the purified protein\n    node_type: PERTURBATION\n\
+    \    grounding:\n    - UniProtKB:Q9Y316\n  - node_id: iron-binding-response\n\
+    \    label: WT-like iron-binding calorimetric response\n    node_type: STATE\n\
+    \    grounding:\n    - UniProtKB:Q9Y316\n  edges:\n  - edge_id: h49a-decreases-iron-binding-response\n\
+    \    subject: h49a\n    predicate: decreases\n    object: iron-binding-response\n\
+    \    mechanism: H49A lacks the WT-like saturating binding response in the glutathione-containing\
+    \ iron titration.\n      Structural coordination and folded-state NMR support\
+    \ involvement of this residue without proving\n      catalytic necessity.\n  \
+    \  directness: DIRECT\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n\
+    \    evidence:\n    - reference: PMID:38640016\n      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC11081632/\n\
+    \      snippet: Isothermal titration calorimetry\n      explanation: Original\
+    \ Figure5A and Figure5 supplement1, with ITC and purification Methods; NMR is\n\
+    \        from the2024 preparation,not retrospective validation of2014 protein.\n\
+    \      cache_path: evidence/PF01875/dolgova-2024-iron.txt\n      cache_sha256:\
+    \ 4ec645f69dfa8a2322b9a4787920cb82e3e839d665c56c611220f417126c0192\n  - edge_id:\
+    \ c244s-decreases-iron-binding-response\n    subject: c244s\n    predicate: decreases\n\
+    \    object: iron-binding-response\n    mechanism: C244S likewise lacks the WT-like\
+    \ calorimetric response. The substitution effect supports\n      iron-site involvement,not\
+    \ an established oxygenase substrate or molecular turnover step.\n    directness:\
+    \ DIRECT\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n\
+    \    - reference: PMID:38640016\n      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC11081632/\n\
+    \      snippet: Isothermal titration calorimetry\n      explanation: Original\
+    \ Figure5A and folded-state Figure5 supplement1; preserve the glutathione competition\n\
+    \        context and residual response limits rather than assert an unmeasured\
+    \ affinity.\n      cache_path: evidence/PF01875/dolgova-2024-iron.txt\n      cache_sha256:\
+    \ 4ec645f69dfa8a2322b9a4787920cb82e3e839d665c56c611220f417126c0192\n- graph_id:\
+    \ human-knockout-basal-iron-and-mda\n  title: MEMO1 knockout changes basal iron\
+    \ fractions and lipid-oxidation product\n  scope: Dolgova2024 Figure4A/B/F, MDA-MB-231\
+    \ parental versus M67-9 MEMO1 knockout in basal culture conditions.\n  context:\
+    \ CRISPR crRNAs target exons4-6, limiting dilution and Western validation; DMEM10%FBS.\
+    \ ICP-MS\n    fractions normalized by protein; MDA kit in separate80%-confluent60-mm\
+    \ cultures. M67-2 knockdown is\n    not pooled with knockout.\n  family_mapping:\
+    \ Endogenous human MEMO1 locus, Q9Y316/NP_057039.1 reference, PF01875 8-291. Whole-gene\n\
+    \    perturbation, not domain-specific chemistry; exact clonal alleles and complementation\
+    \ are not independently\n    verified.\n  scope_status: PHENOTYPIC\n  taxon: NCBITaxon:9606\n\
+    \  limitations: Six biological replicates are specified for ICP-MS. The mitochondrial\
+    \ fraction is crude;\n    reduced iron is not measured transport flux. Basal MDA\
+    \ increases despite lower iron and greater RSL3\n    tolerance,so no monotonic\
+    \ iron-to-lipid-oxidation-to-death chain is inferred.\n  nodes:\n  - node_id:\
+    \ memo1-knockout\n    label: M67-9 MEMO1 knockout instead of parental MDA-MB-231\n\
+    \    node_type: PERTURBATION\n    grounding:\n    - UniProtKB:Q9Y316\n  - node_id:\
+    \ cytosolic-iron\n    label: Iron per protein in the cytosolic fraction\n    node_type:\
+    \ STATE\n  - node_id: mitochondrial-iron\n    label: Iron per protein in the crude\
+    \ mitochondrial fraction\n    node_type: STATE\n  - node_id: basal-mda\n    label:\
+    \ Basal malondialdehyde per protein\n    node_type: STATE\n  edges:\n  - edge_id:\
+    \ knockout-decreases-cytosolic-iron\n    subject: memo1-knockout\n    predicate:\
+    \ decreases\n    object: cytosolic-iron\n    mechanism: M67-9 contains less measured\
+    \ iron per protein in the cytosolic fraction than the parental\n      line. The\
+    \ comparison does not identify import,export,storage or proliferation as the direct\
+    \ intermediate.\n    directness: INDIRECT\n    support: OBSERVED\n    evidence_kind:\
+    \ EXPERIMENTAL\n    evidence:\n    - reference: PMID:38640016\n      source_url:\
+    \ https://pmc.ncbi.nlm.nih.gov/articles/PMC11081632/\n      snippet: ICP-MS measurements\n\
+    \      explanation: Original Figure4A and fractionation/ICP-MS Methods; the variable\
+    \ M67-2 knockdown result\n        is not treated as another significant knockout\
+    \ measurement.\n      cache_path: evidence/PF01875/dolgova-2024-iron.txt\n   \
+    \   cache_sha256: 4ec645f69dfa8a2322b9a4787920cb82e3e839d665c56c611220f417126c0192\n\
+    \  - edge_id: knockout-decreases-mitochondrial-iron\n    subject: memo1-knockout\n\
+    \    predicate: decreases\n    object: mitochondrial-iron\n    mechanism: The\
+    \ crude mitochondrial fraction also has less iron per protein in M67-9. This is\
+    \ a compartment-enriched\n      measurement,not purified-mitochondrial iron transport\
+    \ or an observed mitoferrin reaction.\n    directness: INDIRECT\n    support:\
+    \ OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference: PMID:38640016\n\
+    \      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC11081632/\n      snippet:\
+    \ ICP-MS measurements\n      explanation: Original Figure4B and differential-centrifugation\
+    \ Methods; retain crude-fraction qualification\n        and absence of flux measurement.\n\
+    \      cache_path: evidence/PF01875/dolgova-2024-iron.txt\n      cache_sha256:\
+    \ 4ec645f69dfa8a2322b9a4787920cb82e3e839d665c56c611220f417126c0192\n  - edge_id:\
+    \ knockout-increases-basal-mda\n    subject: memo1-knockout\n    predicate: increases\n\
+    \    object: basal-mda\n    mechanism: Basal MDA per protein is higher in knockout\
+    \ than parental breast cancer cells. This endpoint\n      must not be inverted\
+    \ to fit a proposed lower-iron/lower-oxidation explanation of drug tolerance.\n\
+    \    directness: INDIRECT\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n\
+    \    evidence:\n    - reference: PMID:38640016\n      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC11081632/\n\
+    \      snippet: MDA assay\n      explanation: Original Figure4F and MDA Methods;\
+    \ M67-2 knockdown is stronger than M67-9,while melanoma\n        effects differ.\
+    \ This is a basal product measurement,not oxidation measured during RSL3 exposure.\n\
+    \      cache_path: evidence/PF01875/dolgova-2024-iron.txt\n      cache_sha256:\
+    \ 4ec645f69dfa8a2322b9a4787920cb82e3e839d665c56c611220f417126c0192\n- graph_id:\
+    \ human-knockout-rsl3-response\n  title: MEMO1 knockout increases the normalized\
+    \ metabolic signal during RSL3 exposure\n  scope: Dolgova2024 Figure4E, MDA-MB-231\
+    \ parental versus M67-9, intermediate RSL3 doses in the plotted\n    response\
+    \ range.\n  context: 1000 cells/well, RSL3 added next day for48 h, then88 uM resazurin\
+    \ overnight; excitation540/emission590\n    nm. Each line's dose response is normalized;\
+    \ high-dose convergence is retained.\n  family_mapping: Human MEMO1 whole-gene\
+    \ CRISPR clone M67-9, Q9Y316/NP_057039.1 reference, PF01875 8-291.\n    No rescue,\
+    \ exact allele sequence or domain-only perturbation verified.\n  scope_status:\
+    \ PHENOTYPIC\n  taxon: NCBITaxon:9606\n  limitations: This reports normalized\
+    \ metabolic viability,not a direct death rate or an independently\n    isolated\
+    \ ferroptosis step. It does not hold at every dose; A-375 curves are a different\
+    \ context. Lower\n    iron and higher basal MDA were measured separately.\n  nodes:\n\
+    \  - node_id: knockout-with-rsl3\n    label: Use M67-9 knockout cells during matched\
+    \ RSL3 exposure\n    node_type: PERTURBATION\n    grounding:\n    - UniProtKB:Q9Y316\n\
+    \  - node_id: normalized-resazurin\n    label: Normalized resazurin fluorescence\n\
+    \    node_type: PHENOTYPE\n  edges:\n  - edge_id: knockout-increases-rsl3-resazurin\n\
+    \    subject: knockout-with-rsl3\n    predicate: increases\n    object: normalized-resazurin\n\
+    \    mechanism: Knockout cultures retain a higher normalized metabolic signal\
+    \ across intermediate drug\n      doses than parental cells. No serial iron-to-lipid-oxidation-to-survival\
+    \ trajectory or universal\n      resistance is inferred.\n    directness: INDIRECT\n\
+    \    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n    -\
+    \ reference: PMID:38640016\n      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC11081632/\n\
+    \      snippet: Cytotoxicity assay\n      explanation: Original Figure4E and RSL3/resazurin\
+    \ Methods; high-dose convergence and assay normalization\n        qualify the\
+    \ direction of the effect.\n      cache_path: evidence/PF01875/dolgova-2024-iron.txt\n\
+    \      cache_sha256: 4ec645f69dfa8a2322b9a4787920cb82e3e839d665c56c611220f417126c0192\n\
+    - graph_id: human-knockout-deferoxamine-clustering\n  title: MEMO1 knockout enhances\
+    \ mitochondrial clustering under iron chelation\n  scope: Dolgova2024 Figure4D,\
+    \ M67-9 versus parental MDA-MB-231 in1 uM deferoxamine overnight.\n  context:\
+    \ Overnight DFX exposure, GRP75 immunostaining and separate live MitoTracker CM-H2Ros\
+    \ imaging;\n    untreated cultures provide basal morphology controls.\n  family_mapping:\
+    \ Endogenous human MEMO1 knockout, Q9Y316/NP_057039.1 reference, PF01875 8-291.\
+    \ Whole-gene\n    intervention; exact clone alleles and complementation remain\
+    \ unverified.\n  scope_status: PHENOTYPIC\n  taxon: NCBITaxon:9606\n  limitations:\
+    \ Qualitative microscopy,not quantified mitochondrial transport or respiration.\
+    \ Basal mitochondrial\n    distributions appear normal. Knockout and DFX form\
+    \ the conditional intervention; neither is asserted\n    independently sufficient\
+    \ for the same phenotype.\n  nodes:\n  - node_id: knockout-with-dfx\n    label:\
+    \ M67-9 knockout with1-uM overnight deferoxamine\n    node_type: PERTURBATION\n\
+    \    grounding:\n    - UniProtKB:Q9Y316\n  - node_id: perinuclear-clustering\n\
+    \    label: Perinuclear mitochondrial clustering\n    node_type: PHENOTYPE\n \
+    \ edges:\n  - edge_id: knockout-with-dfx-increases-clustering\n    subject: knockout-with-dfx\n\
+    \    predicate: increases\n    object: perinuclear-clustering\n    mechanism:\
+    \ The chelator-exposed knockout displays perinuclear clustering compared with\
+    \ similarly exposed\n      parental cells,whereas basal distributions are relatively\
+    \ normal. Concordant stains support the\n      morphology endpoint without resolving\
+    \ the molecular intermediate.\n    directness: INDIRECT\n    support: OBSERVED\n\
+    \    evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference: PMID:38640016\n\
+    \      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC11081632/\n      snippet:\
+    \ Immunofluorescence microscopy\n      explanation: Original Figure4D and imaging\
+    \ Methods; retain overnight conditional exposure and distinction\n        between\
+    \ fixed GRP75 and live MitoTracker observations.\n      cache_path: evidence/PF01875/dolgova-2024-iron.txt\n\
+    \      cache_sha256: 4ec645f69dfa8a2322b9a4787920cb82e3e839d665c56c611220f417126c0192\n\
+    curation_events:\n- timestamp: '2026-10-11T18:39:00Z'\n  curator: Codex\n  action:\
+    \ CREATE\n  outcome: changed\n  summary: Curate Memo1 copper iron and cellular\
+    \ causal contexts with explicit redox conflicts\n  history_record: history/records/PF01875/2026-10-11T183900Z-codex-0fc548.yaml\n\
+    \  event_index: 0\n  llm_assisted: true\n- timestamp: '2026-10-11T18:51:06Z'\n\
+    \  curator: Codex\n  action: REVIEW\n  outcome: needs_followup\n  summary: Review\
+    \ Memo metal binding redox and cellular causal contexts\n  history_record: history/records/PF01875/2026-10-11T185106Z-codex-5de1fa.yaml\n\
+    \  event_index: 0\n  llm_assisted: true\n- timestamp: '2026-10-18T02:54:46Z'\n\
+    \  curator: Antigravity\n  action: EDIT\n  outcome: changed\n  summary: Ground\
+    \ causal graph gene and protein nodes in PF01875 with verified UniProtKB accessions\
+    \ (UniProtKB:Q9Y316)\n  history_record: history/records/PF01875/2026-10-18T025446Z-antigravity-2dc42c.yaml\n\
+    \  event_index: 0\n  llm_assisted: true\n- timestamp: '2026-10-21T09:52:10Z'\n\
+    \  curator: Antigravity\n  action: EDIT\n  outcome: changed\n  summary: Ground\
+    \ simemo1 perturbation node in human-knockdown-wound-closure with verified UniProtKB:Q9Y316\n\
+    \  history_record: history/records/PF01875/2026-10-21T095210Z-antigravity-187501.yaml\n\
+    \  event_index: 0\n  llm_assisted: true\n- timestamp: '2026-10-25T11:15:00Z'\n\
+    \  curator: Antigravity\n  action: EDIT\n  outcome: changed\n  summary: Ground\
+    \ PF01875 causal-graph protein/gene/complex nodes with UniProtKB:Q9Y316\n  history_record:\
+    \ history/records/PF01875/2026-10-25T111500Z-antigravity-f45cf1.yaml\n  event_index:\
+    \ 0\n  llm_assisted: true\n"
+  summary: Byte-exact projection retained at save for digest verification, not scientific
+    assessment.
+assessments:
+- assessment_id: member-identity
+  area: identity
+  topic: Protein, domain and experimental scope
+  outcome: supported
+  summary: Human Q9Y316 sequence version1 exactly equals NP_057039.1/NM_015955.5,
+    297 aa, PF01875 8-291. H49/H81/H131/D189/H192/C244 are inside this match. Deposited7KQ8
+    entity1 is canonical4-297, not full297 aa. Native numbering is preserved. The2014
+    3C-cleaved,2022 His-affinity and2024 intein-cleaved preparations remain separate;
+    exact assay-batch termini, siRNA details and clonal alleles are not independently
+    verified.
+  target_ids:
+  - PF01875
+  evidence_ids:
+  - identity
+  - primary
+  - copper-protection
+  - cellular-copper
+  - historical-redox
+  - gaps-and-access
+- assessment_id: causal-scope
+  area: graph
+  topic: Directed effects and limits
+  outcome: supported
+  summary: Six direct observed effects preserve BCA competition, ascorbate protection,
+    Amplex response, historical H192A luminol reduction and two iron-binding substitutions.
+    Ten indirect observed effects preserve wound closure, MTT, three probe signals,
+    two iron fractions, basal MDA, RSL3 metabolic response and chelator-conditioned
+    clustering. No universal ROS polarity, direct intracellular metal flux, isolated-domain
+    sufficiency or atomistic catalytic chain is asserted. BCA concentration and Amplex
+    wavelength discrepancies, residual H192A signal, basal knockdown effects, crude
+    fractions and drug-dose scope remain visible.
+  target_ids:
+  - PF01875
+  evidence_ids:
+  - primary
+  - native
+  - copper-protection
+  - cellular-copper
+  - historical-redox
+  - gaps-and-access
+- assessment_id: remaining-coverage
+  area: completeness
+  topic: Remaining family coverage
+  outcome: concern
+  summary: Resolve exact purified constructs, clonal alleles, rescue and siRNA specificity;
+    inspect additional ErbB2/RhoA/cytoskeleton, renal/FGF23, C.elegans and microbial
+    member experiments. The frozen6407 proteins remain in scope. Selected human assays
+    and negative or disputed interpretations do not establish a family-wide reaction
+    or absence of microbial functions.
+  target_ids:
+  - PF01875
+  evidence_ids:
+  - primary
+- assessment_id: cycle3-partner-grounding-verification
+  area: representation
+  topic: Cycle 3 causal-graph and protein-node grounding verification
+  outcome: supported
+  summary: 'Cycle 3 Stage 3 (PR #357) grounded the MEMO1 iron-binding calorimetric
+    state node iron-binding-response (''WT-like iron-binding calorimetric response'')
+    to Homo sapiens MEMO1 (UniProtKB:Q9Y316). Stage 4 frozen-inventory review verified
+    all causal graphs and grounded nodes against primary evidence caches.'
+  target_ids:
+  - PF01875
+  evidence_ids:
+  - stage4-prior-review
+findings:
+- finding_id: additional-contexts
+  issue_key: pf01875-causal-context-coverage
+  category: completeness
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Resolve Memo preparation specificity and extend member-specific causal coverage
+  description: Recover exact constructs and perturbation controls, reconcile dose/wavelength/time-label
+    disagreements, compare matched protein preparations with orthogonal metal/redox
+    readouts, and review additional organism contexts using accession/domain mapping.
+    Do not connect separately measured iron, lipid-oxidation and viability endpoints
+    into an observed chain. Preserve the older luminol result while qualifying its
+    disputed enzymatic interpretation.
+  target_ids:
+  - PF01875
+  field_paths:
+  - causal_graphs
+  evidence_ids:
+  - primary
+  - identity
+  - copper-protection
+  - cellular-copper
+  - historical-redox
+  - gaps-and-access
+  owner_paths:
+  - repository: CultureBotAI/DUFMech
+    path: curation/families/PF01875.yaml
+    role: Human-owned scientific overlay
+  previous_occurrences:
+  - repository: CultureBotAI/DUFMech
+    review_id: 20261021T114807Z-pf01875-stage4-record-review
+    finding_id: additional-contexts
+actions:
+- action_id: extend-contexts
+  description: Recover exact constructs and perturbation controls, reconcile dose/wavelength/time-label
+    disagreements, compare matched protein preparations with orthogonal metal/redox
+    readouts, and review additional organism contexts using accession/domain mapping.
+    Do not connect separately measured iron, lipid-oxidation and viability endpoints
+    into an observed chain. Preserve the older luminol result while qualifying its
+    disputed enzymatic interpretation.
+  finding_ids:
+  - additional-contexts
+  target_ids:
+  - PF01875
+  ownership_note: Curate overlay and minimal evidence; append actual history, regenerate
+    and retain successor review.
+  acceptance_checks:
+  - Each added edge has member-specific primary evidence and explicit conditions.
+  - Unsupported transfers and conflicting or negative results remain visible.
+  - Native checks pass and a successor report states actual scope.
+limitations:
+- Original2022 Figures1/2 and S1,2023 Figures1-3,2024 Figures4/5 and Figure5 supplement1,
+  and2014 reprinted Figure4 were visually inspected. Public EuropePMC and repository
+  copies resolved initial supplement403 and obsolete thesis-link failures. No raw-data
+  refit, exhaustive supplement review, assay-batch sequencing or experimental replication.
+  Rendered-page checks follow separately.
+- Same-agent assessment, not independent expert review or experimental replication.
+- Partial family coverage; status remains IN_PROGRESS. No full-corpus completion,
+  publication or full publication-QC pass is claimed.
+notes:
+- Assessments were authored from inspected primary evidence. Native inspection supplied
+  provenance, not scientific conclusions.

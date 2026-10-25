@@ -1,0 +1,849 @@
+# PF01864 Cycle 3 Stage 4 frozen-inventory causal-graph and grounding review
+
+- Review: 20261025T132037Z-pf01864-c3s4-record-review
+- Repository: CultureBotAI/DUFMech
+- Started UTC: 2026-10-25T13:20:36Z
+- Finished UTC: 2026-10-25T13:20:37Z
+- Reviewer: Antigravity (self_review)
+- Completion: completed
+- Verdict: pass_with_limitations
+- Scientific review: true
+
+## Summary
+
+Eight graphs retain nineteen observed preparation-level effects and two explicitly hypothetical mechanistic steps. Verified ApCarS identity and domain span constrain residue attribution; CTP binding, lipid-strip binding and catalytic product assays remain separate. Q123A/H157A increase strip signal but reduce product output. AfCarS and remaining family contexts are follow-up, so retain IN_PROGRESS. Cycle 3 Stage 3 (PR #357) grounded the two CarS ligand-binding state nodes (detectable-ctp-binding and lipid-strip-signal) to Aeropyrum pernix CarS (UniProtKB:Q9YF05). Stage 4 frozen-inventory review verified all causal graphs and grounded nodes against primary evidence caches.
+
+## Scope And Provenance
+
+Scientific assessment of the retained edges, exact member mapping, primary evidence, context and causal limits.
+
+Selection: Ren2017 intact ApCarS product, temperature, ion, single-substitution, ITC and lipid-strip comparisons; structure/model-motivated chemistry and TM5 hypotheses. Jain2014 author reproduction and Caforio thesis chapters assessed only as bounded follow-up leads.
+Coverage: partial; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base 0e26e9cdab5214d838db4f53ddefbf83772241fb.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| PF01864 | data/families/PF01864.yaml | generated | PF01864 |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Native projection and overlay validation | passed | True | PF01864 | Current projection validates and preserves the authored graph and discussion content exactly. |
+
+## Scientific And Domain Assessments
+
+### Protein, domain and experimental scope
+
+identity: supported. Targets: PF01864.
+
+Q9YF05 sequence version1 exactly matches BAA79391.1,174aa, Aeropyrum pernix K1 taxon272557. PF01864 maps12-174, excluding D8/W9 and including D12 at its boundary. PDB5GUF adds LEHHHHHH without core substitutions; primary Methods specify pET21b and E.coliBL21(DE3), not the deposited vector-as-host metadata. Reference S104 contradicts one Thr104 prose label, which is not adopted. AfCarS O28534/AF1740 remains a separately scoped lead with clone/domain verification outstanding.
+
+### Directed effects and limits
+
+graph: supported. Targets: PF01864.
+
+Six MECHANISTIC graphs contain nineteen DIRECT OBSERVED preparation-level effects; two HYPOTHETICAL graphs contain one UNRESOLVED HYPOTHESIZED edge each. Grouped nodes denote separately tested single variants, not combined mutants or identical effects. CTP carryover, nonzero residuals, endpoint versus rate, ITC detection limits, outside-domain sites and lipid-strip intensity versus Kd are explicit. No observed binding-to-release chain, isolated-domain sufficiency or family-wide catalytic transfer is asserted.
+
+### Remaining family coverage
+
+completeness: concern. Targets: PF01864.
+
+Remaining AfCarS primary methods/figures, exact clone and domain mapping; other members and engineering contexts; mutant folding/preparation controls, substrate concentration, ITC ion concentration and independent kinetics/chemical intermediates/release measurements. The author thesis reproduction is accessible, but its selected Results/captions are not a complete review. No exhaustive family or corpus coverage.
+
+### Cycle 3 causal-graph and protein-node grounding verification
+
+representation: supported. Targets: PF01864.
+
+Cycle 3 Stage 3 (PR #357) grounded the two CarS ligand-binding state nodes (detectable-ctp-binding and lipid-strip-signal) to Aeropyrum pernix CarS (UniProtKB:Q9YF05). Stage 4 frozen-inventory review verified all causal graphs and grounded nodes against primary evidence caches.
+
+## Findings
+
+### additional-contexts: Complete member-specific and mechanistic follow-up without merging incompatible assay contexts
+
+minor / open / confirmed; issue key: pf01864-causal-context-coverage.
+
+Review AfCarS complete primary assays with verified construct/domain identity, retain negative bacterial-complementation and alternative-substrate results in their exact contexts, and inspect other member studies. Resolve ApCarS preparation/detection and protocol gaps before strengthening catalytic residue or lipid release assignments. Do not substitute thesis-draft figure conventions for the final publication or transfer multi-enzyme outcomes to CarS alone.
+
+## Recommended Actions And Acceptance Checks
+
+### extend-contexts
+
+Review AfCarS complete primary assays with verified construct/domain identity, retain negative bacterial-complementation and alternative-substrate results in their exact contexts, and inspect other member studies. Resolve ApCarS preparation/detection and protocol gaps before strengthening catalytic residue or lipid release assignments. Do not substitute thesis-draft figure conventions for the final publication or transfer multi-enzyme outcomes to CarS alone.
+
+- Each added edge has member-specific primary evidence and explicit conditions.
+- Unsupported transfers and conflicting or negative results remain visible.
+- Native checks pass and a successor report states actual scope.
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| primary | https://pmc.ncbi.nlm.nih.gov/articles/PMC5674157/; Activity, expression, ITC and lipid-binding Methods; original Figures1D/4/6; Discussion and Figure7 captions; published supplement figures and TableS2 | supports | ApCarS forms the assigned CDP-archaeol product; temperature, EDTA and individual substitutions change endpoint output. Lipid-strip and ITC measurements are context-specific readouts, not catalytic rates. Complete Figure6 shows Q123A/H157A stronger strip binding with lower product formation. Chemical attack and TM5 release remain models. |
+| identity | https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01864/protein/uniprot/Q9YF05/; Accession and domain locations; paired UniProt identity facts | supports | Q9YF05 sequence version1 exactly matches BAA79391.1,174aa, Aeropyrum pernix K1 taxon272557. PF01864 maps12-174, excluding D8/W9 and including D12 at its boundary. PDB5GUF adds LEHHHHHH without core substitutions; primary Methods specify pET21b and E.coliBL21(DE3), not the deposited vector-as-host metadata. Reference S104 contradicts one Thr104 prose label, which is not adopted. AfCarS O28534/AF1740 remains a separately scoped lead with clone/domain verification outstanding. |
+| published-supplements | https://media.springernature.com/original/springer-static/esm/art%3A10.1038%2Fcr.2017.122/MediaObjects/41422_2017_BFcr2017122_MOESM74_ESM.pdf; Published MOESM65/66/67/69/74, FiguresS3/S4/S5/S7 and TableS2, with exact URLs recorded by the extract's common base and numbered filenames | supports | CDP product spectrum, conditional Mg-plus-K/Li enhancement, additional mutation outputs and representative ITC fits support the assay-scoped edges. n.d. is not zero affinity, technical triplicates are not biological replicates, and fitted N below1 reflects co-purified CTP. Low Ca output and W9A residual activity prevent strict-null claims. |
+| coverage-ledger | evidence/PF01864/cars-gap-ledger.txt; Source access/version limits, 2014 and 2015 leads, preparation/identity gaps | supports | Complete published Figure6 is now accessible after an incomplete initial JPEG. Chapter2 reproduces Jain2014 and remains an accessible follow-up; Chapter3 is a separate2015 study and Chapter5 a manuscript-in-preparation version. No inaccessible-source or absent-function conclusion is inferred from incomplete inspection. |
+| native | src/dufmech/records.py; Current projection validation and overlay equivalence in this retained-review session | supports | Closed schema, canonical history and applicable graph/evidence checks pass. Curated graphs and discussions match the overlay; scientific validity is assessed separately. |
+| stage4-prior-review | reviews/structured/20261011T165542Z-pf01864-apcars-product-binding-and-qualified-catalytic-models/review.yaml; Predecessor structured review 20261011T165542Z-pf01864-apcars-product-binding-and-qualified-catalytic-models | supports | Predecessor review 20261011T165542Z-pf01864-apcars-product-binding-and-qualified-catalytic-models verified and linked for finding continuity and semantic-digest progression on PF01864. |
+| duf-projection-pf01864 | data/families/PF01864.yaml; dufmech-reviewed-projection-v1 | context_only | Byte-exact projection retained at save for digest verification, not scientific assessment. |
+
+## Limits And Additional Notes
+
+- Original published Figures1/4 and complete publisher Figure6 were visually inspected; published S3/S4/S5/S7 and TableS2 were parsed and visually inspected. Figure7 captions and Discussion were read, but its original image and full S8 thermograms were not audited. No raw-MS reanalysis, diffraction refinement, experimental replication or complete 2014 assay review is claimed. Rendered-page checks follow separately.
+- Same-agent assessment, not independent expert review or experimental replication.
+- Partial family coverage; status remains IN_PROGRESS. No full-corpus completion, publication or full publication-QC pass is claimed.
+- Assessments were authored from inspected primary evidence. Native inspection supplied provenance, not scientific conclusions.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261025T132037Z-pf01864-c3s4-record-review
+title: PF01864 Cycle 3 Stage 4 frozen-inventory causal-graph and grounding review
+started_at: '2026-10-25T13:20:36Z'
+finished_at: '2026-10-25T13:20:37Z'
+reviewer:
+  identity: Antigravity
+  kind: agent
+  model: Claude-Opus-4.6
+  independence: self_review
+  independence_basis: Cycle 3 Stage 4 frozen-inventory record review by Antigravity
+    auditing prior curation overlays, primary evidence caches, history events, and
+    current projections at Git revision 0e26e9cdab5214d838db4f53ddefbf83772241fb.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: pass_with_limitations
+native_verdict: NEEDS_FOLLOWUP
+scientific_review: true
+summary: 'Eight graphs retain nineteen observed preparation-level effects and two
+  explicitly hypothetical mechanistic steps. Verified ApCarS identity and domain span
+  constrain residue attribution; CTP binding, lipid-strip binding and catalytic product
+  assays remain separate. Q123A/H157A increase strip signal but reduce product output.
+  AfCarS and remaining family contexts are follow-up, so retain IN_PROGRESS. Cycle
+  3 Stage 3 (PR #357) grounded the two CarS ligand-binding state nodes (detectable-ctp-binding
+  and lipid-strip-signal) to Aeropyrum pernix CarS (UniProtKB:Q9YF05). Stage 4 frozen-inventory
+  review verified all causal graphs and grounded nodes against primary evidence caches.'
+repository: CultureBotAI/DUFMech
+kind: record
+source:
+  git_revision: 0e26e9cdab5214d838db4f53ddefbf83772241fb
+  state: working_tree
+  snapshot_id: interpro-pfam-duf-2026-10-10
+  inputs:
+  - path: curation/families/PF01864.yaml
+    sha256: 7bdd4f8725b4c82d4379340e93cb8412dd4e57bd713664ae8af61f4a84517f3a
+    role: context
+  - path: data/families/PF01864.yaml
+    sha256: ad3efb15041382a3c0f3c5946d00a811c9d585d157ee5f5ba0da2c6b3f04689c
+    role: target
+  - path: data/worklists/interpro-pfam-duf-2026-10-10.json
+    sha256: 17fb625876c9326ed284263a47bcd84e0d7844a31c040dc06cd2260c36f1c383
+    role: context
+  - path: data/worklists/interpro-pfam-duf-2026-10-10.manifest.json
+    sha256: 31c07ffb6a169c851ea0e6e9dd527a10c04028eafeb29187bd62dc2ae848696e
+    role: context
+  - path: data/worklists/interpro-pfam-duf-2026-10-10.tsv
+    sha256: be023c8dd9d8d3864926b5032d6f7e87a884b1a567391696822dbbecc692dae7
+    role: context
+  - path: evidence/PF01864/CarS-identity.txt
+    sha256: 27f3edc3b7c358eadf432a210cf43d4e3af8c8ff516c9606f0f82c248920904d
+    role: context
+  - path: evidence/PF01864/cars-gap-ledger.txt
+    sha256: 7affd3ecf4e7ab907903a8c03666b3c178e99edf68412dc6eb2dcfb2ecddbeec
+    role: context
+  - path: evidence/PF01864/ren-2017-apcars.txt
+    sha256: 8bac92aa3bf08a12077abc790d5599c7561f255d4268e1d2a4790680fb9377fd
+    role: context
+  - path: evidence/PF01864/ren-2017-supplements.txt
+    sha256: 7d3b602675f5f44d97f0dfa8d8c3aa583d4cee56fe174b8bd3a077217054de10
+    role: context
+  - path: reviews/structured/20261011T165542Z-pf01864-apcars-product-binding-and-qualified-catalytic-models/review.yaml
+    sha256: 6e95c37cddbc8178cb3bf0caaad7cd64f15d94f0a7138961d41fa19ef6a98edc
+    role: context
+targets:
+- target_id: PF01864
+  path: data/families/PF01864.yaml
+  label: PF01864
+  kind: generated
+  record_class: FamilyRecord
+  owner_paths:
+  - repository: CultureBotAI/DUFMech
+    path: curation/families/PF01864.yaml
+    role: Maintained scientific overlay; create only with authorized curation.
+  - repository: CultureBotAI/DUFMech
+    path: src/dufmech/records.py
+    role: Projection generator; frozen snapshot identity is not hand-edited.
+  semantic_digest:
+    algorithm: dufmech-record-content-v1
+    sha256: 9ec24ad265ea371357bd1dbefa7fcb1ee305d4c6105438f2f9d61e92bc864110
+    description: Canonical JSON SHA-256 of effective FamilyRecord excluding only curation_status,
+      review_id and curation_events.
+scope:
+  description: Scientific assessment of the retained edges, exact member mapping,
+    primary evidence, context and causal limits.
+  selection: Ren2017 intact ApCarS product, temperature, ion, single-substitution,
+    ITC and lipid-strip comparisons; structure/model-motivated chemistry and TM5 hypotheses.
+    Jain2014 author reproduction and Caforio thesis chapters assessed only as bounded
+    follow-up leads.
+  coverage: partial
+  population_size: 1
+  reviewed_target_ids:
+  - PF01864
+  exclusions:
+  - target: Remaining family members and uncurated experimental contexts
+    reason: Remaining AfCarS primary methods/figures, exact clone and domain mapping;
+      other members and engineering contexts; mutant folding/preparation controls,
+      substrate concentration, ITC ion concentration and independent kinetics/chemical
+      intermediates/release measurements. The author thesis reproduction is accessible,
+      but its selected Results/captions are not a complete review. No exhaustive family
+      or corpus coverage.
+checks:
+- check_id: native-projection
+  name: Native projection and overlay validation
+  command: validate_record(record, root); assert projection graphs and discussions
+    match overlay
+  status: passed
+  required: true
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Current projection validates and preserves the authored graph and discussion
+    content exactly.
+  target_ids:
+  - PF01864
+  evidence_ids:
+  - native
+evidence:
+- evidence_id: primary
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC5674157/
+  locator: Activity, expression, ITC and lipid-binding Methods; original Figures1D/4/6;
+    Discussion and Figure7 captions; published supplement figures and TableS2
+  accessed_at: '2026-10-11T16:55:42Z'
+  support: supports
+  snapshot_sha256: 8bac92aa3bf08a12077abc790d5599c7561f255d4268e1d2a4790680fb9377fd
+  summary: ApCarS forms the assigned CDP-archaeol product; temperature, EDTA and individual
+    substitutions change endpoint output. Lipid-strip and ITC measurements are context-specific
+    readouts, not catalytic rates. Complete Figure6 shows Q123A/H157A stronger strip
+    binding with lower product formation. Chemical attack and TM5 release remain models.
+- evidence_id: identity
+  kind: database
+  reference: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01864/protein/uniprot/Q9YF05/
+  locator: Accession and domain locations; paired UniProt identity facts
+  accessed_at: '2026-10-11T16:55:42Z'
+  support: supports
+  snapshot_sha256: 27f3edc3b7c358eadf432a210cf43d4e3af8c8ff516c9606f0f82c248920904d
+  summary: Q9YF05 sequence version1 exactly matches BAA79391.1,174aa, Aeropyrum pernix
+    K1 taxon272557. PF01864 maps12-174, excluding D8/W9 and including D12 at its boundary.
+    PDB5GUF adds LEHHHHHH without core substitutions; primary Methods specify pET21b
+    and E.coliBL21(DE3), not the deposited vector-as-host metadata. Reference S104
+    contradicts one Thr104 prose label, which is not adopted. AfCarS O28534/AF1740
+    remains a separately scoped lead with clone/domain verification outstanding.
+- evidence_id: published-supplements
+  kind: primary_source
+  reference: https://media.springernature.com/original/springer-static/esm/art%3A10.1038%2Fcr.2017.122/MediaObjects/41422_2017_BFcr2017122_MOESM74_ESM.pdf
+  locator: Published MOESM65/66/67/69/74, FiguresS3/S4/S5/S7 and TableS2, with exact
+    URLs recorded by the extract's common base and numbered filenames
+  summary: CDP product spectrum, conditional Mg-plus-K/Li enhancement, additional
+    mutation outputs and representative ITC fits support the assay-scoped edges. n.d.
+    is not zero affinity, technical triplicates are not biological replicates, and
+    fitted N below1 reflects co-purified CTP. Low Ca output and W9A residual activity
+    prevent strict-null claims.
+  accessed_at: '2026-10-11T16:55:42Z'
+  support: supports
+  snapshot_sha256: 7d3b602675f5f44d97f0dfa8d8c3aa583d4cee56fe174b8bd3a077217054de10
+- evidence_id: coverage-ledger
+  kind: search
+  reference: evidence/PF01864/cars-gap-ledger.txt
+  locator: Source access/version limits, 2014 and 2015 leads, preparation/identity
+    gaps
+  search_scope: PF01864/CarS/DUF46 Pfam and protein reference searches, Ren2017 main
+    text and published supplements, public Caforio thesis Chapters2/3/5 selected text,
+    and hidden/ignored-inclusive repository artifact search on2026-10-11. Bounded
+    member-specific investigation, not exhaustive literature coverage.
+  summary: Complete published Figure6 is now accessible after an incomplete initial
+    JPEG. Chapter2 reproduces Jain2014 and remains an accessible follow-up; Chapter3
+    is a separate2015 study and Chapter5 a manuscript-in-preparation version. No inaccessible-source
+    or absent-function conclusion is inferred from incomplete inspection.
+  accessed_at: '2026-10-11T16:55:42Z'
+  support: supports
+  snapshot_sha256: 7affd3ecf4e7ab907903a8c03666b3c178e99edf68412dc6eb2dcfb2ecddbeec
+- evidence_id: native
+  kind: validation
+  reference: src/dufmech/records.py
+  locator: Current projection validation and overlay equivalence in this retained-review
+    session
+  accessed_at: '2026-10-11T16:55:42Z'
+  support: supports
+  summary: Closed schema, canonical history and applicable graph/evidence checks pass.
+    Curated graphs and discussions match the overlay; scientific validity is assessed
+    separately.
+- evidence_id: stage4-prior-review
+  kind: prior_review
+  reference: reviews/structured/20261011T165542Z-pf01864-apcars-product-binding-and-qualified-catalytic-models/review.yaml
+  locator: Predecessor structured review 20261011T165542Z-pf01864-apcars-product-binding-and-qualified-catalytic-models
+  accessed_at: '2026-10-25T13:20:37Z'
+  support: supports
+  snapshot_sha256: 6e95c37cddbc8178cb3bf0caaad7cd64f15d94f0a7138961d41fa19ef6a98edc
+  summary: Predecessor review 20261011T165542Z-pf01864-apcars-product-binding-and-qualified-catalytic-models
+    verified and linked for finding continuity and semantic-digest progression on
+    PF01864.
+- evidence_id: duf-projection-pf01864
+  kind: record_content
+  reference: data/families/PF01864.yaml
+  locator: dufmech-reviewed-projection-v1
+  accessed_at: '2026-10-25T13:20:37Z'
+  support: context_only
+  snapshot_sha256: ad3efb15041382a3c0f3c5946d00a811c9d585d157ee5f5ba0da2c6b3f04689c
+  quote: "id: Pfam:PF01864\npfam_id: PF01864\nname: CDP-archaeol synthase\nshort_name:\
+    \ CarS-like\nseed_status: EX_DUF\ncharacterization_status: UNSCORED\ncuration_status:\
+    \ IN_PROGRESS\nsource_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01864\n\
+    counters:\n  proteins: 898\n  matches: 958\n  proteomes: 876\n  taxa: 1726\n \
+    \ structures: 1\n  alphafold_models: 786\n  domain_architectures: 4\nprovenance:\n\
+    \  snapshot_id: interpro-pfam-duf-2026-10-10\n  path: data/worklists/interpro-pfam-duf-2026-10-10.json\n\
+    \  sha256: 17fb625876c9326ed284263a47bcd84e0d7844a31c040dc06cd2260c36f1c383\n\
+    \  generated_at: '2026-10-10T07:44:21.614711Z'\n  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/\n\
+    interpro_id: InterPro:IPR032690\ndescription: CDP-archaeol synthase functions\
+    \ in the archaeal lipid biosynthetic pathway. It catalyses\n  the transfer of\
+    \ the nucleotide to its specific archaeal lipid substrate, leading to the formation\
+    \ of\n  a CDP-activated precursor (CDP-archaeol) to which polar head groups are\
+    \ attached [[cite:PUB00076744]].\n  Bacterial members of this family are uncharacterized.\n\
+    curation_history: history/records/PF01864\ndiscussions:\n- discussion_id: apcars-assay-and-mechanistic-limits\n\
+    \  prompt: Resolve preparation, binding and product-rate limits before assigning\
+    \ chemical steps.\n  kind: CURATION_TODO\n  status: OPEN\n  rationale: Co-purified\
+    \ CTP, different assay temperatures and lipid-strip detection complicate a single\n\
+    \    mechanistic chain; two N-terminal perturbations are outside the current Pfam\
+    \ span.\n  evidence:\n  - reference: PMID:28961231\n    supports: PARTIAL\n  \
+    \  evidence_source: primary_methods_figures_1_4_6_and_supplements\n    explanation:\
+    \ Native graphs retain separate product, ITC, strip-binding and hypothesis contexts,\
+    \ plus\n      residual signals and whole-protein scope.\n  notes: Check exact\
+    \ DGGGP concentration and ITC ion protocol, independent folding/preparation controls,\n\
+    \    calibrated product time courses and direct chemistry/release measurements.\
+    \ See evidence/PF01864/cars-gap-ledger.txt.\n    Each grouped mutation node denotes\
+    \ separate single-mutant comparisons.\n  posed_by: Codex\n  posed_date: '2026-10-11'\n\
+    - discussion_id: afcars-and-family-coverage\n  prompt: Complete member-specific\
+    \ review of AfCarS and other family contexts.\n  kind: CURATION_TODO\n  status:\
+    \ OPEN\n  rationale: The accessible 2014 author reproduction contains additional\
+    \ substrate and cellular comparisons;\n    its partial inspection is not a completed\
+    \ family review.\n  evidence:\n  - reference: PMID:25219966\n    supports: PARTIAL\n\
+    \    evidence_source: public_author_thesis_chapter2_results_and_captions\n   \
+    \ explanation: AF1740/O28534 reference identity and selected Results were inspected;\
+    \ exact clone/domain\n      mapping, complete methods and original figures need\
+    \ follow-up before graph curation.\n  notes: Retain separate AfCarS His8 and ApCarS\
+    \ His6 constructs. Do not transfer multi-enzyme engineering\n    outcomes or bacterial\
+    \ CdsA activity to CarS alone. Chapter5 is a draft, not the final 2017 version.\n\
+    \    Keep IN_PROGRESS.\n  posed_by: Codex\n  posed_date: '2026-10-11'\ncausal_graphs:\n\
+    - graph_id: apcars-product-and-assay-conditions\n  title: ApCarS produces CDP-archaeol\
+    \ with condition-dependent endpoint output\n  scope: Intact purified ApCarS-His6\
+    \ assays in Ren 2017 Figure 1D and Figure S3, not native cellular flux.\n  context:\
+    \ 0.5 uM enzyme, synthetic DGGGP, 2 mM CTP, 10 mM MgCl2, 50 mM Tris pH7.5, 75\
+    \ mM NaCl, 0.1% DDM,\n    125 mM imidazole, 5% glycerol; 1 h at 37, 60 or 90 C.\
+    \ EDTA comparisons add 20 mM. DGGGP concentration\n    is not specified in the\
+    \ 2017 Methods paragraph.\n  family_mapping: Aeropyrum pernix K1 APE_0433/carS,\
+    \ Q9YF05 sequence version 1 equals BAA79391.1, 174\n    aa. PF01864 12-174. PDB\
+    \ 5GUF is native sequence plus LEHHHHHH; primary Methods specify pET21b/E. coli\n\
+    \    BL21(DE3).\n  scope_status: MECHANISTIC\n  taxon: NCBITaxon:272557\n  limitations:\
+    \ DIRECT is a net purified-preparation effect, not a chemical microstep. Protein\
+    \ co-purified\n    with endogenous CTP; no-added-CTP and EDTA controls are not\
+    \ absolute nulls. Product ion counts are\n    not initial rates, separately measured\
+    \ PPi, or native membrane kinetics.\n  nodes:\n  - node_id: apcars-with-substrates\n\
+    \    label: ApCarS preparation with DGGGP, CTP and Mg under the stated conditions\n\
+    \    node_type: ACTIVITY\n    grounding:\n    - UniProtKB:Q9YF05\n  - node_id:\
+    \ product-signal\n    label: CDP-archaeol product ion signal\n    node_type: STATE\n\
+    \  - node_id: add-edta\n    label: Add 20 mM EDTA to the otherwise matched reaction\n\
+    \    node_type: PERTURBATION\n  - node_id: raise-37-to-60\n    label: Raise incubation\
+    \ temperature from 37 to 60 C\n    node_type: PERTURBATION\n  - node_id: raise-60-to-90\n\
+    \    label: Raise incubation temperature from 60 to 90 C\n    node_type: PERTURBATION\n\
+    \  edges:\n  - edge_id: preparation-produces-cdp-archaeol\n    subject: apcars-with-substrates\n\
+    \    predicate: produces\n    object: product-signal\n    mechanism: HPLC-MS detects\
+    \ product assigned as CDP-archaeol at m/z1020.55 [M-H]-. Substrate and EDTA\n\
+    \      comparisons support the net preparation-level reaction, not an independently\
+    \ resolved sequence of\n      chemical events.\n    directness: DIRECT\n    support:\
+    \ OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference: PMID:28961231\n\
+    \      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC5674157/\n      snippet:\
+    \ CDP-archaeol\n      explanation: Figure 1D and published Figure S3 chromatogram/spectrum\
+    \ were visually inspected; Methods\n        establishes the combined assay context.\n\
+    \      cache_path: evidence/PF01864/ren-2017-apcars.txt\n      cache_sha256: 8bac92aa3bf08a12077abc790d5599c7561f255d4268e1d2a4790680fb9377fd\n\
+    \  - edge_id: edta-lowers-product\n    subject: add-edta\n    predicate: decreases\n\
+    \    object: product-signal\n    mechanism: EDTA lowers product output in the\
+    \ tested reaction comparisons; this supports metal sensitivity\n      without\
+    \ identifying a unique ion-binding chemical step or proving zero residual turnover.\n\
+    \    directness: DIRECT\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n\
+    \    evidence:\n    - reference: PMID:28961231\n      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC5674157/\n\
+    \      snippet: CDP-archaeol\n      explanation: Figure 1D EDTA comparisons, with\
+    \ small residual signals retained and 20 mM EDTA specified\n        by Methods.\n\
+    \      cache_path: evidence/PF01864/ren-2017-apcars.txt\n      cache_sha256: 8bac92aa3bf08a12077abc790d5599c7561f255d4268e1d2a4790680fb9377fd\n\
+    \  - edge_id: warming-37-to-60-increases-product\n    subject: raise-37-to-60\n\
+    \    predicate: increases\n    object: product-signal\n    mechanism: The fixed\
+    \ one-hour endpoint has greater product signal at 60 than 37 C; protein dynamics,\n\
+    \      substrate diffusion and other temperature-dependent effects are not separated.\n\
+    \    directness: DIRECT\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n\
+    \    evidence:\n    - reference: PMID:28961231\n      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC5674157/\n\
+    \      snippet: CDP-archaeol\n      explanation: Figure 1D, CTP-present EDTA-absent\
+    \ comparison. Not a measured activation energy or\n        proof of TM5 motion.\n\
+    \      cache_path: evidence/PF01864/ren-2017-apcars.txt\n      cache_sha256: 8bac92aa3bf08a12077abc790d5599c7561f255d4268e1d2a4790680fb9377fd\n\
+    \  - edge_id: warming-60-to-90-increases-product\n    subject: raise-60-to-90\n\
+    \    predicate: increases\n    object: product-signal\n    mechanism: Product\
+    \ output is higher at 90 than 60 C in the tested one-hour reaction; the comparison\n\
+    \      does not establish an optimum beyond the sampled temperatures.\n    directness:\
+    \ DIRECT\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n\
+    \    - reference: PMID:28961231\n      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC5674157/\n\
+    \      snippet: CDP-archaeol\n      explanation: Figure 1D same-substrate temperature\
+    \ comparison, scoped to endpoint ion output.\n      cache_path: evidence/PF01864/ren-2017-apcars.txt\n\
+    \      cache_sha256: 8bac92aa3bf08a12077abc790d5599c7561f255d4268e1d2a4790680fb9377fd\n\
+    - graph_id: apcars-magnesium-monovalent-ion-assays\n  title: Potassium and lithium\
+    \ enhance the magnesium-containing ApCarS assay\n  scope: Ren 2017 Figure S4A\
+    \ ion-addition comparisons using purified intact protein.\n  context: Activity\
+    \ assay at 90 C for 1 h with DGGGP and CTP; ion additions each 10 mM. Compare\
+    \ Mg alone\n    against Mg plus KCl or LiCl. Other reaction-buffer components\
+    \ follow the published activity protocol,\n    including background NaCl.\n  family_mapping:\
+    \ ApCarS Q9YF05/BAA79391.1, PF01864 12-174, native protein plus C-terminal His6\
+    \ expression\n    tail.\n  scope_status: MECHANISTIC\n  taxon: NCBITaxon:272557\n\
+    \  limitations: No independent sufficiency of a monovalent ion. Enhancement does\
+    \ not transfer to the Mn-containing\n    assay; Na does not show the same enhancement.\
+    \ Ca residual signal prevents strict-null language. Ionic\n    strength and precise\
+    \ coordination mechanisms are unresolved.\n  nodes:\n  - node_id: potassium-with-magnesium\n\
+    \    label: Add 10 mM KCl to the Mg-containing reaction\n    node_type: PERTURBATION\n\
+    \  - node_id: lithium-with-magnesium\n    label: Add 10 mM LiCl to the Mg-containing\
+    \ reaction\n    node_type: PERTURBATION\n  - node_id: normalized-product\n   \
+    \ label: DDM-normalized CDP-archaeol product signal\n    node_type: STATE\n  edges:\n\
+    \  - edge_id: potassium-enhances-magnesium-assay\n    subject: potassium-with-magnesium\n\
+    \    predicate: increases\n    object: normalized-product\n    mechanism: Added\
+    \ KCl increases endpoint product signal relative to Mg alone, conditional on the\
+    \ specified\n      substrate and ion context.\n    directness: DIRECT\n    support:\
+    \ OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference: PMID:28961231\n\
+    \      source_url: https://media.springernature.com/original/springer-static/esm/art%3A10.1038%2Fcr.2017.122/MediaObjects/41422_2017_BFcr2017122_MOESM66_ESM.pdf\n\
+    \      snippet: Supplementary information\n      explanation: Original Figure\
+    \ S4A and its caption inspected; the Mg and Mn contexts are kept separate.\n \
+    \     cache_path: evidence/PF01864/ren-2017-supplements.txt\n      cache_sha256:\
+    \ 7d3b602675f5f44d97f0dfa8d8c3aa583d4cee56fe174b8bd3a077217054de10\n  - edge_id:\
+    \ lithium-enhances-magnesium-assay\n    subject: lithium-with-magnesium\n    predicate:\
+    \ increases\n    object: normalized-product\n    mechanism: Added LiCl increases\
+    \ endpoint product signal relative to Mg alone; the result does not\n      establish\
+    \ that Li and K occupy the same site or act identically.\n    directness: DIRECT\n\
+    \    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n    -\
+    \ reference: PMID:28961231\n      source_url: https://media.springernature.com/original/springer-static/esm/art%3A10.1038%2Fcr.2017.122/MediaObjects/41422_2017_BFcr2017122_MOESM66_ESM.pdf\n\
+    \      snippet: Supplementary information\n      explanation: Figure S4A Mg plus\
+    \ Li comparison, not monovalent-ion rescue without divalent ion.\n      cache_path:\
+    \ evidence/PF01864/ren-2017-supplements.txt\n      cache_sha256: 7d3b602675f5f44d97f0dfa8d8c3aa583d4cee56fe174b8bd3a077217054de10\n\
+    - graph_id: apcars-ctp-binding\n  title: Magnesium and individual substitutions\
+    \ change ApCarS CTP-binding measurements\n  scope: Published Table S2 representative\
+    \ ITC parameters for WT and separately tested single substitutions.\n  context:\
+    \ 25 C; 20 mM Tris pH7.5, 100 mM NaCl, 0.02% DDM; about 0.15 mM protein and 0.5\
+    \ mM CTP titrant,\n    one-site fit, technical triplicate. Mg concentration is\
+    \ not specified in the ITC Methods paragraph.\n    Mutants are compared with WT+Mg.\n\
+    \  family_mapping: ApCarS Q9YF05 version 1/BAA79391.1; PF01864 12-174 contains\
+    \ every listed ITC substitution.\n    Whole-protein preparations, not isolated-domain\
+    \ binding.\n  scope_status: MECHANISTIC\n  taxon: NCBITaxon:272557\n  limitations:\
+    \ Grouped nodes mean each named single mutant separately, never a combined mutant\
+    \ or equal\n    effect sizes. Undetected heat is not zero molecular binding. Endogenous\
+    \ CTP co-purification gives\n    fitted N below 1. Binding at 25 C is not catalytic\
+    \ activity at 90 C; errors are not established biological\n    uncertainty.\n\
+    \  nodes:\n  - node_id: magnesium-present\n    label: Include Mg in the WT ITC\
+    \ comparison\n    node_type: PERTURBATION\n  - node_id: measured-affinity\n  \
+    \  label: Apparent CTP-binding affinity from the one-site fit\n    node_type:\
+    \ STATE\n  - node_id: undetected-single-mutants\n    label: N28A, P31A, K57A,\
+    \ D100A, K107A or D125A, each separately\n    node_type: PERTURBATION\n    grounding:\n\
+    \    - UniProtKB:Q9YF05\n  - node_id: detectable-ctp-binding\n    label: Detectable\
+    \ ITC CTP-binding response\n    node_type: STATE\n    grounding:\n    - UniProtKB:Q9YF05\n\
+    \  - node_id: weaker-single-mutants\n    label: D41A, R51A, G54A, D55A, T58A,\
+    \ R108A, R114A or D122A, each separately\n    node_type: PERTURBATION\n    grounding:\n\
+    \    - UniProtKB:Q9YF05\n  edges:\n  - edge_id: magnesium-increases-apparent-affinity\n\
+    \    subject: magnesium-present\n    predicate: increases\n    object: measured-affinity\n\
+    \    mechanism: WT Kd is 0.2 +/- 0.02 uM with Mg versus 1.6 +/- 0.18 uM without\
+    \ Mg in Table S2. Lower Kd\n      indicates stronger fitted affinity; neither\
+    \ the main-caption unit typo nor fitted site count is\n      interpreted as a\
+    \ true molar stoichiometry.\n    directness: DIRECT\n    support: OBSERVED\n \
+    \   evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference: PMID:28961231\n\
+    \      source_url: https://media.springernature.com/original/springer-static/esm/art%3A10.1038%2Fcr.2017.122/MediaObjects/41422_2017_BFcr2017122_MOESM74_ESM.pdf\n\
+    \      snippet: not detect\n      explanation: Table S2 WT rows, units and representative-fit\
+    \ footnote were inspected, together with\n        ITC Methods and co-purified-CTP\
+    \ caveat.\n      cache_path: evidence/PF01864/ren-2017-supplements.txt\n     \
+    \ cache_sha256: 7d3b602675f5f44d97f0dfa8d8c3aa583d4cee56fe174b8bd3a077217054de10\n\
+    \  - edge_id: six-single-mutants-lose-detectable-itc-response\n    subject: undetected-single-mutants\n\
+    \    predicate: decreases\n    object: detectable-ctp-binding\n    mechanism:\
+    \ Each listed single substitution yields n.d. in Table S2 against detectable WT\
+    \ binding;\n      the assay does not establish infinite Kd, abolished catalysis\
+    \ or a unique direct-contact mechanism.\n    directness: DIRECT\n    support:\
+    \ OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference: PMID:28961231\n\
+    \      source_url: https://media.springernature.com/original/springer-static/esm/art%3A10.1038%2Fcr.2017.122/MediaObjects/41422_2017_BFcr2017122_MOESM74_ESM.pdf\n\
+    \      snippet: not detect\n      explanation: Six n.d. rows are interpreted as\
+    \ detection limits, including P31A which retains product\n        in a separate\
+    \ catalytic assay.\n      cache_path: evidence/PF01864/ren-2017-supplements.txt\n\
+    \      cache_sha256: 7d3b602675f5f44d97f0dfa8d8c3aa583d4cee56fe174b8bd3a077217054de10\n\
+    \  - edge_id: eight-single-mutants-weaken-fitted-affinity\n    subject: weaker-single-mutants\n\
+    \    predicate: decreases\n    object: measured-affinity\n    mechanism: Kd point\
+    \ estimates in uM are D41A 2.1, R51A 3.4, G54A 1.05, D55A 0.76, T58A 8.85, R108A\n\
+    \      1.95, R114A 4.6 and D122A 1.4 versus WT+Mg 0.2. Each is a separate preparation\
+    \ and fit; broad R114A\n      error and missing fold controls preclude a precise\
+    \ ranking of residue importance.\n    directness: DIRECT\n    support: OBSERVED\n\
+    \    evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference: PMID:28961231\n\
+    \      source_url: https://media.springernature.com/original/springer-static/esm/art%3A10.1038%2Fcr.2017.122/MediaObjects/41422_2017_BFcr2017122_MOESM74_ESM.pdf\n\
+    \      snippet: not detect\n      explanation: Table S2 numerical rows support\
+    \ direction of fitted-affinity change; uncertainties\n        are retained in\
+    \ the evidence extract and no significance test is invented.\n      cache_path:\
+    \ evidence/PF01864/ren-2017-supplements.txt\n      cache_sha256: 7d3b602675f5f44d97f0dfa8d8c3aa583d4cee56fe174b8bd3a077217054de10\n\
+    - graph_id: apcars-substitution-product-assays\n  title: Individual ApCarS substitutions\
+    \ reduce product output\n  scope: Figure 4B and Figures S5/S7 purified-protein\
+    \ comparisons, grouped only by shared direction of\n    response.\n  context:\
+    \ Each single variant compared separately with its panel's WT; 0.5 uM protein,\
+    \ DGGGP, 2 mM CTP,\n    10 mM MgCl2, 90 C for 1 h in the activity buffer. Two\
+    \ plotted points do not establish independent\n    biological replication.\n \
+    \ family_mapping: Q9YF05/BAA79391.1 native numbering. PF01864 12-174 includes\
+    \ the listed core sites and\n    D12/E16/N82/Y139, but excludes D8/W9. No isolated-domain\
+    \ sufficiency is asserted.\n  scope_status: MECHANISTIC\n  taxon: NCBITaxon:272557\n\
+    \  limitations: Changes in folding, stability, protein preparation or substrate\
+    \ interaction could contribute.\n    These are observed preparation-level effects,\
+    \ not assignments of chemical catalysis to every residue.\n    Panels are not\
+    \ pooled; low signal is not a strict catalytic null.\n  nodes:\n  - node_id: main-panel-single-mutants\n\
+    \    label: N28A, P31A, R51A, D55A, K57A, T58A, D100A, K107A, R108A, R114A, D122A\
+    \ or D125A, each separately\n    node_type: PERTURBATION\n    grounding:\n   \
+    \ - UniProtKB:Q9YF05\n  - node_id: additional-cl1-single-mutants\n    label: D41A\
+    \ or G54A, each separately\n    node_type: PERTURBATION\n    grounding:\n    -\
+    \ UniProtKB:Q9YF05\n  - node_id: outside-span-single-mutants\n    label: D8A or\
+    \ W9A outside the Pfam span, each separately\n    node_type: PERTURBATION\n  \
+    \  grounding:\n    - UniProtKB:Q9YF05\n  - node_id: periplasmic-in-span-single-mutants\n\
+    \    label: D12A, E16A, N82A or Y139A, each separately\n    node_type: PERTURBATION\n\
+    \    grounding:\n    - UniProtKB:Q9YF05\n  - node_id: product-output\n    label:\
+    \ CDP-archaeol endpoint signal relative to the matched panel WT\n    node_type:\
+    \ STATE\n  edges:\n  - edge_id: main-panel-single-substitutions-lower-product\n\
+    \    subject: main-panel-single-mutants\n    predicate: decreases\n    object:\
+    \ product-output\n    mechanism: Each Figure 4B single variant lowers product\
+    \ output. P31A, R51A, D55A and R114A retain\n      appreciable signal; P31A product\
+    \ despite n.d. ITC prevents a simple claim that undetectable binding\n      necessarily\
+    \ abolishes catalysis.\n    directness: DIRECT\n    support: OBSERVED\n    evidence_kind:\
+    \ EXPERIMENTAL\n    evidence:\n    - reference: PMID:28961231\n      source_url:\
+    \ https://pmc.ncbi.nlm.nih.gov/articles/PMC5674157/\n      snippet: CDP-archaeol\n\
+    \      explanation: Original Figure 4B inspected including its broken y axis and\
+    \ residual signals; distinct\n        binding conditions are not collapsed into\
+    \ a causal chain.\n      cache_path: evidence/PF01864/ren-2017-apcars.txt\n  \
+    \    cache_sha256: 8bac92aa3bf08a12077abc790d5599c7561f255d4268e1d2a4790680fb9377fd\n\
+    \  - edge_id: d41a-or-g54a-lowers-product\n    subject: additional-cl1-single-mutants\n\
+    \    predicate: decreases\n    object: product-output\n    mechanism: D41A and\
+    \ G54A each lower product in Figure S5. Separate R51A/D55A comparisons are not\
+    \ numerically\n      pooled with Figure 4 or treated as independent replication.\n\
+    \    directness: DIRECT\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n\
+    \    evidence:\n    - reference: PMID:28961231\n      source_url: https://media.springernature.com/original/springer-static/esm/art%3A10.1038%2Fcr.2017.122/MediaObjects/41422_2017_BFcr2017122_MOESM67_ESM.pdf\n\
+    \      snippet: Supplementary information\n      explanation: Original Figure\
+    \ S5 product panel supports the two additional individual substitutions\n    \
+    \    without duplicate R51A/D55A edges.\n      cache_path: evidence/PF01864/ren-2017-supplements.txt\n\
+    \      cache_sha256: 7d3b602675f5f44d97f0dfa8d8c3aa583d4cee56fe174b8bd3a077217054de10\n\
+    \  - edge_id: d8a-or-w9a-lowers-product\n    subject: outside-span-single-mutants\n\
+    \    predicate: decreases\n    object: product-output\n    mechanism: Both substitutions\
+    \ lower product in Figure S7; W9A retains substantial activity. Neither\n    \
+    \  position lies in PF01864 12-174, so the result cannot be described as mutating\
+    \ a residue within\n      that domain.\n    directness: DIRECT\n    support: OBSERVED\n\
+    \    evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference: PMID:28961231\n\
+    \      source_url: https://media.springernature.com/original/springer-static/esm/art%3A10.1038%2Fcr.2017.122/MediaObjects/41422_2017_BFcr2017122_MOESM69_ESM.pdf\n\
+    \      snippet: Supplementary information\n      explanation: Figure S7 original\
+    \ product panel and independent reference/domain mapping; whole-protein\n    \
+    \    scope explicitly retained.\n      cache_path: evidence/PF01864/ren-2017-supplements.txt\n\
+    \      cache_sha256: 7d3b602675f5f44d97f0dfa8d8c3aa583d4cee56fe174b8bd3a077217054de10\n\
+    \  - edge_id: four-periplasmic-site-single-mutants-lower-product\n    subject:\
+    \ periplasmic-in-span-single-mutants\n    predicate: decreases\n    object: product-output\n\
+    \    mechanism: D12A, E16A, N82A and Y139A each lower product output. Their structural\
+    \ location motivates\n      stability interpretations but does not prove a particular\
+    \ allosteric route or exclude global folding\n      effects.\n    directness:\
+    \ DIRECT\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n\
+    \    - reference: PMID:28961231\n      source_url: https://media.springernature.com/original/springer-static/esm/art%3A10.1038%2Fcr.2017.122/MediaObjects/41422_2017_BFcr2017122_MOESM69_ESM.pdf\n\
+    \      snippet: Supplementary information\n      explanation: Figure S7 shows\
+    \ the individual comparisons; D12 sits at the current mapped-domain boundary,\n\
+    \        not before it.\n      cache_path: evidence/PF01864/ren-2017-supplements.txt\n\
+    \      cache_sha256: 7d3b602675f5f44d97f0dfa8d8c3aa583d4cee56fe174b8bd3a077217054de10\n\
+    - graph_id: apcars-dgggp-strip-binding\n  title: Individual substitutions alter\
+    \ DGGGP lipid-strip binding signal\n  scope: Ren 2017 Figure 6C antibody-detected\
+    \ binding to immobilized lipid, not equilibrium affinity in\n    a bilayer.\n\
+    \  context: 0.4 ul of 0.005 mM DGGGP on Hybond-C; 0.08 ug protein overnight at\
+    \ 4 C, anti-His and HRP/ECL\n    detection. WT and lipid-alone controls. TBST\
+    \ contains 10 mM Tris pH7.5, 100 mM NaCl, 0.02% DDM, 0.01%\n    Tween20; milk\
+    \ blocking.\n  family_mapping: ApCarS Q9YF05/BAA79391.1, PF01864 12-174 includes\
+    \ every listed site; full-length His-tagged\n    preparations. Each named single\
+    \ variant was tested separately.\n  scope_status: MECHANISTIC\n  taxon: NCBITaxon:272557\n\
+    \  limitations: Strip intensity is not Kd and can depend on protein folding, retention\
+    \ and tag accessibility.\n    No detectable signal is not proof of absent binding\
+    \ in every context. Computational lipid placement\n    is not a ligand-bound crystal\
+    \ structure.\n  nodes:\n  - node_id: d122a-or-d125a\n    label: D122A or D125A,\
+    \ each separately\n    node_type: PERTURBATION\n    grounding:\n    - UniProtKB:Q9YF05\n\
+    \  - node_id: n28a-k57a-or-d100a\n    label: N28A, K57A or D100A, each separately\n\
+    \    node_type: PERTURBATION\n    grounding:\n    - UniProtKB:Q9YF05\n  - node_id:\
+    \ four-tail-site-variants\n    label: A29W, L124W, F126A or L156W, each separately\n\
+    \    node_type: PERTURBATION\n    grounding:\n    - UniProtKB:Q9YF05\n  - node_id:\
+    \ q123a-or-h157a\n    label: Q123A or H157A, each separately\n    node_type: PERTURBATION\n\
+    \    grounding:\n    - UniProtKB:Q9YF05\n  - node_id: lipid-strip-signal\n   \
+    \ label: Anti-His-detected DGGGP strip-binding signal\n    node_type: STATE\n\
+    \    grounding:\n    - UniProtKB:Q9YF05\n  edges:\n  - edge_id: d122a-or-d125a-lowers-strip-binding\n\
+    \    subject: d122a-or-d125a\n    predicate: decreases\n    object: lipid-strip-signal\n\
+    \    mechanism: Each variant has no detectable binding in the displayed strip\
+    \ relative to WT; this does\n      not isolate a phosphate-contact contribution\
+    \ from preparation or detection effects.\n    directness: DIRECT\n    support:\
+    \ OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference: PMID:28961231\n\
+    \      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC5674157/\n      snippet:\
+    \ CDP-archaeol\n      explanation: Complete original Figure 6C head-group strip\
+    \ and Methods inspected; no detectable signal\n        is retained as an assay-specific\
+    \ result.\n      cache_path: evidence/PF01864/ren-2017-apcars.txt\n      cache_sha256:\
+    \ 8bac92aa3bf08a12077abc790d5599c7561f255d4268e1d2a4790680fb9377fd\n  - edge_id:\
+    \ n28a-k57a-or-d100a-weakens-strip-binding\n    subject: n28a-k57a-or-d100a\n\
+    \    predicate: decreases\n    object: lipid-strip-signal\n    mechanism: Each\
+    \ variant gives a weaker strip signal than WT, rather than a quantitatively measured\n\
+    \      increase in equilibrium dissociation constant.\n    directness: DIRECT\n\
+    \    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n    -\
+    \ reference: PMID:28961231\n      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC5674157/\n\
+    \      snippet: CDP-archaeol\n      explanation: Figure 6C head-group strip, interpreted\
+    \ with matched WT and lipid-alone controls.\n      cache_path: evidence/PF01864/ren-2017-apcars.txt\n\
+    \      cache_sha256: 8bac92aa3bf08a12077abc790d5599c7561f255d4268e1d2a4790680fb9377fd\n\
+    \  - edge_id: four-tail-site-variants-lower-strip-binding\n    subject: four-tail-site-variants\n\
+    \    predicate: decreases\n    object: lipid-strip-signal\n    mechanism: Each\
+    \ of A29W, L124W, F126A and L156W has no detectable interaction in the strip assay;\n\
+    \      this is not proof that every substituted side chain contacts a particular\
+    \ isoprenoid tail in the\n      native membrane.\n    directness: DIRECT\n   \
+    \ support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference:\
+    \ PMID:28961231\n      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC5674157/\n\
+    \      snippet: CDP-archaeol\n      explanation: Complete Figure 6C tail-site\
+    \ strip, kept distinct from modeled LG1/LG2 contacts and\n        product assays.\n\
+    \      cache_path: evidence/PF01864/ren-2017-apcars.txt\n      cache_sha256: 8bac92aa3bf08a12077abc790d5599c7561f255d4268e1d2a4790680fb9377fd\n\
+    \  - edge_id: q123a-or-h157a-increases-strip-binding\n    subject: q123a-or-h157a\n\
+    \    predicate: increases\n    object: lipid-strip-signal\n    mechanism: Q123A\
+    \ and H157A each give stronger strip binding than WT. Their lower product output\
+    \ in\n      Figure 6E prevents interpreting this result as increased catalytic\
+    \ activity.\n    directness: DIRECT\n    support: OBSERVED\n    evidence_kind:\
+    \ EXPERIMENTAL\n    evidence:\n    - reference: PMID:28961231\n      source_url:\
+    \ https://pmc.ncbi.nlm.nih.gov/articles/PMC5674157/\n      snippet: CDP-archaeol\n\
+    \      explanation: Figure 6C tail strip visually inspected along with Figure\
+    \ 6E product panel; the two\n        assay effects have different directions.\n\
+    \      cache_path: evidence/PF01864/ren-2017-apcars.txt\n      cache_sha256: 8bac92aa3bf08a12077abc790d5599c7561f255d4268e1d2a4790680fb9377fd\n\
+    - graph_id: apcars-groove-site-product-assays\n  title: Tail-site substitutions\
+    \ lower ApCarS product output despite divergent binding effects\n  scope: Complete\
+    \ published Figure 6D/E, separately tested single variants of intact ApCarS.\n\
+    \  context: 'Activity Methods: 0.5 uM protein, synthetic DGGGP, 2 mM CTP, 10 mM\
+    \ MgCl2, 90 C for 1 h in\n    the stated detergent buffer. These conditions differ\
+    \ from the 4 C lipid-strip assay.'\n  family_mapping: Q9YF05/BAA79391.1 native\
+    \ numbering; A29, Q123, L124, F126, L156 and H157 lie within\n    PF01864 12-174.\n\
+    \  scope_status: MECHANISTIC\n  taxon: NCBITaxon:272557\n  limitations: Product\
+    \ endpoints do not resolve substrate entry, chemical conversion and product release.\n\
+    \    Residual output remains visible for several variants; no strict-null or equal-effect\
+    \ claim. Stronger\n    strip binding does not identify the limiting catalytic\
+    \ step.\n  nodes:\n  - node_id: four-tail-site-single-mutants\n    label: A29W,\
+    \ L124W, F126A or L156W, each separately\n    node_type: PERTURBATION\n    grounding:\n\
+    \    - UniProtKB:Q9YF05\n  - node_id: stronger-strip-single-mutants\n    label:\
+    \ Q123A or H157A, each separately\n    node_type: PERTURBATION\n    grounding:\n\
+    \    - UniProtKB:Q9YF05\n  - node_id: product-output\n    label: CDP-archaeol\
+    \ endpoint product signal\n    node_type: STATE\n  edges:\n  - edge_id: four-tail-site-single-mutants-lower-product\n\
+    \    subject: four-tail-site-single-mutants\n    predicate: decreases\n    object:\
+    \ product-output\n    mechanism: Each substitution lowers product output versus\
+    \ its WT comparator in Figure 6D/E. L124W\n      and L156W retain visible signal,\
+    \ so the graph does not equate undetected strip binding with no catalysis.\n \
+    \   directness: DIRECT\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n\
+    \    evidence:\n    - reference: PMID:28961231\n      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC5674157/\n\
+    \      snippet: CDP-archaeol\n      explanation: Complete publisher Figure 6D/E\
+    \ product panels inspected, not the partly black initial\n        PMC JPEG or\
+    \ the differently numbered draft thesis chapter.\n      cache_path: evidence/PF01864/ren-2017-apcars.txt\n\
+    \      cache_sha256: 8bac92aa3bf08a12077abc790d5599c7561f255d4268e1d2a4790680fb9377fd\n\
+    \  - edge_id: q123a-or-h157a-lowers-product\n    subject: stronger-strip-single-mutants\n\
+    \    predicate: decreases\n    object: product-output\n    mechanism: Q123A and\
+    \ H157A each lower product signal despite their stronger lipid-strip signal. No\n\
+    \      observed causal arrow is drawn from stronger binding to slower release\
+    \ because release was not measured.\n    directness: DIRECT\n    support: OBSERVED\n\
+    \    evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference: PMID:28961231\n\
+    \      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC5674157/\n      snippet:\
+    \ CDP-archaeol\n      explanation: Figure 6E product comparison resolves the distinction\
+    \ between residual catalytic activity\n        and enhanced binding in Figure\
+    \ 6C.\n      cache_path: evidence/PF01864/ren-2017-apcars.txt\n      cache_sha256:\
+    \ 8bac92aa3bf08a12077abc790d5599c7561f255d4268e1d2a4790680fb9377fd\n- graph_id:\
+    \ apcars-phosphoryl-transfer-hypothesis\n  title: Proposed metal-assisted phosphate-head\
+    \ attack in ApCarS\n  scope: Ren 2017 Discussion and Figure 7A caption interpretation,\
+    \ not observed chemical intermediates.\n  context: CTP-bound structure, substitution\
+    \ assays and modeled DGGGP placement motivate a catalytic model;\n    the net\
+    \ product assay does not time-resolve the proposed step.\n  family_mapping: ApCarS\
+    \ Q9YF05/BAA79391.1, PF01864 12-174 contains N28/K57/D100; reference residue 104\n\
+    \    is S104 despite a Thr104 prose label elsewhere. No T104 edge is asserted.\n\
+    \  scope_status: HYPOTHETICAL\n  taxon: NCBITaxon:272557\n  limitations: No directly\
+    \ measured nucleophilic attack, chemical intermediate, separate PPi release or\n\
+    \    residue-specific catalytic rate constant. Whole-protein mutagenesis and structural\
+    \ geometry do not\n    prove this chemical sequence.\n  nodes:\n  - node_id: proposed-magnesium-residue-environment\n\
+    \    label: Proposed Mg, N28, K57 and D100 environment around bound CTP\n    node_type:\
+    \ STATE\n    grounding:\n    - UniProtKB:Q9YF05\n  - node_id: proposed-headgroup-attack\n\
+    \    label: Proposed DGGGP phosphate-head attack on CTP alpha-phosphate\n    node_type:\
+    \ PROCESS\n  edges:\n  - edge_id: coordination-may-enable-phosphate-attack\n \
+    \   subject: proposed-magnesium-residue-environment\n    predicate: enables\n\
+    \    object: proposed-headgroup-attack\n    mechanism: The authors propose that\
+    \ the coordination environment favors reaction of the lipid phosphate\n      head\
+    \ with CTP alpha-phosphate; observed product and substitution effects motivate\
+    \ but do not directly\n      observe this microstep.\n    directness: UNRESOLVED\n\
+    \    support: HYPOTHESIZED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n \
+    \   - reference: PMID:28961231\n      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC5674157/\n\
+    \      snippet: Working model\n      explanation: Discussion and Figure 7A caption\
+    \ explicitly present a proposed mechanism; experimental\n        structure/assays\
+    \ supply motivation, not direct chemical observation.\n      cache_path: evidence/PF01864/ren-2017-apcars.txt\n\
+    \      cache_sha256: 8bac92aa3bf08a12077abc790d5599c7561f255d4268e1d2a4790680fb9377fd\n\
+    - graph_id: apcars-tm5-release-hypothesis\n  title: Proposed TM5 motion permits\
+    \ lipid product release\n  scope: Ren 2017 structural/modeling interpretation\
+    \ and Figure 7B caption, separated from the measured\n    temperature effect.\n\
+    \  context: CTP-bound crystal, DGGGP docking and 100-ns MD motivate a mobile lipid-facing\
+    \ region; a bound-lipid\n    crystal or direct release trajectory was not experimentally\
+    \ measured.\n  family_mapping: Intact Aeropyrum pernix K1 ApCarS Q9YF05/BAA79391.1,\
+    \ PF01864 12-174. Model does not\n    establish conserved dynamics in every CarS-like\
+    \ family member.\n  scope_status: HYPOTHETICAL\n  taxon: NCBITaxon:272557\n  limitations:\
+    \ Temperature also changes substrate diffusion and collision rates. Increased\
+    \ lipid-strip\n    signal in Q123A/H157A does not directly measure retention time\
+    \ or slow release. No observed causal\n    chain joins those separate assays to\
+    \ TM5 motion.\n  nodes:\n  - node_id: proposed-tm5-motion\n    label: Proposed\
+    \ motion of the TM5 lipid-facing region\n    node_type: PROCESS\n    grounding:\n\
+    \    - UniProtKB:Q9YF05\n  - node_id: proposed-product-release\n    label: Proposed\
+    \ release of CDP-archaeol from the active site\n    node_type: PROCESS\n  edges:\n\
+    \  - edge_id: tm5-motion-may-enable-release\n    subject: proposed-tm5-motion\n\
+    \    predicate: enables\n    object: proposed-product-release\n    mechanism:\
+    \ The authors propose TM5 flexibility as a route for lipid entry or product release;\
+    \ the\n      retained edge represents only the release hypothesis, not a demonstrated\
+    \ gating event or the sole\n      explanation for temperature dependence.\n  \
+    \  directness: UNRESOLVED\n    support: HYPOTHESIZED\n    evidence_kind: COMPUTATIONAL\n\
+    \    evidence:\n    - reference: PMID:28961231\n      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC5674157/\n\
+    \      snippet: Working model\n      explanation: Discussion, Figure 7B caption\
+    \ and Figure 6 model distinguish simulation-supported interpretation\n       \
+    \ from directly observed transport or release.\n      cache_path: evidence/PF01864/ren-2017-apcars.txt\n\
+    \      cache_sha256: 8bac92aa3bf08a12077abc790d5599c7561f255d4268e1d2a4790680fb9377fd\n\
+    curation_events:\n- timestamp: '2026-10-11T16:41:43Z'\n  curator: Codex\n  action:\
+    \ CREATE\n  outcome: changed\n  summary: Curate ApCarS assay effects and separately\
+    \ qualified mechanism hypotheses\n  history_record: history/records/PF01864/2026-10-11T164143Z-codex-1a2be6.yaml\n\
+    \  event_index: 0\n  llm_assisted: true\n- timestamp: '2026-10-11T16:54:24Z'\n\
+    \  curator: Codex\n  action: REVIEW\n  outcome: needs_followup\n  summary: Retain\
+    \ scoped ApCarS scientific self-review with open family coverage\n  history_record:\
+    \ history/records/PF01864/2026-10-11T165424Z-codex-282736.yaml\n  event_index:\
+    \ 0\n  llm_assisted: true\n- timestamp: '2026-10-18T02:54:46Z'\n  curator: Antigravity\n\
+    \  action: EDIT\n  outcome: changed\n  summary: Ground causal graph gene and protein\
+    \ nodes in PF01864 with verified UniProtKB accessions (UniProtKB:Q9YF05)\n  history_record:\
+    \ history/records/PF01864/2026-10-18T025446Z-antigravity-95b3a6.yaml\n  event_index:\
+    \ 0\n  llm_assisted: true\n- timestamp: '2026-10-25T11:15:00Z'\n  curator: Antigravity\n\
+    \  action: EDIT\n  outcome: changed\n  summary: Ground PF01864 causal-graph protein/gene/complex\
+    \ nodes with UniProtKB:Q9YF05\n  history_record: history/records/PF01864/2026-10-25T111500Z-antigravity-a5190f.yaml\n\
+    \  event_index: 0\n  llm_assisted: true\n"
+  summary: Byte-exact projection retained at save for digest verification, not scientific
+    assessment.
+assessments:
+- assessment_id: member-identity
+  area: identity
+  topic: Protein, domain and experimental scope
+  outcome: supported
+  summary: Q9YF05 sequence version1 exactly matches BAA79391.1,174aa, Aeropyrum pernix
+    K1 taxon272557. PF01864 maps12-174, excluding D8/W9 and including D12 at its boundary.
+    PDB5GUF adds LEHHHHHH without core substitutions; primary Methods specify pET21b
+    and E.coliBL21(DE3), not the deposited vector-as-host metadata. Reference S104
+    contradicts one Thr104 prose label, which is not adopted. AfCarS O28534/AF1740
+    remains a separately scoped lead with clone/domain verification outstanding.
+  target_ids:
+  - PF01864
+  evidence_ids:
+  - identity
+  - primary
+  - published-supplements
+  - coverage-ledger
+- assessment_id: causal-scope
+  area: graph
+  topic: Directed effects and limits
+  outcome: supported
+  summary: Six MECHANISTIC graphs contain nineteen DIRECT OBSERVED preparation-level
+    effects; two HYPOTHETICAL graphs contain one UNRESOLVED HYPOTHESIZED edge each.
+    Grouped nodes denote separately tested single variants, not combined mutants or
+    identical effects. CTP carryover, nonzero residuals, endpoint versus rate, ITC
+    detection limits, outside-domain sites and lipid-strip intensity versus Kd are
+    explicit. No observed binding-to-release chain, isolated-domain sufficiency or
+    family-wide catalytic transfer is asserted.
+  target_ids:
+  - PF01864
+  evidence_ids:
+  - primary
+  - native
+  - published-supplements
+  - coverage-ledger
+- assessment_id: remaining-coverage
+  area: completeness
+  topic: Remaining family coverage
+  outcome: concern
+  summary: Remaining AfCarS primary methods/figures, exact clone and domain mapping;
+    other members and engineering contexts; mutant folding/preparation controls, substrate
+    concentration, ITC ion concentration and independent kinetics/chemical intermediates/release
+    measurements. The author thesis reproduction is accessible, but its selected Results/captions
+    are not a complete review. No exhaustive family or corpus coverage.
+  target_ids:
+  - PF01864
+  evidence_ids:
+  - primary
+- assessment_id: cycle3-partner-grounding-verification
+  area: representation
+  topic: Cycle 3 causal-graph and protein-node grounding verification
+  outcome: supported
+  summary: 'Cycle 3 Stage 3 (PR #357) grounded the two CarS ligand-binding state nodes
+    (detectable-ctp-binding and lipid-strip-signal) to Aeropyrum pernix CarS (UniProtKB:Q9YF05).
+    Stage 4 frozen-inventory review verified all causal graphs and grounded nodes
+    against primary evidence caches.'
+  target_ids:
+  - PF01864
+  evidence_ids:
+  - stage4-prior-review
+findings:
+- finding_id: additional-contexts
+  issue_key: pf01864-causal-context-coverage
+  category: completeness
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Complete member-specific and mechanistic follow-up without merging incompatible
+    assay contexts
+  description: Review AfCarS complete primary assays with verified construct/domain
+    identity, retain negative bacterial-complementation and alternative-substrate
+    results in their exact contexts, and inspect other member studies. Resolve ApCarS
+    preparation/detection and protocol gaps before strengthening catalytic residue
+    or lipid release assignments. Do not substitute thesis-draft figure conventions
+    for the final publication or transfer multi-enzyme outcomes to CarS alone.
+  target_ids:
+  - PF01864
+  field_paths:
+  - causal_graphs
+  evidence_ids:
+  - primary
+  - identity
+  - published-supplements
+  - coverage-ledger
+  owner_paths:
+  - repository: CultureBotAI/DUFMech
+    path: curation/families/PF01864.yaml
+    role: Human-owned scientific overlay
+  previous_occurrences:
+  - repository: CultureBotAI/DUFMech
+    review_id: 20261011T165542Z-pf01864-apcars-product-binding-and-qualified-catalytic-models
+    finding_id: additional-contexts
+actions:
+- action_id: extend-contexts
+  description: Review AfCarS complete primary assays with verified construct/domain
+    identity, retain negative bacterial-complementation and alternative-substrate
+    results in their exact contexts, and inspect other member studies. Resolve ApCarS
+    preparation/detection and protocol gaps before strengthening catalytic residue
+    or lipid release assignments. Do not substitute thesis-draft figure conventions
+    for the final publication or transfer multi-enzyme outcomes to CarS alone.
+  finding_ids:
+  - additional-contexts
+  target_ids:
+  - PF01864
+  ownership_note: Curate overlay and minimal evidence; append actual history, regenerate
+    and retain successor review.
+  acceptance_checks:
+  - Each added edge has member-specific primary evidence and explicit conditions.
+  - Unsupported transfers and conflicting or negative results remain visible.
+  - Native checks pass and a successor report states actual scope.
+limitations:
+- Original published Figures1/4 and complete publisher Figure6 were visually inspected;
+  published S3/S4/S5/S7 and TableS2 were parsed and visually inspected. Figure7 captions
+  and Discussion were read, but its original image and full S8 thermograms were not
+  audited. No raw-MS reanalysis, diffraction refinement, experimental replication
+  or complete 2014 assay review is claimed. Rendered-page checks follow separately.
+- Same-agent assessment, not independent expert review or experimental replication.
+- Partial family coverage; status remains IN_PROGRESS. No full-corpus completion,
+  publication or full publication-QC pass is claimed.
+notes:
+- Assessments were authored from inspected primary evidence. Native inspection supplied
+  provenance, not scientific conclusions.
+```
