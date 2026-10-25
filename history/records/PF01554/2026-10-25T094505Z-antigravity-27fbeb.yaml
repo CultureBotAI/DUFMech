@@ -1,0 +1,29 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01554
+  path: curation/families/PF01554.yaml
+session:
+  id: 2026-10-25T094505Z-antigravity-27fbeb
+  timestamp: '2026-10-25T09:45:05Z'
+  actors:
+  - type: ai_agent
+    name: Antigravity
+    model: Claude Opus 4.6
+    agent_tool: Antigravity
+events:
+- type: EDIT
+  outcome: changed
+  summary: Ground wt-low-concentration-binding and sodium-enhancement-binding ACTIVITY
+    nodes in PF01554 causal graph to UniProtKB:Q9KRU4
+  details: Grounded the wt-low-concentration-binding and sodium-enhancement-binding
+    (ACTIVITY) readout nodes in norm-vc-sodium-binding-and-substitutions to UniProtKB:Q9KRU4
+    (Vibrio cholerae NorM-VC VC1634, NCBITaxon:243277), matching the verified purified
+    recombinant NorM-VC protein grounded on the PERTURBATION nodes in the same graph
+    and on wt-ph-series-anisotropy in Raturi et al. 2021 (PMID:33976372).
+  sections:
+  - causal_graphs
+links:
+  urls:
+  - https://www.nature.com/articles/s42003-021-02081-6
+  - https://www.ebi.ac.uk/interpro/api/protein/uniprot/Q9KRU4/entry/pfam/PF01554/

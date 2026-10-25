@@ -136,6 +136,8 @@ causal_graphs:
       - node_id: current-fraction-after-egta
         label: Fraction of calcium-present current retained after EGTA
         node_type: ACTIVITY
+        grounding:
+          - UniProtKB:A0A8V0ZZU7
     edges:
       - edge_id: triplea-increases-retained-current-fraction
         subject: triplea-neck-substitution
@@ -204,6 +206,8 @@ causal_graphs:
       - node_id: chloride-associated-acma-quench
         label: Chloride-flux-associated ACMA fluorescence quench
         node_type: ACTIVITY
+        grounding:
+          - UniProtKB:A0A8V0ZZU7
     edges:
       - edge_id: clasp-substitution-decreases-coupled-flux
         subject: d301a-d304a-clasp-substitution

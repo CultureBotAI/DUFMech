@@ -73,6 +73,8 @@ causal_graphs:
       - node_id: dcoa-series-apparent-turnover
         label: Apparent turnover from the DCoA-varied kinetic series
         node_type: ACTIVITY
+        grounding:
+          - UniProtKB:P9WPA3
     edges:
       - edge_id: r140a-reported-turnover-loss-contested
         subject: r140a-in-dcoa-series
@@ -157,6 +159,8 @@ causal_graphs:
       - node_id: atp-series-apparent-turnover
         label: Apparent turnover from the ATP-varied kinetic series
         node_type: ACTIVITY
+        grounding:
+          - UniProtKB:P9WPA3
     edges:
       - edge_id: l114a-decreases-atp-series-turnover
         subject: l114a-in-atp-series

@@ -143,6 +143,8 @@ causal_graphs:
   - node_id: mutant-assay-ssdna-digestion
     label: Digestion of 20-nt ssDNA relative to the WT preparation
     node_type: ACTIVITY
+    grounding:
+    - UniProtKB:P27859
   edges:
   - edge_id: h62a-decreases-ssdna-digestion
     subject: h62a-substitution
@@ -328,5 +330,14 @@ curation_events:
   outcome: changed
   summary: Ground causal graph gene and protein nodes in PF01026 with verified UniProtKB accessions (UniProtKB:P27859)
   history_record: history/records/PF01026/2026-10-18T025446Z-antigravity-d8f462.yaml
+  event_index: 0
+  llm_assisted: true
+- timestamp: '2026-10-25T09:45:01Z'
+  curator: Antigravity
+  action: EDIT
+  outcome: changed
+  summary: Ground mutant-assay-ssdna-digestion ACTIVITY node in tatd-residue-substitution-digestion-effects
+    to UniProtKB:P27859
+  history_record: history/records/PF01026/2026-10-25T094501Z-antigravity-2a4acb.yaml
   event_index: 0
   llm_assisted: true

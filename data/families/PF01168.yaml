@@ -88,6 +88,8 @@ causal_graphs:
   - node_id: detectable-racemase-activity
     label: Detectable alanine-racemization activity
     node_type: ACTIVITY
+    grounding:
+    - UniProtKB:P10724
   edges:
   - edge_id: alr-d-substrate-produces-l-alanine
     subject: holo-alr-with-d-alanine
@@ -211,6 +213,8 @@ causal_graphs:
   - node_id: recovered-d-to-l-racemase
     label: Recovered D-to-L racemase activity
     node_type: ACTIVITY
+    grounding:
+    - UniProtKB:P10724
   edges:
   - edge_id: pmp-pyruvate-treatment-increases-racemase-activity
     subject: apo-alr-pmp-pyruvate-treatment
@@ -322,5 +326,14 @@ curation_events:
   outcome: changed
   summary: Ground causal graph gene and protein nodes in PF01168 with verified UniProtKB accessions (UniProtKB:P10724)
   history_record: history/records/PF01168/2026-10-18T025446Z-antigravity-311db4.yaml
+  event_index: 0
+  llm_assisted: true
+- timestamp: '2026-10-25T09:45:04Z'
+  curator: Antigravity
+  action: EDIT
+  outcome: changed
+  summary: Ground detectable-racemase-activity and recovered-d-to-l-racemase ACTIVITY nodes in PF01168
+    causal graphs to UniProtKB:P10724
+  history_record: history/records/PF01168/2026-10-25T094504Z-antigravity-aac98c.yaml
   event_index: 0
   llm_assisted: true
