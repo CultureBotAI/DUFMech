@@ -1,0 +1,124 @@
+schema_version: 1.0.0
+repository_key: dufmech
+github_repository: CultureBotAI/DUFMech
+run_id: mech-goal-sequence-20261019
+cycle: 3
+stage: 5
+revision: 1
+outcome: completed
+summary: Consumed the accepted Cycle 3 Stage 4 review outputs and all 4 carried-forward findings in DUFMech, grouped them into 4 family repair-ownership groups, deduplicated against all 222 open and closed GitHub issues, created Issues #361, #362, #363, and #364, remediated curation/families/PF01174.yaml, PF01680.yaml, PF01867.yaml, and PF01977.yaml with canonical EDIT history sidecars and native projection/inventory regeneration, and verified each resolution with fresh successor structured reviews (20261025T161300Z-pf01174-c3s5-remediation-review, 20261025T161310Z-pf01680-c3s5-remediation-review, 20261025T161320Z-pf01867-c3s5-remediation-review, 20261025T161330Z-pf01977-c3s5-remediation-review) while preserving all original Stage 4 reports byte-identically.
+source_revision: bd496e75654f5c7e8f76061da72f7e21eed98c8e
+scope_frozen_at: '2026-10-25T16:13:30Z'
+previous_evidence:
+  path: reviews/workflow/mech-goal-sequence-20261019/cycle-000003/stage-04/revision-0001/evidence.yaml
+  sha256: 8aebe6ef59eed207165de07b42f41a707192ebe1f137d3b54004dda4d91ee834
+artifacts:
+- path: reviews/workflow/mech-goal-sequence-20261019/cycle-000003/stage-05/revision-0001/issue_map.md
+  sha256: e931e9e34929c7fb131d9fdb2cbfa631653a3726b1b0ba77b35cf60bc1d50c40
+  kind: issue_map
+- path: reviews/workflow/mech-goal-sequence-20261019/cycle-000003/stage-05/revision-0001/validation.md
+  sha256: 4a7a2cb67204fdf847a01f7d33d2189b1b254179a321fa510f182057b131865f
+  kind: validation
+- path: reviews/workflow/mech-goal-sequence-20261019/cycle-000003/stage-05/revision-0001/remediation_coverage.json
+  sha256: f26b8d1ced82d7a1a0040ceb076c64c34359794f8b5121fd72b8c89fc2e52853
+  kind: supporting
+- path: reviews/structured/20261025T161300Z-pf01174-c3s5-remediation-review/review.yaml
+  sha256: 2e0501ffd1fb8928b88024a608cc9a64be0bac52dbd2b47d2089e68fec97f004
+  kind: review
+- path: reviews/structured/20261025T161300Z-pf01174-c3s5-remediation-review/review.md
+  sha256: 4ac3128ffadf95186f729a61912309ae5ffca87351bc5e1ec61b95ed345b1b2e
+  kind: review
+- path: reviews/structured/20261025T161310Z-pf01680-c3s5-remediation-review/review.yaml
+  sha256: 30e9a989625a9dafaee771ec64781ee65a5a3dbd22c8b71ac52fb6a3a9457bef
+  kind: review
+- path: reviews/structured/20261025T161310Z-pf01680-c3s5-remediation-review/review.md
+  sha256: 8bac71f56faf7aba27f3241a016c675f7c1bb9278a2c9bf83f0f6e1d919ae016
+  kind: review
+- path: reviews/structured/20261025T161320Z-pf01867-c3s5-remediation-review/review.yaml
+  sha256: 4b06cb509d347e2afec826d7d9a456e8d39dade6fca158506638da808ba7eed9
+  kind: review
+- path: reviews/structured/20261025T161320Z-pf01867-c3s5-remediation-review/review.md
+  sha256: 8d75758989f43f5909658955d1dbb8888842d8617aad683b3a7f67e998c225b3
+  kind: review
+- path: reviews/structured/20261025T161330Z-pf01977-c3s5-remediation-review/review.yaml
+  sha256: bdbca30db9d1141cc2151ba4040c66cfb8b523f31ad3531f07a6c2501f8e72e9
+  kind: review
+- path: reviews/structured/20261025T161330Z-pf01977-c3s5-remediation-review/review.md
+  sha256: 9ca91c7e5f31a14f29c37608e0f8ace088ab77ed1d34ffcdcf13de9d8fd875e4
+  kind: review
+findings:
+- finding_id: pf01174-pdxst-partner-and-acivicin-nodes-missing-grounding
+  status: resolved
+  summary: Grounded 6 joint YaaD/PdxS + YaaE/PdxT PLP synthase and acivicin inhibition nodes across 4 graphs in curation/families/PF01174.yaml to [UniProtKB:P37527, UniProtKB:P37528], appended canonical EDIT history, regenerated data/families/PF01174.yaml, and verified in successor structured review 20261025T161300Z-pf01174-c3s5-remediation-review.
+  carried_from: pf01174-pdxst-partner-and-acivicin-nodes-missing-grounding
+  group_id: c3s5-pf01174-grounding
+  issue_url: https://github.com/CultureBotAI/DUFMech/issues/361
+  disposition: Resolved in Issue #361 via native overlay curation, canonical EDIT history, projection regeneration, and fresh successor structured review.
+- finding_id: pf01680-joint-pdx1-pdx2-nodes-missing-partner-grounding
+  status: resolved
+  summary: Grounded 4 joint Pdx1/PdxS + Pdx2/PdxT complex nodes across 4 graphs in curation/families/PF01680.yaml to [UniProtKB:P37527, UniProtKB:P37528], appended canonical EDIT history, regenerated data/families/PF01680.yaml, and verified in successor structured review 20261025T161310Z-pf01680-c3s5-remediation-review.
+  carried_from: pf01680-joint-pdx1-pdx2-nodes-missing-partner-grounding
+  group_id: c3s5-pf01680-grounding
+  issue_url: https://github.com/CultureBotAI/DUFMech/issues/362
+  disposition: Resolved in Issue #362 via native overlay curation, canonical EDIT history, projection regeneration, and fresh successor structured review.
+- finding_id: pf01867-cas2-partner-and-complex-nodes-missing-grounding
+  status: resolved
+  summary: Grounded 6 Cas1-Cas2 complex and Cas2-perturbation nodes across 4 graphs in curation/families/PF01867.yaml to [UniProtKB:Q46896, UniProtKB:P45956] (and [UniProtKB:P45956] for cas2-deletion), appended canonical EDIT history, regenerated data/families/PF01867.yaml, and verified in successor structured review 20261025T161320Z-pf01867-c3s5-remediation-review.
+  carried_from: pf01867-cas2-partner-and-complex-nodes-missing-grounding
+  group_id: c3s5-pf01867-grounding
+  issue_url: https://github.com/CultureBotAI/DUFMech/issues/363
+  disposition: Resolved in Issue #363 via native overlay curation, canonical EDIT history, projection regeneration, and fresh successor structured review.
+- finding_id: pf01977-shvdccd-cognate-partner-and-l182v-missing-partner-grounding
+  status: resolved
+  summary: Grounded 5 joint ShVdcCD complex nodes across 3 graphs in curation/families/PF01977.yaml to [UniProtKB:Q9S4M7, UniProtKB:Q4R102], appended canonical EDIT history, regenerated data/families/PF01977.yaml, and verified in successor structured review 20261025T161330Z-pf01977-c3s5-remediation-review.
+  carried_from: pf01977-shvdccd-cognate-partner-and-l182v-missing-partner-grounding
+  group_id: c3s5-pf01977-grounding
+  issue_url: https://github.com/CultureBotAI/DUFMech/issues/364
+  disposition: Resolved in Issue #364 via native overlay curation, canonical EDIT history, projection regeneration, and fresh successor structured review.
+groups:
+- group_id: c3s5-pf01174-grounding
+  status: resolved
+  summary: Remediated missing partner grounding on 6 joint YaaD/PdxS + YaaE/PdxT PLP synthase and acivicin inhibition nodes in PF01174 (Issue #361) and verified via native projection regeneration and successor structured review 20261025T161300Z-pf01174-c3s5-remediation-review.
+  issue_url: https://github.com/CultureBotAI/DUFMech/issues/361
+  finding_ids:
+  - pf01174-pdxst-partner-and-acivicin-nodes-missing-grounding
+  resolution_evidence:
+  - reviews/workflow/mech-goal-sequence-20261019/cycle-000003/stage-05/revision-0001/issue_map.md
+  - reviews/workflow/mech-goal-sequence-20261019/cycle-000003/stage-05/revision-0001/validation.md
+  - reviews/workflow/mech-goal-sequence-20261019/cycle-000003/stage-05/revision-0001/remediation_coverage.json
+  - reviews/structured/20261025T161300Z-pf01174-c3s5-remediation-review/review.yaml
+- group_id: c3s5-pf01680-grounding
+  status: resolved
+  summary: Remediated missing partner grounding on 4 joint Pdx1/PdxS + Pdx2/PdxT complex nodes in PF01680 (Issue #362) and verified via native projection regeneration and successor structured review 20261025T161310Z-pf01680-c3s5-remediation-review.
+  issue_url: https://github.com/CultureBotAI/DUFMech/issues/362
+  finding_ids:
+  - pf01680-joint-pdx1-pdx2-nodes-missing-partner-grounding
+  resolution_evidence:
+  - reviews/workflow/mech-goal-sequence-20261019/cycle-000003/stage-05/revision-0001/issue_map.md
+  - reviews/workflow/mech-goal-sequence-20261019/cycle-000003/stage-05/revision-0001/validation.md
+  - reviews/workflow/mech-goal-sequence-20261019/cycle-000003/stage-05/revision-0001/remediation_coverage.json
+  - reviews/structured/20261025T161310Z-pf01680-c3s5-remediation-review/review.yaml
+- group_id: c3s5-pf01867-grounding
+  status: resolved
+  summary: Remediated missing Cas2 partner grounding on 6 Cas1-Cas2 complex and Cas2-perturbation nodes in PF01867 (Issue #363) and verified via native projection regeneration and successor structured review 20261025T161320Z-pf01867-c3s5-remediation-review.
+  issue_url: https://github.com/CultureBotAI/DUFMech/issues/363
+  finding_ids:
+  - pf01867-cas2-partner-and-complex-nodes-missing-grounding
+  resolution_evidence:
+  - reviews/workflow/mech-goal-sequence-20261019/cycle-000003/stage-05/revision-0001/issue_map.md
+  - reviews/workflow/mech-goal-sequence-20261019/cycle-000003/stage-05/revision-0001/validation.md
+  - reviews/workflow/mech-goal-sequence-20261019/cycle-000003/stage-05/revision-0001/remediation_coverage.json
+  - reviews/structured/20261025T161320Z-pf01867-c3s5-remediation-review/review.yaml
+- group_id: c3s5-pf01977-grounding
+  status: resolved
+  summary: Remediated missing partner grounding on 5 joint ShVdcCD complex nodes in PF01977 (Issue #364) and verified via native projection regeneration and successor structured review 20261025T161330Z-pf01977-c3s5-remediation-review.
+  issue_url: https://github.com/CultureBotAI/DUFMech/issues/364
+  finding_ids:
+  - pf01977-shvdccd-cognate-partner-and-l182v-missing-partner-grounding
+  resolution_evidence:
+  - reviews/workflow/mech-goal-sequence-20261019/cycle-000003/stage-05/revision-0001/issue_map.md
+  - reviews/workflow/mech-goal-sequence-20261019/cycle-000003/stage-05/revision-0001/validation.md
+  - reviews/workflow/mech-goal-sequence-20261019/cycle-000003/stage-05/revision-0001/remediation_coverage.json
+  - reviews/structured/20261025T161330Z-pf01977-c3s5-remediation-review/review.yaml
+carry_forward_ids: []
+infra_tasks: []

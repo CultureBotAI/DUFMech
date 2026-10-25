@@ -1,0 +1,758 @@
+schema_version: 1.0.0
+review_id: 20261025T161320Z-pf01867-c3s5-remediation-review
+title: PF01867 Cycle 3 Stage 5 grouped-remediation record review
+started_at: '2026-10-25T16:13:19Z'
+finished_at: '2026-10-25T16:13:20Z'
+reviewer:
+  identity: Antigravity
+  kind: agent
+  model: Claude-Opus-4.6
+  independence: self_review
+  independence_basis: Cycle 3 Stage 5 grouped-remediation record review by Antigravity
+    auditing Stage 4 review findings, updated curation overlay, canonical EDIT history,
+    and regenerated projection at Git revision bd496e75654f5c7e8f76061da72f7e21eed98c8e.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: pass_with_limitations
+native_verdict: NEEDS_FOLLOWUP
+scientific_review: true
+summary: 'Eight graphs retain fourteen observed effects, nine direct purified-assay
+  effects and five indirect cellular or lysate readouts. Exact reference identity,
+  the narrow current Pfam match, substrate and metal context, half-site product limits,
+  K224A discordance and later IHF evidence prevent universal biochemical claims. Remaining
+  members and contexts need follow-up; retain IN_PROGRESS. Cycle 3 Stage 3 (PR #357)
+  grounded node add-cas2 (''Add Cas2 to the Cas1 donor-target reaction in manganese'')
+  in cas2-enhancement-in-manganese only to Escherichia coli K-12 Cas1 (UniProtKB:Q46896,
+  CAS1_ECOLI) and had omitted partner E. coli K-12 Cas2 (UniProtKB:P45956, CAS2_ECOLI).
+  Stage 4 frozen-inventory audit identified an open grounding finding (pf01867-cas2-partner-and-complex-nodes-missing-grounding)
+  covering six Cas2 and Cas1-Cas2 complex nodes across four causal graphs (joint-reaction
+  and cas2-deletion in cas1-cas2-purified-integration, add-cas2 in cas2-enhancement-in-manganese,
+  coexpress-cas1-cas2 in cas1-cas2-cellular-acquisition, and r252e and cas2-recovery
+  in cas1-r252e-lysate-coisolation) that had omitted partner Cas2 (UniProtKB:P45956).
+  Stage 5 grouped remediation resolved cas2-partner-and-complex-nodes-missing-grounding
+  (Issue #363) via native overlay curation, canonical EDIT history, and projection
+  regeneration.'
+repository: CultureBotAI/DUFMech
+kind: record
+source:
+  git_revision: bd496e75654f5c7e8f76061da72f7e21eed98c8e
+  state: working_tree
+  snapshot_id: interpro-pfam-duf-2026-10-10
+  inputs:
+  - path: curation/families/PF01867.yaml
+    sha256: b0504f7681579c19eab07b07cbdc8094d4a050cf73352ef1dceaca15af934a14
+    role: context
+  - path: data/families/PF01867.yaml
+    sha256: 7854bd7a109bbd864ef95c0217ba53f020c8bd18a94c1dd84af50ce8189949b8
+    role: target
+  - path: data/worklists/interpro-pfam-duf-2026-10-10.json
+    sha256: 17fb625876c9326ed284263a47bcd84e0d7844a31c040dc06cd2260c36f1c383
+    role: context
+  - path: data/worklists/interpro-pfam-duf-2026-10-10.manifest.json
+    sha256: 31c07ffb6a169c851ea0e6e9dd527a10c04028eafeb29187bd62dc2ae848696e
+    role: context
+  - path: data/worklists/interpro-pfam-duf-2026-10-10.tsv
+    sha256: be023c8dd9d8d3864926b5032d6f7e87a884b1a567391696822dbbecc692dae7
+    role: context
+  - path: evidence/PF01867/cas1-gap-ledger.txt
+    sha256: fcf5ca13ee088deafb8ed51c5144718cf64c8e9984899b1e35a62925986a348a
+    role: context
+  - path: evidence/PF01867/cas1-identity.txt
+    sha256: 9517dd3c970796572cd0edddb26b85e777814a73cb772454acaf3bdb62a89dea
+    role: context
+  - path: evidence/PF01867/nunez-2014-acquisition.txt
+    sha256: a3fce8f923833fade4c50d9b1bb2d1d213c819a5ecccd2d54485b49331be7792
+    role: context
+  - path: evidence/PF01867/nunez-2015-integration.txt
+    sha256: 2742611e7b117b36fce70cba810483e901f2bc10eef2e2a8b8ccac18e393db50
+    role: context
+  - path: history/records/PF01867/2026-10-25T160820Z-antigravity-c3s5a3.yaml
+    sha256: 6b33b17be3b7912957e09d4798a4cc9c0f09d8a59a00c5be7acfc9102c30c0be
+    role: context
+  - path: reviews/structured/20261011T173730Z-pf01867-cas1-integration-and-cellular-contexts/review.yaml
+    sha256: c599315c8089bfaf1355c91e5cb71483c1a6023b0df883119c863d4d5af1bca0
+    role: context
+  - path: reviews/structured/20261025T132039Z-pf01867-c3s4-record-review/review.yaml
+    sha256: 1e280e9fab049abe25829c2b2fb4c2cf5661fbec2fd4447b4ae0763156a59819
+    role: context
+targets:
+- target_id: PF01867
+  path: data/families/PF01867.yaml
+  label: PF01867
+  kind: generated
+  record_class: FamilyRecord
+  owner_paths:
+  - repository: CultureBotAI/DUFMech
+    path: curation/families/PF01867.yaml
+    role: Maintained scientific overlay; create only with authorized curation.
+  - repository: CultureBotAI/DUFMech
+    path: src/dufmech/records.py
+    role: Projection generator; frozen snapshot identity is not hand-edited.
+  semantic_digest:
+    algorithm: dufmech-record-content-v1
+    sha256: ded6543619f491b334d306cd9dc546c48f54662a23cf2a866395eec836f93613
+    description: Canonical JSON SHA-256 of effective FamilyRecord excluding only curation_status,
+      review_id and curation_events.
+scope:
+  description: Scientific assessment of the retained edges, exact member mapping,
+    primary evidence, context and causal limits.
+  selection: Nunez2014 Results and Online Methods with original Figures1/3/4; Nunez2015
+    main Results/Methods and original Figures1/2/3 plus ExtendedData2/3. Later2016
+    primary abstract and selected2017 Results/captions qualify topology and targeting,
+    without new IHF edges.
+  coverage: partial
+  population_size: 1
+  reviewed_target_ids:
+  - PF01867
+  exclusions:
+  - target: Remaining family members and uncurated experimental contexts
+    reason: Exact assay-clone sequences,2014 supplementary controls, ED5 image resolution,
+      full2016 IHF methods/figures,2017 targeting/recognition perturbations,2015 capture
+      structures, DNA-repair activity, bacterial/archaeal orthologs, typeI-F and typeV-C
+      systems and casposases remain open. The S.pyogenes2021 disintegration paper
+      is not transferred to E.coli. No exhaustive family review or independent endorsement.
+checks:
+- check_id: native-projection
+  name: Native projection and overlay validation
+  command: validate_record(record, root); assert projection graphs and discussions
+    match overlay
+  status: passed
+  required: true
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Current projection validates and preserves the authored graph and discussion
+    content exactly.
+  target_ids:
+  - PF01867
+  evidence_ids:
+  - native
+evidence:
+- evidence_id: primary
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC4359072/
+  locator: Main Figures1B-E/2B-C/G-H/3A-C, ExtendedData2B/3B-C, integration/radiolabel/disintegration
+    Methods
+  accessed_at: '2026-10-11T17:37:30Z'
+  support: supports
+  snapshot_sha256: 2742611e7b117b36fce70cba810483e901f2bc10eef2e2a8b8ccac18e393db50
+  summary: Purified joint Cas1-Cas2 supports donor integration; H208A,D221A and partner
+    deletion reduce it. Cas2 enhances low Cas1-alone activity in Mn. Dual donor3prime
+    capping, isolated single strands and linear target reduce the IHF-absent reaction.
+    Cas1 releases donor-sized DNA from a synthetic Y intermediate. BandX and predominantly
+    half-site endpoints do not establish a complete cellular integration pathway.
+- evidence_id: identity
+  kind: database
+  reference: https://www.ebi.ac.uk/interpro/api/entry/pfam/protein/uniprot/Q46896/
+  locator: Accession and domain locations; paired UniProt identity facts
+  accessed_at: '2026-10-11T17:37:30Z'
+  support: supports
+  snapshot_sha256: 9517dd3c970796572cd0edddb26b85e777814a73cb772454acaf3bdb62a89dea
+  summary: Q46896 sequence version1, NP_417235.1 and PDB4P6I entity2 agree exactly
+    over305 aa. Published donor is MG1655 and cellular host is BL21-AI; taxon83333
+    describes the donor reference. The complete current Pfam entries response contains
+    only PF01867 at131-226, including E141/H208/D218/D221/K224 but excluding R245/R252/R256
+    and the terminal tail. These whole-protein effects do not establish isolated-domain
+    sufficiency or independent clone resequencing.
+- evidence_id: cellular-primary
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC4075942/
+  locator: Original Figures1B/3C-D-F/4C and Online Methods
+  summary: Joint expression supports locus expansion; in-domain single substitutions
+    and outside-match charge reversals reduce it. K224A is cellular-assay-specific.
+    R252E reduces lysate Cas2 recovery in a separate co-IP comparison, not a purified
+    affinity assay. Alanine and tail controls constrain overgeneralization.
+  accessed_at: '2026-10-11T17:37:30Z'
+  support: supports
+  snapshot_sha256: a3fce8f923833fade4c50d9b1bb2d1d213c819a5ecccd2d54485b49331be7792
+- evidence_id: later-evidence-and-gaps
+  kind: search
+  reference: evidence/PF01867/cas1-gap-ledger.txt
+  locator: Later primary qualification, image/caption mismatch, access limits and
+    member-specific follow-up leads
+  search_scope: PF01867/Cas_Cas1, E.coli Cas1 integration/disintegration, exact IHF
+    paper title and later integration structures; primary2014/2015 full methods/results
+    with selected original figures,2016 abstract and selected2017 Results/captions;
+    ignored/hidden-inclusive repository search on2026-10-11.
+  summary: Later IHF evidence prevents universal supercoiling or leader-distal-first
+    claims. Original-image mismatch limits ED5 verification but not main Figure2H
+    donor release. Other members and systems remain leads, not negative functional
+    results or inferred complete reviews.
+  accessed_at: '2026-10-11T17:37:30Z'
+  support: supports
+  snapshot_sha256: fcf5ca13ee088deafb8ed51c5144718cf64c8e9984899b1e35a62925986a348a
+- evidence_id: native
+  kind: validation
+  reference: src/dufmech/records.py
+  locator: Current projection validation and overlay equivalence in this retained-review
+    session
+  accessed_at: '2026-10-11T17:37:30Z'
+  support: supports
+  summary: Closed schema, canonical history and applicable graph/evidence checks pass.
+    Curated graphs and discussions match the overlay; scientific validity is assessed
+    separately.
+- evidence_id: stage4-prior-review
+  kind: prior_review
+  reference: reviews/structured/20261011T173730Z-pf01867-cas1-integration-and-cellular-contexts/review.yaml
+  locator: Predecessor structured review 20261011T173730Z-pf01867-cas1-integration-and-cellular-contexts
+  accessed_at: '2026-10-25T13:20:39Z'
+  support: supports
+  snapshot_sha256: c599315c8089bfaf1355c91e5cb71483c1a6023b0df883119c863d4d5af1bca0
+  summary: Predecessor review 20261011T173730Z-pf01867-cas1-integration-and-cellular-contexts
+    verified and linked for finding continuity and semantic-digest progression on
+    PF01867.
+- evidence_id: stage5-predecessor-review
+  kind: prior_review
+  reference: reviews/structured/20261025T132039Z-pf01867-c3s4-record-review/review.yaml
+  locator: Stage 4 predecessor structured review 20261025T132039Z-pf01867-c3s4-record-review
+  accessed_at: '2026-10-25T16:13:20Z'
+  support: supports
+  snapshot_sha256: 1e280e9fab049abe25829c2b2fb4c2cf5661fbec2fd4447b4ae0763156a59819
+  summary: Predecessor Stage 4 structured review 20261025T132039Z-pf01867-c3s4-record-review
+    identifying cas2-partner-and-complex-nodes-missing-grounding for Stage 5 grouped
+    remediation.
+- evidence_id: stage5-remediation-history
+  kind: record_content
+  reference: history/records/PF01867/2026-10-25T160820Z-antigravity-c3s5a3.yaml
+  locator: Canonical EDIT history event for Stage 5 remediation
+  accessed_at: '2026-10-25T16:13:20Z'
+  support: supports
+  snapshot_sha256: 6b33b17be3b7912957e09d4798a4cc9c0f09d8a59a00c5be7acfc9102c30c0be
+  summary: 'Resolved Issue #363 (pf01867-cas2-partner-and-complex-nodes-missing-grounding)
+    by grounding Escherichia coli K-12 MG1655 partner Cas2 (UniProtKB:P45956) and
+    Cas1-Cas2 complex subunits (UniProtKB:Q46896, UniProtKB:P45956) on joint-reaction
+    and cas2-deletion in cas1-cas2-purified-integration, add-cas2 in cas2-enhancement-in-manganese,
+    coexpress-cas1-cas2 in cas1-cas2-cellular-acquisition, and r252e and cas2-recovery
+    in cas1-r252e-lysate-coisolation in curation/families/PF01867.yaml, recording
+    canonical EDIT history, and regenerating data/families/PF01867.yaml and reports/causal_graphs/inventory.json.'
+- evidence_id: duf-projection-pf01867
+  kind: record_content
+  reference: data/families/PF01867.yaml
+  locator: dufmech-reviewed-projection-v1
+  accessed_at: '2026-10-25T16:13:20Z'
+  support: context_only
+  snapshot_sha256: 7854bd7a109bbd864ef95c0217ba53f020c8bd18a94c1dd84af50ce8189949b8
+  quote: "id: Pfam:PF01867\npfam_id: PF01867\nname: CRISPR associated protein Cas1\n\
+    short_name: Cas_Cas1\nseed_status: EX_DUF\ncharacterization_status: UNSCORED\n\
+    curation_status: IN_PROGRESS\nsource_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01867\n\
+    counters:\n  proteins: 8983\n  matches: 9654\n  proteomes: 6519\n  taxa: 11546\n\
+    \  structures: 74\n  alphafold_models: 6264\n  domain_architectures: 20\nprovenance:\n\
+    \  snapshot_id: interpro-pfam-duf-2026-10-10\n  path: data/worklists/interpro-pfam-duf-2026-10-10.json\n\
+    \  sha256: 17fb625876c9326ed284263a47bcd84e0d7844a31c040dc06cd2260c36f1c383\n\
+    \  generated_at: '2026-10-10T07:44:21.614711Z'\n  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/\n\
+    interpro_id: InterPro:IPR002729\ndescription: Clustered regularly interspaced\
+    \ short palindromic repeats (CRISPRs) are a family of DNA direct\n  repeats found\
+    \ in many prokaryotic genomes. This family of proteins corresponds to Cas1, a\
+    \ CRISPR-associated\n  protein. Cas1 may be involved in linking DNA segments to\
+    \ CRISPR [[cite:PUB00043290]].\ncuration_history: history/records/PF01867\ndiscussions:\n\
+    - discussion_id: cas1-context-dependent-mechanism\n  prompt: Resolve assay-specific\
+    \ differences before extending Cas1 into a universal integration pathway.\n  kind:\
+    \ CURATION_TODO\n  status: OPEN\n  rationale: Cellular K224A loss, retained purified\
+    \ K224A activity, IHF-dependent linear-target integration\n    and later structural\
+    \ work constrain older biochemical generalizations.\n  evidence:\n  - reference:\
+    \ PMID:24793649\n    supports: PARTIAL\n    evidence_source: original_figures_and_online_methods\n\
+    \    explanation: Figure4C cellular K224A differs from the original2015 ED3 purified\
+    \ comparison; outside-match\n      interface effects remain intact-protein phenotypes.\n\
+    \  - reference: PMID:27211867\n    supports: PARTIAL\n    evidence_source: primary_abstract_only\n\
+    \    explanation: IHF permits linear-DNA integration and leader-border targeting;\
+    \ inaccessible publisher\n      fulltext prevents a complete new IHF graph assessment.\n\
+    \  - reference: PMID:28729350\n    supports: PARTIAL\n    evidence_source: selected_primary_results_and_figure_captions\n\
+    \    explanation: Target-dose and upstream-recognition effects require original\
+    \ image and method review\n      before extending the graph; structural contacts\
+    \ alone are not observed event order.\n  notes: See evidence/PF01867/cas1-gap-ledger.txt.\
+    \ Keep half-site and full-site assignments distinct,\n    retain partner/cofactor\
+    \ contexts, and verify alternative members before family transfer. No complete\n\
+    \    immunity chain is claimed.\n  posed_by: Codex\n  posed_date: '2026-10-11'\n\
+    - discussion_id: cas1-primary-source-and-member-coverage\n  prompt: Resolve the\
+    \ ED5 image mismatch and inspect remaining Cas1 members and experimental contexts.\n\
+    \  kind: CURATION_TODO\n  status: OPEN\n  rationale: The original-image support\
+    \ for target rejoining is unresolved, and the retained E.coli experiments\n  \
+    \  do not exhaust a diverse bacterial and archaeal family.\n  evidence:\n  - reference:\
+    \ PMID:25707795\n    supports: PARTIAL\n    evidence_source: matched_main_figures_and_mismatched_extended_image_links\n\
+    \    explanation: Main Figure2H supports donor release; the image linked under\
+    \ ED5 instead shows ED6 substrate\n      panels. No original ED5 visual verification\
+    \ is claimed.\n  notes: Follow the gap ledger's capture, DNA-repair, typeI-F,\
+    \ typeV-C and S.pyogenes leads with exact\n    identities and conditions. Check\
+    \ uninspected2014 supplementary controls and laboratory construct sequences.\n\
+    \    Retain IN_PROGRESS and partial self-review.\n  posed_by: Codex\n  posed_date:\
+    \ '2026-10-11'\ncausal_graphs:\n- graph_id: cas1-cas2-purified-integration\n \
+    \ title: Purified Cas1-Cas2 integrates donor DNA into supercoiled pCRISPR\n  scope:\
+    \ Nunez2015 Figures1B-E/2B-C and ExtendedData3, preparation-level integration\
+    \ and mutant comparisons.\n  context: MG1655 proteins with affinity tags removed;\
+    \ 33-bp M13-derived duplex and pUC19-based pCRISPR\n    carrying the BL21-AI locus.\
+    \ Radiolabel default:200 nM complex,20 nM donor,approximately5 nM target;20\n\
+    \    mM HEPES pH7.5,25 mM KCl,10 mM MgCl2,1 mM DTT,10%DMSO,37 C,1 h. EDTA/SDS/proteinase\
+    \ K treatment precedes\n    gel analysis.\n  family_mapping: Cas1 Q46896 sequence\
+    \ version1 equals NP_417235.1 and PDB4P6I entity2,305 aa. Current\n    PF01867\
+    \ match131-226 includes H208 and D221. Cas2 is a separate partner, not another\
+    \ PF01867 domain.\n  scope_status: MECHANISTIC\n  taxon: NCBITaxon:83333\n  limitations:\
+    \ Joint preparation/substrate conditions, not isolated-domain sufficiency. Radiolabeled\
+    \ relaxed/linear\n    bands do not uniquely prove full-site insertion or completed\
+    \ chromosomal repair; half-site events\n    predominate. BandX is not labeled\
+    \ donor-containing product. Mutant losses do not alone identify an\n    elementary\
+    \ catalytic step. Cas1 K224A and Cas2 E9Q retain activity.\n  nodes:\n  - node_id:\
+    \ joint-reaction\n    label: WT Cas1-Cas2 with duplex donor and supercoiled pCRISPR\n\
+    \    node_type: ACTIVITY\n    grounding:\n    - UniProtKB:Q46896\n    - UniProtKB:P45956\n\
+    \  - node_id: integrated-dna\n    label: Deproteinized donor-labeled relaxed and\
+    \ linear plasmid products\n    node_type: STATE\n  - node_id: h208a\n    label:\
+    \ Substitute Cas1 H208A with WT Cas2\n    node_type: PERTURBATION\n    grounding:\n\
+    \    - UniProtKB:Q46896\n  - node_id: d221a\n    label: Substitute Cas1 D221A\
+    \ with WT Cas2\n    node_type: PERTURBATION\n    grounding:\n    - UniProtKB:Q46896\n\
+    \  - node_id: cas2-deletion\n    label: Replace WT Cas2 with its beta6-beta7 deletion\
+    \ variant\n    node_type: PERTURBATION\n    grounding:\n    - UniProtKB:P45956\n\
+    \  edges:\n  - edge_id: joint-reaction-produces-integrated-dna\n    subject: joint-reaction\n\
+    \    predicate: produces\n    object: integrated-dna\n    mechanism: Joint WT\
+    \ proteins generate donor-containing plasmid products relative to component-omission\n\
+    \      controls. Retention of label after deproteinization and restriction digestion\
+    \ supports covalent\n      integration, without assigning every band to a unique\
+    \ full-site product.\n    directness: DIRECT\n    support: OBSERVED\n    evidence_kind:\
+    \ EXPERIMENTAL\n    evidence:\n    - reference: PMID:25707795\n      source_url:\
+    \ https://pmc.ncbi.nlm.nih.gov/articles/PMC4359072/\n      snippet: Disintegration\
+    \ assays\n      explanation: Original Figures1B-E and2B-C plus integration/radiolabel\
+    \ Methods; BandX exclusion and\n        half-site interpretation come from the\
+    \ associated Results.\n      cache_path: evidence/PF01867/nunez-2015-integration.txt\n\
+    \      cache_sha256: 2742611e7b117b36fce70cba810483e901f2bc10eef2e2a8b8ccac18e393db50\n\
+    \  - edge_id: h208a-decreases-integration\n    subject: h208a\n    predicate:\
+    \ decreases\n    object: integrated-dna\n    mechanism: H208A loses detectable\
+    \ integration under the matched purified-protein protocol. This is\n      a preparation-level\
+    \ substitution effect, not direct observation of histidine-mediated proton transfer.\n\
+    \    directness: DIRECT\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n\
+    \    evidence:\n    - reference: PMID:25707795\n      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC4359072/\n\
+    \      snippet: Disintegration assays\n      explanation: Original Figure1E and\
+    \ ExtendedData3C; matched WT Cas2 and radiolabeled donor.\n      cache_path: evidence/PF01867/nunez-2015-integration.txt\n\
+    \      cache_sha256: 2742611e7b117b36fce70cba810483e901f2bc10eef2e2a8b8ccac18e393db50\n\
+    \  - edge_id: d221a-decreases-integration\n    subject: d221a\n    predicate:\
+    \ decreases\n    object: integrated-dna\n    mechanism: D221A lowers the donor-containing\
+    \ product to undetectable levels in this gel assay. Neither\n      protein-folding\
+    \ equivalence nor an individual metal-coordination microstep is established by\
+    \ that\n      endpoint.\n    directness: DIRECT\n    support: OBSERVED\n    evidence_kind:\
+    \ EXPERIMENTAL\n    evidence:\n    - reference: PMID:25707795\n      source_url:\
+    \ https://pmc.ncbi.nlm.nih.gov/articles/PMC4359072/\n      snippet: Disintegration\
+    \ assays\n      explanation: Original ExtendedData3B/C, with active K224A comparison\
+    \ explicitly retained rather\n        than treating all displayed variants as\
+    \ inactive.\n      cache_path: evidence/PF01867/nunez-2015-integration.txt\n \
+    \     cache_sha256: 2742611e7b117b36fce70cba810483e901f2bc10eef2e2a8b8ccac18e393db50\n\
+    \  - edge_id: cas2-deletion-decreases-integration\n    subject: cas2-deletion\n\
+    \    predicate: decreases\n    object: integrated-dna\n    mechanism: The partner\
+    \ deletion loses detectable donor incorporation with WT Cas1. The perturbation\n\
+    \      removes a Cas2 interaction region; it is not a mutation inside PF01867\
+    \ or proof that Cas2 nuclease\n      chemistry is required.\n    directness: DIRECT\n\
+    \    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n    -\
+    \ reference: PMID:25707795\n      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC4359072/\n\
+    \      snippet: Disintegration assays\n      explanation: Original Figure1C/E;\
+    \ Cas2 E9Q remains active in the same comparison.\n      cache_path: evidence/PF01867/nunez-2015-integration.txt\n\
+    \      cache_sha256: 2742611e7b117b36fce70cba810483e901f2bc10eef2e2a8b8ccac18e393db50\n\
+    - graph_id: cas2-enhancement-in-manganese\n  title: Cas2 enhances the low Cas1-alone\
+    \ integration signal in manganese\n  scope: Nunez2015 ExtendedData2B, matched\
+    \ purified-protein titration.\n  context: Same donor/pCRISPR radiolabel assay,10\
+    \ mM MnCl2 replacing MgCl2;0/50/100/200 nM protein series,37\n    C,1 h. Compare\
+    \ Cas1 alone with Cas1 plus Cas2 at the corresponding series positions.\n  family_mapping:\
+    \ Intact MG1655 Cas1 Q46896/NP_417235.1; PF01867 131-226. No isolated-domain or\
+    \ other-member\n    experiment.\n  scope_status: MECHANISTIC\n  taxon: NCBITaxon:83333\n\
+    \  limitations: Qualitative representative gels, not measured fold stimulation.\
+    \ Low Cas1-alone activity\n    prevents an absolute Cas2 requirement claim. The\
+    \ Mg condition is a separate comparison, not pooled\n    with Mn.\n  nodes:\n\
+    \  - node_id: add-cas2\n    label: Add Cas2 to the Cas1 donor-target reaction\
+    \ in manganese\n    node_type: PERTURBATION\n    grounding:\n    - UniProtKB:Q46896\n\
+    \    - UniProtKB:P45956\n  - node_id: integrated-dna\n    label: Radiolabeled\
+    \ donor-containing plasmid product\n    node_type: STATE\n  edges:\n  - edge_id:\
+    \ cas2-increases-integration\n    subject: add-cas2\n    predicate: increases\n\
+    \    object: integrated-dna\n    mechanism: Product bands are stronger with both\
+    \ proteins than with Cas1 alone. This records partner-dependent\n      enhancement\
+    \ in Mn without converting the low baseline into zero activity.\n    directness:\
+    \ DIRECT\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n\
+    \    - reference: PMID:25707795\n      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC4359072/\n\
+    \      snippet: Disintegration assays\n      explanation: Original ExtendedData2B\
+    \ and associated main-text statement; Cas2-alone and no-protein\n        controls\
+    \ inspected.\n      cache_path: evidence/PF01867/nunez-2015-integration.txt\n\
+    \      cache_sha256: 2742611e7b117b36fce70cba810483e901f2bc10eef2e2a8b8ccac18e393db50\n\
+    - graph_id: cas1-integration-substrate-perturbations\n  title: Donor-end chemistry\
+    \ and target topology alter the IHF-absent reaction\n  scope: Nunez2015 Figure3A-C,\
+    \ three separate substrate comparisons.\n  context: WT Cas1-Cas2, Mg radiolabel\
+    \ integration protocol at37 C for1 h; each altered substrate compared\n    with\
+    \ the matched33-bp duplex/supercoiled pCRISPR control. No IHF is supplied.\n \
+    \ family_mapping: Intact MG1655 Cas1 Q46896/NP_417235.1, PF01867 131-226, acting\
+    \ with Cas2. DNA perturbations\n    do not establish isolated-domain sufficiency.\n\
+    \  scope_status: MECHANISTIC\n  taxon: NCBITaxon:83333\n  limitations: Three separate\
+    \ experiments, not a combined perturbation. Dual3prime capping differs from\n\
+    \    single-end capping;5prime phosphorylation is compatible. Later PMID27211867\
+    \ establishes an IHF-dependent\n    linear-DNA context, so topology dependence\
+    \ is not universal. Empty supercoiled pUC19 also supports\n    integration.\n\
+    \  nodes:\n  - node_id: cap-both-ends\n    label: Phosphorylate both donor 3-prime\
+    \ ends\n    node_type: PERTURBATION\n  - node_id: single-strand\n    label: Supply\
+    \ donor strand S1 or S2 alone, each separately\n    node_type: PERTURBATION\n\
+    \  - node_id: linearize-target\n    label: Replace supercoiled pCRISPR with linear\
+    \ pCRISPR\n    node_type: PERTURBATION\n  - node_id: integration-product\n   \
+    \ label: Radiolabeled donor-containing target product\n    node_type: STATE\n\
+    \  edges:\n  - edge_id: dual-capping-decreases-integration\n    subject: cap-both-ends\n\
+    \    predicate: decreases\n    object: integration-product\n    mechanism: Blocking\
+    \ both3prime hydroxyls removes detectable integration, supporting the end-chemistry\n\
+    \      requirement in this reaction. The endpoint does not directly image the\
+    \ nucleophilic transition state.\n    directness: DIRECT\n    support: OBSERVED\n\
+    \    evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference: PMID:25707795\n\
+    \      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC4359072/\n      snippet:\
+    \ Disintegration assays\n      explanation: Original Figure3A/B dual-capped donor\
+    \ versus hydroxyl-ended duplex; Methods uses phosphatase-minus\n        kinase\
+    \ for labeled3prime-phosphorylated substrates.\n      cache_path: evidence/PF01867/nunez-2015-integration.txt\n\
+    \      cache_sha256: 2742611e7b117b36fce70cba810483e901f2bc10eef2e2a8b8ccac18e393db50\n\
+    \  - edge_id: single-strand-decreases-integration\n    subject: single-strand\n\
+    \    predicate: decreases\n    object: integration-product\n    mechanism: Neither\
+    \ isolated donor strand yields the product seen with the annealed duplex. This\
+    \ is\n      a substrate-state comparison, not proof that every Cas1 homolog rejects\
+    \ all single-stranded donors.\n    directness: DIRECT\n    support: OBSERVED\n\
+    \    evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference: PMID:25707795\n\
+    \      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC4359072/\n      snippet:\
+    \ Disintegration assays\n      explanation: Original Figure3A/B separate S1-only\
+    \ and S2-only lanes with and without Cas1-Cas2.\n      cache_path: evidence/PF01867/nunez-2015-integration.txt\n\
+    \      cache_sha256: 2742611e7b117b36fce70cba810483e901f2bc10eef2e2a8b8ccac18e393db50\n\
+    \  - edge_id: linear-target-decreases-ihf-absent-integration\n    subject: linearize-target\n\
+    \    predicate: decreases\n    object: integration-product\n    mechanism: Linear\
+    \ pCRISPR lacks detectable incorporation under the tested IHF-absent conditions.\
+    \ Later\n      host-factor-supported integration into linear DNA bounds this negative;\
+    \ it is not a universal physical\n      prerequisite for Cas1.\n    directness:\
+    \ DIRECT\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n\
+    \    - reference: PMID:25707795\n      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC4359072/\n\
+    \      snippet: Disintegration assays\n      explanation: Original Figure3C directly\
+    \ compares supercoiled and linear pCRISPR; the separate1-kb\n        fragment\
+    \ and empty-vector results prevent sequence-requirement overstatement.\n     \
+    \ cache_path: evidence/PF01867/nunez-2015-integration.txt\n      cache_sha256:\
+    \ 2742611e7b117b36fce70cba810483e901f2bc10eef2e2a8b8ccac18e393db50\n- graph_id:\
+    \ cas1-synthetic-intermediate-disintegration\n  title: Cas1 releases a donor-sized\
+    \ duplex from synthetic Y-DNA\n  scope: Nunez2015 Figure2G/H, Cas1-alone preparation\
+    \ in two separately tested metal conditions.\n  context: 50 nM purified Cas1 with5\
+    \ nM synthetic radiolabeled Y-DNA; integration buffer containing10\n    mM MgCl2\
+    \ or MnCl2,37 C,1 h; native15%polyacrylamide electrophoresis.\n  family_mapping:\
+    \ Intact Q46896/NP_417235.1 Cas1, PF01867 131-226; the synthetic substrate mimics\
+    \ a half-site\n    intermediate but was not recovered from the integration assay.\n\
+    \  scope_status: MECHANISTIC\n  taxon: NCBITaxon:83333\n  limitations: Cas2 is\
+    \ optional and Cas2 alone is inactive. This is not proof that BandX in the separate\n\
+    \    plasmid reaction necessarily arose through this route. The original ED5 target-rejoining\
+    \ image is\n    unresolved because of a PMC image/caption mismatch; no separate\
+    \ rejoining edge is claimed.\n  nodes:\n  - node_id: cas1-y-dna\n    label: Purified\
+    \ Cas1 with the synthetic Y-DNA intermediate\n    node_type: ACTIVITY\n    grounding:\n\
+    \    - UniProtKB:Q46896\n  - node_id: released-donor\n    label: Released radiolabeled\
+    \ 33-bp donor-sized duplex\n    node_type: STATE\n  edges:\n  - edge_id: cas1-produces-released-donor\n\
+    \    subject: cas1-y-dna\n    predicate: produces\n    object: released-donor\n\
+    \    mechanism: Cas1 alone generates the donor-sized product in both tested metal\
+    \ conditions, relative\n      to no-protein and Cas2-only controls. This preparation-level\
+    \ disintegration observation does not\n      resolve every chemical microstep\
+    \ or minor product.\n    directness: DIRECT\n    support: OBSERVED\n    evidence_kind:\
+    \ EXPERIMENTAL\n    evidence:\n    - reference: PMID:25707795\n      source_url:\
+    \ https://pmc.ncbi.nlm.nih.gov/articles/PMC4359072/\n      snippet: Disintegration\
+    \ assays\n      explanation: Correctly matched original main Figure2H and synthetic-substrate\
+    \ Methods, not the incorrectly\n        linked ED5 image.\n      cache_path: evidence/PF01867/nunez-2015-integration.txt\n\
+    \      cache_sha256: 2742611e7b117b36fce70cba810483e901f2bc10eef2e2a8b8ccac18e393db50\n\
+    - graph_id: cas1-cas2-cellular-acquisition\n  title: Joint Cas1-Cas2 expression\
+    \ expands the cellular CRISPR locus\n  scope: Nunez2014 Figure1B, heterologous\
+    \ whole-cell acquisition assay.\n  context: MG1655 cas1/cas2 on pCDF-1b in BL21-AI;\
+    \ LB,50 ug/ml streptomycin,0.2%arabinose,0.1 mM IPTG,20-24\n    h induction. OD600-normalized\
+    \ cellular input and CRISPR-I PCR/agarose readout.\n  family_mapping: Donor Cas1\
+    \ Q46896/NP_417235.1,305 aa,PF01867 131-226. Taxon identifies the K12 donor\n\
+    \    reference, not BL21-AI as an identical strain.\n  scope_status: PHENOTYPIC\n\
+    \  taxon: NCBITaxon:83333\n  limitations: Whole-cell joint-expression effect,\
+    \ not purified Cas1 sufficiency or an isolated-domain\n    experiment. PCR expansion\
+    \ and reported clonal sequencing do not establish protection against phage.\n\
+    \    No raw sequencing reanalysis or SupplementaryTable1 review is claimed.\n\
+    \  nodes:\n  - node_id: coexpress-cas1-cas2\n    label: Induce both Cas1 and Cas2\
+    \ in BL21-AI\n    node_type: PERTURBATION\n    grounding:\n    - UniProtKB:Q46896\n\
+    \    - UniProtKB:P45956\n  - node_id: expanded-locus\n    label: Expanded CRISPR-I\
+    \ locus PCR bands\n    node_type: PHENOTYPE\n  edges:\n  - edge_id: coexpression-increases-locus-expansion\n\
+    \    subject: coexpress-cas1-cas2\n    predicate: increases\n    object: expanded-locus\n\
+    \    mechanism: Expanded bands appear with joint expression, unlike Cas1-only,\
+    \ Cas2-only or empty-vector\n      controls. This phenotype includes host activities\
+    \ needed after initial integration and is not joined\n      to the purified endpoint\
+    \ as a directly traced pathway.\n    directness: INDIRECT\n    support: OBSERVED\n\
+    \    evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference: PMID:24793649\n\
+    \      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC4075942/\n      snippet:\
+    \ Spacer acquisition assays\n      explanation: Original Figure1B and Online Methods;\
+    \ induced/uninduced and individual-component controls\n        inspected.\n  \
+    \    cache_path: evidence/PF01867/nunez-2014-acquisition.txt\n      cache_sha256:\
+    \ a3fce8f923833fade4c50d9b1bb2d1d213c819a5ecccd2d54485b49331be7792\n- graph_id:\
+    \ cas1-cellular-active-site-variants\n  title: In-domain Cas1 substitutions reduce\
+    \ cellular locus expansion\n  scope: Nunez2014 Figure4C, separately tested Cas1\
+    \ single substitutions with WT Cas2.\n  context: BL21-AI pCDF-1b acquisition assay\
+    \ after20-24 h induction, matched WT coexpression control and\n    OD600-normalized\
+    \ CRISPR-I PCR; at least three assay repetitions.\n  family_mapping: Q46896/NP_417235.1\
+    \ reference E141,H208,D218,D221,K224 verified; all lie within current\n    PF01867\
+    \ 131-226. Intact proteins, not purified isolated domains.\n  scope_status: PHENOTYPIC\n\
+    \  taxon: NCBITaxon:83333\n  limitations: Each variant is a separate single substitution,\
+    \ not a combined mutant. Loss of a cellular\n    endpoint does not prove loss\
+    \ of chemistry. K224A retains purified integration in2015 ED3; abundance,\n  \
+    \  folding and host-dependent steps remain alternatives.\n  nodes:\n  - node_id:\
+    \ four-single-variants\n    label: Cas1 E141A, H208A, D218A or D221A, each separately\n\
+    \    node_type: PERTURBATION\n    grounding:\n    - UniProtKB:Q46896\n  - node_id:\
+    \ k224a\n    label: Cas1 K224A with WT Cas2\n    node_type: PERTURBATION\n   \
+    \ grounding:\n    - UniProtKB:Q46896\n  - node_id: expanded-locus\n    label:\
+    \ Expanded CRISPR-I PCR bands relative to WT\n    node_type: PHENOTYPE\n  edges:\n\
+    \  - edge_id: four-site-variants-decrease-acquisition\n    subject: four-single-variants\n\
+    \    predicate: decreases\n    object: expanded-locus\n    mechanism: Each of\
+    \ the four variants loses detectable expanded bands under the cellular protocol.\n\
+    \      The grouped node records four separately tested effects without claiming\
+    \ equal quantitative impairment\n      or a shared demonstrated chemical defect.\n\
+    \    directness: INDIRECT\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n\
+    \    evidence:\n    - reference: PMID:24793649\n      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC4075942/\n\
+    \      snippet: Spacer acquisition assays\n      explanation: Original Figure4C\
+    \ lane labels and Online Methods; the readout is cellular locus expansion,\n \
+    \       not direct nuclease activity.\n      cache_path: evidence/PF01867/nunez-2014-acquisition.txt\n\
+    \      cache_sha256: a3fce8f923833fade4c50d9b1bb2d1d213c819a5ecccd2d54485b49331be7792\n\
+    \  - edge_id: k224a-decreases-cellular-acquisition\n    subject: k224a\n    predicate:\
+    \ decreases\n    object: expanded-locus\n    mechanism: K224A lacks detectable\
+    \ expanded bands here despite its retained integration in the later\n      purified\
+    \ assay. The unresolved context dependence prevents labeling the mutant universally\
+    \ catalytically\n      inactive.\n    directness: INDIRECT\n    support: OBSERVED\n\
+    \    evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference: PMID:24793649\n\
+    \      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC4075942/\n      snippet:\
+    \ Spacer acquisition assays\n      explanation: Original Figure4C K224A lane;\
+    \ contrasted explicitly with PMID25707795 ExtendedData3\n        rather than suppressing\
+    \ either result.\n      cache_path: evidence/PF01867/nunez-2014-acquisition.txt\n\
+    \      cache_sha256: a3fce8f923833fade4c50d9b1bb2d1d213c819a5ecccd2d54485b49331be7792\n\
+    - graph_id: cas1-cellular-interface-variants\n  title: Outside-match Cas1 charge\
+    \ substitutions reduce locus expansion\n  scope: Nunez2014 Figure3D, three independently\
+    \ tested single variants.\n  context: BL21-AI cellular acquisition protocol, each\
+    \ Cas1 variant coexpressed with WT Cas2 and compared\n    with WT Cas1/Cas2;20-24\
+    \ h induction and normalized CRISPR-I PCR.\n  family_mapping: Reference Q46896/NP_417235.1\
+    \ R245,R252,R256 verified but outside PF01867 131-226. These\n    effects belong\
+    \ to the intact family-bearing protein, not directly to the annotated interval.\n\
+    \  scope_status: PHENOTYPIC\n  taxon: NCBITaxon:83333\n  limitations: Corresponding\
+    \ alanine substitutions retain acquisition. The three charge substitutions\n \
+    \   are not a triple mutant. WT-like SEC retention was reported for R252E only\
+    \ and does not establish\n    normal folding of all variants; original supplement\
+    \ remains uninspected.\n  nodes:\n  - node_id: interface-single-variants\n   \
+    \ label: Cas1 R245D, R252E or R256E, each separately\n    node_type: PERTURBATION\n\
+    \    grounding:\n    - UniProtKB:Q46896\n  - node_id: expanded-locus\n    label:\
+    \ Expanded CRISPR-I PCR bands relative to WT\n    node_type: PHENOTYPE\n  edges:\n\
+    \  - edge_id: charged-variants-decrease-acquisition\n    subject: interface-single-variants\n\
+    \    predicate: decreases\n    object: expanded-locus\n    mechanism: Each charge-reversal\
+    \ variant gives little or no expanded product compared with WT. The\n      result\
+    \ does not prove that every substitution at these positions, or every PF01867\
+    \ member, has the\n      same defect.\n    directness: INDIRECT\n    support:\
+    \ OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference: PMID:24793649\n\
+    \      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC4075942/\n      snippet:\
+    \ Spacer acquisition assays\n      explanation: Original Figure3D charged/alanine/WT\
+    \ comparisons and associated Results; tail-deletion\n        and I291 variants\
+    \ in Figure3C retain activity.\n      cache_path: evidence/PF01867/nunez-2014-acquisition.txt\n\
+    \      cache_sha256: a3fce8f923833fade4c50d9b1bb2d1d213c819a5ecccd2d54485b49331be7792\n\
+    - graph_id: cas1-r252e-lysate-coisolation\n  title: R252E reduces Cas2 recovery\
+    \ in a Cas1 immunoprecipitation\n  scope: Nunez2014 Figure3F, lysate co-immunoprecipitation\
+    \ separate from acquisition.\n  context: BL21-AI coexpressing Cas1-FLAG and Cas2-HA;\
+    \ normalized lysate input,anti-FLAG resin,400 mM\n    KCl washes and anti-HA blotting.\
+    \ Compare R252E with WT Cas1.\n  family_mapping: Q46896/NP_417235.1 R252 lies\
+    \ outside PF01867 131-226. Epitope-tagged intact protein\n    in cell lysate,\
+    \ not isolated domain or tag-cleaved purified complex.\n  scope_status: PHENOTYPIC\n\
+    \  taxon: NCBITaxon:83333\n  limitations: Co-isolation is not a purified affinity\
+    \ measurement or a direct activation step. Input\n    controls do not eliminate\
+    \ every abundance/folding/complex-stability alternative. No observed causal\n\
+    \    arrow joins reduced co-isolation to the separate acquisition phenotype.\n\
+    \  nodes:\n  - node_id: r252e\n    label: Introduce Cas1-FLAG R252E with WT Cas2-HA\n\
+    \    node_type: PERTURBATION\n    grounding:\n    - UniProtKB:Q46896\n    - UniProtKB:P45956\n\
+    \  - node_id: cas2-recovery\n    label: Cas2-HA signal in the Cas1-FLAG immunoprecipitate\n\
+    \    node_type: PHENOTYPE\n    grounding:\n    - UniProtKB:Q46896\n    - UniProtKB:P45956\n\
+    \  edges:\n  - edge_id: r252e-decreases-cas2-coisolation\n    subject: r252e\n\
+    \    predicate: decreases\n    object: cas2-recovery\n    mechanism: Cas2-HA recovery\
+    \ is strongly reduced despite its detection in the input. This is a mutation-dependent\n\
+    \      lysate association readout; it does not establish the entire mechanistic\
+    \ route from residue charge\n      to immunity.\n    directness: INDIRECT\n  \
+    \  support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference:\
+    \ PMID:24793649\n      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC4075942/\n\
+    \      snippet: Spacer acquisition assays\n      explanation: Original Figure3F\
+    \ input and immunoprecipitate panels plus IP Methods; no equivalent\n        co-IP\
+    \ result is assigned to R245D or R256E.\n      cache_path: evidence/PF01867/nunez-2014-acquisition.txt\n\
+    \      cache_sha256: a3fce8f923833fade4c50d9b1bb2d1d213c819a5ecccd2d54485b49331be7792\n\
+    curation_events:\n- timestamp: '2026-10-11T17:28:20Z'\n  curator: Codex\n  action:\
+    \ CREATE\n  outcome: changed\n  summary: Add scoped Cas1 integration and cellular\
+    \ causal graphs\n  history_record: history/records/PF01867/2026-10-11T172820Z-codex-466ad8.yaml\n\
+    \  event_index: 0\n  llm_assisted: true\n- timestamp: '2026-10-11T17:37:09Z'\n\
+    \  curator: Codex\n  action: REVIEW\n  outcome: needs_followup\n  summary: Review\
+    \ scoped Cas1 biochemical and cellular graph evidence\n  history_record: history/records/PF01867/2026-10-11T173709Z-codex-f21434.yaml\n\
+    \  event_index: 0\n  llm_assisted: true\n- timestamp: '2026-10-18T02:54:46Z'\n\
+    \  curator: Antigravity\n  action: EDIT\n  outcome: changed\n  summary: Ground\
+    \ causal graph gene and protein nodes in PF01867 with verified UniProtKB accessions\
+    \ (UniProtKB:Q46896)\n  history_record: history/records/PF01867/2026-10-18T025446Z-antigravity-604f8a.yaml\n\
+    \  event_index: 0\n  llm_assisted: true\n- timestamp: '2026-10-25T11:15:00Z'\n\
+    \  curator: Antigravity\n  action: EDIT\n  outcome: changed\n  summary: Ground\
+    \ PF01867 causal-graph protein/gene/complex nodes with UniProtKB:Q46896\n  history_record:\
+    \ history/records/PF01867/2026-10-25T111500Z-antigravity-657d81.yaml\n  event_index:\
+    \ 0\n  llm_assisted: true\n- timestamp: '2026-10-25T16:08:20Z'\n  curator: Antigravity\n\
+    \  action: EDIT\n  outcome: changed\n  summary: Ground Escherichia coli K-12 MG1655\
+    \ Cas2 (UniProtKB:P45956) and paired Cas1-Cas2 (UniProtKB:Q46896,\n    UniProtKB:P45956)\
+    \ nodes across 4 causal graphs\n  history_record: history/records/PF01867/2026-10-25T160820Z-antigravity-c3s5a3.yaml\n\
+    \  event_index: 0\n  llm_assisted: true\n"
+  summary: Byte-exact projection retained at save for digest verification, not scientific
+    assessment.
+assessments:
+- assessment_id: member-identity
+  area: identity
+  topic: Protein, domain and experimental scope
+  outcome: supported
+  summary: Q46896 sequence version1, NP_417235.1 and PDB4P6I entity2 agree exactly
+    over305 aa. Published donor is MG1655 and cellular host is BL21-AI; taxon83333
+    describes the donor reference. The complete current Pfam entries response contains
+    only PF01867 at131-226, including E141/H208/D218/D221/K224 but excluding R245/R252/R256
+    and the terminal tail. These whole-protein effects do not establish isolated-domain
+    sufficiency or independent clone resequencing.
+  target_ids:
+  - PF01867
+  evidence_ids:
+  - identity
+  - primary
+  - cellular-primary
+  - later-evidence-and-gaps
+- assessment_id: causal-scope
+  area: graph
+  topic: Directed effects and limits
+  outcome: supported
+  summary: Four MECHANISTIC graphs retain nine DIRECT OBSERVED effects; four PHENOTYPIC
+    graphs retain five INDIRECT OBSERVED effects. Product, partner enhancement, substrate
+    perturbation, synthetic-intermediate disintegration, cellular acquisition and
+    co-isolation remain distinct. Grouped variants are separate experiments. K224A
+    loses cellular expansion but retains purified integration. The older topology
+    and event-order claims are bounded by later IHF evidence. No edge turns co-isolation
+    into activation or joins half-site chemistry directly to immunity.
+  target_ids:
+  - PF01867
+  evidence_ids:
+  - primary
+  - native
+  - cellular-primary
+  - later-evidence-and-gaps
+- assessment_id: remaining-coverage
+  area: completeness
+  topic: Remaining family coverage
+  outcome: concern
+  summary: Exact assay-clone sequences,2014 supplementary controls, ED5 image resolution,
+    full2016 IHF methods/figures,2017 targeting/recognition perturbations,2015 capture
+    structures, DNA-repair activity, bacterial/archaeal orthologs, typeI-F and typeV-C
+    systems and casposases remain open. The S.pyogenes2021 disintegration paper is
+    not transferred to E.coli. No exhaustive family review or independent endorsement.
+  target_ids:
+  - PF01867
+  evidence_ids:
+  - primary
+- assessment_id: stage4-grounding-and-taxon-audit
+  area: representation
+  topic: Causal-graph taxon and protein-node grounding consistency
+  outcome: supported
+  summary: 'Resolved Issue #363 (pf01867-cas2-partner-and-complex-nodes-missing-grounding)
+    by grounding Escherichia coli K-12 MG1655 partner Cas2 (UniProtKB:P45956) and
+    Cas1-Cas2 complex subunits (UniProtKB:Q46896, UniProtKB:P45956) on joint-reaction
+    and cas2-deletion in cas1-cas2-purified-integration, add-cas2 in cas2-enhancement-in-manganese,
+    coexpress-cas1-cas2 in cas1-cas2-cellular-acquisition, and r252e and cas2-recovery
+    in cas1-r252e-lysate-coisolation in curation/families/PF01867.yaml, recording
+    canonical EDIT history, and regenerating data/families/PF01867.yaml and reports/causal_graphs/inventory.json.'
+  target_ids:
+  - PF01867
+  evidence_ids:
+  - stage5-predecessor-review
+  - stage5-remediation-history
+findings:
+- finding_id: additional-contexts
+  issue_key: pf01867-causal-context-coverage
+  category: completeness
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Extend Cas1 evidence with verified host-factor contexts and member-specific
+    scope
+  description: Resolve the mismatched ED5 image before original-image claims for target
+    rejoining; inspect2014 supplementary controls and exact constructs. Complete the
+    primary IHF and2017 integration-complex review before adding targeting/bending
+    edges, preserving target-dose and substrate context. Map additional family members
+    and Cas2-independent systems separately. Retain the cellular/purified K224A discrepancy
+    and outside-match interface effects without universal catalytic assignments.
+  target_ids:
+  - PF01867
+  field_paths:
+  - causal_graphs
+  evidence_ids:
+  - primary
+  - identity
+  - cellular-primary
+  - later-evidence-and-gaps
+  owner_paths:
+  - repository: CultureBotAI/DUFMech
+    path: curation/families/PF01867.yaml
+    role: Human-owned scientific overlay
+  previous_occurrences:
+  - repository: CultureBotAI/DUFMech
+    review_id: 20261025T132039Z-pf01867-c3s4-record-review
+    finding_id: additional-contexts
+- finding_id: cas2-partner-and-complex-nodes-missing-grounding
+  issue_key: pf01867-cas2-partner-and-complex-nodes-missing-grounding
+  category: grounding
+  severity: minor
+  status: resolved
+  certainty: confirmed
+  title: Add Escherichia coli K-12 Cas2 (UniProtKB:P45956) partner grounding to six
+    Cas2 and Cas1-Cas2 complex nodes in PF01867
+  description: 'In curation/families/PF01867.yaml, six Escherichia coli K-12 MG1655
+    (NCBITaxon:83333) nodes that explicitly represent Cas2 or the heterohexameric
+    Cas1-Cas2 complex previously grounded only to Cas1 (UniProtKB:Q46896, CAS1_ECOLI,
+    NP_417235.1, PDB 4P6I entity 2) or omitted protein grounding altogether, and now
+    include verified partner E. coli K-12 Cas2 (UniProtKB:P45956, CAS2_ECOLI, casB/ygbF/b2754,
+    PDB 4P6I entity 3) in Stage 5 remediation (Issue #363): (1) in cas1-cas2-purified-integration
+    (lines 5-114), node joint-reaction (''WT Cas1-Cas2 with duplex donor and supercoiled
+    pCRISPR'', lines 21-26) now grounds to [UniProtKB:Q46896, UniProtKB:P45956] and
+    node cas2-deletion (''Replace WT Cas2 with its beta6-beta7 deletion variant'',
+    lines 40-44) now grounds to [UniProtKB:P45956]; (2) in cas2-enhancement-in-manganese
+    (lines 115-154), node add-cas2 (''Add Cas2 to the Cas1 donor-target reaction in
+    manganese'', lines 128-133) now grounds to [UniProtKB:Q46896, UniProtKB:P45956];
+    (3) in cas1-cas2-cellular-acquisition (lines 273-313), node coexpress-cas1-cas2
+    (''Induce both Cas1 and Cas2 in BL21-AI'', lines 286-291) now grounds to [UniProtKB:Q46896,
+    UniProtKB:P45956]; and (4) in cas1-r252e-lysate-coisolation (lines 417-460), node
+    r252e (''Introduce Cas1-FLAG R252E with WT Cas2-HA'', lines 430-435) and node
+    cas2-recovery (''Cas2-HA signal in the Cas1-FLAG immunoprecipitate'', lines 436-441)
+    now ground to [UniProtKB:Q46896, UniProtKB:P45956].'
+  target_ids:
+  - PF01867
+  field_paths:
+  - causal_graphs
+  evidence_ids:
+  - stage5-predecessor-review
+  - stage5-remediation-history
+  - identity
+  owner_paths:
+  - repository: CultureBotAI/DUFMech
+    path: curation/families/PF01867.yaml
+    role: Maintained scientific overlay; update in Stage 5 grouped remediation and
+      regenerate projection.
+  previous_occurrences:
+  - repository: CultureBotAI/DUFMech
+    review_id: 20261025T132039Z-pf01867-c3s4-record-review
+    finding_id: cas2-partner-and-complex-nodes-missing-grounding
+  disposition_reason: 'Resolved Issue #363 (pf01867-cas2-partner-and-complex-nodes-missing-grounding)
+    by grounding Escherichia coli K-12 MG1655 partner Cas2 (UniProtKB:P45956) and
+    Cas1-Cas2 complex subunits (UniProtKB:Q46896, UniProtKB:P45956) on joint-reaction
+    and cas2-deletion in cas1-cas2-purified-integration, add-cas2 in cas2-enhancement-in-manganese,
+    coexpress-cas1-cas2 in cas1-cas2-cellular-acquisition, and r252e and cas2-recovery
+    in cas1-r252e-lysate-coisolation in curation/families/PF01867.yaml, recording
+    canonical EDIT history, and regenerating data/families/PF01867.yaml and reports/causal_graphs/inventory.json.'
+actions:
+- action_id: extend-contexts
+  description: Resolve the mismatched ED5 image before original-image claims for target
+    rejoining; inspect2014 supplementary controls and exact constructs. Complete the
+    primary IHF and2017 integration-complex review before adding targeting/bending
+    edges, preserving target-dose and substrate context. Map additional family members
+    and Cas2-independent systems separately. Retain the cellular/purified K224A discrepancy
+    and outside-match interface effects without universal catalytic assignments.
+  finding_ids:
+  - additional-contexts
+  target_ids:
+  - PF01867
+  ownership_note: Curate overlay and minimal evidence; append actual history, regenerate
+    and retain successor review.
+  acceptance_checks:
+  - Each added edge has member-specific primary evidence and explicit conditions.
+  - Unsupported transfers and conflicting or negative results remain visible.
+  - Native checks pass and a successor report states actual scope.
+limitations:
+- Original2014 Figures1/3/4 and2015 Figures1/2/3/ED2/ED3 were visually inspected.
+  F9 matches ED4, but F10/F11 image links show ED6/ED7 rather than their ED5/ED6 captions.
+  Publisher access did not resolve ED5. The2016 IHF abstract and selected2017 text/captions
+  are qualification evidence, not complete graph reviews. No raw-data reanalysis,
+  experimental replication or clone resequencing; rendered-page verification follows
+  separately.
+- Same-agent assessment, not independent expert review or experimental replication.
+- Partial family coverage; status remains IN_PROGRESS. No full-corpus completion,
+  publication or full publication-QC pass is claimed.
+notes:
+- Assessments were authored from inspected primary evidence. Native inspection supplied
+  provenance, not scientific conclusions.

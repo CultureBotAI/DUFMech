@@ -76,6 +76,7 @@ causal_graphs:
     node_type: PERTURBATION
     grounding:
     - UniProtKB:P37527
+    - UniProtKB:P37528
   - node_id: coupled-glutamate-signal
     label: Glutamate-dependent APAD reduction
     node_type: ACTIVITY
@@ -204,6 +205,7 @@ causal_graphs:
     label: Add PdxT to PdxS with ribulose phosphate and external ammonium
     node_type: PERTURBATION
     grounding:
+    - UniProtKB:P37527
     - UniProtKB:P37528
   - node_id: ribulose-product-signal
     label: Ribulose-condition A414 product signal
@@ -317,6 +319,7 @@ causal_graphs:
     node_type: ACTIVITY
     grounding:
     - UniProtKB:P37527
+    - UniProtKB:P37528
   - node_id: chromophore-315
     label: Reconstituted 315-nm absorbance signal
     node_type: STATE
@@ -443,6 +446,7 @@ causal_graphs:
     node_type: ACTIVITY
     grounding:
     - UniProtKB:P37527
+    - UniProtKB:P37528
   - node_id: released-phosphate
     label: Inorganic phosphate detected by the coupled assay
     node_type: STATE
@@ -504,5 +508,14 @@ curation_events:
   outcome: changed
   summary: Ground PF01680 causal-graph protein/gene/complex nodes with UniProtKB:P37527
   history_record: history/records/PF01680/2026-10-25T111500Z-antigravity-823b0c.yaml
+  event_index: 0
+  llm_assisted: true
+- timestamp: '2026-10-25T16:08:10Z'
+  curator: Antigravity
+  action: EDIT
+  outcome: changed
+  summary: Ground Bacillus subtilis 168 paired Pdx1/PdxS (UniProtKB:P37527) and Pdx2/PdxT (UniProtKB:P37528)
+    complex nodes across 4 causal graphs
+  history_record: history/records/PF01680/2026-10-25T160810Z-antigravity-c3s5a2.yaml
   event_index: 0
   llm_assisted: true

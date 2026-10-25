@@ -1,0 +1,35 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01174
+  path: curation/families/PF01174.yaml
+session:
+  id: 2026-10-25T160800Z-antigravity-c3s5a1
+  timestamp: '2026-10-25T16:08:00Z'
+  actors:
+  - type: ai_agent
+    name: Antigravity
+    model: inherit
+    agent_tool: Antigravity CLI
+events:
+- type: EDIT
+  outcome: changed
+  summary: Ground Bacillus subtilis 168 YaaD/PdxS (UniProtKB:P37527) and YaaE/PdxT (UniProtKB:P37528) paired PLP synthase complex nodes across 4 causal graphs
+  details: 'Resolved Cycle 3 Stage 4 finding pf01174-pdxst-partner-and-acivicin-nodes-missing-grounding
+    (#361) in curation/families/PF01174.yaml (Bacillus subtilis subsp. subtilis str. 168,
+    NCBITaxon:224308, PMID:16030023) by grounding 6 heteromeric YaaD/PdxS (UniProtKB:P37527,
+    BSU00110) + YaaE/PdxT (UniProtKB:P37528, BSU00120) complex nodes to [UniProtKB:P37527,
+    UniProtKB:P37528]: pdxst-glutamine-dependent-plp-product node joint-pdxst-glutamine-carbohydrate-reaction
+    (ACTIVITY), pdxt-ribulose-ammonium-dependent-synthase-readout node add-yaae-ribulose-ammonium
+    (PERTURBATION), pdxt-acivicin-glutaminase-inhibition nodes acivicin-pretreat-glutaminase-mixture
+    (PERTURBATION) and acivicin-assay-glutaminase-readout (ACTIVITY), and pdxst-acivicin-plp-signal-inhibition
+    nodes acivicin-pretreat-plp-mixture (PERTURBATION) and residual-glutamine-plp-signal (ACTIVITY).'
+  sections:
+  - causal_graphs
+links:
+  issues:
+  - https://github.com/CultureBotAI/DUFMech/issues/361
+  urls:
+  - https://rest.uniprot.org/uniprotkb/P37527.json
+  - https://rest.uniprot.org/uniprotkb/P37528.json
+  - https://pubmed.ncbi.nlm.nih.gov/16030023/

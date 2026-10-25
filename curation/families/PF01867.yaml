@@ -23,6 +23,7 @@ causal_graphs:
     node_type: ACTIVITY
     grounding:
     - UniProtKB:Q46896
+    - UniProtKB:P45956
   - node_id: integrated-dna
     label: Deproteinized donor-labeled relaxed and linear plasmid products
     node_type: STATE
@@ -39,6 +40,8 @@ causal_graphs:
   - node_id: cas2-deletion
     label: Replace WT Cas2 with its beta6-beta7 deletion variant
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:P45956
   edges:
   - edge_id: joint-reaction-produces-integrated-dna
     subject: joint-reaction
@@ -127,6 +130,7 @@ causal_graphs:
     node_type: PERTURBATION
     grounding:
       - UniProtKB:Q46896
+      - UniProtKB:P45956
   - node_id: integrated-dna
     label: Radiolabeled donor-containing plasmid product
     node_type: STATE
@@ -284,6 +288,7 @@ causal_graphs:
     node_type: PERTURBATION
     grounding:
     - UniProtKB:Q46896
+    - UniProtKB:P45956
   - node_id: expanded-locus
     label: Expanded CRISPR-I locus PCR bands
     node_type: PHENOTYPE
@@ -427,9 +432,13 @@ causal_graphs:
     node_type: PERTURBATION
     grounding:
     - UniProtKB:Q46896
+    - UniProtKB:P45956
   - node_id: cas2-recovery
     label: Cas2-HA signal in the Cas1-FLAG immunoprecipitate
     node_type: PHENOTYPE
+    grounding:
+    - UniProtKB:Q46896
+    - UniProtKB:P45956
   edges:
   - edge_id: r252e-decreases-cas2-coisolation
     subject: r252e

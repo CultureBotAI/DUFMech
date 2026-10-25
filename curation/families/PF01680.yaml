@@ -22,6 +22,7 @@ causal_graphs:
     node_type: PERTURBATION
     grounding:
     - UniProtKB:P37527
+    - UniProtKB:P37528
   - node_id: coupled-glutamate-signal
     label: Glutamate-dependent APAD reduction
     node_type: ACTIVITY
@@ -150,6 +151,7 @@ causal_graphs:
     label: Add PdxT to PdxS with ribulose phosphate and external ammonium
     node_type: PERTURBATION
     grounding:
+    - UniProtKB:P37527
     - UniProtKB:P37528
   - node_id: ribulose-product-signal
     label: Ribulose-condition A414 product signal
@@ -263,6 +265,7 @@ causal_graphs:
     node_type: ACTIVITY
     grounding:
     - UniProtKB:P37527
+    - UniProtKB:P37528
   - node_id: chromophore-315
     label: Reconstituted 315-nm absorbance signal
     node_type: STATE
@@ -389,6 +392,7 @@ causal_graphs:
     node_type: ACTIVITY
     grounding:
     - UniProtKB:P37527
+    - UniProtKB:P37528
   - node_id: released-phosphate
     label: Inorganic phosphate detected by the coupled assay
     node_type: STATE
