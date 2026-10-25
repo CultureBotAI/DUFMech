@@ -1,0 +1,35 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01977
+  path: curation/families/PF01977.yaml
+session:
+  id: 2026-10-25T111500Z-antigravity-7de30a
+  timestamp: '2026-10-25T11:15:00Z'
+  actors:
+  - type: ai_agent
+    name: Antigravity
+    model: inherit
+    agent_tool: Antigravity CLI
+events:
+- type: EDIT
+  outcome: changed
+  summary: Ground PF01977 AnFdc and ShVdcCD covalent enzyme-cofactor intermediate
+    state nodes
+  details: Grounded crystallographic covalent enzyme-prFMN adduct state nodes wt_ketimine,
+    e282q_ketimine (graph anfdc-crystal-photoisomerization-2018, PMID:29359985), int2
+    (graph anfdc-e282q-int2-trapping-2019, PMID:31117615), and int1_prime, int3_prime
+    (graph anfdc-phenylpropiolate-adducts-2019, PMID:31117615) with UniProtKB:A2QHE5
+    (Aspergillus niger CBS 513.88 Fdc1, locus An03g05380, 500 aa, NCBITaxon:425011,
+    PF01977 envelope 9-339), and grounded node quinoid (graph shvdccd-domain-closure-model-2021,
+    PMID:34003630) with UniProtKB:Q9S4M7 (Sedimentibacter hydroxybenzoicus JW/Z-1
+    VdcC, 483 aa, NCBITaxon:29346, PF01977 envelope 5-327).
+  sections:
+  - causal_graphs
+links:
+  urls:
+  - https://rest.uniprot.org/uniprotkb/A2QHE5.json
+  - https://rest.uniprot.org/uniprotkb/Q9S4M7.json
+  - https://pubmed.ncbi.nlm.nih.gov/29359985/
+  - https://pubmed.ncbi.nlm.nih.gov/31117615/
+  - https://pubmed.ncbi.nlm.nih.gov/34003630/

@@ -194,6 +194,8 @@ causal_graphs:
   - node_id: add-cas2
     label: Add Cas2 to the Cas1 donor-target reaction in manganese
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q46896
   - node_id: integrated-dna
     label: Radiolabeled donor-containing plasmid product
     node_type: STATE
@@ -539,5 +541,13 @@ curation_events:
   outcome: changed
   summary: Ground causal graph gene and protein nodes in PF01867 with verified UniProtKB accessions (UniProtKB:Q46896)
   history_record: history/records/PF01867/2026-10-18T025446Z-antigravity-604f8a.yaml
+  event_index: 0
+  llm_assisted: true
+- timestamp: '2026-10-25T11:15:00Z'
+  curator: Antigravity
+  action: EDIT
+  outcome: changed
+  summary: Ground PF01867 Cas2-addition perturbation node in the E. coli Cas1 reaction with UniProtKB:Q46896
+  history_record: history/records/PF01867/2026-10-25T111500Z-antigravity-657d81.yaml
   event_index: 0
   llm_assisted: true

@@ -243,6 +243,8 @@ causal_graphs:
   - node_id: terminal-mass-shift
     label: Detected terminal peptide with approximately +114.118 Da
     node_type: STATE
+    grounding:
+    - UniProtKB:Q5JIZ3
   edges:
   - edge_id: incubation-yields-terminal-mass-shift
     subject: donor-incubated-tkbpsa
@@ -641,5 +643,13 @@ curation_events:
   summary: Ground spermidine-kcat, spermidine-efficiency and branched-norspermidine-efficiency ACTIVITY
     nodes in PF01861 causal graphs to UniProtKB:Q5JIZ3 and UniProtKB:Q72L89
   history_record: history/records/PF01861/2026-10-25T094506Z-antigravity-1f2397.yaml
+  event_index: 0
+  llm_assisted: true
+- timestamp: '2026-10-25T11:15:00Z'
+  curator: Antigravity
+  action: EDIT
+  outcome: changed
+  summary: Ground PF01861 Tk-BpsA modified C-terminal peptide state node with UniProtKB:Q5JIZ3
+  history_record: history/records/PF01861/2026-10-25T111500Z-antigravity-361ab1.yaml
   event_index: 0
   llm_assisted: true

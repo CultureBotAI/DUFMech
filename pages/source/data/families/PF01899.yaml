@@ -284,6 +284,8 @@ causal_graphs:
   - node_id: mrpe-membrane-signal
     label: Membrane MrpE immunoblot signal
     node_type: STATE
+    grounding:
+    - UniProtKB:Q9RGZ1
   - node_id: mrpf-membrane-signal
     label: Membrane MrpF immunoblot signal
     node_type: STATE
@@ -293,6 +295,8 @@ causal_graphs:
   - node_id: full-complex-bands
     label: Blue-native bands assigned to full MrpA-G complexes
     node_type: STATE
+    grounding:
+    - UniProtKB:Q9RGZ1
   edges:
   - edge_id: t113a-decreases-mrpe-signal
     subject: t113a
@@ -543,5 +547,13 @@ curation_events:
   outcome: needs_followup
   summary: Retain partial scientific self-review of MrpE context-specific causal graphs
   history_record: history/records/PF01899/2026-10-11T214705Z-codex-4dd871.yaml
+  event_index: 0
+  llm_assisted: true
+- timestamp: '2026-10-25T11:15:00Z'
+  curator: Antigravity
+  action: EDIT
+  outcome: changed
+  summary: Ground PF01899 MrpE membrane immunoblot and full MrpA-G complex band nodes with UniProtKB:Q9RGZ1
+  history_record: history/records/PF01899/2026-10-25T111500Z-antigravity-3c25ea.yaml
   event_index: 0
   llm_assisted: true

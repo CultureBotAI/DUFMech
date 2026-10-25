@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01661
+  path: curation/families/PF01661.yaml
+session:
+  id: 2026-10-25T111500Z-antigravity-28d740
+  timestamp: '2026-10-25T11:15:00Z'
+  actors:
+  - type: ai_agent
+    name: Antigravity
+    model: inherit
+    agent_tool: Antigravity CLI
+events:
+- type: EDIT
+  outcome: changed
+  summary: Ground PF01661 Af1521-ADP-ribose bound state node with UniProtKB:O28751
+  details: Grounded protein-ligand complex state node itc-adpr-bound-state in graph
+    af1521-adpr-binding-and-substitutions with UniProtKB:O28751 (Archaeoglobus fulgidus
+    DSM 4304 Af1521, locus AF_1521, 192 aa, NCBITaxon:224325, PF01661 envelope 19-189,
+    PMID:15735682), while keeping fitted affinity node measured-adpr-affinity ungrounded.
+  sections:
+  - causal_graphs
+links:
+  urls:
+  - https://rest.uniprot.org/uniprotkb/O28751.json
+  - https://pubmed.ncbi.nlm.nih.gov/15735682/

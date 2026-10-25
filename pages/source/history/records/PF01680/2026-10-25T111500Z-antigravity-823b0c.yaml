@@ -1,0 +1,29 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01680
+  path: curation/families/PF01680.yaml
+session:
+  id: 2026-10-25T111500Z-antigravity-823b0c
+  timestamp: '2026-10-25T11:15:00Z'
+  actors:
+  - type: ai_agent
+    name: Antigravity
+    model: inherit
+    agent_tool: Antigravity CLI
+events:
+- type: EDIT
+  outcome: changed
+  summary: Ground PF01680 PdxS K81-linked covalent protein-adduct state node with
+    UniProtKB:P37527
+  details: Grounded covalent protein-adduct state node k81-linked-early-adduct in
+    graph pdxs-k81-early-adduct with UniProtKB:P37527 (Bacillus subtilis subsp. subtilis
+    str. 168 PdxS, locus BSU00110, 294 aa, NCBITaxon:224308, PF01680 envelope 7-285,
+    PMID:17336172), representing the early K81-linked covalent intermediate on PdxS
+    tryptic peptide 61-83.
+  sections:
+  - causal_graphs
+links:
+  urls:
+  - https://rest.uniprot.org/uniprotkb/P37527.json
+  - https://pubmed.ncbi.nlm.nih.gov/17336172/

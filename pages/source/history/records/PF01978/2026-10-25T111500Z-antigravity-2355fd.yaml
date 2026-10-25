@@ -1,0 +1,28 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01978
+  path: curation/families/PF01978.yaml
+session:
+  id: 2026-10-25T111500Z-antigravity-2355fd
+  timestamp: '2026-10-25T11:15:00Z'
+  actors:
+  - type: ai_agent
+    name: Antigravity
+    model: inherit
+    agent_tool: Antigravity CLI
+events:
+- type: EDIT
+  outcome: changed
+  summary: Ground PF01978 TrmBL1-MD promoter gel-shift complex node with UniProtKB:Q8U4G4
+  details: Grounded protein-DNA complex readout node shifted_md in graph trmbl1-md-mutants-2007
+    with UniProtKB:Q8U4G4 (Pyrococcus furiosus DSM 3638 TrmBL1, locus PF0124, 341
+    aa, NCBITaxon:186497, PF01978 envelope 211-319, PMID:17384193), while leaving
+    thesis pSL152 nodes ungrounded due to the unresolved P. furiosus Q9HGZ9 vs P.
+    woesei Q7LYW4 plasmid-origin taxonomy ambiguity.
+  sections:
+  - causal_graphs
+links:
+  urls:
+  - https://rest.uniprot.org/uniprotkb/Q8U4G4.json
+  - https://pubmed.ncbi.nlm.nih.gov/17384193/

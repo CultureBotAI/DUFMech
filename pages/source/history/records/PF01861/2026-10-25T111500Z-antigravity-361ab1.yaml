@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01861
+  path: curation/families/PF01861.yaml
+session:
+  id: 2026-10-25T111500Z-antigravity-361ab1
+  timestamp: '2026-10-25T11:15:00Z'
+  actors:
+  - type: ai_agent
+    name: Antigravity
+    model: inherit
+    agent_tool: Antigravity CLI
+events:
+- type: EDIT
+  outcome: changed
+  summary: Ground PF01861 Tk-BpsA modified C-terminal peptide state node with UniProtKB:Q5JIZ3
+  details: Grounded covalently modified peptide state node terminal-mass-shift in
+    graph tkbpsa-donor-incubation-peptide with UniProtKB:Q5JIZ3 (Thermococcus kodakarensis
+    KOD1 Tk-BpsA, locus TK0308, 351 aa, NCBITaxon:69014, PF01861 envelope 6-346, PMID:27694442),
+    representing the +114.118 Da modified Tk-BpsA C-terminal tryptic peptide 331-351.
+  sections:
+  - causal_graphs
+links:
+  urls:
+  - https://rest.uniprot.org/uniprotkb/Q5JIZ3.json
+  - https://pubmed.ncbi.nlm.nih.gov/27694442/

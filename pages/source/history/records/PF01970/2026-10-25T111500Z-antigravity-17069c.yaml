@@ -1,0 +1,33 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01970
+  path: curation/families/PF01970.yaml
+session:
+  id: 2026-10-25T111500Z-antigravity-17069c
+  timestamp: '2026-10-25T11:15:00Z'
+  actors:
+  - type: ai_agent
+    name: Antigravity
+    model: inherit
+    agent_tool: Antigravity CLI
+events:
+- type: EDIT
+  outcome: changed
+  summary: Ground PF01970 TpiA and TctA operon perturbation and tctA transcript state
+    nodes with verified NCBIProtein accessions
+  details: Grounded node joint-construct (graph pputida-joint-tpa-conversion-2013)
+    with NCBIProtein:BAN66716.1 (Comamonas sp. E6 TpiA, 503 aa, NCBITaxon:364029,
+    archived PF01970 20-441, PMID:23913423), and grounded nodes operon-deletion-mg,
+    operon-deletion-sr (graph cglutamicum-operon-cation-growth-2009), operon-ca, operon-mg
+    (graph ecoli-tctcba-cation-growth-2009), and tcta-mrna (graph cglutamicum-citab-tcta-transcript-2009)
+    with NCBIProtein:CAF20846.1 (Corynebacterium glutamicum ATCC 13032 TctA, locus
+    cg3125/NCgl2724, 510 aa, NCBITaxon:196627, archived PF01970 20-443, PMID:19376865).
+  sections:
+  - causal_graphs
+links:
+  urls:
+  - https://www.ncbi.nlm.nih.gov/protein/BAN66716.1
+  - https://www.ncbi.nlm.nih.gov/protein/CAF20846.1
+  - https://pubmed.ncbi.nlm.nih.gov/23913423/
+  - https://pubmed.ncbi.nlm.nih.gov/19376865/

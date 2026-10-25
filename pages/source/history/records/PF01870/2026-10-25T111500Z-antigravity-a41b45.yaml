@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01870
+  path: curation/families/PF01870.yaml
+session:
+  id: 2026-10-25T111500Z-antigravity-a41b45
+  timestamp: '2026-10-25T11:15:00Z'
+  actors:
+  - type: ai_agent
+    name: Antigravity
+    model: inherit
+    agent_tool: Antigravity CLI
+events:
+- type: EDIT
+  outcome: changed
+  summary: Ground PF01870 phosphorylated Hjc protein radiolabel nodes with UniProtKB:F0NID3
+  details: Grounded phosphorylated Hjc protein readout nodes label-0171, label-2030,
+    and label-2056kd in graph sire-mutation-dependent-phosphorylation-readouts with
+    UniProtKB:F0NID3 (Sulfolobus islandicus REY15A Hjc, locus SiRe_1431, 143 aa, NCBITaxon:930945,
+    PF01870 envelope 2-127, PMID:29967286).
+  sections:
+  - causal_graphs
+links:
+  urls:
+  - https://rest.uniprot.org/uniprotkb/F0NID3.json
+  - https://pubmed.ncbi.nlm.nih.gov/29967286/

@@ -1,0 +1,30 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01732
+  path: curation/families/PF01732.yaml
+session:
+  id: 2026-10-25T111500Z-antigravity-7ae81f
+  timestamp: '2026-10-25T11:15:00Z'
+  actors:
+  - type: ai_agent
+    name: Antigravity
+    model: inherit
+    agent_tool: Antigravity CLI
+events:
+- type: EDIT
+  outcome: changed
+  summary: Ground PF01732 MIB omission and MIB-MIP locus deletion perturbation nodes
+    with NCBIProtein:ACU78687.1 and NCBIProtein:ACU78312.1
+  details: Grounded perturbation nodes omit-mib (graph gm12-recombinant-mib-mip-cleavage)
+    and whole-locus-deletion (graph gm12-mib-mip-locus-deletion) with NCBIProtein:ACU78687.1
+    (Mycoplasma mycoides subsp. capri GM12 MIP82, locus MMCAP2_0582, 899 aa, PF01732
+    envelope 483-774) and NCBIProtein:ACU78312.1 (M. mycoides subsp. capri GM12 MIB83,
+    locus MMCAP2_0583, 754 aa, NCBITaxon:436113, PMID:26869713).
+  sections:
+  - causal_graphs
+links:
+  urls:
+  - https://www.ncbi.nlm.nih.gov/protein/ACU78687.1
+  - https://www.ncbi.nlm.nih.gov/protein/ACU78312.1
+  - https://pubmed.ncbi.nlm.nih.gov/26869713/

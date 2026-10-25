@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01638
+  path: curation/families/PF01638.yaml
+session:
+  id: 2026-10-25T111500Z-antigravity-25313b
+  timestamp: '2026-10-25T11:15:00Z'
+  actors:
+  - type: ai_agent
+    name: Antigravity
+    model: inherit
+    agent_tool: Antigravity CLI
+events:
+- type: EDIT
+  outcome: changed
+  summary: Ground PF01638 shifted HxlR-DNA complex state node with UniProtKB:P42406
+  details: Grounded protein-DNA complex state node shifted-brh-dna in graph hxlr-wt-c11a-dna-binding-response
+    with UniProtKB:P42406 (Bacillus subtilis subsp. subtilis str. 168 HxlR, locus
+    BSU03470, 117 aa, NCBITaxon:224308, PF01638 envelope 21-106, PMID:30979803), representing
+    the shifted HxlR-BRH DNA complex.
+  sections:
+  - causal_graphs
+links:
+  urls:
+  - https://rest.uniprot.org/uniprotkb/P42406.json
+  - https://pubmed.ncbi.nlm.nih.gov/30979803/

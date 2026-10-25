@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01875
+  path: curation/families/PF01875.yaml
+session:
+  id: 2026-10-25T111500Z-antigravity-f45cf1
+  timestamp: '2026-10-25T11:15:00Z'
+  actors:
+  - type: ai_agent
+    name: Antigravity
+    model: inherit
+    agent_tool: Antigravity CLI
+events:
+- type: EDIT
+  outcome: changed
+  summary: Ground PF01875 human MEMO1 iron-binding calorimetric state node with UniProtKB:Q9Y316
+  details: Grounded protein-ligand binding state node iron-binding-response in graph
+    human-iron-binding-substitutions with UniProtKB:Q9Y316 (Homo sapiens MEMO1, gene
+    C2orf4, 297 aa, NCBITaxon:9606, PF01875 envelope 4-287, PMID:38336932).
+  sections:
+  - causal_graphs
+links:
+  urls:
+  - https://rest.uniprot.org/uniprotkb/Q9Y316.json
+  - https://pubmed.ncbi.nlm.nih.gov/38336932/
