@@ -22,30 +22,6 @@ artifacts:
 - path: reviews/workflow/mech-goal-sequence-20261019/cycle-000003/stage-05/revision-0001/remediation_coverage.json
   sha256: f26b8d1ced82d7a1a0040ceb076c64c34359794f8b5121fd72b8c89fc2e52853
   kind: supporting
-- path: reviews/structured/20261025T161300Z-pf01174-c3s5-remediation-review/review.yaml
-  sha256: 2e0501ffd1fb8928b88024a608cc9a64be0bac52dbd2b47d2089e68fec97f004
-  kind: review
-- path: reviews/structured/20261025T161300Z-pf01174-c3s5-remediation-review/review.md
-  sha256: 4ac3128ffadf95186f729a61912309ae5ffca87351bc5e1ec61b95ed345b1b2e
-  kind: review
-- path: reviews/structured/20261025T161310Z-pf01680-c3s5-remediation-review/review.yaml
-  sha256: 30e9a989625a9dafaee771ec64781ee65a5a3dbd22c8b71ac52fb6a3a9457bef
-  kind: review
-- path: reviews/structured/20261025T161310Z-pf01680-c3s5-remediation-review/review.md
-  sha256: 8bac71f56faf7aba27f3241a016c675f7c1bb9278a2c9bf83f0f6e1d919ae016
-  kind: review
-- path: reviews/structured/20261025T161320Z-pf01867-c3s5-remediation-review/review.yaml
-  sha256: 4b06cb509d347e2afec826d7d9a456e8d39dade6fca158506638da808ba7eed9
-  kind: review
-- path: reviews/structured/20261025T161320Z-pf01867-c3s5-remediation-review/review.md
-  sha256: 8d75758989f43f5909658955d1dbb8888842d8617aad683b3a7f67e998c225b3
-  kind: review
-- path: reviews/structured/20261025T161330Z-pf01977-c3s5-remediation-review/review.yaml
-  sha256: bdbca30db9d1141cc2151ba4040c66cfb8b523f31ad3531f07a6c2501f8e72e9
-  kind: review
-- path: reviews/structured/20261025T161330Z-pf01977-c3s5-remediation-review/review.md
-  sha256: 9ca91c7e5f31a14f29c37608e0f8ace088ab77ed1d34ffcdcf13de9d8fd875e4
-  kind: review
 findings:
 - finding_id: pf01174-pdxst-partner-and-acivicin-nodes-missing-grounding
   status: resolved
@@ -86,7 +62,6 @@ groups:
   - reviews/workflow/mech-goal-sequence-20261019/cycle-000003/stage-05/revision-0001/issue_map.md
   - reviews/workflow/mech-goal-sequence-20261019/cycle-000003/stage-05/revision-0001/validation.md
   - reviews/workflow/mech-goal-sequence-20261019/cycle-000003/stage-05/revision-0001/remediation_coverage.json
-  - reviews/structured/20261025T161300Z-pf01174-c3s5-remediation-review/review.yaml
 - group_id: c3s5-pf01680-grounding
   status: resolved
   summary: Remediated missing partner grounding on 4 joint Pdx1/PdxS + Pdx2/PdxT complex nodes in PF01680 (Issue #362) and verified via native projection regeneration and successor structured review 20261025T161310Z-pf01680-c3s5-remediation-review.
@@ -97,7 +72,6 @@ groups:
   - reviews/workflow/mech-goal-sequence-20261019/cycle-000003/stage-05/revision-0001/issue_map.md
   - reviews/workflow/mech-goal-sequence-20261019/cycle-000003/stage-05/revision-0001/validation.md
   - reviews/workflow/mech-goal-sequence-20261019/cycle-000003/stage-05/revision-0001/remediation_coverage.json
-  - reviews/structured/20261025T161310Z-pf01680-c3s5-remediation-review/review.yaml
 - group_id: c3s5-pf01867-grounding
   status: resolved
   summary: Remediated missing Cas2 partner grounding on 6 Cas1-Cas2 complex and Cas2-perturbation nodes in PF01867 (Issue #363) and verified via native projection regeneration and successor structured review 20261025T161320Z-pf01867-c3s5-remediation-review.
@@ -108,7 +82,6 @@ groups:
   - reviews/workflow/mech-goal-sequence-20261019/cycle-000003/stage-05/revision-0001/issue_map.md
   - reviews/workflow/mech-goal-sequence-20261019/cycle-000003/stage-05/revision-0001/validation.md
   - reviews/workflow/mech-goal-sequence-20261019/cycle-000003/stage-05/revision-0001/remediation_coverage.json
-  - reviews/structured/20261025T161320Z-pf01867-c3s5-remediation-review/review.yaml
 - group_id: c3s5-pf01977-grounding
   status: resolved
   summary: Remediated missing partner grounding on 5 joint ShVdcCD complex nodes in PF01977 (Issue #364) and verified via native projection regeneration and successor structured review 20261025T161330Z-pf01977-c3s5-remediation-review.
@@ -119,6 +92,5 @@ groups:
   - reviews/workflow/mech-goal-sequence-20261019/cycle-000003/stage-05/revision-0001/issue_map.md
   - reviews/workflow/mech-goal-sequence-20261019/cycle-000003/stage-05/revision-0001/validation.md
   - reviews/workflow/mech-goal-sequence-20261019/cycle-000003/stage-05/revision-0001/remediation_coverage.json
-  - reviews/structured/20261025T161330Z-pf01977-c3s5-remediation-review/review.yaml
 carry_forward_ids: []
 infra_tasks: []
