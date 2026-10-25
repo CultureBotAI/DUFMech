@@ -7,6 +7,7 @@ import json
 import math
 import re
 from collections import Counter, defaultdict
+from collections.abc import Container
 from html import escape
 from pathlib import Path
 from typing import Any
@@ -14,6 +15,8 @@ from typing import Any
 from dufmech.report import ReportError
 from dufmech.site_data import (
     IPR_RE,
+    autolink,
+    curie_url,
     description_html,
     group_members,
     link,
@@ -23,6 +26,7 @@ from dufmech.site_data import (
 )
 from dufmech.site_sources import REPOSITORY
 
+SITE_URL = "https://culturebotai.github.io/DUFMech/"
 PAGE_SIZE = 50
 SORTS = {
     "proteins-desc": "Proteins: high to low", "proteins-asc": "Proteins: low to high",
@@ -75,6 +79,18 @@ def json_text(value: Any) -> str:
     return json.dumps(value, sort_keys=True, ensure_ascii=True, separators=(",", ":")) + "\n"
 
 
+def term_link(curie: str, *, families: Container[str] = (), pfam: str = "", root: str = "../") -> str:
+    """Link a displayed CURIE; one naming another family in this catalogue opens its page.
+
+    The page's own family resolves externally, as its Grounding section does, since a
+    link back to the same page goes nowhere.
+    """
+    prefix, _, local = curie.partition(":")
+    if prefix == "Pfam" and local != pfam and local in families:
+        return f'<a href="{root}families/{local}.html">{text(curie)}</a>'
+    return link(curie_url(curie), curie)
+
+
 def artifact_link(reference: dict, label: str, root: str = "../") -> str:
     url = reference_url(reference)
     if url:
@@ -90,17 +106,17 @@ def curated_assertions(record: dict) -> str:
     for assertion in record.get("assertions", []):
         evidence = "".join(
             f'<li>{link(reference_url(ref) or ref.get("source_url", ""), ref["reference"])}'
-            f'<blockquote>{text(ref["snippet"])}</blockquote><p>{text(ref["explanation"])}</p></li>'
+            f'<blockquote>{autolink(ref["snippet"])}</blockquote><p>{autolink(ref["explanation"])}</p></li>'
             for ref in assertion.get("evidence", [])
         )
         assertions.append(f'<h3>{text(assertion["assertion_id"])}</h3>'
-                          f'<p>{text(assertion["statement"])}</p>'
-                          f'<p>Scope: {text(assertion["scope"])}. '
+                          f'<p>{autolink(assertion["statement"])}</p>'
+                          f'<p>Scope: {autolink(assertion["scope"])}. '
                           f'Evidence kind: {human(assertion["evidence_kind"])}.</p><ul>{evidence}</ul>')
     return "".join(assertions) or "<p>No curated functional assertions supplied.</p>"
 
 
-def curated_graphs(record: dict) -> str:
+def curated_graphs(record: dict, *, families: Container[str] = (), pfam: str = "") -> str:
     graphs = []
     for graph in record.get("causal_graphs", []):
         labels = {node["node_id"]: node["label"] for node in graph["nodes"]}
@@ -108,8 +124,8 @@ def curated_graphs(record: dict) -> str:
         for edge in graph["edges"]:
             evidence = "".join(
                 f'<li>{link(ref["source_url"], ref["reference"])}'
-                f'<blockquote>{text(ref["snippet"])}</blockquote>'
-                f'<p>{text(ref["explanation"])}</p></li>' for ref in edge["evidence"]
+                f'<blockquote>{autolink(ref["snippet"])}</blockquote>'
+                f'<p>{autolink(ref["explanation"])}</p></li>' for ref in edge["evidence"]
             )
             rows.append(
                 f'<tr id="causal-edge.{text(graph["graph_id"])}.{text(edge["edge_id"])}">'
@@ -120,22 +136,24 @@ def curated_graphs(record: dict) -> str:
                 f'<td>{human(edge["support"])} / {human(edge["directness"])} / '
                 f'{human(edge["evidence_kind"])}</td><td><details>'
                 f'<summary>Evidence ({len(edge["evidence"])})</summary>'
-                f'<p>{text(edge["mechanism"])}</p><ul>{evidence}</ul></details></td></tr>'
+                f'<p>{autolink(edge["mechanism"])}</p><ul>{evidence}</ul></details></td></tr>'
             )
         nodes = "".join(
             f'<li><code>{text(node["node_id"])}</code>: {text(node["label"])}; '
-            f'{human(node["node_type"])}; {text(", ".join(node.get("grounding", [])) or "Ungrounded")}'
-            '</li>' for node in graph["nodes"]
+            f'{human(node["node_type"])}; '
+            + (", ".join(term_link(curie, families=families, pfam=pfam) for curie in node.get("grounding", []))
+               or "Ungrounded")
+            + '</li>' for node in graph["nodes"]
         )
-        feedback = (f'<p>Feedback: {text(graph["feedback_explanation"])}</p>'
+        feedback = (f'<p>Feedback: {autolink(graph["feedback_explanation"])}</p>'
                     if graph.get("feedback_explanation") else "")
         graphs.append(
             f'<h3 id="causal-graph-{text(graph["graph_id"])}">{text(graph["title"])}</h3>'
             f'<p>{human(graph["scope_status"])}</p>'
-            f'<dl class="record-facts"><dt>Scope</dt><dd>{text(graph["scope"])}</dd>'
-            f'<dt>Context</dt><dd>{text(graph["context"])}</dd>'
-            f'<dt>Family mapping</dt><dd>{text(graph["family_mapping"])}</dd>'
-            f'<dt>Limitations</dt><dd>{text(graph["limitations"])}</dd></dl>'
+            f'<dl class="record-facts"><dt>Scope</dt><dd>{autolink(graph["scope"])}</dd>'
+            f'<dt>Context</dt><dd>{autolink(graph["context"])}</dd>'
+            f'<dt>Family mapping</dt><dd>{autolink(graph["family_mapping"])}</dd>'
+            f'<dt>Limitations</dt><dd>{autolink(graph["limitations"])}</dd></dl>'
             f'<ul>{nodes}</ul>{feedback}'
             '<div class="table-wrap" tabindex="0" role="region" aria-label="Causal edges">'
             '<table><caption>Directed causal edges</caption><thead><tr>'
@@ -153,21 +171,23 @@ def structured_content(value: Any) -> str:
                                 for key, item in value.items()) + "</dl>"
     if isinstance(value, list):
         return "<ul>" + "".join(f"<li>{structured_content(item)}</li>" for item in value) + "</ul>"
-    return link(reference_url({"reference": str(value)}), str(value))
+    url = reference_url({"reference": str(value)})
+    return link(url, str(value)) if url else autolink(value)
 
 
-def page_shell(title: str, body: str, provenance: dict, *, root: str = "") -> str:
+def page_shell(title: str, body: str, provenance: dict, *, root: str = "", assets: str = "") -> str:
     source = provenance.get("worklist", {})
     pinned = source_link(source.get("repository", REPOSITORY), source.get("commit", ""),
                          source.get("path", ""))
     version = link(pinned, f"Corpus source {source.get('commit', '')[:12]}") if pinned else ""
     inputs = " / ".join(f"{text(k)}: {text(v)}" for k, v in provenance["inputs"].items())
+    assets = assets or (f'<script src="{root}theme.js"></script><link rel="stylesheet" href="{root}style.css">\n'
+                        f'<script src="{root}dashboard.js" defer></script>')
     return f"""<!doctype html>
 <html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{text(title)} | DUFMech</title><link rel="icon" href="data:,">
-<script src="{root}theme.js"></script><link rel="stylesheet" href="{root}style.css">
-<script src="{root}dashboard.js" defer></script></head><body>
+{assets}</head><body>
 <a class="skip-link" href="#main">Skip to content</a><header>
 <a class="brand" href="{root}index.html">DUFMech</a>
 <nav aria-label="Project navigation"><a href="{root}index.html#families">Browse families</a>
@@ -303,7 +323,7 @@ def cross_row(row: dict, sources: dict, root: str = "") -> str:
     url = source_link(source.get("repository", ""), source.get("commit", ""), row["source_path"])
     record = link(url, row.get("source_record_label") or row.get("source_record_id") or row["source_path"])
     accession = row.get("uniprot_accession", "")
-    protein = link(f"https://rest.uniprot.org/uniprotkb/{accession}", accession) if accession else ""
+    protein = link(f"https://www.uniprot.org/uniprotkb/{accession}/entry", accession) if accession else ""
     return (f'<tr><td>{family}</td><td>{text(row["source_mech"])}</td><td>{record}</td>'
             f'<td>{protein}<br>{text(row.get("protein_label", ""))}</td>'
             f'<td>{human(", ".join(row.get("link_basis", [])))}</td></tr>')
@@ -462,7 +482,7 @@ def record_page(row: dict, metadata: dict, context: dict) -> str:
     refs = []
     for ref in metadata.get("evidence", []):
         refs.append(f'<li>{link(reference_url(ref), ref.get("label") or ref.get("id") or ref.get("reference") or ref.get("url", "Source"))}'
-                    f' {text(ref.get("description", ""))}</li>')
+                    f' {autolink(ref.get("description", ""))}</li>')
     if "[cite:PUB" in row["description"]:
         refs.append(f'<li>{link(pfam_url(pfam), "InterPro entry and its literature references")}. '
                     'PUB identifiers are internal InterPro references, not PubMed identifiers. '
@@ -483,12 +503,12 @@ def record_page(row: dict, metadata: dict, context: dict) -> str:
         events.append(f'<li><time>{text(event.get("timestamp", event.get("date", "")))}</time> '
                       f'{text(event.get("agent", event.get("curator", "")))}: '
                       f'{text(event.get("action", event.get("event_type", "")))}. '
-                      f'{text(event.get("summary", event.get("description", "")))}'
+                      f'{autolink(event.get("summary", event.get("description", "")))}'
                       f' {artifact_link(event, event.get("source_path", "History artifact"))}'
-                      f'<p>{text(event.get("description", ""))} {text(event.get("outcome", ""))}</p></li>')
+                      f'<p>{autolink(event.get("description", ""))} {text(event.get("outcome", ""))}</p></li>')
     history = "<ol>" + "".join(events) + "</ol>" if events else "<p>No retained curation events supplied.</p>"
     reviews = "".join(f'<li>{artifact_link(ref, ref.get("label", "Retained review"))}'
-                      f'<p>Scope: {text(ref.get("scope", "Not supplied"))}. '
+                      f'<p>Scope: {autolink(ref.get("scope", "Not supplied"))}. '
                       f'Scientific review: {text(ref.get("scientific_review", "Not supplied"))}.</p></li>'
                       for ref in metadata.get("reviews", []))
     history += f"<ul>{reviews}</ul>" if reviews else "<p>No retained review supplied.</p>"
@@ -515,7 +535,7 @@ def record_page(row: dict, metadata: dict, context: dict) -> str:
 <section><h2>Source description</h2><p class="description">{description or 'No description supplied.'}</p></section>
 <section><h2>Evidence and references</h2>{evidence}</section>
 <section><h2>Curated functional assertions</h2>{curated_assertions(metadata.get('record', {}))}</section>
-<section id="causal-graphs"><h2>Causal graphs</h2>{curated_graphs(metadata.get('record', {}))}</section>
+<section id="causal-graphs"><h2>Causal graphs</h2>{curated_graphs(metadata.get('record', {}), families=context['labels'], pfam=pfam)}</section>
 {protein_examples_section(context['protein_examples'].get(pfam))}
 <section id="domain-matches"><h2>Domain matches</h2>{domain_visual(context['members'].get(pfam, []), dataset=bool(context['provenance'].get('members')))}</section>
 <section><h2>Snapshot counters</h2><dl class="record-facts">{counters}</dl></section>
@@ -699,6 +719,28 @@ embedded with protein language model <code>{model}</code> ({dim}-dimensional mea
     return page_shell("Sequence map (pLM)", body, provenance)
 
 
+def not_found_page(families: list[dict], provenance: dict, assets: dict[str, str]) -> str:
+    """GitHub Pages serves 404.html for every missing path, at that path's depth.
+
+    A relative reference would resolve against the mistyped URL, so every link is
+    absolute and the stylesheet and theme script are inlined rather than fetched.
+    """
+    body = ('<h1>Page not found</h1><p class="lede">No DUFMech page exists at this address.</p>'
+            '<p>Family pages are named by Pfam accession, as <code>families/PF00001.html</code>; '
+            'a family outside the current worklist snapshot has no page.</p>'
+            f'<form class="hero-search" action="{SITE_URL}index.html#families" method="get" role="search">'
+            f'<label for="not-found-query">Search the DUFMech catalogue ({len(families):,} families)</label>'
+            '<div class="hero-search-row"><input id="not-found-query" type="search" name="q" '
+            'placeholder="Pfam accession, DUF name, InterPro ID or family name">'
+            '<button type="submit">Search families</button></div></form>'
+            f'<ul><li><a href="{SITE_URL}index.html#families">Browse all families</a></li>'
+            f'<li><a href="{SITE_URL}categories.html">Seed categories</a></li>'
+            f'<li><a href="{SITE_URL}map.html">Text embedding map</a></li>'
+            f'<li><a href="{SITE_URL}sources.html">Sources and schema</a></li></ul>')
+    inline = f'<script>{assets["theme.js"]}</script><style>{assets["style.css"]}</style>'
+    return page_shell("Page not found", body, provenance, root=SITE_URL, assets=inline)
+
+
 def render_artifacts(
     families: list[dict], report: dict, *, input_ids: dict, cross_rows: list[dict],
     cross_sources: dict, family_metadata: dict | None = None, member_rows: list[dict] | None = None,
@@ -823,6 +865,7 @@ def render_artifacts(
     artifacts["cross-mech.html"] = page_shell("Cross-Mech examples", '<h1>Cross-Mech examples</h1>'
         '<p>Records outside ProteinTraitsMech. ProteinTraitsMech links appear on each family page.</p>'
         + cross_table(curated, cross_sources), provenance)
+    artifacts["404.html"] = not_found_page(families, provenance, assets)
     for row in families:
         pfam = row["pfam_id"]
         artifacts[f"families/{pfam}.html"] = record_page(row, metadata.get(pfam, {}), context)

@@ -13,6 +13,10 @@ from urllib.parse import unquote, urlsplit
 
 from dufmech.site_files import PENDING
 
+# GitHub Pages serves this page for every missing path, so nothing links to it and
+# a relative reference in it would resolve against whichever URL was mistyped.
+NOT_FOUND = "404.html"
+
 
 class Page(HTMLParser):
     def __init__(self, content: str):
@@ -55,7 +59,7 @@ def check_site(site: Path, budgets: dict) -> tuple[list[str], dict]:
     }
     files = {p.relative_to(root).as_posix(): p for p in root.rglob("*") if p.is_file()}
     for required in ("index.html", "index.json", "catalogue.json", "categories.html", "sources.html",
-                     "style.css", "dashboard.js", "theme.js"):
+                     "style.css", "dashboard.js", "theme.js", NOT_FOUND):
         if required not in files:
             errors.append(f"missing required site artifact: {required}")
     if errors:
@@ -76,6 +80,9 @@ def check_site(site: Path, budgets: dict) -> tuple[list[str], dict]:
         for href in page.links:
             parts = urlsplit(href)
             if parts.scheme or parts.netloc:
+                continue
+            if name == NOT_FOUND and parts.path:
+                errors.append(f"relative reference in {NOT_FOUND}, which is served at missing paths: {href}")
                 continue
             relative = (posixpath.normpath(posixpath.join(posixpath.dirname(name), unquote(parts.path)))
                         if parts.path else name)
@@ -110,7 +117,7 @@ def check_site(site: Path, budgets: dict) -> tuple[list[str], dict]:
                         if parts.path else name)
             if relative in parsed and relative not in visited:
                 pending.append(relative)
-    unreachable = set(parsed) - visited
+    unreachable = set(parsed) - visited - {NOT_FOUND}
     if unreachable:
         errors.append(f"unreachable HTML pages: {', '.join(sorted(unreachable)[:5])}")
     sizes = {name: path.stat().st_size for name, path in files.items()}

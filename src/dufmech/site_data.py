@@ -14,6 +14,23 @@ from dufmech.site_sources import load_source_pins
 COMMIT_RE = re.compile(r"[0-9a-f]{40}")
 PFAM_RE = re.compile(r"PF[0-9]{5}")
 IPR_RE = re.compile(r"IPR[0-9]{6}")
+UNIPROT_RE = re.compile(r"(?:[OPQ][0-9][A-Z0-9]{3}[0-9]|[A-NR-Z][0-9](?:[A-Z][A-Z0-9]{2}[0-9]){1,2})(?:-[0-9]+)?")
+# NCBI Protein holds both GenBank (three letters, five or seven digits) and RefSeq
+# (two-letter prefix and underscore) protein accessions; nucleotide accessions differ.
+GENBANK_PROTEIN_RE = re.compile(r"[A-Z]{3}[0-9]{5}(?:[0-9]{2})?(?:\.[0-9]+)?")
+REFSEQ_PROTEIN_RE = re.compile(r"(?:AP|NP|YP|XP|WP)_[0-9]+(?:\.[0-9]+)?")
+CURIE_RE = re.compile(r"[A-Za-z][A-Za-z0-9_.-]*:[^\s<>\"']+")
+TAXON_RECORD = "https://culturebotai.github.io/TaxonMech/pages/taxon.html?id=NCBITaxon:"
+# Reference tokens as curated prose spells them ("PMID:1", "PMID1", "doi:10.x/y",
+# "DOI10.x/y", "PMC1"). A URL matches first, so a DOI or PMC inside it stays part of
+# that URL; a DOI glued to a preceding word is not a token and stays text.
+REFERENCE_TOKEN = re.compile(
+    r"(?P<url>https?://[^\s<>\[\]]+)"
+    r"|(?P<doi>\b(?i:doi):?\s?10\.[0-9]{4,9}/[^\s<>\[\]]+|(?<![\w./])10\.[0-9]{4,9}/[^\s<>\[\]]+)"
+    r"|\b(?i:pmid):?\s?(?P<pmid>[0-9]{1,9})\b"
+    r"|\b(?P<pmc>PMC:?[0-9]{4,9})\b"
+)
+CLOSERS = {")": "(", "}": "{"}
 
 
 def safe_url(value: str) -> bool:
@@ -86,21 +103,77 @@ def reference_url(reference: dict[str, Any]) -> str:
     return identifier if safe_url(identifier) else ""
 
 
+def curie_url(curie: str) -> str:
+    """Resolve a displayed CURIE; a well-formed unknown prefix resolves through bioregistry.io."""
+    if not isinstance(curie, str) or not CURIE_RE.fullmatch(curie):
+        return ""
+    prefix, local = curie.split(":", 1)
+    if prefix == "UniProtKB" and UNIPROT_RE.fullmatch(local):
+        return f"https://www.uniprot.org/uniprotkb/{local}/entry"
+    if ((prefix == "NCBIProtein" and (GENBANK_PROTEIN_RE.fullmatch(local) or REFSEQ_PROTEIN_RE.fullmatch(local)))
+            or (prefix == "GenBank" and GENBANK_PROTEIN_RE.fullmatch(local))
+            or (prefix == "RefSeq" and REFSEQ_PROTEIN_RE.fullmatch(local))):
+        return f"https://www.ncbi.nlm.nih.gov/protein/{local}"
+    if prefix == "Pfam" and PFAM_RE.fullmatch(local):
+        return pfam_url(local)
+    if prefix == "InterPro" and IPR_RE.fullmatch(local):
+        return f"https://www.ebi.ac.uk/interpro/entry/InterPro/{local}/"
+    if prefix == "NCBITaxon" and local.isdigit():
+        return TAXON_RECORD + local
+    return "https://bioregistry.io/" + quote(curie, safe=":/")
+
+
+def trim_token(token: str) -> str:
+    """Drop sentence punctuation and unbalanced closing brackets that end a token."""
+    while token and (token[-1] in ".,;:!?'\"" or (
+            token[-1] in CLOSERS and token.count(token[-1]) > token.count(CLOSERS[token[-1]]))):
+        token = token[:-1]
+    return token
+
+
+def autolink(value: Any) -> str:
+    """Escape free text and link the PMID, PMC, DOI and http(s) URL tokens it cites.
+
+    Text is kept verbatim: only the token itself becomes the anchor text, and only
+    when it resolves to a safe target, so text without references renders exactly
+    as plain escaping would.
+    """
+    source = str(value if value is not None else "")
+    chunks: list[str] = []
+    start = 0
+    for match in REFERENCE_TOKEN.finditer(source):
+        token = match.group(0)
+        if match.group("url"):
+            token = trim_token(token)
+            url = token if safe_url(token) else ""
+        elif match.group("doi"):
+            token = trim_token(token)
+            url = reference_url({"reference": "doi:" + token[token.find("10."):]})
+        elif match.group("pmid"):
+            url = f"https://pubmed.ncbi.nlm.nih.gov/{match.group('pmid')}/"
+        else:
+            url = reference_url({"reference": match.group("pmc")})
+        if not url:
+            continue
+        chunks.append(escape(source[start:match.start()]))
+        chunks.append(link(url, token))
+        start = match.start() + len(token)
+    chunks.append(escape(source[start:]))
+    return "".join(chunks)
+
+
 def description_html(
     description: str, pfam: str, *, labels: dict[str, str],
     publications: dict[str, dict[str, Any]] | None = None,
 ) -> str:
     """Escape prose and resolve recognized source markup without treating PUB as PMID."""
     publications = publications or {}
-    pattern = re.compile(
-        r"\[cite:(PUB[0-9]+)\]|\[(pfam|interpro|swissprot):([A-Za-z0-9]+)\]"
-        r"|\bPMID:([0-9]+)\b|https?://[^\s<>\[\]]+"
-    )
+    pattern = re.compile(r"\[cite:(PUB[0-9]+)\]|\[(pfam|interpro|swissprot):([A-Za-z0-9]+)\]")
     chunks: list[str] = []
     start = 0
     for match in pattern.finditer(description):
-        chunks.append(escape(description[start:match.start()]))
-        pub, namespace, accession, pmid = match.groups()
+        chunks.append(autolink(description[start:match.start()]))
+        pub, namespace, accession = match.groups()
         if pub:
             resolved = publications.get(pub, {})
             url = reference_url(resolved) or pfam_url(pfam)
@@ -115,15 +188,10 @@ def description_html(
         elif namespace == "swissprot":
             chunks.append(link(f"https://www.uniprot.org/uniprotkb/{accession}/entry",
                                f"{accession} (UniProtKB protein)"))
-        elif pmid:
-            chunks.append(link(f"https://pubmed.ncbi.nlm.nih.gov/{pmid}/", f"PMID:{pmid}"))
-        elif match.group(0).startswith("http"):
-            url = match.group(0).rstrip(".,;)")
-            chunks.append(link(url, url) + escape(match.group(0)[len(url):]))
         else:
             chunks.append(escape(match.group(0)))
         start = match.end()
-    chunks.append(escape(description[start:]))
+    chunks.append(autolink(description[start:]))
     return "".join(chunks)
 
 

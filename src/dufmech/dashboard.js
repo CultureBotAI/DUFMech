@@ -738,7 +738,23 @@
     load();
   }
 
+  // Built here rather than rendered so the static family pages carry no extra bytes;
+  // without JavaScript the header's Repository link remains the reporting route.
+  function initFeedback() {
+    const match = location.pathname.match(/\/families\/(PF[0-9]{5})(?:\.html)?$/);
+    const download = match && document.querySelector('a[download][href="' + match[1] + '.json"]');
+    if (!download) return;
+    const issue = new URL('https://github.com/CultureBotAI/DUFMech/issues/new');
+    issue.searchParams.set('title', match[1]);
+    issue.searchParams.set('body', location.origin + location.pathname);
+    const link = document.createElement('a');
+    link.href = issue.href;
+    link.textContent = 'Report a problem on GitHub';
+    download.after(' | ', link);
+  }
+
   initCatalogue();
   initTextMap();
   initSequenceMap();
+  initFeedback();
 })();

@@ -17,7 +17,7 @@ from dufmech.report import ReportError
 MANIFEST = "site-files.json"
 PENDING = "site-files.pending.json"
 GENERATED = re.compile(
-    r"(?:\.nojekyll|(?:index|categories|sources|cross-mech|schema|map|sequence-map)\.html|"
+    r"(?:\.nojekyll|(?:index|categories|sources|cross-mech|schema|map|sequence-map|404)\.html|"
     r"(?:index|catalogue|text-map|sequence-map)\.json|style\.css|(?:dashboard|theme)\.js|"
     r"families/PF[0-9]{5}\.(?:html|json|fasta)|browse/[0-9]+\.html|"
     r"category/[a-z_]+(?:-[0-9]+)?\.html|schema/[a-z_]+\.yaml|"

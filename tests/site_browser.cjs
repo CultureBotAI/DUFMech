@@ -390,6 +390,28 @@ test('desktop and 390px pages, persisted light/dark/system, contrast, keyboard a
   }
 });
 
+test('family pages link a prefilled issue for that family; other pages do not', async () => {
+  const context = await browser.newContext({viewport: {width: 390, height: 844}});
+  const page = await context.newPage();
+  const errors = [];
+  page.on('pageerror', error => errors.push(error.message));
+  for (const pfam of ['PF00001', 'PF00123']) {
+    await page.goto(origin + `/families/${pfam}.html`);
+    const source = page.locator('section', {has: page.getByRole('heading', {name: 'Record source'})});
+    const issue = source.getByRole('link', {name: 'Report a problem on GitHub'});
+    assert.equal(await issue.count(), 1);
+    const href = new URL(await issue.getAttribute('href'));
+    assert.equal(href.origin + href.pathname, 'https://github.com/CultureBotAI/DUFMech/issues/new');
+    assert.equal(href.searchParams.get('title'), pfam);
+    assert.equal(href.searchParams.get('body'), origin + `/families/${pfam}.html`);
+    await noOverflow(page);
+  }
+  await page.goto(origin + '/index.html');
+  assert.equal(await page.getByRole('link', {name: 'Report a problem on GitHub'}).count(), 0);
+  assert.deepEqual(errors, []);
+  await context.close();
+});
+
 test('denied local storage does not break themes or search', async () => {
   const context = await browser.newContext();
   await context.addInitScript(() => {
