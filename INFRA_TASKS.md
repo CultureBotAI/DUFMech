@@ -44,6 +44,10 @@ tasks:
     status: resolved
     issue_url: https://github.com/CultureBotAI/DUFMech/issues/341
     disposition: Aligned src/dufmech/worklist.py short-name/name classification under CLASSIFIER_POLICY with src/dufmech/pfam_history.py (recognizing underscore-bounded DUF short names like PF21084 WHD_DUF4423_like and currently-named UPF\d{4} families like PF03649 UPF0014 while excluding UPF1/UPF2/UPF3/HupF false positives and preserving LEGACY_CLASSIFIER_POLICY replay parity) and added multi-query DUF/UPF harvesting support in InterProPfamClient, dufmech.cli, and dufmech.snapshot_cli with regression tests in tests/test_duf_puf_worklist.py.
+  - task_id: dufmech-infra-0003
+    summary: Support worklist snapshot-lineage propagation across reviews, protein_examples, report/pages, and exduf for UPF\d{4} and PF21084 onboarding
+    status: open
+    issue_url: https://github.com/CultureBotAI/DUFMech/issues/353
 ```
 <!-- mech-infra-tasks:end -->
 
@@ -116,5 +120,36 @@ tasks:
     - Added `DEFAULT_WORKLIST_SEARCHES = ("DUF", "UPF")`, `normalize_search_terms`, and `InterProPfamClient.iter_worklist_entries()`, extended `InterProPfamClient.iter_entries(search=...)` to accept comma-separated strings or sequences of search terms while retaining `search="DUF"` as the backward-compatible default, and added `--include-upf` to `dufmech.cli` and `dufmech.snapshot_cli`.
   - **Evaluated frozen worklist snapshot and [#96](https://github.com/CultureBotAI/DUFMech/issues/96) onboarding boundary**:
     - Stage 6 (`infrastructure`) implements the harvester, classifier, and CLI upgrades without performing bulk record onboarding (`add_records`, Stage 1). Existing frozen snapshots (`data/worklists/interpro-pfam-duf-2026-10-01.json`, `2026-10-05.json`, `2026-10-08.json`, `2026-10-10.json`) and their pinned regression gates (`tests/test_reclassify.py`, `tests/test_exduf.py`, `tests/test_upf1_migration_release.py`, `tests/test_exports.py`) remain intact; live multi-query (`DUF,UPF`) snapshot freezing and record onboarding for `PF21084` / `PF03649` (`UPF0014`, [#96](https://github.com/CultureBotAI/DUFMech/issues/96)) are ready for the next `add_records` (Stage 1) cycle using the upgraded harvester.
+
+### `dufmech-infra-0003` — Support worklist snapshot-lineage propagation across `reviews`, `protein_examples`, `report`/`pages`, and `exduf` for `UPF\d{4}` and `PF21084` onboarding
+
+- **Originating run / cycle / goal**: `mech-goal-sequence-20261019`, cycle `3`, stage `1` (`add_records`)
+- **Status**: `open`
+- **Issue**: https://github.com/CultureBotAI/DUFMech/issues/353 (coordinates with https://github.com/CultureBotAI/DUFMech/issues/96 and https://github.com/CultureBotAI/DUFMech/issues/341)
+- **Priority**: Medium
+- **Dependencies**: Builds on `dufmech-infra-0002` ([#341](https://github.com/CultureBotAI/DUFMech/issues/341)) and coordinates with [#96](https://github.com/CultureBotAI/DUFMech/issues/96) (`UPF0014` / `PF03649`)
+- **Evidence paths**:
+  - `src/dufmech/reviews.py`
+  - `src/dufmech/protein_examples.py`
+  - `src/dufmech/report.py`
+  - `src/dufmech/pages.py`
+  - `src/dufmech/exduf.py`
+  - `src/dufmech/records.py`
+  - `data/worklists/interpro-pfam-duf-2026-10-10.json`
+  - `data/worklists/pfam-previous-unknown-names-2026-10-10.json`
+  - `data/protein_examples/duf-protein-examples-direct-2026-10-13.manifest.json`
+- **Observation**:
+  - During the Cycle 3 Stage 1 (`add_records`) repeated bounded-frontier discovery audit (`2026-10-25`) across EBI Pfam FTP (`Pfam38.2/Pfam-A.seed.gz`, `content-length: 194369799`, `last-modified: Thu, 22 Jan 2026 16:03:00 GMT`) and the InterPro Pfam API (`search=DUF` returning `6,558` entries ending at `PF04830` and `search=UPF` returning `95` entries), `src/dufmech/worklist.py` (`CLASSIFIER_POLICY = "unknown-function-metadata-v3"`, implemented in `dufmech-infra-0002` / [#341](https://github.com/CultureBotAI/DUFMech/issues/341)) classifies `83` families absent from `data/worklists/interpro-pfam-duf-2026-10-10.json` (`8,296` families) as admissible seed rows:
+    - `59` `UNKNOWN_CANDIDATE` `UPF\d{4}` families (including `PF03649` `UPF0014`, `"Uncharacterised protein family (UPF0014)"`)
+    - `24` `KNOWN_HISTORICAL_DUF` families (`23` `UPF\d{4}` families such as `PF03653` `UPF0126` plus `1` underscore-joined `DUF` short-name family `PF21084` `WHD_DUF4423_like`, `"Winged Helix-turn-helix domain"`)
+    - While `5` `search=UPF` hits (`PF01894` `YjbQ`, `PF03690` `MYG1_exonuc`, `PF12877` `KIAA1549`, `PF17833` `pre-PUA_NIP7`, `PF18141` `UPF1_1B_dom`) are already present in `interpro-pfam-duf-2026-10-10.json` as `EX_DUF` and `8` `search=UPF` hits (`PF01455` `HupF_HypC`, `PF03467` `Smg4_UPF3`, `PF04050` `Upf2`, `PF09416` `UPF1_Zn_bind`, `PF18095` `PAS_12`, `PF29345` `C17orf58`, `PF29951` `KIAA1549_3rd`, `PF29952` `KIAA1549_1st`) are rejected as `FALSE_POSITIVE_TEXT_HIT`.
+  - However, freezing a new worklist snapshot (`data/worklists/interpro-pfam-duf-<DATE>.json`) and regenerating `data/families/PF*.yaml` to onboard those `83` candidates in Stage 1 (`add_records`, which forbids source-code edits to `src/` and `tests/`) is blocked by four coupled downstream snapshot-lineage checks introduced after the `2026-10-10` ([#191](https://github.com/CultureBotAI/DUFMech/issues/191)) migration:
+    1. **`src/dufmech/reviews.py` (`record_content_digest` & `require_completed_review`)**: `build_records` in `src/dufmech/records.py` writes the latest worklist snapshot's `provenance` (`snapshot_id`, `path`, `sha256`, `generated_at`) onto every `FamilyRecord` in `data/families/PF*.yaml`. Because `record_content_digest(record)` in `src/dufmech/reviews.py` (`REVIEW_DIGEST_EXCLUDED_FIELDS = frozenset({"curation_status", "review_id", "curation_events"})`) hashes `provenance`, adding any new worklist snapshot to `data/worklists/` changes `record_content_digest(record)` for all `8,296` existing families—even when their worklist row and curated overlay are byte-identical—causing `python -m dufmech.records --check` and `python -m dufmech.reviews check` to fail with `RecordError: reviewed record content changed or no projection was reviewed` across all `131` `REVIEWED` records in `curation/families/PF*.yaml`.
+    2. **`src/dufmech/protein_examples.py` (`load_snapshot` & `validate_rows`)**: Unlike `src/dufmech/cross_mech_snapshot.py` (which provides an offline compatible derivation CLI marking newly added worklist families as unscanned), `protein_examples.load_snapshot` requires `manifest["snapshot"]["input_snapshot_ids"]["worklist"] == worklist_id` and `validate_rows` requires exact family-set parity with the latest worklist, with no offline worklist-migration derivation helper, causing `python -m dufmech.site_sources check` to fail when a worklist snapshot adds families.
+    3. **`src/dufmech/report.py` (`iter_metadata_preserving_ancestors`) & `src/dufmech/pages.py` (`check_member_seed`)**: `iter_metadata_preserving_ancestors` stops walking whenever a worklist derivation includes `live_worklist` or `live_new_pfam_ids`, which causes `check_member_seed` in `src/dufmech/pages.py` to reject `pfam-uniprot-uniref90-2026-10-07.json` (`seeded against interpro-pfam-duf-2026-10-01`) when new families are introduced via `--live-json`.
+    4. **`src/dufmech/exduf.py` (`plan_migration`)**: `plan_migration` only selects `previous_names` rows where `not row.get("currently_unknown_name")`, so offline migration (`scripts/migrate_exduf_worklist.py` without `--live-json`) skips `PF21084` (`WHD_DUF4423_like`) and the `82` currently-named `UPF\d{4}` families because they have `currently_unknown_name: true` in `pfam-previous-unknown-names-2026-10-10.json`.
+- **Desired outcome**:
+  - Update `src/dufmech/reviews.py`, `src/dufmech/protein_examples.py`, `src/dufmech/report.py`, and `src/dufmech/exduf.py` in Stage 6 (`infrastructure`) so metadata-preserving worklist migrations that onboard newly classified `currently_unknown_name` families (`82` `UPF\d{4}` + `PF21084` `WHD_DUF4423_like`) preserve ancestor lineage for unchanged families, provide a compatible `protein_examples` snapshot derivation, and do not invalidate completed review digests on unchanged `REVIEWED` records.
+
 
 
