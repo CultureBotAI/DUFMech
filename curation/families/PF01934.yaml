@@ -316,6 +316,8 @@ causal_graphs:
   - node_id: cleavage
     label: ompA RNA cleavage in the matched assay
     node_type: ACTIVITY
+    grounding:
+    - UniProtKB:Q8ECH6
   edges:
   - edge_id: lower-rnase
     subject: preparation
@@ -600,6 +602,7 @@ causal_graphs:
     node_type: PERTURBATION
     grounding:
     - RefSeq:WP_164925653.1
+    - UniProtKB:Q8EGZ7
   - node_id: colonies
     label: Recoverable MR-1 colonies
     node_type: PHENOTYPE
@@ -771,6 +774,9 @@ causal_graphs:
   - node_id: cleavage
     label: MS2 RNA fragmentation by the isolated HEPN fragment
     node_type: ACTIVITY
+    grounding:
+    - RefSeq:WP_164925653.1
+    - UniProtKB:Q8EGZ7
   edges:
   - edge_id: ms2-degradation
     subject: reaction

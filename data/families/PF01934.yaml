@@ -348,6 +348,8 @@ causal_graphs:
   - node_id: cleavage
     label: ompA RNA cleavage in the matched assay
     node_type: ACTIVITY
+    grounding:
+    - UniProtKB:Q8ECH6
   edges:
   - edge_id: lower-rnase
     subject: preparation
@@ -632,6 +634,7 @@ causal_graphs:
     node_type: PERTURBATION
     grounding:
     - RefSeq:WP_164925653.1
+    - UniProtKB:Q8EGZ7
   - node_id: colonies
     label: Recoverable MR-1 colonies
     node_type: PHENOTYPE
@@ -803,6 +806,9 @@ causal_graphs:
   - node_id: cleavage
     label: MS2 RNA fragmentation by the isolated HEPN fragment
     node_type: ACTIVITY
+    grounding:
+    - RefSeq:WP_164925653.1
+    - UniProtKB:Q8EGZ7
   edges:
   - edge_id: ms2-degradation
     subject: reaction
@@ -987,5 +993,14 @@ curation_events:
   summary: Ground HepT and FhepTA modification and fragment state/perturbation nodes in PF01934 causal
     graphs
   history_record: history/records/PF01934/2026-10-23T074811Z-antigravity-193403.yaml
+  event_index: 0
+  llm_assisted: true
+- timestamp: '2026-10-25T05:29:10Z'
+  curator: Antigravity
+  action: EDIT
+  outcome: changed
+  summary: Add paired UniProtKB:Q8EGZ7 grounding to fragment in fhepta-fragment-native-cfu-2026 and ground
+    RNA-cleavage readout nodes in fhepta-fragment-rna-redox-2026 and so3166-modified-preparation-rnase-2020
+  history_record: history/records/PF01934/2026-10-25T052910Z-antigravity-75b3fc.yaml
   event_index: 0
   llm_assisted: true

@@ -1,0 +1,31 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01934
+  path: curation/families/PF01934.yaml
+session:
+  id: 2026-10-25T052910Z-antigravity-75b3fc
+  timestamp: '2026-10-25T05:29:10Z'
+  actors:
+  - type: ai_agent
+    name: Antigravity
+    model: Claude Opus 4.6
+    agent_tool: Antigravity
+events:
+- type: EDIT
+  outcome: changed
+  summary: Add paired UniProtKB:Q8EGZ7 grounding to fragment in fhepta-fragment-native-cfu-2026
+    and ground RNA-cleavage readout nodes in fhepta-fragment-rna-redox-2026 and so3166-modified-preparation-rnase-2020
+  details: 'Resolved Cycle 2 Stage 4 finding pf01934-fhepta-native-cfu-uniprot-grounding-and-cleavage-nodes
+    (#348) in curation/families/PF01934.yaml: (1) added UniProtKB:Q8EGZ7 alongside
+    RefSeq:WP_164925653.1 on fhepta-fragment-native-cfu-2026 node fragment (Shewanella
+    oneidensis MR-1 FhepTA / SO_1520, PMID:41775996); (2) added protein_references
+    [RefSeq:WP_164925653.1, UniProtKB:Q8EGZ7] to fhepta-fragment-rna-redox-2026 node
+    cleavage (PMID:41775996); and (3) added protein_references [UniProtKB:Q8ECH6]
+    to so3166-modified-preparation-rnase-2020 node cleavage (Shewanella oneidensis
+    MR-1 HepT / SO_3166, PMID:33288749).'
+  sections:
+  - causal_graphs
+links:
+  issues:
+  - https://github.com/CultureBotAI/DUFMech/issues/348

@@ -1,53 +1,56 @@
-authority: verified_closure
+schema_version: 1
+repo_key: dufmech
+repository: CultureBotAI/DUFMech
+updated_at: '2026-10-25T05:13:52.712405+00:00'
+latest:
+  run_id: mech-goal-sequence-20261019
+  cycle: 2
+  stage: 4
+  stage_id: review_eligible_records
+  revision: 1
+  evidence_path: reviews/workflow/mech-goal-sequence-20261019/cycle-000002/stage-04/revision-0001/evidence.yaml
+  evidence_sha256: 0eb8fd18d5a1b37bee49c122658abd090f7c204c113dba44ed7fe0cd2b0ae863
+  pr_url: https://github.com/CultureBotAI/DUFMech/pull/345
+  merge_commit_sha: 94285b171cacde11f6d619d44947c482b347a97d
+  verified_at: '2026-10-25T05:13:52.712405+00:00'
 entries:
-  - cycle: 1
-    goal_evidence:
-      path: reviews/workflow/mech-goal-sequence-20261019/cycle-000001/stage-04/revision-0001/evidence.yaml
-      sha256: b8fc7e4265e68f441f2a8e24f353b0c1f8b06aadcdeff1a592eefb28e73fc549
-    receipt_sha256: 7f95984479274af0d1efdffce1186caf28c60ccdf2dc3d85d9b968ac995fc666
-    stage: 4
-    verification:
-      checks:
-        - bucket: pass
-          name: qc
-          state: SUCCESS
-      head_sha: a72df4a6828583af569e171faf1be733c1fab479
-      merge_commit_sha: 35b9a13da0689d7e262b05791d5f1d8e763f38f7
-      merged_at: '2026-10-21T13:12:15Z'
-      pr_number: 335
-      status: merged
-      verified_at: '2026-10-21T13:20:14.704636+00:00'
-  - cycle: 1
-    goal_evidence:
-      path: reviews/workflow/mech-goal-sequence-20261019/cycle-000001/stage-05/revision-0001/evidence.yaml
-      sha256: 796b7f1e60b874a2753ec968d0589e1c5e877420a92c6ad89d64892cf3457db7
-    receipt_sha256: ad006d3ab98f6cb575b74d8e67624ae554de725a65dd83df57e49c16c52bc6cd
-    stage: 5
-    verification:
-      checks:
-        - bucket: pass
-          name: qc
-          state: SUCCESS
-      head_sha: c7e75efdef1bf1b6b9ac661052a508f410438151
-      merge_commit_sha: 1795e5229d2d91cfdc34abe9e44838716587c1d8
-      merged_at: '2026-10-21T14:42:12Z'
-      pr_number: 339
-      status: merged
-      verified_at: '2026-10-21T18:40:51.669030+00:00'
-  - cycle: 1
-    goal_evidence:
-      path: reviews/workflow/mech-goal-sequence-20261019/cycle-000001/stage-06/revision-0001/evidence.yaml
-      sha256: 2c3148bc41ab8cf839d15625efba57c352bafbba95fd4a89f32567aa75748c6f
-    receipt_sha256: 15ea26d4af4fe1aebe2a425b4c871c77836a954da81883d68ecc8983d37cbe07
-    stage: 6
-    verification:
-      checks:
-        - bucket: pass
-          name: qc
-          state: SUCCESS
-      head_sha: f9bcbc9bf90f633772ca11f5a93ba94149bfc141
-      merge_commit_sha: cbbdbe8d28e10c06f261d27d284470f7f0e77da6
-      merged_at: '2026-10-21T19:42:16Z'
-      pr_number: 340
-      status: merged
-      verified_at: '2026-10-22T00:59:58.936962+00:00'
+- run_id: mech-goal-sequence-20261019
+  cycle: 1
+  stage: 4
+  stage_id: review_eligible_records
+  revision: 1
+  evidence_path: reviews/workflow/mech-goal-sequence-20261019/cycle-000001/stage-04/revision-0001/evidence.yaml
+  evidence_sha256: 65bcbb4fb27bc84aa2348244fc06786b999b527256674a57c3d3f7d86c25b214
+  pr_url: https://github.com/CultureBotAI/DUFMech/pull/334
+  merge_commit_sha: d4aa12be1ab913fc253e6da557d9a628d18523f6
+  verified_at: '2026-10-21T13:19:16.925506+00:00'
+- run_id: mech-goal-sequence-20261019
+  cycle: 1
+  stage: 5
+  stage_id: resolve_review_findings
+  revision: 1
+  evidence_path: reviews/workflow/mech-goal-sequence-20261019/cycle-000001/stage-05/revision-0001/evidence.yaml
+  evidence_sha256: efed23446c0b9a9e1a3030aa17aaacdd5ec220a03a7992825fc5b563c2bc713e
+  pr_url: https://github.com/CultureBotAI/DUFMech/pull/339
+  merge_commit_sha: 6b647cf307f34ba6f1f8953143cf65c44ab03923
+  verified_at: '2026-10-21T20:10:34.252853+00:00'
+- run_id: mech-goal-sequence-20261019
+  cycle: 1
+  stage: 6
+  stage_id: review_repository
+  revision: 1
+  evidence_path: reviews/workflow/mech-goal-sequence-20261019/cycle-000001/stage-06/revision-0001/evidence.yaml
+  evidence_sha256: 9d8f449794c48640b0e7538e2d8a645a9e33d8b8c9d03e384e30ca13abdf1ab2
+  pr_url: https://github.com/CultureBotAI/DUFMech/pull/340
+  merge_commit_sha: 5c5d87e29a7bf6de6db1dd365ce30b7d3962e082
+  verified_at: '2026-10-21T23:54:57.997761+00:00'
+- run_id: mech-goal-sequence-20261019
+  cycle: 2
+  stage: 4
+  stage_id: review_eligible_records
+  revision: 1
+  evidence_path: reviews/workflow/mech-goal-sequence-20261019/cycle-000002/stage-04/revision-0001/evidence.yaml
+  evidence_sha256: 0eb8fd18d5a1b37bee49c122658abd090f7c204c113dba44ed7fe0cd2b0ae863
+  pr_url: https://github.com/CultureBotAI/DUFMech/pull/345
+  merge_commit_sha: 94285b171cacde11f6d619d44947c482b347a97d
+  verified_at: '2026-10-25T05:13:52.712405+00:00'
