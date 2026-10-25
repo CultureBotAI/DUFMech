@@ -1263,6 +1263,7 @@ causal_graphs:
     label: Add cognate ShD before C-prFMN-Mn reconstitution
     node_type: PERTURBATION
     grounding:
+    - UniProtKB:Q9S4M7
     - UniProtKB:Q4R102
   - node_id: phb_yield
     label: PHB decarboxylation endpoint yield
@@ -1810,6 +1811,7 @@ causal_graphs:
     node_type: PERTURBATION
     grounding:
     - UniProtKB:Q9S4M7
+    - UniProtKB:Q4R102
   - node_id: syr_yield
     label: Reported syringic-acid endpoint turnover
     node_type: ACTIVITY
@@ -1852,16 +1854,19 @@ causal_graphs:
     node_type: PROCESS
     grounding:
     - UniProtKB:Q9S4M7
+    - UniProtKB:Q4R102
   - node_id: strained_int2
     label: Proposed strained aromatic Int2 within full ShCD
     node_type: STATE
     grounding:
     - UniProtKB:Q9S4M7
+    - UniProtKB:Q4R102
   - node_id: quinoid
     label: Proposed Int3Quinoid-prFMN complex
     node_type: STATE
     grounding:
     - UniProtKB:Q9S4M7
+    - UniProtKB:Q4R102
   - node_id: product
     label: Proposed released phenol product and regenerated cofactor complex
     node_type: STATE
@@ -3850,5 +3855,14 @@ curation_events:
   outcome: changed
   summary: Ground PF01977 causal-graph protein/gene/complex nodes with UniProtKB:A2QHE5, UniProtKB:Q9S4M7
   history_record: history/records/PF01977/2026-10-25T111500Z-antigravity-7de30a.yaml
+  event_index: 0
+  llm_assisted: true
+- timestamp: '2026-10-25T16:08:30Z'
+  curator: Antigravity
+  action: EDIT
+  outcome: changed
+  summary: Ground Sedimentibacter hydroxybenzoicus paired ShVdcCD (UniProtKB:Q9S4M7, UniProtKB:Q4R102)
+    complex nodes across 3 causal graphs
+  history_record: history/records/PF01977/2026-10-25T160830Z-antigravity-c3s5a4.yaml
   event_index: 0
   llm_assisted: true

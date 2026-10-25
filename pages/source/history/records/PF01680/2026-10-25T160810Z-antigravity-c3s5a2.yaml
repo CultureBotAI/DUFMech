@@ -1,0 +1,36 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01680
+  path: curation/families/PF01680.yaml
+session:
+  id: 2026-10-25T160810Z-antigravity-c3s5a2
+  timestamp: '2026-10-25T16:08:10Z'
+  actors:
+  - type: ai_agent
+    name: Antigravity
+    model: inherit
+    agent_tool: Antigravity CLI
+events:
+- type: EDIT
+  outcome: changed
+  summary: Ground Bacillus subtilis 168 paired Pdx1/PdxS (UniProtKB:P37527) and Pdx2/PdxT (UniProtKB:P37528) complex nodes across 4 causal graphs
+  details: 'Resolved Cycle 3 Stage 4 finding pf01680-joint-pdx1-pdx2-nodes-missing-partner-grounding
+    (#362) in curation/families/PF01680.yaml (Bacillus subtilis subsp. subtilis str. 168,
+    NCBITaxon:224308) by updating 4 joint Pdx1/PdxS (UniProtKB:P37527, BSU00110) + Pdx2/PdxT
+    (UniProtKB:P37528, BSU00120) complex nodes to ground to [UniProtKB:P37527, UniProtKB:P37528]:
+    pdxs-partner-glutaminase-readout (PMID:16030023) node add-pdxs-to-pdxt-glutamine (PERTURBATION),
+    pdxs-ribulose-partner-effect (PMID:16030023) node add-pdxt-ribulose-ammonium (PERTURBATION),
+    pdxs-chromophore-and-partner-h170n (PMID:17189272) node joint-chromophore-reconstitution
+    (ACTIVITY), and pdxs-joint-phosphate-release (PMID:17189272) node joint-r5p-phosphate-reaction
+    (ACTIVITY).'
+  sections:
+  - causal_graphs
+links:
+  issues:
+  - https://github.com/CultureBotAI/DUFMech/issues/362
+  urls:
+  - https://rest.uniprot.org/uniprotkb/P37527.json
+  - https://rest.uniprot.org/uniprotkb/P37528.json
+  - https://pubmed.ncbi.nlm.nih.gov/16030023/
+  - https://pubmed.ncbi.nlm.nih.gov/17189272/
