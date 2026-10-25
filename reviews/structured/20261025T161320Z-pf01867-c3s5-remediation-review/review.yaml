@@ -23,13 +23,13 @@ summary: 'Eight graphs retain fourteen observed effects, nine direct purified-as
   members and contexts need follow-up; retain IN_PROGRESS. Cycle 3 Stage 3 (PR #357)
   grounded node add-cas2 (''Add Cas2 to the Cas1 donor-target reaction in manganese'')
   in cas2-enhancement-in-manganese only to Escherichia coli K-12 Cas1 (UniProtKB:Q46896,
-  CAS1_ECOLI) and omitted partner E. coli K-12 Cas2 (UniProtKB:P45956, CAS2_ECOLI).
+  CAS1_ECOLI) and had omitted partner E. coli K-12 Cas2 (UniProtKB:P45956, CAS2_ECOLI).
   Stage 4 frozen-inventory audit identified an open grounding finding (pf01867-cas2-partner-and-complex-nodes-missing-grounding)
   covering six Cas2 and Cas1-Cas2 complex nodes across four causal graphs (joint-reaction
   and cas2-deletion in cas1-cas2-purified-integration, add-cas2 in cas2-enhancement-in-manganese,
   coexpress-cas1-cas2 in cas1-cas2-cellular-acquisition, and r252e and cas2-recovery
-  in cas1-r252e-lysate-coisolation) that omit partner Cas2 (UniProtKB:P45956). Stage
-  5 grouped remediation resolved cas2-partner-and-complex-nodes-missing-grounding
+  in cas1-r252e-lysate-coisolation) that had omitted partner Cas2 (UniProtKB:P45956).
+  Stage 5 grouped remediation resolved cas2-partner-and-complex-nodes-missing-grounding
   (Issue #363) via native overlay curation, canonical EDIT history, and projection
   regeneration.'
 repository: CultureBotAI/DUFMech
@@ -685,23 +685,22 @@ findings:
     Cas2 and Cas1-Cas2 complex nodes in PF01867
   description: 'In curation/families/PF01867.yaml, six Escherichia coli K-12 MG1655
     (NCBITaxon:83333) nodes that explicitly represent Cas2 or the heterohexameric
-    Cas1-Cas2 complex either ground only to Cas1 (UniProtKB:Q46896, CAS1_ECOLI, NP_417235.1,
-    PDB 4P6I entity 2) or omit protein grounding altogether, missing verified partner
-    E. coli K-12 Cas2 (UniProtKB:P45956, CAS2_ECOLI, casB/ygbF/b2754, PDB 4P6I entity
-    3): (1) in cas1-cas2-purified-integration (lines 5-111), node joint-reaction (''WT
-    Cas1-Cas2 with duplex donor and supercoiled pCRISPR'', lines 21-25) grounds only
-    to [UniProtKB:Q46896] and omits UniProtKB:P45956, and node cas2-deletion (''Replace
-    WT Cas2 with its beta6-beta7 deletion variant'', lines 39-41) omits grounding:
-    [UniProtKB:P45956]; (2) in cas2-enhancement-in-manganese (lines 112-150), node
-    add-cas2 (''Add Cas2 to the Cas1 donor-target reaction in manganese'', lines 125-129)
-    was grounded in Cycle 3 Stage 3 only to [UniProtKB:Q46896] (Cas1) and omits partner
-    Cas2 UniProtKB:P45956; (3) in cas1-cas2-cellular-acquisition (lines 269-308),
-    node coexpress-cas1-cas2 (''Induce both Cas1 and Cas2 in BL21-AI'', lines 282-286)
-    grounds only to [UniProtKB:Q46896] and omits UniProtKB:P45956; and (4) in cas1-r252e-lysate-coisolation
-    (lines 412-451), node r252e (''Introduce Cas1-FLAG R252E with WT Cas2-HA'', lines
-    425-429) grounds only to [UniProtKB:Q46896] and omits UniProtKB:P45956, and node
-    cas2-recovery (''Cas2-HA signal in the Cas1-FLAG immunoprecipitate'', lines 430-432)
-    omits grounding: [UniProtKB:Q46896, UniProtKB:P45956].'
+    Cas1-Cas2 complex previously grounded only to Cas1 (UniProtKB:Q46896, CAS1_ECOLI,
+    NP_417235.1, PDB 4P6I entity 2) or omitted protein grounding altogether, and now
+    include verified partner E. coli K-12 Cas2 (UniProtKB:P45956, CAS2_ECOLI, casB/ygbF/b2754,
+    PDB 4P6I entity 3) in Stage 5 remediation (Issue #363): (1) in cas1-cas2-purified-integration
+    (lines 5-114), node joint-reaction (''WT Cas1-Cas2 with duplex donor and supercoiled
+    pCRISPR'', lines 21-26) now grounds to [UniProtKB:Q46896, UniProtKB:P45956] and
+    node cas2-deletion (''Replace WT Cas2 with its beta6-beta7 deletion variant'',
+    lines 40-44) now grounds to [UniProtKB:P45956]; (2) in cas2-enhancement-in-manganese
+    (lines 115-154), node add-cas2 (''Add Cas2 to the Cas1 donor-target reaction in
+    manganese'', lines 128-133) now grounds to [UniProtKB:Q46896, UniProtKB:P45956];
+    (3) in cas1-cas2-cellular-acquisition (lines 273-313), node coexpress-cas1-cas2
+    (''Induce both Cas1 and Cas2 in BL21-AI'', lines 286-291) now grounds to [UniProtKB:Q46896,
+    UniProtKB:P45956]; and (4) in cas1-r252e-lysate-coisolation (lines 417-460), node
+    r252e (''Introduce Cas1-FLAG R252E with WT Cas2-HA'', lines 430-435) and node
+    cas2-recovery (''Cas2-HA signal in the Cas1-FLAG immunoprecipitate'', lines 436-441)
+    now ground to [UniProtKB:Q46896, UniProtKB:P45956].'
   target_ids:
   - PF01867
   field_paths:
