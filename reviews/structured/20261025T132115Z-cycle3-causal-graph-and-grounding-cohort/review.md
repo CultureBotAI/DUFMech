@@ -11,7 +11,7 @@
 
 ## Summary
 
-Cohort review of all 24 maintained DUFMech family records modified in Cycle 3 (6 updated in Cycle 3 Stage 2 for catalytic/transport ACTIVITY readout node grounding and 19 updated in Cycle 3 Stage 3 for causal-graph protein/gene/complex node grounding, with PF01861 updated in both stages). All 24 families retain distinct Pfam boundaries and assay-separated causal graphs; 3 actionable partner-protein grounding findings in PF01174, PF01680, and PF01977 remain open for Stage 5 grouped remediation.
+Cohort review of all 24 maintained DUFMech family records modified in Cycle 3 (6 updated in Cycle 3 Stage 2 for catalytic/transport ACTIVITY readout node grounding and 19 updated in Cycle 3 Stage 3 for causal-graph protein/gene/complex node grounding, with PF01861 updated in both stages). All 24 families retain distinct Pfam boundaries and assay-separated causal graphs; 4 actionable partner-protein grounding findings in PF01174, PF01680, PF01867, and PF01977 remain open for Stage 5 grouped remediation.
 
 ## Scope And Provenance
 
@@ -63,25 +63,31 @@ graph: supported. Targets: PF01026, PF01060, PF01062, PF01121, PF01168, PF01174,
 
 All 24 Cycle 3 cohort families represent distinct Pfam domain definitions, folds, and experimental mechanisms. Within each family, individual biochemical, structural, and genetic assays are represented as separate CausalGraph objects with explicit scope_status, taxon, and primary evidence caches rather than merged into unsupported multi-assay chains.
 
-### Open causal-graph partner-protein grounding gaps in PF01174, PF01680, and PF01977
+### Open causal-graph partner-protein grounding gaps in PF01174, PF01680, PF01867, and PF01977
 
-grounding: concern. Targets: PF01174, PF01680, PF01977.
+grounding: concern. Targets: PF01174, PF01680, PF01867, PF01977.
 
-Three overlays in the Cycle 3 cohort have multi-subunit reaction or reconstitution nodes that omit one verified partner protein accession already grounded in sibling graphs of the same overlay: PF01174 (joint-pdxst-glutamine-carbohydrate-reaction in pdxst-glutamine-dependent-plp-product missing partner YaaD UniProtKB:P37527, and acivicin-pretreat-plp-mixture in pdxst-acivicin-plp-signal-inhibition missing [UniProtKB:P37527, UniProtKB:P37528]), PF01680 (joint-chromophore-reconstitution in pdxs-chromophore-and-partner-h170n and joint-r5p-phosphate-reaction in pdxs-joint-phosphate-release missing partner Pdx2 UniProtKB:P37528), and PF01977 (add_d in shvdccd-cognate-partner-2021 missing ShC UniProtKB:Q9S4M7, plus l182v in shvdccd-l182v-syringate-2021 and closure_int2/strained_int2/quinoid in shvdccd-domain-closure-model-2021 missing partner ShD UniProtKB:Q4R102).
+Four overlays in the Cycle 3 cohort have multi-subunit reaction, perturbation, or reconstitution nodes that omit a verified partner protein accession: PF01174 (six YaaD/YaaE nodes across pdxst-glutamine-dependent-plp-product, pdxt-ribulose-ammonium-dependent-synthase-readout, pdxt-acivicin-glutaminase-inhibition, and pdxst-acivicin-plp-signal-inhibition missing partner YaaD UniProtKB:P37527 or joint [UniProtKB:P37527, UniProtKB:P37528]), PF01680 (four joint Pdx1/Pdx2 nodes across pdxs-partner-glutaminase-readout, pdxs-ribulose-partner-effect, pdxs-chromophore-and-partner-h170n, and pdxs-joint-phosphate-release missing either Pdx1 UniProtKB:P37527 or Pdx2 UniProtKB:P37528), PF01867 (six Cas2 and Cas1-Cas2 complex nodes across cas1-cas2-purified-integration, cas2-enhancement-in-manganese, cas1-cas2-cellular-acquisition, and cas1-r252e-lysate-coisolation missing E. coli K-12 Cas2 UniProtKB:P45956), and PF01977 (add_d in shvdccd-cognate-partner-2021 missing ShC UniProtKB:Q9S4M7, plus l182v in shvdccd-l182v-syringate-2021 and closure_int2/strained_int2/quinoid in shvdccd-domain-closure-model-2021 missing partner ShD UniProtKB:Q4R102).
 
 ## Findings
 
-### pf01174-pdxst-partner-and-acivicin-nodes-missing-grounding: Add partner YaaD (UniProtKB:P37527) grounding to joint-pdxst-glutamine-carbohydrate-reaction and ground acivicin-pretreat-plp-mixture to [UniProtKB:P37527, UniProtKB:P37528]
+### pf01174-pdxst-partner-and-acivicin-nodes-missing-grounding: Add partner YaaD (UniProtKB:P37527) and joint [UniProtKB:P37527, UniProtKB:P37528] grounding to six YaaD/YaaE PLP synthase and acivicin assay nodes in PF01174
 
 minor / open / confirmed; issue key: pf01174-pdxst-partner-and-acivicin-nodes-missing-grounding.
 
-In curation/families/PF01174.yaml, two causal graphs omit verified Bacillus subtilis 168 (NCBITaxon:224308) protein grounding that is explicitly established in their family_mapping and sibling graphs: (1) in pdxst-glutamine-dependent-plp-product (lines 47-79), node joint-pdxst-glutamine-carbohydrate-reaction ('Joint YaaD, YaaE, glutamine, ribose 5-phosphate and DHAP reaction', lines 56-60) is grounded only to [UniProtKB:P37528] and omits partner YaaD/PdxS (UniProtKB:P37527), whereas sibling graph pdxt-untagged-partner-dependent-glutaminase grounds add-yaad-to-yaae-glutamine to [UniProtKB:P37527, UniProtKB:P37528]; and (2) in pdxst-acivicin-plp-signal-inhibition (lines 146-176), node acivicin-pretreat-plp-mixture ('Expose the YaaD/YaaE synthesis mixture to increasing acivicin', lines 155-157) omits grounding: [UniProtKB:P37527, UniProtKB:P37528] even though family_mapping explicitly states 'Strain-168 YaaE is P37528-associated PdxT, PF01174 6-188. YaaD supplies the separate synthase activity. Both proteins remain in the treated assay mixture'.
+In curation/families/PF01174.yaml, four causal graphs omit verified Bacillus subtilis 168 (NCBITaxon:224308) YaaD/PdxS (UniProtKB:P37527) and/or YaaE/PdxT (UniProtKB:P37528) protein grounding that is explicitly established in their family_mapping and in sibling graph pdxt-untagged-partner-dependent-glutaminase (which grounds add-yaad-to-yaae-glutamine to [UniProtKB:P37527, UniProtKB:P37528]): (1) in pdxst-glutamine-dependent-plp-product (lines 47-79), node joint-pdxst-glutamine-carbohydrate-reaction ('Joint YaaD, YaaE, glutamine, ribose 5-phosphate and DHAP reaction', lines 56-60) grounds only to [UniProtKB:P37528] and omits partner YaaD (UniProtKB:P37527); (2) in pdxt-ribulose-ammonium-dependent-synthase-readout (lines 80-112), node add-yaae-ribulose-ammonium ('Add YaaE to YaaD with ribulose 5-phosphate and ammonium', lines 89-93) grounds only to [UniProtKB:P37528] and omits partner YaaD (UniProtKB:P37527); (3) in pdxt-acivicin-glutaminase-inhibition (lines 113-145), node acivicin-pretreat-glutaminase-mixture ('Increase 5-mM acivicin pretreatment time relative to zero-time control', lines 122-124) omits grounding: [UniProtKB:P37527, UniProtKB:P37528] and node acivicin-assay-glutaminase-readout ('Residual coupled glutaminase readout of YaaD/YaaE', lines 125-129) grounds only to [UniProtKB:P37528] and omits partner YaaD (UniProtKB:P37527); and (4) in pdxst-acivicin-plp-signal-inhibition (lines 146-176), node acivicin-pretreat-plp-mixture ('Expose the YaaD/YaaE synthesis mixture to increasing acivicin', lines 155-157) omits grounding: [UniProtKB:P37527, UniProtKB:P37528] and node residual-glutamine-plp-signal ('Residual glutamine-dependent 414-nm PLP signal', lines 158-160) grounds only to [UniProtKB:P37528] and omits partner YaaD (UniProtKB:P37527).
 
-### pf01680-joint-pdx1-pdx2-nodes-missing-partner-grounding: Add partner Pdx2 (UniProtKB:P37528) grounding to joint-chromophore-reconstitution and joint-r5p-phosphate-reaction in PF01680
+### pf01680-joint-pdx1-pdx2-nodes-missing-partner-grounding: Add paired Pdx1/PdxS (UniProtKB:P37527) and Pdx2/PdxT (UniProtKB:P37528) grounding to four joint reconstitution and reaction nodes in PF01680
 
 minor / open / confirmed; issue key: pf01680-joint-pdx1-pdx2-nodes-missing-partner-grounding.
 
-In curation/families/PF01680.yaml, two Bacillus subtilis 168 (NCBITaxon:224308) joint Pdx1/Pdx2 reconstitution and reaction nodes ground only to Pdx1 (UniProtKB:P37527) and omit the co-present partner Pdx2 (UniProtKB:P37528): (1) in pdxs-chromophore-and-partner-h170n (lines 244-309), node joint-chromophore-reconstitution ('Joint Pdx1, Pdx2, R5P and glutamine reconstitution', lines 261-265) is grounded only to [UniProtKB:P37527], omitting UniProtKB:P37528 even though sibling node partner-h170n-preparation in the same graph grounds to [UniProtKB:P37528]; and (2) in pdxs-joint-phosphate-release (lines 372-413), node joint-r5p-phosphate-reaction ('Joint Pdx1, Pdx2, glutamine and R5P reaction', lines 387-391) is grounded only to [UniProtKB:P37527], omitting UniProtKB:P37528 even though sibling graph pdxs-joint-plp-product (lines 69-74) grounds joint-pdxst-reaction to [UniProtKB:P37527, UniProtKB:P37528].
+In curation/families/PF01680.yaml, four Bacillus subtilis 168 (NCBITaxon:224308) joint Pdx1/Pdx2 (PdxS/PdxT) reconstitution and reaction nodes ground only one subunit of the two-protein pair and omit the co-present partner (whereas sibling graph pdxs-joint-plp-product grounds joint-pdxst-reaction at lines 69-74 to [UniProtKB:P37527, UniProtKB:P37528]): (1) in pdxs-partner-glutaminase-readout (lines 11-52), node add-pdxs-to-pdxt-glutamine ('Add untagged PdxS to PdxT and glutamine', lines 20-24) grounds only to [UniProtKB:P37527] and omits partner PdxT (UniProtKB:P37528); (2) in pdxs-ribulose-partner-effect (lines 140-172), node add-pdxt-ribulose-ammonium ('Add PdxT to PdxS with ribulose phosphate and external ammonium', lines 149-153) grounds only to [UniProtKB:P37528] and omits partner PdxS (UniProtKB:P37527); (3) in pdxs-chromophore-and-partner-h170n (lines 244-309), node joint-chromophore-reconstitution ('Joint Pdx1, Pdx2, R5P and glutamine reconstitution', lines 261-265) grounds only to [UniProtKB:P37527] and omits partner Pdx2 (UniProtKB:P37528); and (4) in pdxs-joint-phosphate-release (lines 372-413), node joint-r5p-phosphate-reaction ('Joint Pdx1, Pdx2, glutamine and R5P reaction', lines 387-391) grounds only to [UniProtKB:P37527] and omits partner Pdx2 (UniProtKB:P37528).
+
+### pf01867-cas2-partner-and-complex-nodes-missing-grounding: Add Escherichia coli K-12 Cas2 (UniProtKB:P45956) partner grounding to six Cas2 and Cas1-Cas2 complex nodes in PF01867
+
+minor / open / confirmed; issue key: pf01867-cas2-partner-and-complex-nodes-missing-grounding.
+
+In curation/families/PF01867.yaml, six Escherichia coli K-12 MG1655 (NCBITaxon:83333) nodes that explicitly represent Cas2 or the heterohexameric Cas1-Cas2 complex either ground only to Cas1 (UniProtKB:Q46896, CAS1_ECOLI, NP_417235.1, PDB 4P6I entity 2) or omit protein grounding altogether, missing verified partner E. coli K-12 Cas2 (UniProtKB:P45956, CAS2_ECOLI, casB/ygbF/b2754, PDB 4P6I entity 3): (1) in cas1-cas2-purified-integration (lines 5-111), node joint-reaction ('WT Cas1-Cas2 with duplex donor and supercoiled pCRISPR', lines 21-25) grounds only to [UniProtKB:Q46896] and omits UniProtKB:P45956, and node cas2-deletion ('Replace WT Cas2 with its beta6-beta7 deletion variant', lines 39-41) omits grounding: [UniProtKB:P45956]; (2) in cas2-enhancement-in-manganese (lines 112-150), node add-cas2 ('Add Cas2 to the Cas1 donor-target reaction in manganese', lines 125-129) was grounded in Cycle 3 Stage 3 only to [UniProtKB:Q46896] (Cas1) and omits partner Cas2 UniProtKB:P45956; (3) in cas1-cas2-cellular-acquisition (lines 269-308), node coexpress-cas1-cas2 ('Induce both Cas1 and Cas2 in BL21-AI', lines 282-286) grounds only to [UniProtKB:Q46896] and omits UniProtKB:P45956; and (4) in cas1-r252e-lysate-coisolation (lines 412-451), node r252e ('Introduce Cas1-FLAG R252E with WT Cas2-HA', lines 425-429) grounds only to [UniProtKB:Q46896] and omits UniProtKB:P45956, and node cas2-recovery ('Cas2-HA signal in the Cas1-FLAG immunoprecipitate', lines 430-432) omits grounding: [UniProtKB:Q46896, UniProtKB:P45956].
 
 ### pf01977-shvdccd-cognate-partner-and-l182v-missing-partner-grounding: Add paired ShVdcC/ShVdcD partner grounding to shvdccd-cognate-partner-2021, shvdccd-l182v-syringate-2021, and shvdccd-domain-closure-model-2021
 
@@ -93,10 +99,10 @@ In curation/families/PF01977.yaml, three Sedimentibacter hydroxybenzoicus ShVdcC
 
 ### remediate-stage4-cohort-grounding-findings
 
-In Stage 5 (resolve_review_findings), add partner YaaD (UniProtKB:P37527) and YaaE (UniProtKB:P37528) grounding to the two ungrounded/partially grounded PLP synthase nodes in PF01174.yaml, add partner Pdx2 (UniProtKB:P37528) grounding to the two joint Pdx1/Pdx2 reconstitution/reaction nodes in PF01680.yaml, and add paired ShVdcC (UniProtKB:Q9S4M7) / ShVdcD (UniProtKB:Q4R102) partner grounding to the three ShVdcCD complex graphs in PF01977.yaml, recording canonical EDIT history events and regenerating projections.
+In Stage 5 (resolve_review_findings), add partner YaaD (UniProtKB:P37527) and YaaE (UniProtKB:P37528) grounding to the six ungrounded/partially grounded PLP synthase and acivicin assay nodes in PF01174.yaml, add paired Pdx1 (UniProtKB:P37527) and Pdx2 (UniProtKB:P37528) grounding to the four joint Pdx1/Pdx2 nodes in PF01680.yaml, add partner E. coli K-12 Cas2 (UniProtKB:P45956) grounding to the six Cas2 and Cas1-Cas2 complex nodes in PF01867.yaml, and add paired ShVdcC (UniProtKB:Q9S4M7) / ShVdcD (UniProtKB:Q4R102) partner grounding to the three ShVdcCD complex graphs in PF01977.yaml, recording canonical EDIT history events and regenerating projections.
 
-- All three overlays record canonical EDIT history events and regenerate data/families/*.yaml cleanly.
-- All joint YaaD/YaaE, Pdx1/Pdx2, and ShVdcC/ShVdcD complex nodes in PF01174, PF01680, and PF01977 carry both verified subunit accessions.
+- All four overlays record canonical EDIT history events and regenerate data/families/*.yaml cleanly.
+- All joint YaaD/YaaE, Pdx1/Pdx2, Cas1/Cas2, and ShVdcC/ShVdcD complex nodes in PF01174, PF01680, PF01867, and PF01977 carry both verified subunit accessions.
 - just qc and kg_microbe_workflows validate-evidence pass.
 
 ## Category Boundaries
@@ -108,7 +114,7 @@ In Stage 5 (resolve_review_findings), add partner YaaD (UniProtKB:P37527) and Ya
 | Evidence | Reference / locator | Support | Observation |
 | --- | --- | --- | --- |
 | cohort-validation | src/dufmech/cli.py; dufmech.cli validate and dufmech.causal_graph_cli --check across all 24 Cycle 3 cohort records | supports | All 24 Cycle 3 updated FamilyCuration overlays and generated FamilyRecord projections validate against LinkML schema, canonical history, and causal-graph integrity gates. |
-| cohort-overlay-audit | reviews/structured; Cycle 3 Stage 4 per-record structured reviews for all 24 Cycle 3 updated families | supports | Line-by-line audit of all 24 maintained overlays updated in Cycle 3 Stage 2 (6 overlays) and Stage 3 (19 overlays; 24 unique families) verified exact UniProtKB/NCBITaxon grounding, evidence cache SHA-256 digests, and identified 3 actionable partner-grounding gaps in PF01174, PF01680, and PF01977 for Stage 5 remediation. |
+| cohort-overlay-audit | reviews/structured; Cycle 3 Stage 4 per-record structured reviews for all 24 Cycle 3 updated families | supports | Line-by-line audit of all 24 maintained overlays updated in Cycle 3 Stage 2 (6 overlays) and Stage 3 (19 overlays; 24 unique families) verified exact UniProtKB/NCBITaxon grounding, evidence cache SHA-256 digests, and identified 4 actionable partner-grounding gaps in PF01174, PF01680, PF01867, and PF01977 for Stage 5 remediation. |
 | duf-projection-pf01026 | data/families/PF01026.yaml; dufmech-reviewed-projection-v1 | context_only | Byte-exact projection retained at save for digest verification, not scientific assessment. |
 | duf-projection-pf01060 | data/families/PF01060.yaml; dufmech-reviewed-projection-v1 | context_only | Byte-exact projection retained at save for digest verification, not scientific assessment. |
 | duf-projection-pf01062 | data/families/PF01062.yaml; dufmech-reviewed-projection-v1 | context_only | Byte-exact projection retained at save for digest verification, not scientific assessment. |
@@ -166,8 +172,8 @@ summary: Cohort review of all 24 maintained DUFMech family records modified in C
   3 (6 updated in Cycle 3 Stage 2 for catalytic/transport ACTIVITY readout node grounding
   and 19 updated in Cycle 3 Stage 3 for causal-graph protein/gene/complex node grounding,
   with PF01861 updated in both stages). All 24 families retain distinct Pfam boundaries
-  and assay-separated causal graphs; 3 actionable partner-protein grounding findings
-  in PF01174, PF01680, and PF01977 remain open for Stage 5 grouped remediation.
+  and assay-separated causal graphs; 4 actionable partner-protein grounding findings
+  in PF01174, PF01680, PF01867, and PF01977 remain open for Stage 5 grouped remediation.
 repository: CultureBotAI/DUFMech
 kind: category
 source:
@@ -836,8 +842,8 @@ evidence:
   support: supports
   summary: Line-by-line audit of all 24 maintained overlays updated in Cycle 3 Stage
     2 (6 overlays) and Stage 3 (19 overlays; 24 unique families) verified exact UniProtKB/NCBITaxon
-    grounding, evidence cache SHA-256 digests, and identified 3 actionable partner-grounding
-    gaps in PF01174, PF01680, and PF01977 for Stage 5 remediation.
+    grounding, evidence cache SHA-256 digests, and identified 4 actionable partner-grounding
+    gaps in PF01174, PF01680, PF01867, and PF01977 for Stage 5 remediation.
 - evidence_id: duf-projection-pf01026
   kind: record_content
   reference: data/families/PF01026.yaml
@@ -13580,22 +13586,26 @@ assessments:
   - cohort-overlay-audit
 - assessment_id: cohort-grounding-gaps
   area: grounding
-  topic: Open causal-graph partner-protein grounding gaps in PF01174, PF01680, and
-    PF01977
+  topic: Open causal-graph partner-protein grounding gaps in PF01174, PF01680, PF01867,
+    and PF01977
   outcome: concern
-  summary: 'Three overlays in the Cycle 3 cohort have multi-subunit reaction or reconstitution
-    nodes that omit one verified partner protein accession already grounded in sibling
-    graphs of the same overlay: PF01174 (joint-pdxst-glutamine-carbohydrate-reaction
-    in pdxst-glutamine-dependent-plp-product missing partner YaaD UniProtKB:P37527,
-    and acivicin-pretreat-plp-mixture in pdxst-acivicin-plp-signal-inhibition missing
-    [UniProtKB:P37527, UniProtKB:P37528]), PF01680 (joint-chromophore-reconstitution
-    in pdxs-chromophore-and-partner-h170n and joint-r5p-phosphate-reaction in pdxs-joint-phosphate-release
-    missing partner Pdx2 UniProtKB:P37528), and PF01977 (add_d in shvdccd-cognate-partner-2021
+  summary: 'Four overlays in the Cycle 3 cohort have multi-subunit reaction, perturbation,
+    or reconstitution nodes that omit a verified partner protein accession: PF01174
+    (six YaaD/YaaE nodes across pdxst-glutamine-dependent-plp-product, pdxt-ribulose-ammonium-dependent-synthase-readout,
+    pdxt-acivicin-glutaminase-inhibition, and pdxst-acivicin-plp-signal-inhibition
+    missing partner YaaD UniProtKB:P37527 or joint [UniProtKB:P37527, UniProtKB:P37528]),
+    PF01680 (four joint Pdx1/Pdx2 nodes across pdxs-partner-glutaminase-readout, pdxs-ribulose-partner-effect,
+    pdxs-chromophore-and-partner-h170n, and pdxs-joint-phosphate-release missing either
+    Pdx1 UniProtKB:P37527 or Pdx2 UniProtKB:P37528), PF01867 (six Cas2 and Cas1-Cas2
+    complex nodes across cas1-cas2-purified-integration, cas2-enhancement-in-manganese,
+    cas1-cas2-cellular-acquisition, and cas1-r252e-lysate-coisolation missing E. coli
+    K-12 Cas2 UniProtKB:P45956), and PF01977 (add_d in shvdccd-cognate-partner-2021
     missing ShC UniProtKB:Q9S4M7, plus l182v in shvdccd-l182v-syringate-2021 and closure_int2/strained_int2/quinoid
     in shvdccd-domain-closure-model-2021 missing partner ShD UniProtKB:Q4R102).'
   target_ids:
   - PF01174
   - PF01680
+  - PF01867
   - PF01977
   evidence_ids:
   - cohort-overlay-audit
@@ -13641,21 +13651,29 @@ findings:
   severity: minor
   status: open
   certainty: confirmed
-  title: Add partner YaaD (UniProtKB:P37527) grounding to joint-pdxst-glutamine-carbohydrate-reaction
-    and ground acivicin-pretreat-plp-mixture to [UniProtKB:P37527, UniProtKB:P37528]
-  description: 'In curation/families/PF01174.yaml, two causal graphs omit verified
-    Bacillus subtilis 168 (NCBITaxon:224308) protein grounding that is explicitly
-    established in their family_mapping and sibling graphs: (1) in pdxst-glutamine-dependent-plp-product
+  title: Add partner YaaD (UniProtKB:P37527) and joint [UniProtKB:P37527, UniProtKB:P37528]
+    grounding to six YaaD/YaaE PLP synthase and acivicin assay nodes in PF01174
+  description: 'In curation/families/PF01174.yaml, four causal graphs omit verified
+    Bacillus subtilis 168 (NCBITaxon:224308) YaaD/PdxS (UniProtKB:P37527) and/or YaaE/PdxT
+    (UniProtKB:P37528) protein grounding that is explicitly established in their family_mapping
+    and in sibling graph pdxt-untagged-partner-dependent-glutaminase (which grounds
+    add-yaad-to-yaae-glutamine to [UniProtKB:P37527, UniProtKB:P37528]): (1) in pdxst-glutamine-dependent-plp-product
     (lines 47-79), node joint-pdxst-glutamine-carbohydrate-reaction (''Joint YaaD,
-    YaaE, glutamine, ribose 5-phosphate and DHAP reaction'', lines 56-60) is grounded
-    only to [UniProtKB:P37528] and omits partner YaaD/PdxS (UniProtKB:P37527), whereas
-    sibling graph pdxt-untagged-partner-dependent-glutaminase grounds add-yaad-to-yaae-glutamine
-    to [UniProtKB:P37527, UniProtKB:P37528]; and (2) in pdxst-acivicin-plp-signal-inhibition
-    (lines 146-176), node acivicin-pretreat-plp-mixture (''Expose the YaaD/YaaE synthesis
-    mixture to increasing acivicin'', lines 155-157) omits grounding: [UniProtKB:P37527,
-    UniProtKB:P37528] even though family_mapping explicitly states ''Strain-168 YaaE
-    is P37528-associated PdxT, PF01174 6-188. YaaD supplies the separate synthase
-    activity. Both proteins remain in the treated assay mixture''.'
+    YaaE, glutamine, ribose 5-phosphate and DHAP reaction'', lines 56-60) grounds
+    only to [UniProtKB:P37528] and omits partner YaaD (UniProtKB:P37527); (2) in pdxt-ribulose-ammonium-dependent-synthase-readout
+    (lines 80-112), node add-yaae-ribulose-ammonium (''Add YaaE to YaaD with ribulose
+    5-phosphate and ammonium'', lines 89-93) grounds only to [UniProtKB:P37528] and
+    omits partner YaaD (UniProtKB:P37527); (3) in pdxt-acivicin-glutaminase-inhibition
+    (lines 113-145), node acivicin-pretreat-glutaminase-mixture (''Increase 5-mM acivicin
+    pretreatment time relative to zero-time control'', lines 122-124) omits grounding:
+    [UniProtKB:P37527, UniProtKB:P37528] and node acivicin-assay-glutaminase-readout
+    (''Residual coupled glutaminase readout of YaaD/YaaE'', lines 125-129) grounds
+    only to [UniProtKB:P37528] and omits partner YaaD (UniProtKB:P37527); and (4)
+    in pdxst-acivicin-plp-signal-inhibition (lines 146-176), node acivicin-pretreat-plp-mixture
+    (''Expose the YaaD/YaaE synthesis mixture to increasing acivicin'', lines 155-157)
+    omits grounding: [UniProtKB:P37527, UniProtKB:P37528] and node residual-glutamine-plp-signal
+    (''Residual glutamine-dependent 414-nm PLP signal'', lines 158-160) grounds only
+    to [UniProtKB:P37528] and omits partner YaaD (UniProtKB:P37527).'
   target_ids:
   - PF01174
   field_paths:
@@ -13676,19 +13694,24 @@ findings:
   severity: minor
   status: open
   certainty: confirmed
-  title: Add partner Pdx2 (UniProtKB:P37528) grounding to joint-chromophore-reconstitution
-    and joint-r5p-phosphate-reaction in PF01680
-  description: 'In curation/families/PF01680.yaml, two Bacillus subtilis 168 (NCBITaxon:224308)
-    joint Pdx1/Pdx2 reconstitution and reaction nodes ground only to Pdx1 (UniProtKB:P37527)
-    and omit the co-present partner Pdx2 (UniProtKB:P37528): (1) in pdxs-chromophore-and-partner-h170n
-    (lines 244-309), node joint-chromophore-reconstitution (''Joint Pdx1, Pdx2, R5P
-    and glutamine reconstitution'', lines 261-265) is grounded only to [UniProtKB:P37527],
-    omitting UniProtKB:P37528 even though sibling node partner-h170n-preparation in
-    the same graph grounds to [UniProtKB:P37528]; and (2) in pdxs-joint-phosphate-release
-    (lines 372-413), node joint-r5p-phosphate-reaction (''Joint Pdx1, Pdx2, glutamine
-    and R5P reaction'', lines 387-391) is grounded only to [UniProtKB:P37527], omitting
-    UniProtKB:P37528 even though sibling graph pdxs-joint-plp-product (lines 69-74)
-    grounds joint-pdxst-reaction to [UniProtKB:P37527, UniProtKB:P37528].'
+  title: Add paired Pdx1/PdxS (UniProtKB:P37527) and Pdx2/PdxT (UniProtKB:P37528)
+    grounding to four joint reconstitution and reaction nodes in PF01680
+  description: 'In curation/families/PF01680.yaml, four Bacillus subtilis 168 (NCBITaxon:224308)
+    joint Pdx1/Pdx2 (PdxS/PdxT) reconstitution and reaction nodes ground only one
+    subunit of the two-protein pair and omit the co-present partner (whereas sibling
+    graph pdxs-joint-plp-product grounds joint-pdxst-reaction at lines 69-74 to [UniProtKB:P37527,
+    UniProtKB:P37528]): (1) in pdxs-partner-glutaminase-readout (lines 11-52), node
+    add-pdxs-to-pdxt-glutamine (''Add untagged PdxS to PdxT and glutamine'', lines
+    20-24) grounds only to [UniProtKB:P37527] and omits partner PdxT (UniProtKB:P37528);
+    (2) in pdxs-ribulose-partner-effect (lines 140-172), node add-pdxt-ribulose-ammonium
+    (''Add PdxT to PdxS with ribulose phosphate and external ammonium'', lines 149-153)
+    grounds only to [UniProtKB:P37528] and omits partner PdxS (UniProtKB:P37527);
+    (3) in pdxs-chromophore-and-partner-h170n (lines 244-309), node joint-chromophore-reconstitution
+    (''Joint Pdx1, Pdx2, R5P and glutamine reconstitution'', lines 261-265) grounds
+    only to [UniProtKB:P37527] and omits partner Pdx2 (UniProtKB:P37528); and (4)
+    in pdxs-joint-phosphate-release (lines 372-413), node joint-r5p-phosphate-reaction
+    (''Joint Pdx1, Pdx2, glutamine and R5P reaction'', lines 387-391) grounds only
+    to [UniProtKB:P37527] and omits partner Pdx2 (UniProtKB:P37528).'
   target_ids:
   - PF01680
   field_paths:
@@ -13703,6 +13726,47 @@ findings:
   - repository: CultureBotAI/DUFMech
     review_id: 20261025T132031Z-pf01680-c3s4-record-review
     finding_id: joint-pdx1-pdx2-nodes-missing-partner-grounding
+- finding_id: pf01867-cas2-partner-and-complex-nodes-missing-grounding
+  issue_key: pf01867-cas2-partner-and-complex-nodes-missing-grounding
+  category: grounding
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Add Escherichia coli K-12 Cas2 (UniProtKB:P45956) partner grounding to six
+    Cas2 and Cas1-Cas2 complex nodes in PF01867
+  description: 'In curation/families/PF01867.yaml, six Escherichia coli K-12 MG1655
+    (NCBITaxon:83333) nodes that explicitly represent Cas2 or the heterohexameric
+    Cas1-Cas2 complex either ground only to Cas1 (UniProtKB:Q46896, CAS1_ECOLI, NP_417235.1,
+    PDB 4P6I entity 2) or omit protein grounding altogether, missing verified partner
+    E. coli K-12 Cas2 (UniProtKB:P45956, CAS2_ECOLI, casB/ygbF/b2754, PDB 4P6I entity
+    3): (1) in cas1-cas2-purified-integration (lines 5-111), node joint-reaction (''WT
+    Cas1-Cas2 with duplex donor and supercoiled pCRISPR'', lines 21-25) grounds only
+    to [UniProtKB:Q46896] and omits UniProtKB:P45956, and node cas2-deletion (''Replace
+    WT Cas2 with its beta6-beta7 deletion variant'', lines 39-41) omits grounding:
+    [UniProtKB:P45956]; (2) in cas2-enhancement-in-manganese (lines 112-150), node
+    add-cas2 (''Add Cas2 to the Cas1 donor-target reaction in manganese'', lines 125-129)
+    was grounded in Cycle 3 Stage 3 only to [UniProtKB:Q46896] (Cas1) and omits partner
+    Cas2 UniProtKB:P45956; (3) in cas1-cas2-cellular-acquisition (lines 269-308),
+    node coexpress-cas1-cas2 (''Induce both Cas1 and Cas2 in BL21-AI'', lines 282-286)
+    grounds only to [UniProtKB:Q46896] and omits UniProtKB:P45956; and (4) in cas1-r252e-lysate-coisolation
+    (lines 412-451), node r252e (''Introduce Cas1-FLAG R252E with WT Cas2-HA'', lines
+    425-429) grounds only to [UniProtKB:Q46896] and omits UniProtKB:P45956, and node
+    cas2-recovery (''Cas2-HA signal in the Cas1-FLAG immunoprecipitate'', lines 430-432)
+    omits grounding: [UniProtKB:Q46896, UniProtKB:P45956].'
+  target_ids:
+  - PF01867
+  field_paths:
+  - causal_graphs
+  evidence_ids:
+  - cohort-overlay-audit
+  owner_paths:
+  - repository: CultureBotAI/DUFMech
+    path: curation/families/PF01867.yaml
+    role: Maintained scientific overlay; remediate in Stage 5.
+  related_findings:
+  - repository: CultureBotAI/DUFMech
+    review_id: 20261025T132039Z-pf01867-c3s4-record-review
+    finding_id: cas2-partner-and-complex-nodes-missing-grounding
 - finding_id: pf01977-shvdccd-cognate-partner-and-l182v-missing-partner-grounding
   issue_key: pf01977-shvdccd-cognate-partner-and-l182v-missing-partner-grounding
   category: grounding
@@ -13744,19 +13808,22 @@ findings:
 actions:
 - action_id: remediate-stage4-cohort-grounding-findings
   description: In Stage 5 (resolve_review_findings), add partner YaaD (UniProtKB:P37527)
-    and YaaE (UniProtKB:P37528) grounding to the two ungrounded/partially grounded
-    PLP synthase nodes in PF01174.yaml, add partner Pdx2 (UniProtKB:P37528) grounding
-    to the two joint Pdx1/Pdx2 reconstitution/reaction nodes in PF01680.yaml, and
-    add paired ShVdcC (UniProtKB:Q9S4M7) / ShVdcD (UniProtKB:Q4R102) partner grounding
-    to the three ShVdcCD complex graphs in PF01977.yaml, recording canonical EDIT
-    history events and regenerating projections.
+    and YaaE (UniProtKB:P37528) grounding to the six ungrounded/partially grounded
+    PLP synthase and acivicin assay nodes in PF01174.yaml, add paired Pdx1 (UniProtKB:P37527)
+    and Pdx2 (UniProtKB:P37528) grounding to the four joint Pdx1/Pdx2 nodes in PF01680.yaml,
+    add partner E. coli K-12 Cas2 (UniProtKB:P45956) grounding to the six Cas2 and
+    Cas1-Cas2 complex nodes in PF01867.yaml, and add paired ShVdcC (UniProtKB:Q9S4M7)
+    / ShVdcD (UniProtKB:Q4R102) partner grounding to the three ShVdcCD complex graphs
+    in PF01977.yaml, recording canonical EDIT history events and regenerating projections.
   finding_ids:
   - pf01174-pdxst-partner-and-acivicin-nodes-missing-grounding
   - pf01680-joint-pdx1-pdx2-nodes-missing-partner-grounding
+  - pf01867-cas2-partner-and-complex-nodes-missing-grounding
   - pf01977-shvdccd-cognate-partner-and-l182v-missing-partner-grounding
   target_ids:
   - PF01174
   - PF01680
+  - PF01867
   - PF01977
   owner_paths:
   - repository: CultureBotAI/DUFMech
@@ -13766,13 +13833,16 @@ actions:
     path: curation/families/PF01680.yaml
     role: Maintained scientific overlay
   - repository: CultureBotAI/DUFMech
+    path: curation/families/PF01867.yaml
+    role: Maintained scientific overlay
+  - repository: CultureBotAI/DUFMech
     path: curation/families/PF01977.yaml
     role: Maintained scientific overlay
   acceptance_checks:
-  - All three overlays record canonical EDIT history events and regenerate data/families/*.yaml
+  - All four overlays record canonical EDIT history events and regenerate data/families/*.yaml
     cleanly.
-  - All joint YaaD/YaaE, Pdx1/Pdx2, and ShVdcC/ShVdcD complex nodes in PF01174, PF01680,
-    and PF01977 carry both verified subunit accessions.
+  - All joint YaaD/YaaE, Pdx1/Pdx2, Cas1/Cas2, and ShVdcC/ShVdcD complex nodes in
+    PF01174, PF01680, PF01867, and PF01977 carry both verified subunit accessions.
   - just qc and kg_microbe_workflows validate-evidence pass.
 limitations:
 - Cohort review covers all 24 Cycle 3 updated maintained overlays in full structured

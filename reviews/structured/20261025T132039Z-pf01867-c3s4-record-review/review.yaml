@@ -21,9 +21,15 @@ summary: 'Eight graphs retain fourteen observed effects, nine direct purified-as
   the narrow current Pfam match, substrate and metal context, half-site product limits,
   K224A discordance and later IHF evidence prevent universal biochemical claims. Remaining
   members and contexts need follow-up; retain IN_PROGRESS. Cycle 3 Stage 3 (PR #357)
-  grounded the Cas2 addition perturbation node add-cas2 (''Add Cas2 to the Cas1 donor-target
-  reaction in manganese'') to E. coli K-12 Cas2 (UniProtKB:Q46896). Stage 4 frozen-inventory
-  review verified all causal graphs and grounded nodes against primary evidence caches.'
+  grounded node add-cas2 (''Add Cas2 to the Cas1 donor-target reaction in manganese'')
+  in cas2-enhancement-in-manganese only to Escherichia coli K-12 Cas1 (UniProtKB:Q46896,
+  CAS1_ECOLI) and omitted partner E. coli K-12 Cas2 (UniProtKB:P45956, CAS2_ECOLI).
+  Stage 4 frozen-inventory audit identified an open grounding finding (pf01867-cas2-partner-and-complex-nodes-missing-grounding)
+  covering six Cas2 and Cas1-Cas2 complex nodes across four causal graphs (joint-reaction
+  and cas2-deletion in cas1-cas2-purified-integration, add-cas2 in cas2-enhancement-in-manganese,
+  coexpress-cas1-cas2 in cas1-cas2-cellular-acquisition, and r252e and cas2-recovery
+  in cas1-r252e-lysate-coisolation) that omit partner Cas2 (UniProtKB:P45956), preserved
+  for Stage 5 grouped remediation.'
 repository: CultureBotAI/DUFMech
 kind: record
 source:
@@ -582,14 +588,29 @@ assessments:
   - PF01867
   evidence_ids:
   - primary
-- assessment_id: cycle3-partner-grounding-verification
+- assessment_id: stage4-grounding-and-taxon-audit
   area: representation
-  topic: Cycle 3 causal-graph and protein-node grounding verification
-  outcome: supported
-  summary: 'Cycle 3 Stage 3 (PR #357) grounded the Cas2 addition perturbation node
-    add-cas2 (''Add Cas2 to the Cas1 donor-target reaction in manganese'') to E. coli
-    K-12 Cas2 (UniProtKB:Q46896). Stage 4 frozen-inventory review verified all causal
-    graphs and grounded nodes against primary evidence caches.'
+  topic: Causal-graph taxon and protein-node grounding consistency
+  outcome: concern
+  summary: 'In curation/families/PF01867.yaml, six Escherichia coli K-12 MG1655 (NCBITaxon:83333)
+    nodes that explicitly represent Cas2 or the heterohexameric Cas1-Cas2 complex
+    either ground only to Cas1 (UniProtKB:Q46896, CAS1_ECOLI, NP_417235.1, PDB 4P6I
+    entity 2) or omit protein grounding altogether, missing verified partner E. coli
+    K-12 Cas2 (UniProtKB:P45956, CAS2_ECOLI, casB/ygbF/b2754, PDB 4P6I entity 3):
+    (1) in cas1-cas2-purified-integration (lines 5-111), node joint-reaction (''WT
+    Cas1-Cas2 with duplex donor and supercoiled pCRISPR'', lines 21-25) grounds only
+    to [UniProtKB:Q46896] and omits UniProtKB:P45956, and node cas2-deletion (''Replace
+    WT Cas2 with its beta6-beta7 deletion variant'', lines 39-41) omits grounding:
+    [UniProtKB:P45956]; (2) in cas2-enhancement-in-manganese (lines 112-150), node
+    add-cas2 (''Add Cas2 to the Cas1 donor-target reaction in manganese'', lines 125-129)
+    was grounded in Cycle 3 Stage 3 only to [UniProtKB:Q46896] (Cas1) and omits partner
+    Cas2 UniProtKB:P45956; (3) in cas1-cas2-cellular-acquisition (lines 269-308),
+    node coexpress-cas1-cas2 (''Induce both Cas1 and Cas2 in BL21-AI'', lines 282-286)
+    grounds only to [UniProtKB:Q46896] and omits UniProtKB:P45956; and (4) in cas1-r252e-lysate-coisolation
+    (lines 412-451), node r252e (''Introduce Cas1-FLAG R252E with WT Cas2-HA'', lines
+    425-429) grounds only to [UniProtKB:Q46896] and omits UniProtKB:P45956, and node
+    cas2-recovery (''Cas2-HA signal in the Cas1-FLAG immunoprecipitate'', lines 430-432)
+    omits grounding: [UniProtKB:Q46896, UniProtKB:P45956].'
   target_ids:
   - PF01867
   evidence_ids:
@@ -626,6 +647,45 @@ findings:
   - repository: CultureBotAI/DUFMech
     review_id: 20261011T173730Z-pf01867-cas1-integration-and-cellular-contexts
     finding_id: additional-contexts
+- finding_id: cas2-partner-and-complex-nodes-missing-grounding
+  issue_key: pf01867-cas2-partner-and-complex-nodes-missing-grounding
+  category: grounding
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Add Escherichia coli K-12 Cas2 (UniProtKB:P45956) partner grounding to six
+    Cas2 and Cas1-Cas2 complex nodes in PF01867
+  description: 'In curation/families/PF01867.yaml, six Escherichia coli K-12 MG1655
+    (NCBITaxon:83333) nodes that explicitly represent Cas2 or the heterohexameric
+    Cas1-Cas2 complex either ground only to Cas1 (UniProtKB:Q46896, CAS1_ECOLI, NP_417235.1,
+    PDB 4P6I entity 2) or omit protein grounding altogether, missing verified partner
+    E. coli K-12 Cas2 (UniProtKB:P45956, CAS2_ECOLI, casB/ygbF/b2754, PDB 4P6I entity
+    3): (1) in cas1-cas2-purified-integration (lines 5-111), node joint-reaction (''WT
+    Cas1-Cas2 with duplex donor and supercoiled pCRISPR'', lines 21-25) grounds only
+    to [UniProtKB:Q46896] and omits UniProtKB:P45956, and node cas2-deletion (''Replace
+    WT Cas2 with its beta6-beta7 deletion variant'', lines 39-41) omits grounding:
+    [UniProtKB:P45956]; (2) in cas2-enhancement-in-manganese (lines 112-150), node
+    add-cas2 (''Add Cas2 to the Cas1 donor-target reaction in manganese'', lines 125-129)
+    was grounded in Cycle 3 Stage 3 only to [UniProtKB:Q46896] (Cas1) and omits partner
+    Cas2 UniProtKB:P45956; (3) in cas1-cas2-cellular-acquisition (lines 269-308),
+    node coexpress-cas1-cas2 (''Induce both Cas1 and Cas2 in BL21-AI'', lines 282-286)
+    grounds only to [UniProtKB:Q46896] and omits UniProtKB:P45956; and (4) in cas1-r252e-lysate-coisolation
+    (lines 412-451), node r252e (''Introduce Cas1-FLAG R252E with WT Cas2-HA'', lines
+    425-429) grounds only to [UniProtKB:Q46896] and omits UniProtKB:P45956, and node
+    cas2-recovery (''Cas2-HA signal in the Cas1-FLAG immunoprecipitate'', lines 430-432)
+    omits grounding: [UniProtKB:Q46896, UniProtKB:P45956].'
+  target_ids:
+  - PF01867
+  field_paths:
+  - causal_graphs
+  evidence_ids:
+  - stage4-prior-review
+  - primary
+  owner_paths:
+  - repository: CultureBotAI/DUFMech
+    path: curation/families/PF01867.yaml
+    role: Maintained scientific overlay; update in Stage 5 grouped remediation and
+      regenerate projection.
 actions:
 - action_id: extend-contexts
   description: Resolve the mismatched ED5 image before original-image claims for target
@@ -636,6 +696,7 @@ actions:
     and outside-match interface effects without universal catalytic assignments.
   finding_ids:
   - additional-contexts
+  - cas2-partner-and-complex-nodes-missing-grounding
   target_ids:
   - PF01867
   ownership_note: Curate overlay and minimal evidence; append actual history, regenerate

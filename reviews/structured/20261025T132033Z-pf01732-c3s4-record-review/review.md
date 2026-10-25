@@ -11,7 +11,7 @@
 
 ## Summary
 
-Four graphs retain twenty observed effects, eleven direct joint-preparation effects and nine indirect cellular effects. Purified antibody cleavage and antigen-complex dissociation remain separate from locus deletion and ATPase-mutant phenotypes. Exact GM12 member mapping is verified; residue numbering, protocol, construct, partner and family-transfer limits remain explicit. Partial coverage and IN_PROGRESS status are retained. Cycle 3 Stage 3 (PR #357) grounded the two MIB-MIP two-protein perturbation nodes (omit-mib and whole-locus-deletion) to Mycoplasma mycoides subsp. capri GM12 MIB and MIP (NCBIProtein:ACU78687.1 and NCBIProtein:ACU78312.1). Stage 4 frozen-inventory review verified all causal graphs and grounded nodes against primary evidence caches.
+Four graphs retain twenty observed effects, eleven direct joint-preparation effects and nine indirect cellular effects. Purified antibody cleavage and antigen-complex dissociation remain separate from locus deletion and ATPase-mutant phenotypes. Exact GM12 member mapping is verified; residue numbering, protocol, construct, partner and family-transfer limits remain explicit. Partial coverage and IN_PROGRESS status are retained. Cycle 3 Stage 3 (PR #357) grounded the two MIB-MIP two-protein perturbation nodes (omit-mib and whole-locus-deletion) to Mycoplasma mycoides subsp. capri GM12 MIB and MIP (NCBIProtein:ACU78687.1 and NCBIProtein:ACU78312.1); multi-gene ATPase cluster comparison nodes in gm12-atpase-mutant-cellular-effects remain ungrounded at the cluster level. Stage 4 frozen-inventory review verified all causal graphs and grounded nodes against primary evidence caches.
 
 ## Scope And Provenance
 
@@ -56,7 +56,7 @@ Exact historical recombinant sequences, residue numbering, antibody cleavage-bon
 
 representation: supported. Targets: PF01732.
 
-Cycle 3 Stage 3 (PR #357) grounded the two MIB-MIP two-protein perturbation nodes (omit-mib and whole-locus-deletion) to Mycoplasma mycoides subsp. capri GM12 MIB and MIP (NCBIProtein:ACU78687.1 and NCBIProtein:ACU78312.1). Stage 4 frozen-inventory review verified all causal graphs and grounded nodes against primary evidence caches.
+Cycle 3 Stage 3 (PR #357) grounded the two MIB-MIP two-protein perturbation nodes (omit-mib and whole-locus-deletion) to Mycoplasma mycoides subsp. capri GM12 MIB and MIP (NCBIProtein:ACU78687.1 and NCBIProtein:ACU78312.1); multi-gene ATPase cluster comparison nodes in gm12-atpase-mutant-cellular-effects remain ungrounded at the cluster level. Stage 4 frozen-inventory review verified all causal graphs and grounded nodes against primary evidence caches.
 
 ## Findings
 
@@ -129,8 +129,10 @@ summary: 'Four graphs retain twenty observed effects, eleven direct joint-prepar
   and family-transfer limits remain explicit. Partial coverage and IN_PROGRESS status
   are retained. Cycle 3 Stage 3 (PR #357) grounded the two MIB-MIP two-protein perturbation
   nodes (omit-mib and whole-locus-deletion) to Mycoplasma mycoides subsp. capri GM12
-  MIB and MIP (NCBIProtein:ACU78687.1 and NCBIProtein:ACU78312.1). Stage 4 frozen-inventory
-  review verified all causal graphs and grounded nodes against primary evidence caches.'
+  MIB and MIP (NCBIProtein:ACU78687.1 and NCBIProtein:ACU78312.1); multi-gene ATPase
+  cluster comparison nodes in gm12-atpase-mutant-cellular-effects remain ungrounded
+  at the cluster level. Stage 4 frozen-inventory review verified all causal graphs
+  and grounded nodes against primary evidence caches.'
 repository: CultureBotAI/DUFMech
 kind: record
 source:
@@ -738,9 +740,10 @@ assessments:
   outcome: supported
   summary: 'Cycle 3 Stage 3 (PR #357) grounded the two MIB-MIP two-protein perturbation
     nodes (omit-mib and whole-locus-deletion) to Mycoplasma mycoides subsp. capri
-    GM12 MIB and MIP (NCBIProtein:ACU78687.1 and NCBIProtein:ACU78312.1). Stage 4
-    frozen-inventory review verified all causal graphs and grounded nodes against
-    primary evidence caches.'
+    GM12 MIB and MIP (NCBIProtein:ACU78687.1 and NCBIProtein:ACU78312.1); multi-gene
+    ATPase cluster comparison nodes in gm12-atpase-mutant-cellular-effects remain
+    ungrounded at the cluster level. Stage 4 frozen-inventory review verified all
+    causal graphs and grounded nodes against primary evidence caches.'
   target_ids:
   - PF01732
   evidence_ids:

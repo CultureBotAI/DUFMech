@@ -11,7 +11,7 @@
 
 ## Summary
 
-Seven graphs retain twelve observed direct preparation-level or composite-protocol effects. Three reference/domain mappings, published primers and original assay plots constrain scope. Mth terminal-primer uncertainty, Pfu outside-domain deletions, pH normalization and unequal ionic/dose/time protocols remain explicit. Binding, fitted KM, activity and fidelity are separate endpoints; retain IN_PROGRESS. Cycle 3 Stage 3 (PR #357) grounded the two Rpp29-Rpp21 interaction state nodes (nmr-response and itc-response) to Pyrococcus furiosus Rpp29 (UniProtKB:Q8U007). Stage 4 frozen-inventory review verified all causal graphs and grounded nodes against primary evidence caches.
+Seven graphs retain twelve observed direct preparation-level or composite-protocol effects. Three reference/domain mappings, published primers and original assay plots constrain scope. Mth terminal-primer uncertainty, Pfu outside-domain deletions, pH normalization and unequal ionic/dose/time protocols remain explicit. Binding, fitted KM, activity and fidelity are separate endpoints; retain IN_PROGRESS. Cycle 3 Stage 3 (PR #357) grounded the two Rpp29-Rpp21 interaction state nodes (nmr-response and itc-response) to the PF01868 family member Pyrococcus furiosus Rpp29 (UniProtKB:Q8U007; non-PF01868 RNase P subunits Rpp21/Pop5/Rpp30 belong to separate Pfam families). Stage 4 frozen-inventory review verified all causal graphs and grounded nodes against primary evidence caches.
 
 ## Scope And Provenance
 
@@ -56,7 +56,7 @@ Unresolved Mth terminal-primer discrepancy, exact assay-batch sequences and Rpp2
 
 representation: supported. Targets: PF01868.
 
-Cycle 3 Stage 3 (PR #357) grounded the two Rpp29-Rpp21 interaction state nodes (nmr-response and itc-response) to Pyrococcus furiosus Rpp29 (UniProtKB:Q8U007). Stage 4 frozen-inventory review verified all causal graphs and grounded nodes against primary evidence caches.
+Cycle 3 Stage 3 (PR #357) grounded the two Rpp29-Rpp21 interaction state nodes (nmr-response and itc-response) to the PF01868 family member Pyrococcus furiosus Rpp29 (UniProtKB:Q8U007; non-PF01868 RNase P subunits Rpp21/Pop5/Rpp30 belong to separate Pfam families). Stage 4 frozen-inventory review verified all causal graphs and grounded nodes against primary evidence caches.
 
 ## Findings
 
@@ -128,8 +128,10 @@ summary: 'Seven graphs retain twelve observed direct preparation-level or compos
   pH normalization and unequal ionic/dose/time protocols remain explicit. Binding,
   fitted KM, activity and fidelity are separate endpoints; retain IN_PROGRESS. Cycle
   3 Stage 3 (PR #357) grounded the two Rpp29-Rpp21 interaction state nodes (nmr-response
-  and itc-response) to Pyrococcus furiosus Rpp29 (UniProtKB:Q8U007). Stage 4 frozen-inventory
-  review verified all causal graphs and grounded nodes against primary evidence caches.'
+  and itc-response) to the PF01868 family member Pyrococcus furiosus Rpp29 (UniProtKB:Q8U007;
+  non-PF01868 RNase P subunits Rpp21/Pop5/Rpp30 belong to separate Pfam families).
+  Stage 4 frozen-inventory review verified all causal graphs and grounded nodes against
+  primary evidence caches.'
 repository: CultureBotAI/DUFMech
 kind: record
 source:
@@ -691,9 +693,10 @@ assessments:
   topic: Cycle 3 causal-graph and protein-node grounding verification
   outcome: supported
   summary: 'Cycle 3 Stage 3 (PR #357) grounded the two Rpp29-Rpp21 interaction state
-    nodes (nmr-response and itc-response) to Pyrococcus furiosus Rpp29 (UniProtKB:Q8U007).
-    Stage 4 frozen-inventory review verified all causal graphs and grounded nodes
-    against primary evidence caches.'
+    nodes (nmr-response and itc-response) to the PF01868 family member Pyrococcus
+    furiosus Rpp29 (UniProtKB:Q8U007; non-PF01868 RNase P subunits Rpp21/Pop5/Rpp30
+    belong to separate Pfam families). Stage 4 frozen-inventory review verified all
+    causal graphs and grounded nodes against primary evidence caches.'
   target_ids:
   - PF01868
   evidence_ids:

@@ -2,6 +2,7 @@
   "carry_forward_finding_ids": [
     "pf01174-pdxst-partner-and-acivicin-nodes-missing-grounding",
     "pf01680-joint-pdx1-pdx2-nodes-missing-partner-grounding",
+    "pf01867-cas2-partner-and-complex-nodes-missing-grounding",
     "pf01977-shvdccd-cognate-partner-and-l182v-missing-partner-grounding"
   ],
   "cycle_number": 3,
@@ -743,7 +744,9 @@
       "projection_path": "data/families/PF01867.yaml",
       "projection_sha256": "d57ce0115a2d65fb391c2030cd546d6b42e04d65f8a1bf64e3847ce07cb9bfb3",
       "stage4_new_review_saved": true,
-      "stage4_open_finding_ids": []
+      "stage4_open_finding_ids": [
+        "pf01867-cas2-partner-and-complex-nodes-missing-grounding"
+      ]
     },
     {
       "causal_graph_count": 7,
@@ -1744,5 +1747,5 @@
   "stage4_newly_saved_record_reviews": 24,
   "stage_id": "record_review",
   "stage_number": 4,
-  "total_structured_reviews_in_repo": 276
+  "total_structured_reviews_in_repo": 275
 }
