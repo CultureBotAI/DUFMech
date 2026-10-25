@@ -1,0 +1,744 @@
+# PF01661 Cycle 3 Stage 4 frozen-inventory causal-graph and grounding review
+
+- Review: 20261025T132029Z-pf01661-c3s4-record-review
+- Repository: CultureBotAI/DUFMech
+- Started UTC: 2026-10-25T13:20:28Z
+- Finished UTC: 2026-10-25T13:20:29Z
+- Reviewer: Antigravity (self_review)
+- Completion: completed
+- Verdict: pass_with_limitations
+- Scientific review: true
+
+## Summary
+
+Five graphs retain eight observed effects from three primary studies. Seven are direct biochemical effects and the GST-AF1521 unwashed-NAD assay retains unresolved directness. Current Pfam30-155 mapping distinguishes the intact192-aa protein and extra-domain D20/Y176 substitutions. TLC product assignment, binding, retained PARP1 conjugate and two demodification protocols are not fused into a complete or universal catalytic pathway. Cycle 3 Stage 3 (PR #357) grounded the Af1521 ADP-ribose binding state node itc-adpr-bound-state ('ITC-detected saturable Af1521-ADP-ribose binding') to Archaeoglobus fulgidus Af1521 (UniProtKB:O28751). Stage 4 frozen-inventory review verified all causal graphs and grounded nodes against primary evidence caches.
+
+## Scope And Provenance
+
+Scientific assessment of the retained edges, exact member mapping, primary evidence, context and causal limits.
+
+Selection: Pending PF01661 within the full8296-family corpus; the inspected Af1521 preparations are member-specific examples, not exhaustive PF01661 coverage.
+Coverage: partial; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base 0e26e9cdab5214d838db4f53ddefbf83772241fb.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| PF01661 | data/families/PF01661.yaml | generated | PF01661 |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Native projection and overlay validation | passed | True | PF01661 | Current projection validates and preserves the authored graph and discussion content exactly. |
+
+## Scientific And Domain Assessments
+
+### Protein, domain and experimental scope
+
+identity: supported. Targets: PF01661.
+
+O28751 sequenceversion2 is192aa and exactly matches current InterPro and canonical PDB2BFQ entity1. PF01661 spans30-155; N34 is inside, D20 and Y176 outside. Structural deposited FME1 is not assigned to every functional preparation. UniProt VC-16 taxon224325 is reference grounding rather than a verified experimental stock; structural source is species-level taxon2234. Karras cleavedHis6, Jankevicius GST and Rosenthal pET28-GST-derived preparations remain distinct, with exact vector termini, some tag states and the latter Af1521 dose unresolved.
+
+### Directed effects and limits
+
+graph: supported. Targets: PF01661.
+
+Seven DIRECT and one UNRESOLVED edges are all OBSERVED with experimental evidence. Joint CPDase/substrate/Af1521 and enzyme/ligand conditions preserve necessary context. Binding substitutions are not called catalytic knockouts. Jankevicius supplement explicitly leaves NAD in the GST assay, preventing a uniquely resolved chemical interpretation of signal loss. Rosenthal removes NAD with G50 and shows lower substrate-associated label with retained Coomassie protein bands, supporting direct demodification without Af-specific product identification. The two protocols remain separate, and neither human MacroD2 MS/isotope chemistry nor modeled water activation is transferred to Af1521. PARP1-conjugate retention is not PAR cleavage or cellular recruitment.
+
+### Remaining family coverage
+
+completeness: concern. Targets: PF01661.
+
+Allen2003 complete construct Methods and Dani2009 construct supplement were not retrieved; Rosenthal's Af-specific dose, tag processing and full termini remain unresolved. Later alpha-NAD and engineered-Af1521 studies were identified but not inspected sufficiently to curate. Other bacterial, archaeal and eukaryotic PF01661 members still need independent assessment. Statistical details missing in Karras and Jankevicius, chromatographic product assignment, undisplayed controls and the text/table/panel discrepancies remain evidence limits, not negative biological findings.
+
+### Cycle 3 causal-graph and protein-node grounding verification
+
+representation: supported. Targets: PF01661.
+
+Cycle 3 Stage 3 (PR #357) grounded the Af1521 ADP-ribose binding state node itc-adpr-bound-state ('ITC-detected saturable Af1521-ADP-ribose binding') to Archaeoglobus fulgidus Af1521 (UniProtKB:O28751). Stage 4 frozen-inventory review verified all causal graphs and grounded nodes against primary evidence caches.
+
+## Findings
+
+### additional-contexts: Resolve Af1521 construct details and expand primary-evidence coverage
+
+minor / open / confirmed; issue key: pf01661-causal-context-coverage.
+
+Retrieve Allen2003 and Dani2009 construct details and resolve the Rosenthal Af1521 dose/tag context. Inspect PMID31599159 and doi10.1038/s41467-020-18981-w before adopting later substrate or engineered-variant claims. Extend other members only with their own accession/domain mapping and primary experiments. Preserve the Pfam30-155 boundary, Karras discrepancies, GST unwashed-NAD exception, partial label removal and distinction between Af1521 data and human MacroD2 chemistry in successor curation.
+
+## Recommended Actions And Acceptance Checks
+
+### extend-contexts
+
+Retrieve Allen2003 and Dani2009 construct details and resolve the Rosenthal Af1521 dose/tag context. Inspect PMID31599159 and doi10.1038/s41467-020-18981-w before adopting later substrate or engineered-variant claims. Extend other members only with their own accession/domain mapping and primary experiments. Preserve the Pfam30-155 boundary, Karras discrepancies, GST unwashed-NAD exception, partial label removal and distinction between Af1521 data and human MacroD2 chemistry in successor curation.
+
+- Each added edge has member-specific primary evidence and explicit conditions.
+- Unsupported transfers and conflicting or negative results remain visible.
+- Native checks pass and a successor report states actual scope.
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| primary | https://pmc.ncbi.nlm.nih.gov/articles/PMC1142602/; Karras2005 Results, Discussion, Methods and TablesI-III; Figures1,2,3,6,7 visually inspected. Figure1 TLC, Figure2 ITC, TablesI-II and Figure7 conjugate retention support the retained edges. | supports | Af1521 addition to the CPDase-generated substrate produces an ADPr-migrating TLC spot; this is not independent MS/NMR identification. WT binds ADPr with126+/-21nM Kd, while D20A,N34A,Y176L increase fitted Kd without abolishing binding. Immobilized Af1521 retains PARylatedPARP1, but displayed data do not resolve free-PAR specificity or cleavage. Text/table stoichiometry disagreement, Figure6 panel-label swap, weak unfittable ligands and undisplayed controls remain explicit. |
+| identity | https://www.ebi.ac.uk/interpro/api/protein/uniprot/O28751/entry/pfam/PF01661/; Accession and domain locations; paired UniProt identity facts | supports | O28751 sequenceversion2 is192aa and exactly matches current InterPro and canonical PDB2BFQ entity1. PF01661 spans30-155; N34 is inside, D20 and Y176 outside. Structural deposited FME1 is not assigned to every functional preparation. UniProt VC-16 taxon224325 is reference grounding rather than a verified experimental stock; structural source is species-level taxon2234. Karras cleavedHis6, Jankevicius GST and Rosenthal pET28-GST-derived preparations remain distinct, with exact vector termini, some tag states and the latter Af1521 dose unresolved. |
+| jankevicius | https://www.ebi.ac.uk/europepmc/webservices/rest/PMC7097781/fullTextXML; Jankevicius2013 Af1521 Results, expression/purification Methods, Figure4d and Supplementary Note page19 GST-macrodomain exception; page20 assigns product experiments to MacroD2. | supports | GST-AF1521 reduces PARP10-associated32P by about75%; supplement leaves free NAD present for GST-tagged macrodomains and specifies0.5uM15min37C. Product MS and isotope tracing concern human MacroD2, not Af1521, so chemical directness remains unresolved for this edge. |
+| rosenthal | https://www.nature.com/articles/nsmb.2521; Rosenthal2013 Figure1b, Online Methods and Supplementary Figure1c/caption, PDF pages3-4; supplement includes an unrelated MacroD2 Ile189 correction notice. | supports | Af1521 decreases label on PARP10 catalytic domain818-1025 with retained Coomassie substrate bands. Common protocol removes free NAD by G50 filtration; Af-specific dose and tag cleavage are not enumerated. Main quantification leaves about45% modification,n=2,mean+/-range. Human MacroD2 free-product and cellular results are not transferred. |
+| native | src/dufmech/records.py; Current projection validation and overlay equivalence in this retained-review session | supports | Closed schema, canonical history and applicable graph/evidence checks pass. Curated graphs and discussions match the overlay; scientific validity is assessed separately. |
+| stage4-prior-review | reviews/structured/20261011T130027Z-pf01661-af1521-binding-and-demodification-contexts/review.yaml; Predecessor structured review 20261011T130027Z-pf01661-af1521-binding-and-demodification-contexts | supports | Predecessor review 20261011T130027Z-pf01661-af1521-binding-and-demodification-contexts verified and linked for finding continuity and semantic-digest progression on PF01661. |
+| duf-projection-pf01661 | data/families/PF01661.yaml; dufmech-reviewed-projection-v1 | context_only | Byte-exact projection retained at save for digest verification, not scientific assessment. |
+
+## Limits And Additional Notes
+
+- Karras Figures1,2,3,6,7; Jankevicius Figure4 and supplement pages19-20; Rosenthal main Figure1/Methods and Supplementary Figure1/caption were visually inspected. Karras Figure5 was downloaded but not visually assessed, Figure4 not downloaded. No raw calorimetry refitting, independent densitometry, product identification or experimental replication was performed. Construct-source access gaps and uninspected later studies remain explicit.
+- Same-agent assessment, not independent expert review or experimental replication.
+- Partial family coverage; status remains IN_PROGRESS. No full-corpus completion, publication or full publication-QC pass is claimed.
+- Assessments were authored from inspected primary evidence. Native inspection supplied provenance, not scientific conclusions.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261025T132029Z-pf01661-c3s4-record-review
+title: PF01661 Cycle 3 Stage 4 frozen-inventory causal-graph and grounding review
+started_at: '2026-10-25T13:20:28Z'
+finished_at: '2026-10-25T13:20:29Z'
+reviewer:
+  identity: Antigravity
+  kind: agent
+  model: Claude-Opus-4.6
+  independence: self_review
+  independence_basis: Cycle 3 Stage 4 frozen-inventory record review by Antigravity
+    auditing prior curation overlays, primary evidence caches, history events, and
+    current projections at Git revision 0e26e9cdab5214d838db4f53ddefbf83772241fb.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: pass_with_limitations
+native_verdict: NEEDS_FOLLOWUP
+scientific_review: true
+summary: 'Five graphs retain eight observed effects from three primary studies. Seven
+  are direct biochemical effects and the GST-AF1521 unwashed-NAD assay retains unresolved
+  directness. Current Pfam30-155 mapping distinguishes the intact192-aa protein and
+  extra-domain D20/Y176 substitutions. TLC product assignment, binding, retained PARP1
+  conjugate and two demodification protocols are not fused into a complete or universal
+  catalytic pathway. Cycle 3 Stage 3 (PR #357) grounded the Af1521 ADP-ribose binding
+  state node itc-adpr-bound-state (''ITC-detected saturable Af1521-ADP-ribose binding'')
+  to Archaeoglobus fulgidus Af1521 (UniProtKB:O28751). Stage 4 frozen-inventory review
+  verified all causal graphs and grounded nodes against primary evidence caches.'
+repository: CultureBotAI/DUFMech
+kind: record
+source:
+  git_revision: 0e26e9cdab5214d838db4f53ddefbf83772241fb
+  state: working_tree
+  snapshot_id: interpro-pfam-duf-2026-10-10
+  inputs:
+  - path: curation/families/PF01661.yaml
+    sha256: 0403e27e1bc12728bc020af71702542799a8b2473df5f65fdb5b75ad81f01c91
+    role: context
+  - path: data/families/PF01661.yaml
+    sha256: 82515b16e02d60fcdd8c0c449e3716a3db17883c10c88d3270897425c28e2299
+    role: target
+  - path: data/worklists/interpro-pfam-duf-2026-10-10.json
+    sha256: 17fb625876c9326ed284263a47bcd84e0d7844a31c040dc06cd2260c36f1c383
+    role: context
+  - path: data/worklists/interpro-pfam-duf-2026-10-10.manifest.json
+    sha256: 31c07ffb6a169c851ea0e6e9dd527a10c04028eafeb29187bd62dc2ae848696e
+    role: context
+  - path: data/worklists/interpro-pfam-duf-2026-10-10.tsv
+    sha256: be023c8dd9d8d3864926b5032d6f7e87a884b1a567391696822dbbecc692dae7
+    role: context
+  - path: evidence/PF01661/Af1521-identities.txt
+    sha256: 4777c03afafaf4e9d845dee3aeabf12681a5dbc1dc16ccc1023ab4bf739229ea
+    role: context
+  - path: evidence/PF01661/jankevicius-2013-af1521.txt
+    sha256: 62c684d9fedd80870e3e6e5414e30a0c7c49001250acfba0e06a971856b18e88
+    role: context
+  - path: evidence/PF01661/karras-2005-macro.txt
+    sha256: e7211f743652bf9b8f2d42abbee4974e793e785d09777c39d5e0ff90f3c1afc8
+    role: context
+  - path: evidence/PF01661/rosenthal-2013-af1521.txt
+    sha256: 007c36dcf3f95b5ac657d1bc88621174d7dcdf0e0921edc0b175167dd153319e
+    role: context
+  - path: reviews/structured/20261011T130027Z-pf01661-af1521-binding-and-demodification-contexts/review.yaml
+    sha256: 5be2c89762c5a442d3213494f4f2a66e6311309a4dbaf5a1ba3c4ac62342c4c8
+    role: context
+targets:
+- target_id: PF01661
+  path: data/families/PF01661.yaml
+  label: PF01661
+  kind: generated
+  record_class: FamilyRecord
+  owner_paths:
+  - repository: CultureBotAI/DUFMech
+    path: curation/families/PF01661.yaml
+    role: Maintained scientific overlay; create only with authorized curation.
+  - repository: CultureBotAI/DUFMech
+    path: src/dufmech/records.py
+    role: Projection generator; frozen snapshot identity is not hand-edited.
+  semantic_digest:
+    algorithm: dufmech-record-content-v1
+    sha256: c807a55176bcf4ef466764ec748b07e258722a621b41a3187c02edc3f9290cbc
+    description: Canonical JSON SHA-256 of effective FamilyRecord excluding only curation_status,
+      review_id and curation_events.
+scope:
+  description: Scientific assessment of the retained edges, exact member mapping,
+    primary evidence, context and causal limits.
+  selection: Pending PF01661 within the full8296-family corpus; the inspected Af1521
+    preparations are member-specific examples, not exhaustive PF01661 coverage.
+  coverage: partial
+  population_size: 1
+  reviewed_target_ids:
+  - PF01661
+  exclusions:
+  - target: Remaining family members and uncurated experimental contexts
+    reason: Allen2003 complete construct Methods and Dani2009 construct supplement
+      were not retrieved; Rosenthal's Af-specific dose, tag processing and full termini
+      remain unresolved. Later alpha-NAD and engineered-Af1521 studies were identified
+      but not inspected sufficiently to curate. Other bacterial, archaeal and eukaryotic
+      PF01661 members still need independent assessment. Statistical details missing
+      in Karras and Jankevicius, chromatographic product assignment, undisplayed controls
+      and the text/table/panel discrepancies remain evidence limits, not negative
+      biological findings.
+checks:
+- check_id: native-projection
+  name: Native projection and overlay validation
+  command: validate_record(record, root); assert projection graphs and discussions
+    match overlay
+  status: passed
+  required: true
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Current projection validates and preserves the authored graph and discussion
+    content exactly.
+  target_ids:
+  - PF01661
+  evidence_ids:
+  - native
+evidence:
+- evidence_id: primary
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC1142602/
+  locator: Karras2005 Results, Discussion, Methods and TablesI-III; Figures1,2,3,6,7
+    visually inspected. Figure1 TLC, Figure2 ITC, TablesI-II and Figure7 conjugate
+    retention support the retained edges.
+  accessed_at: '2026-10-11T13:00:27Z'
+  support: supports
+  snapshot_sha256: e7211f743652bf9b8f2d42abbee4974e793e785d09777c39d5e0ff90f3c1afc8
+  summary: Af1521 addition to the CPDase-generated substrate produces an ADPr-migrating
+    TLC spot; this is not independent MS/NMR identification. WT binds ADPr with126+/-21nM
+    Kd, while D20A,N34A,Y176L increase fitted Kd without abolishing binding. Immobilized
+    Af1521 retains PARylatedPARP1, but displayed data do not resolve free-PAR specificity
+    or cleavage. Text/table stoichiometry disagreement, Figure6 panel-label swap,
+    weak unfittable ligands and undisplayed controls remain explicit.
+- evidence_id: identity
+  kind: database
+  reference: https://www.ebi.ac.uk/interpro/api/protein/uniprot/O28751/entry/pfam/PF01661/
+  locator: Accession and domain locations; paired UniProt identity facts
+  accessed_at: '2026-10-11T13:00:27Z'
+  support: supports
+  snapshot_sha256: 4777c03afafaf4e9d845dee3aeabf12681a5dbc1dc16ccc1023ab4bf739229ea
+  summary: O28751 sequenceversion2 is192aa and exactly matches current InterPro and
+    canonical PDB2BFQ entity1. PF01661 spans30-155; N34 is inside, D20 and Y176 outside.
+    Structural deposited FME1 is not assigned to every functional preparation. UniProt
+    VC-16 taxon224325 is reference grounding rather than a verified experimental stock;
+    structural source is species-level taxon2234. Karras cleavedHis6, Jankevicius
+    GST and Rosenthal pET28-GST-derived preparations remain distinct, with exact vector
+    termini, some tag states and the latter Af1521 dose unresolved.
+- evidence_id: jankevicius
+  kind: primary_source
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC7097781/fullTextXML
+  locator: Jankevicius2013 Af1521 Results, expression/purification Methods, Figure4d
+    and Supplementary Note page19 GST-macrodomain exception; page20 assigns product
+    experiments to MacroD2.
+  summary: GST-AF1521 reduces PARP10-associated32P by about75%; supplement leaves
+    free NAD present for GST-tagged macrodomains and specifies0.5uM15min37C. Product
+    MS and isotope tracing concern human MacroD2, not Af1521, so chemical directness
+    remains unresolved for this edge.
+  accessed_at: '2026-10-11T13:00:27Z'
+  support: supports
+  snapshot_sha256: 62c684d9fedd80870e3e6e5414e30a0c7c49001250acfba0e06a971856b18e88
+- evidence_id: rosenthal
+  kind: primary_source
+  reference: https://www.nature.com/articles/nsmb.2521
+  locator: Rosenthal2013 Figure1b, Online Methods and Supplementary Figure1c/caption,
+    PDF pages3-4; supplement includes an unrelated MacroD2 Ile189 correction notice.
+  summary: Af1521 decreases label on PARP10 catalytic domain818-1025 with retained
+    Coomassie substrate bands. Common protocol removes free NAD by G50 filtration;
+    Af-specific dose and tag cleavage are not enumerated. Main quantification leaves
+    about45% modification,n=2,mean+/-range. Human MacroD2 free-product and cellular
+    results are not transferred.
+  accessed_at: '2026-10-11T13:00:27Z'
+  support: supports
+  snapshot_sha256: 007c36dcf3f95b5ac657d1bc88621174d7dcdf0e0921edc0b175167dd153319e
+- evidence_id: native
+  kind: validation
+  reference: src/dufmech/records.py
+  locator: Current projection validation and overlay equivalence in this retained-review
+    session
+  accessed_at: '2026-10-11T13:00:27Z'
+  support: supports
+  summary: Closed schema, canonical history and applicable graph/evidence checks pass.
+    Curated graphs and discussions match the overlay; scientific validity is assessed
+    separately.
+- evidence_id: stage4-prior-review
+  kind: prior_review
+  reference: reviews/structured/20261011T130027Z-pf01661-af1521-binding-and-demodification-contexts/review.yaml
+  locator: Predecessor structured review 20261011T130027Z-pf01661-af1521-binding-and-demodification-contexts
+  accessed_at: '2026-10-25T13:20:29Z'
+  support: supports
+  snapshot_sha256: 5be2c89762c5a442d3213494f4f2a66e6311309a4dbaf5a1ba3c4ac62342c4c8
+  summary: Predecessor review 20261011T130027Z-pf01661-af1521-binding-and-demodification-contexts
+    verified and linked for finding continuity and semantic-digest progression on
+    PF01661.
+- evidence_id: duf-projection-pf01661
+  kind: record_content
+  reference: data/families/PF01661.yaml
+  locator: dufmech-reviewed-projection-v1
+  accessed_at: '2026-10-25T13:20:29Z'
+  support: context_only
+  snapshot_sha256: 82515b16e02d60fcdd8c0c449e3716a3db17883c10c88d3270897425c28e2299
+  quote: "id: Pfam:PF01661\npfam_id: PF01661\nname: Macro domain\nshort_name: Macro\n\
+    seed_status: EX_DUF\ncharacterization_status: UNSCORED\ncuration_status: IN_PROGRESS\n\
+    source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01661\ncounters:\n\
+    \  proteins: 32372\n  matches: 38291\n  proteomes: 12852\n  taxa: 24044\n  structures:\
+    \ 1152\n  alphafold_models: 21017\n  domain_architectures: 1119\nprovenance:\n\
+    \  snapshot_id: interpro-pfam-duf-2026-10-10\n  path: data/worklists/interpro-pfam-duf-2026-10-10.json\n\
+    \  sha256: 17fb625876c9326ed284263a47bcd84e0d7844a31c040dc06cd2260c36f1c383\n\
+    \  generated_at: '2026-10-10T07:44:21.614711Z'\n  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/\n\
+    interpro_id: InterPro:IPR002589\ndescription: 'The Macro or A1pp domain is a module\
+    \ of about 180 amino acids which can bind ADP-ribose\n  (an NAD metabolite) or\
+    \ related ligands. Binding to ADP-ribose could be either covalent or non-covalent\n\
+    \  [[cite:PUB00052327]]: in certain cases it is believed to bind non-covalently\
+    \ [[cite:PUB00052325]]; while\n  in other cases (such as Aprataxin) it appears\
+    \ to bind both non-covalently through a zinc finger motif,\n  and covalently through\
+    \ a separate region of the protein [[cite:PUB00052328]]. This domain is found\
+    \ in\n  a number of otherwise unrelated proteins. It is found at the C-terminus\
+    \ of the macro-H2A histone protein\n  4 and also in the non-structural proteins\
+    \ of several types of ssRNA viruses such as NSP3 from alpha-viruses\n  and coronaviruses.\
+    \ This domain is also found on its own in a family of proteins from bacteria,\
+    \ archaebacteria\n  and eukaryotes. The 3D structure of the SARS-CoV Macro domain\
+    \ has a mixed alpha/beta fold consisting\n  of a central seven-stranded twisted\
+    \ mixed beta sheet sandwiched between two alpha helices on one face,\n  and three\
+    \ on the other. The final alpha-helix, located on the edge of the central beta-sheet,\
+    \ forms\n  the C terminus of the protein [[cite:PUB00043976]]. The crystal structure\
+    \ of AF1521 (a Macro domain-only\n  protein from Archaeoglobus fulgidus) has also\
+    \ been reported and compared with other Macro domain containing\n  proteins. Several\
+    \ Macro domain only proteins are shorter than AF1521, and appear to lack either\
+    \ the\n  first strand of the beta-sheet or the C-terminal helix 5. Well conserved\
+    \ residues form a hydrophobic\n  cleft and cluster around the AF1521-ADP-ribose\
+    \ binding site [[cite:PUB00021744]].'\ncuration_history: history/records/PF01661\n\
+    discussions:\n- discussion_id: pf01661-af1521-causal-coverage\n  prompt: Resolve\
+    \ Af1521 construct and dose details, inspect later nucleotide and substitution\
+    \ studies,\n    and extend protein-specific PF01661 coverage.\n  kind: CURATION_TODO\n\
+    \  status: OPEN\n  rationale: Five graphs retain eight observed assay effects\
+    \ from three studies, not a universal macrodomain\n    mechanism. Current Pfam\
+    \ boundaries, intact-protein substitutions, tag differences and free-NAD handling\n\
+    \    limit transfers. Binding, TLC conversion and demodification are separate\
+    \ observations, not a measured\n    serial pathway.\n  evidence:\n  - reference:\
+    \ PMID:15902274\n    supports: PARTIAL\n    evidence_source: full_text_tables_and_visually_inspected_figures_1_2_3_6_7\n\
+    \    explanation: Retain TableI/text stoichiometry disagreement, Figure6 panel-label\
+    \ swap, weak rather\n      than absent nucleotide binding, and the current Pfam\
+    \ boundaries that exclude D20 and Y176.\n  - reference: PMID:23474712\n    supports:\
+    \ PARTIAL\n    evidence_source: full_text_figure4_and_supplement_pages19_20\n\
+    \    explanation: The GST-specific unwashed-NAD exception limits directness. Human\
+    \ MacroD2 product identification\n      and catalytic models do not establish\
+    \ Af1521 chemical intermediates.\n  - reference: PMID:23474714\n    supports:\
+    \ PARTIAL\n    evidence_source: full_text_figure1_and_supplementary_figure1\n\
+    \    explanation: Supplementary Figure1c identifies the tested substrate domain\
+    \ and retains loading bands;\n      Af1521 dose and tag state remain unresolved.\
+    \ Figure1d supports binding but does not specify the\n      salt variant or display\
+    \ a tag-only control, so it is not another resolved mechanistic edge.\n  posed_by:\
+    \ Codex\n  posed_date: '2026-10-11'\n  notes: Retrieve Allen2003 full construct\
+    \ Methods and Dani2009 supplement. Later alpha-NAD work PMID31599159\n    and\
+    \ engineered Af1521 doi10.1038/s41467-020-18981-w remain leads only, not curated\
+    \ from abstracts.\n    Other family members need their own evidence assessment.\
+    \ Human MacroD2 product MS, isotope tracing,\n    modeled water activation and\
+    \ cellular GSK3 effects do not establish Af1521 chemistry. Naming history\n  \
+    \  and similarity cannot establish uniform family function. Partial scientific\
+    \ self-review; IN_PROGRESS.\ncausal_graphs:\n- graph_id: af1521-coupled-appr1p-processing\n\
+    \  title: Af1521 addition yields an ADP-ribose-migrating TLC product\n  scope:\
+    \ Purified Archaeoglobus fulgidus Af1521 in the coupled CPDase/Appr1-phosphate\
+    \ assay, Karras 2005\n    Figure 1; not an isolated Pfam fragment or physiological\
+    \ substrate assay.\n  context: His6-Af1521 expression, purification and thrombin\
+    \ cleavage refer to Allen 2003; complete terminal\n    scar remains unresolved.\
+    \ Incubate 2 mM Appr>P with 6 ug CPDase in 9 ul, then add 1 ul containing 6\n\
+    \    ug Af1521 for 12 h at 30 C. CPDase remains present. TLC uses tetrabutylammonium,\
+    \ 1.5 M LiCl and 20%\n    ethanol with UV254 detection.\n  family_mapping: Af1521\
+    \ reference O28751 is 192 aa, sequence version 2, exactly matching canonical PDB\n\
+    \    2BFQ entity1. Current PF01661 is 30-155 inclusive, not the entire protein.\
+    \ UniProt's VC-16 taxon224325\n    is reference grounding; the structural source\
+    \ is species-level A. fulgidus taxon2234. Neither experimental\n    strain sequence\
+    \ nor terminal scar was independently verified.\n  scope_status: MECHANISTIC\n\
+    \  taxon: NCBITaxon:2234\n  limitations: Lane3 co-migration with ADPr in matched\
+    \ enzyme/buffer lane4 supports product assignment,\n    not an independent MS/NMR\
+    \ structure determination. Phosphate release and yeast YBR022W activity are\n\
+    \    reported as data not shown. The long endpoint does not establish turnover\
+    \ kinetics, native biological\n    role, isolated-domain sufficiency or a resolved\
+    \ catalytic cycle.\n  nodes:\n  - node_id: af1521-cpdase-substrate-incubation\n\
+    \    label: Add purified Af1521 to the CPDase-generated Appr1-phosphate mixture\n\
+    \    node_type: PERTURBATION\n    grounding:\n    - UniProtKB:O28751\n  - node_id:\
+    \ adpr-migrating-product\n    label: Product with ADP-ribose migration in the\
+    \ matched TLC buffer\n    node_type: STATE\n  edges:\n  - edge_id: af1521-produces-adpr-migrating-product\n\
+    \    subject: af1521-cpdase-substrate-incubation\n    predicate: produces\n  \
+    \  object: adpr-migrating-product\n    mechanism: Af1521 addition shifts the CPDase-generated\
+    \ intermediate to the product position in lane3,\n      unlike the CPDase-only\
+    \ lane2. ADPr control lane4 contains the same two enzymes. The joint substrate/preparation\n\
+    \      condition is retained without treating CPDase and Af1521 as independently\
+    \ sufficient or adding unobserved\n      catalytic intermediates.\n    directness:\
+    \ DIRECT\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n\
+    \    - reference: PMID:15902274\n      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC1142602/\n\
+    \      snippet: Thin-layer chromatography assays\n      explanation: Figure1 and\
+    \ Methods were inspected, including visual comparison of precursor, CPDase\n \
+    \       intermediate, Af1521 product and matched ADPr control. Product identity\
+    \ remains a chromatographic\n        assignment.\n      cache_path: evidence/PF01661/karras-2005-macro.txt\n\
+    \      cache_sha256: e7211f743652bf9b8f2d42abbee4974e793e785d09777c39d5e0ff90f3c1afc8\n\
+    \    - reference: https://www.ebi.ac.uk/interpro/api/protein/uniprot/O28751/entry/pfam/PF01661/\n\
+    \      source_url: https://www.ebi.ac.uk/interpro/api/protein/uniprot/O28751/entry/pfam/PF01661/\n\
+    \      snippet: O28751 Pfam:PF01661; interval 30-155 inclusive.\n      explanation:\
+    \ UniProt, InterPro and PDB canonical sequences match over192 residues; the current\
+    \ Pfam\n        interval is shorter than the experimentally studied structural\
+    \ module. Reference strain and unresolved\n        vector termini are explicit.\n\
+    \      cache_path: evidence/PF01661/Af1521-identities.txt\n      cache_sha256:\
+    \ 4777c03afafaf4e9d845dee3aeabf12681a5dbc1dc16ccc1023ab4bf739229ea\n- graph_id:\
+    \ af1521-adpr-binding-and-substitutions\n  title: Purified Af1521 binds ADP-ribose\
+    \ and three substitutions reduce affinity\n  scope: Intact Af1521 WT, D20A, N34A\
+    \ and Y176L preparations, Karras 2005 Figures2-3 and TablesI-II; biochemical\n\
+    \    binding, not catalytic-rate measurements.\n  context: ITC at25 C in50 mM\
+    \ potassium phosphate pH6.5,10-50 uM protein,150-750 uM ligand in syringe.\n \
+    \   WT ADPr Kd126+/-21 nM in Results,0.13+/-0.02 uM in TableI. His6 cleavage is\
+    \ described, but complete\n    vector-derived terminal residues remain unresolved.\
+    \ Mutant effects compare the same ADPr ligand, not\n    separate nucleotide chemistries.\n\
+    \  family_mapping: Native reference O28751 is192 aa, with current PF01661 30-155.\
+    \ N34 is within that interval;\n    D20 and Y176 are outside it. Their whole-protein\
+    \ substitution effects cannot be labeled mutations\n    within the current Pfam\
+    \ domain or evidence that the isolated interval suffices. PDB2BFQ canonical\n\
+    \    sequence matches the reference, not an independent sequence determination\
+    \ of every mutant preparation.\n  scope_status: MECHANISTIC\n  taxon: NCBITaxon:2234\n\
+    \  limitations: All three variants retain measurable ADPr binding. No displayed\
+    \ folding, active-fraction\n    or stability controls resolve why each Kd changes;\
+    \ replicate count and error definition are not specified.\n    Stoichiometry is0.91+/-0.01\
+    \ in text but0.93+/-0.01 in TableI. ADP,AMP,ATP bind more weakly; NAD,adenosine,GDP\n\
+    \    are weak/unfittable with estimated Kd>100 uM, not proven zero binding. Structural\
+    \ contacts do not\n    establish an observed catalytic trajectory.\n  nodes:\n\
+    \  - node_id: wt-af1521-adpr-incubation\n    label: Incubate purified WT Af1521\
+    \ with ADP-ribose\n    node_type: PERTURBATION\n    grounding:\n    - UniProtKB:O28751\n\
+    \  - node_id: itc-adpr-bound-state\n    label: ITC-detected saturable Af1521-ADP-ribose\
+    \ binding\n    node_type: STATE\n    grounding:\n    - UniProtKB:O28751\n  - node_id:\
+    \ d20a-substitution\n    label: D20A substitution in the intact Af1521 protein\n\
+    \    node_type: PERTURBATION\n    grounding:\n    - UniProtKB:O28751\n  - node_id:\
+    \ n34a-substitution\n    label: N34A substitution in the intact Af1521 protein\n\
+    \    node_type: PERTURBATION\n    grounding:\n    - UniProtKB:O28751\n  - node_id:\
+    \ y176l-substitution\n    label: Y176L substitution in the intact Af1521 protein\n\
+    \    node_type: PERTURBATION\n    grounding:\n    - UniProtKB:O28751\n  - node_id:\
+    \ measured-adpr-affinity\n    label: ADP-ribose binding affinity relative to WT\
+    \ in the ITC assay\n    node_type: STATE\n  edges:\n  - edge_id: wt-af1521-enables-adpr-binding\n\
+    \    subject: wt-af1521-adpr-incubation\n    predicate: enables\n    object: itc-adpr-bound-state\n\
+    \    mechanism: Ligand titration yields a saturable calorimetric binding curve\
+    \ with submicromolar fitted\n      Kd. This directly supports formation of a bound\
+    \ state in the purified assay, not enzymatic turnover,\n      an intracellular\
+    \ signaling consequence or physiological ligand exclusivity.\n    directness:\
+    \ DIRECT\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n\
+    \    - reference: PMID:15902274\n      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC1142602/\n\
+    \      snippet: Equilibrium values for binding\n      explanation: Visually inspected\
+    \ Figure2, TableI and ITC Methods establish binding. Figure3 and TableI\n    \
+    \    retain weaker-ligand comparisons and prevent an unsupported absolute-specificity\
+    \ claim.\n      cache_path: evidence/PF01661/karras-2005-macro.txt\n      cache_sha256:\
+    \ e7211f743652bf9b8f2d42abbee4974e793e785d09777c39d5e0ff90f3c1afc8\n  - edge_id:\
+    \ d20a-decreases-adpr-affinity\n    subject: d20a-substitution\n    predicate:\
+    \ decreases\n    object: measured-adpr-affinity\n    mechanism: D20A raises the\
+    \ fitted ADPr dissociation constant from WT0.13+/-0.02 to11.7+/-2.1 uM. The\n\
+    \      measured affinity reduction is retained without calling binding abolished\
+    \ or assigning a unique\n      atomic cause; D20 lies outside the current Pfam30-155\
+    \ interval.\n    directness: DIRECT\n    support: OBSERVED\n    evidence_kind:\
+    \ EXPERIMENTAL\n    evidence:\n    - reference: PMID:15902274\n      source_url:\
+    \ https://pmc.ncbi.nlm.nih.gov/articles/PMC1142602/\n      snippet: Equilibrium\
+    \ values for binding\n      explanation: TableII gives WT and D20A ITC values;\
+    \ no mutant-folding control or catalytic-activity\n        comparison is supplied\
+    \ for this edge.\n      cache_path: evidence/PF01661/karras-2005-macro.txt\n \
+    \     cache_sha256: e7211f743652bf9b8f2d42abbee4974e793e785d09777c39d5e0ff90f3c1afc8\n\
+    \  - edge_id: n34a-decreases-adpr-affinity\n    subject: n34a-substitution\n \
+    \   predicate: decreases\n    object: measured-adpr-affinity\n    mechanism: N34A\
+    \ raises the fitted ADPr dissociation constant to0.39+/-0.05 uM versus WT0.13+/-0.02\n\
+    \      uM. N34 is within the current Pfam interval, but this intact-protein binding\
+    \ comparison does not\n      prove a catalytic-water role or isolated-domain sufficiency.\n\
+    \    directness: DIRECT\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n\
+    \    evidence:\n    - reference: PMID:15902274\n      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC1142602/\n\
+    \      snippet: Equilibrium values for binding\n      explanation: TableII supports\
+    \ the ADPr affinity change. Its footnote says N34A ADP binding is unchanged\n\
+    \        but marks that comparison data not shown, so it is not a separately observed\
+    \ graph edge.\n      cache_path: evidence/PF01661/karras-2005-macro.txt\n    \
+    \  cache_sha256: e7211f743652bf9b8f2d42abbee4974e793e785d09777c39d5e0ff90f3c1afc8\n\
+    \  - edge_id: y176l-decreases-adpr-affinity\n    subject: y176l-substitution\n\
+    \    predicate: decreases\n    object: measured-adpr-affinity\n    mechanism:\
+    \ Y176L raises the fitted ADPr dissociation constant to0.23+/-0.05 uM versus WT0.13+/-0.02\n\
+    \      uM. This modest fitted shift does not establish loss of function or a statistical\
+    \ significance test;\n      Y176 is outside current Pfam30-155.\n    directness:\
+    \ DIRECT\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n\
+    \    - reference: PMID:15902274\n      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC1142602/\n\
+    \      snippet: Equilibrium values for binding\n      explanation: TableII gives\
+    \ the Y176L comparison. Error definition and replicate count are not specified,\n\
+    \        and affinity is not converted into a cellular activity claim.\n     \
+    \ cache_path: evidence/PF01661/karras-2005-macro.txt\n      cache_sha256: e7211f743652bf9b8f2d42abbee4974e793e785d09777c39d5e0ff90f3c1afc8\n\
+    - graph_id: af1521-parp1-conjugate-retention\n  title: Immobilized Af1521 retains\
+    \ radiolabeled PARP1 conjugate\n  scope: Nitrocellulose-bound Af1521 challenged\
+    \ with poly-ADP-ribosylated bovine PARP1, Karras2005 Figure7;\n    not free-PAR\
+    \ cleavage or a living-cell recruitment assay.\n  context: Af1521 at20/200 pmol;\
+    \ BSA and lysozyme at200/400 pmol. Labeled conjugate generated using0.4\n    U\
+    \ bovinePARP1,6 ug/ml activated calf-thymus DNA,150 uM NAD plus32P tracer,1 h25\
+    \ C in25 mM Tris pH8,10\n    mM MgCl2,0.1 M NaCl,0.5 mM DTT. Dilute inTBS-T, bind1\
+    \ h25 C and wash extensively, including1 M NaCl.\n    Af1521 preparation refers\
+    \ to the His6-cleavage protocol; exact terminal scar unresolved.\n  family_mapping:\
+    \ A. fulgidus O28751 native reference192 aa, PF01661 30-155. Intact immobilized\
+    \ protein\n    includes flanking residues. The sequence mapping does not establish\
+    \ the isolated domain's affinity\n    or map this effect to an archaeal physiological\
+    \ ligand.\n  scope_status: MECHANISTIC\n  taxon: NCBITaxon:2234\n  limitations:\
+    \ Af1521 signal is strong at200 pmol and weak at20 pmol. No affinity constant\
+    \ or replicate\n    statistics are measured here. Loading stain is reported but\
+    \ not displayed; NAD-only and free-PAR controls\n    are data not shown. The displayed\
+    \ ligand contains PARP1 protein, so polymer-only specificity, end/internal\n \
+    \   recognition and enzymatic cleavage remain unresolved.\n  nodes:\n  - node_id:\
+    \ af1521-conjugate-incubation\n    label: Incubate immobilized Af1521 with radiolabeled\
+    \ PARP1 conjugate\n    node_type: PERTURBATION\n    grounding:\n    - UniProtKB:O28751\n\
+    \  - node_id: retained-parp1-label\n    label: Membrane-retained conjugate-associated\
+    \ radiolabel after washing\n    node_type: STATE\n  edges:\n  - edge_id: af1521-enables-parp1-conjugate-retention\n\
+    \    subject: af1521-conjugate-incubation\n    predicate: enables\n    object:\
+    \ retained-parp1-label\n    mechanism: Af1521 retains labeled conjugate at200\
+    \ pmol under the same wash conditions where the BSA/lysozyme\n      controls retain\
+    \ little signal. This is an observed direct biochemical retention effect, not\
+    \ evidence\n      that binding activates Af1521, cleaves PAR or recruits it in\
+    \ vivo.\n    directness: DIRECT\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n\
+    \    evidence:\n    - reference: PMID:15902274\n      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC1142602/\n\
+    \      snippet: poly-ADP-ribosylated PARP1\n      explanation: Figure7 was visually\
+    \ inspected with its legend and PAR-binding Methods. Displayed conjugate\n   \
+    \     retention is distinguished from the two data-not-shown controls and from\
+    \ catalytic activity.\n      cache_path: evidence/PF01661/karras-2005-macro.txt\n\
+    \      cache_sha256: e7211f743652bf9b8f2d42abbee4974e793e785d09777c39d5e0ff90f3c1afc8\n\
+    - graph_id: gst-af1521-unwashed-parp10-label\n  title: GST-Af1521 reduces PARP10-associated\
+    \ label in the unwashed-NAD assay\n  scope: GST-AF1521 and GST-PARP10 catalytic\
+    \ domain818-1025, Jankevicius2013 Figure4d; distinct from the\n    washed-substrate\
+    \ MacroD2 assays and from Rosenthal2013.\n  context: GST-AF1521 expressed in E.\
+    \ coli Rosetta(DE3)pLysS,18 C18 h,200 uM IPTG,glutathione elution\n    with no\
+    \ stated GST cleavage. About30 pmol GST-PARP10 bound to10 ul beads, washed in50\
+    \ mM HEPES pH7.2,150\n    mM KCl,4 mM MgCl2,0.2 mM DTT,0.1% NP40, labeled with0.625\
+    \ uM32P-NAD15 min37 C. The GST-macrodomain\n    exception leaves NAD unwashed;\
+    \ add0.5 uM GST-AF1521 for15 min37 C.\n  family_mapping: GST-AF1521 is cited to\
+    \ Dani2009; native reference O28751 has192 aa and PF01661 30-155.\n    Complete\
+    \ fusion termini were not verified from the unavailable construct supplement.\
+    \ GST is outside\n    the native domain mapping; the 2005 cleaved preparation\
+    \ is not substituted for this tagged construct.\n  scope_status: PHENOTYPIC\n\
+    \  taxon: NCBITaxon:2234\n  limitations: Figure4d shows roughly75%32P-signal removal\
+    \ relative to buffer, without specified n or\n    error bars. Continuing automodification,\
+    \ NAD turnover and tag effects are not separately resolved.\n    The Af1521-specific\
+    \ released product and modified residue/bond are not identified by MS or isotope\n\
+    \    tracing here. Human MacroD2 chemical-product and catalytic-water results\
+    \ cannot be transferred to\n    Af1521.\n  nodes:\n  - node_id: gst-af1521-unwashed-substrate\n\
+    \    label: Add GST-AF1521 to labeled GST-PARP10 with free NAD left present\n\
+    \    node_type: PERTURBATION\n    grounding:\n    - UniProtKB:O28751\n  - node_id:\
+    \ parp10-associated-label\n    label: PARP10-associated32P signal relative to\
+    \ buffer control\n    node_type: STATE\n  edges:\n  - edge_id: gst-af1521-decreases-parp10-label\n\
+    \    subject: gst-af1521-unwashed-substrate\n    predicate: decreases\n    object:\
+    \ parp10-associated-label\n    mechanism: Adding GST-AF1521 decreases protein-associated\
+    \ radiolabel in the Figure4d comparison. The\n      shared GST assay explicitly\
+    \ omits free-NAD removal, so the endpoint supports an observed effect\n      while\
+    \ its direct chemical mechanism remains unresolved in this experiment.\n    directness:\
+    \ UNRESOLVED\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n\
+    \    - reference: PMID:23474712\n      source_url: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC7097781/fullTextXML\n\
+    \      snippet: normalized to buffer control\n      explanation: Figure4d and\
+    \ supplement page19 were visually inspected. The GST-macrodomain-specific\n  \
+    \      no-wash exception, not the default washed MacroD2 procedure, applies to\
+    \ GST-AF1521.\n      cache_path: evidence/PF01661/jankevicius-2013-af1521.txt\n\
+    \      cache_sha256: 62c684d9fedd80870e3e6e5414e30a0c7c49001250acfba0e06a971856b18e88\n\
+    - graph_id: af1521-filtered-parp10-demodification\n  title: Af1521 reduces PARP10\
+    \ modification after free-NAD filtration\n  scope: Af1521 treatment of mono-ADP-ribosylated\
+    \ ARTD10/PARP10 catalytic domain818-1025, Rosenthal2013\n    Supplementary Figure1c\
+    \ and main Figure1b; not the G888W panel of main Figure1a.\n  context: Common\
+    \ procedure labels50 pmol GST-ARTD10 using100 nM32P-NAD15 min30 C,10 mM potassium\
+    \ phosphate\n    pH7.2,10 mM MgCl2,1.25 mM DTT and protease inhibitors, then G50\
+    \ filtration removes free NAD. The15\n    min30 C treatment procedure explicitly\
+    \ specifies10 pmol MacroD2; the Af1521-specific dose is not enumerated.\n    Macrodomains\
+    \ derive from pET28-GST/E. coli BL21/Ni Sepharose; only MacroD2 tag cleavage is\
+    \ explicit.\n  family_mapping: Af1521 native reference O28751 is192 aa with PF01661\
+    \ 30-155. Exact vector termini and\n    Af1521 tag state are unresolved, so neither\
+    \ a tag-free construct nor a sequence match for every assay\n    preparation is\
+    \ asserted. The PF01661 interval is a mapping, not a construct deletion boundary.\n\
+    \  scope_status: MECHANISTIC\n  taxon: NCBITaxon:2234\n  limitations: Supplementary\
+    \ Figure1c includes retained Coomassie substrate bands and a lower Af1521 radiolabel\n\
+    \    band. Main Figure1b leaves roughly45% modification, n=2,mean+/-range, not\
+    \ complete removal. No Af1521-specific\n    free-product MS, acceptor-residue\
+    \ identity, exact bond assignment or resolved catalytic intermediate\n    is shown.\
+    \ Human MacroD1/D2 PAR-negative assays and MacroD2 LC-MS/cellular results are\
+    \ not Af1521 results.\n  nodes:\n  - node_id: af1521-filtered-substrate-incubation\n\
+    \    label: Add Af1521 to labeled PARP10 after G50 removal of free NAD\n    node_type:\
+    \ PERTURBATION\n    grounding:\n    - UniProtKB:O28751\n  - node_id: parp10-modification-signal\n\
+    \    label: PARP10-associated modification signal with substrate protein retained\n\
+    \    node_type: STATE\n  edges:\n  - edge_id: af1521-decreases-filtered-parp10-modification\n\
+    \    subject: af1521-filtered-substrate-incubation\n    predicate: decreases\n\
+    \    object: parp10-modification-signal\n    mechanism: Af1521 treatment lowers\
+    \ PARP10-linked radiolabel relative to untreated substrate while\n      Coomassie\
+    \ retains the substrate band. With free NAD removed before treatment, this supports\
+    \ direct\n      demodification in the purified assay, without upgrading the readout\
+    \ to Af1521-specific chemical-product\n      identification or a complete hydrolytic\
+    \ mechanism.\n    directness: DIRECT\n    support: OBSERVED\n    evidence_kind:\
+    \ EXPERIMENTAL\n    evidence:\n    - reference: PMID:23474714\n      source_url:\
+    \ https://www.nature.com/articles/nsmb.2521\n      snippet: Af1521 was also active\n\
+    \      explanation: Main Figure1b and Supplementary Figure1c/caption were visually\
+    \ inspected with Online\n        Methods. The supplement resolves the Af substrate\
+    \ domain and shows protein loading; assay dose\n        and exact construct tags\
+    \ remain qualified.\n      cache_path: evidence/PF01661/rosenthal-2013-af1521.txt\n\
+    \      cache_sha256: 007c36dcf3f95b5ac657d1bc88621174d7dcdf0e0921edc0b175167dd153319e\n\
+    curation_events:\n- timestamp: '2026-10-11T12:52:53Z'\n  curator: Codex\n  action:\
+    \ CREATE\n  outcome: changed\n  summary: Curate Af1521 binding, coupled-product\
+    \ and separate demodification graphs\n  history_record: history/records/PF01661/2026-10-11T125253Z-codex-da04a7.yaml\n\
+    \  event_index: 0\n  llm_assisted: true\n- timestamp: '2026-10-11T13:00:33Z'\n\
+    \  curator: Codex\n  action: REVIEW\n  outcome: needs_followup\n  summary: Retain\
+    \ scoped scientific self-review of Af1521 causal graphs\n  history_record: history/records/PF01661/2026-10-11T130033Z-codex-8b2f90.yaml\n\
+    \  event_index: 0\n  llm_assisted: true\n- timestamp: '2026-10-18T02:54:46Z'\n\
+    \  curator: Antigravity\n  action: EDIT\n  outcome: changed\n  summary: Ground\
+    \ causal graph gene and protein nodes in PF01661 with verified UniProtKB accessions\
+    \ (UniProtKB:O28751)\n  history_record: history/records/PF01661/2026-10-18T025446Z-antigravity-6e72a4.yaml\n\
+    \  event_index: 0\n  llm_assisted: true\n- timestamp: '2026-10-25T11:15:00Z'\n\
+    \  curator: Antigravity\n  action: EDIT\n  outcome: changed\n  summary: Ground\
+    \ PF01661 causal-graph protein/gene/complex nodes with UniProtKB:O28751\n  history_record:\
+    \ history/records/PF01661/2026-10-25T111500Z-antigravity-28d740.yaml\n  event_index:\
+    \ 0\n  llm_assisted: true\n"
+  summary: Byte-exact projection retained at save for digest verification, not scientific
+    assessment.
+assessments:
+- assessment_id: member-identity
+  area: identity
+  topic: Protein, domain and experimental scope
+  outcome: supported
+  summary: O28751 sequenceversion2 is192aa and exactly matches current InterPro and
+    canonical PDB2BFQ entity1. PF01661 spans30-155; N34 is inside, D20 and Y176 outside.
+    Structural deposited FME1 is not assigned to every functional preparation. UniProt
+    VC-16 taxon224325 is reference grounding rather than a verified experimental stock;
+    structural source is species-level taxon2234. Karras cleavedHis6, Jankevicius
+    GST and Rosenthal pET28-GST-derived preparations remain distinct, with exact vector
+    termini, some tag states and the latter Af1521 dose unresolved.
+  target_ids:
+  - PF01661
+  evidence_ids:
+  - identity
+  - primary
+  - jankevicius
+  - rosenthal
+- assessment_id: causal-scope
+  area: graph
+  topic: Directed effects and limits
+  outcome: supported
+  summary: Seven DIRECT and one UNRESOLVED edges are all OBSERVED with experimental
+    evidence. Joint CPDase/substrate/Af1521 and enzyme/ligand conditions preserve
+    necessary context. Binding substitutions are not called catalytic knockouts. Jankevicius
+    supplement explicitly leaves NAD in the GST assay, preventing a uniquely resolved
+    chemical interpretation of signal loss. Rosenthal removes NAD with G50 and shows
+    lower substrate-associated label with retained Coomassie protein bands, supporting
+    direct demodification without Af-specific product identification. The two protocols
+    remain separate, and neither human MacroD2 MS/isotope chemistry nor modeled water
+    activation is transferred to Af1521. PARP1-conjugate retention is not PAR cleavage
+    or cellular recruitment.
+  target_ids:
+  - PF01661
+  evidence_ids:
+  - primary
+  - native
+  - jankevicius
+  - rosenthal
+- assessment_id: remaining-coverage
+  area: completeness
+  topic: Remaining family coverage
+  outcome: concern
+  summary: Allen2003 complete construct Methods and Dani2009 construct supplement
+    were not retrieved; Rosenthal's Af-specific dose, tag processing and full termini
+    remain unresolved. Later alpha-NAD and engineered-Af1521 studies were identified
+    but not inspected sufficiently to curate. Other bacterial, archaeal and eukaryotic
+    PF01661 members still need independent assessment. Statistical details missing
+    in Karras and Jankevicius, chromatographic product assignment, undisplayed controls
+    and the text/table/panel discrepancies remain evidence limits, not negative biological
+    findings.
+  target_ids:
+  - PF01661
+  evidence_ids:
+  - primary
+- assessment_id: cycle3-partner-grounding-verification
+  area: representation
+  topic: Cycle 3 causal-graph and protein-node grounding verification
+  outcome: supported
+  summary: 'Cycle 3 Stage 3 (PR #357) grounded the Af1521 ADP-ribose binding state
+    node itc-adpr-bound-state (''ITC-detected saturable Af1521-ADP-ribose binding'')
+    to Archaeoglobus fulgidus Af1521 (UniProtKB:O28751). Stage 4 frozen-inventory
+    review verified all causal graphs and grounded nodes against primary evidence
+    caches.'
+  target_ids:
+  - PF01661
+  evidence_ids:
+  - stage4-prior-review
+findings:
+- finding_id: additional-contexts
+  issue_key: pf01661-causal-context-coverage
+  category: completeness
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Resolve Af1521 construct details and expand primary-evidence coverage
+  description: Retrieve Allen2003 and Dani2009 construct details and resolve the Rosenthal
+    Af1521 dose/tag context. Inspect PMID31599159 and doi10.1038/s41467-020-18981-w
+    before adopting later substrate or engineered-variant claims. Extend other members
+    only with their own accession/domain mapping and primary experiments. Preserve
+    the Pfam30-155 boundary, Karras discrepancies, GST unwashed-NAD exception, partial
+    label removal and distinction between Af1521 data and human MacroD2 chemistry
+    in successor curation.
+  target_ids:
+  - PF01661
+  field_paths:
+  - causal_graphs
+  evidence_ids:
+  - primary
+  - identity
+  - jankevicius
+  - rosenthal
+  owner_paths:
+  - repository: CultureBotAI/DUFMech
+    path: curation/families/PF01661.yaml
+    role: Human-owned scientific overlay
+  previous_occurrences:
+  - repository: CultureBotAI/DUFMech
+    review_id: 20261011T130027Z-pf01661-af1521-binding-and-demodification-contexts
+    finding_id: additional-contexts
+actions:
+- action_id: extend-contexts
+  description: Retrieve Allen2003 and Dani2009 construct details and resolve the Rosenthal
+    Af1521 dose/tag context. Inspect PMID31599159 and doi10.1038/s41467-020-18981-w
+    before adopting later substrate or engineered-variant claims. Extend other members
+    only with their own accession/domain mapping and primary experiments. Preserve
+    the Pfam30-155 boundary, Karras discrepancies, GST unwashed-NAD exception, partial
+    label removal and distinction between Af1521 data and human MacroD2 chemistry
+    in successor curation.
+  finding_ids:
+  - additional-contexts
+  target_ids:
+  - PF01661
+  ownership_note: Curate overlay and minimal evidence; append actual history, regenerate
+    and retain successor review.
+  acceptance_checks:
+  - Each added edge has member-specific primary evidence and explicit conditions.
+  - Unsupported transfers and conflicting or negative results remain visible.
+  - Native checks pass and a successor report states actual scope.
+limitations:
+- Karras Figures1,2,3,6,7; Jankevicius Figure4 and supplement pages19-20; Rosenthal
+  main Figure1/Methods and Supplementary Figure1/caption were visually inspected.
+  Karras Figure5 was downloaded but not visually assessed, Figure4 not downloaded.
+  No raw calorimetry refitting, independent densitometry, product identification or
+  experimental replication was performed. Construct-source access gaps and uninspected
+  later studies remain explicit.
+- Same-agent assessment, not independent expert review or experimental replication.
+- Partial family coverage; status remains IN_PROGRESS. No full-corpus completion,
+  publication or full publication-QC pass is claimed.
+notes:
+- Assessments were authored from inspected primary evidence. Native inspection supplied
+  provenance, not scientific conclusions.
+```
