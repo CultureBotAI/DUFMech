@@ -19,11 +19,10 @@ events:
   details: 'Resolved Cycle 2 Stage 4 finding pf01934-fhepta-native-cfu-uniprot-grounding-and-cleavage-nodes
     (#348) in curation/families/PF01934.yaml: (1) added UniProtKB:Q8EGZ7 alongside
     RefSeq:WP_164925653.1 on fhepta-fragment-native-cfu-2026 node fragment (Shewanella
-    oneidensis MR-1 FhepTA / SO_1520, PMID:41775996); (2) added protein_references
-    [RefSeq:WP_164925653.1, UniProtKB:Q8EGZ7] to fhepta-fragment-rna-redox-2026 node
-    cleavage (PMID:41775996); and (3) added protein_references [UniProtKB:Q8ECH6]
-    to so3166-modified-preparation-rnase-2020 node cleavage (Shewanella oneidensis
-    MR-1 HepT / SO_3166, PMID:33288749).'
+    oneidensis MR-1 FhepTA / SO_1440, PMID:41854079); (2) added grounding [RefSeq:WP_164925653.1,
+    UniProtKB:Q8EGZ7] to fhepta-fragment-rna-redox-2026 node cleavage (PMID:41854079);
+    and (3) added grounding [UniProtKB:Q8ECH6] to so3166-modified-preparation-rnase-2020
+    node cleavage (Shewanella oneidensis MR-1 HepT / SO_3166, PMID:33045733).'
   sections:
   - causal_graphs
 links:

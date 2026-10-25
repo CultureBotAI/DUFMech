@@ -18,13 +18,12 @@ events:
     AdoCbl-forming activity readout nodes in sepduo-inhibition-2004, sepduo-metal-additions-2004,
     and seeutt-metal-oxygen-2014
   details: 'Resolved Cycle 2 Stage 4 finding pf01923-sepduo-and-seeutt-assays-missing-protein-grounding
-    (#347) in curation/families/PF01923.yaml by adding protein_references to three
-    AdoCbl-forming enzymatic activity STATE readout nodes: sepduo-inhibition-2004
-    node activity -> [UniProtKB:Q8ZNR5] (Salmonella enterica subsp. enterica serovar
-    Typhimurium LT2 PduO, STM2050, PMID:15292184), sepduo-metal-additions-2004 node
-    activity -> [UniProtKB:Q8ZNR5] (PMID:15292184), and seeutt-metal-oxygen-2014 node
-    activity -> [UniProtKB:Q9ZFV4] (Salmonella enterica subsp. enterica serovar Typhimurium
-    LT2 EutT, STM2467, PMID:24667275).'
+    (#347) in curation/families/PF01923.yaml by adding grounding to three AdoCbl-forming
+    enzymatic activity STATE readout nodes: sepduo-inhibition-2004 node activity ->
+    [UniProtKB:Q8ZNR5] (Salmonella enterica subsp. enterica serovar Typhimurium LT2
+    PduO, STM2050, PMID:15547259), sepduo-metal-additions-2004 node activity -> [UniProtKB:Q8ZNR5]
+    (PMID:15547259), and seeutt-metal-oxygen-2014 node activity -> [UniProtKB:Q9ZFV4]
+    (Salmonella enterica subsp. enterica serovar Typhimurium LT2 EutT, STM2467, PMID:24336938).'
   sections:
   - causal_graphs
 links:
