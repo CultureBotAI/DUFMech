@@ -1,0 +1,30 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01982
+  path: curation/families/PF01982.yaml
+session:
+  id: 2026-10-25T052920Z-antigravity-557286
+  timestamp: '2026-10-25T05:29:20Z'
+  actors:
+  - type: ai_agent
+    name: Antigravity
+    model: Claude Opus 4.6
+    agent_tool: Antigravity
+events:
+- type: EDIT
+  outcome: changed
+  summary: Ground Pyrobaculum sp. WP30 pyRbkR (GenBank:AKT35049.1) flavin-binding
+    and temperature-response assay readout nodes and Metallosphaera yellowstonensis
+    MK1 myRbkR (UniProtKB:H2C8H2) DNA-binding FP nodes
+  details: 'Resolved Cycle 2 Stage 4 finding pf01982-pyrbkr-effectors-and-temperature-grounding
+    (#349) in curation/families/PF01982.yaml (PMID:28073944): (1) grounded pyrbkr-flavin-binding-2017
+    node fp and pyrbkr-temperature-response-2017 node activity to [GenBank:AKT35049.1]
+    (Pyrobaculum sp. WP30 pyRbkR, NCBITaxon:1227555); and (2) grounded myrbkr-effector-binding-2017
+    nodes ribb and ribt to [UniProtKB:H2C8H2] (Metallosphaera yellowstonensis MK1
+    myRbkR, EHP68448.1, NCBITaxon:671065).'
+  sections:
+  - causal_graphs
+links:
+  issues:
+  - https://github.com/CultureBotAI/DUFMech/issues/349

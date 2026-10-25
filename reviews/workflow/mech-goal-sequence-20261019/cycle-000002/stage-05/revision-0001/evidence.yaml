@@ -1,0 +1,79 @@
+schema_version: 1.0.0
+repository_key: dufmech
+github_repository: CultureBotAI/DUFMech
+run_id: mech-goal-sequence-20261019
+cycle: 2
+stage: 5
+revision: 1
+outcome: completed
+summary: Consumed the accepted Cycle 2 Stage 4 review outputs and all 3 carried-forward findings in DUFMech, grouped them into 3 root-cause remediation groups, deduplicated against all open and closed GitHub issues, created Issues #347, #348, and #349, remediated curation/families/PF01923.yaml, PF01934.yaml, and PF01982.yaml with canonical EDIT history and native projection/inventory/export regeneration, and verified each resolution with fresh successor structured reviews (20261025T053500Z-pf01923-c2s5-remediation-review, 20261025T053505Z-pf01934-c2s5-remediation-review, 20261025T053510Z-pf01982-c2s5-remediation-review) while preserving all original Stage 4 reports byte-identically.
+source_revision: 94285b171cacde11f6d619d44947c482b347a97d
+scope_frozen_at: '2026-10-25T05:35:10Z'
+previous_evidence:
+  path: reviews/workflow/mech-goal-sequence-20261019/cycle-000002/stage-04/revision-0001/evidence.yaml
+  sha256: 0eb8fd18d5a1b37bee49c122658abd090f7c204c113dba44ed7fe0cd2b0ae863
+artifacts:
+- path: reviews/workflow/mech-goal-sequence-20261019/cycle-000002/stage-05/revision-0001/issue_map.md
+  sha256: f3a837c3fc280ca73e73f74ae82edb4b1ef4f857dd78b83197621dd231915cca
+  kind: issue_map
+- path: reviews/workflow/mech-goal-sequence-20261019/cycle-000002/stage-05/revision-0001/validation.md
+  sha256: 15c45c66daecbe99bff9d03d950f68672c61fb701250941d42fd276fcb5229dc
+  kind: validation
+- path: reviews/workflow/mech-goal-sequence-20261019/cycle-000002/stage-05/revision-0001/remediation_coverage.json
+  sha256: 83d4d64ce9ee20869e60dd080df32ac50be256eab299827fa64b7ae391bf842e
+  kind: supporting
+findings:
+- finding_id: pf01923-sepduo-and-seeutt-assays-missing-protein-grounding
+  status: resolved
+  summary: Grounded activity in sepduo-inhibition-2004 and sepduo-metal-additions-2004 to UniProtKB:Q8ZNR5 (STM2050) and activity in seeutt-metal-oxygen-2014 to UniProtKB:Q9ZFV4 (STM2467) in curation/families/PF01923.yaml, appended canonical EDIT history, regenerated data/families/PF01923.yaml, and verified in successor structured review 20261025T053500Z-pf01923-c2s5-remediation-review.
+  carried_from: pf01923-sepduo-and-seeutt-assays-missing-protein-grounding
+  group_id: pf01923-sepduo-seeutt-activity-grounding-remediation
+  issue_url: https://github.com/CultureBotAI/DUFMech/issues/347
+  disposition: Resolved in Issue #347 via native overlay curation, canonical EDIT history, projection regeneration, and fresh successor structured review.
+- finding_id: pf01934-fhepta-native-cfu-uniprot-grounding-and-cleavage-nodes
+  status: resolved
+  summary: Added paired UniProtKB:Q8EGZ7 grounding to fragment in fhepta-fragment-native-cfu-2026, grounded cleavage in fhepta-fragment-rna-redox-2026 to [RefSeq:WP_164925653.1, UniProtKB:Q8EGZ7], and grounded cleavage in so3166-modified-preparation-rnase-2020 to [UniProtKB:Q8ECH6] in curation/families/PF01934.yaml, appended canonical EDIT history, regenerated data/families/PF01934.yaml, and verified in successor structured review 20261025T053505Z-pf01934-c2s5-remediation-review.
+  carried_from: pf01934-fhepta-native-cfu-uniprot-grounding-and-cleavage-nodes
+  group_id: pf01934-fhepta-and-hept-cleavage-grounding-remediation
+  issue_url: https://github.com/CultureBotAI/DUFMech/issues/348
+  disposition: Resolved in Issue #348 via native overlay curation, canonical EDIT history, projection regeneration, and fresh successor structured review.
+- finding_id: pf01982-pyrbkr-effectors-and-temperature-grounding
+  status: resolved
+  summary: Grounded fp in pyrbkr-flavin-binding-2017 and activity in pyrbkr-temperature-response-2017 to GenBank:AKT35049.1, and grounded ribb and ribt in myrbkr-effector-binding-2017 to UniProtKB:H2C8H2 in curation/families/PF01982.yaml, appended canonical EDIT history, regenerated data/families/PF01982.yaml, and verified in successor structured review 20261025T053510Z-pf01982-c2s5-remediation-review.
+  carried_from: pf01982-pyrbkr-effectors-and-temperature-grounding
+  group_id: pf01982-pyrbkr-and-myrbkr-readout-grounding-remediation
+  issue_url: https://github.com/CultureBotAI/DUFMech/issues/349
+  disposition: Resolved in Issue #349 via native overlay curation, canonical EDIT history, projection regeneration, and fresh successor structured review.
+groups:
+- group_id: pf01923-sepduo-seeutt-activity-grounding-remediation
+  status: resolved
+  summary: Remediated missing UniProtKB:Q8ZNR5 (PduO) and UniProtKB:Q9ZFV4 (EutT) grounding on AdoCbl-forming activity STATE nodes in sepduo-inhibition-2004, sepduo-metal-additions-2004, and seeutt-metal-oxygen-2014 in PF01923 (Issue #347) and verified via native projection regeneration and successor structured review 20261025T053500Z-pf01923-c2s5-remediation-review.
+  issue_url: https://github.com/CultureBotAI/DUFMech/issues/347
+  finding_ids:
+  - pf01923-sepduo-and-seeutt-assays-missing-protein-grounding
+  resolution_evidence:
+  - reviews/workflow/mech-goal-sequence-20261019/cycle-000002/stage-05/revision-0001/issue_map.md
+  - reviews/workflow/mech-goal-sequence-20261019/cycle-000002/stage-05/revision-0001/validation.md
+  - reviews/workflow/mech-goal-sequence-20261019/cycle-000002/stage-05/revision-0001/remediation_coverage.json
+- group_id: pf01934-fhepta-and-hept-cleavage-grounding-remediation
+  status: resolved
+  summary: Remediated missing paired UniProtKB:Q8EGZ7 grounding on fragment in fhepta-fragment-native-cfu-2026 and missing protein grounding on RNA cleavage ACTIVITY nodes in fhepta-fragment-rna-redox-2026 and so3166-modified-preparation-rnase-2020 in PF01934 (Issue #348) and verified via native projection regeneration and successor structured review 20261025T053505Z-pf01934-c2s5-remediation-review.
+  issue_url: https://github.com/CultureBotAI/DUFMech/issues/348
+  finding_ids:
+  - pf01934-fhepta-native-cfu-uniprot-grounding-and-cleavage-nodes
+  resolution_evidence:
+  - reviews/workflow/mech-goal-sequence-20261019/cycle-000002/stage-05/revision-0001/issue_map.md
+  - reviews/workflow/mech-goal-sequence-20261019/cycle-000002/stage-05/revision-0001/validation.md
+  - reviews/workflow/mech-goal-sequence-20261019/cycle-000002/stage-05/revision-0001/remediation_coverage.json
+- group_id: pf01982-pyrbkr-and-myrbkr-readout-grounding-remediation
+  status: resolved
+  summary: Remediated missing GenBank:AKT35049.1 grounding on pyRbkR assay readout nodes in pyrbkr-flavin-binding-2017 and pyrbkr-temperature-response-2017 and missing UniProtKB:H2C8H2 grounding on myRbkR DNA-binding FP readout nodes in myrbkr-effector-binding-2017 in PF01982 (Issue #349) and verified via native projection regeneration and successor structured review 20261025T053510Z-pf01982-c2s5-remediation-review.
+  issue_url: https://github.com/CultureBotAI/DUFMech/issues/349
+  finding_ids:
+  - pf01982-pyrbkr-effectors-and-temperature-grounding
+  resolution_evidence:
+  - reviews/workflow/mech-goal-sequence-20261019/cycle-000002/stage-05/revision-0001/issue_map.md
+  - reviews/workflow/mech-goal-sequence-20261019/cycle-000002/stage-05/revision-0001/validation.md
+  - reviews/workflow/mech-goal-sequence-20261019/cycle-000002/stage-05/revision-0001/remediation_coverage.json
+carry_forward_ids: []
+infra_tasks: []

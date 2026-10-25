@@ -661,9 +661,13 @@ causal_graphs:
   - node_id: ribb
     label: myRbkR ribB-binding-associated FP
     node_type: PHENOTYPE
+    grounding:
+    - UniProtKB:H2C8H2
   - node_id: ribt
     label: myRbkR ribT-binding-associated FP
     node_type: PHENOTYPE
+    grounding:
+    - UniProtKB:H2C8H2
   edges:
   - edge_id: ctp-enhances-ribb-binding
     subject: ctp
@@ -750,6 +754,8 @@ causal_graphs:
   - node_id: fp
     label: pyRbkR ribB-binding-associated FP
     node_type: PHENOTYPE
+    grounding:
+    - GenBank:AKT35049.1
   edges:
   - edge_id: fmn-reduces-binding-signal
     subject: fmn
@@ -805,6 +811,8 @@ causal_graphs:
   - node_id: activity
     label: Relative FMN-producing activity in the temperature series
     node_type: ACTIVITY
+    grounding:
+    - GenBank:AKT35049.1
   edges:
   - edge_id: warming-increases-activity
     subject: warming
@@ -1123,5 +1131,15 @@ curation_events:
   summary: Ground RibK and RbkR kinase activity, DNA-complex, and catalytic-cycle state nodes across eight
     PF01982 causal graphs
   history_record: history/records/PF01982/2026-10-23T074816Z-antigravity-198203.yaml
+  event_index: 0
+  llm_assisted: true
+- timestamp: '2026-10-25T05:29:20Z'
+  curator: Antigravity
+  action: EDIT
+  outcome: changed
+  summary: Ground Pyrobaculum sp. WP30 pyRbkR (GenBank:AKT35049.1) flavin-binding and temperature-response
+    assay readout nodes and Metallosphaera yellowstonensis MK1 myRbkR (UniProtKB:H2C8H2) DNA-binding FP
+    nodes
+  history_record: history/records/PF01982/2026-10-25T052920Z-antigravity-557286.yaml
   event_index: 0
   llm_assisted: true

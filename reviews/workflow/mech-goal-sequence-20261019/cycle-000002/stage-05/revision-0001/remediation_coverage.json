@@ -1,0 +1,59 @@
+{
+  "run_id": "mech-goal-sequence-20261019",
+  "cycle": 2,
+  "stage": 5,
+  "stage_key": "resolve_review_findings",
+  "source_revision": "94285b171cacde11f6d619d44947c482b347a97d",
+  "previous_evidence_path": "reviews/workflow/mech-goal-sequence-20261019/cycle-000002/stage-04/revision-0001/evidence.yaml",
+  "previous_evidence_sha256": "0eb8fd18d5a1b37bee49c122658abd090f7c204c113dba44ed7fe0cd2b0ae863",
+  "carried_forward_findings_count": 3,
+  "resolved_findings_count": 3,
+  "remaining_carry_forward_ids": [],
+  "groups": [
+    {
+      "group_id": "pf01923-sepduo-seeutt-activity-grounding-remediation",
+      "finding_ids": [
+        "pf01923-sepduo-and-seeutt-assays-missing-protein-grounding"
+      ],
+      "issue_number": 347,
+      "issue_url": "https://github.com/CultureBotAI/DUFMech/issues/347",
+      "status": "resolved",
+      "overlay_path": "curation/families/PF01923.yaml",
+      "projection_path": "data/families/PF01923.yaml",
+      "history_path": "history/records/PF01923/2026-10-25T052900Z-antigravity-674c5b.yaml",
+      "predecessor_review_id": "20261023T092550Z-pf01923-c2s4-record-review",
+      "successor_review_id": "20261025T053500Z-pf01923-c2s5-remediation-review",
+      "successor_review_path": "reviews/structured/20261025T053500Z-pf01923-c2s5-remediation-review/review.yaml"
+    },
+    {
+      "group_id": "pf01934-fhepta-and-hept-cleavage-grounding-remediation",
+      "finding_ids": [
+        "pf01934-fhepta-native-cfu-uniprot-grounding-and-cleavage-nodes"
+      ],
+      "issue_number": 348,
+      "issue_url": "https://github.com/CultureBotAI/DUFMech/issues/348",
+      "status": "resolved",
+      "overlay_path": "curation/families/PF01934.yaml",
+      "projection_path": "data/families/PF01934.yaml",
+      "history_path": "history/records/PF01934/2026-10-25T052910Z-antigravity-75b3fc.yaml",
+      "predecessor_review_id": "20261023T092556Z-pf01934-c2s4-record-review",
+      "successor_review_id": "20261025T053505Z-pf01934-c2s5-remediation-review",
+      "successor_review_path": "reviews/structured/20261025T053505Z-pf01934-c2s5-remediation-review/review.yaml"
+    },
+    {
+      "group_id": "pf01982-pyrbkr-and-myrbkr-readout-grounding-remediation",
+      "finding_ids": [
+        "pf01982-pyrbkr-effectors-and-temperature-grounding"
+      ],
+      "issue_number": 349,
+      "issue_url": "https://github.com/CultureBotAI/DUFMech/issues/349",
+      "status": "resolved",
+      "overlay_path": "curation/families/PF01982.yaml",
+      "projection_path": "data/families/PF01982.yaml",
+      "history_path": "history/records/PF01982/2026-10-25T052920Z-antigravity-557286.yaml",
+      "predecessor_review_id": "20261023T092608Z-pf01982-c2s4-record-review",
+      "successor_review_id": "20261025T053510Z-pf01982-c2s5-remediation-review",
+      "successor_review_path": "reviews/structured/20261025T053510Z-pf01982-c2s5-remediation-review/review.yaml"
+    }
+  ]
+}
