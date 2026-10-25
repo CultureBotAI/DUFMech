@@ -14,14 +14,18 @@ session:
 events:
 - type: EDIT
   outcome: changed
-  summary: Ground PF01870 phosphorylated Hjc protein radiolabel nodes with UniProtKB:F0NID3
-  details: Grounded phosphorylated Hjc protein readout nodes label-0171, label-2030,
-    and label-2056kd in graph sire-mutation-dependent-phosphorylation-readouts with
-    UniProtKB:F0NID3 (Sulfolobus islandicus REY15A Hjc, locus SiRe_1431, 143 aa, NCBITaxon:930945,
-    PF01870 envelope 2-127, PMID:29967286).
+  summary: Ground PF01870 causal-graph protein/gene/complex nodes with UniProtKB:F0NID3
+  details: 'In graph sire-mutation-dependent-phosphorylation-readouts (taxon NCBITaxon:930945; references
+    PMID:31214148), grounded label-0171 (STATE: Hjc radiolabel signal with SiRe_0171) with UniProtKB:F0NID3;
+    grounded label-2030 (STATE: Hjc radiolabel signal with SiRe_2030) with UniProtKB:F0NID3; grounded
+    label-2056kd (STATE: Hjc radiolabel signal with SiRe_2056KD) with UniProtKB:F0NID3. Family mapping:
+    SiRe_1431,F0NID3 sequence version1,143 aa,equals WP_012711550.1; PF01870 4-134. S9/S34 are inside;
+    T138 is outside PF01870. Untagged pET15bM preparation; supplementary primers not verified.'
   sections:
   - causal_graphs
 links:
+  issues:
+  - https://github.com/CultureBotAI/DUFMech/issues/358
   urls:
   - https://rest.uniprot.org/uniprotkb/F0NID3.json
-  - https://pubmed.ncbi.nlm.nih.gov/29967286/
+  - https://pubmed.ncbi.nlm.nih.gov/31214148/

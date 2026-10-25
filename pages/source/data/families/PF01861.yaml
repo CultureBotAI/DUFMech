@@ -290,13 +290,9 @@ causal_graphs:
   - node_id: spermidine-kcat
     label: Fitted spermidine-assay turnover number
     node_type: ACTIVITY
-    grounding:
-    - UniProtKB:Q5JIZ3
   - node_id: spermidine-efficiency
     label: Fitted spermidine-assay catalytic efficiency
     node_type: ACTIVITY
-    grounding:
-    - UniProtKB:Q5JIZ3
   edges:
   - edge_id: quadruple-decreases-kcat
     subject: terminal-quadruple-preparation
@@ -356,8 +352,6 @@ causal_graphs:
   - node_id: branched-norspermidine-efficiency
     label: Catalytic efficiency with N4-aminopropylnorspermidine
     node_type: ACTIVITY
-    grounding:
-    - UniProtKB:Q72L89
   edges:
   - edge_id: c9-decreases-branched-norspermidine-efficiency
     subject: replace-tth-terminal-segment
@@ -649,7 +643,8 @@ curation_events:
   curator: Antigravity
   action: EDIT
   outcome: changed
-  summary: Ground PF01861 Tk-BpsA modified C-terminal peptide state node with UniProtKB:Q5JIZ3
+  summary: Ground PF01861 Tk-BpsA terminal peptide state node and remove grounding from fitted kinetic-constant
+    nodes
   history_record: history/records/PF01861/2026-10-25T111500Z-antigravity-361ab1.yaml
   event_index: 0
   llm_assisted: true

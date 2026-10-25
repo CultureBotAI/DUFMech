@@ -14,14 +14,17 @@ session:
 events:
 - type: EDIT
   outcome: changed
-  summary: Ground PF01638 shifted HxlR-DNA complex state node with UniProtKB:P42406
-  details: Grounded protein-DNA complex state node shifted-brh-dna in graph hxlr-wt-c11a-dna-binding-response
-    with UniProtKB:P42406 (Bacillus subtilis subsp. subtilis str. 168 HxlR, locus
-    BSU03470, 117 aa, NCBITaxon:224308, PF01638 envelope 21-106, PMID:30979803), representing
-    the shifted HxlR-BRH DNA complex.
+  summary: Ground PF01638 causal-graph protein/gene/complex nodes with UniProtKB:P42406
+  details: 'In graph hxlr-wt-c11a-dna-binding-response (taxon NCBITaxon:224308; references PMID:33495458),
+    grounded shifted-brh-dna (STATE: BRH DNA in the shifted HxlR-DNA complex) with UniProtKB:P42406. Family
+    mapping: P42406 / B. subtilis 168 reference 1-120 contains PF01638 19-107; C11 is outside that interval.
+    The N-terminal His tag is thrombin-cleaved, with GSH retained in the sequence-verified structural
+    preparation. Neither C11A nor WT is an isolated Pfam-domain construct.'
   sections:
   - causal_graphs
 links:
+  issues:
+  - https://github.com/CultureBotAI/DUFMech/issues/358
   urls:
   - https://rest.uniprot.org/uniprotkb/P42406.json
-  - https://pubmed.ncbi.nlm.nih.gov/30979803/
+  - https://pubmed.ncbi.nlm.nih.gov/33495458/

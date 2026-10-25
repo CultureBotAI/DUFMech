@@ -14,27 +14,49 @@ session:
 events:
 - type: EDIT
   outcome: changed
-  summary: Ground PF01973 AMB-1 Maf, CN-32 GlfM, and Kurthia Maf/GlfM nodes with verified
-    UniProtKB and NCBIProtein accessions
-  details: Grounded node proposed_donor_binding (graph amb0685-proposed-residue-roles-2018)
-    with UniProtKB:Q2W9I6 (Paramagnetospirillum magneticum AMB-1 Maf, locus amb0685,
-    666 aa, NCBITaxon:342108, PF01973 259-419, PMID:29076618); grounded cn32_partner
-    (graph mr1-cn32-glfm-rescue-2024) and updated cross_system (graph mr1-cn32-glfm-caulo-2024)
-    with Shewanella putrefaciens CN-32 GlfM NCBIProtein:WP_011919637.1 (97 aa) alongside
-    S. oneidensis MR-1 Maf2 UniProtKB:Q8EC85 (and FlaB UniProtKB:Q8ECA6 in cross_system);
-    and grounded triad_wt, triad_maf_null (graph kurthia-glfm-mr1-2024) and glfm_cassette
-    (graph kurthia-glfm-caulo-2024) with Kurthia sp. 11kri321 Maf NCBIProtein:WP_068455574.1
-    (548 aa, PF01973 159-329) and GlfM NCBIProtein:WP_068455571.1 (117 aa), verified
-    against Table S6 row 5 (PMID:38897200). Left host donor-pathway deletion nodes
-    (pseI, psec, neuB) and Irchel pJU0005 nodes (lacking Table S6 sequence verification)
-    ungrounded.
+  summary: Ground PF01973 causal-graph protein/gene/complex nodes with UniProtKB:Q2W9I6, NCBIProtein:WP_011919637.1,
+    UniProtKB:Q8EC85, UniProtKB:Q8ECA6, NCBIProtein:WP_068455574.1, NCBIProtein:WP_068455571.1
+  details: 'In graph amb0685-proposed-residue-roles-2018 (taxon NCBITaxon:342108; references PMID:29076618),
+    grounded proposed_donor_binding (STATE: Proposed accommodation of the donor nucleotide moiety) with
+    UniProtKB:Q2W9I6. Family mapping: Q2W9I6 E324/D415 both map within PF01973 259-419. Cst-II and its
+    residue roles are comparison-system evidence, not direct demonstrations for this family. In graph
+    mr1-cn32-glfm-rescue-2024 (references PMID:38897200), grounded cn32_partner (PERTURBATION: CN-32 GlfM
+    in MR-1 delta-glfM) with NCBIProtein:WP_011919637.1, UniProtKB:Q8EC85. Family mapping: Maf2 SO_3259/AAN56257.1
+    = UniProtKB:Q8EC85 sequence1, 441aa; PF01973 182-352. Native genomic and synthetic expression lineages
+    must be distinguished. S6 synthetic Maf2 encodes L230S relative to the reference; the physical plasmid
+    sequence is unresolved. See evidence/PF01973/unay-2024-member-mapping.txt. Partner WP_011919637.1
+    is a97-aa CN-32 GlfM according to TableS2/Methods, not a PF01973 protein. In graph mr1-cn32-glfm-caulo-2024
+    (references PMID:38897200), updated cross_system (PERTURBATION: CN-32 GlfM with MR-1 Maf2/FlaB in
+    Pse-positive host) grounding from UniProtKB:Q8EC85, UniProtKB:Q8ECA6 to UniProtKB:Q8EC85, UniProtKB:Q8ECA6,
+    NCBIProtein:WP_011919637.1. Family mapping: Maf2 SO_3259/AAN56257.1 = UniProtKB:Q8EC85 sequence1,
+    441aa; PF01973 182-352. Native genomic and synthetic expression lineages must be distinguished. S6
+    synthetic Maf2 encodes L230S relative to the reference; the physical plasmid sequence is unresolved.
+    See evidence/PF01973/unay-2024-member-mapping.txt. Acceptor Q8ECA6 and partner WP_011919637.1 are
+    distinct proteins; the latter is not a PF01973 carrier. In graph kurthia-glfm-mr1-2024 (references
+    PMID:38897200), grounded triad_wt (PERTURBATION: GlfM-containing Maf/Hag cassette in WT MR-1) with
+    NCBIProtein:WP_068455574.1, NCBIProtein:WP_068455571.1; grounded triad_maf_null (PERTURBATION: GlfM-containing
+    Maf/Hag cassette in host Maf-null MR-1) with NCBIProtein:WP_068455574.1, NCBIProtein:WP_068455571.1.
+    Family mapping: Kurthia sp. 11kri321 reference Maf WP_068455574.1 is 548 aa; exact PF01973.24 HMM
+    alignment 159-329 (envelope 159-330); 142.216 domain bits, passes 34.6-bit gathering cutoff. Its full
+    protein body and GlfM WP_068455571.1 match S6 row 5. This is computational domain mapping plus deposited-design
+    identity, not a sequenced physical plasmid or isolated-domain assay; see evidence/PF01973/unay-2024-ortholog-contexts.txt.
+    In graph kurthia-glfm-caulo-2024 (references PMID:38897200), grounded glfm_cassette (PERTURBATION:
+    GlfM included with Kurthia Maf/Hag in delta-flmG) with NCBIProtein:WP_068455574.1, NCBIProtein:WP_068455571.1.
+    Family mapping: Kurthia sp. 11kri321 reference Maf WP_068455574.1 is 548 aa; exact PF01973.24 HMM
+    alignment 159-329 (envelope 159-330); 142.216 domain bits, passes 34.6-bit gathering cutoff. Its full
+    protein body and GlfM WP_068455571.1 match S6 row 5. This is computational domain mapping plus deposited-design
+    identity, not a sequenced physical plasmid or isolated-domain assay; see evidence/PF01973/unay-2024-ortholog-contexts.txt.'
   sections:
   - causal_graphs
 links:
+  issues:
+  - https://github.com/CultureBotAI/DUFMech/issues/358
   urls:
   - https://rest.uniprot.org/uniprotkb/Q2W9I6.json
-  - https://rest.uniprot.org/uniprotkb/Q8EC85.json
   - https://www.ncbi.nlm.nih.gov/protein/WP_011919637.1
+  - https://rest.uniprot.org/uniprotkb/Q8EC85.json
+  - https://rest.uniprot.org/uniprotkb/Q8ECA6.json
   - https://www.ncbi.nlm.nih.gov/protein/WP_068455574.1
   - https://www.ncbi.nlm.nih.gov/protein/WP_068455571.1
+  - https://pubmed.ncbi.nlm.nih.gov/29076618/
   - https://pubmed.ncbi.nlm.nih.gov/38897200/

@@ -299,8 +299,7 @@ curation_events:
   curator: Antigravity
   action: EDIT
   outcome: changed
-  summary: Ground PF01174 YaaD-plus-YaaE partner-addition perturbation node with UniProtKB:P37527 and
-    UniProtKB:P37528
+  summary: Ground PF01174 causal-graph protein/gene/complex nodes with UniProtKB:P37527, UniProtKB:P37528
   history_record: history/records/PF01174/2026-10-25T111500Z-antigravity-701c9e.yaml
   event_index: 0
   llm_assisted: true

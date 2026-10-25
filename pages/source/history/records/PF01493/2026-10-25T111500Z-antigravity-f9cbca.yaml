@@ -14,15 +14,25 @@ session:
 events:
 - type: EDIT
   outcome: changed
-  summary: Ground PF01493 purified GltSHis protein-particle DLS state nodes with UniProtKB:Q05755
-  details: Grounded protein-oligomer particle state nodes gltshis-dls-radius (graph
-    azospirillum-glts-salt-radius) and post-dilution-gltshis-radius (graph azospirillum-glts-salt-dilution-radius)
-    with UniProtKB:Q05755 (Azospirillum brasilense Sp7 GltS beta subunit, 487 aa,
-    NCBITaxon:192, PF01493 envelope 156-204, PMID:12446646), representing the purified
-    C-terminally His6-tagged GltS protein particles.
+  summary: Ground PF01493 causal-graph protein/gene/complex nodes with UniProtKB:Q05755
+  details: 'In graph azospirillum-glts-salt-radius (taxon NCBITaxon:192; references PMID:18199747, https://www.ebi.ac.uk/interpro/api/protein/uniprot/Q05755/entry/pfam/PF01493/),
+    grounded gltshis-dls-radius (STATE: DLS-derived radius of the purified GltSHis particles) with UniProtKB:Q05755.
+    Family mapping: Alpha-subunit reference UniProtKB:Q05755 is 1515 aa, sequence version 1; PF01493 spans
+    1249-1496. UniProt and InterPro sequences agree. PDB 1EA0 polymer 1-1479 exactly matches reference
+    37-1515, establishing the mature-protein offset of 36 and a mature-domain interval of 1213-1460. The
+    tested complex retains the other alpha domains and beta partner. The reference sequence paper identifies
+    Sp7, but the complete 2008 clones and original donor strain were not independently reconstructed.
+    In graph azospirillum-glts-salt-dilution-radius (taxon NCBITaxon:192; references PMID:18199747), grounded
+    post-dilution-gltshis-radius (STATE: DLS-derived particle radius after dilution) with UniProtKB:Q05755.
+    Family mapping: Q05755 alpha contains PF01493 at precursor 1249-1496, corresponding to mature 1213-1460
+    after removal of residues 1-36. The exact deposited mature sequence matches the current reference.
+    This assay uses intact alpha/beta complexes with beta, not alpha, carrying the His6 extension.'
   sections:
   - causal_graphs
 links:
+  issues:
+  - https://github.com/CultureBotAI/DUFMech/issues/358
   urls:
   - https://rest.uniprot.org/uniprotkb/Q05755.json
-  - https://pubmed.ncbi.nlm.nih.gov/12446646/
+  - https://pubmed.ncbi.nlm.nih.gov/18199747/
+  - https://www.ebi.ac.uk/interpro/api/protein/uniprot/Q05755/entry/pfam/PF01493/
