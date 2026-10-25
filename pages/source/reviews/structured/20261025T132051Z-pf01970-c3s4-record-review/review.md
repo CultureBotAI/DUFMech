@@ -11,7 +11,7 @@
 
 ## Summary
 
-Partial same-agent scientific review of six graphs with sixteen observed cellular effects. E6 TctA and TpiA insertions, TpiA tracer rescue, substrate-dependent growth delays, joint heterologous conversion, whole-operon cation effects and regulator-dependent transcript abundance remain separate. No direct elementary transport mechanism or family-wide substrate claim is made. Cycle 3 Stage 3 (PR #357) grounded the TpiA joint-construct node (NCBIProtein:BAN66716.1) and five Corynebacterium glutamicum tctCBA/tctA nodes (operon-deletion-mg, operon-deletion-sr, operon-ca, operon-mg, and tcta-mrna to NCBIProtein:CAF20846.1). Stage 4 frozen-inventory review verified all causal graphs and grounded nodes against primary evidence caches.
+Partial same-agent scientific review of six graphs with sixteen observed cellular effects. E6 TctA and TpiA insertions, TpiA tracer rescue, substrate-dependent growth delays, joint heterologous conversion, whole-operon cation effects and regulator-dependent transcript abundance remain separate. No direct elementary transport mechanism or family-wide substrate claim is made. Cycle 3 Stage 3 (PR #357) grounded the TpiA joint-construct node (NCBIProtein:BAN66716.1) and five Corynebacterium glutamicum tctCBA/tctA nodes (operon-deletion-mg, operon-deletion-sr, operon-ca, operon-mg, and tcta-mrna to NCBIProtein:CAF20846.1; the upstream CitAB two-component regulator belongs to separate Pfam families). Stage 4 frozen-inventory review verified all causal graphs and grounded nodes against primary evidence caches.
 
 ## Scope And Provenance
 
@@ -56,7 +56,7 @@ Recover Hosaka supplementary figures and exact insertion/plasmid sequences, test
 
 representation: supported. Targets: PF01970.
 
-Cycle 3 Stage 3 (PR #357) grounded the TpiA joint-construct node (NCBIProtein:BAN66716.1) and five Corynebacterium glutamicum tctCBA/tctA nodes (operon-deletion-mg, operon-deletion-sr, operon-ca, operon-mg, and tcta-mrna to NCBIProtein:CAF20846.1). Stage 4 frozen-inventory review verified all causal graphs and grounded nodes against primary evidence caches.
+Cycle 3 Stage 3 (PR #357) grounded the TpiA joint-construct node (NCBIProtein:BAN66716.1) and five Corynebacterium glutamicum tctCBA/tctA nodes (operon-deletion-mg, operon-deletion-sr, operon-ca, operon-mg, and tcta-mrna to NCBIProtein:CAF20846.1; the upstream CitAB two-component regulator belongs to separate Pfam families). Stage 4 frozen-inventory review verified all causal graphs and grounded nodes against primary evidence caches.
 
 ## Findings
 
@@ -132,8 +132,9 @@ summary: 'Partial same-agent scientific review of six graphs with sixteen observ
   family-wide substrate claim is made. Cycle 3 Stage 3 (PR #357) grounded the TpiA
   joint-construct node (NCBIProtein:BAN66716.1) and five Corynebacterium glutamicum
   tctCBA/tctA nodes (operon-deletion-mg, operon-deletion-sr, operon-ca, operon-mg,
-  and tcta-mrna to NCBIProtein:CAF20846.1). Stage 4 frozen-inventory review verified
-  all causal graphs and grounded nodes against primary evidence caches.'
+  and tcta-mrna to NCBIProtein:CAF20846.1; the upstream CitAB two-component regulator
+  belongs to separate Pfam families). Stage 4 frozen-inventory review verified all
+  causal graphs and grounded nodes against primary evidence caches.'
 repository: CultureBotAI/DUFMech
 kind: record
 source:
@@ -706,7 +707,8 @@ assessments:
   outcome: supported
   summary: 'Cycle 3 Stage 3 (PR #357) grounded the TpiA joint-construct node (NCBIProtein:BAN66716.1)
     and five Corynebacterium glutamicum tctCBA/tctA nodes (operon-deletion-mg, operon-deletion-sr,
-    operon-ca, operon-mg, and tcta-mrna to NCBIProtein:CAF20846.1). Stage 4 frozen-inventory
+    operon-ca, operon-mg, and tcta-mrna to NCBIProtein:CAF20846.1; the upstream CitAB
+    two-component regulator belongs to separate Pfam families). Stage 4 frozen-inventory
     review verified all causal graphs and grounded nodes against primary evidence
     caches.'
   target_ids:

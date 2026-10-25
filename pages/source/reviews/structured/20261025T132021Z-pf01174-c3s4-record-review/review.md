@@ -11,7 +11,7 @@
 
 ## Summary
 
-Five MECHANISTIC graphs retain five DIRECT OBSERVED biochemical effects for partner-dependent glutaminase readout, joint PLP production, a ribulose/ammonium context and two separate acivicin readouts. Exact reference mapping, untagged versus tagged preparations, primary-source discrepancies and strain boundaries remain explicit. Partial scientific self-review; IN_PROGRESS. Cycle 3 Stage 3 (PR #357) grounded node add-yaad-to-yaae-glutamine in pdxt-untagged-partner-dependent-glutaminase to Bacillus subtilis 168 YaaD/PdxS and YaaE/PdxT (UniProtKB:P37527 and UniProtKB:P37528). Stage 4 frozen-inventory audit also identified an open grounding finding (pf01174-pdxst-partner-and-acivicin-nodes-missing-grounding) where joint-pdxst-glutamine-carbohydrate-reaction in pdxst-glutamine-dependent-plp-product omits partner UniProtKB:P37527 and acivicin-pretreat-plp-mixture in pdxst-acivicin-plp-signal-inhibition omits [UniProtKB:P37527, UniProtKB:P37528], preserved for Stage 5 grouped remediation.
+Five MECHANISTIC graphs retain five DIRECT OBSERVED biochemical effects for partner-dependent glutaminase readout, joint PLP production, a ribulose/ammonium context and two separate acivicin readouts. Exact reference mapping, untagged versus tagged preparations, primary-source discrepancies and strain boundaries remain explicit. Partial scientific self-review; IN_PROGRESS. Cycle 3 Stage 3 (PR #357) grounded node add-yaad-to-yaae-glutamine in pdxt-untagged-partner-dependent-glutaminase to Bacillus subtilis 168 YaaD/PdxS and YaaE/PdxT (UniProtKB:P37527 and UniProtKB:P37528). Stage 4 frozen-inventory audit also identified an open grounding finding (pf01174-pdxst-partner-and-acivicin-nodes-missing-grounding) across four graphs (pdxst-glutamine-dependent-plp-product node joint-pdxst-glutamine-carbohydrate-reaction, pdxt-ribulose-ammonium-dependent-synthase-readout node add-yaae-ribulose-ammonium, pdxt-acivicin-glutaminase-inhibition nodes acivicin-pretreat-glutaminase-mixture and acivicin-assay-glutaminase-readout, and pdxst-acivicin-plp-signal-inhibition nodes acivicin-pretreat-plp-mixture and residual-glutamine-plp-signal) where partner YaaD (UniProtKB:P37527) or joint [UniProtKB:P37527, UniProtKB:P37528] grounding is omitted, preserved for Stage 5 grouped remediation.
 
 ## Scope And Provenance
 
@@ -56,7 +56,7 @@ Glutamine concentration differs between kinetic captions and Methods/Results, in
 
 representation: concern. Targets: PF01174.
 
-In curation/families/PF01174.yaml, two causal graphs omit verified Bacillus subtilis 168 (NCBITaxon:224308) protein grounding that is explicitly established in their family_mapping and sibling graphs: (1) in pdxst-glutamine-dependent-plp-product (lines 47-79), node joint-pdxst-glutamine-carbohydrate-reaction ('Joint YaaD, YaaE, glutamine, ribose 5-phosphate and DHAP reaction', lines 56-60) is grounded only to [UniProtKB:P37528] and omits partner YaaD/PdxS (UniProtKB:P37527), whereas sibling graph pdxt-untagged-partner-dependent-glutaminase grounds add-yaad-to-yaae-glutamine to [UniProtKB:P37527, UniProtKB:P37528]; and (2) in pdxst-acivicin-plp-signal-inhibition (lines 146-176), node acivicin-pretreat-plp-mixture ('Expose the YaaD/YaaE synthesis mixture to increasing acivicin', lines 155-157) omits grounding: [UniProtKB:P37527, UniProtKB:P37528] even though family_mapping explicitly states 'Strain-168 YaaE is P37528-associated PdxT, PF01174 6-188. YaaD supplies the separate synthase activity. Both proteins remain in the treated assay mixture'.
+In curation/families/PF01174.yaml, four causal graphs omit verified Bacillus subtilis 168 (NCBITaxon:224308) YaaD/PdxS (UniProtKB:P37527) and/or YaaE/PdxT (UniProtKB:P37528) protein grounding that is explicitly established in their family_mapping and in sibling graph pdxt-untagged-partner-dependent-glutaminase (which grounds add-yaad-to-yaae-glutamine to [UniProtKB:P37527, UniProtKB:P37528]): (1) in pdxst-glutamine-dependent-plp-product (lines 47-79), node joint-pdxst-glutamine-carbohydrate-reaction ('Joint YaaD, YaaE, glutamine, ribose 5-phosphate and DHAP reaction', lines 56-60) grounds only to [UniProtKB:P37528] and omits partner YaaD (UniProtKB:P37527); (2) in pdxt-ribulose-ammonium-dependent-synthase-readout (lines 80-112), node add-yaae-ribulose-ammonium ('Add YaaE to YaaD with ribulose 5-phosphate and ammonium', lines 89-93) grounds only to [UniProtKB:P37528] and omits partner YaaD (UniProtKB:P37527); (3) in pdxt-acivicin-glutaminase-inhibition (lines 113-145), node acivicin-pretreat-glutaminase-mixture ('Increase 5-mM acivicin pretreatment time relative to zero-time control', lines 122-124) omits grounding: [UniProtKB:P37527, UniProtKB:P37528] and node acivicin-assay-glutaminase-readout ('Residual coupled glutaminase readout of YaaD/YaaE', lines 125-129) grounds only to [UniProtKB:P37528] and omits partner YaaD (UniProtKB:P37527); and (4) in pdxst-acivicin-plp-signal-inhibition (lines 146-176), node acivicin-pretreat-plp-mixture ('Expose the YaaD/YaaE synthesis mixture to increasing acivicin', lines 155-157) omits grounding: [UniProtKB:P37527, UniProtKB:P37528] and node residual-glutamine-plp-signal ('Residual glutamine-dependent 414-nm PLP signal', lines 158-160) grounds only to [UniProtKB:P37528] and omits partner YaaD (UniProtKB:P37527).
 
 ## Findings
 
@@ -66,11 +66,11 @@ minor / open / confirmed; issue key: pf01174-causal-context-coverage.
 
 Inspect raw kinetic/MS data and original clones to resolve concentration, time-unit and adduct discrepancies before adding quantitative or atomic claims. Evaluate reporter controls and later intermediate/structural studies. Resolve the SMY genotype/reference boundary and curate its phenotype separately; keep alternative nitrogen/substrate conditions and other organisms distinct. Save an evidence-backed successor review for extensions.
 
-### pdxst-partner-and-acivicin-nodes-missing-grounding: Add partner YaaD (UniProtKB:P37527) grounding to joint-pdxst-glutamine-carbohydrate-reaction and ground acivicin-pretreat-plp-mixture to [UniProtKB:P37527, UniProtKB:P37528]
+### pdxst-partner-and-acivicin-nodes-missing-grounding: Add partner YaaD (UniProtKB:P37527) and joint [UniProtKB:P37527, UniProtKB:P37528] grounding to six YaaD/YaaE PLP synthase and acivicin assay nodes in PF01174
 
 minor / open / confirmed; issue key: pf01174-pdxst-partner-and-acivicin-nodes-missing-grounding.
 
-In curation/families/PF01174.yaml, two causal graphs omit verified Bacillus subtilis 168 (NCBITaxon:224308) protein grounding that is explicitly established in their family_mapping and sibling graphs: (1) in pdxst-glutamine-dependent-plp-product (lines 47-79), node joint-pdxst-glutamine-carbohydrate-reaction ('Joint YaaD, YaaE, glutamine, ribose 5-phosphate and DHAP reaction', lines 56-60) is grounded only to [UniProtKB:P37528] and omits partner YaaD/PdxS (UniProtKB:P37527), whereas sibling graph pdxt-untagged-partner-dependent-glutaminase grounds add-yaad-to-yaae-glutamine to [UniProtKB:P37527, UniProtKB:P37528]; and (2) in pdxst-acivicin-plp-signal-inhibition (lines 146-176), node acivicin-pretreat-plp-mixture ('Expose the YaaD/YaaE synthesis mixture to increasing acivicin', lines 155-157) omits grounding: [UniProtKB:P37527, UniProtKB:P37528] even though family_mapping explicitly states 'Strain-168 YaaE is P37528-associated PdxT, PF01174 6-188. YaaD supplies the separate synthase activity. Both proteins remain in the treated assay mixture'.
+In curation/families/PF01174.yaml, four causal graphs omit verified Bacillus subtilis 168 (NCBITaxon:224308) YaaD/PdxS (UniProtKB:P37527) and/or YaaE/PdxT (UniProtKB:P37528) protein grounding that is explicitly established in their family_mapping and in sibling graph pdxt-untagged-partner-dependent-glutaminase (which grounds add-yaad-to-yaae-glutamine to [UniProtKB:P37527, UniProtKB:P37528]): (1) in pdxst-glutamine-dependent-plp-product (lines 47-79), node joint-pdxst-glutamine-carbohydrate-reaction ('Joint YaaD, YaaE, glutamine, ribose 5-phosphate and DHAP reaction', lines 56-60) grounds only to [UniProtKB:P37528] and omits partner YaaD (UniProtKB:P37527); (2) in pdxt-ribulose-ammonium-dependent-synthase-readout (lines 80-112), node add-yaae-ribulose-ammonium ('Add YaaE to YaaD with ribulose 5-phosphate and ammonium', lines 89-93) grounds only to [UniProtKB:P37528] and omits partner YaaD (UniProtKB:P37527); (3) in pdxt-acivicin-glutaminase-inhibition (lines 113-145), node acivicin-pretreat-glutaminase-mixture ('Increase 5-mM acivicin pretreatment time relative to zero-time control', lines 122-124) omits grounding: [UniProtKB:P37527, UniProtKB:P37528] and node acivicin-assay-glutaminase-readout ('Residual coupled glutaminase readout of YaaD/YaaE', lines 125-129) grounds only to [UniProtKB:P37528] and omits partner YaaD (UniProtKB:P37527); and (4) in pdxst-acivicin-plp-signal-inhibition (lines 146-176), node acivicin-pretreat-plp-mixture ('Expose the YaaD/YaaE synthesis mixture to increasing acivicin', lines 155-157) omits grounding: [UniProtKB:P37527, UniProtKB:P37528] and node residual-glutamine-plp-signal ('Residual glutamine-dependent 414-nm PLP signal', lines 158-160) grounds only to [UniProtKB:P37528] and omits partner YaaD (UniProtKB:P37527).
 
 ## Recommended Actions And Acceptance Checks
 
@@ -135,9 +135,13 @@ summary: 'Five MECHANISTIC graphs retain five DIRECT OBSERVED biochemical effect
   node add-yaad-to-yaae-glutamine in pdxt-untagged-partner-dependent-glutaminase to
   Bacillus subtilis 168 YaaD/PdxS and YaaE/PdxT (UniProtKB:P37527 and UniProtKB:P37528).
   Stage 4 frozen-inventory audit also identified an open grounding finding (pf01174-pdxst-partner-and-acivicin-nodes-missing-grounding)
-  where joint-pdxst-glutamine-carbohydrate-reaction in pdxst-glutamine-dependent-plp-product
-  omits partner UniProtKB:P37527 and acivicin-pretreat-plp-mixture in pdxst-acivicin-plp-signal-inhibition
-  omits [UniProtKB:P37527, UniProtKB:P37528], preserved for Stage 5 grouped remediation.'
+  across four graphs (pdxst-glutamine-dependent-plp-product node joint-pdxst-glutamine-carbohydrate-reaction,
+  pdxt-ribulose-ammonium-dependent-synthase-readout node add-yaae-ribulose-ammonium,
+  pdxt-acivicin-glutaminase-inhibition nodes acivicin-pretreat-glutaminase-mixture
+  and acivicin-assay-glutaminase-readout, and pdxst-acivicin-plp-signal-inhibition
+  nodes acivicin-pretreat-plp-mixture and residual-glutamine-plp-signal) where partner
+  YaaD (UniProtKB:P37527) or joint [UniProtKB:P37527, UniProtKB:P37528] grounding
+  is omitted, preserved for Stage 5 grouped remediation.'
 repository: CultureBotAI/DUFMech
 kind: record
 source:
@@ -565,19 +569,27 @@ assessments:
   area: representation
   topic: Causal-graph taxon and protein-node grounding consistency
   outcome: concern
-  summary: 'In curation/families/PF01174.yaml, two causal graphs omit verified Bacillus
-    subtilis 168 (NCBITaxon:224308) protein grounding that is explicitly established
-    in their family_mapping and sibling graphs: (1) in pdxst-glutamine-dependent-plp-product
+  summary: 'In curation/families/PF01174.yaml, four causal graphs omit verified Bacillus
+    subtilis 168 (NCBITaxon:224308) YaaD/PdxS (UniProtKB:P37527) and/or YaaE/PdxT
+    (UniProtKB:P37528) protein grounding that is explicitly established in their family_mapping
+    and in sibling graph pdxt-untagged-partner-dependent-glutaminase (which grounds
+    add-yaad-to-yaae-glutamine to [UniProtKB:P37527, UniProtKB:P37528]): (1) in pdxst-glutamine-dependent-plp-product
     (lines 47-79), node joint-pdxst-glutamine-carbohydrate-reaction (''Joint YaaD,
-    YaaE, glutamine, ribose 5-phosphate and DHAP reaction'', lines 56-60) is grounded
-    only to [UniProtKB:P37528] and omits partner YaaD/PdxS (UniProtKB:P37527), whereas
-    sibling graph pdxt-untagged-partner-dependent-glutaminase grounds add-yaad-to-yaae-glutamine
-    to [UniProtKB:P37527, UniProtKB:P37528]; and (2) in pdxst-acivicin-plp-signal-inhibition
-    (lines 146-176), node acivicin-pretreat-plp-mixture (''Expose the YaaD/YaaE synthesis
-    mixture to increasing acivicin'', lines 155-157) omits grounding: [UniProtKB:P37527,
-    UniProtKB:P37528] even though family_mapping explicitly states ''Strain-168 YaaE
-    is P37528-associated PdxT, PF01174 6-188. YaaD supplies the separate synthase
-    activity. Both proteins remain in the treated assay mixture''.'
+    YaaE, glutamine, ribose 5-phosphate and DHAP reaction'', lines 56-60) grounds
+    only to [UniProtKB:P37528] and omits partner YaaD (UniProtKB:P37527); (2) in pdxt-ribulose-ammonium-dependent-synthase-readout
+    (lines 80-112), node add-yaae-ribulose-ammonium (''Add YaaE to YaaD with ribulose
+    5-phosphate and ammonium'', lines 89-93) grounds only to [UniProtKB:P37528] and
+    omits partner YaaD (UniProtKB:P37527); (3) in pdxt-acivicin-glutaminase-inhibition
+    (lines 113-145), node acivicin-pretreat-glutaminase-mixture (''Increase 5-mM acivicin
+    pretreatment time relative to zero-time control'', lines 122-124) omits grounding:
+    [UniProtKB:P37527, UniProtKB:P37528] and node acivicin-assay-glutaminase-readout
+    (''Residual coupled glutaminase readout of YaaD/YaaE'', lines 125-129) grounds
+    only to [UniProtKB:P37528] and omits partner YaaD (UniProtKB:P37527); and (4)
+    in pdxst-acivicin-plp-signal-inhibition (lines 146-176), node acivicin-pretreat-plp-mixture
+    (''Expose the YaaD/YaaE synthesis mixture to increasing acivicin'', lines 155-157)
+    omits grounding: [UniProtKB:P37527, UniProtKB:P37528] and node residual-glutamine-plp-signal
+    (''Residual glutamine-dependent 414-nm PLP signal'', lines 158-160) grounds only
+    to [UniProtKB:P37528] and omits partner YaaD (UniProtKB:P37527).'
   target_ids:
   - PF01174
   evidence_ids:
@@ -619,21 +631,29 @@ findings:
   severity: minor
   status: open
   certainty: confirmed
-  title: Add partner YaaD (UniProtKB:P37527) grounding to joint-pdxst-glutamine-carbohydrate-reaction
-    and ground acivicin-pretreat-plp-mixture to [UniProtKB:P37527, UniProtKB:P37528]
-  description: 'In curation/families/PF01174.yaml, two causal graphs omit verified
-    Bacillus subtilis 168 (NCBITaxon:224308) protein grounding that is explicitly
-    established in their family_mapping and sibling graphs: (1) in pdxst-glutamine-dependent-plp-product
+  title: Add partner YaaD (UniProtKB:P37527) and joint [UniProtKB:P37527, UniProtKB:P37528]
+    grounding to six YaaD/YaaE PLP synthase and acivicin assay nodes in PF01174
+  description: 'In curation/families/PF01174.yaml, four causal graphs omit verified
+    Bacillus subtilis 168 (NCBITaxon:224308) YaaD/PdxS (UniProtKB:P37527) and/or YaaE/PdxT
+    (UniProtKB:P37528) protein grounding that is explicitly established in their family_mapping
+    and in sibling graph pdxt-untagged-partner-dependent-glutaminase (which grounds
+    add-yaad-to-yaae-glutamine to [UniProtKB:P37527, UniProtKB:P37528]): (1) in pdxst-glutamine-dependent-plp-product
     (lines 47-79), node joint-pdxst-glutamine-carbohydrate-reaction (''Joint YaaD,
-    YaaE, glutamine, ribose 5-phosphate and DHAP reaction'', lines 56-60) is grounded
-    only to [UniProtKB:P37528] and omits partner YaaD/PdxS (UniProtKB:P37527), whereas
-    sibling graph pdxt-untagged-partner-dependent-glutaminase grounds add-yaad-to-yaae-glutamine
-    to [UniProtKB:P37527, UniProtKB:P37528]; and (2) in pdxst-acivicin-plp-signal-inhibition
-    (lines 146-176), node acivicin-pretreat-plp-mixture (''Expose the YaaD/YaaE synthesis
-    mixture to increasing acivicin'', lines 155-157) omits grounding: [UniProtKB:P37527,
-    UniProtKB:P37528] even though family_mapping explicitly states ''Strain-168 YaaE
-    is P37528-associated PdxT, PF01174 6-188. YaaD supplies the separate synthase
-    activity. Both proteins remain in the treated assay mixture''.'
+    YaaE, glutamine, ribose 5-phosphate and DHAP reaction'', lines 56-60) grounds
+    only to [UniProtKB:P37528] and omits partner YaaD (UniProtKB:P37527); (2) in pdxt-ribulose-ammonium-dependent-synthase-readout
+    (lines 80-112), node add-yaae-ribulose-ammonium (''Add YaaE to YaaD with ribulose
+    5-phosphate and ammonium'', lines 89-93) grounds only to [UniProtKB:P37528] and
+    omits partner YaaD (UniProtKB:P37527); (3) in pdxt-acivicin-glutaminase-inhibition
+    (lines 113-145), node acivicin-pretreat-glutaminase-mixture (''Increase 5-mM acivicin
+    pretreatment time relative to zero-time control'', lines 122-124) omits grounding:
+    [UniProtKB:P37527, UniProtKB:P37528] and node acivicin-assay-glutaminase-readout
+    (''Residual coupled glutaminase readout of YaaD/YaaE'', lines 125-129) grounds
+    only to [UniProtKB:P37528] and omits partner YaaD (UniProtKB:P37527); and (4)
+    in pdxst-acivicin-plp-signal-inhibition (lines 146-176), node acivicin-pretreat-plp-mixture
+    (''Expose the YaaD/YaaE synthesis mixture to increasing acivicin'', lines 155-157)
+    omits grounding: [UniProtKB:P37527, UniProtKB:P37528] and node residual-glutamine-plp-signal
+    (''Residual glutamine-dependent 414-nm PLP signal'', lines 158-160) grounds only
+    to [UniProtKB:P37528] and omits partner YaaD (UniProtKB:P37527).'
   target_ids:
   - PF01174
   field_paths:

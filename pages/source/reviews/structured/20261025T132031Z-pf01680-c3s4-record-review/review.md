@@ -11,7 +11,7 @@
 
 ## Summary
 
-Eight graphs retain eleven observed direct effects from Raschle 2005 and 2007, preserving whole-protein, partner and assay boundaries. The K81-linked early adduct is supported by isotope-resolved peptide data, not by adopting the older imine structure. Later Hanes 2008 NMR challenges the earlier chemical interpretation and distinguishes acid-induced Z2 from a native intermediate. All imported family identity remains unchanged and curation remains IN_PROGRESS. Cycle 3 Stage 3 (PR #357) grounded node k81-linked-early-adduct ('Early K81-linked R5P-derived covalent adduct') to Bacillus subtilis Pdx1/PdxS (UniProtKB:P37527). Stage 4 frozen-inventory audit also identified an open grounding finding (pf01680-joint-pdx1-pdx2-nodes-missing-partner-grounding) where joint-chromophore-reconstitution in pdxs-chromophore-and-partner-h170n and joint-r5p-phosphate-reaction in pdxs-joint-phosphate-release ground only to UniProtKB:P37527 and omit partner Pdx2 (UniProtKB:P37528), preserved for Stage 5 grouped remediation.
+Eight graphs retain eleven observed direct effects from Raschle 2005 and 2007, preserving whole-protein, partner and assay boundaries. The K81-linked early adduct is supported by isotope-resolved peptide data, not by adopting the older imine structure. Later Hanes 2008 NMR challenges the earlier chemical interpretation and distinguishes acid-induced Z2 from a native intermediate. All imported family identity remains unchanged and curation remains IN_PROGRESS. Cycle 3 Stage 3 (PR #357) grounded node k81-linked-early-adduct ('Early K81-linked R5P-derived covalent adduct') to Bacillus subtilis Pdx1/PdxS (UniProtKB:P37527). Stage 4 frozen-inventory audit also identified an open grounding finding (pf01680-joint-pdx1-pdx2-nodes-missing-partner-grounding) across four graphs (pdxs-partner-glutaminase-readout node add-pdxs-to-pdxt-glutamine, pdxs-ribulose-partner-effect node add-pdxt-ribulose-ammonium, pdxs-chromophore-and-partner-h170n node joint-chromophore-reconstitution, and pdxs-joint-phosphate-release node joint-r5p-phosphate-reaction) where only one subunit of the joint Pdx1/Pdx2 (PdxS/PdxT) pair is grounded, preserved for Stage 5 grouped remediation.
 
 ## Scope And Provenance
 
@@ -56,7 +56,7 @@ Exact historical tagged clone sequences and WT Pdx2 tag matching, missing assay-
 
 representation: concern. Targets: PF01680.
 
-In curation/families/PF01680.yaml, two Bacillus subtilis 168 (NCBITaxon:224308) joint Pdx1/Pdx2 reconstitution and reaction nodes ground only to Pdx1 (UniProtKB:P37527) and omit the co-present partner Pdx2 (UniProtKB:P37528): (1) in pdxs-chromophore-and-partner-h170n (lines 244-309), node joint-chromophore-reconstitution ('Joint Pdx1, Pdx2, R5P and glutamine reconstitution', lines 261-265) is grounded only to [UniProtKB:P37527], omitting UniProtKB:P37528 even though sibling node partner-h170n-preparation in the same graph grounds to [UniProtKB:P37528]; and (2) in pdxs-joint-phosphate-release (lines 372-413), node joint-r5p-phosphate-reaction ('Joint Pdx1, Pdx2, glutamine and R5P reaction', lines 387-391) is grounded only to [UniProtKB:P37527], omitting UniProtKB:P37528 even though sibling graph pdxs-joint-plp-product (lines 69-74) grounds joint-pdxst-reaction to [UniProtKB:P37527, UniProtKB:P37528].
+In curation/families/PF01680.yaml, four Bacillus subtilis 168 (NCBITaxon:224308) joint Pdx1/Pdx2 (PdxS/PdxT) reconstitution and reaction nodes ground only one subunit of the two-protein pair and omit the co-present partner (whereas sibling graph pdxs-joint-plp-product grounds joint-pdxst-reaction at lines 69-74 to [UniProtKB:P37527, UniProtKB:P37528]): (1) in pdxs-partner-glutaminase-readout (lines 11-52), node add-pdxs-to-pdxt-glutamine ('Add untagged PdxS to PdxT and glutamine', lines 20-24) grounds only to [UniProtKB:P37527] and omits partner PdxT (UniProtKB:P37528); (2) in pdxs-ribulose-partner-effect (lines 140-172), node add-pdxt-ribulose-ammonium ('Add PdxT to PdxS with ribulose phosphate and external ammonium', lines 149-153) grounds only to [UniProtKB:P37528] and omits partner PdxS (UniProtKB:P37527); (3) in pdxs-chromophore-and-partner-h170n (lines 244-309), node joint-chromophore-reconstitution ('Joint Pdx1, Pdx2, R5P and glutamine reconstitution', lines 261-265) grounds only to [UniProtKB:P37527] and omits partner Pdx2 (UniProtKB:P37528); and (4) in pdxs-joint-phosphate-release (lines 372-413), node joint-r5p-phosphate-reaction ('Joint Pdx1, Pdx2, glutamine and R5P reaction', lines 387-391) grounds only to [UniProtKB:P37527] and omits partner Pdx2 (UniProtKB:P37528).
 
 ## Findings
 
@@ -66,11 +66,11 @@ minor / open / confirmed; issue key: pf01680-causal-context-coverage.
 
 Verify complete historical constructs and resolve protocol discrepancies where possible. Inspect the primary 2008 JACS substrate and isotope work, 2011 second-active-site study, and later structures with their own species/domain mappings before extending the chemical pathway. Keep quench-derived Z2 distinct from native I320 and inferential bond-rearrangement proposals distinct from directly observed endpoints. Extend physiological and other-member evidence independently. A successor review must preserve incomplete coverage and exact source/target binding.
 
-### joint-pdx1-pdx2-nodes-missing-partner-grounding: Add partner Pdx2 (UniProtKB:P37528) grounding to joint-chromophore-reconstitution and joint-r5p-phosphate-reaction in PF01680
+### joint-pdx1-pdx2-nodes-missing-partner-grounding: Add paired Pdx1/PdxS (UniProtKB:P37527) and Pdx2/PdxT (UniProtKB:P37528) grounding to four joint reconstitution and reaction nodes in PF01680
 
 minor / open / confirmed; issue key: pf01680-joint-pdx1-pdx2-nodes-missing-partner-grounding.
 
-In curation/families/PF01680.yaml, two Bacillus subtilis 168 (NCBITaxon:224308) joint Pdx1/Pdx2 reconstitution and reaction nodes ground only to Pdx1 (UniProtKB:P37527) and omit the co-present partner Pdx2 (UniProtKB:P37528): (1) in pdxs-chromophore-and-partner-h170n (lines 244-309), node joint-chromophore-reconstitution ('Joint Pdx1, Pdx2, R5P and glutamine reconstitution', lines 261-265) is grounded only to [UniProtKB:P37527], omitting UniProtKB:P37528 even though sibling node partner-h170n-preparation in the same graph grounds to [UniProtKB:P37528]; and (2) in pdxs-joint-phosphate-release (lines 372-413), node joint-r5p-phosphate-reaction ('Joint Pdx1, Pdx2, glutamine and R5P reaction', lines 387-391) is grounded only to [UniProtKB:P37527], omitting UniProtKB:P37528 even though sibling graph pdxs-joint-plp-product (lines 69-74) grounds joint-pdxst-reaction to [UniProtKB:P37527, UniProtKB:P37528].
+In curation/families/PF01680.yaml, four Bacillus subtilis 168 (NCBITaxon:224308) joint Pdx1/Pdx2 (PdxS/PdxT) reconstitution and reaction nodes ground only one subunit of the two-protein pair and omit the co-present partner (whereas sibling graph pdxs-joint-plp-product grounds joint-pdxst-reaction at lines 69-74 to [UniProtKB:P37527, UniProtKB:P37528]): (1) in pdxs-partner-glutaminase-readout (lines 11-52), node add-pdxs-to-pdxt-glutamine ('Add untagged PdxS to PdxT and glutamine', lines 20-24) grounds only to [UniProtKB:P37527] and omits partner PdxT (UniProtKB:P37528); (2) in pdxs-ribulose-partner-effect (lines 140-172), node add-pdxt-ribulose-ammonium ('Add PdxT to PdxS with ribulose phosphate and external ammonium', lines 149-153) grounds only to [UniProtKB:P37528] and omits partner PdxS (UniProtKB:P37527); (3) in pdxs-chromophore-and-partner-h170n (lines 244-309), node joint-chromophore-reconstitution ('Joint Pdx1, Pdx2, R5P and glutamine reconstitution', lines 261-265) grounds only to [UniProtKB:P37527] and omits partner Pdx2 (UniProtKB:P37528); and (4) in pdxs-joint-phosphate-release (lines 372-413), node joint-r5p-phosphate-reaction ('Joint Pdx1, Pdx2, glutamine and R5P reaction', lines 387-391) grounds only to [UniProtKB:P37527] and omits partner Pdx2 (UniProtKB:P37528).
 
 ## Recommended Actions And Acceptance Checks
 
@@ -136,9 +136,11 @@ summary: 'Eight graphs retain eleven observed direct effects from Raschle 2005 a
   #357) grounded node k81-linked-early-adduct (''Early K81-linked R5P-derived covalent
   adduct'') to Bacillus subtilis Pdx1/PdxS (UniProtKB:P37527). Stage 4 frozen-inventory
   audit also identified an open grounding finding (pf01680-joint-pdx1-pdx2-nodes-missing-partner-grounding)
-  where joint-chromophore-reconstitution in pdxs-chromophore-and-partner-h170n and
-  joint-r5p-phosphate-reaction in pdxs-joint-phosphate-release ground only to UniProtKB:P37527
-  and omit partner Pdx2 (UniProtKB:P37528), preserved for Stage 5 grouped remediation.'
+  across four graphs (pdxs-partner-glutaminase-readout node add-pdxs-to-pdxt-glutamine,
+  pdxs-ribulose-partner-effect node add-pdxt-ribulose-ammonium, pdxs-chromophore-and-partner-h170n
+  node joint-chromophore-reconstitution, and pdxs-joint-phosphate-release node joint-r5p-phosphate-reaction)
+  where only one subunit of the joint Pdx1/Pdx2 (PdxS/PdxT) pair is grounded, preserved
+  for Stage 5 grouped remediation.'
 repository: CultureBotAI/DUFMech
 kind: record
 source:
@@ -706,17 +708,22 @@ assessments:
   area: representation
   topic: Causal-graph taxon and protein-node grounding consistency
   outcome: concern
-  summary: 'In curation/families/PF01680.yaml, two Bacillus subtilis 168 (NCBITaxon:224308)
-    joint Pdx1/Pdx2 reconstitution and reaction nodes ground only to Pdx1 (UniProtKB:P37527)
-    and omit the co-present partner Pdx2 (UniProtKB:P37528): (1) in pdxs-chromophore-and-partner-h170n
-    (lines 244-309), node joint-chromophore-reconstitution (''Joint Pdx1, Pdx2, R5P
-    and glutamine reconstitution'', lines 261-265) is grounded only to [UniProtKB:P37527],
-    omitting UniProtKB:P37528 even though sibling node partner-h170n-preparation in
-    the same graph grounds to [UniProtKB:P37528]; and (2) in pdxs-joint-phosphate-release
-    (lines 372-413), node joint-r5p-phosphate-reaction (''Joint Pdx1, Pdx2, glutamine
-    and R5P reaction'', lines 387-391) is grounded only to [UniProtKB:P37527], omitting
-    UniProtKB:P37528 even though sibling graph pdxs-joint-plp-product (lines 69-74)
-    grounds joint-pdxst-reaction to [UniProtKB:P37527, UniProtKB:P37528].'
+  summary: 'In curation/families/PF01680.yaml, four Bacillus subtilis 168 (NCBITaxon:224308)
+    joint Pdx1/Pdx2 (PdxS/PdxT) reconstitution and reaction nodes ground only one
+    subunit of the two-protein pair and omit the co-present partner (whereas sibling
+    graph pdxs-joint-plp-product grounds joint-pdxst-reaction at lines 69-74 to [UniProtKB:P37527,
+    UniProtKB:P37528]): (1) in pdxs-partner-glutaminase-readout (lines 11-52), node
+    add-pdxs-to-pdxt-glutamine (''Add untagged PdxS to PdxT and glutamine'', lines
+    20-24) grounds only to [UniProtKB:P37527] and omits partner PdxT (UniProtKB:P37528);
+    (2) in pdxs-ribulose-partner-effect (lines 140-172), node add-pdxt-ribulose-ammonium
+    (''Add PdxT to PdxS with ribulose phosphate and external ammonium'', lines 149-153)
+    grounds only to [UniProtKB:P37528] and omits partner PdxS (UniProtKB:P37527);
+    (3) in pdxs-chromophore-and-partner-h170n (lines 244-309), node joint-chromophore-reconstitution
+    (''Joint Pdx1, Pdx2, R5P and glutamine reconstitution'', lines 261-265) grounds
+    only to [UniProtKB:P37527] and omits partner Pdx2 (UniProtKB:P37528); and (4)
+    in pdxs-joint-phosphate-release (lines 372-413), node joint-r5p-phosphate-reaction
+    (''Joint Pdx1, Pdx2, glutamine and R5P reaction'', lines 387-391) grounds only
+    to [UniProtKB:P37527] and omits partner Pdx2 (UniProtKB:P37528).'
   target_ids:
   - PF01680
   evidence_ids:
@@ -760,19 +767,24 @@ findings:
   severity: minor
   status: open
   certainty: confirmed
-  title: Add partner Pdx2 (UniProtKB:P37528) grounding to joint-chromophore-reconstitution
-    and joint-r5p-phosphate-reaction in PF01680
-  description: 'In curation/families/PF01680.yaml, two Bacillus subtilis 168 (NCBITaxon:224308)
-    joint Pdx1/Pdx2 reconstitution and reaction nodes ground only to Pdx1 (UniProtKB:P37527)
-    and omit the co-present partner Pdx2 (UniProtKB:P37528): (1) in pdxs-chromophore-and-partner-h170n
-    (lines 244-309), node joint-chromophore-reconstitution (''Joint Pdx1, Pdx2, R5P
-    and glutamine reconstitution'', lines 261-265) is grounded only to [UniProtKB:P37527],
-    omitting UniProtKB:P37528 even though sibling node partner-h170n-preparation in
-    the same graph grounds to [UniProtKB:P37528]; and (2) in pdxs-joint-phosphate-release
-    (lines 372-413), node joint-r5p-phosphate-reaction (''Joint Pdx1, Pdx2, glutamine
-    and R5P reaction'', lines 387-391) is grounded only to [UniProtKB:P37527], omitting
-    UniProtKB:P37528 even though sibling graph pdxs-joint-plp-product (lines 69-74)
-    grounds joint-pdxst-reaction to [UniProtKB:P37527, UniProtKB:P37528].'
+  title: Add paired Pdx1/PdxS (UniProtKB:P37527) and Pdx2/PdxT (UniProtKB:P37528)
+    grounding to four joint reconstitution and reaction nodes in PF01680
+  description: 'In curation/families/PF01680.yaml, four Bacillus subtilis 168 (NCBITaxon:224308)
+    joint Pdx1/Pdx2 (PdxS/PdxT) reconstitution and reaction nodes ground only one
+    subunit of the two-protein pair and omit the co-present partner (whereas sibling
+    graph pdxs-joint-plp-product grounds joint-pdxst-reaction at lines 69-74 to [UniProtKB:P37527,
+    UniProtKB:P37528]): (1) in pdxs-partner-glutaminase-readout (lines 11-52), node
+    add-pdxs-to-pdxt-glutamine (''Add untagged PdxS to PdxT and glutamine'', lines
+    20-24) grounds only to [UniProtKB:P37527] and omits partner PdxT (UniProtKB:P37528);
+    (2) in pdxs-ribulose-partner-effect (lines 140-172), node add-pdxt-ribulose-ammonium
+    (''Add PdxT to PdxS with ribulose phosphate and external ammonium'', lines 149-153)
+    grounds only to [UniProtKB:P37528] and omits partner PdxS (UniProtKB:P37527);
+    (3) in pdxs-chromophore-and-partner-h170n (lines 244-309), node joint-chromophore-reconstitution
+    (''Joint Pdx1, Pdx2, R5P and glutamine reconstitution'', lines 261-265) grounds
+    only to [UniProtKB:P37527] and omits partner Pdx2 (UniProtKB:P37528); and (4)
+    in pdxs-joint-phosphate-release (lines 372-413), node joint-r5p-phosphate-reaction
+    (''Joint Pdx1, Pdx2, glutamine and R5P reaction'', lines 387-391) grounds only
+    to [UniProtKB:P37527] and omits partner Pdx2 (UniProtKB:P37528).'
   target_ids:
   - PF01680
   field_paths:

@@ -11,7 +11,7 @@
 
 ## Summary
 
-Three new graphs retain six author-reported experimental effects, with molecular mechanisms unresolved. PF01978 has42 graphs/96 edges:89 observed/seven hypothesized. All39 earlier graphs are preserved. Three scientific findings remain OPEN; status remains IN_PROGRESS. Cycle 3 Stage 3 (PR #357) grounded the Pyrococcus furiosus PF1790 DNA-binding state node shifted_md ('Reported retardation of the MD promoter probe') to UniProtKB:Q8U4G4. Stage 4 frozen-inventory review verified all causal graphs and grounded nodes against primary evidence caches.
+Three new graphs retain six author-reported experimental effects, with molecular mechanisms unresolved. PF01978 has42 graphs/96 edges:89 observed/seven hypothesized. All39 earlier graphs are preserved. Three scientific findings remain OPEN; status remains IN_PROGRESS. Cycle 3 Stage 3 (PR #357) grounded the Pyrococcus furiosus PF0124/TrmBL1 DNA-binding state node shifted_md ('Reported retardation of the MD promoter probe') to UniProtKB:Q8U4G4. Stage 4 frozen-inventory review verified all causal graphs and grounded nodes against primary evidence caches.
 
 ## Scope And Provenance
 
@@ -75,7 +75,7 @@ Text-based adoption advances the original-paper assessment but cannot close orig
 
 representation: supported. Targets: PF01978.
 
-Cycle 3 Stage 3 (PR #357) grounded the Pyrococcus furiosus PF1790 DNA-binding state node shifted_md ('Reported retardation of the MD promoter probe') to UniProtKB:Q8U4G4. Stage 4 frozen-inventory review verified all causal graphs and grounded nodes against primary evidence caches.
+Cycle 3 Stage 3 (PR #357) grounded the Pyrococcus furiosus PF0124/TrmBL1 DNA-binding state node shifted_md ('Reported retardation of the MD promoter probe') to UniProtKB:Q8U4G4. Stage 4 frozen-inventory review verified all causal graphs and grounded nodes against primary evidence caches.
 
 ## Findings
 
@@ -157,9 +157,9 @@ summary: 'Three new graphs retain six author-reported experimental effects, with
   mechanisms unresolved. PF01978 has42 graphs/96 edges:89 observed/seven hypothesized.
   All39 earlier graphs are preserved. Three scientific findings remain OPEN; status
   remains IN_PROGRESS. Cycle 3 Stage 3 (PR #357) grounded the Pyrococcus furiosus
-  PF1790 DNA-binding state node shifted_md (''Reported retardation of the MD promoter
-  probe'') to UniProtKB:Q8U4G4. Stage 4 frozen-inventory review verified all causal
-  graphs and grounded nodes against primary evidence caches.'
+  PF0124/TrmBL1 DNA-binding state node shifted_md (''Reported retardation of the MD
+  promoter probe'') to UniProtKB:Q8U4G4. Stage 4 frozen-inventory review verified
+  all causal graphs and grounded nodes against primary evidence caches.'
 repository: CultureBotAI/DUFMech
 kind: record
 source:
@@ -2419,10 +2419,10 @@ assessments:
   area: representation
   topic: Cycle 3 causal-graph and protein-node grounding verification
   outcome: supported
-  summary: 'Cycle 3 Stage 3 (PR #357) grounded the Pyrococcus furiosus PF1790 DNA-binding
-    state node shifted_md (''Reported retardation of the MD promoter probe'') to UniProtKB:Q8U4G4.
-    Stage 4 frozen-inventory review verified all causal graphs and grounded nodes
-    against primary evidence caches.'
+  summary: 'Cycle 3 Stage 3 (PR #357) grounded the Pyrococcus furiosus PF0124/TrmBL1
+    DNA-binding state node shifted_md (''Reported retardation of the MD promoter probe'')
+    to UniProtKB:Q8U4G4. Stage 4 frozen-inventory review verified all causal graphs
+    and grounded nodes against primary evidence caches.'
   target_ids:
   - PF01978
   evidence_ids:

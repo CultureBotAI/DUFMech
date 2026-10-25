@@ -11,7 +11,7 @@
 
 ## Summary
 
-Nine PHENOTYPIC graphs retain twelve INDIRECT OBSERVED edges for strain-specific deletion/complementation, OF4 vesicle transport, membrane protein signals, full-complex bands and apparent sodium kinetics. Exact OF4 parent identity is verified. The record preserves T113A abundance/assembly alternatives, T113Y pH dependence, P114A tolerance, reused-row discrepancies and unproven structural ion paths. IN_PROGRESS and partial same-agent scientific review are appropriate. Cycle 3 Stage 3 (PR #357) grounded the two MrpE state nodes (mrpe-membrane-signal and full-complex-bands) to Bacillus subtilis MrpE (UniProtKB:Q9RGZ1). Stage 4 frozen-inventory review verified all causal graphs and grounded nodes against primary evidence caches.
+Nine PHENOTYPIC graphs retain twelve INDIRECT OBSERVED edges for strain-specific deletion/complementation, OF4 vesicle transport, membrane protein signals, full-complex bands and apparent sodium kinetics. Exact OF4 parent identity is verified. The record preserves T113A abundance/assembly alternatives, T113Y pH dependence, P114A tolerance, reused-row discrepancies and unproven structural ion paths. IN_PROGRESS and partial same-agent scientific review are appropriate. Cycle 3 Stage 3 (PR #357) grounded the two MrpE state nodes (mrpe-membrane-signal and full-complex-bands) in of4-mrpe-t113a-protein-and-complex-signals to Alkalihalophilus pseudofirmus OF4 (Bacillus pseudofirmus OF4) MrpE (UniProtKB:Q9RGZ1; non-PF01899 antiporter subunits MrpF/MrpG belong to separate Pfam families). Stage 4 frozen-inventory review verified all causal graphs and grounded nodes against primary evidence caches.
 
 ## Scope And Provenance
 
@@ -56,7 +56,7 @@ Selected strain/protein contexts do not cover10765 frozen proteins.2008/2010 sup
 
 representation: supported. Targets: PF01899.
 
-Cycle 3 Stage 3 (PR #357) grounded the two MrpE state nodes (mrpe-membrane-signal and full-complex-bands) to Bacillus subtilis MrpE (UniProtKB:Q9RGZ1). Stage 4 frozen-inventory review verified all causal graphs and grounded nodes against primary evidence caches.
+Cycle 3 Stage 3 (PR #357) grounded the two MrpE state nodes (mrpe-membrane-signal and full-complex-bands) in of4-mrpe-t113a-protein-and-complex-signals to Alkalihalophilus pseudofirmus OF4 (Bacillus pseudofirmus OF4) MrpE (UniProtKB:Q9RGZ1; non-PF01899 antiporter subunits MrpF/MrpG belong to separate Pfam families). Stage 4 frozen-inventory review verified all causal graphs and grounded nodes against primary evidence caches.
 
 ## Findings
 
@@ -128,9 +128,11 @@ summary: 'Nine PHENOTYPIC graphs retain twelve INDIRECT OBSERVED edges for strai
   preserves T113A abundance/assembly alternatives, T113Y pH dependence, P114A tolerance,
   reused-row discrepancies and unproven structural ion paths. IN_PROGRESS and partial
   same-agent scientific review are appropriate. Cycle 3 Stage 3 (PR #357) grounded
-  the two MrpE state nodes (mrpe-membrane-signal and full-complex-bands) to Bacillus
-  subtilis MrpE (UniProtKB:Q9RGZ1). Stage 4 frozen-inventory review verified all causal
-  graphs and grounded nodes against primary evidence caches.'
+  the two MrpE state nodes (mrpe-membrane-signal and full-complex-bands) in of4-mrpe-t113a-protein-and-complex-signals
+  to Alkalihalophilus pseudofirmus OF4 (Bacillus pseudofirmus OF4) MrpE (UniProtKB:Q9RGZ1;
+  non-PF01899 antiporter subunits MrpF/MrpG belong to separate Pfam families). Stage
+  4 frozen-inventory review verified all causal graphs and grounded nodes against
+  primary evidence caches.'
 repository: CultureBotAI/DUFMech
 kind: record
 source:
@@ -746,9 +748,11 @@ assessments:
   topic: Cycle 3 causal-graph and protein-node grounding verification
   outcome: supported
   summary: 'Cycle 3 Stage 3 (PR #357) grounded the two MrpE state nodes (mrpe-membrane-signal
-    and full-complex-bands) to Bacillus subtilis MrpE (UniProtKB:Q9RGZ1). Stage 4
-    frozen-inventory review verified all causal graphs and grounded nodes against
-    primary evidence caches.'
+    and full-complex-bands) in of4-mrpe-t113a-protein-and-complex-signals to Alkalihalophilus
+    pseudofirmus OF4 (Bacillus pseudofirmus OF4) MrpE (UniProtKB:Q9RGZ1; non-PF01899
+    antiporter subunits MrpF/MrpG belong to separate Pfam families). Stage 4 frozen-inventory
+    review verified all causal graphs and grounded nodes against primary evidence
+    caches.'
   target_ids:
   - PF01899
   evidence_ids:

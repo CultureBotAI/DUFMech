@@ -11,7 +11,7 @@
 
 ## Summary
 
-Eleven graphs retain sixteen observed effects, six direct purified-preparation readouts and ten indirect cellular effects. Human reference and domain mapping are verified; assay-dependent redox interpretations, construct uncertainty and conditional cell endpoints remain explicit. These are not one conserved enzymatic cycle. Retain IN_PROGRESS. Cycle 3 Stage 3 (PR #357) grounded the BOLA2 iron-binding calorimetric state node iron-binding-response ('WT-like iron-binding calorimetric response') to Homo sapiens BOLA2 (UniProtKB:Q9Y316). Stage 4 frozen-inventory review verified all causal graphs and grounded nodes against primary evidence caches.
+Eleven graphs retain sixteen observed effects, six direct purified-preparation readouts and ten indirect cellular effects. Human reference and domain mapping are verified; assay-dependent redox interpretations, construct uncertainty and conditional cell endpoints remain explicit. These are not one conserved enzymatic cycle. Retain IN_PROGRESS. Cycle 3 Stage 3 (PR #357) grounded the MEMO1 iron-binding calorimetric state node iron-binding-response ('WT-like iron-binding calorimetric response') to Homo sapiens MEMO1 (UniProtKB:Q9Y316). Stage 4 frozen-inventory review verified all causal graphs and grounded nodes against primary evidence caches.
 
 ## Scope And Provenance
 
@@ -56,7 +56,7 @@ Resolve exact purified constructs, clonal alleles, rescue and siRNA specificity;
 
 representation: supported. Targets: PF01875.
 
-Cycle 3 Stage 3 (PR #357) grounded the BOLA2 iron-binding calorimetric state node iron-binding-response ('WT-like iron-binding calorimetric response') to Homo sapiens BOLA2 (UniProtKB:Q9Y316). Stage 4 frozen-inventory review verified all causal graphs and grounded nodes against primary evidence caches.
+Cycle 3 Stage 3 (PR #357) grounded the MEMO1 iron-binding calorimetric state node iron-binding-response ('WT-like iron-binding calorimetric response') to Homo sapiens MEMO1 (UniProtKB:Q9Y316). Stage 4 frozen-inventory review verified all causal graphs and grounded nodes against primary evidence caches.
 
 ## Findings
 
@@ -127,9 +127,9 @@ summary: 'Eleven graphs retain sixteen observed effects, six direct purified-pre
   readouts and ten indirect cellular effects. Human reference and domain mapping are
   verified; assay-dependent redox interpretations, construct uncertainty and conditional
   cell endpoints remain explicit. These are not one conserved enzymatic cycle. Retain
-  IN_PROGRESS. Cycle 3 Stage 3 (PR #357) grounded the BOLA2 iron-binding calorimetric
+  IN_PROGRESS. Cycle 3 Stage 3 (PR #357) grounded the MEMO1 iron-binding calorimetric
   state node iron-binding-response (''WT-like iron-binding calorimetric response'')
-  to Homo sapiens BOLA2 (UniProtKB:Q9Y316). Stage 4 frozen-inventory review verified
+  to Homo sapiens MEMO1 (UniProtKB:Q9Y316). Stage 4 frozen-inventory review verified
   all causal graphs and grounded nodes against primary evidence caches.'
 repository: CultureBotAI/DUFMech
 kind: record
@@ -820,9 +820,9 @@ assessments:
   area: representation
   topic: Cycle 3 causal-graph and protein-node grounding verification
   outcome: supported
-  summary: 'Cycle 3 Stage 3 (PR #357) grounded the BOLA2 iron-binding calorimetric
+  summary: 'Cycle 3 Stage 3 (PR #357) grounded the MEMO1 iron-binding calorimetric
     state node iron-binding-response (''WT-like iron-binding calorimetric response'')
-    to Homo sapiens BOLA2 (UniProtKB:Q9Y316). Stage 4 frozen-inventory review verified
+    to Homo sapiens MEMO1 (UniProtKB:Q9Y316). Stage 4 frozen-inventory review verified
     all causal graphs and grounded nodes against primary evidence caches.'
   target_ids:
   - PF01875

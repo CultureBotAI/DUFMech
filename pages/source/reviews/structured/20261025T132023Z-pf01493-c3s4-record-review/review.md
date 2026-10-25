@@ -11,7 +11,7 @@
 
 ## Summary
 
-Three observed effects are supported in the inspected GltS contexts, with two direct purified-complex size effects and one indirect expression phenotype. The mature/reference numbering offset is resolved; isolated-domain function, complete clones and wider family mechanisms remain open. Cycle 3 Stage 3 (PR #357) grounded the two GltSHis dynamic light scattering particle-radius state nodes (gltshis-dls-radius and post-dilution-gltshis-radius) to Synechocystis sp. PCC 6803 GltS (UniProtKB:Q05755). Stage 4 frozen-inventory review verified all causal graphs and grounded nodes against primary evidence caches.
+Three observed effects are supported in the inspected GltS contexts, with two direct purified-complex size effects and one indirect expression phenotype. The mature/reference numbering offset is resolved; isolated-domain function, complete clones and wider family mechanisms remain open. Cycle 3 Stage 3 (PR #357) grounded the two GltSHis dynamic light scattering particle-radius state nodes (gltshis-dls-radius and post-dilution-gltshis-radius) to Azospirillum brasilense Sp7 GltS alpha subunit (UniProtKB:Q05755). Stage 4 frozen-inventory review verified all causal graphs and grounded nodes against primary evidence caches.
 
 ## Scope And Provenance
 
@@ -56,7 +56,7 @@ Other GltS interventions, taxa, ferredoxin-dependent synthases and FwdC/FmdC mem
 
 representation: supported. Targets: PF01493.
 
-Cycle 3 Stage 3 (PR #357) grounded the two GltSHis dynamic light scattering particle-radius state nodes (gltshis-dls-radius and post-dilution-gltshis-radius) to Synechocystis sp. PCC 6803 GltS (UniProtKB:Q05755). Stage 4 frozen-inventory review verified all causal graphs and grounded nodes against primary evidence caches.
+Cycle 3 Stage 3 (PR #357) grounded the two GltSHis dynamic light scattering particle-radius state nodes (gltshis-dls-radius and post-dilution-gltshis-radius) to Azospirillum brasilense Sp7 GltS alpha subunit (UniProtKB:Q05755). Stage 4 frozen-inventory review verified all causal graphs and grounded nodes against primary evidence caches.
 
 ## Findings
 
@@ -124,9 +124,9 @@ summary: 'Three observed effects are supported in the inspected GltS contexts, w
   The mature/reference numbering offset is resolved; isolated-domain function, complete
   clones and wider family mechanisms remain open. Cycle 3 Stage 3 (PR #357) grounded
   the two GltSHis dynamic light scattering particle-radius state nodes (gltshis-dls-radius
-  and post-dilution-gltshis-radius) to Synechocystis sp. PCC 6803 GltS (UniProtKB:Q05755).
-  Stage 4 frozen-inventory review verified all causal graphs and grounded nodes against
-  primary evidence caches.'
+  and post-dilution-gltshis-radius) to Azospirillum brasilense Sp7 GltS alpha subunit
+  (UniProtKB:Q05755). Stage 4 frozen-inventory review verified all causal graphs and
+  grounded nodes against primary evidence caches.'
 repository: CultureBotAI/DUFMech
 kind: record
 source:
@@ -487,9 +487,9 @@ assessments:
   outcome: supported
   summary: 'Cycle 3 Stage 3 (PR #357) grounded the two GltSHis dynamic light scattering
     particle-radius state nodes (gltshis-dls-radius and post-dilution-gltshis-radius)
-    to Synechocystis sp. PCC 6803 GltS (UniProtKB:Q05755). Stage 4 frozen-inventory
-    review verified all causal graphs and grounded nodes against primary evidence
-    caches.'
+    to Azospirillum brasilense Sp7 GltS alpha subunit (UniProtKB:Q05755). Stage 4
+    frozen-inventory review verified all causal graphs and grounded nodes against
+    primary evidence caches.'
   target_ids:
   - PF01493
   evidence_ids:
