@@ -95,6 +95,8 @@ causal_graphs:
   - node_id: mutant-assay-ssdna-digestion
     label: Digestion of 20-nt ssDNA relative to the WT preparation
     node_type: ACTIVITY
+    grounding:
+    - UniProtKB:P27859
   edges:
   - edge_id: h62a-decreases-ssdna-digestion
     subject: h62a-substitution

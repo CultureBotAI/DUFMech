@@ -1,0 +1,29 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01168
+  path: curation/families/PF01168.yaml
+session:
+  id: 2026-10-25T094504Z-antigravity-aac98c
+  timestamp: '2026-10-25T09:45:04Z'
+  actors:
+  - type: ai_agent
+    name: Antigravity
+    model: Claude Opus 4.6
+    agent_tool: Antigravity
+events:
+- type: EDIT
+  outcome: changed
+  summary: Ground detectable-racemase-activity and recovered-d-to-l-racemase ACTIVITY
+    nodes in PF01168 causal graphs to UniProtKB:P10724
+  details: Grounded the detectable-racemase-activity (ACTIVITY) readout node in geobacillus-alr-racemization-and-k39a
+    and the recovered-d-to-l-racemase (ACTIVITY) readout node in geobacillus-alr-pmp-pyruvate-reactivation
+    to UniProtKB:P10724 (Geobacillus stearothermophilus alanine racemase Alr, NCBITaxon:1422),
+    matching the verified recombinant Alr enzyme grounded on the PERTURBATION and
+    sibling ACTIVITY nodes in Kurokawa et al. 1998 (PMID:9832621).
+  sections:
+  - causal_graphs
+links:
+  urls:
+  - https://www.jstage.jst.go.jp/article/biochemistry1922/124/6/124_6_1163/_pdf
+  - https://www.ebi.ac.uk/interpro/api/protein/uniprot/P10724/entry/pfam/PF01168/

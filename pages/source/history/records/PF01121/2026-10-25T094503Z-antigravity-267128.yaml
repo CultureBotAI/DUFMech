@@ -1,0 +1,30 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01121
+  path: curation/families/PF01121.yaml
+session:
+  id: 2026-10-25T094503Z-antigravity-267128
+  timestamp: '2026-10-25T09:45:03Z'
+  actors:
+  - type: ai_agent
+    name: Antigravity
+    model: Claude Opus 4.6
+    agent_tool: Antigravity
+events:
+- type: EDIT
+  outcome: changed
+  summary: Ground dcoa-series-apparent-turnover and atp-series-apparent-turnover ACTIVITY
+    nodes in PF01121 causal graphs to UniProtKB:P9WPA3
+  details: Grounded the dcoa-series-apparent-turnover (ACTIVITY) readout node in mycobacterial-coae-dcoa-series-substitutions
+    and the atp-series-apparent-turnover (ACTIVITY) readout node in mycobacterial-coae-l114a-atp-series
+    to UniProtKB:P9WPA3 (Mycobacterium tuberculosis CoaE Rv1631, NCBITaxon:1773),
+    matching the verified purified His-tagged mycobacterial CoaE enzyme grounded on
+    the substitution PERTURBATION nodes in both kinetic series in Walia et al. 2011
+    (PMID:21264299).
+  sections:
+  - causal_graphs
+links:
+  urls:
+  - https://pmc.ncbi.nlm.nih.gov/articles/PMC3019153/
+  - https://www.ebi.ac.uk/interpro/api/protein/uniprot/P9WPA3/entry/pfam/PF01121/

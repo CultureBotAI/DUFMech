@@ -1,0 +1,30 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01026
+  path: curation/families/PF01026.yaml
+session:
+  id: 2026-10-25T094501Z-antigravity-2a4acb
+  timestamp: '2026-10-25T09:45:01Z'
+  actors:
+  - type: ai_agent
+    name: Antigravity
+    model: Claude Opus 4.6
+    agent_tool: Antigravity
+events:
+- type: EDIT
+  outcome: changed
+  summary: Ground mutant-assay-ssdna-digestion ACTIVITY node in tatd-residue-substitution-digestion-effects
+    to UniProtKB:P27859
+  details: Grounded the mutant-assay-ssdna-digestion (ACTIVITY) readout node in causal
+    graph tatd-residue-substitution-digestion-effects to UniProtKB:P27859 (Escherichia
+    coli TatD, NCBITaxon:83333), matching the verified purified recombinant His-tagged
+    E. coli TatD enzyme grounded on the four substitution PERTURBATION nodes (h62a-substitution,
+    e91a-substitution, e201a-substitution, d203a-substitution) and sibling TatD PERTURBATION
+    nodes in Chen et al. 2014 (PMID:25114049).
+  sections:
+  - causal_graphs
+links:
+  urls:
+  - https://pmc.ncbi.nlm.nih.gov/articles/PMC4176340/
+  - https://www.ebi.ac.uk/interpro/api/protein/uniprot/P27859/entry/pfam/PF01026/

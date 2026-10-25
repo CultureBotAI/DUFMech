@@ -288,9 +288,13 @@ causal_graphs:
   - node_id: spermidine-kcat
     label: Fitted spermidine-assay turnover number
     node_type: ACTIVITY
+    grounding:
+    - UniProtKB:Q5JIZ3
   - node_id: spermidine-efficiency
     label: Fitted spermidine-assay catalytic efficiency
     node_type: ACTIVITY
+    grounding:
+    - UniProtKB:Q5JIZ3
   edges:
   - edge_id: quadruple-decreases-kcat
     subject: terminal-quadruple-preparation
@@ -350,6 +354,8 @@ causal_graphs:
   - node_id: branched-norspermidine-efficiency
     label: Catalytic efficiency with N4-aminopropylnorspermidine
     node_type: ACTIVITY
+    grounding:
+    - UniProtKB:Q72L89
   edges:
   - edge_id: c9-decreases-branched-norspermidine-efficiency
     subject: replace-tth-terminal-segment
@@ -626,5 +632,14 @@ curation_events:
   summary: Ground causal graph gene and protein nodes in PF01861 with verified UniProtKB accessions (UniProtKB:Q5JIZ3,
     UniProtKB:Q72L89)
   history_record: history/records/PF01861/2026-10-18T025446Z-antigravity-195ba1.yaml
+  event_index: 0
+  llm_assisted: true
+- timestamp: '2026-10-25T09:45:06Z'
+  curator: Antigravity
+  action: EDIT
+  outcome: changed
+  summary: Ground spermidine-kcat, spermidine-efficiency and branched-norspermidine-efficiency ACTIVITY
+    nodes in PF01861 causal graphs to UniProtKB:Q5JIZ3 and UniProtKB:Q72L89
+  history_record: history/records/PF01861/2026-10-25T094506Z-antigravity-1f2397.yaml
   event_index: 0
   llm_assisted: true

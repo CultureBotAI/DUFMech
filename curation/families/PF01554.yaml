@@ -89,6 +89,8 @@ causal_graphs:
   - node_id: wt-low-concentration-binding
     label: Ethidium-binding anisotropy at low WT protein concentrations
     node_type: ACTIVITY
+    grounding:
+    - UniProtKB:Q9KRU4
   - node_id: d36n-versus-wt
     label: Paper D36N (current D32N) instead of WT
     node_type: PERTURBATION
@@ -107,6 +109,8 @@ causal_graphs:
   - node_id: sodium-enhancement-binding
     label: Sodium-dependent enhancement of low-concentration ethidium binding
     node_type: ACTIVITY
+    grounding:
+    - UniProtKB:Q9KRU4
   edges:
   - edge_id: sodium-increases-wt-binding
     subject: sodium-added-purified-wt

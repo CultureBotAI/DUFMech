@@ -46,6 +46,8 @@ causal_graphs:
   - node_id: detectable-racemase-activity
     label: Detectable alanine-racemization activity
     node_type: ACTIVITY
+    grounding:
+    - UniProtKB:P10724
   edges:
   - edge_id: alr-d-substrate-produces-l-alanine
     subject: holo-alr-with-d-alanine
@@ -169,6 +171,8 @@ causal_graphs:
   - node_id: recovered-d-to-l-racemase
     label: Recovered D-to-L racemase activity
     node_type: ACTIVITY
+    grounding:
+    - UniProtKB:P10724
   edges:
   - edge_id: pmp-pyruvate-treatment-increases-racemase-activity
     subject: apo-alr-pmp-pyruvate-treatment
