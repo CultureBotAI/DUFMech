@@ -1,0 +1,30 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01638
+  path: curation/families/PF01638.yaml
+session:
+  id: 2026-10-25T111500Z-antigravity-25313b
+  timestamp: '2026-10-25T11:15:00Z'
+  actors:
+  - type: ai_agent
+    name: Antigravity
+    model: inherit
+    agent_tool: Antigravity CLI
+events:
+- type: EDIT
+  outcome: changed
+  summary: Ground PF01638 causal-graph protein/gene/complex nodes with UniProtKB:P42406
+  details: 'In graph hxlr-wt-c11a-dna-binding-response (taxon NCBITaxon:224308; references PMID:33495458),
+    grounded shifted-brh-dna (STATE: BRH DNA in the shifted HxlR-DNA complex) with UniProtKB:P42406. Family
+    mapping: P42406 / B. subtilis 168 reference 1-120 contains PF01638 19-107; C11 is outside that interval.
+    The N-terminal His tag is thrombin-cleaved, with GSH retained in the sequence-verified structural
+    preparation. Neither C11A nor WT is an isolated Pfam-domain construct.'
+  sections:
+  - causal_graphs
+links:
+  issues:
+  - https://github.com/CultureBotAI/DUFMech/issues/358
+  urls:
+  - https://rest.uniprot.org/uniprotkb/P42406.json
+  - https://pubmed.ncbi.nlm.nih.gov/33495458/

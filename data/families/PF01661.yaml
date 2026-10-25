@@ -157,6 +157,8 @@ causal_graphs:
   - node_id: itc-adpr-bound-state
     label: ITC-detected saturable Af1521-ADP-ribose binding
     node_type: STATE
+    grounding:
+    - UniProtKB:O28751
   - node_id: d20a-substitution
     label: D20A substitution in the intact Af1521 protein
     node_type: PERTURBATION
@@ -409,5 +411,13 @@ curation_events:
   outcome: changed
   summary: Ground causal graph gene and protein nodes in PF01661 with verified UniProtKB accessions (UniProtKB:O28751)
   history_record: history/records/PF01661/2026-10-18T025446Z-antigravity-6e72a4.yaml
+  event_index: 0
+  llm_assisted: true
+- timestamp: '2026-10-25T11:15:00Z'
+  curator: Antigravity
+  action: EDIT
+  outcome: changed
+  summary: Ground PF01661 causal-graph protein/gene/complex nodes with UniProtKB:O28751
+  history_record: history/records/PF01661/2026-10-25T111500Z-antigravity-28d740.yaml
   event_index: 0
   llm_assisted: true

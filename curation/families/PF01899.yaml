@@ -146,6 +146,8 @@ causal_graphs:
       - node_id: mrpe-membrane-signal
         label: Membrane MrpE immunoblot signal
         node_type: STATE
+        grounding:
+          - UniProtKB:Q9RGZ1
       - node_id: mrpf-membrane-signal
         label: Membrane MrpF immunoblot signal
         node_type: STATE
@@ -155,6 +157,8 @@ causal_graphs:
       - node_id: full-complex-bands
         label: Blue-native bands assigned to full MrpA-G complexes
         node_type: STATE
+        grounding:
+          - UniProtKB:Q9RGZ1
     edges:
       - edge_id: t113a-decreases-mrpe-signal
         subject: t113a

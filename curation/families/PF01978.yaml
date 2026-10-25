@@ -2878,6 +2878,8 @@ causal_graphs:
   - node_id: shifted_md
     label: Reported retardation of the MD promoter probe
     node_type: STATE
+    grounding:
+      - UniProtKB:Q8U4G4
   edges:
   - edge_id: y49n-md-retardation
     subject: y49n

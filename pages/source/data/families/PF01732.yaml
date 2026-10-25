@@ -120,6 +120,9 @@ causal_graphs:
   - node_id: omit-mib
     label: Omit MIB from the MIP-IgG reaction
     node_type: PERTURBATION
+    grounding:
+    - NCBIProtein:ACU78687.1
+    - NCBIProtein:ACU78312.1
   - node_id: published-r0582a
     label: Replace WT MIP with published r-0582A
     node_type: PERTURBATION
@@ -375,6 +378,9 @@ causal_graphs:
   - node_id: whole-locus-deletion
     label: Delete all four MIB-MIP pairs versus WT
     node_type: PERTURBATION
+    grounding:
+    - NCBIProtein:ACU78687.1
+    - NCBIProtein:ACU78312.1
   - node_id: cellular-igg-product
     label: Extracellular IgG heavy-chain cleavage product
     node_type: STATE
@@ -588,5 +594,13 @@ curation_events:
   outcome: changed
   summary: Ground four MIB-MIP causal-graph nodes with verified native NCBIProtein accessions
   history_record: history/records/PF01732/2026-10-21T095200Z-antigravity-74aa49.yaml
+  event_index: 0
+  llm_assisted: true
+- timestamp: '2026-10-25T11:15:00Z'
+  curator: Antigravity
+  action: EDIT
+  outcome: changed
+  summary: Ground PF01732 causal-graph protein/gene/complex nodes with NCBIProtein:ACU78687.1, NCBIProtein:ACU78312.1
+  history_record: history/records/PF01732/2026-10-25T111500Z-antigravity-7ae81f.yaml
   event_index: 0
   llm_assisted: true

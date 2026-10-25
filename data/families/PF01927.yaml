@@ -365,6 +365,8 @@ causal_graphs:
   - node_id: focal
     label: Focal MUT-7 signal in mitotic germline
     node_type: PHENOTYPE
+    grounding:
+    - UniProtKB:P34607
   edges:
   - edge_id: double-focal
     subject: double
@@ -408,6 +410,8 @@ causal_graphs:
   - node_id: binding
     label: 16-mer RNA-binding FP response
     node_type: STATE
+    grounding:
+    - UniProtKB:P34607
   edges:
   - edge_id: trunc-binding
     subject: trunc
@@ -447,6 +451,8 @@ causal_graphs:
   - node_id: binding
     label: 16-mer RNA-binding FP response
     node_type: STATE
+    grounding:
+    - UniProtKB:Q8N9H8
   edges:
   - edge_id: trunc-binding
     subject: trunc
@@ -904,5 +910,13 @@ curation_events:
   outcome: changed
   summary: Ground purified CeMUT-7/MUT-8/MUT-16 complex state nodes in PF01927 causal graphs
   history_record: history/records/PF01927/2026-10-23T074809Z-antigravity-192703.yaml
+  event_index: 0
+  llm_assisted: true
+- timestamp: '2026-10-25T11:15:00Z'
+  curator: Antigravity
+  action: EDIT
+  outcome: changed
+  summary: Ground PF01927 causal-graph protein/gene/complex nodes with UniProtKB:P34607, UniProtKB:Q8N9H8
+  history_record: history/records/PF01927/2026-10-25T111500Z-antigravity-0d6fee.yaml
   event_index: 0
   llm_assisted: true

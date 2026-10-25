@@ -1,0 +1,47 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01970
+  path: curation/families/PF01970.yaml
+session:
+  id: 2026-10-25T111500Z-antigravity-17069c
+  timestamp: '2026-10-25T11:15:00Z'
+  actors:
+  - type: ai_agent
+    name: Antigravity
+    model: inherit
+    agent_tool: Antigravity CLI
+events:
+- type: EDIT
+  outcome: changed
+  summary: Ground PF01970 causal-graph protein/gene/complex nodes with NCBIProtein:BAN66716.1, NCBIProtein:CAF20846.1
+  details: 'In graph pputida-joint-tpa-conversion-2013 (references PMID:23913423), grounded joint-construct
+    (PERTURBATION: pJCBAtG transport-plus-catabolism combination in resting PpY1100 cells) with NCBIProtein:BAN66716.1.
+    Family mapping: The E6 TpiA component is BAN66716.1,503aa,archived PF01970 20-441. The construct additionally
+    contains TpiB,TphC and TPA-catabolic enzymes that are not assigned to PF01970. Donor E6 and PpY1100
+    host remain distinct. In graph cglutamicum-operon-cation-growth-2009 (taxon NCBITaxon:196627; references
+    PMID:19376865), grounded operon-deletion-mg (PERTURBATION: Whole tctCBA deletion in5mM magnesium citrate-growth
+    medium) with NCBIProtein:CAF20846.1; grounded operon-deletion-sr (PERTURBATION: Whole tctCBA deletion
+    in5mM strontium citrate-growth medium) with NCBIProtein:CAF20846.1. Family mapping: TctA=cg3125=NCgl2724,CAF20846
+    v1,510aa; UniParc UPI0000165E70 retains PF01970 20-443. Historical Q6M234 is inactive. TctB/cg3126
+    and TctC/cg3127 are distinct partners; CitH/cg0088 belongs to another transporter family. In graph
+    ecoli-tctcba-cation-growth-2009 (references PMID:19376865), grounded operon-ca (PERTURBATION: Whole
+    tctCBA expression with5mM calcium in citrate/Casamino Acids medium) with NCBIProtein:CAF20846.1; grounded
+    operon-mg (PERTURBATION: Whole tctCBA expression with5mM magnesium in citrate/Casamino Acids medium)
+    with NCBIProtein:CAF20846.1. Family mapping: The inserted operon contains cg3125/CAF20846 v1,TctA510aa,archived
+    PF01970 20-443,along with TctB and TctC. The E. coli host and C. glutamicum donor are distinct; no
+    assignment of the other components to PF01970. In graph cglutamicum-citab-tcta-transcript-2009 (taxon
+    NCBITaxon:196627; references PMID:19376865), grounded tcta-mrna (STATE: tctA mRNA abundance relative
+    to matched WT) with NCBIProtein:CAF20846.1. Family mapping: Transcript cg3125=NCgl2724 encodes CAF20846
+    v1,TctA510aa,archived PF01970 20-443. CitA and CitB are separate regulatory proteins,not PF01970 transport
+    components.'
+  sections:
+  - causal_graphs
+links:
+  issues:
+  - https://github.com/CultureBotAI/DUFMech/issues/358
+  urls:
+  - https://www.ncbi.nlm.nih.gov/protein/BAN66716.1
+  - https://www.ncbi.nlm.nih.gov/protein/CAF20846.1
+  - https://pubmed.ncbi.nlm.nih.gov/23913423/
+  - https://pubmed.ncbi.nlm.nih.gov/19376865/

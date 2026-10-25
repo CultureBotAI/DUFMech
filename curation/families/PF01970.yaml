@@ -144,7 +144,7 @@ causal_graphs:
   scope_status: PHENOTYPIC
   limitations: Joint-system effect only. No direct TpiA-catalyzed TPA degradation, TpiA-alone sufficiency or restored growth. Control constructs omit tpiBA,tphC or catabolic genes. Full plasmid and supplementary extract-assay figures remain unverified; the source text reports extract activity when transport genes are missing.
   nodes:
-  - {node_id: joint-construct, label: pJCBAtG transport-plus-catabolism combination in resting PpY1100 cells, node_type: PERTURBATION}
+  - {node_id: joint-construct, label: pJCBAtG transport-plus-catabolism combination in resting PpY1100 cells, node_type: PERTURBATION, grounding: ['NCBIProtein:BAN66716.1']}
   - {node_id: extracellular-tpa, label: Remaining extracellular TPA measured by HPLC, node_type: STATE}
   edges:
   - edge_id: joint-system-tpa-depletion
@@ -165,8 +165,8 @@ causal_graphs:
   scope_status: PHENOTYPIC
   limitations: Whole-operon rather than TctA-specific effect; strontium improvement has no resolved mechanism. Calcium-supported growth remains high. The double CitH/TctCBA mutant sometimes grows late, so no permanent universal essentiality is asserted. Neither ion stoichiometry nor direct cation-citrate cotransport was measured.
   nodes:
-  - {node_id: operon-deletion-mg, label: Whole tctCBA deletion in5mM magnesium citrate-growth medium, node_type: PERTURBATION}
-  - {node_id: operon-deletion-sr, label: Whole tctCBA deletion in5mM strontium citrate-growth medium, node_type: PERTURBATION}
+  - {node_id: operon-deletion-mg, label: Whole tctCBA deletion in5mM magnesium citrate-growth medium, node_type: PERTURBATION, grounding: ['NCBIProtein:CAF20846.1']}
+  - {node_id: operon-deletion-sr, label: Whole tctCBA deletion in5mM strontium citrate-growth medium, node_type: PERTURBATION, grounding: ['NCBIProtein:CAF20846.1']}
   - {node_id: mg-growth, label: Growth-associated OD600 with magnesium relative to matched WT, node_type: PHENOTYPE}
   - {node_id: sr-growth, label: Growth-associated OD600 with strontium relative to matched WT, node_type: PHENOTYPE}
   edges:
@@ -196,8 +196,8 @@ causal_graphs:
   scope_status: PHENOTYPIC
   limitations: Casamino Acids are an additional carbon input. Exact host identity remains discrepant. Joint-system growth does not establish TctA-alone sufficiency or direct ion-coupled transport. Little enhancement with strontium,zinc or no added cation is conditional; nickel also inhibits glucose growth and is a toxicity confound.
   nodes:
-  - {node_id: operon-ca, label: Whole tctCBA expression with5mM calcium in citrate/Casamino Acids medium, node_type: PERTURBATION}
-  - {node_id: operon-mg, label: Whole tctCBA expression with5mM magnesium in citrate/Casamino Acids medium, node_type: PERTURBATION}
+  - {node_id: operon-ca, label: Whole tctCBA expression with5mM calcium in citrate/Casamino Acids medium, node_type: PERTURBATION, grounding: ['NCBIProtein:CAF20846.1']}
+  - {node_id: operon-mg, label: Whole tctCBA expression with5mM magnesium in citrate/Casamino Acids medium, node_type: PERTURBATION, grounding: ['NCBIProtein:CAF20846.1']}
   - {node_id: ca-growth, label: Growth-associated OD600 versus calcium-matched empty vector, node_type: PHENOTYPE}
   - {node_id: mg-growth, label: Growth-associated OD600 versus magnesium-matched empty vector, node_type: PHENOTYPE}
   edges:
@@ -229,7 +229,7 @@ causal_graphs:
   limitations: The transcript ratio does not measure TctA protein abundance,transport rate or direct CitB activation chemistry. Promoter binding alone is not used as an activation edge. Regulation and transport are not joined into a fully observed molecular chain.
   nodes:
   - {node_id: citab-deletion, label: Deletion of the CitAB two-component system, node_type: PERTURBATION}
-  - {node_id: tcta-mrna, label: tctA mRNA abundance relative to matched WT, node_type: STATE}
+  - {node_id: tcta-mrna, label: tctA mRNA abundance relative to matched WT, node_type: STATE, grounding: ['NCBIProtein:CAF20846.1']}
   edges:
   - edge_id: citab-deletion-tcta-mrna
     subject: citab-deletion

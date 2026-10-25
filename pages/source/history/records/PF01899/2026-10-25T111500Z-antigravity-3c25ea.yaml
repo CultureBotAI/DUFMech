@@ -1,0 +1,31 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01899
+  path: curation/families/PF01899.yaml
+session:
+  id: 2026-10-25T111500Z-antigravity-3c25ea
+  timestamp: '2026-10-25T11:15:00Z'
+  actors:
+  - type: ai_agent
+    name: Antigravity
+    model: inherit
+    agent_tool: Antigravity CLI
+events:
+- type: EDIT
+  outcome: changed
+  summary: Ground PF01899 causal-graph protein/gene/complex nodes with UniProtKB:Q9RGZ1
+  details: 'In graph of4-mrpe-t113a-protein-and-complex-signals (taxon NCBITaxon:398511; references PMID:18408029),
+    grounded mrpe-membrane-signal (STATE: Membrane MrpE immunoblot signal) with UniProtKB:Q9RGZ1; grounded
+    full-complex-bands (STATE: Blue-native bands assigned to full MrpA-G complexes) with UniProtKB:Q9RGZ1.
+    Family mapping: Whole Q9RGZ1/ABS70477.1 MrpE,158 aa,PF01899 8-156; T113 lies inside the match. The
+    changed MrpE protein and partner MrpF/MrpG signals are different measured entities, not additional
+    PF01899 proteins.'
+  sections:
+  - causal_graphs
+links:
+  issues:
+  - https://github.com/CultureBotAI/DUFMech/issues/358
+  urls:
+  - https://rest.uniprot.org/uniprotkb/Q9RGZ1.json
+  - https://pubmed.ncbi.nlm.nih.gov/18408029/

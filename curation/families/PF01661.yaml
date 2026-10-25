@@ -86,6 +86,8 @@ causal_graphs:
   - node_id: itc-adpr-bound-state
     label: ITC-detected saturable Af1521-ADP-ribose binding
     node_type: STATE
+    grounding:
+      - UniProtKB:O28751
   - node_id: d20a-substitution
     label: D20A substitution in the intact Af1521 protein
     node_type: PERTURBATION

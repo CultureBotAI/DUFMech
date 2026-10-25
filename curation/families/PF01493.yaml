@@ -19,6 +19,8 @@ causal_graphs:
       - node_id: gltshis-dls-radius
         label: DLS-derived radius of the purified GltSHis particles
         node_type: STATE
+        grounding:
+          - UniProtKB:Q05755
     edges:
       - edge_id: salt-decreases-gltshis-radius
         subject: gltshis-one-molar-nacl
@@ -58,6 +60,8 @@ causal_graphs:
       - node_id: post-dilution-gltshis-radius
         label: DLS-derived particle radius after dilution
         node_type: STATE
+        grounding:
+          - UniProtKB:Q05755
     edges:
       - edge_id: low-salt-dilution-increases-radius
         subject: salt-treated-gltshis-low-salt-dilution

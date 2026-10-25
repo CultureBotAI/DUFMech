@@ -125,6 +125,8 @@ causal_graphs:
   - node_id: add-cas2
     label: Add Cas2 to the Cas1 donor-target reaction in manganese
     node_type: PERTURBATION
+    grounding:
+      - UniProtKB:Q46896
   - node_id: integrated-dna
     label: Radiolabeled donor-containing plasmid product
     node_type: STATE

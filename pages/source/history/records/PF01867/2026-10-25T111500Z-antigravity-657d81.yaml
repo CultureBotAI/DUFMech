@@ -1,0 +1,29 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01867
+  path: curation/families/PF01867.yaml
+session:
+  id: 2026-10-25T111500Z-antigravity-657d81
+  timestamp: '2026-10-25T11:15:00Z'
+  actors:
+  - type: ai_agent
+    name: Antigravity
+    model: inherit
+    agent_tool: Antigravity CLI
+events:
+- type: EDIT
+  outcome: changed
+  summary: Ground PF01867 causal-graph protein/gene/complex nodes with UniProtKB:Q46896
+  details: 'In graph cas2-enhancement-in-manganese (taxon NCBITaxon:83333; references PMID:25707795),
+    grounded add-cas2 (PERTURBATION: Add Cas2 to the Cas1 donor-target reaction in manganese) with UniProtKB:Q46896.
+    Family mapping: Intact MG1655 Cas1 Q46896/NP_417235.1; PF01867 131-226. No isolated-domain or other-member
+    experiment.'
+  sections:
+  - causal_graphs
+links:
+  issues:
+  - https://github.com/CultureBotAI/DUFMech/issues/358
+  urls:
+  - https://rest.uniprot.org/uniprotkb/Q46896.json
+  - https://pubmed.ncbi.nlm.nih.gov/25707795/

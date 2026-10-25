@@ -326,6 +326,8 @@ causal_graphs:
   - node_id: joint-construct
     label: pJCBAtG transport-plus-catabolism combination in resting PpY1100 cells
     node_type: PERTURBATION
+    grounding:
+    - NCBIProtein:BAN66716.1
   - node_id: extracellular-tpa
     label: Remaining extracellular TPA measured by HPLC
     node_type: STATE
@@ -368,9 +370,13 @@ causal_graphs:
   - node_id: operon-deletion-mg
     label: Whole tctCBA deletion in5mM magnesium citrate-growth medium
     node_type: PERTURBATION
+    grounding:
+    - NCBIProtein:CAF20846.1
   - node_id: operon-deletion-sr
     label: Whole tctCBA deletion in5mM strontium citrate-growth medium
     node_type: PERTURBATION
+    grounding:
+    - NCBIProtein:CAF20846.1
   - node_id: mg-growth
     label: Growth-associated OD600 with magnesium relative to matched WT
     node_type: PHENOTYPE
@@ -432,9 +438,13 @@ causal_graphs:
   - node_id: operon-ca
     label: Whole tctCBA expression with5mM calcium in citrate/Casamino Acids medium
     node_type: PERTURBATION
+    grounding:
+    - NCBIProtein:CAF20846.1
   - node_id: operon-mg
     label: Whole tctCBA expression with5mM magnesium in citrate/Casamino Acids medium
     node_type: PERTURBATION
+    grounding:
+    - NCBIProtein:CAF20846.1
   - node_id: ca-growth
     label: Growth-associated OD600 versus calcium-matched empty vector
     node_type: PHENOTYPE
@@ -498,6 +508,8 @@ causal_graphs:
   - node_id: tcta-mrna
     label: tctA mRNA abundance relative to matched WT
     node_type: STATE
+    grounding:
+    - NCBIProtein:CAF20846.1
   edges:
   - edge_id: citab-deletion-tcta-mrna
     subject: citab-deletion
@@ -531,5 +543,13 @@ curation_events:
   outcome: needs_followup
   summary: Retain partial PF01970 scientific self-review with construct and coverage follow-up
   history_record: history/records/PF01970/2026-10-12T205949Z-codex-b63398.yaml
+  event_index: 0
+  llm_assisted: true
+- timestamp: '2026-10-25T11:15:00Z'
+  curator: Antigravity
+  action: EDIT
+  outcome: changed
+  summary: Ground PF01970 causal-graph protein/gene/complex nodes with NCBIProtein:BAN66716.1, NCBIProtein:CAF20846.1
+  history_record: history/records/PF01970/2026-10-25T111500Z-antigravity-17069c.yaml
   event_index: 0
   llm_assisted: true

@@ -14,6 +14,9 @@ causal_graphs:
       - node_id: add-yaad-to-yaae-glutamine
         label: Add 4 uM YaaD to untagged YaaE and glutamine
         node_type: PERTURBATION
+        grounding:
+          - UniProtKB:P37527
+          - UniProtKB:P37528
       - node_id: yaae-coupled-glutaminase-readout
         label: Glutamate-dependent APAD reduction in the coupled YaaE assay
         node_type: ACTIVITY

@@ -171,6 +171,8 @@ causal_graphs:
   - node_id: terminal-mass-shift
     label: Detected terminal peptide with approximately +114.118 Da
     node_type: STATE
+    grounding:
+      - UniProtKB:Q5JIZ3
   edges:
   - edge_id: incubation-yields-terminal-mass-shift
     subject: donor-incubated-tkbpsa
@@ -216,13 +218,9 @@ causal_graphs:
   - node_id: spermidine-kcat
     label: Fitted spermidine-assay turnover number
     node_type: ACTIVITY
-    grounding:
-    - UniProtKB:Q5JIZ3
   - node_id: spermidine-efficiency
     label: Fitted spermidine-assay catalytic efficiency
     node_type: ACTIVITY
-    grounding:
-    - UniProtKB:Q5JIZ3
   edges:
   - edge_id: quadruple-decreases-kcat
     subject: terminal-quadruple-preparation
@@ -282,8 +280,6 @@ causal_graphs:
   - node_id: branched-norspermidine-efficiency
     label: Catalytic efficiency with N4-aminopropylnorspermidine
     node_type: ACTIVITY
-    grounding:
-    - UniProtKB:Q72L89
   edges:
   - edge_id: c9-decreases-branched-norspermidine-efficiency
     subject: replace-tth-terminal-segment

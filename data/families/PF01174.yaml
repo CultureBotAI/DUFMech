@@ -74,6 +74,9 @@ causal_graphs:
   - node_id: add-yaad-to-yaae-glutamine
     label: Add 4 uM YaaD to untagged YaaE and glutamine
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:P37527
+    - UniProtKB:P37528
   - node_id: yaae-coupled-glutaminase-readout
     label: Glutamate-dependent APAD reduction in the coupled YaaE assay
     node_type: ACTIVITY
@@ -290,5 +293,13 @@ curation_events:
   outcome: needs_followup
   summary: Retain partial scientific self-review of PdxT partner and substrate contexts.
   history_record: history/records/PF01174/2026-10-11T100228Z-codex-196448.yaml
+  event_index: 0
+  llm_assisted: true
+- timestamp: '2026-10-25T11:15:00Z'
+  curator: Antigravity
+  action: EDIT
+  outcome: changed
+  summary: Ground PF01174 causal-graph protein/gene/complex nodes with UniProtKB:P37527, UniProtKB:P37528
+  history_record: history/records/PF01174/2026-10-25T111500Z-antigravity-701c9e.yaml
   event_index: 0
   llm_assisted: true

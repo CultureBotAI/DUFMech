@@ -179,9 +179,13 @@ causal_graphs:
   - node_id: nmr-response
     label: Rpp21-induced Rpp29 NMR chemical-shift response
     node_type: STATE
+    grounding:
+    - UniProtKB:Q8U007
   - node_id: itc-response
     label: Detectable Rpp21-Rpp29 binding response by ITC
     node_type: STATE
+    grounding:
+    - UniProtKB:Q8U007
   edges:
   - edge_id: delta24-decreases-nmr-response
     subject: delta24
@@ -495,5 +499,13 @@ curation_events:
   summary: Ground causal graph gene and protein nodes in PF01868 with verified UniProtKB accessions (UniProtKB:O26119,
     UniProtKB:Q8U007, UniProtKB:Q57903)
   history_record: history/records/PF01868/2026-10-18T025446Z-antigravity-14255b.yaml
+  event_index: 0
+  llm_assisted: true
+- timestamp: '2026-10-25T11:15:00Z'
+  curator: Antigravity
+  action: EDIT
+  outcome: changed
+  summary: Ground PF01868 causal-graph protein/gene/complex nodes with UniProtKB:Q8U007
+  history_record: history/records/PF01868/2026-10-25T111500Z-antigravity-700fbb.yaml
   event_index: 0
   llm_assisted: true

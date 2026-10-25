@@ -84,6 +84,8 @@ causal_graphs:
   - node_id: gltshis-dls-radius
     label: DLS-derived radius of the purified GltSHis particles
     node_type: STATE
+    grounding:
+    - UniProtKB:Q05755
   edges:
   - edge_id: salt-decreases-gltshis-radius
     subject: gltshis-one-molar-nacl
@@ -138,6 +140,8 @@ causal_graphs:
   - node_id: post-dilution-gltshis-radius
     label: DLS-derived particle radius after dilution
     node_type: STATE
+    grounding:
+    - UniProtKB:Q05755
   edges:
   - edge_id: low-salt-dilution-increases-radius
     subject: salt-treated-gltshis-low-salt-dilution
@@ -234,5 +238,13 @@ curation_events:
   outcome: needs_followup
   summary: Retained partial GltS assembly and expression scientific self-review.
   history_record: history/records/PF01493/2026-10-11T110713Z-codex-6f6ef9.yaml
+  event_index: 0
+  llm_assisted: true
+- timestamp: '2026-10-25T11:15:00Z'
+  curator: Antigravity
+  action: EDIT
+  outcome: changed
+  summary: Ground PF01493 causal-graph protein/gene/complex nodes with UniProtKB:Q05755
+  history_record: history/records/PF01493/2026-10-25T111500Z-antigravity-f9cbca.yaml
   event_index: 0
   llm_assisted: true

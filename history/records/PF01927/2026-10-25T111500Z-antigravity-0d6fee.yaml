@@ -1,0 +1,40 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01927
+  path: curation/families/PF01927.yaml
+session:
+  id: 2026-10-25T111500Z-antigravity-0d6fee
+  timestamp: '2026-10-25T11:15:00Z'
+  actors:
+  - type: ai_agent
+    name: Antigravity
+    model: inherit
+    agent_tool: Antigravity CLI
+events:
+- type: EDIT
+  outcome: changed
+  summary: Ground PF01927 causal-graph protein/gene/complex nodes with UniProtKB:P34607, UniProtKB:Q8N9H8
+  details: 'In graph cemut7-ha-localization-2024 (taxon NCBITaxon:6239; references PMID:39188014), grounded
+    focal (PHENOTYPE: Focal MUT-7 signal in mitotic germline) with UniProtKB:P34607. Family mapping: CeMUT-7
+    P34607 sequence v1,910aa,taxon6239; current PF01927 is666-779, inside the broader experimental CTD633-910.
+    NTD-EXO1-625 removes additional flanking residues. D435,R853,T855 and pk204 W812stop are OUTSIDE the
+    matched interval. These are whole-protein or broad-CTD assays, not isolated666-779 sufficiency. In
+    graph cemut7-fp-rna-2024 (taxon NCBITaxon:6239; references PMID:39188014), grounded binding (STATE:
+    16-mer RNA-binding FP response) with UniProtKB:P34607. Family mapping: CeMUT-7 P34607 sequence v1,910aa,taxon6239;
+    current PF01927 is666-779, inside the broader experimental CTD633-910. NTD-EXO1-625 removes additional
+    flanking residues. D435,R853,T855 and pk204 W812stop are OUTSIDE the matched interval. These are whole-protein
+    or broad-CTD assays, not isolated666-779 sufficiency. In graph hsexd3-fp-rna-2024 (taxon NCBITaxon:9606;
+    references PMID:39188014), grounded binding (STATE: 16-mer RNA-binding FP response) with UniProtKB:Q8N9H8.
+    Family mapping: Human EXD3 Q8N9H8 sequence v3,876aa,taxon9606; PF01927 is631-734. Experimental CTD624-876
+    is wider; NTD-EXO1-582 removes additional residues. D399 is OUTSIDE PF01927. No isolated631-734 sufficiency
+    or family-wide function is established.'
+  sections:
+  - causal_graphs
+links:
+  issues:
+  - https://github.com/CultureBotAI/DUFMech/issues/358
+  urls:
+  - https://rest.uniprot.org/uniprotkb/P34607.json
+  - https://rest.uniprot.org/uniprotkb/Q8N9H8.json
+  - https://pubmed.ncbi.nlm.nih.gov/39188014/

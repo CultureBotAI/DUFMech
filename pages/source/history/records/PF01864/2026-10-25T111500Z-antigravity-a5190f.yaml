@@ -1,0 +1,32 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01864
+  path: curation/families/PF01864.yaml
+session:
+  id: 2026-10-25T111500Z-antigravity-a5190f
+  timestamp: '2026-10-25T11:15:00Z'
+  actors:
+  - type: ai_agent
+    name: Antigravity
+    model: inherit
+    agent_tool: Antigravity CLI
+events:
+- type: EDIT
+  outcome: changed
+  summary: Ground PF01864 causal-graph protein/gene/complex nodes with UniProtKB:Q9YF05
+  details: 'In graph apcars-ctp-binding (taxon NCBITaxon:272557; references PMID:28961231), grounded detectable-ctp-binding
+    (STATE: Detectable ITC CTP-binding response) with UniProtKB:Q9YF05. Family mapping: ApCarS Q9YF05
+    version 1/BAA79391.1; PF01864 12-174 contains every listed ITC substitution. Whole-protein preparations,
+    not isolated-domain binding. In graph apcars-dgggp-strip-binding (taxon NCBITaxon:272557; references
+    PMID:28961231), grounded lipid-strip-signal (STATE: Anti-His-detected DGGGP strip-binding signal)
+    with UniProtKB:Q9YF05. Family mapping: ApCarS Q9YF05/BAA79391.1, PF01864 12-174 includes every listed
+    site; full-length His-tagged preparations. Each named single variant was tested separately.'
+  sections:
+  - causal_graphs
+links:
+  issues:
+  - https://github.com/CultureBotAI/DUFMech/issues/358
+  urls:
+  - https://rest.uniprot.org/uniprotkb/Q9YF05.json
+  - https://pubmed.ncbi.nlm.nih.gov/28961231/

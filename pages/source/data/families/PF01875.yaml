@@ -428,6 +428,8 @@ causal_graphs:
   - node_id: iron-binding-response
     label: WT-like iron-binding calorimetric response
     node_type: STATE
+    grounding:
+    - UniProtKB:Q9Y316
   edges:
   - edge_id: h49a-decreases-iron-binding-response
     subject: h49a
@@ -657,5 +659,13 @@ curation_events:
   outcome: changed
   summary: Ground simemo1 perturbation node in human-knockdown-wound-closure with verified UniProtKB:Q9Y316
   history_record: history/records/PF01875/2026-10-21T095210Z-antigravity-187501.yaml
+  event_index: 0
+  llm_assisted: true
+- timestamp: '2026-10-25T11:15:00Z'
+  curator: Antigravity
+  action: EDIT
+  outcome: changed
+  summary: Ground PF01875 causal-graph protein/gene/complex nodes with UniProtKB:Q9Y316
+  history_record: history/records/PF01875/2026-10-25T111500Z-antigravity-f45cf1.yaml
   event_index: 0
   llm_assisted: true

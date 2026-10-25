@@ -248,6 +248,8 @@ causal_graphs:
   - node_id: detectable-ctp-binding
     label: Detectable ITC CTP-binding response
     node_type: STATE
+    grounding:
+    - UniProtKB:Q9YF05
   - node_id: weaker-single-mutants
     label: D41A, R51A, G54A, D55A, T58A, R108A, R114A or D122A, each separately
     node_type: PERTURBATION
@@ -455,6 +457,8 @@ causal_graphs:
   - node_id: lipid-strip-signal
     label: Anti-His-detected DGGGP strip-binding signal
     node_type: STATE
+    grounding:
+    - UniProtKB:Q9YF05
   edges:
   - edge_id: d122a-or-d125a-lowers-strip-binding
     subject: d122a-or-d125a
@@ -689,5 +693,13 @@ curation_events:
   outcome: changed
   summary: Ground causal graph gene and protein nodes in PF01864 with verified UniProtKB accessions (UniProtKB:Q9YF05)
   history_record: history/records/PF01864/2026-10-18T025446Z-antigravity-95b3a6.yaml
+  event_index: 0
+  llm_assisted: true
+- timestamp: '2026-10-25T11:15:00Z'
+  curator: Antigravity
+  action: EDIT
+  outcome: changed
+  summary: Ground PF01864 causal-graph protein/gene/complex nodes with UniProtKB:Q9YF05
+  history_record: history/records/PF01864/2026-10-25T111500Z-antigravity-a5190f.yaml
   event_index: 0
   llm_assisted: true

@@ -1,0 +1,31 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01680
+  path: curation/families/PF01680.yaml
+session:
+  id: 2026-10-25T111500Z-antigravity-823b0c
+  timestamp: '2026-10-25T11:15:00Z'
+  actors:
+  - type: ai_agent
+    name: Antigravity
+    model: inherit
+    agent_tool: Antigravity CLI
+events:
+- type: EDIT
+  outcome: changed
+  summary: Ground PF01680 causal-graph protein/gene/complex nodes with UniProtKB:P37527
+  details: 'In graph pdxs-k81-early-adduct (taxon NCBITaxon:224308; references PMID:17189272), grounded
+    k81-linked-early-adduct (STATE: Early K81-linked R5P-derived covalent adduct) with UniProtKB:P37527.
+    Family mapping: P37527-associated strain-168 PdxS, current 294-aa sequence with PF01680 7-212. The
+    paper''s modified peptide is current residues 61-83 and includes K81. Archived sequence version 2
+    lacked only the initial M; the paper''s numbering already matches current K81/K149. 2NV1 is MAS plus
+    P37527 plus LEHHHHHH, but every 2007 vial''s complete clone was not independently sequenced here.'
+  sections:
+  - causal_graphs
+links:
+  issues:
+  - https://github.com/CultureBotAI/DUFMech/issues/358
+  urls:
+  - https://rest.uniprot.org/uniprotkb/P37527.json
+  - https://pubmed.ncbi.nlm.nih.gov/17189272/

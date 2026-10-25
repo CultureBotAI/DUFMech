@@ -1,0 +1,30 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01875
+  path: curation/families/PF01875.yaml
+session:
+  id: 2026-10-25T111500Z-antigravity-f45cf1
+  timestamp: '2026-10-25T11:15:00Z'
+  actors:
+  - type: ai_agent
+    name: Antigravity
+    model: inherit
+    agent_tool: Antigravity CLI
+events:
+- type: EDIT
+  outcome: changed
+  summary: Ground PF01875 causal-graph protein/gene/complex nodes with UniProtKB:Q9Y316
+  details: 'In graph human-iron-binding-substitutions (taxon NCBITaxon:9606; references PMID:38640016),
+    grounded iron-binding-response (STATE: WT-like iron-binding calorimetric response) with UniProtKB:Q9Y316.
+    Family mapping: Q9Y316/NP_057039.1, PF01875 8-291. Deposited 7KQ8 entity1 is exactly canonical4-297,
+    not full297 aa. pTYB12 intein-cleaved preparation; H49/C244 use native reference numbering and lie
+    inside the Pfam match. Assay-batch N termini are not independently sequenced.'
+  sections:
+  - causal_graphs
+links:
+  issues:
+  - https://github.com/CultureBotAI/DUFMech/issues/358
+  urls:
+  - https://rest.uniprot.org/uniprotkb/Q9Y316.json
+  - https://pubmed.ncbi.nlm.nih.gov/38640016/

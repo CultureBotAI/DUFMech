@@ -1,0 +1,31 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01868
+  path: curation/families/PF01868.yaml
+session:
+  id: 2026-10-25T111500Z-antigravity-700fbb
+  timestamp: '2026-10-25T11:15:00Z'
+  actors:
+  - type: ai_agent
+    name: Antigravity
+    model: inherit
+    agent_tool: Antigravity CLI
+events:
+- type: EDIT
+  outcome: changed
+  summary: Ground PF01868 causal-graph protein/gene/complex nodes with UniProtKB:Q8U007
+  details: 'In graph pfu-delta24-partner-association-readouts (taxon NCBITaxon:186497; references PMID:21683084),
+    grounded nmr-response (STATE: Rpp21-induced Rpp29 NMR chemical-shift response) with UniProtKB:Q8U007;
+    grounded itc-response (STATE: Detectable Rpp21-Rpp29 binding response by ITC) with UniProtKB:Q8U007.
+    Family mapping: Pfu PF1816,Q8U007/NP_579545.1,127 aa,PF01868 41-123. Delta24 removes residues1-24
+    outside PF01868 and has primer-encoded initiating M before retained G25. Reference equals2KI7 entity1;
+    the2011 batch was not independently sequenced.'
+  sections:
+  - causal_graphs
+links:
+  issues:
+  - https://github.com/CultureBotAI/DUFMech/issues/358
+  urls:
+  - https://rest.uniprot.org/uniprotkb/Q8U007.json
+  - https://pubmed.ncbi.nlm.nih.gov/21683084/

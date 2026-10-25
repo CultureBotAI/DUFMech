@@ -1,0 +1,30 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01978
+  path: curation/families/PF01978.yaml
+session:
+  id: 2026-10-25T111500Z-antigravity-2355fd
+  timestamp: '2026-10-25T11:15:00Z'
+  actors:
+  - type: ai_agent
+    name: Antigravity
+    model: inherit
+    agent_tool: Antigravity CLI
+events:
+- type: EDIT
+  outcome: changed
+  summary: Ground PF01978 causal-graph protein/gene/complex nodes with UniProtKB:Q8U4G4
+  details: 'In graph trmbl1-md-mutants-2007 (references PMID:17587231), grounded shifted_md (STATE: Reported
+    retardation of the MD promoter probe) with UniProtKB:Q8U4G4. Family mapping: Q8U4G4 sequence 1/entry
+    96 reference has 341 aa with Y49/D50 inside PF01978 (10-77); PF11495 (112-248) and PF31112 (256-339)
+    are separate regions. Mutant sequencing is reported but complete inserts were not inspected. TrmB
+    Y50/D51 are not these residues/protein.'
+  sections:
+  - causal_graphs
+links:
+  issues:
+  - https://github.com/CultureBotAI/DUFMech/issues/358
+  urls:
+  - https://rest.uniprot.org/uniprotkb/Q8U4G4.json
+  - https://pubmed.ncbi.nlm.nih.gov/17587231/

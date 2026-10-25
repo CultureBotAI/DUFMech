@@ -134,6 +134,8 @@ causal_graphs:
       - node_id: ptdser-strip-binding-signal
         label: TTR-52 binding signal at the PtdSer spot
         node_type: ACTIVITY
+        grounding:
+          - UniProtKB:G5ED35
     edges:
       - edge_id: d51a-decreases-ptdser-binding
         subject: d51a-strip-preparation

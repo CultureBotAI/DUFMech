@@ -584,6 +584,8 @@ causal_graphs:
   - node_id: proposed_donor_binding
     label: Proposed accommodation of the donor nucleotide moiety
     node_type: STATE
+    grounding:
+    - UniProtKB:Q2W9I6
   edges:
   - edge_id: proposed-glu324-enables-transfer
     subject: proposed_glu324_role
@@ -2330,6 +2332,9 @@ causal_graphs:
   - node_id: cn32_partner
     label: CN-32 GlfM in MR-1 delta-glfM
     node_type: PERTURBATION
+    grounding:
+    - NCBIProtein:WP_011919637.1
+    - UniProtKB:Q8EC85
   - node_id: shift
     label: WT-like native FlaA/B mobility shift
     node_type: PHENOTYPE
@@ -2373,6 +2378,7 @@ causal_graphs:
     grounding:
     - UniProtKB:Q8EC85
     - UniProtKB:Q8ECA6
+    - NCBIProtein:WP_011919637.1
   - node_id: shift
     label: FLAG-FlaB migration retardation
     node_type: PHENOTYPE
@@ -2459,12 +2465,18 @@ causal_graphs:
   - node_id: triad_wt
     label: GlfM-containing Maf/Hag cassette in WT MR-1
     node_type: PERTURBATION
+    grounding:
+    - NCBIProtein:WP_068455574.1
+    - NCBIProtein:WP_068455571.1
   - node_id: slow_signal_wt
     label: Slow-migrating Hag-HA immunoreactivity in WT MR-1
     node_type: PHENOTYPE
   - node_id: triad_maf_null
     label: GlfM-containing Maf/Hag cassette in host Maf-null MR-1
     node_type: PERTURBATION
+    grounding:
+    - NCBIProtein:WP_068455574.1
+    - NCBIProtein:WP_068455571.1
   - node_id: slow_signal_maf_null
     label: Slow-migrating Hag-HA immunoreactivity in host Maf-null MR-1
     node_type: PHENOTYPE
@@ -2567,6 +2579,9 @@ causal_graphs:
   - node_id: glfm_cassette
     label: GlfM included with Kurthia Maf/Hag in delta-flmG
     node_type: PERTURBATION
+    grounding:
+    - NCBIProtein:WP_068455574.1
+    - NCBIProtein:WP_068455571.1
   - node_id: hag_retardation
     label: Hag-HA migration retardation
     node_type: PHENOTYPE
@@ -2807,5 +2822,14 @@ curation_events:
   outcome: changed
   summary: Add NCBITaxon:211586 to the 18 native Shewanella oneidensis MR-1 causal graphs in PF01973
   history_record: history/records/PF01973/2026-10-22T023500Z-antigravity-0d2518.yaml
+  event_index: 0
+  llm_assisted: true
+- timestamp: '2026-10-25T11:15:00Z'
+  curator: Antigravity
+  action: EDIT
+  outcome: changed
+  summary: Ground PF01973 causal-graph protein/gene/complex nodes with UniProtKB:Q2W9I6, NCBIProtein:WP_011919637.1,
+    UniProtKB:Q8EC85, UniProtKB:Q8ECA6, NCBIProtein:WP_068455574.1, NCBIProtein:WP_068455571.1
+  history_record: history/records/PF01973/2026-10-25T111500Z-antigravity-fae3f1.yaml
   event_index: 0
   llm_assisted: true
