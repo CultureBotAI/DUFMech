@@ -1,0 +1,37 @@
+schema_version: 1.0.0
+repository_key: dufmech
+github_repository: CultureBotAI/DUFMech
+run_id: mech-goal-sequence-20261019
+cycle: 2
+stage: 6
+revision: 1
+outcome: completed
+summary: Frozen INFRA_TASKS.md at 2026-10-25T07:04:09Z (sha256 81980542d697234a109bc4cc55554aec064d1434928ad57d0ef86af30793b0d3), grouped and resolved dufmech-infra-0002 via GitHub Issue #341 by aligning src/dufmech/worklist.py short-name/name classification under CLASSIFIER_POLICY with src/dufmech/pfam_history.py (recognizing underscore-bounded DUF short names like PF21084 WHD_DUF4423_like and currently-named UPF\d{4} families like PF03649 UPF0014 while excluding UPF1/UPF2/UPF3/HupF false positives and preserving LEGACY_CLASSIFIER_POLICY replay parity) and adding multi-query DUF/UPF harvesting support in InterProPfamClient, dufmech.cli, and dufmech.snapshot_cli with regression tests in tests/test_duf_puf_worklist.py.
+source_revision: 8b8f5d5965a063b8dfaf6a4cbc9fa037ed992932
+scope_frozen_at: '2026-10-25T07:04:09Z'
+artifacts:
+- path: reviews/workflow/mech-goal-sequence-20261019/cycle-000002/stage-06/revision-0001/infra_snapshot.md
+  sha256: 81980542d697234a109bc4cc55554aec064d1434928ad57d0ef86af30793b0d3
+  kind: infra_snapshot
+- path: reviews/workflow/mech-goal-sequence-20261019/cycle-000002/stage-06/revision-0001/implementation_plan.md
+  sha256: 58f4f9ea3332124b47dc53aecaf48ff80da341cd3105719d0c8e7bd63fb16d86
+  kind: implementation_plan
+- path: reviews/workflow/mech-goal-sequence-20261019/cycle-000002/stage-06/revision-0001/validation.md
+  sha256: a8124a457bb0122d135c10ade47f31e3b0fcef922b02804e7ea47863707e5435
+  kind: validation
+- path: reviews/workflow/mech-goal-sequence-20261019/cycle-000002/stage-06/revision-0001/stage6_infra_coverage.json
+  sha256: d85d5b6c9323d8b40163d005186e7f208d04a79dca6dee9e6b6ace8b58b7626a
+  kind: supporting
+findings: []
+groups: []
+carry_forward_ids: []
+infra_tasks:
+- task_id: dufmech-infra-0002
+  issue_url: https://github.com/CultureBotAI/DUFMech/issues/341
+  status: resolved
+  summary: Include currently-named UPF\d{4} Pfam families and underscore-joined DUF short names (PF21084 WHD_DUF4423_like) in worklist harvesting
+  resolution_evidence:
+  - reviews/workflow/mech-goal-sequence-20261019/cycle-000002/stage-06/revision-0001/implementation_plan.md
+  - reviews/workflow/mech-goal-sequence-20261019/cycle-000002/stage-06/revision-0001/validation.md
+  - reviews/workflow/mech-goal-sequence-20261019/cycle-000002/stage-06/revision-0001/stage6_infra_coverage.json
+  disposition: Aligned src/dufmech/worklist.py short-name/name classification under CLASSIFIER_POLICY with src/dufmech/pfam_history.py (recognizing underscore-bounded DUF short names like PF21084 WHD_DUF4423_like and currently-named UPF\d{4} families like PF03649 UPF0014 while excluding UPF1/UPF2/UPF3/HupF false positives and preserving LEGACY_CLASSIFIER_POLICY replay parity) and added multi-query DUF/UPF harvesting support in InterProPfamClient, dufmech.cli, and dufmech.snapshot_cli with regression tests in tests/test_duf_puf_worklist.py.

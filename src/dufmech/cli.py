@@ -8,9 +8,11 @@ import sys
 from pathlib import Path
 
 from dufmech.worklist import (
+    DEFAULT_WORKLIST_SEARCHES,
     InterProPfamClient,
     collect_worklist,
     load_interpro_fixture,
+    normalize_search_terms,
     render_json,
     render_tsv,
 )
@@ -23,7 +25,12 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument(
         "--search",
         default="DUF",
-        help="InterPro Pfam search term (default: DUF)",
+        help="InterPro Pfam search term(s), comma-separated (default: DUF)",
+    )
+    parser.add_argument(
+        "--include-upf",
+        action="store_true",
+        help="also harvest InterPro search=UPF alongside --search terms",
     )
     parser.add_argument(
         "--page-size",
@@ -60,12 +67,17 @@ def main(argv: list[str] | None = None) -> int:
     if args.limit is not None and args.limit < 1:
         parser.error("--limit must be positive")
 
+    search_terms = normalize_search_terms(
+        (*normalize_search_terms(args.search), *DEFAULT_WORKLIST_SEARCHES)
+        if args.include_upf
+        else args.search
+    )
     if args.input_json:
         payload = json.loads(args.input_json.read_text(encoding="utf-8"))
         entries = load_interpro_fixture(payload)
     else:
         entries = InterProPfamClient().iter_entries(
-            search=args.search,
+            search=search_terms,
             page_size=args.page_size,
         )
 

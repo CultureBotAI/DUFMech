@@ -13,7 +13,7 @@ import csv
 import io
 import json
 import re
-from collections.abc import Iterable, Mapping
+from collections.abc import Iterable, Mapping, Sequence
 from dataclasses import asdict, dataclass, replace
 from typing import Any
 
@@ -22,9 +22,23 @@ from bs4 import BeautifulSoup
 
 INTERPRO_PFAM_URL = "https://www.ebi.ac.uk/interpro/api/entry/pfam/"
 EXTRA_FIELDS = "entry_id,short_name,description,counters"
+DEFAULT_SEARCH = "DUF"
+DEFAULT_WORKLIST_SEARCHES: tuple[str, ...] = ("DUF", "UPF")
 
 PFAM_RE = re.compile(r"^PF\d{5}$")
-DUF_SHORT_NAME_RE = re.compile(r"\bDUF\d+\b", re.IGNORECASE)
+LEGACY_DUF_SHORT_NAME_RE = re.compile(r"\bDUF\d+\b", re.IGNORECASE)
+DUF_SHORT_NAME_RE = re.compile(
+    r"(?<![A-Za-z0-9])(?:DUF(?:DUF)?_?[A-Z]?\d+|UPF\d{4})(?![A-Za-z0-9])",
+    re.IGNORECASE,
+)
+DUF_NAME_RE = re.compile(
+    r"(?<![A-Za-z0-9])DUF(?:DUF)?_?[A-Z]?\d+(?![A-Za-z0-9])",
+    re.IGNORECASE,
+)
+UPF_SHORT_NAME_RE = re.compile(
+    r"(?<![A-Za-z0-9])UPF\d{4}(?![A-Za-z0-9])",
+    re.IGNORECASE,
+)
 LEGACY_CLASSIFIER_POLICY = "unknown-function-metadata-v2"
 CLASSIFIER_POLICY = "unknown-function-metadata-v3"
 CLASSIFIER_POLICIES = (LEGACY_CLASSIFIER_POLICY, CLASSIFIER_POLICY)
@@ -33,6 +47,13 @@ UNKNOWN_FUNCTION_RE = re.compile(
     r"\b(?:domains?|proteins?|famil(?:y|ies))\s+of\s+unknown[\s-]+function\b|"
     r"\bfunction\s+of\s+(?:this|the)\s+(?:domain|protein|family)\s+is\s+unknown\b|"
     r"\bfunction\s+is\s+unknown\b",
+    re.IGNORECASE,
+)
+UNCHARACTERIZED_UPF_NAME_RE = re.compile(r"\buncharacteri[sz]ed\b", re.IGNORECASE)
+UNCHARACTERIZED_UPF_DESCRIPTION_RE = re.compile(
+    r"\b(?:uncharacteri[sz]ed\s+(?:protein\s+)?famil(?:y|ies)|"
+    r"proteins?\s+of\s+uncharacteri[sz]ed\s+function|"
+    r"functionally\s+uncharacteri[sz]ed)\b",
     re.IGNORECASE,
 )
 # Match explicit former numbered labels, not whole sentences: a following claim
@@ -160,44 +181,73 @@ class InterProPfamClient:
     def iter_entries(
         self,
         *,
-        search: str = "DUF",
+        search: str | Sequence[str] = DEFAULT_SEARCH,
         page_size: int = 200,
     ) -> Iterable[Mapping[str, Any]]:
-        params: dict[str, str] | None = {
-            "search": search,
-            "page_size": str(page_size),
-            "extra_fields": EXTRA_FIELDS,
-        }
-        next_url: str | None = INTERPRO_PFAM_URL
+        terms = normalize_search_terms(search)
         with httpx.Client(
             timeout=self.timeout,
             follow_redirects=True,
             transport=self.transport,
         ) as client:
-            while next_url:
-                response = client.get(next_url, params=params)
-                try:
-                    response.raise_for_status()
-                    payload = response.json()
-                except (httpx.HTTPError, ValueError) as exc:
-                    raise InterProClientError(
-                        f"could not fetch InterPro page {next_url}"
-                    ) from exc
-                if not isinstance(payload, dict):
-                    raise InterProClientError(
-                        f"InterPro page {next_url} was not a JSON object"
+            for term in terms:
+                params: dict[str, str] | None = {
+                    "search": term,
+                    "page_size": str(page_size),
+                    "extra_fields": EXTRA_FIELDS,
+                }
+                next_url: str | None = INTERPRO_PFAM_URL
+                while next_url:
+                    response = client.get(next_url, params=params)
+                    try:
+                        response.raise_for_status()
+                        payload = response.json()
+                    except (httpx.HTTPError, ValueError) as exc:
+                        raise InterProClientError(
+                            f"could not fetch InterPro page {next_url}"
+                        ) from exc
+                    if not isinstance(payload, dict):
+                        raise InterProClientError(
+                            f"InterPro page {next_url} was not a JSON object"
+                        )
+                    results = payload.get("results")
+                    if not isinstance(results, list):
+                        raise InterProClientError(
+                            f"InterPro page {next_url} had no results list"
+                        )
+                    for result in results:
+                        if isinstance(result, Mapping):
+                            yield result
+                    raw_next = payload.get("next")
+                    next_url = (
+                        raw_next if isinstance(raw_next, str) and raw_next else None
                     )
-                results = payload.get("results")
-                if not isinstance(results, list):
-                    raise InterProClientError(
-                        f"InterPro page {next_url} had no results list"
-                    )
-                for result in results:
-                    if isinstance(result, Mapping):
-                        yield result
-                raw_next = payload.get("next")
-                next_url = raw_next if isinstance(raw_next, str) and raw_next else None
-                params = None
+                    params = None
+
+    def iter_worklist_entries(
+        self,
+        *,
+        searches: Sequence[str] = DEFAULT_WORKLIST_SEARCHES,
+        page_size: int = 200,
+    ) -> Iterable[Mapping[str, Any]]:
+        """Yield entries across all default DUF/UPF search queries."""
+
+        return self.iter_entries(search=searches, page_size=page_size)
+
+
+def normalize_search_terms(search: str | Sequence[str]) -> tuple[str, ...]:
+    """Normalize a single search string, comma-separated string, or sequence of terms."""
+
+    if isinstance(search, str):
+        raw_terms = search.split(",")
+    else:
+        raw_terms = []
+        for item in search:
+            raw_terms.extend(str(item).split(","))
+    terms = tuple(dict.fromkeys(term.strip() for term in raw_terms if term.strip()))
+    if not terms:
+        raise ValueError("at least one InterPro search term is required")
+    return terms
 
 
 def collect_worklist(
@@ -379,16 +429,52 @@ def _candidate_reasons(
         if historical_description:
             reasons.append("description_mentions_previous_unknown_name")
     haystack = f"{short_name}\n{name}\n{description}"
-    if DUF_SHORT_NAME_RE.search(short_name):
+    short_name_re = (
+        LEGACY_DUF_SHORT_NAME_RE
+        if classifier_policy == LEGACY_CLASSIFIER_POLICY
+        else DUF_SHORT_NAME_RE
+    )
+    name_re = (
+        LEGACY_DUF_SHORT_NAME_RE
+        if classifier_policy == LEGACY_CLASSIFIER_POLICY
+        else DUF_NAME_RE
+    )
+    is_current_upf_short_name = (
+        classifier_policy == CLASSIFIER_POLICY
+        and bool(UPF_SHORT_NAME_RE.search(short_name))
+    )
+    if short_name_re.search(short_name):
         reasons.append("short_name_matches_duf")
-    if DUF_SHORT_NAME_RE.search(name) and "short_name_matches_duf" not in reasons:
+    if name_re.search(name) and "short_name_matches_duf" not in reasons:
         reasons.append("name_matches_duf")
-    if (UNKNOWN_FUNCTION_NAME_RE.search(name) or UNKNOWN_FUNCTION_RE.search(name)
-            or (classifier_policy == CLASSIFIER_POLICY and STILL_UNKNOWN_FUNCTION_RE.search(name))):
+    if (
+        UNKNOWN_FUNCTION_NAME_RE.search(name)
+        or UNKNOWN_FUNCTION_RE.search(name)
+        or (
+            classifier_policy == CLASSIFIER_POLICY
+            and (
+                STILL_UNKNOWN_FUNCTION_RE.search(name)
+                or (
+                    is_current_upf_short_name
+                    and UNCHARACTERIZED_UPF_NAME_RE.search(name)
+                )
+            )
+        )
+    ):
         reasons.append("name_says_unknown_function")
-    if (UNKNOWN_FUNCTION_RE.search(description)
-            or (classifier_policy == CLASSIFIER_POLICY
-                and STILL_UNKNOWN_FUNCTION_RE.search(description))):
+    if (
+        UNKNOWN_FUNCTION_RE.search(description)
+        or (
+            classifier_policy == CLASSIFIER_POLICY
+            and (
+                STILL_UNKNOWN_FUNCTION_RE.search(description)
+                or (
+                    is_current_upf_short_name
+                    and UNCHARACTERIZED_UPF_DESCRIPTION_RE.search(description)
+                )
+            )
+        )
+    ):
         reasons.append("description_says_unknown_function")
     if "domain of unknown function" in haystack.lower():
         reasons.append("domain_of_unknown_function")
