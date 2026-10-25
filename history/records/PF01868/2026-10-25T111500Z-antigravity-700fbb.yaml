@@ -14,15 +14,18 @@ session:
 events:
 - type: EDIT
   outcome: changed
-  summary: Ground PF01868 Pfu Rpp29 NMR chemical-shift and ITC partner-binding state
-    nodes with UniProtKB:Q8U007
-  details: Grounded protein-state nodes nmr-response and itc-response in graph pfu-delta24-partner-association-readouts
-    with UniProtKB:Q8U007 (Pyrococcus furiosus DSM 3638 Rpp29, locus PF1816, 127 aa,
-    NCBITaxon:186497, PF01868 envelope 37-118, PMID:19339491), representing the Rpp29
-    chemical-shift and Rpp21-Rpp29 complex-binding states.
+  summary: Ground PF01868 causal-graph protein/gene/complex nodes with UniProtKB:Q8U007
+  details: 'In graph pfu-delta24-partner-association-readouts (taxon NCBITaxon:186497; references PMID:21683084),
+    grounded nmr-response (STATE: Rpp21-induced Rpp29 NMR chemical-shift response) with UniProtKB:Q8U007;
+    grounded itc-response (STATE: Detectable Rpp21-Rpp29 binding response by ITC) with UniProtKB:Q8U007.
+    Family mapping: Pfu PF1816,Q8U007/NP_579545.1,127 aa,PF01868 41-123. Delta24 removes residues1-24
+    outside PF01868 and has primer-encoded initiating M before retained G25. Reference equals2KI7 entity1;
+    the2011 batch was not independently sequenced.'
   sections:
   - causal_graphs
 links:
+  issues:
+  - https://github.com/CultureBotAI/DUFMech/issues/358
   urls:
   - https://rest.uniprot.org/uniprotkb/Q8U007.json
-  - https://pubmed.ncbi.nlm.nih.gov/19339491/
+  - https://pubmed.ncbi.nlm.nih.gov/21683084/

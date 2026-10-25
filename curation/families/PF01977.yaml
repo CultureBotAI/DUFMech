@@ -685,7 +685,7 @@ causal_graphs:
     label: WT crystal with increased prFMN ketimine occupancy
     node_type: STATE
     grounding:
-    - UniProtKB:A2QHE5
+      - UniProtKB:A2QHE5
   - node_id: e282q_uv_crystal
     label: UV exposure of dark-prepared E282Q crystals
     node_type: PROCESS
@@ -695,7 +695,7 @@ causal_graphs:
     label: E282Q crystal with detectable prFMN ketimine
     node_type: STATE
     grounding:
-    - UniProtKB:A2QHE5
+      - UniProtKB:A2QHE5
   edges:
   - edge_id: wt-uv-produces-ketimine-state
     subject: wt_uv_crystal
@@ -755,7 +755,7 @@ causal_graphs:
     label: Decarboxylated covalent prFMN-substrate Int2 adduct
     node_type: STATE
     grounding:
-    - UniProtKB:A2QHE5
+      - UniProtKB:A2QHE5
   edges:
   - edge_id: forms-int2
     subject: e282q_cinnamate
@@ -800,12 +800,12 @@ causal_graphs:
     label: Enzyme-bound carboxylated prFMN cycloadduct Int1-prime
     node_type: STATE
     grounding:
-    - UniProtKB:A2QHE5
+      - UniProtKB:A2QHE5
   - node_id: int3_prime
     label: Enzyme-bound decarboxylated cycloadduct Int3-prime
     node_type: STATE
     grounding:
-    - UniProtKB:A2QHE5
+      - UniProtKB:A2QHE5
   edges:
   - edge_id: forms-int1-prime
     subject: alkyne_mix
@@ -1836,7 +1836,7 @@ causal_graphs:
     label: Proposed Int3Quinoid-prFMN complex
     node_type: STATE
     grounding:
-    - UniProtKB:Q9S4M7
+      - UniProtKB:Q9S4M7
   - node_id: product
     label: Proposed released phenol product and regenerated cofactor complex
     node_type: STATE

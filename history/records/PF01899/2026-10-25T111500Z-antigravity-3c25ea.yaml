@@ -14,15 +14,18 @@ session:
 events:
 - type: EDIT
   outcome: changed
-  summary: Ground PF01899 MrpE membrane immunoblot and full MrpA-G complex band nodes
-    with UniProtKB:Q9RGZ1
-  details: Grounded nodes mrpe-membrane-signal and full-complex-bands in graph of4-mrpe-t113a-protein-and-complex-signals
-    with UniProtKB:Q9RGZ1 (Bacillus pseudofirmus OF4 MrpE, 159 aa, NCBITaxon:398511,
-    PF01899 envelope 76-153, PMID:22582280), while leaving separate non-PF01899 subunit
-    signals mrpf-membrane-signal and mrpg-membrane-signal ungrounded.
+  summary: Ground PF01899 causal-graph protein/gene/complex nodes with UniProtKB:Q9RGZ1
+  details: 'In graph of4-mrpe-t113a-protein-and-complex-signals (taxon NCBITaxon:398511; references PMID:18408029),
+    grounded mrpe-membrane-signal (STATE: Membrane MrpE immunoblot signal) with UniProtKB:Q9RGZ1; grounded
+    full-complex-bands (STATE: Blue-native bands assigned to full MrpA-G complexes) with UniProtKB:Q9RGZ1.
+    Family mapping: Whole Q9RGZ1/ABS70477.1 MrpE,158 aa,PF01899 8-156; T113 lies inside the match. The
+    changed MrpE protein and partner MrpF/MrpG signals are different measured entities, not additional
+    PF01899 proteins.'
   sections:
   - causal_graphs
 links:
+  issues:
+  - https://github.com/CultureBotAI/DUFMech/issues/358
   urls:
   - https://rest.uniprot.org/uniprotkb/Q9RGZ1.json
-  - https://pubmed.ncbi.nlm.nih.gov/22582280/
+  - https://pubmed.ncbi.nlm.nih.gov/18408029/

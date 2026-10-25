@@ -2,511 +2,396 @@ pfam_id: PF01899
 curation_status: IN_PROGRESS
 curation_history: history/records/PF01899
 causal_graphs:
-- graph_id: bs-mrpe-deletion-growth
-  title: MrpE deletion reduces salt-tolerant growth in B. subtilis
-  scope: Kajiyama2007 Figure1A; TY5 delta-mrpE/shaE versus UOT1285.
-  context: LB agar containing 0.2 M NaCl. UOT1285 has trpC2 lys1 aprE-delta3 nprE18 nprR2. The figure's
-    plate duration, temperature and replicate count were not established; membrane-preparation conditions
-    are not substituted.
-  family_mapping: B. subtilis reference Q7WY60/BSU31640 is 158 aa with PF01899 at 8-156. Current sequence
-    version2 matches CAE01465.2/YP_054591.2, but differs from historical version1 and was revised in2009.
-    UOT1285/TY5 were not independently sequenced; this is whole-gene, strain-specific evidence, not exact-residue
-    transfer to strain168.
-  scope_status: PHENOTYPIC
-  taxon: NCBITaxon:1423
-  limitations: Qualitative plate growth, not a measured transport rate. The host retains other Mrp components.
-    Whole-gene loss does not isolate PF01899 chemistry or establish an autonomous MrpE antiporter.
-  nodes:
-  - node_id: delete-mrpe
-    label: Delete mrpE in the UOT1285 background
-    node_type: PERTURBATION
-    grounding:
-    - UniProtKB:Q7WY60
-  - node_id: salt-plate-growth
-    label: Growth on LB agar with 0.2 M NaCl
-    node_type: PHENOTYPE
-  edges:
-  - edge_id: deletion-decreases-growth
-    subject: delete-mrpe
-    predicate: decreases
-    object: salt-plate-growth
-    mechanism: The TY5 sector lacks comparable growth to WT on the same plate. This supports a salt-growth
-      contribution of the intact gene in this strain, without resolving transport, abundance or assembly
-      intermediates.
-    directness: INDIRECT
-    support: OBSERVED
-    evidence_kind: EXPERIMENTAL
-    evidence:
-    - reference: PMID:17693497
-      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC2168430/
-      snippet: complemented
-      explanation: Construction section, Table1 and visually inspected Figure1A establish TY5 identity
-        and its qualitative WT comparison. The separate complementation panel is retained in its own salt/induction
-        context.
-      cache_path: evidence/PF01899/kajiyama-2007-complementation.txt
-      cache_sha256: ba25f141d8e82575650a60079ef63bbc22dc28dece24ac7e6fed1ad0e76b6f93
-- graph_id: bs-mrpe-complementation
-  title: MrpE-His6 complementation supports high-salt growth
-  scope: Kajiyama2007 Figure1B; KY11 derived from TY5.
-  context: KY11 is TY5 aprE::Pspac-mrpE-His6 spc. LB agar contains 1 M NaCl and 1 mM IPTG; chromosomal
-    integration was PCR-confirmed. The other Mrp genes remain present.
-  family_mapping: Q7WY60/BSU31640, PF01899 8-156 of158 aa, is the B. subtilis reference, not a verified
-    sequence of the2007 UOT1285-derived insert. The tag is C-terminal His6; complementation is at aprE,
-    not a scarless native-locus repair.
-  scope_status: PHENOTYPIC
-  taxon: NCBITaxon:1423
-  limitations: Deletion Figure1A uses0.2 M NaCl, whereas complementation Figure1B uses1 M plus IPTG. Do
-    not calculate a matched-condition rescue magnitude. An empty-aprE vector control and figure-specific
-    replication were not established. MrpE alone is not sufficient outside the remaining Mrp system.
-  nodes:
-  - node_id: complement-mrpe
-    label: Supply induced MrpE-His6 in TY5 with the other Mrp genes intact
-    node_type: PERTURBATION
-    grounding:
-    - UniProtKB:Q7WY60
-  - node_id: high-salt-growth
-    label: Growth on LB agar with 1 M NaCl and IPTG
-    node_type: PHENOTYPE
-  edges:
-  - edge_id: complementation-enables-growth
-    subject: complement-mrpe
-    predicate: enables
-    object: high-salt-growth
-    mechanism: KY11 grows under the displayed high-salt induction condition, supporting genetic complementation
-      of the deleted subunit. The edge is conditional on the host's remaining machinery, not autonomous
-      MrpE transport.
-    directness: INDIRECT
-    support: OBSERVED
-    evidence_kind: EXPERIMENTAL
-    evidence:
-    - reference: PMID:17693497
-      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC2168430/
-      snippet: complemented
-      explanation: Original Figure1B delta-E/E-His sector, its caption and Table1 define the complemented
-        strain and distinct assay condition. Association experiments do not supply additional causal edges.
-      cache_path: evidence/PF01899/kajiyama-2007-complementation.txt
-      cache_sha256: ba25f141d8e82575650a60079ef63bbc22dc28dece24ac7e6fed1ad0e76b6f93
-- graph_id: of4-mrpe-deletion-antiport
-  title: Removing OF4 MrpE reduces coupled vesicle antiport
-  scope: Morino2008 Figure1B; delta-mrpE operon versus tagged pGEMmrpTFCHS7 in E. coli KNabc.
-  context: Everted vesicles from LBK plus50 mM NaCl cultures at37 C. Assay pH7.0-9.0,2 ml,50 mM BTP-sulfate,140
-    mM choline chloride,5 mM MgCl2,1 uM acridine orange,66 ug protein,2.5 mM succinate and Methods-default2.5
-    mM NaCl. Duplicate assays from at least three preparations.
-  family_mapping: OF4 MrpE Q9RGZ1 sequence version1 equals AAF21816.1/ADC50689.1/WP_012958052.1 and EF468713.1
-    CDS ABS70477.1 over158 aa; PF01899 maps8-156. Paper organism Bacillus pseudofirmus OF4, now Alkalihalophilus
-    pseudofirmus. Whole-gene deletion, not an isolated-domain perturbation.
-  scope_status: PHENOTYPIC
-  taxon: NCBITaxon:398511
-  limitations: A small alkaline-pH response remains. Figure2 retains the other six subunits; a weak Figure4
-    upper band does not establish an active six-subunit complex. Exact deletion boundaries in the unavailable
-    supplement were not inspected. Both parent and mutant are near baseline at pH6.5, excluded from the
-    decreasing-edge range.
-  nodes:
-  - node_id: delete-of4-mrpe
-    label: Remove mrpE from the expressed OF4 operon
-    node_type: PERTURBATION
-    grounding:
-    - UniProtKB:Q9RGZ1
-  - node_id: sodium-dependent-dequenching
-    label: Sodium-dependent acridine-orange dequenching at pH7-9
-    node_type: ACTIVITY
-  edges:
-  - edge_id: deletion-decreases-antiport-readout
-    subject: delete-of4-mrpe
-    predicate: decreases
-    object: sodium-dependent-dequenching
-    mechanism: Deleting mrpE strongly lowers the sodium-induced dissipation of the respiratory delta-pH
-      compared with the tagged parent, while retaining a small response. The assay measures whole-complex
-      behavior in host membranes, not direct MrpE ion translocation.
-    directness: INDIRECT
-    support: OBSERVED
-    evidence_kind: EXPERIMENTAL
-    evidence:
-    - reference: PMID:18408029
-      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC2446749/
-      snippet: dequenching
-      explanation: Original Figure1B supplies the pH series and deletion-versus-parent contrast. Methods
-        specifies reagent concentrations; original Figures2 and4B constrain abundance/complex interpretations.
-      cache_path: evidence/PF01899/morino-2008-deletion-and-substitutions.txt
-      cache_sha256: 8ec23c4d31545adb0858209cf4c4cdbc2e2d3dedbf2b80e031f39807adac44d7
-- graph_id: of4-mrpe-t113a-antiport
-  title: MrpE T113A abolishes the detected vesicle response
-  scope: Morino2008 Figure5B; T113A versus tagged OF4 parent in KNabc.
-  context: Everted-vesicle assay at pH8.5 with10 mM NaCl,2.5 mM succinate,66 ug protein and1 uM acridine
-    orange in BTP-sulfate/choline chloride/MgCl2 buffer. Figure5's10 mM Na overrides the general Methods2.5
-    mM default; empty vector is the negative control.
-  family_mapping: T113 is verified in Q9RGZ1/ABS70477.1 and lies in PF01899 residues8-156 of158 aa. MrpE
-    is untagged within the A-T7/B-FLAG/C-c-myc/D-His7/G-S parent. Other subunits and host membranes are
-    present.
-  scope_status: PHENOTYPIC
-  taxon: NCBITaxon:398511
-  limitations: T113A also reduces membrane protein signals and full-complex bands; transport loss cannot
-    identify a direct ion-binding role. The older four-TM cartoon is a prediction. The2010 footnoted reuse
-    is not independent replication and has different reported abundance values.
-  nodes:
-  - node_id: t113a
-    label: Substitute MrpE T113A in the expressed OF4 complex
-    node_type: PERTURBATION
-    grounding:
-    - UniProtKB:Q9RGZ1
-  - node_id: vesicle-dequenching
-    label: Sodium-triggered vesicle dequenching at pH8.5
-    node_type: ACTIVITY
-  edges:
-  - edge_id: t113a-decreases-antiport
-    subject: t113a
-    predicate: decreases
-    object: vesicle-dequenching
-    mechanism: The T113A trace lacks the tagged parent's detectable Na-dependent response. Changed protein
-      abundance, complex stability and catalytic behavior remain alternative or joint explanations.
-    directness: INDIRECT
-    support: OBSERVED
-    evidence_kind: EXPERIMENTAL
-    evidence:
-    - reference: PMID:18408029
-      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC2446749/
-      snippet: dequenching
-      explanation: Original Figure5B traces and caption define pH8.5/10 mM Na. The separately retained
-        Figure5C/D controls prevent an unsupported atomic mechanism.
-      cache_path: evidence/PF01899/morino-2008-deletion-and-substitutions.txt
-      cache_sha256: 8ec23c4d31545adb0858209cf4c4cdbc2e2d3dedbf2b80e031f39807adac44d7
-- graph_id: of4-mrpe-t113a-protein-and-complex-signals
-  title: T113A reduces membrane subunit and full-complex signals
-  scope: Morino2008 Figure5C/D; T113A versus tagged OF4 parent in KNabc.
-  context: Membranes from LBK plus50 mM NaCl cultures at37 C. SDS immunoblots use20 ug membrane protein;
-    blue-native immunoblots use30 ug solubilized protein and display MrpA/MrpD probes. Comparisons are
-    within each assay, not across different protein loads.
-  family_mapping: Whole Q9RGZ1/ABS70477.1 MrpE,158 aa,PF01899 8-156; T113 lies inside the match. The changed
-    MrpE protein and partner MrpF/MrpG signals are different measured entities, not additional PF01899
-    proteins.
-  scope_status: PHENOTYPIC
-  taxon: NCBITaxon:398511
-  limitations: WT-normalized densitometry is not a protein turnover rate. Epitope recognition, folding,
-    localization and detergent stability are not independently resolved. The printed antibody peptide
-    omits a T relative to reference92-104. No arrow from lower MrpE abundance to partner loss is inferred
-    from their co-occurrence.
-  nodes:
-  - node_id: t113a
-    label: Substitute MrpE T113A in the OF4 operon
-    node_type: PERTURBATION
-    grounding:
-    - UniProtKB:Q9RGZ1
-  - node_id: mrpe-membrane-signal
-    label: Membrane MrpE immunoblot signal
-    node_type: STATE
-    grounding:
-    - UniProtKB:Q9RGZ1
-  - node_id: mrpf-membrane-signal
-    label: Membrane MrpF immunoblot signal
-    node_type: STATE
-  - node_id: mrpg-membrane-signal
-    label: Membrane MrpG immunoblot signal
-    node_type: STATE
-  - node_id: full-complex-bands
-    label: Blue-native bands assigned to full MrpA-G complexes
-    node_type: STATE
-    grounding:
-    - UniProtKB:Q9RGZ1
-  edges:
-  - edge_id: t113a-decreases-mrpe-signal
-    subject: t113a
-    predicate: decreases
-    object: mrpe-membrane-signal
-    mechanism: Figure5C reports a T113A MrpE signal of0.07 relative to parent1. This is a membrane-fraction
-      immunoblot endpoint, not proof of a specific degradation or assembly pathway.
-    directness: INDIRECT
-    support: OBSERVED
-    evidence_kind: EXPERIMENTAL
-    evidence:
-    - reference: PMID:18408029
-      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC2446749/
-      snippet: dequenching
-      explanation: Original Figure5C MrpE row and SDS-immunoblot Methods. The2010 reused row gives0.11;
-        this edge retains the2008 result without pooling the discrepant values.
-      cache_path: evidence/PF01899/morino-2008-deletion-and-substitutions.txt
-      cache_sha256: 8ec23c4d31545adb0858209cf4c4cdbc2e2d3dedbf2b80e031f39807adac44d7
-  - edge_id: t113a-decreases-mrpf-signal
-    subject: t113a
-    predicate: decreases
-    object: mrpf-membrane-signal
-    mechanism: Figure5C reports a T113A MrpF signal of0.12 relative to parent1. The changed partner signal
-      does not demonstrate direct physical stabilization by MrpE.
-    directness: INDIRECT
-    support: OBSERVED
-    evidence_kind: EXPERIMENTAL
-    evidence:
-    - reference: PMID:18408029
-      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC2446749/
-      snippet: dequenching
-      explanation: Original Figure5C MrpF row; the2010 reused row instead gives0.07. One experiment supplies
-        several endpoints, not independent replications.
-      cache_path: evidence/PF01899/morino-2008-deletion-and-substitutions.txt
-      cache_sha256: 8ec23c4d31545adb0858209cf4c4cdbc2e2d3dedbf2b80e031f39807adac44d7
-  - edge_id: t113a-decreases-mrpg-signal
-    subject: t113a
-    predicate: decreases
-    object: mrpg-membrane-signal
-    mechanism: Figure5C reports a T113A MrpG signal of0.02 relative to parent1. Its causal molecular explanation
-      is unresolved despite the genetic perturbation-to-readout relationship.
-    directness: INDIRECT
-    support: OBSERVED
-    evidence_kind: EXPERIMENTAL
-    evidence:
-    - reference: PMID:18408029
-      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC2446749/
-      snippet: dequenching
-      explanation: Original Figure5C MrpG row; the2010 reused row instead gives0.20. Both describe a reduction,
-        but no exact common value or independent repetition is assumed.
-      cache_path: evidence/PF01899/morino-2008-deletion-and-substitutions.txt
-      cache_sha256: 8ec23c4d31545adb0858209cf4c4cdbc2e2d3dedbf2b80e031f39807adac44d7
-  - edge_id: t113a-decreases-full-complex-bands
-    subject: t113a
-    predicate: decreases
-    object: full-complex-bands
-    mechanism: Full-complex bands detected for the tagged parent are absent in the T113A lane while the
-      A-D subcomplex remains. This is a detergent-extracted complex pattern, not direct observation of
-      assembly kinetics or an active isolated A-D transporter.
-    directness: INDIRECT
-    support: OBSERVED
-    evidence_kind: EXPERIMENTAL
-    evidence:
-    - reference: PMID:18408029
-      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC2446749/
-      snippet: dequenching
-      explanation: Original Figure5D lanes2/3 and caption; only A/D probes are displayed. Detergent/dye-inflated
-        apparent sizes do not independently prove exact stoichiometry.
-      cache_path: evidence/PF01899/morino-2008-deletion-and-substitutions.txt
-      cache_sha256: 8ec23c4d31545adb0858209cf4c4cdbc2e2d3dedbf2b80e031f39807adac44d7
-- graph_id: of4-mrpe-p114g-antiport
-  title: P114G lowers transport despite retained full-complex bands
-  scope: Morino2008 Figure5B-D; P114G versus tagged OF4 parent in KNabc.
-  context: Everted-vesicle fluorescence at pH8.5,10 mM NaCl,2.5 mM succinate,66 ug protein and1 uM acridine
-    orange. Parallel membrane and native-gel controls are distinct assays, not a single observed temporal
-    chain.
-  family_mapping: P114 is verified in Q9RGZ1/ABS70477.1 within PF01899 8-156. The whole158-aa MrpE variant
-    is expressed with the other six OF4 subunits. A Results typo T114G does not define another allele.
-  scope_status: PHENOTYPIC
-  taxon: NCBITaxon:398511
-  limitations: Figure5C/D retains substantial subunit signals and full-complex forms, but does not prove
-    identical folding or conformation. P114A is tolerated in2010, so proline identity is not absolutely
-    required. Growth claims conflict across sources; no P114G growth edge is included.
-  nodes:
-  - node_id: p114g
-    label: Substitute MrpE P114G in the OF4 complex
-    node_type: PERTURBATION
-    grounding:
-    - UniProtKB:Q9RGZ1
-  - node_id: vesicle-dequenching
-    label: Sodium-triggered dequenching at pH8.5
-    node_type: ACTIVITY
-  edges:
-  - edge_id: p114g-decreases-antiport
-    subject: p114g
-    predicate: decreases
-    object: vesicle-dequenching
-    mechanism: P114G gives a much smaller response than the tagged parent despite retaining the detected
-      full-complex pattern. The result distinguishes transport function from gross complex loss without
-      locating a sodium-binding atom or proving a conformational activation pathway.
-    directness: INDIRECT
-    support: OBSERVED
-    evidence_kind: EXPERIMENTAL
-    evidence:
-    - reference: PMID:18408029
-      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC2446749/
-      snippet: dequenching
-      explanation: Original Figure5B trace,5C protein signals and5D lane4 supply the effect and controls.
-        The later reused row is not counted as a second experimental origin.
-      cache_path: evidence/PF01899/morino-2008-deletion-and-substitutions.txt
-      cache_sha256: 8ec23c4d31545adb0858209cf4c4cdbc2e2d3dedbf2b80e031f39807adac44d7
-- graph_id: of4-mrpe-p114g-apparent-km
-  title: P114G raises the apparent sodium requirement for half-maximal response
-  scope: Morino2008 Figure5B inset; sodium-dependent vesicle response at three pH values.
-  context: Apparent Km derived from Na-dependent acridine-orange dequenching in everted KNabc vesicles
-    expressing tagged OF4 complexes. Separate titrations at pH8.0,8.5,9.0; the fixed10 mM Na trace is
-    not itself the complete titration.
-  family_mapping: Q9RGZ1/ABS70477.1 P114G in whole MrpE,158 aa,PF01899 residues8-156. Other subunits,
-    membrane environment and respiratory energization contribute to the measured kinetic response.
-  scope_status: PHENOTYPIC
-  taxon: NCBITaxon:398511
-  limitations: Apparent Km is not equilibrium sodium-binding Kd or direct occupancy at P114. The2010 table's
-    attributed reuse gives2.4/1.6/1.4 mM rather than the2008 inset1.67/1.30/1.29 mM at pH8/8.5/9. The
-    discrepancy remains unresolved; values are neither averaged nor treated as independent replication.
-  nodes:
-  - node_id: p114g
-    label: Substitute MrpE P114G instead of parental Pro114
-    node_type: PERTURBATION
-    grounding:
-    - UniProtKB:Q9RGZ1
-  - node_id: apparent-na-km
-    label: Apparent sodium Km of the vesicle fluorescence response
-    node_type: STATE
-  edges:
-  - edge_id: p114g-increases-apparent-km
-    subject: p114g
-    predicate: increases
-    object: apparent-na-km
-    mechanism: The2008 inset reports P114G1.67/1.30/1.29 mM versus parent0.084/0.079/0.060 mM at pH8.0/8.5/9.0.
-      The approximately16.5-21.5-fold shift is a whole-system kinetic phenotype, not isolated MrpE binding
-      affinity.
-    directness: INDIRECT
-    support: OBSERVED
-    evidence_kind: EXPERIMENTAL
-    evidence:
-    - reference: PMID:18408029
-      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC2446749/
-      snippet: dequenching
-      explanation: Original Figure5B inset supplies all six values and corresponding pH labels; Methods
-        defines the half-maximal response. The higher Km remains distinct from lower response amplitude.
-      cache_path: evidence/PF01899/morino-2008-deletion-and-substitutions.txt
-      cache_sha256: 8ec23c4d31545adb0858209cf4c4cdbc2e2d3dedbf2b80e031f39807adac44d7
-- graph_id: of4-mrpe-t113y-antiport
-  title: T113Y reduces antiport without gross loss of detected complexes
-  scope: Morino2010 Table1; T113Y versus tagged OF4 parent in KNabc.
-  context: Vesicle assays at pH8.0,8.5,9.0;2 ml,50 mM BTP-chloride,140 mM choline chloride,5 mM MgCl2,1
-    uM acridine orange,66 ug protein,2.5 mM succinate and10 mM NaCl. Methods specifies two independent
-    preparations; Table1 footnote specifies three experiments, both in duplicate.
-  family_mapping: Q9RGZ1/ABS70477.1 T113Y lies within PF01899 8-156 of158 aa. The substituted MrpE is
-    part of the complete OF4 heterologous complex. The deposited parent matches the reference; every mutant
-    plasmid was not independently resequenced by this review.
-  scope_status: PHENOTYPIC
-  taxon: NCBITaxon:398511
-  limitations: Table1 gives comparable A-G abundance ratios and positive complex columns, not proof of
-    unchanged conformation. Complex scoring need not resolve every subunit. The less-than5%-WT prose does
-    not apply at pH9.0. Supplementary traces/blots were not inspected; Km is not determined, not zero
-    affinity.
-  nodes:
-  - node_id: t113y
-    label: Substitute MrpE T113Y in the OF4 complex
-    node_type: PERTURBATION
-    grounding:
-    - UniProtKB:Q9RGZ1
-  - node_id: sodium-dependent-response
-    label: Sodium-dependent vesicle dequenching at pH8-9
-    node_type: ACTIVITY
-  edges:
-  - edge_id: t113y-decreases-antiport
-    subject: t113y
-    predicate: decreases
-    object: sodium-dependent-response
-    mechanism: T113Y gives0.1/2.0/4.9% dequenching at pH8.0/8.5/9.0 versus parent44.5/48.9/41.6%. The
-      pH9 mutant response is about11.8% of parent, not below5%. Comparable protein and complex readouts
-      weaken a gross-loss explanation but leave molecular coupling unresolved.
-    directness: INDIRECT
-    support: OBSERVED
-    evidence_kind: EXPERIMENTAL
-    evidence:
-    - reference: PMID:20624916
-      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC2945585/
-      snippet: antiport
-      explanation: Readable original Table1 T113Y and positive-control rows with Methods and footnotes
-        supply the means, SD, abundance ratios and complex scoring. P114A's retained function is a substitution-specific
-        control, not an identical mutant.
-      cache_path: evidence/PF01899/morino-2010-t113y-and-controls.txt
-      cache_sha256: 23cb518de168e70a7c44ddc858a45bd34bdc2d9f627cf80f1f899665e70e7e28
-- graph_id: of4-mrpe-t113y-growth
-  title: T113Y fails to confer the parent's salt-growth phenotype
-  scope: Morino2010 Table1; KNabc expressing T113Y versus tagged OF4 parent.
-  context: LBK culture pH7.5,37 C,200 rpm; Table1 scores growth with200 or500 mM added NaCl. Detailed
-    S2 growth curves and a figure-specific duration/replicate count were not inspected.
-  family_mapping: Whole OF4 MrpE Q9RGZ1/ABS70477.1,PF01899 8-156, carries T113Y within the expressed seven-subunit
-    complex. The organism supplying the protein differs from the E. coli assay host.
-  scope_status: PHENOTYPIC
-  taxon: NCBITaxon:398511
-  limitations: Categorical growth score, not a survival percentage or fitted growth rate. This is separate
-    from vesicle transport; no measured transport-to-growth causal chain is claimed. Do not import the16h
-    MrpG Figure4 protocol as an established T113Y condition.
-  nodes:
-  - node_id: t113y
-    label: Express the T113Y OF4 complex instead of tagged parent
-    node_type: PERTURBATION
-    grounding:
-    - UniProtKB:Q9RGZ1
-  - node_id: salt-growth
-    label: KNabc growth with200 or500 mM added NaCl
-    node_type: PHENOTYPE
-  edges:
-  - edge_id: t113y-decreases-salt-growth
-    subject: t113y
-    predicate: decreases
-    object: salt-growth
-    mechanism: T113Y is scored growth-negative at both salt concentrations where the parent is positive.
-      The system-level outcome does not establish a specific sodium-binding site or isolated-domain sufficiency.
-    directness: INDIRECT
-    support: OBSERVED
-    evidence_kind: EXPERIMENTAL
-    evidence:
-    - reference: PMID:20624916
-      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC2945585/
-      snippet: antiport
-      explanation: Original Table1 growth columns and corresponding Results define the categorical contrast.
-        The supplemental time courses remain an explicit access/coverage limit.
-      cache_path: evidence/PF01899/morino-2010-t113y-and-controls.txt
-      cache_sha256: 23cb518de168e70a7c44ddc858a45bd34bdc2d9f627cf80f1f899665e70e7e28
+  - graph_id: bs-mrpe-deletion-growth
+    title: MrpE deletion reduces salt-tolerant growth in B. subtilis
+    scope: Kajiyama2007 Figure1A; TY5 delta-mrpE/shaE versus UOT1285.
+    context: LB agar containing 0.2 M NaCl. UOT1285 has trpC2 lys1 aprE-delta3 nprE18 nprR2. The figure's plate duration, temperature and replicate count were not established; membrane-preparation conditions are not substituted.
+    family_mapping: B. subtilis reference Q7WY60/BSU31640 is 158 aa with PF01899 at 8-156. Current sequence version2 matches CAE01465.2/YP_054591.2, but differs from historical version1 and was revised in2009. UOT1285/TY5 were not independently sequenced; this is whole-gene, strain-specific evidence, not exact-residue transfer to strain168.
+    scope_status: PHENOTYPIC
+    taxon: NCBITaxon:1423
+    limitations: Qualitative plate growth, not a measured transport rate. The host retains other Mrp components. Whole-gene loss does not isolate PF01899 chemistry or establish an autonomous MrpE antiporter.
+    nodes:
+      - node_id: delete-mrpe
+        label: Delete mrpE in the UOT1285 background
+        node_type: PERTURBATION
+        grounding: [UniProtKB:Q7WY60]
+      - node_id: salt-plate-growth
+        label: Growth on LB agar with 0.2 M NaCl
+        node_type: PHENOTYPE
+    edges:
+      - edge_id: deletion-decreases-growth
+        subject: delete-mrpe
+        predicate: decreases
+        object: salt-plate-growth
+        mechanism: The TY5 sector lacks comparable growth to WT on the same plate. This supports a salt-growth contribution of the intact gene in this strain, without resolving transport, abundance or assembly intermediates.
+        directness: INDIRECT
+        support: OBSERVED
+        evidence_kind: EXPERIMENTAL
+        evidence:
+          - reference: PMID:17693497
+            source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC2168430/
+            snippet: complemented
+            explanation: Construction section, Table1 and visually inspected Figure1A establish TY5 identity and its qualitative WT comparison. The separate complementation panel is retained in its own salt/induction context.
+            cache_path: evidence/PF01899/kajiyama-2007-complementation.txt
+            cache_sha256: ba25f141d8e82575650a60079ef63bbc22dc28dece24ac7e6fed1ad0e76b6f93
+  - graph_id: bs-mrpe-complementation
+    title: MrpE-His6 complementation supports high-salt growth
+    scope: Kajiyama2007 Figure1B; KY11 derived from TY5.
+    context: KY11 is TY5 aprE::Pspac-mrpE-His6 spc. LB agar contains 1 M NaCl and 1 mM IPTG; chromosomal integration was PCR-confirmed. The other Mrp genes remain present.
+    family_mapping: Q7WY60/BSU31640, PF01899 8-156 of158 aa, is the B. subtilis reference, not a verified sequence of the2007 UOT1285-derived insert. The tag is C-terminal His6; complementation is at aprE, not a scarless native-locus repair.
+    scope_status: PHENOTYPIC
+    taxon: NCBITaxon:1423
+    limitations: Deletion Figure1A uses0.2 M NaCl, whereas complementation Figure1B uses1 M plus IPTG. Do not calculate a matched-condition rescue magnitude. An empty-aprE vector control and figure-specific replication were not established. MrpE alone is not sufficient outside the remaining Mrp system.
+    nodes:
+      - node_id: complement-mrpe
+        label: Supply induced MrpE-His6 in TY5 with the other Mrp genes intact
+        node_type: PERTURBATION
+        grounding: [UniProtKB:Q7WY60]
+      - node_id: high-salt-growth
+        label: Growth on LB agar with 1 M NaCl and IPTG
+        node_type: PHENOTYPE
+    edges:
+      - edge_id: complementation-enables-growth
+        subject: complement-mrpe
+        predicate: enables
+        object: high-salt-growth
+        mechanism: KY11 grows under the displayed high-salt induction condition, supporting genetic complementation of the deleted subunit. The edge is conditional on the host's remaining machinery, not autonomous MrpE transport.
+        directness: INDIRECT
+        support: OBSERVED
+        evidence_kind: EXPERIMENTAL
+        evidence:
+          - reference: PMID:17693497
+            source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC2168430/
+            snippet: complemented
+            explanation: Original Figure1B delta-E/E-His sector, its caption and Table1 define the complemented strain and distinct assay condition. Association experiments do not supply additional causal edges.
+            cache_path: evidence/PF01899/kajiyama-2007-complementation.txt
+            cache_sha256: ba25f141d8e82575650a60079ef63bbc22dc28dece24ac7e6fed1ad0e76b6f93
+  - graph_id: of4-mrpe-deletion-antiport
+    title: Removing OF4 MrpE reduces coupled vesicle antiport
+    scope: Morino2008 Figure1B; delta-mrpE operon versus tagged pGEMmrpTFCHS7 in E. coli KNabc.
+    context: Everted vesicles from LBK plus50 mM NaCl cultures at37 C. Assay pH7.0-9.0,2 ml,50 mM BTP-sulfate,140 mM choline chloride,5 mM MgCl2,1 uM acridine orange,66 ug protein,2.5 mM succinate and Methods-default2.5 mM NaCl. Duplicate assays from at least three preparations.
+    family_mapping: OF4 MrpE Q9RGZ1 sequence version1 equals AAF21816.1/ADC50689.1/WP_012958052.1 and EF468713.1 CDS ABS70477.1 over158 aa; PF01899 maps8-156. Paper organism Bacillus pseudofirmus OF4, now Alkalihalophilus pseudofirmus. Whole-gene deletion, not an isolated-domain perturbation.
+    scope_status: PHENOTYPIC
+    taxon: NCBITaxon:398511
+    limitations: A small alkaline-pH response remains. Figure2 retains the other six subunits; a weak Figure4 upper band does not establish an active six-subunit complex. Exact deletion boundaries in the unavailable supplement were not inspected. Both parent and mutant are near baseline at pH6.5, excluded from the decreasing-edge range.
+    nodes:
+      - node_id: delete-of4-mrpe
+        label: Remove mrpE from the expressed OF4 operon
+        node_type: PERTURBATION
+        grounding: [UniProtKB:Q9RGZ1]
+      - node_id: sodium-dependent-dequenching
+        label: Sodium-dependent acridine-orange dequenching at pH7-9
+        node_type: ACTIVITY
+    edges:
+      - edge_id: deletion-decreases-antiport-readout
+        subject: delete-of4-mrpe
+        predicate: decreases
+        object: sodium-dependent-dequenching
+        mechanism: Deleting mrpE strongly lowers the sodium-induced dissipation of the respiratory delta-pH compared with the tagged parent, while retaining a small response. The assay measures whole-complex behavior in host membranes, not direct MrpE ion translocation.
+        directness: INDIRECT
+        support: OBSERVED
+        evidence_kind: EXPERIMENTAL
+        evidence:
+          - reference: PMID:18408029
+            source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC2446749/
+            snippet: dequenching
+            explanation: Original Figure1B supplies the pH series and deletion-versus-parent contrast. Methods specifies reagent concentrations; original Figures2 and4B constrain abundance/complex interpretations.
+            cache_path: evidence/PF01899/morino-2008-deletion-and-substitutions.txt
+            cache_sha256: 8ec23c4d31545adb0858209cf4c4cdbc2e2d3dedbf2b80e031f39807adac44d7
+  - graph_id: of4-mrpe-t113a-antiport
+    title: MrpE T113A abolishes the detected vesicle response
+    scope: Morino2008 Figure5B; T113A versus tagged OF4 parent in KNabc.
+    context: Everted-vesicle assay at pH8.5 with10 mM NaCl,2.5 mM succinate,66 ug protein and1 uM acridine orange in BTP-sulfate/choline chloride/MgCl2 buffer. Figure5's10 mM Na overrides the general Methods2.5 mM default; empty vector is the negative control.
+    family_mapping: T113 is verified in Q9RGZ1/ABS70477.1 and lies in PF01899 residues8-156 of158 aa. MrpE is untagged within the A-T7/B-FLAG/C-c-myc/D-His7/G-S parent. Other subunits and host membranes are present.
+    scope_status: PHENOTYPIC
+    taxon: NCBITaxon:398511
+    limitations: T113A also reduces membrane protein signals and full-complex bands; transport loss cannot identify a direct ion-binding role. The older four-TM cartoon is a prediction. The2010 footnoted reuse is not independent replication and has different reported abundance values.
+    nodes:
+      - node_id: t113a
+        label: Substitute MrpE T113A in the expressed OF4 complex
+        node_type: PERTURBATION
+        grounding: [UniProtKB:Q9RGZ1]
+      - node_id: vesicle-dequenching
+        label: Sodium-triggered vesicle dequenching at pH8.5
+        node_type: ACTIVITY
+    edges:
+      - edge_id: t113a-decreases-antiport
+        subject: t113a
+        predicate: decreases
+        object: vesicle-dequenching
+        mechanism: The T113A trace lacks the tagged parent's detectable Na-dependent response. Changed protein abundance, complex stability and catalytic behavior remain alternative or joint explanations.
+        directness: INDIRECT
+        support: OBSERVED
+        evidence_kind: EXPERIMENTAL
+        evidence:
+          - reference: PMID:18408029
+            source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC2446749/
+            snippet: dequenching
+            explanation: Original Figure5B traces and caption define pH8.5/10 mM Na. The separately retained Figure5C/D controls prevent an unsupported atomic mechanism.
+            cache_path: evidence/PF01899/morino-2008-deletion-and-substitutions.txt
+            cache_sha256: 8ec23c4d31545adb0858209cf4c4cdbc2e2d3dedbf2b80e031f39807adac44d7
+  - graph_id: of4-mrpe-t113a-protein-and-complex-signals
+    title: T113A reduces membrane subunit and full-complex signals
+    scope: Morino2008 Figure5C/D; T113A versus tagged OF4 parent in KNabc.
+    context: Membranes from LBK plus50 mM NaCl cultures at37 C. SDS immunoblots use20 ug membrane protein; blue-native immunoblots use30 ug solubilized protein and display MrpA/MrpD probes. Comparisons are within each assay, not across different protein loads.
+    family_mapping: Whole Q9RGZ1/ABS70477.1 MrpE,158 aa,PF01899 8-156; T113 lies inside the match. The changed MrpE protein and partner MrpF/MrpG signals are different measured entities, not additional PF01899 proteins.
+    scope_status: PHENOTYPIC
+    taxon: NCBITaxon:398511
+    limitations: WT-normalized densitometry is not a protein turnover rate. Epitope recognition, folding, localization and detergent stability are not independently resolved. The printed antibody peptide omits a T relative to reference92-104. No arrow from lower MrpE abundance to partner loss is inferred from their co-occurrence.
+    nodes:
+      - node_id: t113a
+        label: Substitute MrpE T113A in the OF4 operon
+        node_type: PERTURBATION
+        grounding: [UniProtKB:Q9RGZ1]
+      - node_id: mrpe-membrane-signal
+        label: Membrane MrpE immunoblot signal
+        node_type: STATE
+        grounding:
+          - UniProtKB:Q9RGZ1
+      - node_id: mrpf-membrane-signal
+        label: Membrane MrpF immunoblot signal
+        node_type: STATE
+      - node_id: mrpg-membrane-signal
+        label: Membrane MrpG immunoblot signal
+        node_type: STATE
+      - node_id: full-complex-bands
+        label: Blue-native bands assigned to full MrpA-G complexes
+        node_type: STATE
+        grounding:
+          - UniProtKB:Q9RGZ1
+    edges:
+      - edge_id: t113a-decreases-mrpe-signal
+        subject: t113a
+        predicate: decreases
+        object: mrpe-membrane-signal
+        mechanism: Figure5C reports a T113A MrpE signal of0.07 relative to parent1. This is a membrane-fraction immunoblot endpoint, not proof of a specific degradation or assembly pathway.
+        directness: INDIRECT
+        support: OBSERVED
+        evidence_kind: EXPERIMENTAL
+        evidence:
+          - reference: PMID:18408029
+            source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC2446749/
+            snippet: dequenching
+            explanation: Original Figure5C MrpE row and SDS-immunoblot Methods. The2010 reused row gives0.11; this edge retains the2008 result without pooling the discrepant values.
+            cache_path: evidence/PF01899/morino-2008-deletion-and-substitutions.txt
+            cache_sha256: 8ec23c4d31545adb0858209cf4c4cdbc2e2d3dedbf2b80e031f39807adac44d7
+      - edge_id: t113a-decreases-mrpf-signal
+        subject: t113a
+        predicate: decreases
+        object: mrpf-membrane-signal
+        mechanism: Figure5C reports a T113A MrpF signal of0.12 relative to parent1. The changed partner signal does not demonstrate direct physical stabilization by MrpE.
+        directness: INDIRECT
+        support: OBSERVED
+        evidence_kind: EXPERIMENTAL
+        evidence:
+          - reference: PMID:18408029
+            source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC2446749/
+            snippet: dequenching
+            explanation: Original Figure5C MrpF row; the2010 reused row instead gives0.07. One experiment supplies several endpoints, not independent replications.
+            cache_path: evidence/PF01899/morino-2008-deletion-and-substitutions.txt
+            cache_sha256: 8ec23c4d31545adb0858209cf4c4cdbc2e2d3dedbf2b80e031f39807adac44d7
+      - edge_id: t113a-decreases-mrpg-signal
+        subject: t113a
+        predicate: decreases
+        object: mrpg-membrane-signal
+        mechanism: Figure5C reports a T113A MrpG signal of0.02 relative to parent1. Its causal molecular explanation is unresolved despite the genetic perturbation-to-readout relationship.
+        directness: INDIRECT
+        support: OBSERVED
+        evidence_kind: EXPERIMENTAL
+        evidence:
+          - reference: PMID:18408029
+            source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC2446749/
+            snippet: dequenching
+            explanation: Original Figure5C MrpG row; the2010 reused row instead gives0.20. Both describe a reduction, but no exact common value or independent repetition is assumed.
+            cache_path: evidence/PF01899/morino-2008-deletion-and-substitutions.txt
+            cache_sha256: 8ec23c4d31545adb0858209cf4c4cdbc2e2d3dedbf2b80e031f39807adac44d7
+      - edge_id: t113a-decreases-full-complex-bands
+        subject: t113a
+        predicate: decreases
+        object: full-complex-bands
+        mechanism: Full-complex bands detected for the tagged parent are absent in the T113A lane while the A-D subcomplex remains. This is a detergent-extracted complex pattern, not direct observation of assembly kinetics or an active isolated A-D transporter.
+        directness: INDIRECT
+        support: OBSERVED
+        evidence_kind: EXPERIMENTAL
+        evidence:
+          - reference: PMID:18408029
+            source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC2446749/
+            snippet: dequenching
+            explanation: Original Figure5D lanes2/3 and caption; only A/D probes are displayed. Detergent/dye-inflated apparent sizes do not independently prove exact stoichiometry.
+            cache_path: evidence/PF01899/morino-2008-deletion-and-substitutions.txt
+            cache_sha256: 8ec23c4d31545adb0858209cf4c4cdbc2e2d3dedbf2b80e031f39807adac44d7
+  - graph_id: of4-mrpe-p114g-antiport
+    title: P114G lowers transport despite retained full-complex bands
+    scope: Morino2008 Figure5B-D; P114G versus tagged OF4 parent in KNabc.
+    context: Everted-vesicle fluorescence at pH8.5,10 mM NaCl,2.5 mM succinate,66 ug protein and1 uM acridine orange. Parallel membrane and native-gel controls are distinct assays, not a single observed temporal chain.
+    family_mapping: P114 is verified in Q9RGZ1/ABS70477.1 within PF01899 8-156. The whole158-aa MrpE variant is expressed with the other six OF4 subunits. A Results typo T114G does not define another allele.
+    scope_status: PHENOTYPIC
+    taxon: NCBITaxon:398511
+    limitations: Figure5C/D retains substantial subunit signals and full-complex forms, but does not prove identical folding or conformation. P114A is tolerated in2010, so proline identity is not absolutely required. Growth claims conflict across sources; no P114G growth edge is included.
+    nodes:
+      - node_id: p114g
+        label: Substitute MrpE P114G in the OF4 complex
+        node_type: PERTURBATION
+        grounding: [UniProtKB:Q9RGZ1]
+      - node_id: vesicle-dequenching
+        label: Sodium-triggered dequenching at pH8.5
+        node_type: ACTIVITY
+    edges:
+      - edge_id: p114g-decreases-antiport
+        subject: p114g
+        predicate: decreases
+        object: vesicle-dequenching
+        mechanism: P114G gives a much smaller response than the tagged parent despite retaining the detected full-complex pattern. The result distinguishes transport function from gross complex loss without locating a sodium-binding atom or proving a conformational activation pathway.
+        directness: INDIRECT
+        support: OBSERVED
+        evidence_kind: EXPERIMENTAL
+        evidence:
+          - reference: PMID:18408029
+            source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC2446749/
+            snippet: dequenching
+            explanation: Original Figure5B trace,5C protein signals and5D lane4 supply the effect and controls. The later reused row is not counted as a second experimental origin.
+            cache_path: evidence/PF01899/morino-2008-deletion-and-substitutions.txt
+            cache_sha256: 8ec23c4d31545adb0858209cf4c4cdbc2e2d3dedbf2b80e031f39807adac44d7
+  - graph_id: of4-mrpe-p114g-apparent-km
+    title: P114G raises the apparent sodium requirement for half-maximal response
+    scope: Morino2008 Figure5B inset; sodium-dependent vesicle response at three pH values.
+    context: Apparent Km derived from Na-dependent acridine-orange dequenching in everted KNabc vesicles expressing tagged OF4 complexes. Separate titrations at pH8.0,8.5,9.0; the fixed10 mM Na trace is not itself the complete titration.
+    family_mapping: Q9RGZ1/ABS70477.1 P114G in whole MrpE,158 aa,PF01899 residues8-156. Other subunits, membrane environment and respiratory energization contribute to the measured kinetic response.
+    scope_status: PHENOTYPIC
+    taxon: NCBITaxon:398511
+    limitations: Apparent Km is not equilibrium sodium-binding Kd or direct occupancy at P114. The2010 table's attributed reuse gives2.4/1.6/1.4 mM rather than the2008 inset1.67/1.30/1.29 mM at pH8/8.5/9. The discrepancy remains unresolved; values are neither averaged nor treated as independent replication.
+    nodes:
+      - node_id: p114g
+        label: Substitute MrpE P114G instead of parental Pro114
+        node_type: PERTURBATION
+        grounding: [UniProtKB:Q9RGZ1]
+      - node_id: apparent-na-km
+        label: Apparent sodium Km of the vesicle fluorescence response
+        node_type: STATE
+    edges:
+      - edge_id: p114g-increases-apparent-km
+        subject: p114g
+        predicate: increases
+        object: apparent-na-km
+        mechanism: The2008 inset reports P114G1.67/1.30/1.29 mM versus parent0.084/0.079/0.060 mM at pH8.0/8.5/9.0. The approximately16.5-21.5-fold shift is a whole-system kinetic phenotype, not isolated MrpE binding affinity.
+        directness: INDIRECT
+        support: OBSERVED
+        evidence_kind: EXPERIMENTAL
+        evidence:
+          - reference: PMID:18408029
+            source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC2446749/
+            snippet: dequenching
+            explanation: Original Figure5B inset supplies all six values and corresponding pH labels; Methods defines the half-maximal response. The higher Km remains distinct from lower response amplitude.
+            cache_path: evidence/PF01899/morino-2008-deletion-and-substitutions.txt
+            cache_sha256: 8ec23c4d31545adb0858209cf4c4cdbc2e2d3dedbf2b80e031f39807adac44d7
+  - graph_id: of4-mrpe-t113y-antiport
+    title: T113Y reduces antiport without gross loss of detected complexes
+    scope: Morino2010 Table1; T113Y versus tagged OF4 parent in KNabc.
+    context: Vesicle assays at pH8.0,8.5,9.0;2 ml,50 mM BTP-chloride,140 mM choline chloride,5 mM MgCl2,1 uM acridine orange,66 ug protein,2.5 mM succinate and10 mM NaCl. Methods specifies two independent preparations; Table1 footnote specifies three experiments, both in duplicate.
+    family_mapping: Q9RGZ1/ABS70477.1 T113Y lies within PF01899 8-156 of158 aa. The substituted MrpE is part of the complete OF4 heterologous complex. The deposited parent matches the reference; every mutant plasmid was not independently resequenced by this review.
+    scope_status: PHENOTYPIC
+    taxon: NCBITaxon:398511
+    limitations: Table1 gives comparable A-G abundance ratios and positive complex columns, not proof of unchanged conformation. Complex scoring need not resolve every subunit. The less-than5%-WT prose does not apply at pH9.0. Supplementary traces/blots were not inspected; Km is not determined, not zero affinity.
+    nodes:
+      - node_id: t113y
+        label: Substitute MrpE T113Y in the OF4 complex
+        node_type: PERTURBATION
+        grounding: [UniProtKB:Q9RGZ1]
+      - node_id: sodium-dependent-response
+        label: Sodium-dependent vesicle dequenching at pH8-9
+        node_type: ACTIVITY
+    edges:
+      - edge_id: t113y-decreases-antiport
+        subject: t113y
+        predicate: decreases
+        object: sodium-dependent-response
+        mechanism: T113Y gives0.1/2.0/4.9% dequenching at pH8.0/8.5/9.0 versus parent44.5/48.9/41.6%. The pH9 mutant response is about11.8% of parent, not below5%. Comparable protein and complex readouts weaken a gross-loss explanation but leave molecular coupling unresolved.
+        directness: INDIRECT
+        support: OBSERVED
+        evidence_kind: EXPERIMENTAL
+        evidence:
+          - reference: PMID:20624916
+            source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC2945585/
+            snippet: antiport
+            explanation: Readable original Table1 T113Y and positive-control rows with Methods and footnotes supply the means, SD, abundance ratios and complex scoring. P114A's retained function is a substitution-specific control, not an identical mutant.
+            cache_path: evidence/PF01899/morino-2010-t113y-and-controls.txt
+            cache_sha256: 23cb518de168e70a7c44ddc858a45bd34bdc2d9f627cf80f1f899665e70e7e28
+  - graph_id: of4-mrpe-t113y-growth
+    title: T113Y fails to confer the parent's salt-growth phenotype
+    scope: Morino2010 Table1; KNabc expressing T113Y versus tagged OF4 parent.
+    context: LBK culture pH7.5,37 C,200 rpm; Table1 scores growth with200 or500 mM added NaCl. Detailed S2 growth curves and a figure-specific duration/replicate count were not inspected.
+    family_mapping: Whole OF4 MrpE Q9RGZ1/ABS70477.1,PF01899 8-156, carries T113Y within the expressed seven-subunit complex. The organism supplying the protein differs from the E. coli assay host.
+    scope_status: PHENOTYPIC
+    taxon: NCBITaxon:398511
+    limitations: Categorical growth score, not a survival percentage or fitted growth rate. This is separate from vesicle transport; no measured transport-to-growth causal chain is claimed. Do not import the16h MrpG Figure4 protocol as an established T113Y condition.
+    nodes:
+      - node_id: t113y
+        label: Express the T113Y OF4 complex instead of tagged parent
+        node_type: PERTURBATION
+        grounding: [UniProtKB:Q9RGZ1]
+      - node_id: salt-growth
+        label: KNabc growth with200 or500 mM added NaCl
+        node_type: PHENOTYPE
+    edges:
+      - edge_id: t113y-decreases-salt-growth
+        subject: t113y
+        predicate: decreases
+        object: salt-growth
+        mechanism: T113Y is scored growth-negative at both salt concentrations where the parent is positive. The system-level outcome does not establish a specific sodium-binding site or isolated-domain sufficiency.
+        directness: INDIRECT
+        support: OBSERVED
+        evidence_kind: EXPERIMENTAL
+        evidence:
+          - reference: PMID:20624916
+            source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC2945585/
+            snippet: antiport
+            explanation: Original Table1 growth columns and corresponding Results define the categorical contrast. The supplemental time courses remain an explicit access/coverage limit.
+            cache_path: evidence/PF01899/morino-2010-t113y-and-controls.txt
+            cache_sha256: 23cb518de168e70a7c44ddc858a45bd34bdc2d9f627cf80f1f899665e70e7e28
 discussions:
-- discussion_id: mrpe-mechanism-and-source-discrepancies
-  prompt: Resolve construct and numerical discrepancies before assigning a direct MrpE ion-binding or
-    conformational mechanism.
-  kind: CURATION_TODO
-  status: OPEN
-  rationale: T113A changes abundance and complex signals, whereas T113Y and P114G lose much transport
-    despite retained detected complexes. These distinct perturbations do not directly observe sodium occupancy
-    or the proposed E-G-to-A-D activation step. P114A retains function; whole-gene deletion retains a
-    small alkaline-pH response.
-  evidence:
-  - reference: PMID:18408029
-    supports: PARTIAL
-    evidence_source: primary_methods_results_and_original_figures
-    explanation: Figure5 provides the scoped transport/abundance/complex/kinetic endpoints. The antibody
-      peptide discrepancy, unavailable deletion-boundary supplement and intermediate His10 wording need
-      resolution; EF468713.1 verifies the final His7 parent.
-  - reference: PMID:20624916
-    supports: PARTIAL
-    evidence_source: primary_methods_results_and_readable_original_table
-    explanation: Footnoted T113A/P114G reuse differs from2008 values. P114G growth is positive in Table1
-      despite reduced-resistance prose, and T113Y is not below5% WT at pH9. Preserve the discrepancies
-      and obtain S2-S6.
-  - reference: PMID:32735215
-    supports: PARTIAL
-    evidence_source: primary_structure_text_and_original_figures
-    explanation: Two-TM/cytoplasmic MrpE topology supersedes the earlier prediction. L41W retains a dimer
-      peak and salt-growth complementation; its mutant transport kinetics were not displayed. Proposed
-      H131/partner-histidine sodium entry is not an observed binding edge.
-  - reference: PMID:36241630
-    supports: PARTIAL
-    evidence_source: primary_methods_results_and_deposited_polymer_sequence
-    explanation: The7QRU MrpE sequence differs from the2008 parent at54,62,158. No strong Na/Mg density
-      was found by the authors; competing paths and conformational gating remain models. No raw map reanalysis
-      was performed.
-  posed_by: Codex
-  posed_date: '2026-10-11'
-  notes: Retained source assessments are in evidence/PF01899. Measure ion occupancy and transport under
-    matched abundance/assembly conditions before adding molecular edges. Do not replace apparent Km with
-    Kd, turn association into activation, or count reused rows as independent experiments.
-- discussion_id: mrpe-family-and-host-coverage
-  prompt: Extend the review to other MrpE/MnhE/PhaE homologs with exact member and host mapping.
-  kind: CURATION_TODO
-  status: OPEN
-  rationale: Selected B. subtilis and OF4 phenotypes plus structural context do not characterize all10765
-    frozen proteins. B. subtilis current reference sequence differs from its historical version; native-host
-    and KNabc phenotypes are not interchangeable.
-  evidence:
-  - reference: PMID:17693497
-    supports: PARTIAL
-    evidence_source: primary_methods_results_and_original_figure
-    explanation: Strain-level deletion and His6 complementation support growth effects but not exact current-reference
-      residue assignments or isolated-domain function.
-  - reference: PMID:9852009
-    supports: PARTIAL
-    evidence_source: current_family_record_primary_citation_lead
-    explanation: S. aureus multisubunit antiporter study is an identified lead, not a completed member-specific
-      causal review.
-  - reference: PMID:9680201
-    supports: PARTIAL
-    evidence_source: current_family_record_primary_citation_lead
-    explanation: R. meliloti pH/symbiosis/K-efflux study needs primary-assay and individual-subunit attribution
-      before graph transfer.
-  posed_by: Codex
-  posed_date: '2026-10-11'
-  notes: Also review the2003 B. subtilis deletion phenotypes,2009 acidic-residue study,group2/Dietzia
-    homologs and later primary work. The2025 histidine-switch paper was only a search lead. This is partial
-    same-agent curation; status remains IN_PROGRESS and no publication or whole-family completion is claimed.
+  - discussion_id: mrpe-mechanism-and-source-discrepancies
+    prompt: Resolve construct and numerical discrepancies before assigning a direct MrpE ion-binding or conformational mechanism.
+    kind: CURATION_TODO
+    status: OPEN
+    rationale: T113A changes abundance and complex signals, whereas T113Y and P114G lose much transport despite retained detected complexes. These distinct perturbations do not directly observe sodium occupancy or the proposed E-G-to-A-D activation step. P114A retains function; whole-gene deletion retains a small alkaline-pH response.
+    evidence:
+      - reference: PMID:18408029
+        supports: PARTIAL
+        evidence_source: primary_methods_results_and_original_figures
+        explanation: Figure5 provides the scoped transport/abundance/complex/kinetic endpoints. The antibody peptide discrepancy, unavailable deletion-boundary supplement and intermediate His10 wording need resolution; EF468713.1 verifies the final His7 parent.
+      - reference: PMID:20624916
+        supports: PARTIAL
+        evidence_source: primary_methods_results_and_readable_original_table
+        explanation: Footnoted T113A/P114G reuse differs from2008 values. P114G growth is positive in Table1 despite reduced-resistance prose, and T113Y is not below5% WT at pH9. Preserve the discrepancies and obtain S2-S6.
+      - reference: PMID:32735215
+        supports: PARTIAL
+        evidence_source: primary_structure_text_and_original_figures
+        explanation: Two-TM/cytoplasmic MrpE topology supersedes the earlier prediction. L41W retains a dimer peak and salt-growth complementation; its mutant transport kinetics were not displayed. Proposed H131/partner-histidine sodium entry is not an observed binding edge.
+      - reference: PMID:36241630
+        supports: PARTIAL
+        evidence_source: primary_methods_results_and_deposited_polymer_sequence
+        explanation: The7QRU MrpE sequence differs from the2008 parent at54,62,158. No strong Na/Mg density was found by the authors; competing paths and conformational gating remain models. No raw map reanalysis was performed.
+    posed_by: Codex
+    posed_date: '2026-10-11'
+    notes: Retained source assessments are in evidence/PF01899. Measure ion occupancy and transport under matched abundance/assembly conditions before adding molecular edges. Do not replace apparent Km with Kd, turn association into activation, or count reused rows as independent experiments.
+  - discussion_id: mrpe-family-and-host-coverage
+    prompt: Extend the review to other MrpE/MnhE/PhaE homologs with exact member and host mapping.
+    kind: CURATION_TODO
+    status: OPEN
+    rationale: Selected B. subtilis and OF4 phenotypes plus structural context do not characterize all10765 frozen proteins. B. subtilis current reference sequence differs from its historical version; native-host and KNabc phenotypes are not interchangeable.
+    evidence:
+      - reference: PMID:17693497
+        supports: PARTIAL
+        evidence_source: primary_methods_results_and_original_figure
+        explanation: Strain-level deletion and His6 complementation support growth effects but not exact current-reference residue assignments or isolated-domain function.
+      - reference: PMID:9852009
+        supports: PARTIAL
+        evidence_source: current_family_record_primary_citation_lead
+        explanation: S. aureus multisubunit antiporter study is an identified lead, not a completed member-specific causal review.
+      - reference: PMID:9680201
+        supports: PARTIAL
+        evidence_source: current_family_record_primary_citation_lead
+        explanation: R. meliloti pH/symbiosis/K-efflux study needs primary-assay and individual-subunit attribution before graph transfer.
+    posed_by: Codex
+    posed_date: '2026-10-11'
+    notes: Also review the2003 B. subtilis deletion phenotypes,2009 acidic-residue study,group2/Dietzia homologs and later primary work. The2025 histidine-switch paper was only a search lead. This is partial same-agent curation; status remains IN_PROGRESS and no publication or whole-family completion is claimed.

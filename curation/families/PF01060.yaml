@@ -2,267 +2,201 @@ pfam_id: PF01060
 curation_status: IN_PROGRESS
 curation_history: history/records/PF01060
 causal_graphs:
-- graph_id: ttr52-sm211-corpse-persistence
-  title: The sm211 V43M allele increases embryonic corpse persistence
-  scope: Whole-animal C. elegans ttr-52(sm211) phenotype compared with N2 Bristol, not an isolated-domain
-    biochemical reaction or a gene-null allele.
-  context: 2010 Figure 1C; sm211 backcrossed four times to N2. Thirty-three corpses from three WT embryos
-    and 32 from three mutant embryos were followed. Four-dimensional microscopy of 300-min embryos uses
-    118 mM NaCl/48 mM KCl egg buffer, 26-um stacks with 1.3-um spacing, every 5 min for 150 min. Displayed
-    mean durations are 28 +/- 2 versus 55 +/- 6 min, SEM.
-  family_mapping: G5ED35 ttr-52/F11F1.7 has 135 residues, sequence version 1, exact UniProt/InterPro agreement
-    and PF01060 at 28-112 inclusive. The study's deposited HM130527.1 translation ADO60153.1 matches G5ED35
-    exactly. V43 lies inside the match; sm211 is V43M, not the distinct tm2078 deletion.
-  scope_status: PHENOTYPIC
-  taxon: NCBITaxon:6239
-  limitations: Corpses are nested within six embryos, not 65 independent embryo replicates. Exact imaging
-    temperature and handling of the >110-min histogram bin remain unresolved. Gene mapping and corpse-count
-    rescue support the target but do not separately rescue every lifetime endpoint. Altered localization
-    can mediate V43M effects; no unique ligand-contact chemistry or increased apoptosis is inferred.
-  nodes:
-  - node_id: sm211-v43m-versus-n2
-    label: Backcrossed ttr-52(sm211/V43M) compared with N2
-    node_type: PERTURBATION
-    grounding:
-    - UniProtKB:G5ED35
-  - node_id: embryonic-corpse-duration
-    label: Duration of visible embryonic cell corpses
-    node_type: PHENOTYPE
-  edges:
-  - edge_id: sm211-increases-corpse-duration
-    subject: sm211-v43m-versus-n2
-    predicate: increases
-    object: embryonic-corpse-duration
-    mechanism: Corpses persist longer in the backcrossed mutant than in N2 under the same microscopy comparison,
-      supporting impaired clearance. The observation does not resolve a direct domain-specific chemical
-      mechanism or imply more cells initiate apoptosis.
-    directness: INDIRECT
-    support: OBSERVED
-    evidence_kind: EXPERIMENTAL
-    evidence:
-    - reference: PMID:20526330
-      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC2896453/
-      snippet: average duration almost twice as long
-      explanation: Figure 1C and author-PDF microscopy Methods support longer durations with the nested
-        embryo/corpse sample counts explicitly preserved.
-      cache_path: evidence/PF01060/wang-2010-ttr52.txt
-      cache_sha256: 25fdf0dda3f70670639cc158c8309b50946c89dd624f7a2a09520c338d6cfea8
-    - reference: https://www.ebi.ac.uk/interpro/api/protein/uniprot/G5ED35/entry/pfam/PF01060/
-      source_url: https://www.ebi.ac.uk/interpro/api/protein/uniprot/G5ED35/entry/pfam/PF01060/
-      snippet: 'G5ED35 Pfam:PF01060 interval: 28-112, inclusive'
-      explanation: Reference mapping and the exact deposited cDNA translation link the tested gene to
-        this family; neither proves isolated-domain sufficiency or verifies every experimental mutant
-        sequence.
-      cache_path: evidence/PF01060/TTR52-identity.txt
-      cache_sha256: f427c257515e42142a20f220f13d9116886d45105b6ff785feb7b588b9917161
-- graph_id: ttr52-sm211-ced1-rings
-  title: The sm211 allele decreases CED-1 ring labeling around corpses
-  scope: CED-1::GFP localization in 1.5-fold C. elegans embryos carrying smIs34, compared with smIs34;ttr-52(sm211),
-    in the 2010 Figure 4B experiment.
-  context: Pced-1CED-1::GFP marks corpses identified by Nomarski morphology. Serial optical sections span
-    20 um at 1-um spacing. Fifteen embryos per stage and genotype, SEM; the adopted 1.5-fold comparison
-    is approximately 64% versus 34% labeled corpses with reported P < 0.0001. Comma-stage data are a separate
-    comparison.
-  family_mapping: sm211 changes V43 to M in G5ED35, within PF01060 28-112. Reference sequence version
-    1 matches the study's HM130527.1 protein translation exactly. Intact secreted TTR-52 is the implicated
-    protein, not a purified 28-112 fragment.
-  scope_status: PHENOTYPIC
-  taxon: NCBITaxon:6239
-  limitations: Reporter rings are a cellular localization endpoint, not a molecular binding constant or
-    a directly tracked recruitment-to-engulfment chain. V43M can change secretion/localization and is
-    not interchangeable with a deletion. Separate pull-down and co-IP experiments show association, not
-    automatic receptor activation. No endpoint-specific rescue or raw image reanalysis is claimed here.
-  nodes:
-  - node_id: sm211-in-ced1-gfp-background
-    label: sm211 added to the smIs34 CED-1::GFP background
-    node_type: PERTURBATION
-    grounding:
-    - UniProtKB:G5ED35
-  - node_id: ced1-ring-positive-corpse-fraction
-    label: Fraction of corpses surrounded by CED-1::GFP rings
-    node_type: PHENOTYPE
-  edges:
-  - edge_id: sm211-decreases-ced1-ring-labeling
-    subject: sm211-in-ced1-gfp-background
-    predicate: decreases
-    object: ced1-ring-positive-corpse-fraction
-    mechanism: The mutant background has fewer ring-positive corpses at the matched embryonic stage. This
-      supports a TTR-52-dependent effect on receptor localization without identifying a direct V43 contact
-      or proving the full engulfment trajectory.
-    directness: INDIRECT
-    support: OBSERVED
-    evidence_kind: EXPERIMENTAL
-    evidence:
-    - reference: PMID:20526330
-      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC2896453/
-      snippet: only half
-      explanation: Figure 4B and the corresponding Results support the decreased labeled fraction; the
-        exact stage and reporter background constrain this edge.
-      cache_path: evidence/PF01060/wang-2010-ttr52.txt
-      cache_sha256: 25fdf0dda3f70670639cc158c8309b50946c89dd624f7a2a09520c338d6cfea8
-- graph_id: ttr52-tm2078-wt-transgene-rescue
-  title: WT TTR-52 transgene expression reduces persistent corpse counts in tm2078
-  scope: Full-length WT TTR-52::mCherry under heat-shock promoters in the ttr-52(tm2078) deletion background,
-    2012 Figure 3 upper panel. This is not the sm211 allele or its lifetime assay.
-  context: With versus without transgene expression, scored in 1.5-fold embryos after 1 h heat shock at
-    33 C and recovery at 20 C, examined 3.5 h after treatment. Two independent transgenic lines, n >=
-    15 per line, SEM. The graph adopts the WT rescue comparison, not all substitution or truncation constructs
-    in the same figure.
-  family_mapping: Full-length G5ED35 sequence version 1 contains PF01060 at 28-112 and agrees with the
-    2010 deposited cDNA translation. The signal region 1-20 and C-terminal I113/L132 are outside the current
-    profile. Complete transgene junctions and tm2078 deletion boundaries remain unverified.
-  scope_status: PHENOTYPIC
-  taxon: NCBITaxon:6239
-  limitations: Corpse count supports genetic rescue of a clearance phenotype, not direct measurement of
-    single-corpse duration or prevention of apoptosis. The comparison follows a heat-shock expression
-    protocol; it does not establish an isolated protein-dose effect independent of that intervention.
-    Variant-label discrepancies elsewhere in Figure 3 are excluded from this WT edge.
-  nodes:
-  - node_id: heat-shock-wt-ttr52-expression
-    label: Heat-shock-induced WT TTR-52::mCherry expression in tm2078
-    node_type: PERTURBATION
-    grounding:
-    - UniProtKB:G5ED35
-  - node_id: tm2078-corpse-count
-    label: Persistent cell corpse count in 1.5-fold tm2078 embryos
-    node_type: PHENOTYPE
-  edges:
-  - edge_id: wt-transgene-decreases-tm2078-corpse-count
-    subject: heat-shock-wt-ttr52-expression
-    predicate: decreases
-    object: tm2078-corpse-count
-    mechanism: The induced WT transgene condition has fewer persistent corpses than the condition without
-      transgene expression. This genetic rescue is kept separate from sm211 and the purified lipid-binding
-      assay rather than joined into a directly observed molecular sequence.
-    directness: INDIRECT
-    support: OBSERVED
-    evidence_kind: EXPERIMENTAL
-    evidence:
-    - reference: PMID:22713871
-      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC3387661/
-      snippet: number of cell corpses
-      explanation: Figure 3 upper-panel WT bars and heat-shock Methods support the decrease; two lines
-        and at least 15 embryos per line are reported. No precise count was digitized for this graph.
-      cache_path: evidence/PF01060/kang-2012-ttr52.txt
-      cache_sha256: 83f1a7397083beeb8e89c13b8b6a702e67877c358bb1f6b32bbbd9105f4fe510
-- graph_id: ttr52-substitutions-ptdser-strip-binding
-  title: D51A, D80A and N85A reduce TTR-52 binding to PtdSer on lipid strips
-  scope: Separately affinity-purified WT and substituted full-length TTR-52-mCherry-Flag secreted from
-    transfected 293T cells, 2012 Figure 4. The mammalian production host does not make this a mammalian
-    TTR assay.
-  context: P-6001 lipid strips; 25 mM Tris-HCl pH 7, 150 mM NaCl, 0.1% Tween 20, 0.1 mM ZnSO4 and 0.2
-    mM CaCl2. Block 1 h at 22 C with 1% dried milk; protein incubation overnight at 4 C without milk,
-    three washes, anti-Flag detection. Anti-TTR-52 blot checks protein presence. Two independent experiments;
-    exact protein dose is not specified.
-  family_mapping: D51, D80 and N85 match G5ED35 sequence version 1 and lie within PF01060 at 28-112. The
-    study's earlier cDNA deposit matches this reference exactly. Full-length secreted fusion preparations
-    are not isolated domain fragments; cleavage and fusion junctions remain construct-specific uncertainties.
-  scope_status: MECHANISTIC
-  taxon: NCBITaxon:6239
-  limitations: Directness concerns the measured immobilized-lipid binding endpoint, not atomic ion coordination,
-    bilayer insertion or receptor activation. Blot presence is not exact equimolar loading or a folding
-    control. Other lipid signals remain visible in mutant strips. The crystallized six-alanine M5 protein
-    and modeled WT coordinates do not directly show a WT binding trajectory. The 2010 strip protocol has
-    tenfold higher cation concentrations and is not merged here.
-  nodes:
-  - node_id: d51a-strip-preparation
-    label: D51A substituted for WT TTR-52 in the strip assay
-    node_type: PERTURBATION
-    grounding:
-    - UniProtKB:G5ED35
-  - node_id: d80a-strip-preparation
-    label: D80A substituted for WT TTR-52 in the strip assay
-    node_type: PERTURBATION
-    grounding:
-    - UniProtKB:G5ED35
-  - node_id: n85a-strip-preparation
-    label: N85A substituted for WT TTR-52 in the strip assay
-    node_type: PERTURBATION
-    grounding:
-    - UniProtKB:G5ED35
-  - node_id: ptdser-strip-binding-signal
-    label: TTR-52 binding signal at the PtdSer spot
-    node_type: ACTIVITY
-    grounding:
-    - UniProtKB:G5ED35
-  edges:
-  - edge_id: d51a-decreases-ptdser-binding
-    subject: d51a-strip-preparation
-    predicate: decreases
-    object: ptdser-strip-binding-signal
-    mechanism: D51A yields less PtdSer-spot signal than WT under the stated strip conditions. The effect
-      does not uniquely establish a direct D51-lipid or D51-metal contact and can include folding differences.
-    directness: DIRECT
-    support: OBSERVED
-    evidence_kind: EXPERIMENTAL
-    evidence:
-    - reference: PMID:22713871
-      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC3387661/
-      snippet: greatly decrease the PtdSer-binding ability
-      explanation: Figure 4 D51A strip compared with the WT TBS/cation strip, accompanied by the protein
-        blot, supports reduced binding rather than an affinity constant or observed metal geometry.
-      cache_path: evidence/PF01060/kang-2012-ttr52.txt
-      cache_sha256: 83f1a7397083beeb8e89c13b8b6a702e67877c358bb1f6b32bbbd9105f4fe510
-  - edge_id: d80a-decreases-ptdser-binding
-    subject: d80a-strip-preparation
-    predicate: decreases
-    object: ptdser-strip-binding-signal
-    mechanism: D80A yields less PtdSer-spot signal than WT, with protein detected by immunoblot. The result
-      supports a substitution effect on this binding endpoint, not unique ion coordination or complete
-      loss of all lipid association.
-    directness: DIRECT
-    support: OBSERVED
-    evidence_kind: EXPERIMENTAL
-    evidence:
-    - reference: PMID:22713871
-      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC3387661/
-      snippet: greatly decrease the PtdSer-binding ability
-      explanation: Figure 4 D80A and WT cation-containing strips support the direction. Other lipid signals
-        and the lack of exact protein-dose normalization constrain interpretation.
-      cache_path: evidence/PF01060/kang-2012-ttr52.txt
-      cache_sha256: 83f1a7397083beeb8e89c13b8b6a702e67877c358bb1f6b32bbbd9105f4fe510
-  - edge_id: n85a-decreases-ptdser-binding
-    subject: n85a-strip-preparation
-    predicate: decreases
-    object: ptdser-strip-binding-signal
-    mechanism: N85A decreases PtdSer-spot signal relative to WT in the same stated protocol. This does
-      not directly show the proposed N85 geometry, an intact bilayer interaction or a downstream engulfment
-      event.
-    directness: DIRECT
-    support: OBSERVED
-    evidence_kind: EXPERIMENTAL
-    evidence:
-    - reference: PMID:22713871
-      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC3387661/
-      snippet: greatly decrease the PtdSer-binding ability
-      explanation: Figure 4 N85A strip and WT cation-containing comparator support reduced PtdSer signal.
-        The graph does not join this endpoint to separate worm phenotypes as an observed causal chain.
-      cache_path: evidence/PF01060/kang-2012-ttr52.txt
-      cache_sha256: 83f1a7397083beeb8e89c13b8b6a702e67877c358bb1f6b32bbbd9105f4fe510
+  - graph_id: ttr52-sm211-corpse-persistence
+    title: The sm211 V43M allele increases embryonic corpse persistence
+    scope: Whole-animal C. elegans ttr-52(sm211) phenotype compared with N2 Bristol, not an isolated-domain biochemical reaction or a gene-null allele.
+    context: 2010 Figure 1C; sm211 backcrossed four times to N2. Thirty-three corpses from three WT embryos and 32 from three mutant embryos were followed. Four-dimensional microscopy of 300-min embryos uses 118 mM NaCl/48 mM KCl egg buffer, 26-um stacks with 1.3-um spacing, every 5 min for 150 min. Displayed mean durations are 28 +/- 2 versus 55 +/- 6 min, SEM.
+    family_mapping: G5ED35 ttr-52/F11F1.7 has 135 residues, sequence version 1, exact UniProt/InterPro agreement and PF01060 at 28-112 inclusive. The study's deposited HM130527.1 translation ADO60153.1 matches G5ED35 exactly. V43 lies inside the match; sm211 is V43M, not the distinct tm2078 deletion.
+    scope_status: PHENOTYPIC
+    taxon: NCBITaxon:6239
+    limitations: Corpses are nested within six embryos, not 65 independent embryo replicates. Exact imaging temperature and handling of the >110-min histogram bin remain unresolved. Gene mapping and corpse-count rescue support the target but do not separately rescue every lifetime endpoint. Altered localization can mediate V43M effects; no unique ligand-contact chemistry or increased apoptosis is inferred.
+    nodes:
+      - node_id: sm211-v43m-versus-n2
+        label: Backcrossed ttr-52(sm211/V43M) compared with N2
+        node_type: PERTURBATION
+        grounding:
+          - UniProtKB:G5ED35
+      - node_id: embryonic-corpse-duration
+        label: Duration of visible embryonic cell corpses
+        node_type: PHENOTYPE
+    edges:
+      - edge_id: sm211-increases-corpse-duration
+        subject: sm211-v43m-versus-n2
+        predicate: increases
+        object: embryonic-corpse-duration
+        mechanism: Corpses persist longer in the backcrossed mutant than in N2 under the same microscopy comparison, supporting impaired clearance. The observation does not resolve a direct domain-specific chemical mechanism or imply more cells initiate apoptosis.
+        directness: INDIRECT
+        support: OBSERVED
+        evidence_kind: EXPERIMENTAL
+        evidence:
+          - reference: PMID:20526330
+            source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC2896453/
+            snippet: average duration almost twice as long
+            explanation: Figure 1C and author-PDF microscopy Methods support longer durations with the nested embryo/corpse sample counts explicitly preserved.
+            cache_path: evidence/PF01060/wang-2010-ttr52.txt
+            cache_sha256: 25fdf0dda3f70670639cc158c8309b50946c89dd624f7a2a09520c338d6cfea8
+          - reference: https://www.ebi.ac.uk/interpro/api/protein/uniprot/G5ED35/entry/pfam/PF01060/
+            source_url: https://www.ebi.ac.uk/interpro/api/protein/uniprot/G5ED35/entry/pfam/PF01060/
+            snippet: 'G5ED35 Pfam:PF01060 interval: 28-112, inclusive'
+            explanation: Reference mapping and the exact deposited cDNA translation link the tested gene to this family; neither proves isolated-domain sufficiency or verifies every experimental mutant sequence.
+            cache_path: evidence/PF01060/TTR52-identity.txt
+            cache_sha256: f427c257515e42142a20f220f13d9116886d45105b6ff785feb7b588b9917161
+  - graph_id: ttr52-sm211-ced1-rings
+    title: The sm211 allele decreases CED-1 ring labeling around corpses
+    scope: CED-1::GFP localization in 1.5-fold C. elegans embryos carrying smIs34, compared with smIs34;ttr-52(sm211), in the 2010 Figure 4B experiment.
+    context: Pced-1CED-1::GFP marks corpses identified by Nomarski morphology. Serial optical sections span 20 um at 1-um spacing. Fifteen embryos per stage and genotype, SEM; the adopted 1.5-fold comparison is approximately 64% versus 34% labeled corpses with reported P < 0.0001. Comma-stage data are a separate comparison.
+    family_mapping: sm211 changes V43 to M in G5ED35, within PF01060 28-112. Reference sequence version 1 matches the study's HM130527.1 protein translation exactly. Intact secreted TTR-52 is the implicated protein, not a purified 28-112 fragment.
+    scope_status: PHENOTYPIC
+    taxon: NCBITaxon:6239
+    limitations: Reporter rings are a cellular localization endpoint, not a molecular binding constant or a directly tracked recruitment-to-engulfment chain. V43M can change secretion/localization and is not interchangeable with a deletion. Separate pull-down and co-IP experiments show association, not automatic receptor activation. No endpoint-specific rescue or raw image reanalysis is claimed here.
+    nodes:
+      - node_id: sm211-in-ced1-gfp-background
+        label: sm211 added to the smIs34 CED-1::GFP background
+        node_type: PERTURBATION
+        grounding:
+          - UniProtKB:G5ED35
+      - node_id: ced1-ring-positive-corpse-fraction
+        label: Fraction of corpses surrounded by CED-1::GFP rings
+        node_type: PHENOTYPE
+    edges:
+      - edge_id: sm211-decreases-ced1-ring-labeling
+        subject: sm211-in-ced1-gfp-background
+        predicate: decreases
+        object: ced1-ring-positive-corpse-fraction
+        mechanism: The mutant background has fewer ring-positive corpses at the matched embryonic stage. This supports a TTR-52-dependent effect on receptor localization without identifying a direct V43 contact or proving the full engulfment trajectory.
+        directness: INDIRECT
+        support: OBSERVED
+        evidence_kind: EXPERIMENTAL
+        evidence:
+          - reference: PMID:20526330
+            source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC2896453/
+            snippet: only half
+            explanation: Figure 4B and the corresponding Results support the decreased labeled fraction; the exact stage and reporter background constrain this edge.
+            cache_path: evidence/PF01060/wang-2010-ttr52.txt
+            cache_sha256: 25fdf0dda3f70670639cc158c8309b50946c89dd624f7a2a09520c338d6cfea8
+  - graph_id: ttr52-tm2078-wt-transgene-rescue
+    title: WT TTR-52 transgene expression reduces persistent corpse counts in tm2078
+    scope: Full-length WT TTR-52::mCherry under heat-shock promoters in the ttr-52(tm2078) deletion background, 2012 Figure 3 upper panel. This is not the sm211 allele or its lifetime assay.
+    context: With versus without transgene expression, scored in 1.5-fold embryos after 1 h heat shock at 33 C and recovery at 20 C, examined 3.5 h after treatment. Two independent transgenic lines, n >= 15 per line, SEM. The graph adopts the WT rescue comparison, not all substitution or truncation constructs in the same figure.
+    family_mapping: Full-length G5ED35 sequence version 1 contains PF01060 at 28-112 and agrees with the 2010 deposited cDNA translation. The signal region 1-20 and C-terminal I113/L132 are outside the current profile. Complete transgene junctions and tm2078 deletion boundaries remain unverified.
+    scope_status: PHENOTYPIC
+    taxon: NCBITaxon:6239
+    limitations: Corpse count supports genetic rescue of a clearance phenotype, not direct measurement of single-corpse duration or prevention of apoptosis. The comparison follows a heat-shock expression protocol; it does not establish an isolated protein-dose effect independent of that intervention. Variant-label discrepancies elsewhere in Figure 3 are excluded from this WT edge.
+    nodes:
+      - node_id: heat-shock-wt-ttr52-expression
+        label: Heat-shock-induced WT TTR-52::mCherry expression in tm2078
+        node_type: PERTURBATION
+        grounding:
+          - UniProtKB:G5ED35
+      - node_id: tm2078-corpse-count
+        label: Persistent cell corpse count in 1.5-fold tm2078 embryos
+        node_type: PHENOTYPE
+    edges:
+      - edge_id: wt-transgene-decreases-tm2078-corpse-count
+        subject: heat-shock-wt-ttr52-expression
+        predicate: decreases
+        object: tm2078-corpse-count
+        mechanism: The induced WT transgene condition has fewer persistent corpses than the condition without transgene expression. This genetic rescue is kept separate from sm211 and the purified lipid-binding assay rather than joined into a directly observed molecular sequence.
+        directness: INDIRECT
+        support: OBSERVED
+        evidence_kind: EXPERIMENTAL
+        evidence:
+          - reference: PMID:22713871
+            source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC3387661/
+            snippet: number of cell corpses
+            explanation: Figure 3 upper-panel WT bars and heat-shock Methods support the decrease; two lines and at least 15 embryos per line are reported. No precise count was digitized for this graph.
+            cache_path: evidence/PF01060/kang-2012-ttr52.txt
+            cache_sha256: 83f1a7397083beeb8e89c13b8b6a702e67877c358bb1f6b32bbbd9105f4fe510
+  - graph_id: ttr52-substitutions-ptdser-strip-binding
+    title: D51A, D80A and N85A reduce TTR-52 binding to PtdSer on lipid strips
+    scope: Separately affinity-purified WT and substituted full-length TTR-52-mCherry-Flag secreted from transfected 293T cells, 2012 Figure 4. The mammalian production host does not make this a mammalian TTR assay.
+    context: P-6001 lipid strips; 25 mM Tris-HCl pH 7, 150 mM NaCl, 0.1% Tween 20, 0.1 mM ZnSO4 and 0.2 mM CaCl2. Block 1 h at 22 C with 1% dried milk; protein incubation overnight at 4 C without milk, three washes, anti-Flag detection. Anti-TTR-52 blot checks protein presence. Two independent experiments; exact protein dose is not specified.
+    family_mapping: D51, D80 and N85 match G5ED35 sequence version 1 and lie within PF01060 at 28-112. The study's earlier cDNA deposit matches this reference exactly. Full-length secreted fusion preparations are not isolated domain fragments; cleavage and fusion junctions remain construct-specific uncertainties.
+    scope_status: MECHANISTIC
+    taxon: NCBITaxon:6239
+    limitations: Directness concerns the measured immobilized-lipid binding endpoint, not atomic ion coordination, bilayer insertion or receptor activation. Blot presence is not exact equimolar loading or a folding control. Other lipid signals remain visible in mutant strips. The crystallized six-alanine M5 protein and modeled WT coordinates do not directly show a WT binding trajectory. The 2010 strip protocol has tenfold higher cation concentrations and is not merged here.
+    nodes:
+      - node_id: d51a-strip-preparation
+        label: D51A substituted for WT TTR-52 in the strip assay
+        node_type: PERTURBATION
+        grounding:
+          - UniProtKB:G5ED35
+      - node_id: d80a-strip-preparation
+        label: D80A substituted for WT TTR-52 in the strip assay
+        node_type: PERTURBATION
+        grounding:
+          - UniProtKB:G5ED35
+      - node_id: n85a-strip-preparation
+        label: N85A substituted for WT TTR-52 in the strip assay
+        node_type: PERTURBATION
+        grounding:
+          - UniProtKB:G5ED35
+      - node_id: ptdser-strip-binding-signal
+        label: TTR-52 binding signal at the PtdSer spot
+        node_type: ACTIVITY
+        grounding:
+          - UniProtKB:G5ED35
+    edges:
+      - edge_id: d51a-decreases-ptdser-binding
+        subject: d51a-strip-preparation
+        predicate: decreases
+        object: ptdser-strip-binding-signal
+        mechanism: D51A yields less PtdSer-spot signal than WT under the stated strip conditions. The effect does not uniquely establish a direct D51-lipid or D51-metal contact and can include folding differences.
+        directness: DIRECT
+        support: OBSERVED
+        evidence_kind: EXPERIMENTAL
+        evidence:
+          - reference: PMID:22713871
+            source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC3387661/
+            snippet: greatly decrease the PtdSer-binding ability
+            explanation: Figure 4 D51A strip compared with the WT TBS/cation strip, accompanied by the protein blot, supports reduced binding rather than an affinity constant or observed metal geometry.
+            cache_path: evidence/PF01060/kang-2012-ttr52.txt
+            cache_sha256: 83f1a7397083beeb8e89c13b8b6a702e67877c358bb1f6b32bbbd9105f4fe510
+      - edge_id: d80a-decreases-ptdser-binding
+        subject: d80a-strip-preparation
+        predicate: decreases
+        object: ptdser-strip-binding-signal
+        mechanism: D80A yields less PtdSer-spot signal than WT, with protein detected by immunoblot. The result supports a substitution effect on this binding endpoint, not unique ion coordination or complete loss of all lipid association.
+        directness: DIRECT
+        support: OBSERVED
+        evidence_kind: EXPERIMENTAL
+        evidence:
+          - reference: PMID:22713871
+            source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC3387661/
+            snippet: greatly decrease the PtdSer-binding ability
+            explanation: Figure 4 D80A and WT cation-containing strips support the direction. Other lipid signals and the lack of exact protein-dose normalization constrain interpretation.
+            cache_path: evidence/PF01060/kang-2012-ttr52.txt
+            cache_sha256: 83f1a7397083beeb8e89c13b8b6a702e67877c358bb1f6b32bbbd9105f4fe510
+      - edge_id: n85a-decreases-ptdser-binding
+        subject: n85a-strip-preparation
+        predicate: decreases
+        object: ptdser-strip-binding-signal
+        mechanism: N85A decreases PtdSer-spot signal relative to WT in the same stated protocol. This does not directly show the proposed N85 geometry, an intact bilayer interaction or a downstream engulfment event.
+        directness: DIRECT
+        support: OBSERVED
+        evidence_kind: EXPERIMENTAL
+        evidence:
+          - reference: PMID:22713871
+            source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC3387661/
+            snippet: greatly decrease the PtdSer-binding ability
+            explanation: Figure 4 N85A strip and WT cation-containing comparator support reduced PtdSer signal. The graph does not join this endpoint to separate worm phenotypes as an observed causal chain.
+            cache_path: evidence/PF01060/kang-2012-ttr52.txt
+            cache_sha256: 83f1a7397083beeb8e89c13b8b6a702e67877c358bb1f6b32bbbd9105f4fe510
 discussions:
-- discussion_id: ttr52-construct-discrepancies-and-receptor-mechanism
-  prompt: Resolve TTR-52 construct discrepancies and extend the receptor and lipid mechanism with separately
-    scoped evidence.
-  kind: CURATION_TODO
-  status: OPEN
-  rationale: Cellular clearance, CED-1 labeling and in-vitro lipid-strip effects are different endpoints.
-    Source inconsistencies concern M5 corpse labeling and the C-terminal double mutant; they cannot be
-    silently combined into a complete observed engulfment mechanism.
-  evidence:
-  - reference: PMID:20526330
-    supports: PARTIAL
-    evidence_source: selected_full_text
-    explanation: Main Results, selected figures and author-PDF Methods support the sm211 contexts and
-      link the deposited sequence. All supplementary figures, movies and raw microscopy were not reviewed.
-  - reference: PMID:22713871
-    supports: PARTIAL
-    evidence_source: selected_full_text
-    explanation: Figures 3/4 and relevant Methods support tm2078 WT rescue and three lipid-strip substitutions.
-      The text uses I113R/L132K whereas Figure 3 labels I113R/L132R; M5 labeling descriptions also conflict.
-      These constructs are excluded from adopted substitution edges.
-  posed_by: Codex
-  posed_date: '2026-10-11'
-  notes: Resolve tm2078 boundaries, clone/fusion sequences, exact protein dose, folding controls, imaging
-    temperature, censoring and M5/double-mutant discrepancies. Review supplements and receptor experiments
-    before extending a causal chain. Do not transfer vertebrate hormone transport or modeled WT ion geometry.
-    Partial same-agent scientific review; remain IN_PROGRESS.
+  - discussion_id: ttr52-construct-discrepancies-and-receptor-mechanism
+    prompt: Resolve TTR-52 construct discrepancies and extend the receptor and lipid mechanism with separately scoped evidence.
+    kind: CURATION_TODO
+    status: OPEN
+    rationale: Cellular clearance, CED-1 labeling and in-vitro lipid-strip effects are different endpoints. Source inconsistencies concern M5 corpse labeling and the C-terminal double mutant; they cannot be silently combined into a complete observed engulfment mechanism.
+    evidence:
+      - reference: PMID:20526330
+        supports: PARTIAL
+        evidence_source: selected_full_text
+        explanation: Main Results, selected figures and author-PDF Methods support the sm211 contexts and link the deposited sequence. All supplementary figures, movies and raw microscopy were not reviewed.
+      - reference: PMID:22713871
+        supports: PARTIAL
+        evidence_source: selected_full_text
+        explanation: Figures 3/4 and relevant Methods support tm2078 WT rescue and three lipid-strip substitutions. The text uses I113R/L132K whereas Figure 3 labels I113R/L132R; M5 labeling descriptions also conflict. These constructs are excluded from adopted substitution edges.
+    posed_by: Codex
+    posed_date: '2026-10-11'
+    notes: Resolve tm2078 boundaries, clone/fusion sequences, exact protein dose, folding controls, imaging temperature, censoring and M5/double-mutant discrepancies. Review supplements and receptor experiments before extending a causal chain. Do not transfer vertebrate hormone transport or modeled WT ion geometry. Partial same-agent scientific review; remain IN_PROGRESS.

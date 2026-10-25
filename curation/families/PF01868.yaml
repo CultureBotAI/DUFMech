@@ -109,12 +109,12 @@ causal_graphs:
     label: Rpp21-induced Rpp29 NMR chemical-shift response
     node_type: STATE
     grounding:
-    - UniProtKB:Q8U007
+      - UniProtKB:Q8U007
   - node_id: itc-response
     label: Detectable Rpp21-Rpp29 binding response by ITC
     node_type: STATE
     grounding:
-    - UniProtKB:Q8U007
+      - UniProtKB:Q8U007
   edges:
   - edge_id: delta24-decreases-nmr-response
     subject: delta24

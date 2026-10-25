@@ -14,18 +14,21 @@ session:
 events:
 - type: EDIT
   outcome: changed
-  summary: Ground PF01174 YaaD-plus-YaaE partner-addition perturbation node with UniProtKB:P37527
-    and UniProtKB:P37528
-  details: Grounded perturbation node add-yaad-to-yaae-glutamine in graph pdxt-untagged-partner-dependent-glutaminase
-    with UniProtKB:P37527 (Bacillus subtilis subsp. subtilis str. 168 YaaD/PdxS, locus
-    BSU00110, 294 aa, NCBITaxon:224308) and UniProtKB:P37528 (B. subtilis 168 YaaE/PdxT,
-    locus BSU00120, 196 aa, PF01174 envelope 1-194, PMID:15667268), preserving exact
-    partner and family-carrier protein scope while keeping chemical-inhibitor and
-    spectrophotometric-signal nodes ungrounded.
+  summary: Ground PF01174 causal-graph protein/gene/complex nodes with UniProtKB:P37527, UniProtKB:P37528
+  details: 'In graph pdxt-untagged-partner-dependent-glutaminase (taxon NCBITaxon:224308; references PMID:16030023,
+    https://www.ebi.ac.uk/interpro/api/protein/uniprot/P37528/entry/pfam/PF01174/), grounded add-yaad-to-yaae-glutamine
+    (PERTURBATION: Add 4 uM YaaD to untagged YaaE and glutamine) with UniProtKB:P37527, UniProtKB:P37528.
+    Family mapping: P37528/PDXT_BACSU, 196 aa, sequence version 1, matches InterPro exactly with PF01174
+    at 6-188. The study cloned strain-168 genomic yaaE, verified constructs by sequencing and purified
+    proteins by N-terminal sequencing. Primer ends match MLTIGVL and EYKQKALV. Untagged activity preparations
+    differ from His6-YaaE used for pull-out assays.'
   sections:
   - causal_graphs
 links:
+  issues:
+  - https://github.com/CultureBotAI/DUFMech/issues/358
   urls:
   - https://rest.uniprot.org/uniprotkb/P37527.json
   - https://rest.uniprot.org/uniprotkb/P37528.json
-  - https://pubmed.ncbi.nlm.nih.gov/15667268/
+  - https://pubmed.ncbi.nlm.nih.gov/16030023/
+  - https://www.ebi.ac.uk/interpro/api/protein/uniprot/P37528/entry/pfam/PF01174/

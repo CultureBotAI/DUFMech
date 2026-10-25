@@ -2,200 +2,136 @@ pfam_id: PF01493
 curation_status: IN_PROGRESS
 curation_history: history/records/PF01493
 causal_graphs:
-- graph_id: azospirillum-glts-salt-radius
-  title: Added NaCl lowers the measured radius of purified GltSHis particles
-  scope: Recombinant A. brasilense glutamate synthase containing wild-type alpha and C-terminally His6-tagged
-    beta in Cottevieille 2008 Figure S3C; not an isolated GXGXG domain.
-  context: Compare 1 mg/ml GltSHis after 17 h at 15 C with 1 M added NaCl or no added NaCl in 25 mM HEPES/KOH
-    pH 7.5, 1 mM EDTA and 1 mM DTT. The plotted DLS radius is measured on the treated preparation. General
-    DLS Methods describe a 50-ul cuvette and twenty 30-s acquisitions; these acquisitions are not independent
-    preparations. The untagged enzyme is reported to behave similarly, but its unshown experiment is not
-    a separate edge.
-  family_mapping: Alpha-subunit reference UniProtKB:Q05755 is 1515 aa, sequence version 1; PF01493 spans
-    1249-1496. UniProt and InterPro sequences agree. PDB 1EA0 polymer 1-1479 exactly matches reference
-    37-1515, establishing the mature-protein offset of 36 and a mature-domain interval of 1213-1460. The
-    tested complex retains the other alpha domains and beta partner. The reference sequence paper identifies
-    Sp7, but the complete 2008 clones and original donor strain were not independently reconstructed.
-  scope_status: MECHANISTIC
-  taxon: NCBITaxon:192
-  limitations: DLS measures particle-size behavior, not domain-specific contact rupture or unique oligomer
-    composition. SAXS and cryo-EM support an assembly interpretation but use separate measurements and
-    mixture models. Some irreversible subunit loss and activity decrease occur on prolonged salt treatment.
-    This is not salt-dependent cellular regulation, isolated-domain sufficiency or an observed electron-transfer
-    trajectory.
-  nodes:
-  - node_id: gltshis-one-molar-nacl
-    label: GltSHis incubated with 1 M added NaCl rather than no added NaCl for 17 h
-    node_type: PERTURBATION
-    grounding:
-    - UniProtKB:Q05755
-  - node_id: gltshis-dls-radius
-    label: DLS-derived radius of the purified GltSHis particles
-    node_type: STATE
-    grounding:
-    - UniProtKB:Q05755
-  edges:
-  - edge_id: salt-decreases-gltshis-radius
-    subject: gltshis-one-molar-nacl
-    predicate: decreases
-    object: gltshis-dls-radius
-    mechanism: The 1-M-NaCl endpoint has a smaller measured particle radius than the matched no-added-salt
-      preparation. The directly observed purified-complex effect is retained without equating the DLS
-      readout with an atomically resolved PF01493 interface transition.
-    directness: DIRECT
-    support: OBSERVED
-    evidence_kind: EXPERIMENTAL
-    evidence:
-    - reference: PMID:18199747
-      source_url: https://people.impmc.fr/sjonic/Papers/JBC_GltS.pdf
-      snippet: calculated radius
-      explanation: Visually inspected supplemental Figure 3C and its caption on supplement page 9 establish
-        the 17-h salt comparison; main enzyme Methods and supplemental DLS Methods define the preparation
-        and measurement.
-      cache_path: evidence/PF01493/cottevieille-2008-assembly.txt
-      cache_sha256: cb7d78a923b2aeb774855712227aa70f50c19af66cc12f781b33b86a04f17521
-    - reference: https://www.ebi.ac.uk/interpro/api/protein/uniprot/Q05755/entry/pfam/PF01493/
-      source_url: https://www.ebi.ac.uk/interpro/api/protein/uniprot/Q05755/entry/pfam/PF01493/
-      snippet: 'Q05755 Pfam:PF01493; domain interval: 1249-1496, inclusive.'
-      explanation: Reference mapping and the exact 1EA0 sequence alignment distinguish the mature alpha-subunit
-        numbering from precursor coordinates and from the partner beta subunit.
-      cache_path: evidence/PF01493/GltS-identity.txt
-      cache_sha256: 156cb20252c22d4a17437babc87c16b813dfc77aa7f714b724c9812b21276e1d
-- graph_id: azospirillum-glts-salt-dilution-radius
-  title: Salt dilution increases particle radius after GltSHis salt treatment
-  scope: Purified wild-type-alpha/His6-beta GltSHis in Cottevieille 2008 Figure S3D; a separate dilution
-    experiment, not full recovery of all original complexes.
-  context: A 1.2-mg/ml sample previously incubated for 17 h with 1 M NaCl is diluted tenfold into the
-    same HEPES/EDTA/DTT buffer without NaCl. The matched control is diluted tenfold into buffer containing
-    1 M NaCl. Calculated final protein is 0.12 mg/ml in both; residual NaCl in the low-salt arm is 0.1
-    M, not zero. DLS follows radius over approximately 500 s using 10-s acquisitions. General DLS temperature
-    is 15 C; the caption does not separately establish the pretreatment temperature for this panel.
-  family_mapping: Q05755 alpha contains PF01493 at precursor 1249-1496, corresponding to mature 1213-1460
-    after removal of residues 1-36. The exact deposited mature sequence matches the current reference.
-    This assay uses intact alpha/beta complexes with beta, not alpha, carrying the His6 extension.
-  scope_status: MECHANISTIC
-  taxon: NCBITaxon:192
-  limitations: The two arms have matched dilution but different salt concentrations. Increased hydrodynamic
-    size supports reassociation without proving exact stoichiometry, complete recovery, a unique GXGXG-mediated
-    contact or a cellular mechanism. A fitted single-exponential curve and repeated acquisitions are not
-    independent biological replications or an atomistic rate constant.
-  nodes:
-  - node_id: salt-treated-gltshis-low-salt-dilution
-    label: Tenfold dilution of salt-treated GltSHis into NaCl-free buffer instead of 1-M-NaCl buffer
-    node_type: PERTURBATION
-    grounding:
-    - UniProtKB:Q05755
-  - node_id: post-dilution-gltshis-radius
-    label: DLS-derived particle radius after dilution
-    node_type: STATE
-    grounding:
-    - UniProtKB:Q05755
-  edges:
-  - edge_id: low-salt-dilution-increases-radius
-    subject: salt-treated-gltshis-low-salt-dilution
-    predicate: increases
-    object: post-dilution-gltshis-radius
-    mechanism: The low-salt-dilution trace increases while the equal-dilution high-salt control remains
-      near its starting size. The net reassembly-associated size change is observed in the purified preparation,
-      without asserting which domain supplies an independently sufficient interface.
-    directness: DIRECT
-    support: OBSERVED
-    evidence_kind: EXPERIMENTAL
-    evidence:
-    - reference: PMID:18199747
-      source_url: https://people.impmc.fr/sjonic/Papers/JBC_GltS.pdf
-      snippet: re-association
-      explanation: Visually inspected supplemental Figure 3D and its caption distinguish both dilution
-        arms, the 17-h pretreatment, starting concentration and 10-s measurement interval. Supplemental
-        Table 1 supplies separate reversibility context, not identical conditions.
-      cache_path: evidence/PF01493/cottevieille-2008-assembly.txt
-      cache_sha256: cb7d78a923b2aeb774855712227aa70f50c19af66cc12f781b33b86a04f17521
-- graph_id: azospirillum-glts-delta40-expression
-  title: The delta40 alpha construct lacks detectable production in the reported expression attempts
-  scope: A. brasilense gltB C-terminal truncation coexpressed with His6-tagged beta in E. coli BL21(DE3),
-    as reported in Cottevieille 2008; an expression phenotype, not directly measured folding failure.
-  context: pETGltSHis-derived T7 coproduction constructs encode either wild-type, delta7 or delta40 alpha.
-    Supplemental Methods describe 30-C growth to absorbance about 2 followed by 25 C without IPTG, with
-    delta40 attempts also using 25 C for 6-7 h or 15 C with 0.1 mM IPTG for 17 h. Delta7 production/purification
-    is retained, whereas no truncated delta40 polypeptide production was observed. The main text compares
-    with the productive full-length preparation. No plotted expression gel or detection threshold is supplied
-    for delta40 in the inspected material.
-  family_mapping: Q05755 precursor 37-1515 matches mature 1EA0 residues 1-1479. The delta40 deletion maps
-    to precursor 1476-1515, overlapping PF01493 at 1476-1496 and also removing an outside-domain tail.
-    Reverse-complement translation of printed Oligo 3 ends at reference EEHVTETQSRF, residues 1465-1475,
-    followed by two stops. Delta7 removes 1509-1515 outside PF01493; Oligo 2 locally matches the retained
-    terminus. Printed nucleotide stop-position prose does not fully agree with this mapping; whole clones
-    remain unverified.
-  scope_status: PHENOTYPIC
-  taxon: NCBITaxon:192
-  limitations: This is a reported negative production endpoint in a heterologous host, not a direct protein-folding,
-    degradation or translation assay. Detection method, quantitative limits, independent clone counts
-    and rescue are not established. The authors' exposed-hydrophobic-core explanation remains an interpretation.
-    The deletion is not restricted to PF01493, and the unaffected delta7 is outside its match; neither
-    result proves isolated-domain assembly function.
-  nodes:
-  - node_id: gltb-delta40-coproduction
-    label: Reported delta40 alpha construct rather than productive full-length alpha in the beta-His6
-      coproduction system
-    node_type: PERTURBATION
-    grounding:
-    - UniProtKB:Q05755
-  - node_id: detectable-alpha-polypeptide
-    label: Reported detectable alpha-polypeptide production in BL21(DE3)
-    node_type: PHENOTYPE
-  edges:
-  - edge_id: delta40-decreases-detectable-alpha
-    subject: gltb-delta40-coproduction
-    predicate: decreases
-    object: detectable-alpha-polypeptide
-    mechanism: The source reports no detectable production of the delta40 alpha polypeptide across the
-      attempted expression conditions, unlike the productive full-length and delta7 constructs. The observed
-      expression outcome is indirect with respect to folding or assembly and is not converted into a uniquely
-      resolved molecular mechanism.
-    directness: INDIRECT
-    support: OBSERVED
-    evidence_kind: EXPERIMENTAL
-    evidence:
-    - reference: PMID:18199747
-      source_url: https://people.impmc.fr/sjonic/Papers/JBC_GltS.pdf
-      snippet: no production
-      explanation: Main page 8245 and supplemental construction/expression Methods on pages 1-2 report
-        the negative production result. The Methods and printed primers were visually checked; a delta40
-        protein gel was not independently available for assessment.
-      cache_path: evidence/PF01493/cottevieille-2008-assembly.txt
-      cache_sha256: cb7d78a923b2aeb774855712227aa70f50c19af66cc12f781b33b86a04f17521
-    - reference: https://files.rcsb.org/download/1EA0.cif
-      source_url: https://files.rcsb.org/download/1EA0.cif
-      snippet: The deposited 1EA0 polymer is exactly Q05755 residues 37-1515.
-      explanation: Exact sequence comparison and deposited alignment resolve the 36-residue numbering
-        offset; only 21 deleted residues lie in the current Pfam interval.
-      cache_path: evidence/PF01493/GltS-identity.txt
-      cache_sha256: 156cb20252c22d4a17437babc87c16b813dfc77aa7f714b724c9812b21276e1d
+  - graph_id: azospirillum-glts-salt-radius
+    title: Added NaCl lowers the measured radius of purified GltSHis particles
+    scope: Recombinant A. brasilense glutamate synthase containing wild-type alpha and C-terminally His6-tagged beta in Cottevieille 2008 Figure S3C; not an isolated GXGXG domain.
+    context: Compare 1 mg/ml GltSHis after 17 h at 15 C with 1 M added NaCl or no added NaCl in 25 mM HEPES/KOH pH 7.5, 1 mM EDTA and 1 mM DTT. The plotted DLS radius is measured on the treated preparation. General DLS Methods describe a 50-ul cuvette and twenty 30-s acquisitions; these acquisitions are not independent preparations. The untagged enzyme is reported to behave similarly, but its unshown experiment is not a separate edge.
+    family_mapping: Alpha-subunit reference UniProtKB:Q05755 is 1515 aa, sequence version 1; PF01493 spans 1249-1496. UniProt and InterPro sequences agree. PDB 1EA0 polymer 1-1479 exactly matches reference 37-1515, establishing the mature-protein offset of 36 and a mature-domain interval of 1213-1460. The tested complex retains the other alpha domains and beta partner. The reference sequence paper identifies Sp7, but the complete 2008 clones and original donor strain were not independently reconstructed.
+    scope_status: MECHANISTIC
+    taxon: NCBITaxon:192
+    limitations: DLS measures particle-size behavior, not domain-specific contact rupture or unique oligomer composition. SAXS and cryo-EM support an assembly interpretation but use separate measurements and mixture models. Some irreversible subunit loss and activity decrease occur on prolonged salt treatment. This is not salt-dependent cellular regulation, isolated-domain sufficiency or an observed electron-transfer trajectory.
+    nodes:
+      - node_id: gltshis-one-molar-nacl
+        label: GltSHis incubated with 1 M added NaCl rather than no added NaCl for 17 h
+        node_type: PERTURBATION
+        grounding:
+          - UniProtKB:Q05755
+      - node_id: gltshis-dls-radius
+        label: DLS-derived radius of the purified GltSHis particles
+        node_type: STATE
+        grounding:
+          - UniProtKB:Q05755
+    edges:
+      - edge_id: salt-decreases-gltshis-radius
+        subject: gltshis-one-molar-nacl
+        predicate: decreases
+        object: gltshis-dls-radius
+        mechanism: The 1-M-NaCl endpoint has a smaller measured particle radius than the matched no-added-salt preparation. The directly observed purified-complex effect is retained without equating the DLS readout with an atomically resolved PF01493 interface transition.
+        directness: DIRECT
+        support: OBSERVED
+        evidence_kind: EXPERIMENTAL
+        evidence:
+          - reference: PMID:18199747
+            source_url: https://people.impmc.fr/sjonic/Papers/JBC_GltS.pdf
+            snippet: calculated radius
+            explanation: Visually inspected supplemental Figure 3C and its caption on supplement page 9 establish the 17-h salt comparison; main enzyme Methods and supplemental DLS Methods define the preparation and measurement.
+            cache_path: evidence/PF01493/cottevieille-2008-assembly.txt
+            cache_sha256: cb7d78a923b2aeb774855712227aa70f50c19af66cc12f781b33b86a04f17521
+          - reference: https://www.ebi.ac.uk/interpro/api/protein/uniprot/Q05755/entry/pfam/PF01493/
+            source_url: https://www.ebi.ac.uk/interpro/api/protein/uniprot/Q05755/entry/pfam/PF01493/
+            snippet: 'Q05755 Pfam:PF01493; domain interval: 1249-1496, inclusive.'
+            explanation: Reference mapping and the exact 1EA0 sequence alignment distinguish the mature alpha-subunit numbering from precursor coordinates and from the partner beta subunit.
+            cache_path: evidence/PF01493/GltS-identity.txt
+            cache_sha256: 156cb20252c22d4a17437babc87c16b813dfc77aa7f714b724c9812b21276e1d
+  - graph_id: azospirillum-glts-salt-dilution-radius
+    title: Salt dilution increases particle radius after GltSHis salt treatment
+    scope: Purified wild-type-alpha/His6-beta GltSHis in Cottevieille 2008 Figure S3D; a separate dilution experiment, not full recovery of all original complexes.
+    context: A 1.2-mg/ml sample previously incubated for 17 h with 1 M NaCl is diluted tenfold into the same HEPES/EDTA/DTT buffer without NaCl. The matched control is diluted tenfold into buffer containing 1 M NaCl. Calculated final protein is 0.12 mg/ml in both; residual NaCl in the low-salt arm is 0.1 M, not zero. DLS follows radius over approximately 500 s using 10-s acquisitions. General DLS temperature is 15 C; the caption does not separately establish the pretreatment temperature for this panel.
+    family_mapping: Q05755 alpha contains PF01493 at precursor 1249-1496, corresponding to mature 1213-1460 after removal of residues 1-36. The exact deposited mature sequence matches the current reference. This assay uses intact alpha/beta complexes with beta, not alpha, carrying the His6 extension.
+    scope_status: MECHANISTIC
+    taxon: NCBITaxon:192
+    limitations: The two arms have matched dilution but different salt concentrations. Increased hydrodynamic size supports reassociation without proving exact stoichiometry, complete recovery, a unique GXGXG-mediated contact or a cellular mechanism. A fitted single-exponential curve and repeated acquisitions are not independent biological replications or an atomistic rate constant.
+    nodes:
+      - node_id: salt-treated-gltshis-low-salt-dilution
+        label: Tenfold dilution of salt-treated GltSHis into NaCl-free buffer instead of 1-M-NaCl buffer
+        node_type: PERTURBATION
+        grounding:
+          - UniProtKB:Q05755
+      - node_id: post-dilution-gltshis-radius
+        label: DLS-derived particle radius after dilution
+        node_type: STATE
+        grounding:
+          - UniProtKB:Q05755
+    edges:
+      - edge_id: low-salt-dilution-increases-radius
+        subject: salt-treated-gltshis-low-salt-dilution
+        predicate: increases
+        object: post-dilution-gltshis-radius
+        mechanism: The low-salt-dilution trace increases while the equal-dilution high-salt control remains near its starting size. The net reassembly-associated size change is observed in the purified preparation, without asserting which domain supplies an independently sufficient interface.
+        directness: DIRECT
+        support: OBSERVED
+        evidence_kind: EXPERIMENTAL
+        evidence:
+          - reference: PMID:18199747
+            source_url: https://people.impmc.fr/sjonic/Papers/JBC_GltS.pdf
+            snippet: re-association
+            explanation: Visually inspected supplemental Figure 3D and its caption distinguish both dilution arms, the 17-h pretreatment, starting concentration and 10-s measurement interval. Supplemental Table 1 supplies separate reversibility context, not identical conditions.
+            cache_path: evidence/PF01493/cottevieille-2008-assembly.txt
+            cache_sha256: cb7d78a923b2aeb774855712227aa70f50c19af66cc12f781b33b86a04f17521
+  - graph_id: azospirillum-glts-delta40-expression
+    title: The delta40 alpha construct lacks detectable production in the reported expression attempts
+    scope: A. brasilense gltB C-terminal truncation coexpressed with His6-tagged beta in E. coli BL21(DE3), as reported in Cottevieille 2008; an expression phenotype, not directly measured folding failure.
+    context: pETGltSHis-derived T7 coproduction constructs encode either wild-type, delta7 or delta40 alpha. Supplemental Methods describe 30-C growth to absorbance about 2 followed by 25 C without IPTG, with delta40 attempts also using 25 C for 6-7 h or 15 C with 0.1 mM IPTG for 17 h. Delta7 production/purification is retained, whereas no truncated delta40 polypeptide production was observed. The main text compares with the productive full-length preparation. No plotted expression gel or detection threshold is supplied for delta40 in the inspected material.
+    family_mapping: Q05755 precursor 37-1515 matches mature 1EA0 residues 1-1479. The delta40 deletion maps to precursor 1476-1515, overlapping PF01493 at 1476-1496 and also removing an outside-domain tail. Reverse-complement translation of printed Oligo 3 ends at reference EEHVTETQSRF, residues 1465-1475, followed by two stops. Delta7 removes 1509-1515 outside PF01493; Oligo 2 locally matches the retained terminus. Printed nucleotide stop-position prose does not fully agree with this mapping; whole clones remain unverified.
+    scope_status: PHENOTYPIC
+    taxon: NCBITaxon:192
+    limitations: This is a reported negative production endpoint in a heterologous host, not a direct protein-folding, degradation or translation assay. Detection method, quantitative limits, independent clone counts and rescue are not established. The authors' exposed-hydrophobic-core explanation remains an interpretation. The deletion is not restricted to PF01493, and the unaffected delta7 is outside its match; neither result proves isolated-domain assembly function.
+    nodes:
+      - node_id: gltb-delta40-coproduction
+        label: Reported delta40 alpha construct rather than productive full-length alpha in the beta-His6 coproduction system
+        node_type: PERTURBATION
+        grounding:
+          - UniProtKB:Q05755
+      - node_id: detectable-alpha-polypeptide
+        label: Reported detectable alpha-polypeptide production in BL21(DE3)
+        node_type: PHENOTYPE
+    edges:
+      - edge_id: delta40-decreases-detectable-alpha
+        subject: gltb-delta40-coproduction
+        predicate: decreases
+        object: detectable-alpha-polypeptide
+        mechanism: The source reports no detectable production of the delta40 alpha polypeptide across the attempted expression conditions, unlike the productive full-length and delta7 constructs. The observed expression outcome is indirect with respect to folding or assembly and is not converted into a uniquely resolved molecular mechanism.
+        directness: INDIRECT
+        support: OBSERVED
+        evidence_kind: EXPERIMENTAL
+        evidence:
+          - reference: PMID:18199747
+            source_url: https://people.impmc.fr/sjonic/Papers/JBC_GltS.pdf
+            snippet: no production
+            explanation: Main page 8245 and supplemental construction/expression Methods on pages 1-2 report the negative production result. The Methods and printed primers were visually checked; a delta40 protein gel was not independently available for assessment.
+            cache_path: evidence/PF01493/cottevieille-2008-assembly.txt
+            cache_sha256: cb7d78a923b2aeb774855712227aa70f50c19af66cc12f781b33b86a04f17521
+          - reference: https://files.rcsb.org/download/1EA0.cif
+            source_url: https://files.rcsb.org/download/1EA0.cif
+            snippet: The deposited 1EA0 polymer is exactly Q05755 residues 37-1515.
+            explanation: Exact sequence comparison and deposited alignment resolve the 36-residue numbering offset; only 21 deleted residues lie in the current Pfam interval.
+            cache_path: evidence/PF01493/GltS-identity.txt
+            cache_sha256: 156cb20252c22d4a17437babc87c16b813dfc77aa7f714b724c9812b21276e1d
 discussions:
-- discussion_id: gxgxg-domain-boundaries-and-assembly-causality
-  prompt: Resolve complete GltS constructs and domain-specific interventions before extending GXGXG assembly
-    mechanisms.
-  kind: CURATION_TODO
-  status: OPEN
-  rationale: Whole-complex salt effects and a partly overlapping truncation phenotype do not isolate PF01493
-    function. The mature-protein offset is resolved, but nucleotide coordinate prose, delta40 expression
-    detection and causal intermediates remain uncertain.
-  evidence:
-  - reference: PMID:18199747
-    supports: PARTIAL
-    evidence_source: full_text_and_supplement
-    explanation: Main assembly/kinetic Results, relevant Methods/Discussion and supplemental construction/DLS
-      information were inspected. Figure S3 and Table 2 were visually checked. Salt preincubation, assay
-      salt and oligomer composition are not interchangeable interventions; the kinetic correlation and
-      structural electron-transfer scheme are not adopted as observed domain-specific edges.
-  - reference: https://files.rcsb.org/download/1EA0.cif
-    supports: SUPPORT
-    evidence_source: deposited_sequence
-    explanation: Exact polymer-reference matching resolves precursor versus mature numbering but does
-      not reconstruct every later assay construct or prove a folding mechanism.
-  posed_by: Codex
-  posed_date: '2026-10-11'
-  notes: FwdC/FmdC, plant/ferredoxin-dependent synthases, other taxa and later experimental studies remain
-    uncurated. Current UniProt oligomer prose is not substituted for the source's heterogeneous hexamer/protomer
-    model. No native physiological regulation or isolated-domain sufficiency is claimed. Partial scientific
-    self-review; IN_PROGRESS.
+  - discussion_id: gxgxg-domain-boundaries-and-assembly-causality
+    prompt: Resolve complete GltS constructs and domain-specific interventions before extending GXGXG assembly mechanisms.
+    kind: CURATION_TODO
+    status: OPEN
+    rationale: Whole-complex salt effects and a partly overlapping truncation phenotype do not isolate PF01493 function. The mature-protein offset is resolved, but nucleotide coordinate prose, delta40 expression detection and causal intermediates remain uncertain.
+    evidence:
+      - reference: PMID:18199747
+        supports: PARTIAL
+        evidence_source: full_text_and_supplement
+        explanation: Main assembly/kinetic Results, relevant Methods/Discussion and supplemental construction/DLS information were inspected. Figure S3 and Table 2 were visually checked. Salt preincubation, assay salt and oligomer composition are not interchangeable interventions; the kinetic correlation and structural electron-transfer scheme are not adopted as observed domain-specific edges.
+      - reference: https://files.rcsb.org/download/1EA0.cif
+        supports: SUPPORT
+        evidence_source: deposited_sequence
+        explanation: Exact polymer-reference matching resolves precursor versus mature numbering but does not reconstruct every later assay construct or prove a folding mechanism.
+    posed_by: Codex
+    posed_date: '2026-10-11'
+    notes: FwdC/FmdC, plant/ferredoxin-dependent synthases, other taxa and later experimental studies remain uncurated. Current UniProt oligomer prose is not substituted for the source's heterogeneous hexamer/protomer model. No native physiological regulation or isolated-domain sufficiency is claimed. Partial scientific self-review; IN_PROGRESS.

@@ -14,15 +14,17 @@ session:
 events:
 - type: EDIT
   outcome: changed
-  summary: Ground PF01060 TTR-52 PtdSer strip-binding protein-state readout node with
-    UniProtKB:G5ED35
-  details: Grounded node ptdser-strip-binding-signal in graph ttr52-substitutions-ptdser-strip-binding
-    with UniProtKB:G5ED35 (Caenorhabditis elegans TTR-52, locus F11G11.3, 135 aa,
-    NCBITaxon:6239, PF01060 envelope 23-134, PMID:20400946), representing the secreted
-    TTR-52 protein bound at the phosphatidylserine spot on the lipid strip.
+  summary: Ground PF01060 causal-graph protein/gene/complex nodes with UniProtKB:G5ED35
+  details: 'In graph ttr52-substitutions-ptdser-strip-binding (taxon NCBITaxon:6239; references PMID:22713871),
+    grounded ptdser-strip-binding-signal (ACTIVITY: TTR-52 binding signal at the PtdSer spot) with UniProtKB:G5ED35.
+    Family mapping: D51, D80 and N85 match G5ED35 sequence version 1 and lie within PF01060 at 28-112.
+    The study''s earlier cDNA deposit matches this reference exactly. Full-length secreted fusion preparations
+    are not isolated domain fragments; cleavage and fusion junctions remain construct-specific uncertainties.'
   sections:
   - causal_graphs
 links:
+  issues:
+  - https://github.com/CultureBotAI/DUFMech/issues/358
   urls:
   - https://rest.uniprot.org/uniprotkb/G5ED35.json
-  - https://pubmed.ncbi.nlm.nih.gov/20400946/
+  - https://pubmed.ncbi.nlm.nih.gov/22713871/

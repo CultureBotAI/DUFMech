@@ -189,7 +189,7 @@ causal_graphs:
     label: Detectable ITC CTP-binding response
     node_type: STATE
     grounding:
-    - UniProtKB:Q9YF05
+      - UniProtKB:Q9YF05
   - node_id: weaker-single-mutants
     label: D41A, R51A, G54A, D55A, T58A, R108A, R114A or D122A, each separately
     node_type: PERTURBATION
@@ -398,7 +398,7 @@ causal_graphs:
     label: Anti-His-detected DGGGP strip-binding signal
     node_type: STATE
     grounding:
-    - UniProtKB:Q9YF05
+      - UniProtKB:Q9YF05
   edges:
   - edge_id: d122a-or-d125a-lowers-strip-binding
     subject: d122a-or-d125a

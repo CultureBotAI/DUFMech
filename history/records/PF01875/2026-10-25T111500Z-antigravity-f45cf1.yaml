@@ -14,13 +14,17 @@ session:
 events:
 - type: EDIT
   outcome: changed
-  summary: Ground PF01875 human MEMO1 iron-binding calorimetric state node with UniProtKB:Q9Y316
-  details: Grounded protein-ligand binding state node iron-binding-response in graph
-    human-iron-binding-substitutions with UniProtKB:Q9Y316 (Homo sapiens MEMO1, gene
-    C2orf4, 297 aa, NCBITaxon:9606, PF01875 envelope 4-287, PMID:38336932).
+  summary: Ground PF01875 causal-graph protein/gene/complex nodes with UniProtKB:Q9Y316
+  details: 'In graph human-iron-binding-substitutions (taxon NCBITaxon:9606; references PMID:38640016),
+    grounded iron-binding-response (STATE: WT-like iron-binding calorimetric response) with UniProtKB:Q9Y316.
+    Family mapping: Q9Y316/NP_057039.1, PF01875 8-291. Deposited 7KQ8 entity1 is exactly canonical4-297,
+    not full297 aa. pTYB12 intein-cleaved preparation; H49/C244 use native reference numbering and lie
+    inside the Pfam match. Assay-batch N termini are not independently sequenced.'
   sections:
   - causal_graphs
 links:
+  issues:
+  - https://github.com/CultureBotAI/DUFMech/issues/358
   urls:
   - https://rest.uniprot.org/uniprotkb/Q9Y316.json
-  - https://pubmed.ncbi.nlm.nih.gov/38336932/
+  - https://pubmed.ncbi.nlm.nih.gov/38640016/

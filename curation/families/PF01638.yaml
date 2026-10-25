@@ -87,7 +87,7 @@ causal_graphs:
     label: BRH DNA in the shifted HxlR-DNA complex
     node_type: STATE
     grounding:
-    - UniProtKB:P42406
+      - UniProtKB:P42406
   - node_id: c11a-binding
     label: C11A instead of WT HxlR
     node_type: PERTURBATION

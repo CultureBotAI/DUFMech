@@ -14,15 +14,17 @@ session:
 events:
 - type: EDIT
   outcome: changed
-  summary: Ground PF01978 TrmBL1-MD promoter gel-shift complex node with UniProtKB:Q8U4G4
-  details: Grounded protein-DNA complex readout node shifted_md in graph trmbl1-md-mutants-2007
-    with UniProtKB:Q8U4G4 (Pyrococcus furiosus DSM 3638 TrmBL1, locus PF0124, 341
-    aa, NCBITaxon:186497, PF01978 envelope 211-319, PMID:17384193), while leaving
-    thesis pSL152 nodes ungrounded due to the unresolved P. furiosus Q9HGZ9 vs P.
-    woesei Q7LYW4 plasmid-origin taxonomy ambiguity.
+  summary: Ground PF01978 causal-graph protein/gene/complex nodes with UniProtKB:Q8U4G4
+  details: 'In graph trmbl1-md-mutants-2007 (references PMID:17587231), grounded shifted_md (STATE: Reported
+    retardation of the MD promoter probe) with UniProtKB:Q8U4G4. Family mapping: Q8U4G4 sequence 1/entry
+    96 reference has 341 aa with Y49/D50 inside PF01978 (10-77); PF11495 (112-248) and PF31112 (256-339)
+    are separate regions. Mutant sequencing is reported but complete inserts were not inspected. TrmB
+    Y50/D51 are not these residues/protein.'
   sections:
   - causal_graphs
 links:
+  issues:
+  - https://github.com/CultureBotAI/DUFMech/issues/358
   urls:
   - https://rest.uniprot.org/uniprotkb/Q8U4G4.json
-  - https://pubmed.ncbi.nlm.nih.gov/17384193/
+  - https://pubmed.ncbi.nlm.nih.gov/17587231/

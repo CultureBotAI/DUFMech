@@ -295,17 +295,17 @@ causal_graphs:
     label: Hjc radiolabel signal with SiRe_0171
     node_type: STATE
     grounding:
-    - UniProtKB:F0NID3
+      - UniProtKB:F0NID3
   - node_id: label-2030
     label: Hjc radiolabel signal with SiRe_2030
     node_type: STATE
     grounding:
-    - UniProtKB:F0NID3
+      - UniProtKB:F0NID3
   - node_id: label-2056kd
     label: Hjc radiolabel signal with SiRe_2056KD
     node_type: STATE
     grounding:
-    - UniProtKB:F0NID3
+      - UniProtKB:F0NID3
   edges:
   - edge_id: s34a-decreases-0171-label
     subject: s34a-0171

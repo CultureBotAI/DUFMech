@@ -14,15 +14,16 @@ session:
 events:
 - type: EDIT
   outcome: changed
-  summary: Ground PF01867 Cas2-addition perturbation node in the E. coli Cas1 reaction
-    with UniProtKB:Q46896
-  details: Grounded perturbation node add-cas2 in graph cas2-enhancement-in-manganese
-    with UniProtKB:Q46896 (Escherichia coli K-12 Cas1, locus ygbT/b2755, 305 aa, NCBITaxon:83333,
-    PF01867 envelope 86-302, PMID:25662536), representing the Cas1 donor-target integration
-    reaction perturbed by Cas2 addition.
+  summary: Ground PF01867 causal-graph protein/gene/complex nodes with UniProtKB:Q46896
+  details: 'In graph cas2-enhancement-in-manganese (taxon NCBITaxon:83333; references PMID:25707795),
+    grounded add-cas2 (PERTURBATION: Add Cas2 to the Cas1 donor-target reaction in manganese) with UniProtKB:Q46896.
+    Family mapping: Intact MG1655 Cas1 Q46896/NP_417235.1; PF01867 131-226. No isolated-domain or other-member
+    experiment.'
   sections:
   - causal_graphs
 links:
+  issues:
+  - https://github.com/CultureBotAI/DUFMech/issues/358
   urls:
   - https://rest.uniprot.org/uniprotkb/Q46896.json
-  - https://pubmed.ncbi.nlm.nih.gov/25662536/
+  - https://pubmed.ncbi.nlm.nih.gov/25707795/

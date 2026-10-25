@@ -14,22 +14,34 @@ session:
 events:
 - type: EDIT
   outcome: changed
-  summary: Ground PF01977 AnFdc and ShVdcCD covalent enzyme-cofactor intermediate
-    state nodes
-  details: Grounded crystallographic covalent enzyme-prFMN adduct state nodes wt_ketimine,
-    e282q_ketimine (graph anfdc-crystal-photoisomerization-2018, PMID:29359985), int2
-    (graph anfdc-e282q-int2-trapping-2019, PMID:31117615), and int1_prime, int3_prime
-    (graph anfdc-phenylpropiolate-adducts-2019, PMID:31117615) with UniProtKB:A2QHE5
-    (Aspergillus niger CBS 513.88 Fdc1, locus An03g05380, 500 aa, NCBITaxon:425011,
-    PF01977 envelope 9-339), and grounded node quinoid (graph shvdccd-domain-closure-model-2021,
-    PMID:34003630) with UniProtKB:Q9S4M7 (Sedimentibacter hydroxybenzoicus JW/Z-1
-    VdcC, 483 aa, NCBITaxon:29346, PF01977 envelope 5-327).
+  summary: Ground PF01977 causal-graph protein/gene/complex nodes with UniProtKB:A2QHE5, UniProtKB:Q9S4M7
+  details: 'In graph anfdc-crystal-photoisomerization-2018 (taxon NCBITaxon:425011; references PMID:29259125),
+    grounded wt_ketimine (STATE: WT crystal with increased prFMN ketimine occupancy) with UniProtKB:A2QHE5;
+    grounded e282q_ketimine (STATE: E282Q crystal with detectable prFMN ketimine) with UniProtKB:A2QHE5.
+    Family mapping: A2QHE5 version 1, PF01977 119-318; E282 is internal. The complete enzyme has additional
+    Pfam domains; no isolated-domain photochemistry is tested. In graph anfdc-e282q-int2-trapping-2019
+    (taxon NCBITaxon:425011; references PMID:31527849), grounded int2 (STATE: Decarboxylated covalent
+    prFMN-substrate Int2 adduct) with UniProtKB:A2QHE5. Family mapping: Deposited 6R3F entity1 matches
+    A2QHE5 version 1 except E282Q plus LEHHHHHH. E282 lies inside PF01977 119-318; the other domains are
+    retained. Exact comparison is in evidence/PF01977/member-mapping.txt. In graph anfdc-phenylpropiolate-adducts-2019
+    (taxon NCBITaxon:425011; references PMID:31527849), grounded int1_prime (STATE: Enzyme-bound carboxylated
+    prFMN cycloadduct Int1-prime) with UniProtKB:A2QHE5; grounded int3_prime (STATE: Enzyme-bound decarboxylated
+    cycloadduct Int3-prime) with UniProtKB:A2QHE5. Family mapping: A2QHE5 version 1, PF01977 119-318,
+    additional domains intact. Deposited 6R33 Int3-prime construct exactly matches the reference body
+    plus LEHHHHHH; the paper identifies the same AnFdc lineage for the rapid-soak experiment. In graph
+    shvdccd-domain-closure-model-2021 (taxon NCBITaxon:29345; references PMID:34417452), grounded quinoid
+    (STATE: Proposed Int3Quinoid-prFMN complex) with UniProtKB:Q9S4M7. Family mapping: ShC Q9S4M7 PF01977
+    106-312 within the 480-aa enzyme; T325/S326 hinge and L425 are outside this domain. 7AE4/7AE5 are
+    apo closed/open structures. R168 is sequence-verified; R178 labels in main figures and R138 in supplement
+    Figure 3 are inconsistent source labels, not verified Arg residues.'
   sections:
   - causal_graphs
 links:
+  issues:
+  - https://github.com/CultureBotAI/DUFMech/issues/358
   urls:
   - https://rest.uniprot.org/uniprotkb/A2QHE5.json
   - https://rest.uniprot.org/uniprotkb/Q9S4M7.json
-  - https://pubmed.ncbi.nlm.nih.gov/29359985/
-  - https://pubmed.ncbi.nlm.nih.gov/31117615/
-  - https://pubmed.ncbi.nlm.nih.gov/34003630/
+  - https://pubmed.ncbi.nlm.nih.gov/29259125/
+  - https://pubmed.ncbi.nlm.nih.gov/31527849/
+  - https://pubmed.ncbi.nlm.nih.gov/34417452/

@@ -549,8 +549,7 @@ curation_events:
   curator: Antigravity
   action: EDIT
   outcome: changed
-  summary: Ground PF01970 TpiA and TctA operon perturbation and tctA transcript state nodes with verified
-    NCBIProtein accessions
+  summary: Ground PF01970 causal-graph protein/gene/complex nodes with NCBIProtein:BAN66716.1, NCBIProtein:CAF20846.1
   history_record: history/records/PF01970/2026-10-25T111500Z-antigravity-17069c.yaml
   event_index: 0
   llm_assisted: true

@@ -363,7 +363,7 @@ causal_graphs:
     label: WT-like iron-binding calorimetric response
     node_type: STATE
     grounding:
-    - UniProtKB:Q9Y316
+      - UniProtKB:Q9Y316
   edges:
   - edge_id: h49a-decreases-iron-binding-response
     subject: h49a

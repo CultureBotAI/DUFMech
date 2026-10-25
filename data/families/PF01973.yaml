@@ -2828,8 +2828,8 @@ curation_events:
   curator: Antigravity
   action: EDIT
   outcome: changed
-  summary: Ground PF01973 AMB-1 Maf, CN-32 GlfM, and Kurthia Maf/GlfM nodes with verified UniProtKB and
-    NCBIProtein accessions
+  summary: Ground PF01973 causal-graph protein/gene/complex nodes with UniProtKB:Q2W9I6, NCBIProtein:WP_011919637.1,
+    UniProtKB:Q8EC85, UniProtKB:Q8ECA6, NCBIProtein:WP_068455574.1, NCBIProtein:WP_068455571.1
   history_record: history/records/PF01973/2026-10-25T111500Z-antigravity-fae3f1.yaml
   event_index: 0
   llm_assisted: true

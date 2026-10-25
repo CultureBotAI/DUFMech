@@ -14,14 +14,32 @@ session:
 events:
 - type: EDIT
   outcome: changed
-  summary: Ground PF01861 Tk-BpsA modified C-terminal peptide state node with UniProtKB:Q5JIZ3
-  details: Grounded covalently modified peptide state node terminal-mass-shift in
-    graph tkbpsa-donor-incubation-peptide with UniProtKB:Q5JIZ3 (Thermococcus kodakarensis
-    KOD1 Tk-BpsA, locus TK0308, 351 aa, NCBITaxon:69014, PF01861 envelope 6-346, PMID:27694442),
-    representing the +114.118 Da modified Tk-BpsA C-terminal tryptic peptide 331-351.
+  summary: Ground PF01861 Tk-BpsA terminal peptide state node and remove grounding from fitted kinetic-constant
+    nodes
+  details: 'In graph tkbpsa-donor-incubation-peptide (taxon NCBITaxon:69014; references PMID:31162806),
+    grounded terminal-mass-shift (STATE: Detected terminal peptide with approximately +114.118 Da) with
+    UniProtKB:Q5JIZ3. Family mapping: Q5JIZ3/BAD85880.1 terminal peptide 331-351 is GFEDEITVGQELYDDEESSTT;
+    PF01861 is 106-350, so the peptide includes one extra-domain terminal residue. Five acidic-site labels
+    in the paper conflict with this sequence; possible reference sites are E341/D344/D345/E346/E347. In
+    graph tkbpsa-terminal-quadruple-kinetics (taxon NCBITaxon:69014; references PMID:31162806), removed
+    non-protein fitted kinetic-constant grounding UniProtKB:Q5JIZ3 from spermidine-kcat (ACTIVITY: Fitted
+    spermidine-assay turnover number) per ground-causal-graph-proteins Section 2.3; removed non-protein
+    fitted kinetic-constant grounding UniProtKB:Q5JIZ3 from spermidine-efficiency (ACTIVITY: Fitted spermidine-assay
+    catalytic efficiency) per ground-causal-graph-proteins Section 2.3. Family mapping: Q5JIZ3/BAD85880.1,
+    PF01861 106-350. Table 4 quadruple primer translates ELYNNQQSSTT and maps uniquely to D344N/D345N/E346Q/E347Q
+    in the reference. Preserve the published labels plus this primer-supported mapping; experimental clone
+    resequencing is unavailable. In graph tthbpsa-c9-acceptor-specificity (taxon NCBITaxon:262724; references
+    PMID:31162806), removed non-protein fitted kinetic-constant grounding UniProtKB:Q72L89 from branched-norspermidine-efficiency
+    (ACTIVITY: Catalytic efficiency with N4-aminopropylnorspermidine) per ground-causal-graph-proteins
+    Section 2.3. Family mapping: Q72L89 sequence version 1 equals AAS80519.1, 353 aa; PF01861 115-351.
+    6J27/6J28 retain the 20-aa tag followed by MV and reference residues 2 onward. C9 replaces reference
+    346-353 QDEEATTY with YDDEESSTT; it overlaps the domain and extends past its boundary.'
   sections:
   - causal_graphs
 links:
+  issues:
+  - https://github.com/CultureBotAI/DUFMech/issues/358
   urls:
   - https://rest.uniprot.org/uniprotkb/Q5JIZ3.json
-  - https://pubmed.ncbi.nlm.nih.gov/27694442/
+  - https://rest.uniprot.org/uniprotkb/Q72L89.json
+  - https://pubmed.ncbi.nlm.nih.gov/31162806/

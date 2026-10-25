@@ -600,8 +600,7 @@ curation_events:
   curator: Antigravity
   action: EDIT
   outcome: changed
-  summary: Ground PF01732 MIB omission and MIB-MIP locus deletion perturbation nodes with NCBIProtein:ACU78687.1
-    and NCBIProtein:ACU78312.1
+  summary: Ground PF01732 causal-graph protein/gene/complex nodes with NCBIProtein:ACU78687.1, NCBIProtein:ACU78312.1
   history_record: history/records/PF01732/2026-10-25T111500Z-antigravity-7ae81f.yaml
   event_index: 0
   llm_assisted: true

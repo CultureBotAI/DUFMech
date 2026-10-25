@@ -14,17 +14,25 @@ session:
 events:
 - type: EDIT
   outcome: changed
-  summary: Ground PF01732 MIB omission and MIB-MIP locus deletion perturbation nodes
-    with NCBIProtein:ACU78687.1 and NCBIProtein:ACU78312.1
-  details: Grounded perturbation nodes omit-mib (graph gm12-recombinant-mib-mip-cleavage)
-    and whole-locus-deletion (graph gm12-mib-mip-locus-deletion) with NCBIProtein:ACU78687.1
-    (Mycoplasma mycoides subsp. capri GM12 MIP82, locus MMCAP2_0582, 899 aa, PF01732
-    envelope 483-774) and NCBIProtein:ACU78312.1 (M. mycoides subsp. capri GM12 MIB83,
-    locus MMCAP2_0583, 754 aa, NCBITaxon:436113, PMID:26869713).
+  summary: Ground PF01732 causal-graph protein/gene/complex nodes with NCBIProtein:ACU78687.1, NCBIProtein:ACU78312.1
+  details: 'In graph gm12-recombinant-mib-mip-cleavage (taxon NCBITaxon:436113; references PMID:27114507),
+    grounded omit-mib (PERTURBATION: Omit MIB from the MIP-IgG reaction) with NCBIProtein:ACU78687.1,
+    NCBIProtein:ACU78312.1. Family mapping: MIP82/MMCAP2_0582 reference ACU78687.1 (861 aa) exactly matches
+    UniParc UPI0001793D5F, PF01732 290-776. MIB83/MMCAP2_0583 is ACU78312.1 (750 aa), a distinct binding
+    protein. Historical recombinant termini and the r-0582A clone sequence are not independently verified.
+    In graph gm12-mib-mip-locus-deletion (taxon NCBITaxon:436113; references PMID:33674316), grounded
+    whole-locus-deletion (PERTURBATION: Delete all four MIB-MIP pairs versus WT) with NCBIProtein:ACU78687.1,
+    NCBIProtein:ACU78312.1. Family mapping: The deleted cluster includes MIP82/MMCAP2_0582, ACU78687.1
+    with PF01732 290-776, but also three other MIPs and four MIBs. Whole-locus effects cannot be attributed
+    exclusively to this protein or its domain. Main Figure 5B establishes the design; exact strain lineage
+    and nucleotide breakpoints in inaccessible supplements remain unverified here.'
   sections:
   - causal_graphs
 links:
+  issues:
+  - https://github.com/CultureBotAI/DUFMech/issues/358
   urls:
   - https://www.ncbi.nlm.nih.gov/protein/ACU78687.1
   - https://www.ncbi.nlm.nih.gov/protein/ACU78312.1
-  - https://pubmed.ncbi.nlm.nih.gov/26869713/
+  - https://pubmed.ncbi.nlm.nih.gov/27114507/
+  - https://pubmed.ncbi.nlm.nih.gov/33674316/

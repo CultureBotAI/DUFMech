@@ -14,14 +14,19 @@ session:
 events:
 - type: EDIT
   outcome: changed
-  summary: Ground PF01661 Af1521-ADP-ribose bound state node with UniProtKB:O28751
-  details: Grounded protein-ligand complex state node itc-adpr-bound-state in graph
-    af1521-adpr-binding-and-substitutions with UniProtKB:O28751 (Archaeoglobus fulgidus
-    DSM 4304 Af1521, locus AF_1521, 192 aa, NCBITaxon:224325, PF01661 envelope 19-189,
-    PMID:15735682), while keeping fitted affinity node measured-adpr-affinity ungrounded.
+  summary: Ground PF01661 causal-graph protein/gene/complex nodes with UniProtKB:O28751
+  details: 'In graph af1521-adpr-binding-and-substitutions (taxon NCBITaxon:2234; references PMID:15902274),
+    grounded itc-adpr-bound-state (STATE: ITC-detected saturable Af1521-ADP-ribose binding) with UniProtKB:O28751.
+    Family mapping: Native reference O28751 is192 aa, with current PF01661 30-155. N34 is within that
+    interval; D20 and Y176 are outside it. Their whole-protein substitution effects cannot be labeled
+    mutations within the current Pfam domain or evidence that the isolated interval suffices. PDB2BFQ
+    canonical sequence matches the reference, not an independent sequence determination of every mutant
+    preparation.'
   sections:
   - causal_graphs
 links:
+  issues:
+  - https://github.com/CultureBotAI/DUFMech/issues/358
   urls:
   - https://rest.uniprot.org/uniprotkb/O28751.json
-  - https://pubmed.ncbi.nlm.nih.gov/15735682/
+  - https://pubmed.ncbi.nlm.nih.gov/15902274/
