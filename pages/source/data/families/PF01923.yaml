@@ -426,6 +426,8 @@ causal_graphs:
   - node_id: activity
     label: AdoCbl-forming activity
     node_type: STATE
+    grounding:
+    - UniProtKB:Q8ZNR5
   edges:
   - edge_id: adp-decreases-activity
     subject: adp
@@ -511,6 +513,8 @@ causal_graphs:
   - node_id: activity
     label: AdoCbl-forming activity
     node_type: STATE
+    grounding:
+    - UniProtKB:Q8ZNR5
   edges:
   - edge_id: mg-increases-activity
     subject: mg
@@ -1234,6 +1238,8 @@ causal_graphs:
   - node_id: activity
     label: Coupled AdoCbl-forming activity
     node_type: STATE
+    grounding:
+    - UniProtKB:Q9ZFV4
   edges:
   - edge_id: fe-increases-activity
     subject: fe
@@ -2135,5 +2141,14 @@ curation_events:
   summary: Ground causal graph gene and protein nodes in PF01923 with verified UniProtKB accessions (UniProtKB:Q8ZNR5,
     UniProtKB:Q50EJ2, UniProtKB:Q9ZFV4, UniProtKB:A0A0H3GFM5, UniProtKB:Q96EY8)
   history_record: history/records/PF01923/2026-10-18T025446Z-antigravity-1ae74e.yaml
+  event_index: 0
+  llm_assisted: true
+- timestamp: '2026-10-25T05:29:00Z'
+  curator: Antigravity
+  action: EDIT
+  outcome: changed
+  summary: Ground Salmonella enterica LT2 PduO (UniProtKB:Q8ZNR5) and EutT (UniProtKB:Q9ZFV4) AdoCbl-forming
+    activity readout nodes in sepduo-inhibition-2004, sepduo-metal-additions-2004, and seeutt-metal-oxygen-2014
+  history_record: history/records/PF01923/2026-10-25T052900Z-antigravity-674c5b.yaml
   event_index: 0
   llm_assisted: true
