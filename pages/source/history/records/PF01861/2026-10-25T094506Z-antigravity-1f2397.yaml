@@ -1,0 +1,32 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01861
+  path: curation/families/PF01861.yaml
+session:
+  id: 2026-10-25T094506Z-antigravity-1f2397
+  timestamp: '2026-10-25T09:45:06Z'
+  actors:
+  - type: ai_agent
+    name: Antigravity
+    model: Claude Opus 4.6
+    agent_tool: Antigravity
+events:
+- type: EDIT
+  outcome: changed
+  summary: Ground spermidine-kcat, spermidine-efficiency and branched-norspermidine-efficiency
+    ACTIVITY nodes in PF01861 causal graphs to UniProtKB:Q5JIZ3 and UniProtKB:Q72L89
+  details: Grounded the spermidine-kcat and spermidine-efficiency (ACTIVITY) readout
+    nodes in tkbpsa-terminal-quadruple-kinetics to UniProtKB:Q5JIZ3 (Thermococcus
+    kodakarensis KOD1 Tk-BpsA TK0147, NCBITaxon:69014) and the branched-norspermidine-efficiency
+    (ACTIVITY) readout node in tthbpsa-c9-acceptor-specificity to UniProtKB:Q72L89
+    (Thermus thermophilus HB27 Tth-BpsA TT_C0171, NCBITaxon:262724), matching the
+    verified purified BpsA constructs grounded on the PERTURBATION and sibling ACTIVITY
+    nodes in Hidese et al. 2019 (PMID:31162806).
+  sections:
+  - causal_graphs
+links:
+  urls:
+  - https://febs.onlinelibrary.wiley.com/doi/10.1111/febs.14949
+  - https://www.ebi.ac.uk/interpro/api/protein/uniprot/Q5JIZ3/entry/pfam/PF01861/
+  - https://www.ebi.ac.uk/interpro/api/protein/uniprot/Q72L89/entry/pfam/PF01861/

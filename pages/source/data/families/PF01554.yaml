@@ -137,6 +137,8 @@ causal_graphs:
   - node_id: wt-low-concentration-binding
     label: Ethidium-binding anisotropy at low WT protein concentrations
     node_type: ACTIVITY
+    grounding:
+    - UniProtKB:Q9KRU4
   - node_id: d36n-versus-wt
     label: Paper D36N (current D32N) instead of WT
     node_type: PERTURBATION
@@ -155,6 +157,8 @@ causal_graphs:
   - node_id: sodium-enhancement-binding
     label: Sodium-dependent enhancement of low-concentration ethidium binding
     node_type: ACTIVITY
+    grounding:
+    - UniProtKB:Q9KRU4
   edges:
   - edge_id: sodium-increases-wt-binding
     subject: sodium-added-purified-wt
@@ -296,5 +300,14 @@ curation_events:
   outcome: changed
   summary: Ground causal graph gene and protein nodes in PF01554 with verified UniProtKB accessions (UniProtKB:Q9KRU4)
   history_record: history/records/PF01554/2026-10-18T025446Z-antigravity-78ee19.yaml
+  event_index: 0
+  llm_assisted: true
+- timestamp: '2026-10-25T09:45:05Z'
+  curator: Antigravity
+  action: EDIT
+  outcome: changed
+  summary: Ground wt-low-concentration-binding and sodium-enhancement-binding ACTIVITY nodes in PF01554
+    causal graph to UniProtKB:Q9KRU4
+  history_record: history/records/PF01554/2026-10-25T094505Z-antigravity-27fbeb.yaml
   event_index: 0
   llm_assisted: true
