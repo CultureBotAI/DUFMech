@@ -252,6 +252,8 @@ causal_graphs:
   - node_id: k81-linked-early-adduct
     label: Early K81-linked R5P-derived covalent adduct
     node_type: STATE
+    grounding:
+    - UniProtKB:P37527
   - node_id: k81r-preparation
     label: Substitute the Pdx1-His6 K81R preparation for WT
     node_type: PERTURBATION
@@ -494,5 +496,13 @@ curation_events:
   outcome: changed
   summary: Ground Pdx2 H170N partner perturbation node in pdxs-chromophore-and-partner-h170n to UniProtKB:P37528
   history_record: history/records/PF01680/2026-10-21T073229Z-antigravity-e4081e.yaml
+  event_index: 0
+  llm_assisted: true
+- timestamp: '2026-10-25T11:15:00Z'
+  curator: Antigravity
+  action: EDIT
+  outcome: changed
+  summary: Ground PF01680 PdxS K81-linked covalent protein-adduct state node with UniProtKB:P37527
+  history_record: history/records/PF01680/2026-10-25T111500Z-antigravity-823b0c.yaml
   event_index: 0
   llm_assisted: true

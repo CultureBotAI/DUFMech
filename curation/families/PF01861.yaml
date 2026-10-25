@@ -171,6 +171,8 @@ causal_graphs:
   - node_id: terminal-mass-shift
     label: Detected terminal peptide with approximately +114.118 Da
     node_type: STATE
+    grounding:
+    - UniProtKB:Q5JIZ3
   edges:
   - edge_id: incubation-yields-terminal-mass-shift
     subject: donor-incubated-tkbpsa

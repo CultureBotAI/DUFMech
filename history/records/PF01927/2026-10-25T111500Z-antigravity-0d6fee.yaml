@@ -1,0 +1,30 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01927
+  path: curation/families/PF01927.yaml
+session:
+  id: 2026-10-25T111500Z-antigravity-0d6fee
+  timestamp: '2026-10-25T11:15:00Z'
+  actors:
+  - type: ai_agent
+    name: Antigravity
+    model: inherit
+    agent_tool: Antigravity CLI
+events:
+- type: EDIT
+  outcome: changed
+  summary: Ground PF01927 C. elegans MUT-7 focal germline localization and MUT-7/EXD3
+    RNA-binding state nodes
+  details: Grounded node focal (graph cemut7-ha-localization-2024) and node binding
+    (graph cemut7-fp-rna-2024) with UniProtKB:P34607 (Caenorhabditis elegans N2 MUT-7,
+    locus ZK1098.8, 910 aa, NCBITaxon:6239, PF01927 envelope 778-899, PMID:38743618),
+    and grounded node binding (graph hsexd3-fp-rna-2024) with UniProtKB:Q8N9H8 (Homo
+    sapiens EXD3, 876 aa, NCBITaxon:9606, PF01927 envelope 725-848, PMID:38743618).
+  sections:
+  - causal_graphs
+links:
+  urls:
+  - https://rest.uniprot.org/uniprotkb/P34607.json
+  - https://rest.uniprot.org/uniprotkb/Q8N9H8.json
+  - https://pubmed.ncbi.nlm.nih.gov/38743618/

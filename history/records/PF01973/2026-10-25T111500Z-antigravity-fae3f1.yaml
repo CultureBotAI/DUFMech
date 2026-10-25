@@ -1,0 +1,40 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01973
+  path: curation/families/PF01973.yaml
+session:
+  id: 2026-10-25T111500Z-antigravity-fae3f1
+  timestamp: '2026-10-25T11:15:00Z'
+  actors:
+  - type: ai_agent
+    name: Antigravity
+    model: inherit
+    agent_tool: Antigravity CLI
+events:
+- type: EDIT
+  outcome: changed
+  summary: Ground PF01973 AMB-1 Maf, CN-32 GlfM, and Kurthia Maf/GlfM nodes with verified
+    UniProtKB and NCBIProtein accessions
+  details: Grounded node proposed_donor_binding (graph amb0685-proposed-residue-roles-2018)
+    with UniProtKB:Q2W9I6 (Paramagnetospirillum magneticum AMB-1 Maf, locus amb0685,
+    666 aa, NCBITaxon:342108, PF01973 259-419, PMID:29076618); grounded cn32_partner
+    (graph mr1-cn32-glfm-rescue-2024) and updated cross_system (graph mr1-cn32-glfm-caulo-2024)
+    with Shewanella putrefaciens CN-32 GlfM NCBIProtein:WP_011919637.1 (97 aa) alongside
+    S. oneidensis MR-1 Maf2 UniProtKB:Q8EC85 (and FlaB UniProtKB:Q8ECA6 in cross_system);
+    and grounded triad_wt, triad_maf_null (graph kurthia-glfm-mr1-2024) and glfm_cassette
+    (graph kurthia-glfm-caulo-2024) with Kurthia sp. 11kri321 Maf NCBIProtein:WP_068455574.1
+    (548 aa, PF01973 159-329) and GlfM NCBIProtein:WP_068455571.1 (117 aa), verified
+    against Table S6 row 5 (PMID:38897200). Left host donor-pathway deletion nodes
+    (pseI, psec, neuB) and Irchel pJU0005 nodes (lacking Table S6 sequence verification)
+    ungrounded.
+  sections:
+  - causal_graphs
+links:
+  urls:
+  - https://rest.uniprot.org/uniprotkb/Q2W9I6.json
+  - https://rest.uniprot.org/uniprotkb/Q8EC85.json
+  - https://www.ncbi.nlm.nih.gov/protein/WP_011919637.1
+  - https://www.ncbi.nlm.nih.gov/protein/WP_068455574.1
+  - https://www.ncbi.nlm.nih.gov/protein/WP_068455571.1
+  - https://pubmed.ncbi.nlm.nih.gov/38897200/

@@ -1,0 +1,28 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01868
+  path: curation/families/PF01868.yaml
+session:
+  id: 2026-10-25T111500Z-antigravity-700fbb
+  timestamp: '2026-10-25T11:15:00Z'
+  actors:
+  - type: ai_agent
+    name: Antigravity
+    model: inherit
+    agent_tool: Antigravity CLI
+events:
+- type: EDIT
+  outcome: changed
+  summary: Ground PF01868 Pfu Rpp29 NMR chemical-shift and ITC partner-binding state
+    nodes with UniProtKB:Q8U007
+  details: Grounded protein-state nodes nmr-response and itc-response in graph pfu-delta24-partner-association-readouts
+    with UniProtKB:Q8U007 (Pyrococcus furiosus DSM 3638 Rpp29, locus PF1816, 127 aa,
+    NCBITaxon:186497, PF01868 envelope 37-118, PMID:19339491), representing the Rpp29
+    chemical-shift and Rpp21-Rpp29 complex-binding states.
+  sections:
+  - causal_graphs
+links:
+  urls:
+  - https://rest.uniprot.org/uniprotkb/Q8U007.json
+  - https://pubmed.ncbi.nlm.nih.gov/19339491/

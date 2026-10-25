@@ -6,237 +6,495 @@ discussions:
   prompt: Extend mapped TctA-family experiments while resolving constructs and transport mechanisms.
   kind: CURATION_TODO
   status: OPEN
-  rationale: Two studies support member-specific cellular effects but do not establish isolated-domain chemistry, universal substrate specificity or ion stoichiometry.
+  rationale: Two studies support member-specific cellular effects but do not establish isolated-domain
+    chemistry, universal substrate specificity or ion stoichiometry.
   evidence:
-  - {reference: 'PMID:23913423', supports: SUPPORT, evidence_source: primary_publication, explanation: 'Original Figures3/4/5/7 distinguish two E6 paralogs, growth delays, tracer accumulation and joint-system conversion. Supplementary construct details remain unavailable.'}
-  - {reference: 'PMID:19376865', supports: SUPPORT, evidence_source: primary_publication, explanation: 'Original Figures2/4 and Table3 distinguish cation-dependent operon phenotypes and a regulator-deletion transcript response; Methods and Figure2 disagree on the E. coli strain.'}
+  - reference: PMID:23913423
+    supports: SUPPORT
+    evidence_source: primary_publication
+    explanation: Original Figures3/4/5/7 distinguish two E6 paralogs, growth delays, tracer accumulation
+      and joint-system conversion. Supplementary construct details remain unavailable.
+  - reference: PMID:19376865
+    supports: SUPPORT
+    evidence_source: primary_publication
+    explanation: Original Figures2/4 and Table3 distinguish cation-dependent operon phenotypes and a regulator-deletion
+      transcript response; Methods and Figure2 disagree on the E. coli strain.
   posed_by: Codex
   posed_date: '2026-10-12'
-  notes: Recover the Hosaka supplement and exact final plasmids, assess insertion polarity, and reconcile Brocker DH5alpha versus MG1655. Extend Salmonella classical transport and G109S studies, Bordetella bct systems, Pseudomonas redundancy and Gillisella tartrate contexts using exact member mapping. The2014 activated-sludge TctA_ar study inspected here is modeling rather than demonstrated citrate transport; resolve its1311bp/463aa discrepancy before sequence-level interpretation. Archived Pfam coordinates and inactive UniProt IDs are not new current profile scans. All earlier corpus follow-ups remain open.
+  notes: Recover the Hosaka supplement and exact final plasmids, assess insertion polarity, and reconcile
+    Brocker DH5alpha versus MG1655. Extend Salmonella classical transport and G109S studies, Bordetella
+    bct systems, Pseudomonas redundancy and Gillisella tartrate contexts using exact member mapping. The2014
+    activated-sludge TctA_ar study inspected here is modeling rather than demonstrated citrate transport;
+    resolve its1311bp/463aa discrepancy before sequence-level interpretation. Archived Pfam coordinates
+    and inactive UniProt IDs are not new current profile scans. All earlier corpus follow-ups remain open.
 causal_graphs:
 - graph_id: comamonas-tcta-insertion-2013
   title: E6 tctA insertion reduces citrate-associated uptake and growth
-  scope: Comamonas sp. E6 full tctA insertion mutant EME018 versus WT; not an isolated domain or a family-wide substrate claim.
-  context: Hosaka2013 Figure3B/C. Growth in Wx10mM citrate,30C,initialOD0.1. Uptake after succinate/citrate induction uses washed cellsOD2,20uM14C-citrate,50mM Tris-MESpH7.5,30C,10-180s and filter-associated counts normalized to protein. Three independent experiments,mean plus SD.
-  family_mapping: E6 taxon364029, AB822590.1 tctA CDS3648-5165 encodes BAN66712.1,505aa. UniParc UPI000384591D retains PF01970 20-440; historical S6BR91 is inactive/deleted as redundant. These archived coordinates do not define the manipulated domain boundaries.
+  scope: Comamonas sp. E6 full tctA insertion mutant EME018 versus WT; not an isolated domain or a family-wide
+    substrate claim.
+  context: Hosaka2013 Figure3B/C. Growth in Wx10mM citrate,30C,initialOD0.1. Uptake after succinate/citrate
+    induction uses washed cellsOD2,20uM14C-citrate,50mM Tris-MESpH7.5,30C,10-180s and filter-associated
+    counts normalized to protein. Three independent experiments,mean plus SD.
+  family_mapping: E6 taxon364029, AB822590.1 tctA CDS3648-5165 encodes BAN66712.1,505aa. UniParc UPI000384591D
+    retains PF01970 20-440; historical S6BR91 is inactive/deleted as redundant. These archived coordinates
+    do not define the manipulated domain boundaries.
   taxon: NCBITaxon:364029
   scope_status: PHENOTYPIC
-  limitations: kan insertion and Southern verification are reported; exact supplement junctions, polarity and TctA rescue remain unverified. TPA uptake is retained in Figure3A. Cell-associated radiolabel has nonzero background and is not purified permease flux or proof of chemically intact intracellular citrate.
+  limitations: kan insertion and Southern verification are reported; exact supplement junctions, polarity
+    and TctA rescue remain unverified. TPA uptake is retained in Figure3A. Cell-associated radiolabel
+    has nonzero background and is not purified permease flux or proof of chemically intact intracellular
+    citrate.
   nodes:
-  - {node_id: tcta-insertion, label: EME018 tctA insertion in E6, node_type: PERTURBATION, grounding: ['NCBIProtein:BAN66712.1']}
-  - {node_id: citrate-label, label: Induced cell-associated14C-citrate signal versus WT, node_type: PHENOTYPE}
-  - {node_id: citrate-growth, label: Growth-associated OD600 in10mM citrate medium, node_type: PHENOTYPE}
+  - node_id: tcta-insertion
+    label: EME018 tctA insertion in E6
+    node_type: PERTURBATION
+    grounding:
+    - NCBIProtein:BAN66712.1
+  - node_id: citrate-label
+    label: Induced cell-associated14C-citrate signal versus WT
+    node_type: PHENOTYPE
+  - node_id: citrate-growth
+    label: Growth-associated OD600 in10mM citrate medium
+    node_type: PHENOTYPE
   edges:
   - edge_id: insertion-citrate-label
     subject: tcta-insertion
     predicate: decreases
     object: citrate-label
-    mechanism: EME018 lacks the WT induced increase in retained label. This supports a cellular uptake requirement in the tested context without assigning an elementary transport step or absolute zero counts.
+    mechanism: EME018 lacks the WT induced increase in retained label. This supports a cellular uptake
+      requirement in the tested context without assigning an elementary transport step or absolute zero
+      counts.
     directness: UNRESOLVED
     support: OBSERVED
     evidence_kind: EXPERIMENTAL
-    evidence: [{reference: 'PMID:23913423', source_url: 'https://doi.org/10.1128/AEM.01600-13', snippet: essential for citrate uptake, explanation: 'Original Figure3C induced and uninduced curves, Methods and Discussion support loss of the induced cellular readout.', cache_path: evidence/PF01970/hosaka-2013-cellular-effects.txt, cache_sha256: 50018f425a88bd7f3f9eceb347fbc57e7d3887790b8f6f13d39dc83e2e3198b5}]
+    evidence:
+    - reference: PMID:23913423
+      source_url: https://doi.org/10.1128/AEM.01600-13
+      snippet: essential for citrate uptake
+      explanation: Original Figure3C induced and uninduced curves, Methods and Discussion support loss
+        of the induced cellular readout.
+      cache_path: evidence/PF01970/hosaka-2013-cellular-effects.txt
+      cache_sha256: 50018f425a88bd7f3f9eceb347fbc57e7d3887790b8f6f13d39dc83e2e3198b5
   - edge_id: insertion-citrate-growth
     subject: tcta-insertion
     predicate: decreases
     object: citrate-growth
-    mechanism: The mutant remains near starting OD over the plotted150h while WT grows after a long lag. Growth is a separate phenotype from the tracer assay and does not identify domain chemistry.
+    mechanism: The mutant remains near starting OD over the plotted150h while WT grows after a long lag.
+      Growth is a separate phenotype from the tracer assay and does not identify domain chemistry.
     directness: UNRESOLVED
     support: OBSERVED
     evidence_kind: EXPERIMENTAL
-    evidence: [{reference: 'PMID:23913423', source_url: 'https://doi.org/10.1128/AEM.01600-13', snippet: essential for citrate uptake, explanation: 'Original Figure3B and mutant Methods directly compare EME018 and WT in citrate medium;3A retains TPA uptake as a specificity control.', cache_path: evidence/PF01970/hosaka-2013-cellular-effects.txt, cache_sha256: 50018f425a88bd7f3f9eceb347fbc57e7d3887790b8f6f13d39dc83e2e3198b5}]
+    evidence:
+    - reference: PMID:23913423
+      source_url: https://doi.org/10.1128/AEM.01600-13
+      snippet: essential for citrate uptake
+      explanation: Original Figure3B and mutant Methods directly compare EME018 and WT in citrate medium;3A
+        retains TPA uptake as a specificity control.
+      cache_path: evidence/PF01970/hosaka-2013-cellular-effects.txt
+      cache_sha256: 50018f425a88bd7f3f9eceb347fbc57e7d3887790b8f6f13d39dc83e2e3198b5
 - graph_id: comamonas-tpia-insertion-and-rescue-2013
   title: E6 tpiA insertion changes tracer readouts and substrate-specific growth timing
-  scope: EME019 full tpiA insertion versus E6 WT, with pJBtpiA complementation for the TPA tracer assay. Separate carbon-source cultures are not a single causal chain.
-  context: Hosaka2013 Figures4/5. Growth in Wx10mM TPA,IPA,OPA,PCA or citrate,30C,initialOD0.1. Washed-cell assays use20uM14C-TPA or14C-citrate,OD2,Tris-MESpH7.5,30C after corresponding induction with succinate;10-180s sampling. Three independent experiments,mean plus SD.
-  family_mapping: AB822591.1 tpiA CDS2015-3526 encodes E6 BAN66716.1,503aa; UniParc UPI0001DA6AF2 retains PF01970 20-441. Historical S6BBY9 is inactive/deleted as redundant. TpiA is a TctA paralog, not triosephosphate isomerase; TpiB and binding proteins are separate partners.
+  scope: EME019 full tpiA insertion versus E6 WT, with pJBtpiA complementation for the TPA tracer assay.
+    Separate carbon-source cultures are not a single causal chain.
+  context: Hosaka2013 Figures4/5. Growth in Wx10mM TPA,IPA,OPA,PCA or citrate,30C,initialOD0.1. Washed-cell
+    assays use20uM14C-TPA or14C-citrate,OD2,Tris-MESpH7.5,30C after corresponding induction with succinate;10-180s
+    sampling. Three independent experiments,mean plus SD.
+  family_mapping: AB822591.1 tpiA CDS2015-3526 encodes E6 BAN66716.1,503aa; UniParc UPI0001DA6AF2 retains
+    PF01970 20-441. Historical S6BBY9 is inactive/deleted as redundant. TpiA is a TctA paralog, not triosephosphate
+    isomerase; TpiB and binding proteins are separate partners.
   taxon: NCBITaxon:364029
   scope_status: PHENOTYPIC
-  limitations: Insertion polarity and protein abundance are unresolved. Uptake means retained radiolabel, not direct transmembrane flux. IPA/OPA/PCA uptake was not measured here. Delayed growth is not abolished growth or reduced final yield. Main text reports partial growth rescue in uninspected FigureS3; no S3 edge is added. The EME019 residual citrate signal versus near-loss in EME018 has no resolved molecular explanation.
+  limitations: Insertion polarity and protein abundance are unresolved. Uptake means retained radiolabel,
+    not direct transmembrane flux. IPA/OPA/PCA uptake was not measured here. Delayed growth is not abolished
+    growth or reduced final yield. Main text reports partial growth rescue in uninspected FigureS3; no
+    S3 edge is added. The EME019 residual citrate signal versus near-loss in EME018 has no resolved molecular
+    explanation.
   nodes:
-  - {node_id: tpia-insertion, label: EME019 tpiA insertion in E6, node_type: PERTURBATION, grounding: ['NCBIProtein:BAN66716.1']}
-  - {node_id: tpia-rescue, label: Addition of pJBtpiA to EME019, node_type: PERTURBATION, grounding: ['NCBIProtein:BAN66716.1']}
-  - {node_id: tpa-label, label: Induced cell-associated14C-TPA signal, node_type: PHENOTYPE}
-  - {node_id: citrate-label, label: Initial14C-citrate uptake readout relative to WT, node_type: PHENOTYPE}
-  - {node_id: tpa-growth, label: Growth-associated OD600 in TPA medium, node_type: PHENOTYPE}
-  - {node_id: ipa-growth, label: Growth-associated OD600 in IPA medium, node_type: PHENOTYPE}
-  - {node_id: opa-delay, label: Time to growth in OPA medium, node_type: PHENOTYPE}
-  - {node_id: pca-delay, label: Time to growth in PCA medium, node_type: PHENOTYPE}
-  - {node_id: citrate-delay, label: Time to growth in citrate medium, node_type: PHENOTYPE}
+  - node_id: tpia-insertion
+    label: EME019 tpiA insertion in E6
+    node_type: PERTURBATION
+    grounding:
+    - NCBIProtein:BAN66716.1
+  - node_id: tpia-rescue
+    label: Addition of pJBtpiA to EME019
+    node_type: PERTURBATION
+    grounding:
+    - NCBIProtein:BAN66716.1
+  - node_id: tpa-label
+    label: Induced cell-associated14C-TPA signal
+    node_type: PHENOTYPE
+  - node_id: citrate-label
+    label: Initial14C-citrate uptake readout relative to WT
+    node_type: PHENOTYPE
+  - node_id: tpa-growth
+    label: Growth-associated OD600 in TPA medium
+    node_type: PHENOTYPE
+  - node_id: ipa-growth
+    label: Growth-associated OD600 in IPA medium
+    node_type: PHENOTYPE
+  - node_id: opa-delay
+    label: Time to growth in OPA medium
+    node_type: PHENOTYPE
+  - node_id: pca-delay
+    label: Time to growth in PCA medium
+    node_type: PHENOTYPE
+  - node_id: citrate-delay
+    label: Time to growth in citrate medium
+    node_type: PHENOTYPE
   edges:
   - edge_id: insertion-tpa-label
     subject: tpia-insertion
     predicate: decreases
     object: tpa-label
-    mechanism: The insertion reduces the TPA-induced accumulation trace relative to WT, without establishing individual-protein sufficiency or proton coupling.
+    mechanism: The insertion reduces the TPA-induced accumulation trace relative to WT, without establishing
+      individual-protein sufficiency or proton coupling.
     directness: UNRESOLVED
     support: OBSERVED
     evidence_kind: EXPERIMENTAL
-    evidence: [{reference: 'PMID:23913423', source_url: 'https://doi.org/10.1128/AEM.01600-13', snippet: no TPA uptake activity, explanation: 'Original Figure5A WT circles versus EME019 diamonds and uptake Methods support the measured reduction.', cache_path: evidence/PF01970/hosaka-2013-cellular-effects.txt, cache_sha256: 50018f425a88bd7f3f9eceb347fbc57e7d3887790b8f6f13d39dc83e2e3198b5}]
+    evidence:
+    - reference: PMID:23913423
+      source_url: https://doi.org/10.1128/AEM.01600-13
+      snippet: no TPA uptake activity
+      explanation: Original Figure5A WT circles versus EME019 diamonds and uptake Methods support the
+        measured reduction.
+      cache_path: evidence/PF01970/hosaka-2013-cellular-effects.txt
+      cache_sha256: 50018f425a88bd7f3f9eceb347fbc57e7d3887790b8f6f13d39dc83e2e3198b5
   - edge_id: complementation-tpa-label
     subject: tpia-rescue
     predicate: increases
     object: tpa-label
-    mechanism: pJBtpiA restores the EME019 accumulation readout toward WT. Rescue applies to the mutant cellular background with its other transport and metabolic components.
+    mechanism: pJBtpiA restores the EME019 accumulation readout toward WT. Rescue applies to the mutant
+      cellular background with its other transport and metabolic components.
     directness: UNRESOLVED
     support: OBSERVED
     evidence_kind: EXPERIMENTAL
-    evidence: [{reference: 'PMID:23913423', source_url: 'https://doi.org/10.1128/AEM.01600-13', snippet: restored the activity, explanation: 'Original Figure5A complemented squares versus mutant diamonds, with WT as benchmark, supports conditional rescue.', cache_path: evidence/PF01970/hosaka-2013-cellular-effects.txt, cache_sha256: 50018f425a88bd7f3f9eceb347fbc57e7d3887790b8f6f13d39dc83e2e3198b5}]
+    evidence:
+    - reference: PMID:23913423
+      source_url: https://doi.org/10.1128/AEM.01600-13
+      snippet: restored the activity
+      explanation: Original Figure5A complemented squares versus mutant diamonds, with WT as benchmark,
+        supports conditional rescue.
+      cache_path: evidence/PF01970/hosaka-2013-cellular-effects.txt
+      cache_sha256: 50018f425a88bd7f3f9eceb347fbc57e7d3887790b8f6f13d39dc83e2e3198b5
   - edge_id: insertion-citrate-label
     subject: tpia-insertion
     predicate: decreases
     object: citrate-label
-    mechanism: The initial citrate uptake readout is about54% of WT, retaining substantial signal. The result does not establish a separate sufficient TpiA citrate route.
+    mechanism: The initial citrate uptake readout is about54% of WT, retaining substantial signal. The
+      result does not establish a separate sufficient TpiA citrate route.
     directness: UNRESOLVED
     support: OBSERVED
     evidence_kind: EXPERIMENTAL
-    evidence: [{reference: 'PMID:23913423', source_url: 'https://doi.org/10.1128/AEM.01600-13', snippet: approximately 54%, explanation: 'Original Figure5C and associated Results quantify residual citrate uptake; Figure4E separately measures delayed citrate growth.', cache_path: evidence/PF01970/hosaka-2013-cellular-effects.txt, cache_sha256: 50018f425a88bd7f3f9eceb347fbc57e7d3887790b8f6f13d39dc83e2e3198b5}]
+    evidence:
+    - reference: PMID:23913423
+      source_url: https://doi.org/10.1128/AEM.01600-13
+      snippet: approximately 54%
+      explanation: Original Figure5C and associated Results quantify residual citrate uptake; Figure4E
+        separately measures delayed citrate growth.
+      cache_path: evidence/PF01970/hosaka-2013-cellular-effects.txt
+      cache_sha256: 50018f425a88bd7f3f9eceb347fbc57e7d3887790b8f6f13d39dc83e2e3198b5
   - edge_id: insertion-tpa-growth
     subject: tpia-insertion
     predicate: decreases
     object: tpa-growth
-    mechanism: EME019 remains near starting OD while WT grows on TPA over the plotted interval. This cellular endpoint is distinct from uptake and downstream chemical conversion.
+    mechanism: EME019 remains near starting OD while WT grows on TPA over the plotted interval. This cellular
+      endpoint is distinct from uptake and downstream chemical conversion.
     directness: UNRESOLVED
     support: OBSERVED
     evidence_kind: EXPERIMENTAL
-    evidence: [{reference: 'PMID:23913423', source_url: 'https://doi.org/10.1128/AEM.01600-13', snippet: grow on TPA and IPA, explanation: 'Original Figure4A compares growth; Figure5A independently tests the tracer phenotype. Growth is not inferred from uptake alone.', cache_path: evidence/PF01970/hosaka-2013-cellular-effects.txt, cache_sha256: 50018f425a88bd7f3f9eceb347fbc57e7d3887790b8f6f13d39dc83e2e3198b5}]
+    evidence:
+    - reference: PMID:23913423
+      source_url: https://doi.org/10.1128/AEM.01600-13
+      snippet: grow on TPA and IPA
+      explanation: Original Figure4A compares growth; Figure5A independently tests the tracer phenotype.
+        Growth is not inferred from uptake alone.
+      cache_path: evidence/PF01970/hosaka-2013-cellular-effects.txt
+      cache_sha256: 50018f425a88bd7f3f9eceb347fbc57e7d3887790b8f6f13d39dc83e2e3198b5
   - edge_id: insertion-ipa-growth
     subject: tpia-insertion
     predicate: decreases
     object: ipa-growth
-    mechanism: EME019 does not show the WT OD increase on IPA in the plotted interval. No direct IPA uptake assay or TpiA-IPA binding measurement is inferred.
+    mechanism: EME019 does not show the WT OD increase on IPA in the plotted interval. No direct IPA uptake
+      assay or TpiA-IPA binding measurement is inferred.
     directness: UNRESOLVED
     support: OBSERVED
     evidence_kind: EXPERIMENTAL
-    evidence: [{reference: 'PMID:23913423', source_url: 'https://doi.org/10.1128/AEM.01600-13', snippet: grow on TPA and IPA, explanation: 'Original Figure4B directly measures the IPA growth loss; this is more severe than the separate delayed-growth conditions in4C-E.', cache_path: evidence/PF01970/hosaka-2013-cellular-effects.txt, cache_sha256: 50018f425a88bd7f3f9eceb347fbc57e7d3887790b8f6f13d39dc83e2e3198b5}]
+    evidence:
+    - reference: PMID:23913423
+      source_url: https://doi.org/10.1128/AEM.01600-13
+      snippet: grow on TPA and IPA
+      explanation: Original Figure4B directly measures the IPA growth loss; this is more severe than the
+        separate delayed-growth conditions in4C-E.
+      cache_path: evidence/PF01970/hosaka-2013-cellular-effects.txt
+      cache_sha256: 50018f425a88bd7f3f9eceb347fbc57e7d3887790b8f6f13d39dc83e2e3198b5
   - edge_id: insertion-opa-delay
     subject: tpia-insertion
     predicate: increases
     object: opa-delay
-    mechanism: EME019 reaches comparable growth later than WT in OPA medium. The direction describes delay, not a universal decrease in terminal biomass or demonstrated OPA translocation.
+    mechanism: EME019 reaches comparable growth later than WT in OPA medium. The direction describes delay,
+      not a universal decrease in terminal biomass or demonstrated OPA translocation.
     directness: UNRESOLVED
     support: OBSERVED
     evidence_kind: EXPERIMENTAL
-    evidence: [{reference: 'PMID:23913423', source_url: 'https://doi.org/10.1128/AEM.01600-13', snippet: significantly retarded, explanation: 'Original Figure4C shows delayed mutant growth followed by a plateau comparable to WT.', cache_path: evidence/PF01970/hosaka-2013-cellular-effects.txt, cache_sha256: 50018f425a88bd7f3f9eceb347fbc57e7d3887790b8f6f13d39dc83e2e3198b5}]
+    evidence:
+    - reference: PMID:23913423
+      source_url: https://doi.org/10.1128/AEM.01600-13
+      snippet: significantly retarded
+      explanation: Original Figure4C shows delayed mutant growth followed by a plateau comparable to WT.
+      cache_path: evidence/PF01970/hosaka-2013-cellular-effects.txt
+      cache_sha256: 50018f425a88bd7f3f9eceb347fbc57e7d3887790b8f6f13d39dc83e2e3198b5
   - edge_id: insertion-pca-delay
     subject: tpia-insertion
     predicate: increases
     object: pca-delay
-    mechanism: EME019 accumulates biomass later than WT in PCA medium but subsequently grows. Redundant uptake or other cellular effects are not resolved by the growth curves.
+    mechanism: EME019 accumulates biomass later than WT in PCA medium but subsequently grows. Redundant
+      uptake or other cellular effects are not resolved by the growth curves.
     directness: UNRESOLVED
     support: OBSERVED
     evidence_kind: EXPERIMENTAL
-    evidence: [{reference: 'PMID:23913423', source_url: 'https://doi.org/10.1128/AEM.01600-13', snippet: significantly retarded, explanation: 'Original Figure4D and growth Methods distinguish the slower rise from the flat TPA/IPA curves.', cache_path: evidence/PF01970/hosaka-2013-cellular-effects.txt, cache_sha256: 50018f425a88bd7f3f9eceb347fbc57e7d3887790b8f6f13d39dc83e2e3198b5}]
+    evidence:
+    - reference: PMID:23913423
+      source_url: https://doi.org/10.1128/AEM.01600-13
+      snippet: significantly retarded
+      explanation: Original Figure4D and growth Methods distinguish the slower rise from the flat TPA/IPA
+        curves.
+      cache_path: evidence/PF01970/hosaka-2013-cellular-effects.txt
+      cache_sha256: 50018f425a88bd7f3f9eceb347fbc57e7d3887790b8f6f13d39dc83e2e3198b5
   - edge_id: insertion-citrate-delay
     subject: tpia-insertion
     predicate: increases
     object: citrate-delay
-    mechanism: The mutant shows a much longer citrate-growth lag and eventually rises to a similar OD. This is compatible with residual citrate uptake and is not a permanent inability to grow.
+    mechanism: The mutant shows a much longer citrate-growth lag and eventually rises to a similar OD.
+      This is compatible with residual citrate uptake and is not a permanent inability to grow.
     directness: UNRESOLVED
     support: OBSERVED
     evidence_kind: EXPERIMENTAL
-    evidence: [{reference: 'PMID:23913423', source_url: 'https://doi.org/10.1128/AEM.01600-13', snippet: significantly retarded, explanation: 'Original Figure4E shows WT growth near70h and EME019 near125h with broad error bars; no exact lag parameter is fitted.', cache_path: evidence/PF01970/hosaka-2013-cellular-effects.txt, cache_sha256: 50018f425a88bd7f3f9eceb347fbc57e7d3887790b8f6f13d39dc83e2e3198b5}]
+    evidence:
+    - reference: PMID:23913423
+      source_url: https://doi.org/10.1128/AEM.01600-13
+      snippet: significantly retarded
+      explanation: Original Figure4E shows WT growth near70h and EME019 near125h with broad error bars;
+        no exact lag parameter is fitted.
+      cache_path: evidence/PF01970/hosaka-2013-cellular-effects.txt
+      cache_sha256: 50018f425a88bd7f3f9eceb347fbc57e7d3887790b8f6f13d39dc83e2e3198b5
 - graph_id: pputida-joint-tpa-conversion-2013
   title: Joint transport and catabolic expression lowers extracellular TPA in resting cells
-  scope: Pseudomonas putida PpY1100 expressing the complete pJCBAtG combination, not TpiA alone and not a growth rescue.
-  context: Hosaka2013 Figure7; tphCII plus tpiBA plus tphA2IIA3IIBIIA1II, induced10h with1mM m-toluate at30C. Washed resting cellsOD20,1mM TPA,50mM Tris-HClpH7.5,30C shaking. Methods specify60min incubation but the original plotted endpoint is48min. HPLC,three independent experiments,mean plus SD.
-  family_mapping: The E6 TpiA component is BAN66716.1,503aa,archived PF01970 20-441. The construct additionally contains TpiB,TphC and TPA-catabolic enzymes that are not assigned to PF01970. Donor E6 and PpY1100 host remain distinct.
+  scope: Pseudomonas putida PpY1100 expressing the complete pJCBAtG combination, not TpiA alone and not
+    a growth rescue.
+  context: Hosaka2013 Figure7; tphCII plus tpiBA plus tphA2IIA3IIBIIA1II, induced10h with1mM m-toluate
+    at30C. Washed resting cellsOD20,1mM TPA,50mM Tris-HClpH7.5,30C shaking. Methods specify60min incubation
+    but the original plotted endpoint is48min. HPLC,three independent experiments,mean plus SD.
+  family_mapping: The E6 TpiA component is BAN66716.1,503aa,archived PF01970 20-441. The construct additionally
+    contains TpiB,TphC and TPA-catabolic enzymes that are not assigned to PF01970. Donor E6 and PpY1100
+    host remain distinct.
   scope_status: PHENOTYPIC
-  limitations: Joint-system effect only. No direct TpiA-catalyzed TPA degradation, TpiA-alone sufficiency or restored growth. Control constructs omit tpiBA,tphC or catabolic genes. Full plasmid and supplementary extract-assay figures remain unverified; the source text reports extract activity when transport genes are missing.
+  limitations: Joint-system effect only. No direct TpiA-catalyzed TPA degradation, TpiA-alone sufficiency
+    or restored growth. Control constructs omit tpiBA,tphC or catabolic genes. Full plasmid and supplementary
+    extract-assay figures remain unverified; the source text reports extract activity when transport genes
+    are missing.
   nodes:
-  - {node_id: joint-construct, label: pJCBAtG transport-plus-catabolism combination in resting PpY1100 cells, node_type: PERTURBATION}
-  - {node_id: extracellular-tpa, label: Remaining extracellular TPA measured by HPLC, node_type: STATE}
+  - node_id: joint-construct
+    label: pJCBAtG transport-plus-catabolism combination in resting PpY1100 cells
+    node_type: PERTURBATION
+    grounding:
+    - NCBIProtein:BAN66716.1
+  - node_id: extracellular-tpa
+    label: Remaining extracellular TPA measured by HPLC
+    node_type: STATE
   edges:
   - edge_id: joint-system-tpa-depletion
     subject: joint-construct
     predicate: decreases
     object: extracellular-tpa
-    mechanism: Only the complete combination substantially depletes TPA relative to incomplete-construct controls. Uptake and intracellular enzymatic conversion contribute jointly to this indirect transporter readout.
+    mechanism: Only the complete combination substantially depletes TPA relative to incomplete-construct
+      controls. Uptake and intracellular enzymatic conversion contribute jointly to this indirect transporter
+      readout.
     directness: INDIRECT
     support: OBSERVED
     evidence_kind: EXPERIMENTAL
-    evidence: [{reference: 'PMID:23913423', source_url: 'https://doi.org/10.1128/AEM.01600-13', snippet: Only when both, explanation: 'Original Figure7 circles decline to roughly0.35mM by48min while control traces remain near0.9mM; Methods specify HPLC and resting cells.', cache_path: evidence/PF01970/hosaka-2013-cellular-effects.txt, cache_sha256: 50018f425a88bd7f3f9eceb347fbc57e7d3887790b8f6f13d39dc83e2e3198b5}]
+    evidence:
+    - reference: PMID:23913423
+      source_url: https://doi.org/10.1128/AEM.01600-13
+      snippet: Only when both
+      explanation: Original Figure7 circles decline to roughly0.35mM by48min while control traces remain
+        near0.9mM; Methods specify HPLC and resting cells.
+      cache_path: evidence/PF01970/hosaka-2013-cellular-effects.txt
+      cache_sha256: 50018f425a88bd7f3f9eceb347fbc57e7d3887790b8f6f13d39dc83e2e3198b5
 - graph_id: cglutamicum-operon-cation-growth-2009
   title: Whole tctCBA deletion has opposite growth effects with magnesium and strontium
-  scope: C. glutamicum ATCC13032 in-frame delta-tctCBA versus WT, with intact CitH; the perturbation removes all three transporter components.
-  context: Brocker2009 Figure4A/C,CGXII50mM citrate sole carbon and energy plus5mM MgCl2 or SrCl2,30C120rpm. Pregrowth with50mM glucose and50mM citrate. Representative curves from three independent experiments,not plotted means or formal effect estimates.
-  family_mapping: TctA=cg3125=NCgl2724,CAF20846 v1,510aa; UniParc UPI0000165E70 retains PF01970 20-443. Historical Q6M234 is inactive. TctB/cg3126 and TctC/cg3127 are distinct partners; CitH/cg0088 belongs to another transporter family.
+  scope: C. glutamicum ATCC13032 in-frame delta-tctCBA versus WT, with intact CitH; the perturbation removes
+    all three transporter components.
+  context: Brocker2009 Figure4A/C,CGXII50mM citrate sole carbon and energy plus5mM MgCl2 or SrCl2,30C120rpm.
+    Pregrowth with50mM glucose and50mM citrate. Representative curves from three independent experiments,not
+    plotted means or formal effect estimates.
+  family_mapping: TctA=cg3125=NCgl2724,CAF20846 v1,510aa; UniParc UPI0000165E70 retains PF01970 20-443.
+    Historical Q6M234 is inactive. TctB/cg3126 and TctC/cg3127 are distinct partners; CitH/cg0088 belongs
+    to another transporter family.
   taxon: NCBITaxon:196627
   scope_status: PHENOTYPIC
-  limitations: Whole-operon rather than TctA-specific effect; strontium improvement has no resolved mechanism. Calcium-supported growth remains high. The double CitH/TctCBA mutant sometimes grows late, so no permanent universal essentiality is asserted. Neither ion stoichiometry nor direct cation-citrate cotransport was measured.
+  limitations: Whole-operon rather than TctA-specific effect; strontium improvement has no resolved mechanism.
+    Calcium-supported growth remains high. The double CitH/TctCBA mutant sometimes grows late, so no permanent
+    universal essentiality is asserted. Neither ion stoichiometry nor direct cation-citrate cotransport
+    was measured.
   nodes:
-  - {node_id: operon-deletion-mg, label: Whole tctCBA deletion in5mM magnesium citrate-growth medium, node_type: PERTURBATION}
-  - {node_id: operon-deletion-sr, label: Whole tctCBA deletion in5mM strontium citrate-growth medium, node_type: PERTURBATION}
-  - {node_id: mg-growth, label: Growth-associated OD600 with magnesium relative to matched WT, node_type: PHENOTYPE}
-  - {node_id: sr-growth, label: Growth-associated OD600 with strontium relative to matched WT, node_type: PHENOTYPE}
+  - node_id: operon-deletion-mg
+    label: Whole tctCBA deletion in5mM magnesium citrate-growth medium
+    node_type: PERTURBATION
+    grounding:
+    - NCBIProtein:CAF20846.1
+  - node_id: operon-deletion-sr
+    label: Whole tctCBA deletion in5mM strontium citrate-growth medium
+    node_type: PERTURBATION
+    grounding:
+    - NCBIProtein:CAF20846.1
+  - node_id: mg-growth
+    label: Growth-associated OD600 with magnesium relative to matched WT
+    node_type: PHENOTYPE
+  - node_id: sr-growth
+    label: Growth-associated OD600 with strontium relative to matched WT
+    node_type: PHENOTYPE
   edges:
   - edge_id: deletion-magnesium-growth
     subject: operon-deletion-mg
     predicate: decreases
     object: mg-growth
-    mechanism: The deletion prevents the large OD rise seen for WT in the magnesium condition over the plotted interval. It does not identify which individual operon component or molecular step is sufficient.
+    mechanism: The deletion prevents the large OD rise seen for WT in the magnesium condition over the
+      plotted interval. It does not identify which individual operon component or molecular step is sufficient.
     directness: UNRESOLVED
     support: OBSERVED
     evidence_kind: EXPERIMENTAL
-    evidence: [{reference: 'PMID:19376865', source_url: 'https://doi.org/10.1128/JB.00113-09', snippet: did not grow, explanation: 'Original Figure4A/C magnesium triangles and deletion Methods support the conditional reduction.', cache_path: evidence/PF01970/brocker-2009-cation-contexts.txt, cache_sha256: be8f9ff0675460bbde673d7b068c5eb42abefb09014f8e831fe03d1dcb6320aa}]
+    evidence:
+    - reference: PMID:19376865
+      source_url: https://doi.org/10.1128/JB.00113-09
+      snippet: did not grow
+      explanation: Original Figure4A/C magnesium triangles and deletion Methods support the conditional
+        reduction.
+      cache_path: evidence/PF01970/brocker-2009-cation-contexts.txt
+      cache_sha256: be8f9ff0675460bbde673d7b068c5eb42abefb09014f8e831fe03d1dcb6320aa
   - edge_id: deletion-strontium-growth
     subject: operon-deletion-sr
     predicate: increases
     object: sr-growth
-    mechanism: With strontium the mutant grows faster and reaches aboutOD12 rather than WT about4. This opposite direction is retained without inventing direct TctA-mediated toxicity or inhibition of CitH.
+    mechanism: With strontium the mutant grows faster and reaches aboutOD12 rather than WT about4. This
+      opposite direction is retained without inventing direct TctA-mediated toxicity or inhibition of
+      CitH.
     directness: UNRESOLVED
     support: OBSERVED
     evidence_kind: EXPERIMENTAL
-    evidence: [{reference: 'PMID:19376865', source_url: 'https://doi.org/10.1128/JB.00113-09', snippet: same rate, explanation: 'Original Figure4A/C strontium squares and Results explicitly describe improvement after removal of TctABC with mechanism unknown.', cache_path: evidence/PF01970/brocker-2009-cation-contexts.txt, cache_sha256: be8f9ff0675460bbde673d7b068c5eb42abefb09014f8e831fe03d1dcb6320aa}]
+    evidence:
+    - reference: PMID:19376865
+      source_url: https://doi.org/10.1128/JB.00113-09
+      snippet: same rate
+      explanation: Original Figure4A/C strontium squares and Results explicitly describe improvement after
+        removal of TctABC with mechanism unknown.
+      cache_path: evidence/PF01970/brocker-2009-cation-contexts.txt
+      cache_sha256: be8f9ff0675460bbde673d7b068c5eb42abefb09014f8e831fe03d1dcb6320aa
 - graph_id: ecoli-tctcba-cation-growth-2009
   title: Heterologous tctCBA supports increased growth with calcium or magnesium
-  scope: E. coli carrying the whole C. glutamicum tctCBA operon versus empty pXMJ19; Figure2 and Results name MG1655 but culture Methods name DH5alpha for the cation assay.
-  context: Brocker2009 Figure2,50ml M9 in500ml flasks,50mM citrate plus1g/l Casamino Acids and5mM CaCl2 or MgCl2,37C120rpm. Representative curves from three independent experiments. Compare vector and operon under the same cation condition.
-  family_mapping: The inserted operon contains cg3125/CAF20846 v1,TctA510aa,archived PF01970 20-443,along with TctB and TctC. The E. coli host and C. glutamicum donor are distinct; no assignment of the other components to PF01970.
+  scope: E. coli carrying the whole C. glutamicum tctCBA operon versus empty pXMJ19; Figure2 and Results
+    name MG1655 but culture Methods name DH5alpha for the cation assay.
+  context: Brocker2009 Figure2,50ml M9 in500ml flasks,50mM citrate plus1g/l Casamino Acids and5mM CaCl2
+    or MgCl2,37C120rpm. Representative curves from three independent experiments. Compare vector and operon
+    under the same cation condition.
+  family_mapping: The inserted operon contains cg3125/CAF20846 v1,TctA510aa,archived PF01970 20-443,along
+    with TctB and TctC. The E. coli host and C. glutamicum donor are distinct; no assignment of the other
+    components to PF01970.
   scope_status: PHENOTYPIC
-  limitations: Casamino Acids are an additional carbon input. Exact host identity remains discrepant. Joint-system growth does not establish TctA-alone sufficiency or direct ion-coupled transport. Little enhancement with strontium,zinc or no added cation is conditional; nickel also inhibits glucose growth and is a toxicity confound.
+  limitations: Casamino Acids are an additional carbon input. Exact host identity remains discrepant.
+    Joint-system growth does not establish TctA-alone sufficiency or direct ion-coupled transport. Little
+    enhancement with strontium,zinc or no added cation is conditional; nickel also inhibits glucose growth
+    and is a toxicity confound.
   nodes:
-  - {node_id: operon-ca, label: Whole tctCBA expression with5mM calcium in citrate/Casamino Acids medium, node_type: PERTURBATION}
-  - {node_id: operon-mg, label: Whole tctCBA expression with5mM magnesium in citrate/Casamino Acids medium, node_type: PERTURBATION}
-  - {node_id: ca-growth, label: Growth-associated OD600 versus calcium-matched empty vector, node_type: PHENOTYPE}
-  - {node_id: mg-growth, label: Growth-associated OD600 versus magnesium-matched empty vector, node_type: PHENOTYPE}
+  - node_id: operon-ca
+    label: Whole tctCBA expression with5mM calcium in citrate/Casamino Acids medium
+    node_type: PERTURBATION
+    grounding:
+    - NCBIProtein:CAF20846.1
+  - node_id: operon-mg
+    label: Whole tctCBA expression with5mM magnesium in citrate/Casamino Acids medium
+    node_type: PERTURBATION
+    grounding:
+    - NCBIProtein:CAF20846.1
+  - node_id: ca-growth
+    label: Growth-associated OD600 versus calcium-matched empty vector
+    node_type: PHENOTYPE
+  - node_id: mg-growth
+    label: Growth-associated OD600 versus magnesium-matched empty vector
+    node_type: PHENOTYPE
   edges:
   - edge_id: operon-calcium-growth
     subject: operon-ca
     predicate: increases
     object: ca-growth
-    mechanism: In calcium-supplemented medium the operon construct yields higher OD than vector. The result combines transport, host metabolism and other cellular requirements rather than measuring an elementary transport event.
+    mechanism: In calcium-supplemented medium the operon construct yields higher OD than vector. The result
+      combines transport, host metabolism and other cellular requirements rather than measuring an elementary
+      transport event.
     directness: UNRESOLVED
     support: OBSERVED
     evidence_kind: EXPERIMENTAL
-    evidence: [{reference: 'PMID:19376865', source_url: 'https://doi.org/10.1128/JB.00113-09', snippet: can grow on citrate, explanation: 'Original Figure2 calcium panel squares versus vector triangles, with medium and strain discrepancy retained.', cache_path: evidence/PF01970/brocker-2009-cation-contexts.txt, cache_sha256: be8f9ff0675460bbde673d7b068c5eb42abefb09014f8e831fe03d1dcb6320aa}]
+    evidence:
+    - reference: PMID:19376865
+      source_url: https://doi.org/10.1128/JB.00113-09
+      snippet: can grow on citrate
+      explanation: Original Figure2 calcium panel squares versus vector triangles, with medium and strain
+        discrepancy retained.
+      cache_path: evidence/PF01970/brocker-2009-cation-contexts.txt
+      cache_sha256: be8f9ff0675460bbde673d7b068c5eb42abefb09014f8e831fe03d1dcb6320aa
   - edge_id: operon-magnesium-growth
     subject: operon-mg
     predicate: increases
     object: mg-growth
-    mechanism: In magnesium-supplemented medium the operon construct yields higher OD than vector. The edge does not specify a magnesium:citrate stoichiometry or exclude host-specific effects.
+    mechanism: In magnesium-supplemented medium the operon construct yields higher OD than vector. The
+      edge does not specify a magnesium:citrate stoichiometry or exclude host-specific effects.
     directness: UNRESOLVED
     support: OBSERVED
     evidence_kind: EXPERIMENTAL
-    evidence: [{reference: 'PMID:19376865', source_url: 'https://doi.org/10.1128/JB.00113-09', snippet: can grow on citrate, explanation: 'Original Figure2 magnesium panel squares versus vector triangles support this separate conditional comparison.', cache_path: evidence/PF01970/brocker-2009-cation-contexts.txt, cache_sha256: be8f9ff0675460bbde673d7b068c5eb42abefb09014f8e831fe03d1dcb6320aa}]
+    evidence:
+    - reference: PMID:19376865
+      source_url: https://doi.org/10.1128/JB.00113-09
+      snippet: can grow on citrate
+      explanation: Original Figure2 magnesium panel squares versus vector triangles support this separate
+        conditional comparison.
+      cache_path: evidence/PF01970/brocker-2009-cation-contexts.txt
+      cache_sha256: be8f9ff0675460bbde673d7b068c5eb42abefb09014f8e831fe03d1dcb6320aa
 - graph_id: cglutamicum-citab-tcta-transcript-2009
   title: CitAB deletion lowers tctA transcript abundance under the tested culture conditions
-  scope: C. glutamicum ATCC13032 delta-citAB versus WT,measuring the tctA transcript; not deletion or purified activation of TctA.
-  context: Brocker2009 Table3 and transcriptome Results,exponential-phase CGXII50mM citrate plus50mM glucose and50mM MgCl2. Four independent culture comparisons; tabulated means use3-4 experiments with the stated fold-change and P<=0.05 selection. Not the25mM primer-extension culture recipe.
-  family_mapping: Transcript cg3125=NCgl2724 encodes CAF20846 v1,TctA510aa,archived PF01970 20-443. CitA and CitB are separate regulatory proteins,not PF01970 transport components.
+  scope: C. glutamicum ATCC13032 delta-citAB versus WT,measuring the tctA transcript; not deletion or
+    purified activation of TctA.
+  context: Brocker2009 Table3 and transcriptome Results,exponential-phase CGXII50mM citrate plus50mM glucose
+    and50mM MgCl2. Four independent culture comparisons; tabulated means use3-4 experiments with the stated
+    fold-change and P<=0.05 selection. Not the25mM primer-extension culture recipe.
+  family_mapping: Transcript cg3125=NCgl2724 encodes CAF20846 v1,TctA510aa,archived PF01970 20-443. CitA
+    and CitB are separate regulatory proteins,not PF01970 transport components.
   taxon: NCBITaxon:196627
   scope_status: PHENOTYPIC
-  limitations: The transcript ratio does not measure TctA protein abundance,transport rate or direct CitB activation chemistry. Promoter binding alone is not used as an activation edge. Regulation and transport are not joined into a fully observed molecular chain.
+  limitations: The transcript ratio does not measure TctA protein abundance,transport rate or direct CitB
+    activation chemistry. Promoter binding alone is not used as an activation edge. Regulation and transport
+    are not joined into a fully observed molecular chain.
   nodes:
-  - {node_id: citab-deletion, label: Deletion of the CitAB two-component system, node_type: PERTURBATION}
-  - {node_id: tcta-mrna, label: tctA mRNA abundance relative to matched WT, node_type: STATE}
+  - node_id: citab-deletion
+    label: Deletion of the CitAB two-component system
+    node_type: PERTURBATION
+  - node_id: tcta-mrna
+    label: tctA mRNA abundance relative to matched WT
+    node_type: STATE
+    grounding:
+    - NCBIProtein:CAF20846.1
   edges:
   - edge_id: citab-deletion-tcta-mrna
     subject: citab-deletion
     predicate: decreases
     object: tcta-mrna
-    mechanism: The regulator deletion reduces the mean tctA mRNA ratio to0.04 of WT in these conditions. This is a regulatory cellular outcome,not a directly observed elementary action on TctA protein.
+    mechanism: The regulator deletion reduces the mean tctA mRNA ratio to0.04 of WT in these conditions.
+      This is a regulatory cellular outcome,not a directly observed elementary action on TctA protein.
     directness: INDIRECT
     support: OBSERVED
     evidence_kind: EXPERIMENTAL
-    evidence: [{reference: 'PMID:19376865', source_url: 'https://doi.org/10.1128/JB.00113-09', snippet: 25- to 100-fold lower, explanation: 'Table3 explicitly reports tctA ratio0.04; transcriptome Results and table footnote identify conditions, independent cultures and selection criteria.', cache_path: evidence/PF01970/brocker-2009-cation-contexts.txt, cache_sha256: be8f9ff0675460bbde673d7b068c5eb42abefb09014f8e831fe03d1dcb6320aa}]
+    evidence:
+    - reference: PMID:19376865
+      source_url: https://doi.org/10.1128/JB.00113-09
+      snippet: 25- to 100-fold lower
+      explanation: Table3 explicitly reports tctA ratio0.04; transcriptome Results and table footnote
+        identify conditions, independent cultures and selection criteria.
+      cache_path: evidence/PF01970/brocker-2009-cation-contexts.txt
+      cache_sha256: be8f9ff0675460bbde673d7b068c5eb42abefb09014f8e831fe03d1dcb6320aa

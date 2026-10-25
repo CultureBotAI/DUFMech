@@ -1,0 +1,28 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01899
+  path: curation/families/PF01899.yaml
+session:
+  id: 2026-10-25T111500Z-antigravity-3c25ea
+  timestamp: '2026-10-25T11:15:00Z'
+  actors:
+  - type: ai_agent
+    name: Antigravity
+    model: inherit
+    agent_tool: Antigravity CLI
+events:
+- type: EDIT
+  outcome: changed
+  summary: Ground PF01899 MrpE membrane immunoblot and full MrpA-G complex band nodes
+    with UniProtKB:Q9RGZ1
+  details: Grounded nodes mrpe-membrane-signal and full-complex-bands in graph of4-mrpe-t113a-protein-and-complex-signals
+    with UniProtKB:Q9RGZ1 (Bacillus pseudofirmus OF4 MrpE, 159 aa, NCBITaxon:398511,
+    PF01899 envelope 76-153, PMID:22582280), while leaving separate non-PF01899 subunit
+    signals mrpf-membrane-signal and mrpg-membrane-signal ungrounded.
+  sections:
+  - causal_graphs
+links:
+  urls:
+  - https://rest.uniprot.org/uniprotkb/Q9RGZ1.json
+  - https://pubmed.ncbi.nlm.nih.gov/22582280/

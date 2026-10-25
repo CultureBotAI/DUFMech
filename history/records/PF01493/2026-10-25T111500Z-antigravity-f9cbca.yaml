@@ -1,0 +1,28 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01493
+  path: curation/families/PF01493.yaml
+session:
+  id: 2026-10-25T111500Z-antigravity-f9cbca
+  timestamp: '2026-10-25T11:15:00Z'
+  actors:
+  - type: ai_agent
+    name: Antigravity
+    model: inherit
+    agent_tool: Antigravity CLI
+events:
+- type: EDIT
+  outcome: changed
+  summary: Ground PF01493 purified GltSHis protein-particle DLS state nodes with UniProtKB:Q05755
+  details: Grounded protein-oligomer particle state nodes gltshis-dls-radius (graph
+    azospirillum-glts-salt-radius) and post-dilution-gltshis-radius (graph azospirillum-glts-salt-dilution-radius)
+    with UniProtKB:Q05755 (Azospirillum brasilense Sp7 GltS beta subunit, 487 aa,
+    NCBITaxon:192, PF01493 envelope 156-204, PMID:12446646), representing the purified
+    C-terminally His6-tagged GltS protein particles.
+  sections:
+  - causal_graphs
+links:
+  urls:
+  - https://rest.uniprot.org/uniprotkb/Q05755.json
+  - https://pubmed.ncbi.nlm.nih.gov/12446646/

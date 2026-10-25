@@ -331,7 +331,8 @@ causal_graphs:
   limitations: Loss of focal HA signal is indirect cellular localization evidence, not direct measurement
     of binding or RNA processing. S5E MUT-16::GFP foci persist in a separate reporter strain; do not infer
     dissolution of all Mutator foci. Methods says Alexa Fluor555 while listing A11029; the manufacturer's
-    A11029 certificate identifies Alexa Fluor488. The actual experimental reagent is not independently resolved.
+    A11029 certificate identifies Alexa Fluor488. The actual experimental reagent is not independently
+    resolved.
   nodes:
   - node_id: double
     label: HA-R853E/T855E versus HA-WT MUT-7
@@ -341,6 +342,8 @@ causal_graphs:
   - node_id: focal
     label: Focal MUT-7 signal in mitotic germline
     node_type: PHENOTYPE
+    grounding:
+    - UniProtKB:P34607
   edges:
   - edge_id: double-focal
     subject: double
@@ -384,6 +387,8 @@ causal_graphs:
   - node_id: binding
     label: 16-mer RNA-binding FP response
     node_type: STATE
+    grounding:
+    - UniProtKB:P34607
   edges:
   - edge_id: trunc-binding
     subject: trunc
@@ -423,6 +428,8 @@ causal_graphs:
   - node_id: binding
     label: 16-mer RNA-binding FP response
     node_type: STATE
+    grounding:
+    - UniProtKB:Q8N9H8
   edges:
   - edge_id: trunc-binding
     subject: trunc

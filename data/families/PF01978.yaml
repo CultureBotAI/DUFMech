@@ -2901,6 +2901,8 @@ causal_graphs:
   - node_id: shifted_md
     label: Reported retardation of the MD promoter probe
     node_type: STATE
+    grounding:
+    - UniProtKB:Q8U4G4
   edges:
   - edge_id: y49n-md-retardation
     subject: y49n
@@ -3051,5 +3053,13 @@ curation_events:
   outcome: changed
   summary: Ground TrmBL1 promoter occupancy state nodes in trmbl1-regional-recognition-model to UniProtKB:Q8U4G4
   history_record: history/records/PF01978/2026-10-23T074814Z-antigravity-197803.yaml
+  event_index: 0
+  llm_assisted: true
+- timestamp: '2026-10-25T11:15:00Z'
+  curator: Antigravity
+  action: EDIT
+  outcome: changed
+  summary: Ground PF01978 TrmBL1-MD promoter gel-shift complex node with UniProtKB:Q8U4G4
+  history_record: history/records/PF01978/2026-10-25T111500Z-antigravity-2355fd.yaml
   event_index: 0
   llm_assisted: true

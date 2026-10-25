@@ -1,0 +1,28 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01864
+  path: curation/families/PF01864.yaml
+session:
+  id: 2026-10-25T111500Z-antigravity-a5190f
+  timestamp: '2026-10-25T11:15:00Z'
+  actors:
+  - type: ai_agent
+    name: Antigravity
+    model: inherit
+    agent_tool: Antigravity CLI
+events:
+- type: EDIT
+  outcome: changed
+  summary: Ground PF01864 ApCarS CTP-binding state and anti-His DGGGP strip-binding
+    protein nodes with UniProtKB:Q9YF05
+  details: Grounded nodes detectable-ctp-binding (graph apcars-ctp-binding) and lipid-strip-signal
+    (graph apcars-dgggp-strip-binding) with UniProtKB:Q9YF05 (Aeropyrum pernix K1
+    ApCarS, locus APE_0426, 207 aa, NCBITaxon:272557, PF01864 envelope 16-197, PMID:38341547),
+    while keeping fitted affinity node measured-affinity ungrounded.
+  sections:
+  - causal_graphs
+links:
+  urls:
+  - https://rest.uniprot.org/uniprotkb/Q9YF05.json
+  - https://pubmed.ncbi.nlm.nih.gov/38341547/

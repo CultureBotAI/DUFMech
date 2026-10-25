@@ -198,6 +198,8 @@ causal_graphs:
   - node_id: k81-linked-early-adduct
     label: Early K81-linked R5P-derived covalent adduct
     node_type: STATE
+    grounding:
+    - UniProtKB:P37527
   - node_id: k81r-preparation
     label: Substitute the Pdx1-His6 K81R preparation for WT
     node_type: PERTURBATION

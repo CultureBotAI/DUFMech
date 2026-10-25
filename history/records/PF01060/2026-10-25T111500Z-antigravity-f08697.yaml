@@ -1,0 +1,28 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01060
+  path: curation/families/PF01060.yaml
+session:
+  id: 2026-10-25T111500Z-antigravity-f08697
+  timestamp: '2026-10-25T11:15:00Z'
+  actors:
+  - type: ai_agent
+    name: Antigravity
+    model: inherit
+    agent_tool: Antigravity CLI
+events:
+- type: EDIT
+  outcome: changed
+  summary: Ground PF01060 TTR-52 PtdSer strip-binding protein-state readout node with
+    UniProtKB:G5ED35
+  details: Grounded node ptdser-strip-binding-signal in graph ttr52-substitutions-ptdser-strip-binding
+    with UniProtKB:G5ED35 (Caenorhabditis elegans TTR-52, locus F11G11.3, 135 aa,
+    NCBITaxon:6239, PF01060 envelope 23-134, PMID:20400946), representing the secreted
+    TTR-52 protein bound at the phosphatidylserine spot on the lipid strip.
+  sections:
+  - causal_graphs
+links:
+  urls:
+  - https://rest.uniprot.org/uniprotkb/G5ED35.json
+  - https://pubmed.ncbi.nlm.nih.gov/20400946/
