@@ -20,7 +20,7 @@ events:
     graph tatd-residue-substitution-digestion-effects to UniProtKB:P27859 (Escherichia
     coli TatD, NCBITaxon:83333), matching the verified purified recombinant His-tagged
     E. coli TatD enzyme grounded on the four substitution PERTURBATION nodes (h62a-substitution,
-    e91a-substitution, e201a-substitution, d203a-substitution) and sibling TatD ACTIVITY
+    e91a-substitution, e201a-substitution, d203a-substitution) and sibling TatD PERTURBATION
     nodes in Chen et al. 2014 (PMID:25114049).
   sections:
   - causal_graphs
