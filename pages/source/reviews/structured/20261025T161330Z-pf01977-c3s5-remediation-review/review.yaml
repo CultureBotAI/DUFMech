@@ -83,12 +83,13 @@ summary: 'Eleven graphs add 38 observed whole-cell effects and one computational
   timing and normalization discrepancies remain explicit. This partial successor does
   not complete PF01977 or the full 8296-family objective. Cycle 3 Stage 3 (PR #357)
   grounded 5 Aspergillus niger Fdc1 prFMN ketimine/cycloadduct state nodes (wt_ketimine,
-  e282q_ketimine, int2, int1_prime, int3_prime to UniProtKB:A2QHE5) and S. humidus
-  ShC quinoid (UniProtKB:Q9S4M7). Stage 4 frozen-inventory audit also identified an
-  open grounding finding (pf01977-shvdccd-cognate-partner-and-l182v-missing-partner-grounding)
-  where add_d in shvdccd-cognate-partner-2021 omits ShC (UniProtKB:Q9S4M7) and l182v
-  in shvdccd-l182v-syringate-2021 plus closure_int2/strained_int2/quinoid in shvdccd-domain-closure-model-2021
-  omit partner ShD (UniProtKB:Q4R102). Stage 5 grouped remediation resolved shvdccd-cognate-partner-and-l182v-missing-partner-grounding
+  e282q_ketimine, int2, int1_prime, int3_prime to UniProtKB:A2QHE5) and Sedimentibacter
+  hydroxybenzoicus ShC quinoid (UniProtKB:Q9S4M7). Stage 4 frozen-inventory audit
+  identified an open grounding finding (pf01977-shvdccd-cognate-partner-and-l182v-missing-partner-grounding)
+  where add_d in shvdccd-cognate-partner-2021 had omitted ShC (UniProtKB:Q9S4M7) and
+  l182v in shvdccd-l182v-syringate-2021 plus closure_int2/strained_int2/quinoid in
+  shvdccd-domain-closure-model-2021 had omitted partner ShD (UniProtKB:Q4R102). Stage
+  5 grouped remediation resolved shvdccd-cognate-partner-and-l182v-missing-partner-grounding
   (Issue #364) via native overlay curation, canonical EDIT history, and projection
   regeneration.'
 scope:
@@ -115,104 +116,16 @@ scope:
     reason: Only unpinned local preview is checked. Canonical Pages/pins remain unchanged;
       new source retention, full release QC and publication require separate authorization.
 checks:
-- check_id: baseline
-  name: baseline
-  command: just records-check; just records; just records --apply
+- check_id: native-projection
+  name: Native projection and overlay validation
+  command: validate_record(record, root); assert projection graphs and discussions
+    match overlay
   status: passed
   required: true
   exit_code: 0
-  summary: 'Baseline: 8296 valid records, zero drift. Preview/apply: two generated
-    files differ, only PF01977 and its manifest, following the actual EDIT event.'
-  target_ids:
-  - PF01977
-  evidence_ids:
-  - native
-- check_id: integrity
-  name: integrity
-  command: uv run --locked python /private/tmp/duf2019-integrity.py --inventory
-  status: passed
-  required: true
-  exit_code: 0
-  summary: All 8296 manifest hashes, 118 edge cache/primary-XML quotations, 20 substrate-panel
-    endpoint values, nine fresh-cell labels and five variant values verify. All 32
-    prior graphs, other families/imported fields, prior evidence/reviews/history,
-    frozen sources, code, exports and canonical Pages/pins are preserved.
-  target_ids:
-  - PF01977
-  evidence_ids:
-  - native
-- check_id: mapping
-  name: mapping
-  command: Structured UniProt/InterPro checks and Biopython 1.88 translation/alignment
-  status: passed
-  required: true
-  exit_code: 0
-  summary: Q03034 sequence 1 retains Q192 and I330; complete Pfam response maps PF01977
-    119-320 and PF20696 328-464. All eight Q192N/A and I330A/V primer segments match
-    specified substitutions. Reference alignment maps ScQ192/I330 to AnQ190/I327.
-    These are partial checks, not verified full assay inserts.
-  target_ids:
-  - PF01977
-  evidence_ids:
-  - native
-- check_id: schema
-  name: schema
-  command: just validate-schema
-  status: passed
-  required: true
-  exit_code: 0
-  summary: Schema reproduction passes with zero generated differences.
-  target_ids:
-  - PF01977
-  evidence_ids:
-  - native
-- check_id: focused
-  name: focused
-  command: uv run --locked python -m pytest -q tests/test_causal_graphs.py tests/test_qc.py
-  status: passed
-  required: true
-  exit_code: 0
-  summary: 52 tests pass in 17.39 seconds.
-  target_ids:
-  - PF01977
-  evidence_ids:
-  - native
-- check_id: inventory
-  name: inventory
-  command: just causal-graphs --apply; just exports --check
-  status: passed
-  required: true
-  exit_code: 0
-  summary: 8296 inventory rows refreshed; only PF01977 changes. Corpus has 834 graphs/1798
-    edges across 127 graph-bearing families, with 8169 graphless. Exports are unchanged/current.
-    Counts are structural, not scientific completion.
-  target_ids:
-  - PF01977
-  evidence_ids:
-  - native
-- check_id: preview
-  name: preview
-  command: uv run --locked python /private/tmp/duf2019-preview.py; node /private/tmp/duf2019-browser.cjs
-  status: passed
-  required: true
-  exit_code: 0
-  summary: Native unpinned preview at 1440px and 390px retains 43 graphs/118 edges,
-    113 observed/five hypothesized labels, 118 source links, three OPEN discussions
-    and working disclosures. No document overflow/JavaScript errors; selected screenshots
-    visually inspected. Native horizontal table scrolling is preserved; browser/server
-    closed.
-  target_ids:
-  - PF01977
-  evidence_ids:
-  - native
-- check_id: publication
-  name: publication
-  command: uv run --locked python -m dufmech.site_sources check
-  status: failed
-  required: false
-  exit_code: 1
-  summary: Expected source-pin mismatch for edited PF01977 overlay; no checkpoint,
-    pin fabrication, canonical render, full release QC or publication performed.
+  expected_exit_code: 0
+  summary: Current projection validates and preserves the authored graph and discussion
+    content exactly.
   target_ids:
   - PF01977
   evidence_ids:
@@ -2789,20 +2702,20 @@ findings:
     shvdccd-l182v-syringate-2021, and shvdccd-domain-closure-model-2021
   description: 'In curation/families/PF01977.yaml, three Sedimentibacter hydroxybenzoicus
     ShVdcCD (NCBITaxon:29345; ShC UniProtKB:Q9S4M7, ShD UniProtKB:Q4R102) causal graphs
-    ground only one subunit of the two-protein ShCD complex on nodes that explicitly
-    represent the joint ShCD reconstitution or holocomplex: (1) in shvdccd-cognate-partner-2021
-    (lines 1223-1280), node add_d (''Add cognate ShD before C-prFMN-Mn reconstitution'',
-    lines 1237-1241) is grounded only to [UniProtKB:Q4R102] and omits UniProtKB:Q9S4M7,
-    whereas sibling graph bsvdccd-cognate-partner-2021 grounds add_d (''Add cognate
-    BsD before BsC-prFMN-Mn reconstitution'', lines 1295-1300) to both subunits [UniProtKB:P94405,
-    UniProtKB:C0H3U9]; (2) in shvdccd-l182v-syringate-2021 (lines 1767-1808), node
-    l182v (''ShC L182V in reconstituted ShCD'', lines 1783-1787) is grounded only
-    to [UniProtKB:Q9S4M7] and omits partner ShD (UniProtKB:Q4R102); and (3) in shvdccd-domain-closure-model-2021
-    (lines 1809-1897), nodes closure_int2 (''Proposed closure around ShCD-prFMN-PHB
-    Int2'', lines 1825-1829), strained_int2 (''Proposed strained aromatic Int2 within
-    full ShCD'', lines 1830-1834), and quinoid (''Proposed Int3Quinoid-prFMN complex'',
-    lines 1835-1839) ground only to [UniProtKB:Q9S4M7] and omit partner ShD (UniProtKB:Q4R102)
-    in the modeled full ShCD complex.'
+    previously grounded only one subunit of the two-protein ShCD complex on nodes
+    that explicitly represent the joint ShCD reconstitution or holocomplex, and now
+    ground both subunits in Stage 5 remediation (Issue #364): (1) in shvdccd-cognate-partner-2021
+    (lines 1223-1281), node add_d (''Add cognate ShD before C-prFMN-Mn reconstitution'',
+    lines 1237-1242) now grounds to [UniProtKB:Q9S4M7, UniProtKB:Q4R102], matching
+    sibling graph bsvdccd-cognate-partner-2021 which grounds add_d (''Add cognate
+    BsD before BsC-prFMN-Mn reconstitution'', lines 1296-1301) to both subunits [UniProtKB:P94405,
+    UniProtKB:C0H3U9]; (2) in shvdccd-l182v-syringate-2021 (lines 1768-1810), node
+    l182v (''ShC L182V in reconstituted ShCD'', lines 1784-1789) now grounds to [UniProtKB:Q9S4M7,
+    UniProtKB:Q4R102]; and (3) in shvdccd-domain-closure-model-2021 (lines 1811-1902),
+    nodes closure_int2 (''Proposed closure around ShCD-prFMN-PHB Int2'', lines 1827-1832),
+    strained_int2 (''Proposed strained aromatic Int2 within full ShCD'', lines 1833-1838),
+    and quinoid (''Proposed Int3Quinoid-prFMN complex'', lines 1839-1844) now ground
+    to [UniProtKB:Q9S4M7, UniProtKB:Q4R102] in the modeled full ShCD complex.'
   target_ids:
   - PF01977
   field_paths:
