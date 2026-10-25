@@ -18,7 +18,7 @@ events:
     nodes in PF01554 causal graph to UniProtKB:Q9KRU4
   details: Grounded the wt-low-concentration-binding and sodium-enhancement-binding
     (ACTIVITY) readout nodes in norm-vc-sodium-binding-and-substitutions to UniProtKB:Q9KRU4
-    (Vibrio cholerae NorM-VC VC1634, NCBITaxon:243277), matching the verified purified
+    (Vibrio cholerae NorM-VC VC_1540, NCBITaxon:243277), matching the verified purified
     recombinant NorM-VC protein grounded on the PERTURBATION nodes in the same graph
     and on wt-ph-series-anisotropy in Raturi et al. 2021 (PMID:33976372).
   sections:
