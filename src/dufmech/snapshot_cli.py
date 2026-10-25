@@ -9,9 +9,11 @@ from pathlib import Path
 
 from dufmech.snapshot import write_worklist_snapshot
 from dufmech.worklist import (
+    DEFAULT_WORKLIST_SEARCHES,
     InterProPfamClient,
     collect_worklist,
     load_interpro_fixture,
+    normalize_search_terms,
 )
 
 
@@ -22,7 +24,12 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument(
         "--search",
         default="DUF",
-        help="InterPro Pfam search term (default: DUF)",
+        help="InterPro Pfam search term(s), comma-separated (default: DUF)",
+    )
+    parser.add_argument(
+        "--include-upf",
+        action="store_true",
+        help="also harvest InterPro search=UPF alongside --search terms",
     )
     parser.add_argument(
         "--page-size",
@@ -60,12 +67,18 @@ def main(argv: list[str] | None = None) -> int:
         except ValueError:
             parser.error("--snapshot-date must be an ISO date")
 
+    search_terms = normalize_search_terms(
+        (*normalize_search_terms(args.search), *DEFAULT_WORKLIST_SEARCHES)
+        if args.include_upf
+        else args.search
+    )
+    search_label = ",".join(search_terms)
     if args.input_json:
         payload = json.loads(args.input_json.read_text(encoding="utf-8"))
         entries = load_interpro_fixture(payload)
     else:
         entries = InterProPfamClient().iter_entries(
-            search=args.search,
+            search=search_terms,
             page_size=args.page_size,
         )
 
@@ -78,7 +91,7 @@ def main(argv: list[str] | None = None) -> int:
             rows,
             args.out_dir,
             snapshot_date=args.snapshot_date,
-            search=args.search,
+            search=search_label,
             page_size=args.page_size,
             include_false_positives=args.include_false_positives,
         )

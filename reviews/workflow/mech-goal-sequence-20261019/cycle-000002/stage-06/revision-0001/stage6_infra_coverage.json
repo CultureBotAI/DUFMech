@@ -1,0 +1,37 @@
+{
+  "run_id": "mech-goal-sequence-20261019",
+  "cycle": 2,
+  "stage": 6,
+  "cutoff_timestamp": "2026-10-25T07:04:09Z",
+  "frozen_snapshot_path": "reviews/workflow/mech-goal-sequence-20261019/cycle-000002/stage-06/revision-0001/infra_snapshot.md",
+  "frozen_snapshot_sha256": "81980542d697234a109bc4cc55554aec064d1434928ad57d0ef86af30793b0d3",
+  "tasks": [
+    {
+      "task_id": "dufmech-infra-0001",
+      "issue_url": "https://github.com/CultureBotAI/DUFMech/issues/333",
+      "status_before": "resolved",
+      "status_after": "resolved",
+      "disposition": "Implemented curation_overlay_mentions and curation_overlay_candidates in src/dufmech/protein_examples.py (with --dufmech-repo / --dufmech-commit CLI integration and unit tests in tests/test_protein_examples.py) and documented the governed FamilyRecord vs site-render projection boundary.",
+      "validation_artifacts": [
+        "reviews/workflow/mech-goal-sequence-20261019/cycle-000001/stage-06/revision-0001/implementation_plan.md",
+        "reviews/workflow/mech-goal-sequence-20261019/cycle-000001/stage-06/revision-0001/validation.md",
+        "tests/test_protein_examples.py"
+      ]
+    },
+    {
+      "task_id": "dufmech-infra-0002",
+      "issue_url": "https://github.com/CultureBotAI/DUFMech/issues/341",
+      "status_before": "open",
+      "status_after": "resolved",
+      "disposition": "Aligned src/dufmech/worklist.py short-name/name classification under CLASSIFIER_POLICY with src/dufmech/pfam_history.py (recognizing underscore-bounded DUF short names like PF21084 WHD_DUF4423_like and currently-named UPF\\d{4} families like PF03649 UPF0014 while excluding UPF1/UPF2/UPF3/HupF false positives and preserving LEGACY_CLASSIFIER_POLICY replay parity) and added multi-query DUF/UPF harvesting support in InterProPfamClient, dufmech.cli, and dufmech.snapshot_cli with regression tests in tests/test_duf_puf_worklist.py.",
+      "validation_artifacts": [
+        "reviews/workflow/mech-goal-sequence-20261019/cycle-000002/stage-06/revision-0001/implementation_plan.md",
+        "reviews/workflow/mech-goal-sequence-20261019/cycle-000002/stage-06/revision-0001/validation.md",
+        "tests/test_duf_puf_worklist.py",
+        "tests/test_reclassify.py",
+        "tests/test_exduf.py"
+      ]
+    }
+  ],
+  "carried_forward_tasks": []
+}

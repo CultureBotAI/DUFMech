@@ -41,8 +41,9 @@ tasks:
     disposition: Implemented curation_overlay_mentions and curation_overlay_candidates in src/dufmech/protein_examples.py (with --dufmech-repo / --dufmech-commit CLI integration and unit tests in tests/test_protein_examples.py) and documented the governed FamilyRecord vs site-render projection boundary.
   - task_id: dufmech-infra-0002
     summary: Include currently-named UPF\d{4} Pfam families and underscore-joined DUF short names (PF21084 WHD_DUF4423_like) in worklist harvesting
-    status: open
+    status: resolved
     issue_url: https://github.com/CultureBotAI/DUFMech/issues/341
+    disposition: Aligned src/dufmech/worklist.py short-name/name classification under CLASSIFIER_POLICY with src/dufmech/pfam_history.py (recognizing underscore-bounded DUF short names like PF21084 WHD_DUF4423_like and currently-named UPF\d{4} families like PF03649 UPF0014 while excluding UPF1/UPF2/UPF3/HupF false positives and preserving LEGACY_CLASSIFIER_POLICY replay parity) and added multi-query DUF/UPF harvesting support in InterProPfamClient, dufmech.cli, and dufmech.snapshot_cli with regression tests in tests/test_duf_puf_worklist.py.
 ```
 <!-- mech-infra-tasks:end -->
 
@@ -82,20 +83,25 @@ tasks:
 ### `dufmech-infra-0002` — Include currently-named `UPF\d{4}` Pfam families and underscore-joined DUF short names (`PF21084` `WHD_DUF4423_like`) in worklist harvesting
 
 - **Originating run / cycle / goal**: `mech-goal-sequence-20261019`, cycle `2`, stage `1` (`add_records`)
-- **Status**: `open`
+- **Status**: `resolved`
 - **Issue**: https://github.com/CultureBotAI/DUFMech/issues/341 (coordinates with https://github.com/CultureBotAI/DUFMech/issues/96)
 - **Priority**: Medium
 - **Dependencies**: Coordinate with [#96](https://github.com/CultureBotAI/DUFMech/issues/96) (`UPF0014` / `PF03649`)
 - **Evidence paths**:
   - `src/dufmech/worklist.py`
+  - `src/dufmech/cli.py`
+  - `src/dufmech/snapshot_cli.py`
   - `src/dufmech/pfam_history.py`
   - `src/dufmech/exduf.py`
   - `data/worklists/interpro-pfam-duf-2026-10-10.json`
   - `data/worklists/pfam-previous-unknown-names-2026-10-10.json`
   - `reports/cross-mech-duf-audit-2026-10-08.tsv`
+  - `tests/test_duf_puf_worklist.py`
   - `tests/test_exduf.py`
   - `tests/test_upf1_migration_release.py`
   - `tests/test_exports.py`
+  - `reviews/workflow/mech-goal-sequence-20261019/cycle-000002/stage-06/revision-0001/implementation_plan.md`
+  - `reviews/workflow/mech-goal-sequence-20261019/cycle-000002/stage-06/revision-0001/validation.md`
 - **Observation**:
   - During the Cycle 2 Stage 1 (`add_records`) bounded-frontier discovery audit across the InterPro Pfam API (`search=DUF` and `search=UPF`) and Pfam 38.2 previous-identifier history (`data/worklists/pfam-previous-unknown-names-2026-10-10.json`), two worklist harvester/classifier boundary gaps were identified in `src/dufmech/worklist.py`:
     1. `src/dufmech/pfam_history.py` (`UNKNOWN_NAME_RE = re.compile(r"(?:[A-Za-z0-9]+[_-])*(?:DUF(?:DUF)?_?[A-Z]?\d+|UPF\d{4})(?:[_-][A-Za-z0-9]+)*")`) includes `UPF\d{4}` when Pfam has *renamed* a family away from `UPF\d{4}` in `#=GF PI` (`84` `EX_DUF` families in `data/worklists/interpro-pfam-duf-2026-10-10.json`). However, `src/dufmech/worklist.py` (`InterProPfamClient.iter_entries(search="DUF")` and `DUF_SHORT_NAME_RE = re.compile(r"\bDUF\d+\b", re.IGNORECASE)`) only queries `search=DUF` and only matches `DUF\d+` in short names. Consequently, `86` Pfam 38.2 families that are *still* named `UPF\d{4}` (out of `95` total `search=UPF` entries on InterPro, where `5` are already `EX_DUF` in the worklist and `4` are genuine non-`UPF\d{4}` false positives: `PF01455` `HupF_HypC`, `PF03467` `Smg4_UPF3`, `PF04050` `Upf2`, `PF09416` `UPF1_Zn_bind`) are absent from the worklist snapshot, including `PF03649` (`UPF0014`, `Uncharacterised protein family (UPF0014)`), which is one of the four unresolved `UPF` tokens tracked in [#96](https://github.com/CultureBotAI/DUFMech/issues/96).
@@ -103,5 +109,12 @@ tasks:
 - **Desired outcome**:
   - Align `src/dufmech/worklist.py` harvesting and short-name/name classification with `src/dufmech/pfam_history.py` (`UNKNOWN_NAME_RE`) so that `UPF\d{4}` families (while excluding `UPF1`/`UPF2`/`UPF3`/`HupF` gene names) and underscore-joined `DUF\d+` short names (`PF21084` `WHD_DUF4423_like`) are classified consistently.
   - Coordinate with [#96](https://github.com/CultureBotAI/DUFMech/issues/96) so `PF03649` (`UPF0014`) and any newly harvested `UPF\d{4}` / `PF21084` worklist snapshot and family records (`data/families/PF*.yaml`) are regenerated together with updated snapshot regression tests (`tests/test_exduf.py`, `tests/test_upf1_migration_release.py`, `tests/test_exports.py`).
+- **Resolution / Disposition** (`mech-goal-sequence-20261019`, cycle `2`, stage `6`):
+  - **Implemented in `src/dufmech/worklist.py`, `src/dufmech/cli.py`, `src/dufmech/snapshot_cli.py`, and `tests/test_duf_puf_worklist.py`**:
+    - Aligned `DUF_SHORT_NAME_RE` (`r"(?<![A-Za-z0-9])(?:DUF(?:DUF)?_?[A-Z]?\d+|UPF\d{4})(?![A-Za-z0-9])"`) and `DUF_NAME_RE` (`r"(?<![A-Za-z0-9])DUF(?:DUF)?_?[A-Z]?\d+(?![A-Za-z0-9])"`) under `CLASSIFIER_POLICY` (`unknown-function-metadata-v3`) with `src/dufmech/pfam_history.py` (`UNKNOWN_NAME_RE`) while preserving `LEGACY_DUF_SHORT_NAME_RE = re.compile(r"\bDUF\d+\b", re.IGNORECASE)` under `LEGACY_CLASSIFIER_POLICY` (`unknown-function-metadata-v2`) so frozen historical snapshot replay tests (`tests/test_reclassify.py`) remain byte-identical.
+    - Added `UPF_SHORT_NAME_RE`, `UNCHARACTERIZED_UPF_NAME_RE`, and `UNCHARACTERIZED_UPF_DESCRIPTION_RE` under `CLASSIFIER_POLICY` so currently-named `UPF\d{4}` families whose InterPro name or description states `Uncharacterised protein family (UPF\d{4})` (such as `PF03649` `UPF0014`) receive `name_says_unknown_function` / `description_says_unknown_function` and classify as `UNKNOWN_CANDIDATE`, while functionally annotated `UPF\d{4}` short names classify as `KNOWN_HISTORICAL_DUF` and non-4-digit `UPF1`/`UPF2`/`UPF3`/`HupF` families classify as `FALSE_POSITIVE_TEXT_HIT`.
+    - Added `DEFAULT_WORKLIST_SEARCHES = ("DUF", "UPF")`, `normalize_search_terms`, and `InterProPfamClient.iter_worklist_entries()`, extended `InterProPfamClient.iter_entries(search=...)` to accept comma-separated strings or sequences of search terms while retaining `search="DUF"` as the backward-compatible default, and added `--include-upf` to `dufmech.cli` and `dufmech.snapshot_cli`.
+  - **Evaluated frozen worklist snapshot and [#96](https://github.com/CultureBotAI/DUFMech/issues/96) onboarding boundary**:
+    - Stage 6 (`infrastructure`) implements the harvester, classifier, and CLI upgrades without performing bulk record onboarding (`add_records`, Stage 1). Existing frozen snapshots (`data/worklists/interpro-pfam-duf-2026-10-01.json`, `2026-10-05.json`, `2026-10-08.json`, `2026-10-10.json`) and their pinned regression gates (`tests/test_reclassify.py`, `tests/test_exduf.py`, `tests/test_upf1_migration_release.py`, `tests/test_exports.py`) remain intact; live multi-query (`DUF,UPF`) snapshot freezing and record onboarding for `PF21084` / `PF03649` (`UPF0014`, [#96](https://github.com/CultureBotAI/DUFMech/issues/96)) are ready for the next `add_records` (Stage 1) cycle using the upgraded harvester.
 
 

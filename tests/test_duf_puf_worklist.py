@@ -338,3 +338,168 @@ def test_load_interpro_fixture_accepts_page_lists() -> None:
     fixture = [{"results": [interpro_result()]}, {"results": [interpro_result()]}]
 
     assert len(load_interpro_fixture(fixture)) == 2
+
+
+def test_underscore_joined_duf_short_name_and_upf_four_digit_families_are_classified() -> None:
+    whd_duf = row_from_interpro_entry(
+        interpro_result(
+            accession="PF21084",
+            short_name="WHD_DUF4423_like",
+            name="Winged Helix-turn-helix domain",
+            description="<p>Winged helix DNA-binding domain.</p>",
+        )
+    )
+    assert whd_duf is not None
+    assert whd_duf.unknown_status == KNOWN_HISTORICAL_DUF
+    assert whd_duf.candidate_reasons == ("short_name_matches_duf",)
+    assert (
+        reclassify_worklist([whd_duf], classifier_policy=LEGACY_CLASSIFIER_POLICY)[
+            0
+        ].unknown_status
+        == FALSE_POSITIVE_TEXT_HIT
+    )
+
+    upf_unknown = row_from_interpro_entry(
+        interpro_result(
+            accession="PF03649",
+            short_name="UPF0014",
+            name="Uncharacterised protein family (UPF0014)",
+            description="<p>This entry represents uncharacterised protein family UPF0014.</p>",
+        )
+    )
+    assert upf_unknown is not None
+    assert upf_unknown.unknown_status == UNKNOWN_CANDIDATE
+    assert upf_unknown.candidate_reasons == (
+        "short_name_matches_duf",
+        "name_says_unknown_function",
+        "description_says_unknown_function",
+    )
+
+    upf_historical = row_from_interpro_entry(
+        interpro_result(
+            accession="PF01709",
+            short_name="UPF0054",
+            name="Ribosome maturation protein RimP",
+            description="<p>RimP is required for 30S ribosomal subunit maturation.</p>",
+        )
+    )
+    assert upf_historical is not None
+    assert upf_historical.unknown_status == KNOWN_HISTORICAL_DUF
+    assert upf_historical.candidate_reasons == ("short_name_matches_duf",)
+
+
+@pytest.mark.parametrize(
+    ("accession", "short_name", "name", "description"),
+    [
+        (
+            "PF01455",
+            "HupF_HypC",
+            "HupF/HypC family",
+            "<p>Chaperone involved in [NiFe] hydrogenase maturation.</p>",
+        ),
+        (
+            "PF03467",
+            "Smg4_UPF3",
+            "Regulator of nonsense transcripts 3 (UPF3)",
+            "<p>Involved in nonsense-mediated mRNA decay.</p>",
+        ),
+        (
+            "PF04050",
+            "Upf2",
+            "Nonsense-mediated mRNA decay protein Upf2",
+            "<p>Binds Upf1 and Upf3 in the NMD pathway.</p>",
+        ),
+        (
+            "PF09416",
+            "UPF1_Zn_bind",
+            "Regulator of nonsense transcripts 1, zinc-binding domain",
+            "<p>Zinc-binding domain of RNA helicase UPF1.</p>",
+        ),
+        (
+            "PF24722",
+            "UPF1_1B_dom",
+            "Regulator of nonsense transcripts 1, 1B domain",
+            "<p>Domain 1B of nonsense-mediated mRNA decay factor UPF1.</p>",
+        ),
+    ],
+)
+def test_non_four_digit_upf_and_hupf_gene_names_are_dropped_as_false_positives(
+    accession: str,
+    short_name: str,
+    name: str,
+    description: str,
+) -> None:
+    entry = interpro_result(
+        accession=accession,
+        short_name=short_name,
+        name=name,
+        description=description,
+    )
+    row = row_from_interpro_entry(entry)
+    assert row is not None
+    assert row.unknown_status == FALSE_POSITIVE_TEXT_HIT
+    assert collect_worklist([entry]) == []
+
+
+def test_interpro_client_iter_worklist_entries_combines_duf_and_upf_queries() -> None:
+    pages = {
+        "DUF": {
+            "next": None,
+            "results": [
+                interpro_result(
+                    accession="PF21084",
+                    short_name="WHD_DUF4423_like",
+                    name="Winged Helix-turn-helix domain",
+                    description="<p>Winged helix DNA-binding domain.</p>",
+                )
+            ],
+        },
+        "UPF": {
+            "next": None,
+            "results": [
+                interpro_result(
+                    accession="PF03649",
+                    short_name="UPF0014",
+                    name="Uncharacterised protein family (UPF0014)",
+                    description="<p>This entry represents uncharacterised protein family UPF0014.</p>",
+                ),
+                interpro_result(
+                    accession="PF21084",
+                    short_name="WHD_DUF4423_like",
+                    name="Winged Helix-turn-helix domain",
+                    description="<p>Winged helix DNA-binding domain.</p>",
+                ),
+                interpro_result(
+                    accession="PF09416",
+                    short_name="UPF1_Zn_bind",
+                    name="Regulator of nonsense transcripts 1, zinc-binding domain",
+                    description="<p>Zinc-binding domain of RNA helicase UPF1.</p>",
+                ),
+            ],
+        },
+    }
+    seen_searches: list[str] = []
+
+    def handler(request: httpx.Request) -> httpx.Response:
+        term = request.url.params["search"]
+        seen_searches.append(term)
+        return httpx.Response(200, json=pages[term])
+
+    client = InterProPfamClient(transport=httpx.MockTransport(handler))
+    rows = collect_worklist(client.iter_worklist_entries())
+
+    assert seen_searches == ["DUF", "UPF"]
+    assert [(row.pfam_id, row.unknown_status) for row in rows] == [
+        ("PF03649", UNKNOWN_CANDIDATE),
+        ("PF21084", KNOWN_HISTORICAL_DUF),
+    ]
+
+
+def test_normalize_search_terms_handles_comma_separated_and_sequence_inputs() -> None:
+    from dufmech.worklist import normalize_search_terms
+
+    assert normalize_search_terms("DUF") == ("DUF",)
+    assert normalize_search_terms("DUF, UPF, DUF") == ("DUF", "UPF")
+    assert normalize_search_terms(("DUF", "UPF")) == ("DUF", "UPF")
+    with pytest.raises(ValueError, match="at least one InterPro search term is required"):
+        normalize_search_terms(" , ")
