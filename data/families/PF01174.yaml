@@ -129,6 +129,7 @@ causal_graphs:
     label: Joint YaaD, YaaE, glutamine, ribose 5-phosphate and DHAP reaction
     node_type: ACTIVITY
     grounding:
+    - UniProtKB:P37527
     - UniProtKB:P37528
   - node_id: identified-plp-product
     label: Reaction product identified as pyridoxal 5-phosphate
@@ -171,6 +172,7 @@ causal_graphs:
     label: Add YaaE to YaaD with ribulose 5-phosphate and ammonium
     node_type: PERTURBATION
     grounding:
+    - UniProtKB:P37527
     - UniProtKB:P37528
   - node_id: ribulose-ammonium-a414
     label: A414 product-associated signal in the ribulose/ammonium reaction
@@ -214,10 +216,14 @@ causal_graphs:
   - node_id: acivicin-pretreat-glutaminase-mixture
     label: Increase 5-mM acivicin pretreatment time relative to zero-time control
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:P37527
+    - UniProtKB:P37528
   - node_id: acivicin-assay-glutaminase-readout
     label: Residual coupled glutaminase readout of YaaD/YaaE
     node_type: ACTIVITY
     grounding:
+    - UniProtKB:P37527
     - UniProtKB:P37528
   edges:
   - edge_id: acivicin-exposure-decreases-glutaminase-readout
@@ -256,9 +262,15 @@ causal_graphs:
   - node_id: acivicin-pretreat-plp-mixture
     label: Expose the YaaD/YaaE synthesis mixture to increasing acivicin
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:P37527
+    - UniProtKB:P37528
   - node_id: residual-glutamine-plp-signal
     label: Residual glutamine-supported A414 synthesis activity
     node_type: ACTIVITY
+    grounding:
+    - UniProtKB:P37527
+    - UniProtKB:P37528
   edges:
   - edge_id: acivicin-decreases-glutamine-plp-signal
     subject: acivicin-pretreat-plp-mixture
@@ -301,5 +313,14 @@ curation_events:
   outcome: changed
   summary: Ground PF01174 causal-graph protein/gene/complex nodes with UniProtKB:P37527, UniProtKB:P37528
   history_record: history/records/PF01174/2026-10-25T111500Z-antigravity-701c9e.yaml
+  event_index: 0
+  llm_assisted: true
+- timestamp: '2026-10-25T16:08:00Z'
+  curator: Antigravity
+  action: EDIT
+  outcome: changed
+  summary: Ground Bacillus subtilis 168 YaaD/PdxS (UniProtKB:P37527) and YaaE/PdxT (UniProtKB:P37528)
+    paired PLP synthase complex nodes across 4 causal graphs
+  history_record: history/records/PF01174/2026-10-25T160800Z-antigravity-c3s5a1.yaml
   event_index: 0
   llm_assisted: true

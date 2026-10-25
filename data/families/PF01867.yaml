@@ -92,6 +92,7 @@ causal_graphs:
     node_type: ACTIVITY
     grounding:
     - UniProtKB:Q46896
+    - UniProtKB:P45956
   - node_id: integrated-dna
     label: Deproteinized donor-labeled relaxed and linear plasmid products
     node_type: STATE
@@ -108,6 +109,8 @@ causal_graphs:
   - node_id: cas2-deletion
     label: Replace WT Cas2 with its beta6-beta7 deletion variant
     node_type: PERTURBATION
+    grounding:
+    - UniProtKB:P45956
   edges:
   - edge_id: joint-reaction-produces-integrated-dna
     subject: joint-reaction
@@ -196,6 +199,7 @@ causal_graphs:
     node_type: PERTURBATION
     grounding:
     - UniProtKB:Q46896
+    - UniProtKB:P45956
   - node_id: integrated-dna
     label: Radiolabeled donor-containing plasmid product
     node_type: STATE
@@ -353,6 +357,7 @@ causal_graphs:
     node_type: PERTURBATION
     grounding:
     - UniProtKB:Q46896
+    - UniProtKB:P45956
   - node_id: expanded-locus
     label: Expanded CRISPR-I locus PCR bands
     node_type: PHENOTYPE
@@ -496,9 +501,13 @@ causal_graphs:
     node_type: PERTURBATION
     grounding:
     - UniProtKB:Q46896
+    - UniProtKB:P45956
   - node_id: cas2-recovery
     label: Cas2-HA signal in the Cas1-FLAG immunoprecipitate
     node_type: PHENOTYPE
+    grounding:
+    - UniProtKB:Q46896
+    - UniProtKB:P45956
   edges:
   - edge_id: r252e-decreases-cas2-coisolation
     subject: r252e
@@ -549,5 +558,14 @@ curation_events:
   outcome: changed
   summary: Ground PF01867 causal-graph protein/gene/complex nodes with UniProtKB:Q46896
   history_record: history/records/PF01867/2026-10-25T111500Z-antigravity-657d81.yaml
+  event_index: 0
+  llm_assisted: true
+- timestamp: '2026-10-25T16:08:20Z'
+  curator: Antigravity
+  action: EDIT
+  outcome: changed
+  summary: Ground Escherichia coli K-12 MG1655 Cas2 (UniProtKB:P45956) and paired Cas1-Cas2 (UniProtKB:Q46896,
+    UniProtKB:P45956) nodes across 4 causal graphs
+  history_record: history/records/PF01867/2026-10-25T160820Z-antigravity-c3s5a3.yaml
   event_index: 0
   llm_assisted: true

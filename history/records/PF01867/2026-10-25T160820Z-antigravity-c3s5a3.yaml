@@ -1,0 +1,38 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01867
+  path: curation/families/PF01867.yaml
+session:
+  id: 2026-10-25T160820Z-antigravity-c3s5a3
+  timestamp: '2026-10-25T16:08:20Z'
+  actors:
+  - type: ai_agent
+    name: Antigravity
+    model: inherit
+    agent_tool: Antigravity CLI
+events:
+- type: EDIT
+  outcome: changed
+  summary: Ground Escherichia coli K-12 MG1655 Cas2 (UniProtKB:P45956) and paired Cas1-Cas2 (UniProtKB:Q46896, UniProtKB:P45956) nodes across 4 causal graphs
+  details: 'Resolved Cycle 3 Stage 4 finding pf01867-cas2-partner-and-complex-nodes-missing-grounding
+    (#363) in curation/families/PF01867.yaml (Escherichia coli str. K-12 substr. MG1655,
+    NCBITaxon:83333) by grounding Cas2 (UniProtKB:P45956, CAS2_ECOLI, b2754) and paired
+    Cas1 (UniProtKB:Q46896, CAS1_ECOLI, b2755) + Cas2 nodes across 4 causal graphs:
+    cas1-cas2-purified-integration (PMID:25707795) node joint-reaction (ACTIVITY) ->
+    [UniProtKB:Q46896, UniProtKB:P45956] and node cas2-deletion (PERTURBATION) ->
+    [UniProtKB:P45956]; cas2-enhancement-in-manganese (PMID:25707795) node add-cas2
+    (PERTURBATION) -> [UniProtKB:Q46896, UniProtKB:P45956]; cas1-cas2-cellular-acquisition
+    (PMID:24793649) node coexpress-cas1-cas2 (PERTURBATION) -> [UniProtKB:Q46896,
+    UniProtKB:P45956]; and cas1-r252e-lysate-coisolation (PMID:24793649) nodes r252e
+    (PERTURBATION) and cas2-recovery (PHENOTYPE) -> [UniProtKB:Q46896, UniProtKB:P45956].'
+  sections:
+  - causal_graphs
+links:
+  issues:
+  - https://github.com/CultureBotAI/DUFMech/issues/363
+  urls:
+  - https://rest.uniprot.org/uniprotkb/Q46896.json
+  - https://rest.uniprot.org/uniprotkb/P45956.json
+  - https://pubmed.ncbi.nlm.nih.gov/25707795/
+  - https://pubmed.ncbi.nlm.nih.gov/24793649/

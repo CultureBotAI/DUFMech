@@ -1,0 +1,33 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01977
+  path: curation/families/PF01977.yaml
+session:
+  id: 2026-10-25T160830Z-antigravity-c3s5a4
+  timestamp: '2026-10-25T16:08:30Z'
+  actors:
+  - type: ai_agent
+    name: Antigravity
+    model: inherit
+    agent_tool: Antigravity CLI
+events:
+- type: EDIT
+  outcome: changed
+  summary: Ground Sedimentibacter hydroxybenzoicus paired ShVdcCD (UniProtKB:Q9S4M7, UniProtKB:Q4R102) complex nodes across 3 causal graphs
+  details: 'Resolved Cycle 3 Stage 4 finding pf01977-shvdccd-cognate-partner-and-l182v-missing-partner-grounding
+    (#364) in curation/families/PF01977.yaml (Sedimentibacter hydroxybenzoicus, NCBITaxon:29345,
+    PMID:34417452) by updating 5 joint ShVdcCD complex nodes (ShC UniProtKB:Q9S4M7 +
+    ShD UniProtKB:Q4R102) across 3 causal graphs to ground to [UniProtKB:Q9S4M7, UniProtKB:Q4R102]:
+    shvdccd-cognate-partner-2021 node add_d (PERTURBATION), shvdccd-l182v-syringate-2021
+    node l182v (PERTURBATION), and shvdccd-domain-closure-model-2021 nodes closure_int2
+    (PROCESS), strained_int2 (STATE), and quinoid (STATE).'
+  sections:
+  - causal_graphs
+links:
+  issues:
+  - https://github.com/CultureBotAI/DUFMech/issues/364
+  urls:
+  - https://rest.uniprot.org/uniprotkb/Q9S4M7.json
+  - https://rest.uniprot.org/uniprotkb/Q4R102.json
+  - https://pubmed.ncbi.nlm.nih.gov/34417452/
