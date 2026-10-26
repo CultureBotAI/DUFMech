@@ -862,7 +862,11 @@
       const link = document.createElement('a');
       link.href = href;
       link.textContent = label;
-      nav.append(link, ' › ');
+      // Decoration only: the links and the current page carry the trail for screen readers.
+      const separator = document.createElement('span');
+      separator.setAttribute('aria-hidden', 'true');
+      separator.textContent = ' › ';
+      nav.append(link, separator);
     }
     const current = document.createElement('span');
     current.setAttribute('aria-current', 'page');

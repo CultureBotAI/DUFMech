@@ -425,6 +425,14 @@ test('family pages show a breadcrumb trail through the seed category', async () 
     const hrefs = await nav.getByRole('link').evaluateAll(links => links.map(link => link.getAttribute('href')));
     assert.deepEqual(hrefs, ['../index.html', '../index.html#families', `../category/${category}.html`]);
     assert.equal(await nav.locator('[aria-current="page"]').innerText(), pfam);
+    // Separators are visible decoration, never announced (issue 379).
+    const separators = await nav.evaluate(element => ({
+      bare: [...element.childNodes].filter(node => node.nodeType === Node.TEXT_NODE && node.textContent.trim()).length,
+      hidden: [...element.querySelectorAll('[aria-hidden="true"]')].map(span => span.textContent.trim()),
+    }));
+    assert.deepEqual(separators, {bare: 0, hidden: ['›', '›', '›']});
+    assert.equal((await nav.innerText()).split('›').length, 4);
+    assert.ok(!(await nav.ariaSnapshot()).includes('›'), await nav.ariaSnapshot());
     await noOverflow(page);
     await nav.getByRole('link').nth(2).click();
     await page.waitForURL(`**/category/${category}.html`);
