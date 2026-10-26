@@ -11,7 +11,30 @@ from html.parser import HTMLParser
 from pathlib import Path
 from urllib.parse import unquote, urlsplit
 
+from dufmech.site import SITE_URL
 from dufmech.site_files import PENDING
+
+# GitHub Pages serves this page for every missing path, so nothing links to it and
+# a relative reference in it would resolve against whichever URL was mistyped.
+NOT_FOUND = "404.html"
+
+
+def target(name: str, href: str) -> tuple[str, str] | None:
+    """The site file and fragment a reference names, or None when it leaves the site.
+
+    A relative reference resolves against its page. An absolute one under the site's
+    own published URL resolves against the site root, so the links 404.html has to
+    write that way are still checked against the build.
+    """
+    if href.startswith(SITE_URL):
+        parts = urlsplit(href[len(SITE_URL):])
+        return (posixpath.normpath(unquote(parts.path)) if parts.path else "index.html"), parts.fragment
+    parts = urlsplit(href)
+    if parts.scheme or parts.netloc:
+        return None
+    relative = (posixpath.normpath(posixpath.join(posixpath.dirname(name), unquote(parts.path)))
+                if parts.path else name)
+    return relative, parts.fragment
 
 
 class Page(HTMLParser):
@@ -55,7 +78,7 @@ def check_site(site: Path, budgets: dict) -> tuple[list[str], dict]:
     }
     files = {p.relative_to(root).as_posix(): p for p in root.rglob("*") if p.is_file()}
     for required in ("index.html", "index.json", "catalogue.json", "categories.html", "sources.html",
-                     "style.css", "dashboard.js", "theme.js"):
+                     "style.css", "dashboard.js", "theme.js", NOT_FOUND):
         if required not in files:
             errors.append(f"missing required site artifact: {required}")
     if errors:
@@ -75,16 +98,19 @@ def check_site(site: Path, budgets: dict) -> tuple[list[str], dict]:
             errors.append(f"duplicate HTML ID: {name}")
         for href in page.links:
             parts = urlsplit(href)
-            if parts.scheme or parts.netloc:
+            if name == NOT_FOUND and not parts.scheme and not parts.netloc and parts.path:
+                errors.append(f"relative reference in {NOT_FOUND}, which is served at missing paths: {href}")
                 continue
-            relative = (posixpath.normpath(posixpath.join(posixpath.dirname(name), unquote(parts.path)))
-                        if parts.path else name)
+            resolved = target(name, href)
+            if resolved is None:
+                continue
+            relative, fragment = resolved
             if relative not in files:
                 errors.append(f"broken local link: {name} -> {href}")
                 continue
             if relative.startswith("families/") and relative.endswith(".html"):
                 reached.add(Path(relative).stem)
-            if parts.fragment and relative in parsed and unquote(parts.fragment) not in parsed[relative].ids:
+            if fragment and relative in parsed and unquote(fragment) not in parsed[relative].ids:
                 errors.append(f"missing anchor: {name} -> {href}")
         if name == "index.html" or name.startswith(("browse/", "category/")):
             row_count = len([identifier for identifier in page.ids if re.fullmatch(r"PF[0-9]{5}", identifier)])
@@ -103,14 +129,10 @@ def check_site(site: Path, budgets: dict) -> tuple[list[str], dict]:
             continue
         visited.add(name)
         for href in parsed[name].links:
-            parts = urlsplit(href)
-            if parts.scheme or parts.netloc:
-                continue
-            relative = (posixpath.normpath(posixpath.join(posixpath.dirname(name), unquote(parts.path)))
-                        if parts.path else name)
-            if relative in parsed and relative not in visited:
-                pending.append(relative)
-    unreachable = set(parsed) - visited
+            resolved = target(name, href)
+            if resolved and resolved[0] in parsed and resolved[0] not in visited:
+                pending.append(resolved[0])
+    unreachable = set(parsed) - visited - {NOT_FOUND}
     if unreachable:
         errors.append(f"unreachable HTML pages: {', '.join(sorted(unreachable)[:5])}")
     sizes = {name: path.stat().st_size for name, path in files.items()}

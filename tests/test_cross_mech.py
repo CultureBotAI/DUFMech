@@ -336,7 +336,7 @@ def test_dashboard_lists_cross_mech_links(mechs_root: Path, tmp_path: Path) -> N
     assert "ProteinTraitsMech" not in curated.select_one("tbody").get_text()
     links = [link["href"] for link in curated.select("tbody a")]
     assert any("/TraitMech/blob/" in link for link in links)
-    assert "https://rest.uniprot.org/uniprotkb/P22041" in links
+    assert "https://www.uniprot.org/uniprotkb/P22041/entry" in links
 
 
 def test_report_lists_curated_rows_and_reuse_gaps(mechs_root: Path, tmp_path: Path) -> None:
