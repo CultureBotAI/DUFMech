@@ -13,7 +13,7 @@ from bs4 import BeautifulSoup
 from dufmech.pages import render_site
 from dufmech.site import SITE_URL
 from dufmech.site_contract import check_site
-from dufmech.site_data import autolink, description_html
+from dufmech.site_data import autolink, curie_url, description_html
 from tests.test_report import worklist_row
 
 # Verified sibling search and record routes (X-Mech unification standard, 2026-10-25).
@@ -47,6 +47,7 @@ GROUNDINGS = {
     "Pfam:PF00001": "https://www.ebi.ac.uk/interpro/entry/pfam/PF00001/",
     "Pfam:PF99999": "https://www.ebi.ac.uk/interpro/entry/pfam/PF99999/",
     "NCBITaxon:562": "https://culturebotai.github.io/TaxonMech/pages/taxon.html?id=NCBITaxon:562",
+    "https://example.org/protein/1": "https://example.org/protein/1",
 }
 
 
@@ -85,7 +86,7 @@ def site(tmp_path):
     cross = [{"pfam_id": "PF00001", "source_mech": "ProteinTraitsMech", "source_path": "data/traits/t.yaml",
               "source_section": "proteins", "source_record_id": "PTM:1", "uniprot_accession": "P75103",
               "link_basis": ["family_mention"]}]
-    record = {**graph_record(), "discussions": [{
+    record = {**graph_record(), "curation_history": "history/records/PF00001", "discussions": [{
         "prompt": "Does it generalize?", "status": "OPEN",
         "notes": "Later alpha-NAD work PMID31599159 and doi10.1038/s41467-020-18981-w remain leads.",
         "evidence": [{"reference": "DOI:10.1234/discussion"}]}]}
@@ -115,6 +116,33 @@ def site(tmp_path):
      [("https://doi.org/10.1093/femsre/fuab043", "https://doi.org/10.1093/femsre/fuab043")]),
     ("The2004doi10.1074/jbc.M401879200full paper", []),
     ("format PMIDs are not PMID:1234567890123", []),
+    # Markdown around a reference stays text and never leaks into the target.
+    ("See [10.1038/x](https://doi.org/10.1038/x).",
+     [("https://doi.org/10.1038/x", "10.1038/x"), ("https://doi.org/10.1038/x", "https://doi.org/10.1038/x")]),
+    ("Bold **10.1099/y** here", [("https://doi.org/10.1099/y", "10.1099/y")]),
+    ("Code `10.1146/z` here", [("https://doi.org/10.1146/z", "10.1146/z")]),
+    ("**https://example.org/a** and `PMID:123`",
+     [("https://example.org/a", "https://example.org/a"), ("https://pubmed.ncbi.nlm.nih.gov/123/", "PMID:123")]),
+    ('Cited "https://example.org/a"(2019)', [("https://example.org/a", "https://example.org/a")]),
+    ("Ends 10.1234/abc; then 10.1234/def: and https://example.org/z,",
+     [("https://doi.org/10.1234/abc", "10.1234/abc"), ("https://doi.org/10.1234/def", "10.1234/def"),
+      ("https://example.org/z", "https://example.org/z")]),
+    # The shapes the PR 368 review found (issue 369).
+    ("**10.1099/ijs.0.003251-0**", [("https://doi.org/10.1099/ijs.0.003251-0", "10.1099/ijs.0.003251-0")]),
+    ("**doi:10.1099/ijs.0.003251-0**",
+     [("https://doi.org/10.1099/ijs.0.003251-0", "doi:10.1099/ijs.0.003251-0")]),
+    ("`10.1146/annurev-cellbio-101011-155745`",
+     [("https://doi.org/10.1146/annurev-cellbio-101011-155745", "10.1146/annurev-cellbio-101011-155745")]),
+    ("`https://example.org/code`", [("https://example.org/code", "https://example.org/code")]),
+    ("see https://example.org/x** and", [("https://example.org/x", "https://example.org/x")]),
+    ("Table|10.1000/cell|next", [("https://doi.org/10.1000/cell", "10.1000/cell")]),
+    ("| PMID:123 | https://example.org/t|", [("https://pubmed.ncbi.nlm.nih.gov/123/", "PMID:123"),
+                                            ("https://example.org/t", "https://example.org/t")]),
+    ('https://example.org/x"onmouseover="alert(1)', [("https://example.org/x", "https://example.org/x")]),
+    ("'https://example.org/q'b and \u201chttps://example.org/r\u201d",
+     [("https://example.org/q", "https://example.org/q"), ("https://example.org/r", "https://example.org/r")]),
+    ("_https://example.org/i_ and ~~https://example.org/s~~",
+     [("https://example.org/i", "https://example.org/i"), ("https://example.org/s", "https://example.org/s")]),
 ])
 def test_reference_tokens_link_exactly_and_keep_the_text(value, links):
     html = autolink(value)
@@ -162,6 +190,17 @@ def test_causal_graph_groundings_link_resolvers_and_other_family_pages(site):
     assert not soup(site, "families/PF00001.html").select('a[href="#"]')
 
 
+@pytest.mark.parametrize(("value", "expected"), [
+    ("https://example.org/protein/1", "https://example.org/protein/1"),
+    ("http://example.org/protein/2", "http://example.org/protein/2"),
+    ("ftp://example.org/protein/3", ""),
+    ("WormBase:WBGene00019763", "https://bioregistry.io/WormBase:WBGene00019763"),
+    ("not a curie", ""),
+])
+def test_url_shaped_groundings_never_reach_bioregistry(value, expected):
+    assert curie_url(value) == expected
+
+
 def test_related_mech_proteins_open_the_uniprot_entry_page(site):
     table = soup(site, "families/PF00001.html").select_one('[aria-label="Cross-Mech records"]')
     proteins = [a["href"] for a in table.select("a") if a.get_text() == "P75103"]
@@ -178,6 +217,41 @@ def test_family_pages_keep_the_hook_the_feedback_route_attaches_to(site):
     script = (site / "dashboard.js").read_text()
     assert "https://github.com/CultureBotAI/DUFMech/issues/new" in script
     assert "\n  initFeedback();\n" in script
+
+
+def test_only_overlay_families_link_their_curation_overlay_for_editing(site):
+    curated = section(soup(site, "families/PF00001.html"), "Record source")
+    edits = [a["href"] for a in curated.select("a") if a.get_text() == "Edit the curation overlay on GitHub"]
+    assert edits == ["https://github.com/CultureBotAI/DUFMech/edit/main/curation/families/PF00001.yaml"]
+    seeded = section(soup(site, "families/PF00002.html"), "Record source")
+    assert not [a for a in seeded.select("a") if "/edit/" in a["href"]]
+
+
+def test_family_pages_keep_the_hooks_the_breadcrumb_trail_extends(site):
+    """dashboard.js turns this trail into a Breadcrumb nav through the seed category (browser-tested)."""
+    for pfam in ("PF00001", "PF00002"):
+        page = soup(site, f"families/{pfam}.html")
+        trail = page.select_one("main").find(True)
+        assert trail.name == "p" and trail.select_one('a[href="../index.html"]')
+        seed = page.select_one("main .record-facts").find("dt", string="Seed status").find_next_sibling("dd")
+        assert (site / "category" / (seed.get_text().strip().lower().replace(" ", "_") + ".html")).is_file()
+    assert "\n  initBreadcrumbs();\n" in (site / "dashboard.js").read_text()
+
+
+@pytest.mark.parametrize(("page", "prefix", "label"), [
+    ("map.html", "map-data", "Families plotted on the text map"),
+    ("sequence-map.html", "seq-data", "Proteins plotted on the sequence map"),
+])
+def test_map_pages_offer_a_table_alternative_and_a_noscript_route(site, page, prefix, label):
+    html = soup(site, page)
+    details = html.select_one(f"details#{prefix}")
+    assert details.summary.get_text() == "View data as table"
+    region = details.select_one(f'.table-wrap[role="region"][tabindex="0"][aria-label="{label}"]')
+    assert region.select_one("table tbody") is not None and not region.select("tbody tr")
+    assert details.select_one(f'#{prefix}-count[role="status"]')
+    assert details.select_one(f"button#{prefix}-more").has_attr("hidden")
+    assert html.select_one('noscript a[href="index.html#families"]')
+    assert f"mapDataTable('{prefix}'" in (site / "dashboard.js").read_text()
 
 
 def test_not_found_page_is_self_contained_absolute_and_checked(site):
@@ -206,6 +280,16 @@ def test_contract_requires_an_absolute_not_found_page(site):
     not_found.write_text(original.replace(f'href="{SITE_URL}categories.html"', 'href="categories.html"', 1))
     errors = check_site(site, budgets)[0]
     assert errors == ["relative reference in 404.html, which is served at missing paths: categories.html"]
+    # Own-site absolute links are resolved against the build, not skipped as external (issue 370).
+    not_found.write_text(original.replace(f'href="{SITE_URL}categories.html"', f'href="{SITE_URL}nope.html"', 1))
+    assert check_site(site, budgets)[0] == [f"broken local link: 404.html -> {SITE_URL}nope.html"]
+    not_found.write_text(original.replace(f'href="{SITE_URL}index.html#families"',
+                                          f'href="{SITE_URL}index.html#nowhere"', 1))
+    assert check_site(site, budgets)[0] == [f"missing anchor: 404.html -> {SITE_URL}index.html#nowhere"]
+    not_found.write_text(original.replace(f'href="{SITE_URL}map.html"', f'href="{SITE_URL}../map.html"', 1))
+    assert check_site(site, budgets)[0] == [f"broken local link: 404.html -> {SITE_URL}../map.html"]
+    not_found.write_text(original.replace(f'href="{SITE_URL}map.html"', f'href="{SITE_URL}families/../map.html"', 1))
+    assert check_site(site, budgets)[0] == []
     not_found.unlink()
     assert "missing required site artifact: 404.html" in check_site(site, budgets)[0]
     not_found.write_text(original)

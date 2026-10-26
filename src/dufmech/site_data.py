@@ -23,13 +23,18 @@ CURIE_RE = re.compile(r"[A-Za-z][A-Za-z0-9_.-]*:[^\s<>\"']+")
 TAXON_RECORD = "https://culturebotai.github.io/TaxonMech/pages/taxon.html?id=NCBITaxon:"
 # Reference tokens as curated prose spells them ("PMID:1", "PMID1", "doi:10.x/y",
 # "DOI10.x/y", "PMC1"). A URL matches first, so a DOI or PMC inside it stays part of
-# that URL; a DOI glued to a preceding word is not a token and stays text.
+# that URL; a DOI glued to a preceding word is not a token and stays text. A token ends
+# at whitespace, angle or square brackets, a table pipe or a quote, so Markdown and
+# table syntax around a reference never becomes part of its target.
+TOKEN = "[^\\s<>\\[\\]|\"'\u2018\u2019\u201c\u201d]+"
 REFERENCE_TOKEN = re.compile(
-    r"(?P<url>https?://[^\s<>\[\]]+)"
-    r"|(?P<doi>\b(?i:doi):?\s?10\.[0-9]{4,9}/[^\s<>\[\]]+|(?<![\w./])10\.[0-9]{4,9}/[^\s<>\[\]]+)"
+    f"(?P<url>https?://{TOKEN})"
+    f"|(?P<doi>\\b(?i:doi):?\\s?10\\.[0-9]{{4,9}}/{TOKEN}|(?<![\\w./])10\\.[0-9]{{4,9}}/{TOKEN})"
     r"|\b(?i:pmid):?\s?(?P<pmid>[0-9]{1,9})\b"
     r"|\b(?P<pmc>PMC:?[0-9]{4,9})\b"
 )
+# Sentence punctuation and Markdown emphasis, code and strikethrough marks.
+TRAILING = ".,;:!?*`_~"
 CLOSERS = {")": "(", "}": "{"}
 
 
@@ -104,10 +109,18 @@ def reference_url(reference: dict[str, Any]) -> str:
 
 
 def curie_url(curie: str) -> str:
-    """Resolve a displayed CURIE; a well-formed unknown prefix resolves through bioregistry.io."""
+    """Resolve a displayed CURIE; a well-formed unknown prefix resolves through bioregistry.io.
+
+    A value that is already an http(s) URL is its own target; any other scheme-shaped
+    value (``ftp://...``) is not a compact identifier and gets no link.
+    """
+    if safe_url(curie):
+        return curie
     if not isinstance(curie, str) or not CURIE_RE.fullmatch(curie):
         return ""
     prefix, local = curie.split(":", 1)
+    if local.startswith("//"):
+        return ""
     if prefix == "UniProtKB" and UNIPROT_RE.fullmatch(local):
         return f"https://www.uniprot.org/uniprotkb/{local}/entry"
     if ((prefix == "NCBIProtein" and (GENBANK_PROTEIN_RE.fullmatch(local) or REFSEQ_PROTEIN_RE.fullmatch(local)))
@@ -124,8 +137,8 @@ def curie_url(curie: str) -> str:
 
 
 def trim_token(token: str) -> str:
-    """Drop sentence punctuation and unbalanced closing brackets that end a token."""
-    while token and (token[-1] in ".,;:!?'\"" or (
+    """Drop trailing punctuation, emphasis marks and unbalanced closing brackets."""
+    while token and (token[-1] in TRAILING or (
             token[-1] in CLOSERS and token.count(token[-1]) > token.count(CLOSERS[token[-1]]))):
         token = token[:-1]
     return token

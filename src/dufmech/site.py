@@ -519,6 +519,11 @@ def record_page(row: dict, metadata: dict, context: dict) -> str:
                   "No verified immutable repository source supplied.")
     if metadata.get("local_source"):
         own_source += "<br>" + artifact_link(metadata, "Family YAML in this build")
+    if metadata.get("record", {}).get("curation_history"):
+        # data/families is a generated projection; curation is edited in the overlay,
+        # which is the only source of curation_history.
+        own_source += "<br>" + link(f"{REPOSITORY}/edit/main/curation/families/{pfam}.yaml",
+                                    "Edit the curation overlay on GitHub")
     counters = "".join(f'<dt>{human(key)}</dt><dd>{count(row[key])}</dd>' for key in (
         "proteins", "matches", "proteomes", "taxa", "structures", "alphafold_models", "domain_architectures",
     ))
@@ -635,6 +640,16 @@ def default_sequence_map(families: list[dict], protein_examples: list[dict] | No
     })
 
 
+def map_data_table(prefix: str, label: str, columns: tuple[str, ...]) -> str:
+    """An empty, labelled table that dashboard.js fills from the map's own JSON when opened."""
+    head = "".join(f'<th scope="col">{text(column)}</th>' for column in columns)
+    return (f'<details class="map-data" id="{prefix}"><summary>View data as table</summary>'
+            f'<p id="{prefix}-count" role="status">Rows appear once the map data has loaded.</p>'
+            f'<div class="table-wrap" tabindex="0" role="region" aria-label="{text(label)}">'
+            f'<table><thead><tr>{head}</tr></thead><tbody></tbody></table></div>'
+            f'<button id="{prefix}-more" type="button" hidden>Show more rows</button></details>')
+
+
 def text_map_page(text_map: dict, provenance: dict) -> str:
     seed_opts = options({v: v.replace("_", " ") for v in text_map.get("seed_statuses", [])})
     cur_opts = options({v: v.replace("_", " ") for v in text_map.get("curation_statuses", [])})
@@ -671,6 +686,9 @@ def text_map_page(text_map: dict, provenance: dict) -> str:
 <div id="map-selection" class="map-selection" aria-live="polite">
 <p>Click or hover any point to inspect the Pfam/DUF family and open its detail page. Drag to pan; scroll or pinch to zoom.</p>
 </div>
+<noscript><p>This map needs JavaScript. The <a href="index.html#families">catalogue table</a> lists every family without it.</p></noscript>
+{map_data_table("map-data", "Families plotted on the text map",
+                ("Pfam", "Family", "Seed status", "Curation status", "Cross-Mech linkage"))}
 </div></div>{GUIDE}"""
     return page_shell("Text embedding map", body, provenance)
 
@@ -715,6 +733,9 @@ embedded with protein language model <code>{model}</code> ({dim}-dimensional mea
 <div id="seq-selection" class="map-selection" aria-live="polite">
 <p>Click or hover any protein point to inspect its UniProtKB accession, organism, length, and linked DUF/Pfam families.</p>
 </div>
+<noscript><p>This map needs JavaScript. Each family page, reached from the <a href="index.html#families">catalogue table</a>, lists its protein sequence examples without it.</p></noscript>
+{map_data_table("seq-data", "Proteins plotted on the sequence map",
+                ("UniProt", "Protein", "Organism", "Length", "DUF/Pfam families"))}
 </div></div>{GUIDE}"""
     return page_shell("Sequence map (pLM)", body, provenance)
 

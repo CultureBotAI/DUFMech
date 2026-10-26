@@ -9,6 +9,8 @@ header, main, footer { max-width: 1280px; margin: auto; padding: 24px; min-width
 header { display: flex; gap: 16px 20px; align-items: center; flex-wrap: wrap; border-bottom: 1px solid var(--line); }
 nav { display: flex; flex-wrap: wrap; gap: 10px 18px; }
 header nav { flex: 1 1 360px; }
+.breadcrumbs { display: block; margin: 12px 0; }
+.breadcrumbs [aria-current="page"] { background: none; }
 .brand { font-size: 1.3rem; font-weight: 700; text-decoration: none; }
 .header-search { display: flex; gap: 8px; align-items: center; flex: 0 1 320px; min-width: 0; max-width: 100%; }
 .header-search input { flex: 1 1 auto; min-width: 0; width: 100%; }
@@ -43,6 +45,9 @@ button:disabled { color: var(--muted); cursor: default; }
 .map-selection { background: var(--card); border: 1px solid var(--line); border-radius: 6px; padding: 12px 16px; margin-top: 12px; }
 .map-selection p { margin: 6px 0; }
 .map-legend { margin-top: 12px; border-top: 1px solid var(--line); padding-top: 10px; }
+.map-data { margin-top: 12px; }
+.map-data table { min-width: 640px; }
+.map-data td:first-child { white-space: nowrap; }
 .legend-items { display: flex; flex-direction: column; gap: 6px; }
 .legend-pill { display: flex; align-items: center; gap: 8px; text-align: left; width: 100%; padding: 6px 10px; min-height: 38px; font-size: .875rem; background: var(--card); color: var(--fg); border: 1px solid var(--line); }
 .legend-pill.is-active { border: 2px solid var(--accent); font-weight: 700; }

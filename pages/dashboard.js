@@ -327,6 +327,64 @@
     container.append(list);
   }
 
+  // A keyboard- and screen-reader-reachable table of what a map canvas plots. Rows come
+  // from the already-loaded map JSON, only while the disclosure is open and a page at a
+  // time, and follow the map's current search and filters.
+  function mapDataTable(prefix, renderRow, noun, redraw) {
+    const details = byId(prefix);
+    if (!details) return () => {};
+    const tbody = details.querySelector('tbody');
+    const countEl = byId(prefix + '-count');
+    const more = byId(prefix + '-more');
+    const size = 200;
+    let signature = null, items = [], shown = 0;
+    function fill() {
+      const next = items.slice(shown, shown + size);
+      tbody.append(...next.map(renderRow));
+      shown += next.length;
+      countEl.textContent = 'Listing ' + shown.toLocaleString('en-US') + ' of ' +
+        items.length.toLocaleString('en-US') + ' plotted ' + noun + '.';
+      more.hidden = shown >= items.length;
+    }
+    more.addEventListener('click', fill);
+    details.addEventListener('toggle', () => {
+      if (!details.open) return;
+      signature = null;
+      redraw();
+    });
+    return (nextSignature, visibleItems) => {
+      if (!details.open || nextSignature === signature) return;
+      signature = nextSignature;
+      items = visibleItems();
+      shown = 0;
+      tbody.replaceChildren();
+      fill();
+    };
+  }
+
+  function linkCell(href, label) {
+    const td = document.createElement('td');
+    if (href) {
+      const a = document.createElement('a');
+      a.href = href;
+      a.textContent = label;
+      td.append(a);
+    } else {
+      td.textContent = label;
+    }
+    return td;
+  }
+
+  function textCells(tr, values) {
+    values.forEach(value => {
+      const td = document.createElement('td');
+      td.textContent = value;
+      tr.append(td);
+    });
+  }
+
+  const familyPage = id => /^PF[0-9]{5}$/.test(id) ? 'families/' + id + '.html' : '';
+
   function initTextMap() {
     const container = document.querySelector('[data-text-map]');
     if (!container) return;
@@ -344,6 +402,12 @@
     const state = {zoom: 1, panX: 0, panY: 0, hovered: null, selected: null, projected: []};
     let payload = null;
     let records = [];
+    const updateTable = mapDataTable('map-data', rec => {
+      const tr = document.createElement('tr');
+      tr.append(linkCell(familyPage(rec.pfam_id), rec.pfam_id));
+      textCells(tr, [rec.name + ' (' + rec.short_name + ')', human(rec.seed), human(rec.curation), rec.cross_mech]);
+      return tr;
+    }, 'families', () => draw());
 
     function showRecord(rec, pinned) {
       selectionEl.replaceChildren();
@@ -426,6 +490,9 @@
 
       statusEl.textContent = 'Showing ' + matched.toLocaleString('en-US') + ' of ' +
         records.length.toLocaleString('en-US') + ' DUF/Pfam families.';
+      updateTable([q, seedVal, curVal, cmVal].join('\u0000'), () => state.projected
+        .filter(item => item.visible).map(item => item.point)
+        .sort((a, b) => a.pfam_id.localeCompare(b.pfam_id, 'en')));
 
       const activeSelect = mode === 'curation' ? curSelect :
         mode === 'cross_mech' ? cmSelect : seedSelect;
@@ -544,6 +611,25 @@
     const state = {zoom: 1, panX: 0, panY: 0, hovered: null, selected: null, projected: []};
     let payload = null;
     let proteins = [];
+    const updateTable = mapDataTable('seq-data', prot => {
+      const tr = document.createElement('tr');
+      const accession = prot.uniprot_accession;
+      tr.append(linkCell(/^[A-Z0-9]+(-[0-9]+)?$/.test(accession) ?
+        'https://www.uniprot.org/uniprotkb/' + accession + '/entry' : '', accession));
+      textCells(tr, [prot.label, prot.organism, prot.length.toLocaleString('en-US') + ' aa']);
+      const families = document.createElement('td');
+      (prot.records || []).forEach((rec, idx) => {
+        if (idx > 0) families.append(', ');
+        const page = familyPage(rec.id);
+        if (!page) { families.append(rec.id); return; }
+        const a = document.createElement('a');
+        a.href = page;
+        a.textContent = rec.id + ' (' + rec.short_name + ')';
+        families.append(a);
+      });
+      tr.append(families);
+      return tr;
+    }, 'proteins', () => draw());
 
     function showProtein(prot, pinned) {
       selectionEl.replaceChildren();
@@ -640,6 +726,9 @@
       statusEl.textContent = 'Showing ' + matched.toLocaleString('en-US') + ' of ' +
         proteins.length.toLocaleString('en-US') + ' proteins across ' +
         matchedFamilies.size.toLocaleString('en-US') + ' DUF/Pfam families.';
+      updateTable([q, seedVal, curVal, chanVal, lenVal].join('\u0000'), () => state.projected
+        .filter(item => item.visible).map(item => item.point)
+        .sort((a, b) => a.uniprot_accession.localeCompare(b.uniprot_accession, 'en')));
 
       const activeSelect = mode === 'curation' ? curSelect :
         mode === 'channel' ? chanSelect :
@@ -738,23 +827,53 @@
     load();
   }
 
+  const familyPath = () => location.pathname.match(/\/families\/(PF[0-9]{5})(?:\.html)?$/);
+
   // Built here rather than rendered so the static family pages carry no extra bytes;
   // without JavaScript the header's Repository link remains the reporting route.
   function initFeedback() {
-    const match = location.pathname.match(/\/families\/(PF[0-9]{5})(?:\.html)?$/);
+    const match = familyPath();
     const download = match && document.querySelector('a[download][href="' + match[1] + '.json"]');
     if (!download) return;
-    const issue = new URL('https://github.com/CultureBotAI/DUFMech/issues/new');
-    issue.searchParams.set('title', match[1]);
-    issue.searchParams.set('body', location.origin + location.pathname);
     const link = document.createElement('a');
-    link.href = issue.href;
+    link.href = 'https://github.com/CultureBotAI/DUFMech/issues/new?title=' +
+      encodeURIComponent('Problem with ' + match[1]) + '&body=' +
+      encodeURIComponent(location.origin + location.pathname);
     link.textContent = 'Report a problem on GitHub';
     download.after(' | ', link);
+  }
+
+  // The static trail links the catalogue; this adds the family's seed category, read
+  // from the page's own record facts, again without adding bytes to every family page.
+  function initBreadcrumbs() {
+    const match = familyPath();
+    const trail = match && document.querySelector('main > p:first-child');
+    if (!trail || !trail.querySelector('a[href="../index.html"]')) return;
+    const term = [...document.querySelectorAll('main .record-facts dt')]
+      .find(dt => dt.textContent === 'Seed status');
+    const status = term && term.nextElementSibling ? term.nextElementSibling.textContent.trim() : '';
+    const slug = status.toLowerCase().replaceAll(' ', '_');
+    const crumbs = [['DUFMech', '../index.html'], ['Families', '../index.html#families']];
+    if (/^[a-z_]+$/.test(slug)) crumbs.push([status, '../category/' + slug + '.html']);
+    const nav = document.createElement('nav');
+    nav.className = 'breadcrumbs';
+    nav.setAttribute('aria-label', 'Breadcrumb');
+    for (const [label, href] of crumbs) {
+      const link = document.createElement('a');
+      link.href = href;
+      link.textContent = label;
+      nav.append(link, ' › ');
+    }
+    const current = document.createElement('span');
+    current.setAttribute('aria-current', 'page');
+    current.textContent = match[1];
+    nav.append(current);
+    trail.replaceWith(nav);
   }
 
   initCatalogue();
   initTextMap();
   initSequenceMap();
   initFeedback();
+  initBreadcrumbs();
 })();

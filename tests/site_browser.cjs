@@ -400,14 +400,80 @@ test('family pages link a prefilled issue for that family; other pages do not', 
     const source = page.locator('section', {has: page.getByRole('heading', {name: 'Record source'})});
     const issue = source.getByRole('link', {name: 'Report a problem on GitHub'});
     assert.equal(await issue.count(), 1);
-    const href = new URL(await issue.getAttribute('href'));
+    const raw = await issue.getAttribute('href');
+    assert.ok(raw.includes(`title=Problem%20with%20${pfam}&body=`), raw);
+    const href = new URL(raw);
     assert.equal(href.origin + href.pathname, 'https://github.com/CultureBotAI/DUFMech/issues/new');
-    assert.equal(href.searchParams.get('title'), pfam);
+    assert.equal(href.searchParams.get('title'), `Problem with ${pfam}`);
     assert.equal(href.searchParams.get('body'), origin + `/families/${pfam}.html`);
     await noOverflow(page);
   }
   await page.goto(origin + '/index.html');
   assert.equal(await page.getByRole('link', {name: 'Report a problem on GitHub'}).count(), 0);
+  assert.deepEqual(errors, []);
+  await context.close();
+});
+
+test('family pages show a breadcrumb trail through the seed category', async () => {
+  const context = await browser.newContext({viewport: {width: 390, height: 844}});
+  const page = await context.newPage();
+  const errors = [];
+  page.on('pageerror', error => errors.push(error.message));
+  for (const [pfam, category] of [['PF00001', 'unknown_candidate'], ['PF00123', 'known_historical_duf']]) {
+    await page.goto(origin + `/families/${pfam}.html`);
+    const nav = page.getByRole('navigation', {name: 'Breadcrumb'});
+    const hrefs = await nav.getByRole('link').evaluateAll(links => links.map(link => link.getAttribute('href')));
+    assert.deepEqual(hrefs, ['../index.html', '../index.html#families', `../category/${category}.html`]);
+    assert.equal(await nav.locator('[aria-current="page"]').innerText(), pfam);
+    await noOverflow(page);
+    await nav.getByRole('link').nth(2).click();
+    await page.waitForURL(`**/category/${category}.html`);
+    assert.equal(await page.locator('h1').innerText(), category.toUpperCase().replaceAll('_', ' '));
+  }
+  await page.goto(origin + '/index.html');
+  assert.equal(await page.getByRole('navigation', {name: 'Breadcrumb'}).count(), 0);
+  assert.deepEqual(errors, []);
+  await context.close();
+});
+
+test('map data tables list what each canvas plots and follow its filters', async () => {
+  const context = await browser.newContext({viewport: {width: 390, height: 844}});
+  const page = await context.newPage();
+  const errors = [];
+  page.on('pageerror', error => errors.push(error.message));
+  await page.goto(origin + '/map.html');
+  await page.locator('#map-status', {hasText: 'Showing'}).waitFor();
+  const rows = page.locator('#map-data tbody tr');
+  assert.equal(await rows.count(), 0);
+  await page.locator('#map-data summary').focus();
+  await page.keyboard.press('Enter');
+  await rows.first().waitFor();
+  assert.equal(await rows.count(), 123);
+  assert.equal(await page.locator('#map-data-count').innerText(), 'Listing 123 of 123 plotted families.');
+  assert.equal(await rows.first().getByRole('link').getAttribute('href'), 'families/PF00001.html');
+  await page.fill('#map-search', 'PF00002');
+  await page.waitForFunction(() => document.querySelectorAll('#map-data tbody tr').length === 1);
+  assert.equal(await rows.first().getByRole('link').innerText(), 'PF00002');
+  await noOverflow(page);
+  await page.goto(origin + '/real/map.html');
+  await page.locator('#map-status', {hasText: 'Showing'}).waitFor();
+  await page.locator('#map-data summary').click();
+  await page.locator('#map-data tbody tr').first().waitFor();
+  const total = (await page.locator('#map-status').innerText()).match(/of ([0-9,]+) DUF/)[1];
+  assert.equal(await page.locator('#map-data-count').innerText(), `Listing 200 of ${total} plotted families.`);
+  await page.locator('#map-data-more').click();
+  assert.equal(await page.locator('#map-data tbody tr').count(), 400);
+  await page.goto(origin + '/sequence-map.html');
+  await page.locator('#seq-status', {hasText: 'Showing'}).waitFor();
+  await page.locator('#seq-data summary').click();
+  const proteins = page.locator('#seq-data tbody tr');
+  await proteins.first().waitFor();
+  assert.match(await proteins.first().getByRole('link').first().getAttribute('href'),
+    /^https:\/\/www\.uniprot\.org\/uniprotkb\/[A-Z0-9]+\/entry$/);
+  assert.match(await proteins.first().locator('td').last().getByRole('link').first().getAttribute('href'),
+    /^families\/PF[0-9]{5}\.html$/);
+  assert.match(await page.locator('#seq-data-count').innerText(), /^Listing [0-9,]+ of [0-9,]+ plotted proteins\.$/);
+  await noOverflow(page);
   assert.deepEqual(errors, []);
   await context.close();
 });
