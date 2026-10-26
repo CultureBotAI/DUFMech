@@ -143,6 +143,16 @@ def site(tmp_path):
      [("https://example.org/q", "https://example.org/q"), ("https://example.org/r", "https://example.org/r")]),
     ("_https://example.org/i_ and ~~https://example.org/s~~",
      [("https://example.org/i", "https://example.org/i"), ("https://example.org/s", "https://example.org/s")]),
+    # Issue 377: a closing parenthesis the token never opened ends it, and scanning resumes there.
+    ("(https://a.example/x)-(https://b.example/y)",
+     [("https://a.example/x", "https://a.example/x"), ("https://b.example/y", "https://b.example/y")]),
+    ("see https://en.wikipedia.org/wiki/Foo_(bar) and (https://en.wikipedia.org/wiki/Foo_(bar)).",
+     [("https://en.wikipedia.org/wiki/Foo_(bar)", "https://en.wikipedia.org/wiki/Foo_(bar)")] * 2),
+    ("(doi:10.1234/abc)-(doi:10.1234/def)",
+     [("https://doi.org/10.1234/abc", "doi:10.1234/abc"), ("https://doi.org/10.1234/def", "doi:10.1234/def")]),
+    ("(see 10.1016/0005-2744(70)90044-4)",
+     [("https://doi.org/10.1016/0005-2744%2870%2990044-4", "10.1016/0005-2744(70)90044-4")]),
+    ("(http://)-(https://b.example/y)", [("https://b.example/y", "https://b.example/y")]),
 ])
 def test_reference_tokens_link_exactly_and_keep_the_text(value, links):
     html = autolink(value)

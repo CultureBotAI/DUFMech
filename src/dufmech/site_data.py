@@ -36,6 +36,7 @@ REFERENCE_TOKEN = re.compile(
 # Sentence punctuation and Markdown emphasis, code and strikethrough marks.
 TRAILING = ".,;:!?*`_~"
 CLOSERS = {")": "(", "}": "{"}
+OPENERS = {opener: closer for closer, opener in CLOSERS.items()}
 
 
 def safe_url(value: str) -> bool:
@@ -137,11 +138,22 @@ def curie_url(curie: str) -> str:
 
 
 def trim_token(token: str) -> str:
-    """Drop trailing punctuation, emphasis marks and unbalanced closing brackets."""
-    while token and (token[-1] in TRAILING or (
-            token[-1] in CLOSERS and token.count(token[-1]) > token.count(CLOSERS[token[-1]]))):
-        token = token[:-1]
-    return token
+    """End a token at the first closing bracket it never opened, then drop trailing
+    punctuation and Markdown emphasis, code and strikethrough marks.
+
+    ``https://en.wikipedia.org/wiki/Foo_(bar)`` keeps its own parentheses, while in
+    ``(https://a.example/x)-(https://b.example/y)`` the first ``)`` ends the first URL.
+    """
+    unclosed = dict.fromkeys(CLOSERS, 0)
+    for index, char in enumerate(token):
+        if char in OPENERS:
+            unclosed[OPENERS[char]] += 1
+        elif char in CLOSERS:
+            if not unclosed[char]:
+                token = token[:index]
+                break
+            unclosed[char] -= 1
+    return token.rstrip(TRAILING)
 
 
 def autolink(value: Any) -> str:
@@ -153,8 +165,8 @@ def autolink(value: Any) -> str:
     """
     source = str(value if value is not None else "")
     chunks: list[str] = []
-    start = 0
-    for match in REFERENCE_TOKEN.finditer(source):
+    start = scan = 0
+    while match := REFERENCE_TOKEN.search(source, scan):
         token = match.group(0)
         if match.group("url"):
             token = trim_token(token)
@@ -166,11 +178,15 @@ def autolink(value: Any) -> str:
             url = f"https://pubmed.ncbi.nlm.nih.gov/{match.group('pmid')}/"
         else:
             url = reference_url({"reference": match.group("pmc")})
+        # Resume after the token, not the match: what trimming cut off may hold the
+        # next reference, as in "(https://a.example/x)-(https://b.example/y)".
+        end = match.start() + max(len(token), 1)
         if not url:
+            scan = end
             continue
         chunks.append(escape(source[start:match.start()]))
         chunks.append(link(url, token))
-        start = match.start() + len(token)
+        start = scan = end
     chunks.append(escape(source[start:]))
     return "".join(chunks)
 
