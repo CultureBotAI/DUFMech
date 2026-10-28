@@ -1,5 +1,6 @@
 """Keep native agent entry points and fleet review dependencies available."""
 
+import os
 import re
 import subprocess
 from pathlib import Path
@@ -60,15 +61,19 @@ def test_agents_md_local_links_resolve():
 
 
 def test_every_claude_skill_is_exposed_under_agents_skills():
+    """`.agents/skills` is a symlink to `.claude/skills`, so every tracked skill is one file for every agent."""
     claude_skills = _tracked_skill_files(".claude/skills")
-    agents_skills = _tracked_skill_files(".agents/skills")
     assert claude_skills
-    assert {p.parent.name for p in agents_skills} == {p.parent.name for p in claude_skills}
+    agents_dir = ROOT / ".agents/skills"
+    assert agents_dir.is_symlink(), "expected .agents/skills to be a symlink to ../.claude/skills"
+    assert os.readlink(agents_dir) == "../.claude/skills"
+    assert agents_dir.resolve() == (ROOT / ".claude/skills").resolve()
     for adapter in claude_skills:
         skill_name = adapter.parent.name
-        router = ROOT / ".agents/skills" / skill_name / "SKILL.md"
-        assert router.is_file(), f"Missing .agents/skills router for {skill_name}"
-        text = router.read_text(encoding="utf-8")
+        exposed = agents_dir / skill_name / "SKILL.md"
+        assert exposed.is_file(), f"Missing .agents/skills entry for {skill_name}"
+        assert exposed.resolve() == adapter.resolve()
+        text = exposed.read_text(encoding="utf-8")
         assert text.startswith("---\n")
         end = text[4:].find("\n---")
         assert end != -1
@@ -76,9 +81,6 @@ def test_every_claude_skill_is_exposed_under_agents_skills():
         assert isinstance(meta, dict)
         assert meta.get("name") == skill_name
         assert isinstance(meta.get("description"), str) and meta["description"].strip()
-        target = f"../../../.claude/skills/{skill_name}/SKILL.md"
-        assert f"]({target})" in text
-        assert (router.parent / target).resolve() == adapter.resolve()
 
 
 def test_add_record_skill_contract_and_router():
@@ -117,9 +119,7 @@ def test_add_record_skill_contract_and_router():
     ):
         assert forbidden not in text
     router = ROOT / ".agents/skills/add-record/SKILL.md"
-    target = "../../../.claude/skills/add-record/SKILL.md"
-    assert f"]({target})" in router.read_text(encoding="utf-8")
-    assert (router.parent / target).resolve() == adapter
+    assert router.resolve() == adapter  # .agents/skills is a symlink to .claude/skills
 
 
 def test_curate_causal_graphs_skill_contract_and_router():
@@ -135,9 +135,7 @@ def test_curate_causal_graphs_skill_contract_and_router():
     ):
         assert required in text
     router = ROOT / ".agents/skills/curate-causal-graphs/SKILL.md"
-    target = "../../../.claude/skills/curate-causal-graphs/SKILL.md"
-    assert f"]({target})" in router.read_text(encoding="utf-8")
-    assert (router.parent / target).resolve() == adapter
+    assert router.resolve() == adapter  # .agents/skills is a symlink to .claude/skills
 
 
 def test_dufmech_evolve_workflow_skill_contract_and_router():
@@ -151,9 +149,7 @@ def test_dufmech_evolve_workflow_skill_contract_and_router():
     ):
         assert required in text
     router = ROOT / ".agents/skills/dufmech-evolve-workflow/SKILL.md"
-    target = "../../../.claude/skills/dufmech-evolve-workflow/SKILL.md"
-    assert f"]({target})" in router.read_text(encoding="utf-8")
-    assert (router.parent / target).resolve() == adapter
+    assert router.resolve() == adapter  # .agents/skills is a symlink to .claude/skills
 
 
 def test_issue_triage_skill_is_native_scoped_and_read_only():
@@ -166,9 +162,7 @@ def test_issue_triage_skill_is_native_scoped_and_read_only():
     ):
         assert required in text
     router = ROOT / ".agents/skills/review-open-issues/SKILL.md"
-    target = "../../../.claude/skills/review-open-issues/SKILL.md"
-    assert f"]({target})" in router.read_text(encoding="utf-8")
-    assert (router.parent / target).resolve() == adapter
+    assert router.resolve() == adapter  # .agents/skills is a symlink to .claude/skills
 
 
 def test_ground_causal_graph_proteins_skill_contract_and_router():
@@ -186,6 +180,4 @@ def test_ground_causal_graph_proteins_skill_contract_and_router():
     ):
         assert required in text
     router = ROOT / ".agents/skills/ground-causal-graph-proteins/SKILL.md"
-    target = "../../../.claude/skills/ground-causal-graph-proteins/SKILL.md"
-    assert f"]({target})" in router.read_text(encoding="utf-8")
-    assert (router.parent / target).resolve() == adapter
+    assert router.resolve() == adapter  # .agents/skills is a symlink to .claude/skills

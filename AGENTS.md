@@ -28,8 +28,8 @@ the minimal appropriately licensed extract needed to check each assertion.
 
 - This file is read by Codex and Antigravity directly and by Claude Code through
   the `CLAUDE.md` symlink; keep it the only instruction file.
-- Project skills live in `.agents/skills/`; `.claude/skills` is a symlink to that
-  directory, so every agent discovers the same skill definitions (including
-  `review-open-issues`).
+- Project skills live in `.claude/skills/` and `.agents/skills` is a symlink to
+  that directory, so Claude Code, Codex and Antigravity discover the same skill
+  definitions (including `review-open-issues`).
 - Before running record or category reviews, read
   [docs/record-reviews.md](docs/record-reviews.md).
