@@ -1,6 +1,35 @@
-# DUFMech Agent Entry Point
+# DUFMech Working Agreements
 
-Read [CLAUDE.md](CLAUDE.md) for the authoritative working agreements, validation gates, and curation rules for this repository.
+DUFMech curates protein/domain family identity and evidence, not disease records.
+Read `docs/records.md`, `docs/reviews.md`, `docs/history.md` and `docs/sources.md`.
 
-- Project skills live in `.claude/skills/` and are exposed at `.agents/skills/` so both Claude Code and `.agents/skills`-aware agents (Antigravity, Codex) discover the same canonical skill definitions (including `review-open-issues`).
-- Before running record or category reviews, read [docs/record-reviews.md](docs/record-reviews.md).
+- Preserve immutable `data/worklists/` snapshots and their provenance manifests.
+- Generated `data/families/` records are rebuilt with `just records --apply`.
+  Edit human-owned `curation/families/` overlays, not generated projections.
+- Keep seed classification, evidence scoring and reviewed functional claims distinct.
+  Missing evidence is not negative evidence; computational or contextual support
+  is not an experimental demonstration. Scope assertions to the tested proteins.
+- Every curated record needs a canonical history event via `just new-history`.
+  Record/category/repository review skills must retain timestamped reports.
+- Run `just qc` before publication. Offline checks do not certify live provider
+  availability, current upstream taxonomy or source licenses not yet verified.
+- Use isolated worktrees for changes. Preserve unrelated work and require fresh
+  checks and adversarial review before merging PRs; never bypass a failing gate.
+- Shared schemas, validators and governance workflows are synchronized from an
+  immutable published CLAW revision. Never edit vendored copies or invent pins.
+- Searches proving absence include ignored/hidden files (`rg --no-ignore --hidden`).
+
+Provider-specific research, scientific adoption and source downloads are explicit
+actions, not side effects of opening a repository or validating records. Never
+commit credentials or restricted full text. Cite primary sources and retain only
+the minimal appropriately licensed extract needed to check each assertion.
+
+## Agent entry points
+
+- This file is read by Codex and Antigravity directly and by Claude Code through
+  the `CLAUDE.md` symlink; keep it the only instruction file.
+- Project skills live in `.claude/skills/` and `.agents/skills` is a symlink to
+  that directory, so Claude Code, Codex and Antigravity discover the same skill
+  definitions (including `review-open-issues`).
+- Before running record or category reviews, read
+  [docs/record-reviews.md](docs/record-reviews.md).

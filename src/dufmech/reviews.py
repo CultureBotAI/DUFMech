@@ -118,13 +118,28 @@ def relative_path(value: Any) -> Path:
     return Path(value)
 
 
+# The agent entry points are symlinks by the agent infrastructure contract
+# (XMechBay): CLAUDE.md -> AGENTS.md and .agents/skills -> .claude/skills.
+# They are the only symlinks safe_path accepts, and only with those targets.
+AGENT_ENTRY_LINKS = {
+    Path("CLAUDE.md"): Path("AGENTS.md"),
+    Path(".agents/skills"): Path(".claude/skills"),
+}
+
+
 def safe_path(root: Path, relative: str, *, must_exist: bool = True) -> Path:
     root = root.resolve(strict=True)
     path = root
     for component in relative_path(relative).parts:
         path = path / component
         if path.is_symlink():
-            raise ValueError(f"symlink paths are forbidden: {relative}")
+            expected = AGENT_ENTRY_LINKS.get(path.relative_to(root))
+            try:
+                resolved = path.resolve(strict=True)
+            except OSError:
+                resolved = None
+            if expected is None or resolved != (root / expected).resolve():
+                raise ValueError(f"symlink paths are forbidden: {relative}")
     if must_exist and not path.exists():
         raise ValueError(f"missing repository path: {relative}")
     return path
