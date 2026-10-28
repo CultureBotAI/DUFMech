@@ -1,0 +1,635 @@
+# PF10337 ArAE_2_N: seed identity, provenance and evidence-scope review
+
+- Review: 20261028T084943Z-pf10337-seed-record-review
+- Repository: CultureBotAI/DUFMech
+- Started UTC: 2026-10-28T08:36:50Z
+- Finished UTC: 2026-10-28T08:49:43Z
+- Reviewer: Codex (independent)
+- Completion: completed
+- Verdict: needs_curation
+- Scientific review: false
+
+## Summary
+
+PF10337 (ArAE_2_N; InterPro:IPR018823) matches the verified frozen source and retains seed_status=EX_DUF, characterization_status=UNSCORED and curation_status=SEEDED. Both the complete PF10337 projection and frozen row carry an N-terminal title and ArAE_2_N label, but the description calls this family the C-terminal half and places linked PF10334 at the N-terminus. This observed terminal-attribution conflict requires one minor confirmed OPEN finding; source fidelity and required identity fields remain intact. One minor terminal-attribution finding remains open: the N-terminal title and C-terminal description are not reconciled. No correct terminus, architecture or function is selected.
+
+## Scope And Provenance
+
+Full inspection of the selected seed projection and corresponding frozen source row for identity, imported claim scope, evidence representation, provenance, completeness, ownership and status. Primary-literature support and current upstream metadata were not reassessed.
+
+Selection: One record from the path-ordered queue of data/families/*.yaml lacking a target in the validated cumulative scripts/record_review.py list inventory. Fresh branch base: 0b3ed0fb1dcbba49fff4f3123806aa8b7f3663e4. The corpus has 8296 records; 2161 were covered and 6135 unreviewed at selection. Coverage includes immutable reviews retained on earlier local batch branches as recorded in the session ledger. This bundle covers only PF10337.
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base 0b3ed0fb1dcbba49fff4f3123806aa8b7f3663e4.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| PF10337 | data/families/PF10337.yaml | generated | PF10337 |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Native snapshot and target inspection | passed | True | PF10337 | Verified manifest and captured exact projection, frozen row, source hashes and semantic digest. |
+| Additional rubric input capture | passed | True | PF10337 | Captured rubric and recipe bytes while preserving native source inputs and snapshot identity. |
+| Exact frozen-row correspondence | passed | True | PF10337 | The inspected record agrees with its frozen row for accession, labels, description, source URL, InterPro accession, seed status and every counter; no curated payload is present. |
+| Native closed-schema and projection checks | passed | True | PF10337 | 8296 schema-valid records; 0 generated files differ. |
+| Canonical history check | passed | True | PF10337 | 488 valid canonical history records. |
+| Generated schema check | passed | True | PF10337 | Generated schema check found 0 differing generated files. |
+
+## Scientific And Domain Assessments
+
+### Exact Pfam/InterPro identity and naming
+
+identity: supported. Targets: PF10337.
+
+The filename, pfam_id=PF10337, id=Pfam:PF10337, short_name=ArAE_2_N, name=Putative ER transporter, 6TM, N-terminal, source URL and InterPro accession InterPro:IPR018823 agree with the selected frozen row. This establishes frozen identity correspondence, not current upstream taxonomy or function.
+
+### Frozen counters, raw hashes and semantic binding
+
+provenance: supported. Targets: PF10337.
+
+The record binds interpro-pfam-duf-2026-10-10 by SHA-256 and retains its generation timestamp. Its 3168 proteins, 3668 matches, 0 structure entries and 2501 AlphaFold models are frozen database counters, not independent experiments. Raw input hashes and the dufmech-record-content-v1 digest preserve different checks.
+
+### Imported description versus experimental support
+
+evidence: unknown. Targets: PF10337.
+
+Both the complete PF10337 projection and frozen row carry an N-terminal title and ArAE_2_N label, but the description calls this family the C-terminal half and places linked PF10334 at the N-terminus. This observed terminal-attribution conflict requires one minor confirmed OPEN finding; source fidelity and required identity fields remain intact.
+
+### Family, domain and tested-protein boundaries
+
+scope: supported. Targets: PF10337.
+
+The finding concerns local written terminal attribution only. No correct terminus, architecture, topology or transport function is selected. The title's selected-domain wording and the description's whole-member total are separate scopes, so their numeric difference is not treated as a second finding; putative and unknown-function qualifications remain intact.
+
+### Seed content and remaining scientific work
+
+completeness: unknown. Targets: PF10337.
+
+Attributable source context must reconcile or explain the title and description for the same selected object. Uncertainty, a disclaimer or deletion of a label alone cannot close the finding. No wider search, scientific validation or proposed source correction has been performed. No accession-named overlay, evidence or history path was found by the bounded hidden/ignored-inclusive inventory; the inspected projection has no curated claim payload. Optional-field absence is not a seed-schema defect.
+
+### Seed, scoring and review states
+
+consistency: supported. Targets: PF10337.
+
+seed_status=EX_DUF, characterization_status=UNSCORED and curation_status=SEEDED express separate states. EX_DUF records historical renaming and is compatible with imported functional descriptions; it is not evidence that all members were tested. No REVIEWED gate or curation event is implied by this bundle.
+
+### Maintained correction surface and scoped result
+
+ownership: supported. Targets: PF10337.
+
+Source-backed terminal-attribution clarification belongs in the maintained PF10337 overlay or a separately authorized successor source freeze. Generated projections and immutable rows remain unchanged. Later curation requires actual canonical history and native checks; the action is proposed, not performed.
+
+### Consistent terminal attribution of the selected domain
+
+representation: concern. Targets: PF10337.
+
+The selected PF10337 title and short name indicate N-terminal attribution, while its description calls this family the C-terminal half. Source-backed clarification is needed; no biological, topological or functional conclusion is drawn.
+
+## Findings
+
+### n-c-terminal-attribution: Reconcile N-terminal and C-terminal attribution
+
+minor / open / confirmed; issue key: pf10337-n-c-terminal-attribution.
+
+The complete PF10337 projection and frozen row use an N-terminal title and ArAE_2_N label, while the description identifies this family as the C-terminal half and assigns the linked PF10334 domain to the N-terminus. The selected objects do not reconcile those terminal assignments. This records a local written-attribution conflict without choosing a correct terminus, architecture, topology or transport function.
+
+## Recommended Actions And Acceptance Checks
+
+### clarify-n-c-terminal-attribution
+
+In separately authorized curation, inspect attributable source context and reconcile or explain the N-terminal title and C-terminal description for the selected PF10337 object, preserving the distinction from linked domains and whole-member descriptions.
+
+- Retain attributable source support that reconciles or explains the title, short name and description's terminal assignments for PF10337. Do not select a correct terminus, topology, architecture or linked-domain identity from these conflicting labels alone.
+- If the intended attribution remains unresolved, document the bounded investigation and keep this finding open. Uncertainty, a disclaimer or deletion of one label alone does not resolve the conflict.
+- Preserve domain, linked-domain and whole-member scope together with the putative and unknown-function qualifications. Use maintained inputs or a separately authorized successor freeze without hand-editing generated projections or immutable rows; no scientific, sequence, residue, mechanistic or operational expansion is requested.
+- Any later curation must retain actual canonical history and pass applicable native record, history and review checks. A changed finding disposition must cite the source-backed reconciliation.
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| record | data/families/PF10337.yaml; Entire projection, including identity, description, counters, status and provenance | supports | Read the complete PF10337 seed record; it contains imported metadata and no assertions, causal_graphs, discussions, datasets, cross_corpus_links, curation_history, curation_events or review_id. |
+| snapshot | data/worklists/interpro-pfam-duf-2026-10-10.json; pfam_id=PF10337; companion manifest and TSV; native verified inspection | supports | The exact frozen row matches the projection. The native inspection verifies the retained JSON/TSV manifest; the migration snapshot generation timestamp is 2026-10-10T07:44:21.614711Z. This is not the acquisition time of this retained row. The review date does not refresh these source facts. |
+| profile | docs/record-review-profile.md; Domains and Ownership; Verdicts and Status Gates; linked record-review contract and native checklist | supports | Read the local rules distinguishing imported description, seed class, evidence scoring, curated claims and scientific review, and the separate projection/overlay ownership. |
+| validation | justfile; records-check, history-check, validate-schema recipes; actual batch input-check runs | supports | Observed exit 0 from all three input recipes. 8296 schema-valid records; 0 generated files differ. 488 valid canonical history records. Generated schema check found 0 differing generated files. These checks do not establish scientific truth. |
+| local-search | curation/families; evidence; history; Path inventory filtered for PF10337 | supports | No path containing this accession was found in the bounded inventory. The exact overlay was also absent from native inspection; the record has no curated claim fields. |
+| duf-projection-pf10337 | data/families/PF10337.yaml; dufmech-reviewed-projection-v1 | context_only | Byte-exact projection retained at save for digest verification, not scientific assessment. |
+
+## Limits And Additional Notes
+
+- scientific_review is false. Primary papers, original figures and assays, live database entries, current taxonomy and complete family-member coverage were not reviewed; source citation tokens are not verified primary evidence.
+- The hidden/ignored-inclusive absence search is restricted to accession-bearing paths under curation/families, evidence and history. It does not exclude evidence in other local collections or the literature.
+- Required input checks passed. Native saving validates the supplied content and constructs the immutable pair. The persisted pair is then read back through the native validator and covered by the batch just reviews-check recipe; this document does not preclaim those later results. Full publication QC is tracked separately and may require Pages source-pin updates.
+- No scientific status, record, overlay, frozen input, canonical curation history or generated Pages artifact was changed by this review.
+- One record per bundle; assessment prose was authored from the actual inspected record. The helper assembles provenance and schema fields; inspection and successful checks alone are not scientific findings.
+- The explicit follow-up finding concerns imported textual representation. It does not resolve scientific truth or authorize the proposed corrective work.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+kind: record
+repository: CultureBotAI/DUFMech
+source:
+  git_revision: 0b3ed0fb1dcbba49fff4f3123806aa8b7f3663e4
+  inputs:
+  - path: data/families/PF10337.yaml
+    role: target
+    sha256: 79d54b6a0f4f711151a7c26cbb4617f64bc86a5841f9835f955f7b995a606aa0
+  - path: data/worklists/interpro-pfam-duf-2026-10-10.json
+    role: context
+    sha256: 17fb625876c9326ed284263a47bcd84e0d7844a31c040dc06cd2260c36f1c383
+  - path: data/worklists/interpro-pfam-duf-2026-10-10.manifest.json
+    role: context
+    sha256: 31c07ffb6a169c851ea0e6e9dd527a10c04028eafeb29187bd62dc2ae848696e
+  - path: data/worklists/interpro-pfam-duf-2026-10-10.tsv
+    role: context
+    sha256: be023c8dd9d8d3864926b5032d6f7e87a884b1a567391696822dbbecc692dae7
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: 681377625fe3045abfa2433784707424931a69987e2f02b84f907dcb28f4831b
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: d1399ec6d404b485ac03680db36b07536f1233dacfd282c407b0a07a509a0d69
+    role: context
+  - path: docs/history.md
+    sha256: 356ead13b3a462a91158eb57cfba4c011d95462662c30f811ba2e1335a2b402e
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 78000e079c219bd049f628f517465b6e36fb35a26497f7ba7791c098fac73059
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: docs/records.md
+    sha256: 4a09829f77f279ba5be373cfa15ea957d69e978d0bb74a5ab3377988d8c29ad2
+    role: context
+  - path: docs/reviews.md
+    sha256: 02563bb1eeae36f08ca7e9e38bacc36461c65e7399df4f6c75a7215a34895ce3
+    role: context
+  - path: docs/sources.md
+    sha256: f530f8785142b9b76f20f0853ec54a21dd96ae0e5827b820a332096ba483d70f
+    role: context
+  - path: justfile
+    sha256: 16b490ea5da25e8c6b5f9649fd920df8b87a3e8438c1b6c1a5b8ca029deb3e36
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  snapshot_id: interpro-pfam-duf-2026-10-10
+  state: working_tree
+targets:
+- kind: generated
+  label: PF10337
+  owner_paths:
+  - path: curation/families/PF10337.yaml
+    repository: CultureBotAI/DUFMech
+    role: Maintained scientific overlay; create only with authorized curation.
+  - path: src/dufmech/records.py
+    repository: CultureBotAI/DUFMech
+    role: Projection generator; frozen snapshot identity is not hand-edited.
+  path: data/families/PF10337.yaml
+  record_class: FamilyRecord
+  semantic_digest:
+    algorithm: dufmech-record-content-v1
+    description: Canonical JSON SHA-256 of effective FamilyRecord excluding only curation_status,
+      review_id and curation_events.
+    sha256: e1c0d5449eaa73187e61497ff5d4d0a0631687c1f094687ef941e3eb51bbaa45
+  target_id: PF10337
+schema_version: 1.0.0
+review_id: 20261028T084943Z-pf10337-seed-record-review
+title: 'PF10337 ArAE_2_N: seed identity, provenance and evidence-scope review'
+started_at: '2026-10-28T08:36:50Z'
+finished_at: '2026-10-28T08:49:43Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  model: GPT-6
+  independence: independent
+  independence_basis: This review session did not author or modify the inspected seed
+    projection or frozen source. This is an independent repository audit by an AI
+    agent, not external scientific peer review.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: needs_curation
+native_verdict: NEEDS_FOLLOWUP
+scientific_review: false
+summary: 'PF10337 (ArAE_2_N; InterPro:IPR018823) matches the verified frozen source
+  and retains seed_status=EX_DUF, characterization_status=UNSCORED and curation_status=SEEDED.
+  Both the complete PF10337 projection and frozen row carry an N-terminal title and
+  ArAE_2_N label, but the description calls this family the C-terminal half and places
+  linked PF10334 at the N-terminus. This observed terminal-attribution conflict requires
+  one minor confirmed OPEN finding; source fidelity and required identity fields remain
+  intact. One minor terminal-attribution finding remains open: the N-terminal title
+  and C-terminal description are not reconciled. No correct terminus, architecture
+  or function is selected.'
+scope:
+  description: Full inspection of the selected seed projection and corresponding frozen
+    source row for identity, imported claim scope, evidence representation, provenance,
+    completeness, ownership and status. Primary-literature support and current upstream
+    metadata were not reassessed.
+  selection: 'One record from the path-ordered queue of data/families/*.yaml lacking
+    a target in the validated cumulative scripts/record_review.py list inventory.
+    Fresh branch base: 0b3ed0fb1dcbba49fff4f3123806aa8b7f3663e4. The corpus has 8296
+    records; 2161 were covered and 6135 unreviewed at selection. Coverage includes
+    immutable reviews retained on earlier local batch branches as recorded in the
+    session ledger. This bundle covers only PF10337.'
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - PF10337
+  exclusions:
+  - target: Primary literature, live Pfam/InterPro/UniProt state and other family
+      members
+    reason: The selected object is a seed projection without curated functional assertions.
+      This is a local metadata and representation review; it does not establish experimental
+      characterization.
+checks:
+- check_id: native-inspect
+  name: Native snapshot and target inspection
+  command: uv run --locked dufmech-review inspect record PF10337
+  status: passed
+  required: true
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Verified manifest and captured exact projection, frozen row, source hashes
+    and semantic digest.
+  target_ids:
+  - PF10337
+  evidence_ids:
+  - record
+  - snapshot
+- check_id: common-inspect
+  name: Additional rubric input capture
+  command: uv run --locked python scripts/record_review.py inspect --targets /private/tmp/dufmech-review-session-20261019/batch-203-attempt-001/PF10337-targets.yaml
+    --input data/families/PF10337.yaml --input data/worklists/interpro-pfam-duf-2026-10-10.json
+    --input data/worklists/interpro-pfam-duf-2026-10-10.manifest.json --input data/worklists/interpro-pfam-duf-2026-10-10.tsv
+    --input docs/records.md --input docs/reviews.md --input docs/history.md --input
+    docs/sources.md --input docs/record-reviews.md --input docs/record-review-profile.md
+    --input .claude/skills/review-yaml-record/SKILL.md --input .claude/skills/curate-yaml-record/references/review-checklist.md
+    --input schema/record_review.yaml --input justfile
+  status: passed
+  required: true
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Captured rubric and recipe bytes while preserving native source inputs
+    and snapshot identity.
+  target_ids:
+  - PF10337
+  evidence_ids:
+  - profile
+- check_id: row-correspondence
+  name: Exact frozen-row correspondence
+  command: .venv/bin/python /private/tmp/dufmech-review-session-20261019/batch-203-attempt-001/prepare.py
+    PF10337
+  status: passed
+  required: true
+  exit_code: 0
+  expected_exit_code: 0
+  summary: The inspected record agrees with its frozen row for accession, labels,
+    description, source URL, InterPro accession, seed status and every counter; no
+    curated payload is present.
+  target_ids:
+  - PF10337
+  evidence_ids:
+  - record
+  - snapshot
+- check_id: records
+  name: Native closed-schema and projection checks
+  command: just records-check
+  status: passed
+  required: true
+  exit_code: 0
+  expected_exit_code: 0
+  summary: 8296 schema-valid records; 0 generated files differ.
+  target_ids:
+  - PF10337
+  evidence_ids:
+  - validation
+  scope_note: Shared batch input check executed before saving these reviews. The selected
+    projection and its maintained inputs remained unchanged.
+- check_id: history
+  name: Canonical history check
+  command: just history-check
+  status: passed
+  required: true
+  exit_code: 0
+  expected_exit_code: 0
+  summary: 488 valid canonical history records.
+  target_ids:
+  - PF10337
+  evidence_ids:
+  - validation
+  scope_note: Shared batch input check; this seed has no curation_history or generated
+    curation_events.
+- check_id: schema
+  name: Generated schema check
+  command: just validate-schema
+  status: passed
+  required: true
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Generated schema check found 0 differing generated files.
+  target_ids:
+  - PF10337
+  evidence_ids:
+  - validation
+evidence:
+- evidence_id: record
+  kind: record_content
+  reference: data/families/PF10337.yaml
+  locator: Entire projection, including identity, description, counters, status and
+    provenance
+  accessed_at: '2026-10-28T08:49:43Z'
+  support: supports
+  summary: Read the complete PF10337 seed record; it contains imported metadata and
+    no assertions, causal_graphs, discussions, datasets, cross_corpus_links, curation_history,
+    curation_events or review_id.
+  snapshot_sha256: 79d54b6a0f4f711151a7c26cbb4617f64bc86a5841f9835f955f7b995a606aa0
+- evidence_id: snapshot
+  kind: database
+  reference: data/worklists/interpro-pfam-duf-2026-10-10.json
+  locator: pfam_id=PF10337; companion manifest and TSV; native verified inspection
+  accessed_at: '2026-10-28T08:49:43Z'
+  support: supports
+  summary: The exact frozen row matches the projection. The native inspection verifies
+    the retained JSON/TSV manifest; the migration snapshot generation timestamp is
+    2026-10-10T07:44:21.614711Z. This is not the acquisition time of this retained
+    row. The review date does not refresh these source facts.
+  snapshot_sha256: 17fb625876c9326ed284263a47bcd84e0d7844a31c040dc06cd2260c36f1c383
+- evidence_id: profile
+  kind: authority
+  reference: docs/record-review-profile.md
+  locator: Domains and Ownership; Verdicts and Status Gates; linked record-review
+    contract and native checklist
+  accessed_at: '2026-10-28T08:49:43Z'
+  support: supports
+  summary: Read the local rules distinguishing imported description, seed class, evidence
+    scoring, curated claims and scientific review, and the separate projection/overlay
+    ownership.
+- evidence_id: validation
+  kind: validation
+  reference: justfile
+  locator: records-check, history-check, validate-schema recipes; actual batch input-check
+    runs
+  accessed_at: '2026-10-28T08:49:43Z'
+  support: supports
+  summary: Observed exit 0 from all three input recipes. 8296 schema-valid records;
+    0 generated files differ. 488 valid canonical history records. Generated schema
+    check found 0 differing generated files. These checks do not establish scientific
+    truth.
+- evidence_id: local-search
+  kind: search
+  reference: curation/families; evidence; history
+  locator: Path inventory filtered for PF10337
+  accessed_at: '2026-10-28T08:49:43Z'
+  support: supports
+  summary: No path containing this accession was found in the bounded inventory. The
+    exact overlay was also absent from native inspection; the record has no curated
+    claim fields.
+  search_scope: All paths under curation/families, evidence, and history, including
+    hidden and ignored files, filtered for the exact accession PF10337. This is a
+    local path inventory, not a literature search or an assertion that other corpora
+    lack evidence.
+- evidence_id: duf-projection-pf10337
+  kind: record_content
+  reference: data/families/PF10337.yaml
+  locator: dufmech-reviewed-projection-v1
+  accessed_at: '2026-10-28T08:49:43Z'
+  support: context_only
+  snapshot_sha256: 79d54b6a0f4f711151a7c26cbb4617f64bc86a5841f9835f955f7b995a606aa0
+  quote: "id: Pfam:PF10337\npfam_id: PF10337\nname: Putative ER transporter, 6TM,\
+    \ N-terminal\nshort_name: ArAE_2_N\nseed_status: EX_DUF\ncharacterization_status:\
+    \ UNSCORED\ncuration_status: SEEDED\nsource_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF10337\n\
+    counters:\n  proteins: 3168\n  matches: 3668\n  proteomes: 1339\n  taxa: 2805\n\
+    \  structures: 0\n  alphafold_models: 2501\n  domain_architectures: 73\nprovenance:\n\
+    \  snapshot_id: interpro-pfam-duf-2026-10-10\n  path: data/worklists/interpro-pfam-duf-2026-10-10.json\n\
+    \  sha256: 17fb625876c9326ed284263a47bcd84e0d7844a31c040dc06cd2260c36f1c383\n\
+    \  generated_at: '2026-10-10T07:44:21.614711Z'\n  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/\n\
+    interpro_id: InterPro:IPR018823\ndescription: This is a family of proteins conserved\
+    \ in fungi. The function is not known. This family is\n  the C-terminal half of\
+    \ some member proteins which contain the DUF2421 [pfam:PF10334] domain at their\n\
+    \  N-terminus. These proteins are putative endoplasmic reticulum tranpsorters,\
+    \ with a total of 12 TMs.\n"
+  summary: Byte-exact projection retained at save for digest verification, not scientific
+    assessment.
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Exact Pfam/InterPro identity and naming
+  outcome: supported
+  summary: The filename, pfam_id=PF10337, id=Pfam:PF10337, short_name=ArAE_2_N, name=Putative
+    ER transporter, 6TM, N-terminal, source URL and InterPro accession InterPro:IPR018823
+    agree with the selected frozen row. This establishes frozen identity correspondence,
+    not current upstream taxonomy or function.
+  target_ids:
+  - PF10337
+  evidence_ids:
+  - record
+  - snapshot
+- assessment_id: provenance
+  area: provenance
+  topic: Frozen counters, raw hashes and semantic binding
+  outcome: supported
+  summary: The record binds interpro-pfam-duf-2026-10-10 by SHA-256 and retains its
+    generation timestamp. Its 3168 proteins, 3668 matches, 0 structure entries and
+    2501 AlphaFold models are frozen database counters, not independent experiments.
+    Raw input hashes and the dufmech-record-content-v1 digest preserve different checks.
+  target_ids:
+  - PF10337
+  evidence_ids:
+  - record
+  - snapshot
+  - validation
+- assessment_id: evidence-tier
+  area: evidence
+  topic: Imported description versus experimental support
+  outcome: unknown
+  summary: Both the complete PF10337 projection and frozen row carry an N-terminal
+    title and ArAE_2_N label, but the description calls this family the C-terminal
+    half and places linked PF10334 at the N-terminus. This observed terminal-attribution
+    conflict requires one minor confirmed OPEN finding; source fidelity and required
+    identity fields remain intact.
+  target_ids:
+  - PF10337
+  evidence_ids:
+  - record
+  - snapshot
+  dimensions:
+  - name: evidence-tier
+    value: Imported database description; primary support not reassessed
+    definition: Evidence actually examined for this audit; it is not a label for all
+      evidence that may exist for the family.
+    evidence_ids:
+    - record
+    - snapshot
+- assessment_id: claim-scope
+  area: scope
+  topic: Family, domain and tested-protein boundaries
+  outcome: supported
+  summary: The finding concerns local written terminal attribution only. No correct
+    terminus, architecture, topology or transport function is selected. The title's
+    selected-domain wording and the description's whole-member total are separate
+    scopes, so their numeric difference is not treated as a second finding; putative
+    and unknown-function qualifications remain intact.
+  target_ids:
+  - PF10337
+  evidence_ids:
+  - record
+  - snapshot
+- assessment_id: completeness
+  area: completeness
+  topic: Seed content and remaining scientific work
+  outcome: unknown
+  summary: Attributable source context must reconcile or explain the title and description
+    for the same selected object. Uncertainty, a disclaimer or deletion of a label
+    alone cannot close the finding. No wider search, scientific validation or proposed
+    source correction has been performed. No accession-named overlay, evidence or
+    history path was found by the bounded hidden/ignored-inclusive inventory; the
+    inspected projection has no curated claim payload. Optional-field absence is not
+    a seed-schema defect.
+  target_ids:
+  - PF10337
+  evidence_ids:
+  - record
+  - local-search
+  - profile
+- assessment_id: status
+  area: consistency
+  topic: Seed, scoring and review states
+  outcome: supported
+  summary: seed_status=EX_DUF, characterization_status=UNSCORED and curation_status=SEEDED
+    express separate states. EX_DUF records historical renaming and is compatible
+    with imported functional descriptions; it is not evidence that all members were
+    tested. No REVIEWED gate or curation event is implied by this bundle.
+  target_ids:
+  - PF10337
+  evidence_ids:
+  - record
+  - profile
+- assessment_id: ownership
+  area: ownership
+  topic: Maintained correction surface and scoped result
+  outcome: supported
+  summary: Source-backed terminal-attribution clarification belongs in the maintained
+    PF10337 overlay or a separately authorized successor source freeze. Generated
+    projections and immutable rows remain unchanged. Later curation requires actual
+    canonical history and native checks; the action is proposed, not performed.
+  target_ids:
+  - PF10337
+  evidence_ids:
+  - profile
+  - record
+  - validation
+- assessment_id: n-c-terminal-attribution
+  area: representation
+  topic: Consistent terminal attribution of the selected domain
+  outcome: concern
+  summary: The selected PF10337 title and short name indicate N-terminal attribution,
+    while its description calls this family the C-terminal half. Source-backed clarification
+    is needed; no biological, topological or functional conclusion is drawn.
+  target_ids:
+  - PF10337
+  evidence_ids:
+  - record
+  - snapshot
+findings:
+- finding_id: n-c-terminal-attribution
+  issue_key: pf10337-n-c-terminal-attribution
+  category: representation
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Reconcile N-terminal and C-terminal attribution
+  description: The complete PF10337 projection and frozen row use an N-terminal title
+    and ArAE_2_N label, while the description identifies this family as the C-terminal
+    half and assigns the linked PF10334 domain to the N-terminus. The selected objects
+    do not reconcile those terminal assignments. This records a local written-attribution
+    conflict without choosing a correct terminus, architecture, topology or transport
+    function.
+  target_ids:
+  - PF10337
+  field_paths:
+  - name
+  - short_name
+  - description
+  evidence_ids:
+  - record
+  - snapshot
+  normalization_reason: Minor reflects a bounded terminal-attribution conflict while
+    required fields, Pfam identity and frozen-source fidelity remain intact. Confirmed
+    refers to the observable written conflict; the correct source-backed attribution
+    and scientific interpretation remain unresolved.
+  owner_paths:
+  - repository: CultureBotAI/DUFMech
+    path: curation/families/PF10337.yaml
+    role: Future maintained source-backed clarification of terminal attribution; this
+      review creates no overlay.
+  - repository: CultureBotAI/DUFMech
+    path: scripts/freeze_duf_puf_worklist.py
+    role: Workflow for a separately authorized successor source freeze; no generator
+      defect is alleged.
+actions:
+- action_id: clarify-n-c-terminal-attribution
+  description: In separately authorized curation, inspect attributable source context
+    and reconcile or explain the N-terminal title and C-terminal description for the
+    selected PF10337 object, preserving the distinction from linked domains and whole-member
+    descriptions.
+  finding_ids:
+  - n-c-terminal-attribution
+  target_ids:
+  - PF10337
+  owner_paths:
+  - repository: CultureBotAI/DUFMech
+    path: curation/families/PF10337.yaml
+    role: Future maintained source-backed clarification of terminal attribution; this
+      review creates no overlay.
+  - repository: CultureBotAI/DUFMech
+    path: scripts/freeze_duf_puf_worklist.py
+    role: Workflow for a separately authorized successor source freeze; no generator
+      defect is alleged.
+  generator: just records --apply
+  acceptance_checks:
+  - Retain attributable source support that reconciles or explains the title, short
+    name and description's terminal assignments for PF10337. Do not select a correct
+    terminus, topology, architecture or linked-domain identity from these conflicting
+    labels alone.
+  - If the intended attribution remains unresolved, document the bounded investigation
+    and keep this finding open. Uncertainty, a disclaimer or deletion of one label
+    alone does not resolve the conflict.
+  - Preserve domain, linked-domain and whole-member scope together with the putative
+    and unknown-function qualifications. Use maintained inputs or a separately authorized
+    successor freeze without hand-editing generated projections or immutable rows;
+    no scientific, sequence, residue, mechanistic or operational expansion is requested.
+  - Any later curation must retain actual canonical history and pass applicable native
+    record, history and review checks. A changed finding disposition must cite the
+    source-backed reconciliation.
+limitations:
+- scientific_review is false. Primary papers, original figures and assays, live database
+  entries, current taxonomy and complete family-member coverage were not reviewed;
+  source citation tokens are not verified primary evidence.
+- The hidden/ignored-inclusive absence search is restricted to accession-bearing paths
+  under curation/families, evidence and history. It does not exclude evidence in other
+  local collections or the literature.
+- Required input checks passed. Native saving validates the supplied content and constructs
+  the immutable pair. The persisted pair is then read back through the native validator
+  and covered by the batch just reviews-check recipe; this document does not preclaim
+  those later results. Full publication QC is tracked separately and may require Pages
+  source-pin updates.
+- No scientific status, record, overlay, frozen input, canonical curation history
+  or generated Pages artifact was changed by this review.
+notes:
+- One record per bundle; assessment prose was authored from the actual inspected record.
+  The helper assembles provenance and schema fields; inspection and successful checks
+  alone are not scientific findings.
+- The explicit follow-up finding concerns imported textual representation. It does
+  not resolve scientific truth or authorize the proposed corrective work.
+tags:
+- seed-review
+- unreviewed-record-coverage
+```
