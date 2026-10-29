@@ -1,0 +1,623 @@
+# PF11161 DUF2944: seed identity, provenance and evidence-scope review
+
+- Review: 20261029T021913Z-pf11161-seed-record-review
+- Repository: CultureBotAI/DUFMech
+- Started UTC: 2026-10-29T02:04:14Z
+- Finished UTC: 2026-10-29T02:19:13Z
+- Reviewer: Codex (independent)
+- Completion: completed
+- Verdict: needs_curation
+- Scientific review: false
+
+## Summary
+
+PF11161 (DUF2944; InterPro:IPR021332) matches the verified frozen source and retains seed_status=UNKNOWN_CANDIDATE, characterization_status=UNSCORED and curation_status=SEEDED. PF11161 retains short_name DUF2944 while its name is Protein of unknown function (DUF2946). Both literal values occur in the complete copied projection and the actual selected frozen row; accession, InterPro identity, provenance and all seven counters otherwise agree. One minor confirmed OPEN representation finding remains: PF11161 name contains DUF2946 while short_name is DUF2944 in both the projection and frozen row. No label or family identity is selected.
+
+## Scope And Provenance
+
+Full inspection of the selected seed projection and corresponding frozen source row for identity, imported claim scope, evidence representation, provenance, completeness, ownership and status. Primary-literature support and current upstream metadata were not reassessed.
+
+Selection: One record from the path-ordered queue of data/families/*.yaml lacking a target in the validated cumulative scripts/record_review.py list inventory. Fresh branch base: 1ad8fdccc772ffb9d68948351b7b2b0b8e43cd6b. The corpus has 8296 records; 2561 were covered and 5735 unreviewed at selection. Coverage includes immutable reviews retained on earlier local batch branches as recorded in the session ledger. This bundle covers only PF11161.
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base 1ad8fdccc772ffb9d68948351b7b2b0b8e43cd6b.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| PF11161 | data/families/PF11161.yaml | generated | PF11161 |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Native snapshot and target inspection | passed | True | PF11161 | Verified manifest and captured exact projection, frozen row, source hashes and semantic digest. |
+| Additional rubric input capture | passed | True | PF11161 | Captured rubric and recipe bytes while preserving native source inputs and snapshot identity. |
+| Exact frozen-row correspondence | passed | True | PF11161 | The inspected record agrees with its frozen row for accession, labels, description, source URL, InterPro accession, seed status and every counter; no curated payload is present. |
+| Native closed-schema and projection checks | passed | True | PF11161 | 8296 schema-valid records; 0 generated files differ. |
+| Canonical history check | passed | True | PF11161 | 488 valid canonical history records. |
+| Generated schema check | passed | True | PF11161 | Generated schema check found 0 differing generated files. |
+
+## Scientific And Domain Assessments
+
+### Exact Pfam/InterPro identity and naming
+
+identity: supported. Targets: PF11161.
+
+The filename, pfam_id=PF11161, id=Pfam:PF11161, short_name=DUF2944, name=Protein of unknown function (DUF2946), source URL and InterPro accession InterPro:IPR021332 agree with the selected frozen row. This establishes frozen identity correspondence, not current upstream taxonomy or function.
+
+### Frozen counters, raw hashes and semantic binding
+
+provenance: supported. Targets: PF11161.
+
+The record binds interpro-pfam-duf-2026-10-10 by SHA-256 and retains its generation timestamp. Its 989 proteins, 989 matches, 0 structure entries and 608 AlphaFold models are frozen database counters, not independent experiments. Raw input hashes and the dufmech-record-content-v1 digest preserve different checks.
+
+### Imported description versus experimental support
+
+evidence: unknown. Targets: PF11161.
+
+PF11161 retains short_name DUF2944 while its name is Protein of unknown function (DUF2946). Both literal values occur in the complete copied projection and the actual selected frozen row; accession, InterPro identity, provenance and all seven counters otherwise agree.
+
+### Family, domain and tested-protein boundaries
+
+scope: supported. Targets: PF11161.
+
+Strict local representation review identifies the visible difference between the DUF-number label in name and short_name without selecting either as correct. The appear-to-be-restricted distribution wording remains qualified import, and no family identity, taxonomic correction or biological interpretation is inferred.
+
+### Seed content and remaining scientific work
+
+completeness: unknown. Targets: PF11161.
+
+One confirmed minor OPEN representation finding requires needs_curation (NEEDS_FOLLOWUP): the retained name and short_name contain different DUF-number labels. Exact projection-to-row copying does not resolve that discordance. Attributable clarification is needed on a maintained correction surface; no label is chosen and no source is edited here. No accession-named overlay, evidence or history path was found by the bounded hidden/ignored-inclusive inventory; the inspected projection has no curated claim payload. Optional-field absence is not a seed-schema defect.
+
+### Seed, scoring and review states
+
+consistency: supported. Targets: PF11161.
+
+seed_status=UNKNOWN_CANDIDATE, characterization_status=UNSCORED and curation_status=SEEDED express separate states. UNKNOWN_CANDIDATE is the retained lexical seed class, not an experimentally established absence of function. No REVIEWED gate or curation event is implied by this bundle.
+
+### Maintained correction surface and scoped result
+
+ownership: supported. Targets: PF11161.
+
+Attributable label clarification belongs in separately authorized maintained PF11161 curation or a successor source freeze. This review retains the OPEN finding and follow-up only; no frozen or generated record is edited.
+
+### Clarify the differing DUF labels in name and short_name
+
+representation: concern. Targets: PF11161.
+
+One minor confirmed OPEN representation finding remains: PF11161 name contains DUF2946 while short_name is DUF2944 in both the projection and frozen row. No label or family identity is selected.
+
+## Findings
+
+### name-short-name-duf-label-discordance: Clarify the differing DUF labels in name and short_name
+
+minor / open / confirmed; issue key: pf11161-name-short-name-duf-label-discordance.
+
+The complete copied PF11161 projection and actual selected frozen row both retain short_name DUF2944 but name Protein of unknown function (DUF2946). Confirmed refers only to these two different literal labels. Neither label is selected as correct, and no family identity, sequence relationship or biological interpretation is inferred.
+
+## Recommended Actions And Acceptance Checks
+
+### reconcile-name-short-name-duf-label-discordance
+
+In separately authorized curation, obtain attributable clarification of PF11161's intended name and short_name before choosing a DUF label. Preserve the original values until then; a guessed correction or neighboring record label alone does not resolve the finding.
+
+- Retain PF11161 accession identity and the original frozen row and generated projection provenance; do not directly edit frozen or generated source files.
+- Provide scoped authoritative evidence identifying the intended name and short_name, or explicitly retain the unresolved discordance without selecting a label unsupported by evidence.
+- Apply any supported correction only through the maintained curation overlay or a newly verified successor freeze and the normal record generator, with appropriate canonical history.
+- Regenerate and validate the affected projection and review representation; confirm consistent or explicitly unresolved labels, unchanged unrelated records and no invented biological characterization.
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| record | data/families/PF11161.yaml; Entire projection, including identity, description, counters, status and provenance | supports | Read the complete PF11161 seed record; it contains imported metadata and no assertions, causal_graphs, discussions, datasets, cross_corpus_links, curation_history, curation_events or review_id. |
+| snapshot | data/worklists/interpro-pfam-duf-2026-10-10.json; pfam_id=PF11161; companion manifest and TSV; native verified inspection | supports | The exact frozen row matches the projection. The native inspection verifies the retained JSON/TSV manifest; the migration snapshot generation timestamp is 2026-10-10T07:44:21.614711Z. This is not the acquisition time of this retained row. The review date does not refresh these source facts. |
+| profile | docs/record-review-profile.md; Domains and Ownership; Verdicts and Status Gates; linked record-review contract and native checklist | supports | Read the local rules distinguishing imported description, seed class, evidence scoring, curated claims and scientific review, and the separate projection/overlay ownership. |
+| validation | justfile; records-check, history-check, validate-schema recipes; actual batch input-check runs | supports | Observed exit 0 from all three input recipes. 8296 schema-valid records; 0 generated files differ. 488 valid canonical history records. Generated schema check found 0 differing generated files. These checks do not establish scientific truth. |
+| local-search | curation/families; evidence; history; Path inventory filtered for PF11161 | supports | No path containing this accession was found in the bounded inventory. The exact overlay was also absent from native inspection; the record has no curated claim fields. |
+| duf-projection-pf11161 | data/families/PF11161.yaml; dufmech-reviewed-projection-v1 | context_only | Byte-exact projection retained at save for digest verification, not scientific assessment. |
+
+## Limits And Additional Notes
+
+- scientific_review is false. Primary papers, original figures and assays, live database entries, current taxonomy and complete family-member coverage were not reviewed; source citation tokens are not verified primary evidence.
+- The hidden/ignored-inclusive absence search is restricted to accession-bearing paths under curation/families, evidence and history. It does not exclude evidence in other local collections or the literature.
+- Required input checks passed. Native saving validates the supplied content and constructs the immutable pair. The persisted pair is then read back through the native validator and covered by the batch just reviews-check recipe; this document does not preclaim those later results. Full publication QC is tracked separately and may require Pages source-pin updates.
+- No scientific status, record, overlay, frozen input, canonical curation history or generated Pages artifact was changed by this review.
+- One record per bundle; assessment prose was authored from the actual inspected record. The helper assembles provenance and schema fields; inspection and successful checks alone are not scientific findings.
+- The explicit follow-up finding concerns imported textual representation. It does not resolve scientific truth or authorize the proposed corrective work.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+kind: record
+repository: CultureBotAI/DUFMech
+source:
+  git_revision: 1ad8fdccc772ffb9d68948351b7b2b0b8e43cd6b
+  inputs:
+  - path: data/families/PF11161.yaml
+    role: target
+    sha256: f26ca1b40134bc03d867916d676db5f442ab37603b8f375ab1b4b7b5abab9d30
+  - path: data/worklists/interpro-pfam-duf-2026-10-10.json
+    role: context
+    sha256: 17fb625876c9326ed284263a47bcd84e0d7844a31c040dc06cd2260c36f1c383
+  - path: data/worklists/interpro-pfam-duf-2026-10-10.manifest.json
+    role: context
+    sha256: 31c07ffb6a169c851ea0e6e9dd527a10c04028eafeb29187bd62dc2ae848696e
+  - path: data/worklists/interpro-pfam-duf-2026-10-10.tsv
+    role: context
+    sha256: be023c8dd9d8d3864926b5032d6f7e87a884b1a567391696822dbbecc692dae7
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: 681377625fe3045abfa2433784707424931a69987e2f02b84f907dcb28f4831b
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: d1399ec6d404b485ac03680db36b07536f1233dacfd282c407b0a07a509a0d69
+    role: context
+  - path: docs/history.md
+    sha256: 356ead13b3a462a91158eb57cfba4c011d95462662c30f811ba2e1335a2b402e
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 78000e079c219bd049f628f517465b6e36fb35a26497f7ba7791c098fac73059
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: docs/records.md
+    sha256: 4a09829f77f279ba5be373cfa15ea957d69e978d0bb74a5ab3377988d8c29ad2
+    role: context
+  - path: docs/reviews.md
+    sha256: 02563bb1eeae36f08ca7e9e38bacc36461c65e7399df4f6c75a7215a34895ce3
+    role: context
+  - path: docs/sources.md
+    sha256: f530f8785142b9b76f20f0853ec54a21dd96ae0e5827b820a332096ba483d70f
+    role: context
+  - path: justfile
+    sha256: 16b490ea5da25e8c6b5f9649fd920df8b87a3e8438c1b6c1a5b8ca029deb3e36
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  snapshot_id: interpro-pfam-duf-2026-10-10
+  state: working_tree
+targets:
+- kind: generated
+  label: PF11161
+  owner_paths:
+  - path: curation/families/PF11161.yaml
+    repository: CultureBotAI/DUFMech
+    role: Maintained scientific overlay; create only with authorized curation.
+  - path: src/dufmech/records.py
+    repository: CultureBotAI/DUFMech
+    role: Projection generator; frozen snapshot identity is not hand-edited.
+  path: data/families/PF11161.yaml
+  record_class: FamilyRecord
+  semantic_digest:
+    algorithm: dufmech-record-content-v1
+    description: Canonical JSON SHA-256 of effective FamilyRecord excluding only curation_status,
+      review_id and curation_events.
+    sha256: 03dd031462cca4174cea1c24f9ffc1737034c8cbf68081322393affa14da6aef
+  target_id: PF11161
+schema_version: 1.0.0
+review_id: 20261029T021913Z-pf11161-seed-record-review
+title: 'PF11161 DUF2944: seed identity, provenance and evidence-scope review'
+started_at: '2026-10-29T02:04:14Z'
+finished_at: '2026-10-29T02:19:13Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  model: GPT-6
+  independence: independent
+  independence_basis: This review session did not author or modify the inspected seed
+    projection or frozen source. This is an independent repository audit by an AI
+    agent, not external scientific peer review.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: needs_curation
+native_verdict: NEEDS_FOLLOWUP
+scientific_review: false
+summary: 'PF11161 (DUF2944; InterPro:IPR021332) matches the verified frozen source
+  and retains seed_status=UNKNOWN_CANDIDATE, characterization_status=UNSCORED and
+  curation_status=SEEDED. PF11161 retains short_name DUF2944 while its name is Protein
+  of unknown function (DUF2946). Both literal values occur in the complete copied
+  projection and the actual selected frozen row; accession, InterPro identity, provenance
+  and all seven counters otherwise agree. One minor confirmed OPEN representation
+  finding remains: PF11161 name contains DUF2946 while short_name is DUF2944 in both
+  the projection and frozen row. No label or family identity is selected.'
+scope:
+  description: Full inspection of the selected seed projection and corresponding frozen
+    source row for identity, imported claim scope, evidence representation, provenance,
+    completeness, ownership and status. Primary-literature support and current upstream
+    metadata were not reassessed.
+  selection: 'One record from the path-ordered queue of data/families/*.yaml lacking
+    a target in the validated cumulative scripts/record_review.py list inventory.
+    Fresh branch base: 1ad8fdccc772ffb9d68948351b7b2b0b8e43cd6b. The corpus has 8296
+    records; 2561 were covered and 5735 unreviewed at selection. Coverage includes
+    immutable reviews retained on earlier local batch branches as recorded in the
+    session ledger. This bundle covers only PF11161.'
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - PF11161
+  exclusions:
+  - target: Primary literature, live Pfam/InterPro/UniProt state and other family
+      members
+    reason: The selected object is a seed projection without curated functional assertions.
+      This is a local metadata and representation review; it does not establish experimental
+      characterization.
+checks:
+- check_id: native-inspect
+  name: Native snapshot and target inspection
+  command: uv run --locked dufmech-review inspect record PF11161
+  status: passed
+  required: true
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Verified manifest and captured exact projection, frozen row, source hashes
+    and semantic digest.
+  target_ids:
+  - PF11161
+  evidence_ids:
+  - record
+  - snapshot
+- check_id: common-inspect
+  name: Additional rubric input capture
+  command: uv run --locked python scripts/record_review.py inspect --targets /private/tmp/dufmech-review-session-20261019/batch-243-attempt-001/PF11161-targets.yaml
+    --input data/families/PF11161.yaml --input data/worklists/interpro-pfam-duf-2026-10-10.json
+    --input data/worklists/interpro-pfam-duf-2026-10-10.manifest.json --input data/worklists/interpro-pfam-duf-2026-10-10.tsv
+    --input docs/records.md --input docs/reviews.md --input docs/history.md --input
+    docs/sources.md --input docs/record-reviews.md --input docs/record-review-profile.md
+    --input .claude/skills/review-yaml-record/SKILL.md --input .claude/skills/curate-yaml-record/references/review-checklist.md
+    --input schema/record_review.yaml --input justfile
+  status: passed
+  required: true
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Captured rubric and recipe bytes while preserving native source inputs
+    and snapshot identity.
+  target_ids:
+  - PF11161
+  evidence_ids:
+  - profile
+- check_id: row-correspondence
+  name: Exact frozen-row correspondence
+  command: .venv/bin/python /private/tmp/dufmech-review-session-20261019/batch-243-attempt-001/prepare.py
+    PF11161
+  status: passed
+  required: true
+  exit_code: 0
+  expected_exit_code: 0
+  summary: The inspected record agrees with its frozen row for accession, labels,
+    description, source URL, InterPro accession, seed status and every counter; no
+    curated payload is present.
+  target_ids:
+  - PF11161
+  evidence_ids:
+  - record
+  - snapshot
+- check_id: records
+  name: Native closed-schema and projection checks
+  command: just records-check
+  status: passed
+  required: true
+  exit_code: 0
+  expected_exit_code: 0
+  summary: 8296 schema-valid records; 0 generated files differ.
+  target_ids:
+  - PF11161
+  evidence_ids:
+  - validation
+  scope_note: Shared batch input check executed before saving these reviews. The selected
+    projection and its maintained inputs remained unchanged.
+- check_id: history
+  name: Canonical history check
+  command: just history-check
+  status: passed
+  required: true
+  exit_code: 0
+  expected_exit_code: 0
+  summary: 488 valid canonical history records.
+  target_ids:
+  - PF11161
+  evidence_ids:
+  - validation
+  scope_note: Shared batch input check; this seed has no curation_history or generated
+    curation_events.
+- check_id: schema
+  name: Generated schema check
+  command: just validate-schema
+  status: passed
+  required: true
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Generated schema check found 0 differing generated files.
+  target_ids:
+  - PF11161
+  evidence_ids:
+  - validation
+evidence:
+- evidence_id: record
+  kind: record_content
+  reference: data/families/PF11161.yaml
+  locator: Entire projection, including identity, description, counters, status and
+    provenance
+  accessed_at: '2026-10-29T02:19:13Z'
+  support: supports
+  summary: Read the complete PF11161 seed record; it contains imported metadata and
+    no assertions, causal_graphs, discussions, datasets, cross_corpus_links, curation_history,
+    curation_events or review_id.
+  snapshot_sha256: f26ca1b40134bc03d867916d676db5f442ab37603b8f375ab1b4b7b5abab9d30
+- evidence_id: snapshot
+  kind: database
+  reference: data/worklists/interpro-pfam-duf-2026-10-10.json
+  locator: pfam_id=PF11161; companion manifest and TSV; native verified inspection
+  accessed_at: '2026-10-29T02:19:13Z'
+  support: supports
+  summary: The exact frozen row matches the projection. The native inspection verifies
+    the retained JSON/TSV manifest; the migration snapshot generation timestamp is
+    2026-10-10T07:44:21.614711Z. This is not the acquisition time of this retained
+    row. The review date does not refresh these source facts.
+  snapshot_sha256: 17fb625876c9326ed284263a47bcd84e0d7844a31c040dc06cd2260c36f1c383
+- evidence_id: profile
+  kind: authority
+  reference: docs/record-review-profile.md
+  locator: Domains and Ownership; Verdicts and Status Gates; linked record-review
+    contract and native checklist
+  accessed_at: '2026-10-29T02:19:13Z'
+  support: supports
+  summary: Read the local rules distinguishing imported description, seed class, evidence
+    scoring, curated claims and scientific review, and the separate projection/overlay
+    ownership.
+- evidence_id: validation
+  kind: validation
+  reference: justfile
+  locator: records-check, history-check, validate-schema recipes; actual batch input-check
+    runs
+  accessed_at: '2026-10-29T02:19:13Z'
+  support: supports
+  summary: Observed exit 0 from all three input recipes. 8296 schema-valid records;
+    0 generated files differ. 488 valid canonical history records. Generated schema
+    check found 0 differing generated files. These checks do not establish scientific
+    truth.
+- evidence_id: local-search
+  kind: search
+  reference: curation/families; evidence; history
+  locator: Path inventory filtered for PF11161
+  accessed_at: '2026-10-29T02:19:13Z'
+  support: supports
+  summary: No path containing this accession was found in the bounded inventory. The
+    exact overlay was also absent from native inspection; the record has no curated
+    claim fields.
+  search_scope: All paths under curation/families, evidence, and history, including
+    hidden and ignored files, filtered for the exact accession PF11161. This is a
+    local path inventory, not a literature search or an assertion that other corpora
+    lack evidence.
+- evidence_id: duf-projection-pf11161
+  kind: record_content
+  reference: data/families/PF11161.yaml
+  locator: dufmech-reviewed-projection-v1
+  accessed_at: '2026-10-29T02:19:13Z'
+  support: context_only
+  snapshot_sha256: f26ca1b40134bc03d867916d676db5f442ab37603b8f375ab1b4b7b5abab9d30
+  quote: "id: Pfam:PF11161\npfam_id: PF11161\nname: Protein of unknown function (DUF2946)\n\
+    short_name: DUF2944\nseed_status: UNKNOWN_CANDIDATE\ncharacterization_status:\
+    \ UNSCORED\ncuration_status: SEEDED\nsource_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF11161\n\
+    counters:\n  proteins: 989\n  matches: 989\n  proteomes: 988\n  taxa: 1240\n \
+    \ structures: 0\n  alphafold_models: 608\n  domain_architectures: 1\nprovenance:\n\
+    \  snapshot_id: interpro-pfam-duf-2026-10-10\n  path: data/worklists/interpro-pfam-duf-2026-10-10.json\n\
+    \  sha256: 17fb625876c9326ed284263a47bcd84e0d7844a31c040dc06cd2260c36f1c383\n\
+    \  generated_at: '2026-10-10T07:44:21.614711Z'\n  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/\n\
+    interpro_id: InterPro:IPR021332\ndescription: This family of proteins with unknown\
+    \ function appear to be restricted to Proteobacteria.\n"
+  summary: Byte-exact projection retained at save for digest verification, not scientific
+    assessment.
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Exact Pfam/InterPro identity and naming
+  outcome: supported
+  summary: The filename, pfam_id=PF11161, id=Pfam:PF11161, short_name=DUF2944, name=Protein
+    of unknown function (DUF2946), source URL and InterPro accession InterPro:IPR021332
+    agree with the selected frozen row. This establishes frozen identity correspondence,
+    not current upstream taxonomy or function.
+  target_ids:
+  - PF11161
+  evidence_ids:
+  - record
+  - snapshot
+- assessment_id: provenance
+  area: provenance
+  topic: Frozen counters, raw hashes and semantic binding
+  outcome: supported
+  summary: The record binds interpro-pfam-duf-2026-10-10 by SHA-256 and retains its
+    generation timestamp. Its 989 proteins, 989 matches, 0 structure entries and 608
+    AlphaFold models are frozen database counters, not independent experiments. Raw
+    input hashes and the dufmech-record-content-v1 digest preserve different checks.
+  target_ids:
+  - PF11161
+  evidence_ids:
+  - record
+  - snapshot
+  - validation
+- assessment_id: evidence-tier
+  area: evidence
+  topic: Imported description versus experimental support
+  outcome: unknown
+  summary: PF11161 retains short_name DUF2944 while its name is Protein of unknown
+    function (DUF2946). Both literal values occur in the complete copied projection
+    and the actual selected frozen row; accession, InterPro identity, provenance and
+    all seven counters otherwise agree.
+  target_ids:
+  - PF11161
+  evidence_ids:
+  - record
+  - snapshot
+  dimensions:
+  - name: evidence-tier
+    value: Imported database description; primary support not reassessed
+    definition: Evidence actually examined for this audit; it is not a label for all
+      evidence that may exist for the family.
+    evidence_ids:
+    - record
+    - snapshot
+- assessment_id: claim-scope
+  area: scope
+  topic: Family, domain and tested-protein boundaries
+  outcome: supported
+  summary: Strict local representation review identifies the visible difference between
+    the DUF-number label in name and short_name without selecting either as correct.
+    The appear-to-be-restricted distribution wording remains qualified import, and
+    no family identity, taxonomic correction or biological interpretation is inferred.
+  target_ids:
+  - PF11161
+  evidence_ids:
+  - record
+  - snapshot
+- assessment_id: completeness
+  area: completeness
+  topic: Seed content and remaining scientific work
+  outcome: unknown
+  summary: 'One confirmed minor OPEN representation finding requires needs_curation
+    (NEEDS_FOLLOWUP): the retained name and short_name contain different DUF-number
+    labels. Exact projection-to-row copying does not resolve that discordance. Attributable
+    clarification is needed on a maintained correction surface; no label is chosen
+    and no source is edited here. No accession-named overlay, evidence or history
+    path was found by the bounded hidden/ignored-inclusive inventory; the inspected
+    projection has no curated claim payload. Optional-field absence is not a seed-schema
+    defect.'
+  target_ids:
+  - PF11161
+  evidence_ids:
+  - record
+  - local-search
+  - profile
+- assessment_id: status
+  area: consistency
+  topic: Seed, scoring and review states
+  outcome: supported
+  summary: seed_status=UNKNOWN_CANDIDATE, characterization_status=UNSCORED and curation_status=SEEDED
+    express separate states. UNKNOWN_CANDIDATE is the retained lexical seed class,
+    not an experimentally established absence of function. No REVIEWED gate or curation
+    event is implied by this bundle.
+  target_ids:
+  - PF11161
+  evidence_ids:
+  - record
+  - profile
+- assessment_id: ownership
+  area: ownership
+  topic: Maintained correction surface and scoped result
+  outcome: supported
+  summary: Attributable label clarification belongs in separately authorized maintained
+    PF11161 curation or a successor source freeze. This review retains the OPEN finding
+    and follow-up only; no frozen or generated record is edited.
+  target_ids:
+  - PF11161
+  evidence_ids:
+  - profile
+  - record
+  - validation
+- assessment_id: name-short-name-duf-label-discordance
+  area: representation
+  topic: Clarify the differing DUF labels in name and short_name
+  outcome: concern
+  summary: 'One minor confirmed OPEN representation finding remains: PF11161 name
+    contains DUF2946 while short_name is DUF2944 in both the projection and frozen
+    row. No label or family identity is selected.'
+  target_ids:
+  - PF11161
+  evidence_ids:
+  - record
+  - snapshot
+findings:
+- finding_id: name-short-name-duf-label-discordance
+  issue_key: pf11161-name-short-name-duf-label-discordance
+  category: representation
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Clarify the differing DUF labels in name and short_name
+  description: The complete copied PF11161 projection and actual selected frozen row
+    both retain short_name DUF2944 but name Protein of unknown function (DUF2946).
+    Confirmed refers only to these two different literal labels. Neither label is
+    selected as correct, and no family identity, sequence relationship or biological
+    interpretation is inferred.
+  target_ids:
+  - PF11161
+  field_paths:
+  - name
+  - short_name
+  evidence_ids:
+  - record
+  - snapshot
+  normalization_reason: Minor reflects a localized label-representation discordance
+    while accession identity, pinned provenance and exact projection/row fidelity
+    remain intact. Faithful copying does not resolve the label disagreement.
+  owner_paths:
+  - repository: CultureBotAI/DUFMech
+    path: curation/families/PF11161.yaml
+    role: Future maintained source-backed name/short_name clarification only; no record
+      or overlay is edited by this review.
+  - repository: CultureBotAI/DUFMech
+    path: scripts/freeze_duf_puf_worklist.py
+    role: A separately authorized successor source freeze may retain attributable
+      label clarification; no generator defect is alleged.
+actions:
+- action_id: reconcile-name-short-name-duf-label-discordance
+  description: In separately authorized curation, obtain attributable clarification
+    of PF11161's intended name and short_name before choosing a DUF label. Preserve
+    the original values until then; a guessed correction or neighboring record label
+    alone does not resolve the finding.
+  finding_ids:
+  - name-short-name-duf-label-discordance
+  target_ids:
+  - PF11161
+  owner_paths:
+  - repository: CultureBotAI/DUFMech
+    path: curation/families/PF11161.yaml
+    role: Future maintained source-backed name/short_name clarification only; no record
+      or overlay is edited by this review.
+  - repository: CultureBotAI/DUFMech
+    path: scripts/freeze_duf_puf_worklist.py
+    role: A separately authorized successor source freeze may retain attributable
+      label clarification; no generator defect is alleged.
+  generator: just records --apply
+  acceptance_checks:
+  - Retain PF11161 accession identity and the original frozen row and generated projection
+    provenance; do not directly edit frozen or generated source files.
+  - Provide scoped authoritative evidence identifying the intended name and short_name,
+    or explicitly retain the unresolved discordance without selecting a label unsupported
+    by evidence.
+  - Apply any supported correction only through the maintained curation overlay or
+    a newly verified successor freeze and the normal record generator, with appropriate
+    canonical history.
+  - Regenerate and validate the affected projection and review representation; confirm
+    consistent or explicitly unresolved labels, unchanged unrelated records and no
+    invented biological characterization.
+limitations:
+- scientific_review is false. Primary papers, original figures and assays, live database
+  entries, current taxonomy and complete family-member coverage were not reviewed;
+  source citation tokens are not verified primary evidence.
+- The hidden/ignored-inclusive absence search is restricted to accession-bearing paths
+  under curation/families, evidence and history. It does not exclude evidence in other
+  local collections or the literature.
+- Required input checks passed. Native saving validates the supplied content and constructs
+  the immutable pair. The persisted pair is then read back through the native validator
+  and covered by the batch just reviews-check recipe; this document does not preclaim
+  those later results. Full publication QC is tracked separately and may require Pages
+  source-pin updates.
+- No scientific status, record, overlay, frozen input, canonical curation history
+  or generated Pages artifact was changed by this review.
+notes:
+- One record per bundle; assessment prose was authored from the actual inspected record.
+  The helper assembles provenance and schema fields; inspection and successful checks
+  alone are not scientific findings.
+- The explicit follow-up finding concerns imported textual representation. It does
+  not resolve scientific truth or authorize the proposed corrective work.
+tags:
+- seed-review
+- unreviewed-record-coverage
+```
