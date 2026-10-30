@@ -1,0 +1,42 @@
+PF16315 / DUF4955: minimal source extract, inspected 2026-10-30
+
+Ndeh D, Munoz Munoz J, Cartmell A, Bulmer D, Wills C, Henrissat B, Gray J.
+"The human gut microbe Bacteroides thetaiotaomicron encodes the founding member
+of a novel glycosaminoglycan-degrading polysaccharide lyase family PL29."
+J Biol Chem 2018;293(46):17906-17916. Peer reviewed.
+PMID:30262663; PMCID:PMC6240882; doi:10.1074/jbc.RA118.004510
+https://pubmed.ncbi.nlm.nih.gov/30262663/
+License: Creative Commons Attribution (CC BY), as stated in the Europe PMC record
+for this article. Attribution is to the authors above.
+
+Minimal verbatim quotations retained for causal-edge checking, each labelled with
+its section. Line breaks of the source were joined. No figures, images or raw data
+are retained.
+
+--- Abstract
+its ability to degrade the GAGs CS, dermatan sulfate (DS), and hyaluronic acid (HA)
+
+When incubated with HA, BtCDH generated a series of unsaturated HA sugars, including Δ4,5UA-GlcNAc, Δ4,5UA-GlcNAc-GlcA-GlcNac, Δ4,5UA-[GlcNAc-GlcA]2-GlcNac, and Δ4,5UA-[GlcNAc-GlcA]3-GlcNac, as end products and hence was classed as endo-acting
+
+--- Results: In silico data on native BtCDH lyase
+The gene encoding native BtCDH lyase (BT_3328 from B. thetaiotaomicron VPI-5482) is 2607 bp in length and has a GC content of 51%.
+
+The DUF4955 domain whose function is unknown is present at the C terminus of the protein
+
+--- Results: growth experiments
+B. thetaiotaomicron WT and BtCDH cells grew at a very similar rates on various substrates, except for CSC where a minor defect in late phase growth was observed
+
+--- Results: cell-surface localization
+The results showed degradation of BtCDH L and BtCDH H in PK-treated but not control cells
+
+The cell-surface localization of BtCDH was finally confirmed through immunofluorescence assays using anti-BtCDH antibodies
+
+The results showed extensive degradation of both CSA and CSC by the WT strain, visible as a smear of products
+
+This was significantly reduced in the knockout strain especially for the CSA substrate in which just a single band of generated product was observed
+
+--- Discussion
+We also observed that the absence of BtCDH did not completely prevent extracellular degradation of CS in whole-cell assays, suggesting the presence of other unknown surface CS-degrading enzymes.
+
+--- Experimental procedures: cloning
+The full-length BtCDH gene lacking the N-terminal lipoprotein signal sequence was amplified by PCR from B. thetaiotaomicron VPI-5482 genomic DNA

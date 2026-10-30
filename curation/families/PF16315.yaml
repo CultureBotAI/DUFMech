@@ -1,0 +1,254 @@
+pfam_id: PF16315
+curation_status: IN_PROGRESS
+curation_history: history/records/PF16315
+causal_graphs:
+  - graph_id: btcdh-pl29-surface-gag-lyase
+    title: The DUF4955 protein BtCDH (BT_3328) is a cell-surface PL29 glycosaminoglycan lyase
+    scope: >-
+      Recombinant BtCDH of Bacteroides thetaiotaomicron VPI-5482
+      (UniProtKB:Q8A2H7, BT_3328), expressed without its N-terminal lipoprotein
+      signal, and the deletion strain lacking the whole BT_3328 open reading
+      frame. One tested protein, the founding member of polysaccharide lyase
+      family PL29, not a family-wide property of PF16315.
+    context: >-
+      Purified enzyme was incubated with chondroitin sulfate A and C, dermatan
+      sulfate and hyaluronan. Activity was followed at 235 nm, which reports the
+      unsaturated uronate formed by beta-elimination, and products were analysed
+      by TLC, size-exclusion chromatography and mass spectrometry. Whole
+      wild-type and deletion-strain cells were reincubated with chondroitin
+      sulfate under conditions in which transport is limited, so only surface
+      activity is seen. Localisation used proteinase K shaving and
+      immunofluorescence with antibodies raised against the protein.
+    family_mapping: >-
+      UniProtKB:Q8A2H7 is 868 residues with one Pfam:PF16315 interval at
+      716-867, inclusive, and one Pfam:PF16378 (DUF4988) interval at 25-199.
+      Residues 200-715 carry no Pfam match. Coordinate limit, the tested enzyme
+      is the mature full-length protein, roughly residues 19-868, which spans
+      both domains and the unassigned region between them. No truncation,
+      domain-deletion or active-site variant has been reported, so the measured
+      activity maps to the whole mature protein and not to the PF16315 interval.
+      Which part of the chain carries the catalytic site is unresolved.
+    scope_status: MECHANISTIC
+    taxon: NCBITaxon:226186
+    limitations: >-
+      The two studies disagree on dermatan sulfate, degraded in the first and
+      reported as little activity in the second, and the second was unable to
+      reproduce the first on this point. Cleavage mode is also unsettled, read as
+      endo-acting from the limit products of hyaluronan in the first study and as
+      cleavage from the reducing end from labelled oligosaccharides in the
+      second. Deleting the gene does not stop growth on any of these substrates
+      in pure culture, so surface cleavage by this enzyme is not required for
+      their use, and other surface activity remains in the mutant. Nothing here
+      assigns the chemistry to the DUF4955 domain, and no structure or
+      active-site variant exists for any family member. The family counters on
+      this record cover 259 proteins, of which one has been assayed.
+    nodes:
+      - node_id: btcdh-mature-protein-with-gags
+        label: Purified mature BtCDH incubated with chondroitin sulfate or hyaluronan
+        node_type: ACTIVITY
+        grounding:
+          - UniProtKB:Q8A2H7
+      - node_id: unsaturated-gag-oligosaccharides
+        label: Delta4,5-unsaturated glycosaminoglycan di- to octasaccharides
+        node_type: STATE
+      - node_id: btcdh-on-cell-surface
+        label: BtCDH exposed on the outer surface of B. thetaiotaomicron
+        node_type: STATE
+        grounding:
+          - UniProtKB:Q8A2H7
+      - node_id: btcdh-deletion
+        label: Deletion of the whole BT_3328 open reading frame
+        node_type: PERTURBATION
+        grounding:
+          - UniProtKB:Q8A2H7
+      - node_id: extracellular-cs-degradation
+        label: Degradation of chondroitin sulfate outside the cell by whole cells
+        node_type: PROCESS
+    edges:
+      - edge_id: btcdh-produces-unsaturated-oligosaccharides
+        subject: btcdh-mature-protein-with-gags
+        predicate: produces
+        object: unsaturated-gag-oligosaccharides
+        mechanism: >-
+          The purified enzyme converts chondroitin sulfate and hyaluronan into
+          unsaturated oligosaccharides, which is beta-elimination across the
+          glycosidic bond rather than hydrolysis. Products of hyaluronan range
+          from a disaccharide to an octasaccharide and do not change on longer
+          digestion, so they are limit products of this enzyme. This is an
+          observed in vitro product measurement on the mature full-length
+          protein; it does not localise the chemistry to the DUF4955 domain.
+        directness: DIRECT
+        support: OBSERVED
+        evidence_kind: EXPERIMENTAL
+        evidence:
+          - reference: PMID:30262663
+            source_url: https://pubmed.ncbi.nlm.nih.gov/30262663/
+            snippet: 'When incubated with HA, BtCDH generated a series of unsaturated HA sugars, including Δ4,5UA-GlcNAc, Δ4,5UA-GlcNAc-GlcA-GlcNac, Δ4,5UA-[GlcNAc-GlcA]2-GlcNac, and Δ4,5UA-[GlcNAc-GlcA]3-GlcNac, as end products and hence was classed as endo-acting'
+            explanation: >-
+              Identifies the products as unsaturated, which is what makes this a
+              lyase rather than a hydrolase, and gives their size range. The
+              endo-acting reading of these products is contested by the later
+              study and is not asserted by this edge.
+            cache_path: evidence/PF16315/ndeh-2018-btcdh-pl29.txt
+            cache_sha256: 749f6126e1872b9d74925481139be0612f01a7bb0b178e518ab60d9849bb1b42
+          - reference: PMID:32005816
+            source_url: https://pubmed.ncbi.nlm.nih.gov/32005816/
+            snippet: 'The surface lyase, BT3328PL29, showed its highest enzymatic activity and affinity against CS-A > CS-C > HA and little activity on DS, differing from previous data18.'
+            explanation: >-
+              Independent kinetics from a second study ranking the substrates,
+              which is why chondroitin sulfate and hyaluronan are retained in the
+              node label and dermatan sulfate is not. The same sentence records
+              the disagreement with the earlier report.
+            cache_path: evidence/PF16315/ndeh-2020-gag-pul.txt
+            cache_sha256: fba6312dd4a63ae05f3f11a55cb264540f99fae9b4a7b22d2e33f75340f42a31
+          - reference: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF16315/protein/uniprot/Q8A2H7/
+            source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF16315/protein/uniprot/Q8A2H7/
+            snippet: 'Q8A2H7 Pfam:PF16315 interval: 716-867, inclusive (InterPro match score 1.3e-69)'
+            explanation: >-
+              Grounds the tested protein on this family and supplies the
+              coordinate limit. Identity grounding only; it carries no causal
+              weight.
+            cache_path: evidence/PF16315/BtCDH-identity.txt
+            cache_sha256: 108683327ecd9bf041a85d31e35a7ff5ee7213fc1a03d83c0466eea9b4317ff6
+      - edge_id: btcdh-surface-exposure-enables-extracellular-degradation
+        subject: btcdh-on-cell-surface
+        predicate: enables
+        object: extracellular-cs-degradation
+        mechanism: >-
+          Protease added to intact cells destroys the protein while a periplasmic
+          control enzyme survives, and antibody staining of intact cells agrees,
+          so the protein is reachable from outside the cell. Whole cells under
+          conditions that limit transport degrade chondroitin sulfate
+          extensively, which places cleavage of the polymer outside the outer
+          membrane rather than in the periplasm.
+        directness: DIRECT
+        support: OBSERVED
+        evidence_kind: EXPERIMENTAL
+        evidence:
+          - reference: PMID:30262663
+            source_url: https://pubmed.ncbi.nlm.nih.gov/30262663/
+            snippet: 'The results showed degradation of BtCDH L and BtCDH H in PK-treated but not control cells'
+            explanation: >-
+              Protease accessibility of the protein in intact cells, controlled
+              against a periplasmic enzyme in the same extracts, is the primary
+              localisation result. The immunofluorescence confirmation is retained
+              in the same extract.
+            cache_path: evidence/PF16315/ndeh-2018-btcdh-pl29.txt
+            cache_sha256: 749f6126e1872b9d74925481139be0612f01a7bb0b178e518ab60d9849bb1b42
+          - reference: PMID:30262663
+            source_url: https://pubmed.ncbi.nlm.nih.gov/30262663/
+            snippet: 'The results showed extensive degradation of both CSA and CSC by the WT strain, visible as a smear of products'
+            explanation: >-
+              Whole-cell assay under transport-limiting conditions, which is what
+              makes the degradation extracellular rather than periplasmic.
+            cache_path: evidence/PF16315/ndeh-2018-btcdh-pl29.txt
+            cache_sha256: 749f6126e1872b9d74925481139be0612f01a7bb0b178e518ab60d9849bb1b42
+      - edge_id: btcdh-deletion-decreases-extracellular-degradation
+        subject: btcdh-deletion
+        predicate: decreases
+        object: extracellular-cs-degradation
+        mechanism: >-
+          Cells lacking the gene degrade chondroitin sulfate A much less in the
+          whole-cell assay, so this enzyme carries part of the surface activity.
+          Degradation is reduced and not abolished, and the authors read the
+          remainder as other surface enzymes, so the step is contributory rather
+          than solely attributable to this protein. Growth on the same substrates
+          in pure culture is unaffected, which is recorded in the limitations.
+        directness: DIRECT
+        support: OBSERVED
+        evidence_kind: EXPERIMENTAL
+        evidence:
+          - reference: PMID:30262663
+            source_url: https://pubmed.ncbi.nlm.nih.gov/30262663/
+            snippet: 'This was significantly reduced in the knockout strain especially for the CSA substrate in which just a single band of generated product was observed'
+            explanation: >-
+              Pairs the deletion strain with wild type in the same surface assay,
+              which is what connects the in vitro chemistry to an activity of the
+              living cell surface.
+            cache_path: evidence/PF16315/ndeh-2018-btcdh-pl29.txt
+            cache_sha256: 749f6126e1872b9d74925481139be0612f01a7bb0b178e518ab60d9849bb1b42
+          - reference: PMID:30262663
+            source_url: https://pubmed.ncbi.nlm.nih.gov/30262663/
+            snippet: 'We also observed that the absence of BtCDH did not completely prevent extracellular degradation of CS in whole-cell assays, suggesting the presence of other unknown surface CS-degrading enzymes.'
+            explanation: >-
+              The authors' own limit on the same result, retained so the edge is
+              not read as making this enzyme the only surface lyase.
+            cache_path: evidence/PF16315/ndeh-2018-btcdh-pl29.txt
+            cache_sha256: 749f6126e1872b9d74925481139be0612f01a7bb0b178e518ab60d9849bb1b42
+discussions:
+  - discussion_id: pl29-chemistry-not-yet-assigned-to-duf4955
+    prompt: Does the DUF4955 domain carry the PL29 lyase active site, or is it a non-catalytic part of the chain?
+    kind: KNOWLEDGE_GAP
+    status: OPEN
+    rationale: >-
+      The only assayed member of this family is the mature full-length BtCDH,
+      roughly residues 19-868 of UniProtKB:Q8A2H7. PF16315 covers 716-867,
+      PF16378 covers 25-199, and 200-715 is unassigned by Pfam, so more than half
+      the chain lies outside either domain. Nothing published separates them, as
+      there is no truncation, domain swap, active-site variant or structure for
+      any family member, and the family has no solved structures and no Enzyme
+      Commission number attached to the domain. The reasonable readings are that
+      PF16315 is the catalytic domain, that the unassigned region is, or that the
+      active site lies at an interface. Settling it needs constructs, not more
+      sequence comparison. Until then the lyase chemistry is a property of the
+      protein in this record, not of the domain.
+    evidence:
+      - reference: PMID:30262663
+        supports: PARTIAL
+        evidence_source: full_text
+        explanation: >-
+          Supplies the chemistry and the recombinant construct, which is the
+          mature full-length protein. It notes the position of the DUF4955 domain
+          at the C terminus but assays no fragment of it.
+      - reference: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF16315/protein/uniprot/Q8A2H7/
+        supports: PARTIAL
+        evidence_source: database
+        explanation: >-
+          Gives the domain intervals and the unassigned region between them, which
+          is what makes the assignment question concrete. A single API snapshot of
+          current matches; it will drift with releases.
+    posed_by: Claude Code
+    posed_date: '2026-10-30'
+    notes: >-
+      A structure of any PL29 member, or a DUF4955-only construct, would answer
+      this. The family has 164 AlphaFold models and no experimental structures;
+      inspecting a model for a lyase fold would be a lead rather than an answer.
+  - discussion_id: duf4988-shared-with-non-catalytic-surface-binding-partner
+    prompt: Is the PF16378 (DUF4988) region of BtCDH a catalytic part of the lyase, or a surface module shared with non-enzymatic glycan-binding proteins?
+    kind: INTERPRETATION
+    status: OPEN
+    rationale: >-
+      BtCDH carries PF16378 at 25-199 alongside PF16315. The same family matches
+      the neighbouring surface glycan-binding protein BT3329
+      (UniProtKB:Q8A2H6) at 25-207 with a stronger score, and BT3329 has no
+      PF16315 and no reported enzyme activity. The second study reports the same
+      overlap as a conserved region of about 300 residues shared with
+      binding-protein genes of other utilisation loci. That makes a
+      glycan-binding or surface-assembly role the better reading of PF16378 and
+      argues against transferring lyase activity to it from this protein. No
+      binding assay has been reported for the region in either protein, so this
+      is an architectural argument, not a demonstrated function, and it is
+      recorded here rather than as an edge on either family.
+    evidence:
+      - reference: PMID:32005816
+        supports: PARTIAL
+        evidence_source: full_text
+        explanation: >-
+          Reports the shared N-terminal region between the lyase and the binding
+          protein, and the surface interaction among the three locus proteins. It
+          does not assay the region on its own.
+      - reference: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF16378/protein/uniprot/Q8A2H6/
+        supports: PARTIAL
+        evidence_source: database
+        explanation: >-
+          Shows the same Pfam family on a protein with no lyase domain and no
+          reported activity, which is the architectural point. Identity mapping
+          only.
+    posed_by: Claude Code
+    posed_date: '2026-10-30'
+    notes: >-
+      Bears on PF16378, whose own record is untouched by this overlay. If that
+      family is curated later, this is the place to start. Contributed from a
+      KBase gene-annotate dashboard review of an environmental B. thetaiotaomicron
+      BtCDH allele (ai4curation/ai-gene-review PR 5758). Imported identity,
+      counters and seed classification are unchanged.
