@@ -45135,14 +45135,16 @@
       "scope_statuses": []
     },
     {
-      "curation_status": "SEEDED",
-      "edge_count": 0,
-      "graph_count": 0,
-      "graph_state": "ABSENT",
+      "curation_status": "IN_PROGRESS",
+      "edge_count": 3,
+      "graph_count": 1,
+      "graph_state": "PRESENT",
       "name": "DUF4955",
       "pfam_id": "PF16315",
-      "record_digest": "3bb7c0cde22a62c8bce51cba30fa26b528ae39def979e5ece96026d23100a7cf",
-      "scope_statuses": []
+      "record_digest": "9f9d0e396e1333c95f7943733cc4a7cecf3bb07c8a64acc22094e3b131495a93",
+      "scope_statuses": [
+        "MECHANISTIC"
+      ]
     },
     {
       "curation_status": "SEEDED",
@@ -83308,8 +83310,8 @@
     }
   ],
   "graph_states": {
-    "ABSENT": 8162,
-    "PRESENT": 134
+    "ABSENT": 8161,
+    "PRESENT": 135
   },
   "kind": "structural_inventory_not_scientific_review",
   "records": 8296
