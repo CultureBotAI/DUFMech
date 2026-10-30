@@ -1,0 +1,392 @@
+pfam_id: PF13271
+curation_status: IN_PROGRESS
+curation_history: history/records/PF13271
+causal_graphs:
+  - graph_id: tep1-duf4062-domain-nad-hydrolysis
+    title: The human TEP1 DUF4062 domain hydrolyses NAD+ and NADP+ and depends on Glu1008
+    scope: >-
+      Recombinant full-length human TEP1 (UniProtKB:Q99973), its isolated
+      DUF4062-containing construct TEP1 886-1113, the E1008A substitution, and human
+      vaults reconstituted from MVP plus TEP1. This is one tested protein, not a
+      family-wide property, and not endogenous regulation of TEP1 in cells.
+    context: >-
+      Full-length human NWD1, NWD2, NPHP3 and TEP1 were purified from HEK293F cells,
+      incubated with NAD+ and NADP+, and reaction products analysed by HPLC. Of those
+      four, only TEP1 was active. The isolated TEP1 886-1113 construct was assayed
+      separately. Vaults were reconstituted with MVP and TEP1, or TEP1 E1008A, in
+      HEK293F cells and assayed for NADase and NADPase activity.
+    family_mapping: >-
+      UniProtKB:Q99973 is 2627 residues with a single Pfam:PF13271 interval at
+      901-1015, inclusive. The retrieved sequence confirms the source's numbering,
+      with residue 1008 a glutamate and residues 908, 954 and 976 arginines, all
+      inside that interval. Coordinate limit, the tested catalytic construct TEP1
+      886-1113 extends 15 residues before and 98 residues after the PF13271 interval,
+      so the measured activity maps to a region containing the DUF4062 domain rather
+      than strictly to the Pfam interval. The NACHT, P-loop and WD40 regions of
+      Q99973 lie outside 901-1015 and are not the object of this result.
+    scope_status: MECHANISTIC
+    taxon: NCBITaxon:9606
+    limitations: >-
+      The sole source is a bioRxiv preprint that has not been peer reviewed. The
+      reported kinetics are slow, with an apparent Km near 6.9 mM for NADP+ and
+      undeterminable for NAD+, and specific activity rising with enzyme
+      concentration, so no physiological turnover rate is established and
+      oligomerisation-dependent activation remains an interpretation. Three of the
+      four human DUF4062-NACHT paralogues assayed were inactive, so this result does
+      not transfer to other family members. No elementary chemical step, proton
+      transfer or substrate-binding geometry is resolved here, and the biological role
+      of the vault is unresolved. Figure panels and raw chromatograms were not
+      inspected; the quotations come from the abstract and results text.
+    nodes:
+      - node_id: tep1-duf4062-catalytic-region
+        label: Purified human TEP1 DUF4062-containing catalytic region with NAD+ or NADP+
+        node_type: ACTIVITY
+        grounding:
+          - UniProtKB:Q99973
+      - node_id: adpr-and-nicotinamide-products
+        label: HPLC-detected ADP-ribose or ADP-ribose phosphate plus nicotinamide
+        node_type: STATE
+      - node_id: tep1-e1008a
+        label: TEP1 E1008A substitution replacing the wild-type active-site glutamate
+        node_type: PERTURBATION
+        grounding:
+          - UniProtKB:Q99973
+      - node_id: reconstituted-vault-with-tep1
+        label: Human vault reconstituted from MVP and TEP1, assayed for NAD(P)ase activity
+        node_type: ACTIVITY
+        grounding:
+          - UniProtKB:Q99973
+    edges:
+      - edge_id: tep1-region-produces-adpr-and-nam
+        subject: tep1-duf4062-catalytic-region
+        predicate: produces
+        object: adpr-and-nicotinamide-products
+        mechanism: >-
+          The purified protein converts NAD+ and NADP+ to ADP-ribose, or ADP-ribose
+          phosphate, plus nicotinamide, and the isolated DUF4062-containing construct
+          is sufficient for this, which localises the hydrolytic activity to that
+          region rather than to the other domains of the full-length protein. This is
+          a directly observed in vitro product measurement, not a demonstration of the
+          reaction in cells.
+        directness: DIRECT
+        support: OBSERVED
+        evidence_kind: EXPERIMENTAL
+        evidence:
+          - reference: PMID:42146377
+            source_url: https://pubmed.ncbi.nlm.nih.gov/42146377/
+            snippet: 'The isolated DUF4062 domain (TEP1886–1113, hereafter TEP1TIR) was sufficient to hydrolyze NAD+ and NADP+'
+            explanation: >-
+              Establishes that the DUF4062-containing region alone carries the
+              activity, which is what ties the chemistry to this Pfam family rather
+              than to the NACHT or WD40 regions of TEP1. The companion quotation in
+              the same extract reports the products and the three inactive paralogues.
+              The construct is slightly wider than the Pfam interval, as recorded in
+              family_mapping.
+            cache_path: evidence/PF13271/osinski-2026-duf4062-tir-nadase.txt
+            cache_sha256: e28aff955f55ed9f7a0fd0845780de0f8e74d81441e10b6e23d38248ae1bb40b
+          - reference: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF13271/protein/uniprot/Q99973/
+            source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF13271/protein/uniprot/Q99973/
+            snippet: 'Q99973 Pfam:PF13271 interval: 901-1015, inclusive'
+            explanation: >-
+              Grounds the tested protein on this Pfam family and supplies the
+              coordinate limits. Identity grounding only; it carries no causal weight
+              of its own.
+            cache_path: evidence/PF13271/TEP1-identity.txt
+            cache_sha256: 8f0e6edd68697b2e1c13291191c439225dcd50ecf95b12c8300e328b6e873712
+      - edge_id: e1008a-decreases-product-formation
+        subject: tep1-e1008a
+        predicate: decreases
+        object: adpr-and-nicotinamide-products
+        mechanism: >-
+          Substituting the conserved active-site glutamate abolishes product formation
+          in the purified-protein assay. This identifies Glu1008 as required for the
+          measured hydrolysis under these conditions. It does not by itself establish
+          the chemical role of the residue, since a substitution can also perturb
+          local structure.
+        directness: DIRECT
+        support: OBSERVED
+        evidence_kind: EXPERIMENTAL
+        evidence:
+          - reference: PMID:42146377
+            source_url: https://pubmed.ncbi.nlm.nih.gov/42146377/
+            snippet: 'Only TEP1 hydrolyzed NAD+ and NADP+, producing ADP-ribose or ADP-ribose phosphate (ADPRP) and nicotinamide (NAM) with activity dependent on the active site E1008'
+            explanation: >-
+              The same sentence reports the products and the E1008 dependence. It also
+              records that NWD1, NWD2 and NPHP3 were inactive, which is retained in
+              the limitations of this graph rather than treated as support for the
+              family.
+            cache_path: evidence/PF13271/osinski-2026-duf4062-tir-nadase.txt
+            cache_sha256: e28aff955f55ed9f7a0fd0845780de0f8e74d81441e10b6e23d38248ae1bb40b
+          - reference: https://rest.uniprot.org/uniprotkb/Q99973.json
+            source_url: https://rest.uniprot.org/uniprotkb/Q99973.json
+            snippet: 'position 1008 = E (the substituted active-site glutamate, E1008A)'
+            explanation: >-
+              Confirms against the retrieved sequence that residue 1008 of Q99973 is a
+              glutamate inside the PF13271 interval, so the numbering used by the
+              source refers to the domain of this family. Identity check only.
+            cache_path: evidence/PF13271/TEP1-identity.txt
+            cache_sha256: 8f0e6edd68697b2e1c13291191c439225dcd50ecf95b12c8300e328b6e873712
+      - edge_id: vault-bound-tep1-produces-nadase-activity
+        subject: reconstituted-vault-with-tep1
+        predicate: produces
+        object: adpr-and-nicotinamide-products
+        mechanism: >-
+          Vaults reconstituted with TEP1 show NADase and NADPase activity, and those
+          carrying the E1008A protein do not, so the activity measured on the
+          assembled particle is conferred by the same TEP1 active site. This is an
+          observed activity of a reconstituted particle. It does not establish that
+          vaults hydrolyse NAD+ at a physiologically relevant rate in cells.
+        directness: DIRECT
+        support: OBSERVED
+        evidence_kind: EXPERIMENTAL
+        evidence:
+          - reference: PMID:42146377
+            source_url: https://pubmed.ncbi.nlm.nih.gov/42146377/
+            snippet: 'Purified vaults containing TEP1, but not the E1008A mutant, displayed NADase and NADPase activities'
+            explanation: >-
+              Pairs the wild-type and active-site-mutant particles in one comparison,
+              which is why the activity is assigned to the DUF4062 site of TEP1 rather
+              than to a co-purifying contaminant. The products on the particle were
+              not separately itemised in the retained extract, so the shared product
+              node is used at the NAD(P)ase level.
+            cache_path: evidence/PF13271/osinski-2026-duf4062-tir-nadase.txt
+            cache_sha256: e28aff955f55ed9f7a0fd0845780de0f8e74d81441e10b6e23d38248ae1bb40b
+  - graph_id: kpswz-portal-triggered-nad-depletion
+    title: A Klebsiella DUF4062 protein depletes NAD+ on phage portal recognition and aborts infection
+    scope: >-
+      The Klebsiella pneumoniae DUF4062 protein the source names Swarozyc (KpSwz),
+      expressed in Escherichia coli BW25113, with its E97A substitution and its
+      auxiliary domain, challenged with phage Bas14 or co-expressed with the Bas14
+      portal protein. The tested object is that single protein in a heterologous
+      host. Neither the native Klebsiella context nor other family members are
+      covered.
+    context: >-
+      Five DUF4062 proteins lying in predicted antiphage defence islands were
+      expressed in E. coli BW25113 and challenged with phages from the BASEL library.
+      Liquid cultures expressing KpSwz were infected with phage Bas14 at high and low
+      multiplicity, and cellular NAD+ was measured. Purified KpSwz was incubated with
+      NAD+ with and without the Bas14 portal protein, and products were analysed by
+      HPLC-UV.
+    family_mapping: >-
+      The source identifies the tested protein as a DUF4062-containing protein of
+      Klebsiella pneumoniae, recovered in its own DUF4062 family search, and numbers
+      its active-site glutamate E97. Coordinate limit, the sequences and accessions of
+      the five tested bacterial proteins are given only in the supplementary material
+      of the preprint, which was not inspected, so no UniProt or NCBI accession is
+      asserted here and E97 is not placed on a PF13271 interval. The nodes of this
+      graph are therefore deliberately ungrounded, and the domain assignment rests on
+      the family search of the authors rather than on an independently checked match.
+    scope_status: MECHANISTIC
+    taxon: NCBITaxon:573
+    limitations: >-
+      The sole source is a bioRxiv preprint that has not been peer reviewed. Because
+      the tested sequence is unresolved, the mapping of E97 onto the Pfam domain is
+      the assignment of the authors and was not independently verified. Defence was
+      assayed in a heterologous E. coli host, so the native Klebsiella phenotype is
+      untested. The escaper-mutation and cryo-EM results support portal recognition as
+      the trigger, but the authors describe the final step, repositioning of the
+      TIR-like domains into an active conformation, as a proposal supported by
+      modelling rather than an observed transition, and that step is deliberately
+      absent from this graph. Whether cell death follows from NAD+ loss alone is not
+      resolved. Nothing here transfers to short DUF4062 proteins in other lineages,
+      including cyanobacteria.
+    nodes:
+      - node_id: bas14-portal-protein
+        label: Phage Bas14 portal protein presented to KpSwz
+        node_type: PERTURBATION
+      - node_id: kpswz-nadase-activity
+        label: KpSwz NAD+-hydrolysing activity, requiring Glu97
+        node_type: ACTIVITY
+      - node_id: infection-triggered-nad-loss
+        label: Infection-triggered loss of the cellular NAD+ pool
+        node_type: STATE
+      - node_id: kpswz-e97a
+        label: KpSwz E97A substitution replacing the wild-type active-site glutamate
+        node_type: PERTURBATION
+      - node_id: phage-defence-outcome
+        label: Protection of the bacterial population against phage, by abortive infection
+        node_type: PHENOTYPE
+    edges:
+      - edge_id: portal-enables-kpswz-nadase
+        subject: bas14-portal-protein
+        predicate: enables
+        object: kpswz-nadase-activity
+        mechanism: >-
+          Purified KpSwz hydrolyses NAD+ only in the presence of the Bas14 portal
+          protein, and the reaction also requires Glu97. The portal therefore acts as
+          the activating ligand of an otherwise quiescent enzyme, which is consistent
+          with the autoinhibited head-to-head assembly seen by cryo-EM. The structural
+          route from portal binding to an active site is proposed by the authors
+          rather than observed, and is not asserted here.
+        directness: DIRECT
+        support: OBSERVED
+        evidence_kind: EXPERIMENTAL
+        evidence:
+          - reference: PMID:42146377
+            source_url: https://pubmed.ncbi.nlm.nih.gov/42146377/
+            snippet: 'this activity required the active-site residue E97 and portalBas14'
+            explanation: >-
+              A single in vitro reaction establishes both the portal requirement and
+              the active-site requirement, so the activation is a measured dependency
+              rather than an inference from the structures. The accession of the tested
+              protein is unresolved, as recorded in family_mapping.
+            cache_path: evidence/PF13271/osinski-2026-duf4062-tir-nadase.txt
+            cache_sha256: e28aff955f55ed9f7a0fd0845780de0f8e74d81441e10b6e23d38248ae1bb40b
+      - edge_id: kpswz-nadase-causes-infection-nad-loss
+        subject: kpswz-nadase-activity
+        predicate: increases
+        object: infection-triggered-nad-loss
+        mechanism: >-
+          Cells expressing wild-type KpSwz lose NAD+ on phage infection. Taken with
+          the in vitro reaction, this places the hydrolytic activity as the cause of
+          the drop in the cellular pool. The measurement is a population average and
+          does not resolve timing within single infected cells.
+        directness: DIRECT
+        support: OBSERVED
+        evidence_kind: EXPERIMENTAL
+        evidence:
+          - reference: PMID:42146377
+            source_url: https://pubmed.ncbi.nlm.nih.gov/42146377/
+            snippet: 'NAD+ levels were reduced upon phage infection in cells expressing WT KpSwz, but not the E97A mutant'
+            explanation: >-
+              The wild-type arm of the same comparison supplies this edge. The
+              mutant arm is recorded separately, so the active-site dependency is not
+              counted twice as independent support.
+            cache_path: evidence/PF13271/osinski-2026-duf4062-tir-nadase.txt
+            cache_sha256: e28aff955f55ed9f7a0fd0845780de0f8e74d81441e10b6e23d38248ae1bb40b
+      - edge_id: e97a-blocks-infection-linked-nad-loss
+        subject: kpswz-e97a
+        predicate: decreases
+        object: infection-triggered-nad-loss
+        mechanism: >-
+          Cells expressing the E97A protein do not lose NAD+ on infection, so the
+          active-site glutamate is required for the depletion. A substitution can also
+          perturb folding, so this identifies a requirement rather than a chemical
+          role for the residue.
+        directness: DIRECT
+        support: OBSERVED
+        evidence_kind: EXPERIMENTAL
+        evidence:
+          - reference: PMID:42146377
+            source_url: https://pubmed.ncbi.nlm.nih.gov/42146377/
+            snippet: 'NAD+ levels were reduced upon phage infection in cells expressing WT KpSwz, but not the E97A mutant'
+            explanation: >-
+              Pairs wild type and active-site mutant in the same infection experiment,
+              which is what connects the in vitro chemistry to an event inside
+              infected cells. It does not by itself show that the loss of NAD+ causes
+              the death of those cells.
+            cache_path: evidence/PF13271/osinski-2026-duf4062-tir-nadase.txt
+            cache_sha256: e28aff955f55ed9f7a0fd0845780de0f8e74d81441e10b6e23d38248ae1bb40b
+      - edge_id: kpswz-nadase-required-for-defence
+        subject: kpswz-nadase-activity
+        predicate: required_for
+        object: phage-defence-outcome
+        mechanism: >-
+          Phage defence in the heterologous host required both Glu97 and the auxiliary
+          domain of the protein, so the catalytic site and the sensor region are each
+          necessary for protection. Protection was seen at low multiplicity of
+          infection while high multiplicity collapsed the culture, which is the
+          pattern expected of abortive infection rather than of direct phage
+          inhibition.
+        directness: INDIRECT
+        support: OBSERVED
+        evidence_kind: EXPERIMENTAL
+        evidence:
+          - reference: PMID:42146377
+            source_url: https://pubmed.ncbi.nlm.nih.gov/42146377/
+            snippet: 'Phage defense required the active site E97 of K. pneumoniae DUF4062 and its auxiliary domain'
+            explanation: >-
+              A genetic requirement measured as a plating or growth phenotype, which
+              is why directness is recorded as INDIRECT, since the steps between NAD+
+              depletion and population-level protection are not individually resolved.
+              The retained extract also records the multiplicity-dependent outcome
+              underlying the abortive-infection interpretation.
+            cache_path: evidence/PF13271/osinski-2026-duf4062-tir-nadase.txt
+            cache_sha256: e28aff955f55ed9f7a0fd0845780de0f8e74d81441e10b6e23d38248ae1bb40b
+discussions:
+  - discussion_id: duf4062-ntpase-label-versus-adjacent-nacht
+    prompt: Should a short stand-alone DUF4062 protein be annotated as an NTPase because its orthogroup is labelled a NACHT NTPase?
+    kind: INTERPRETATION
+    status: OPEN
+    rationale: >-
+      Orthogroup labels such as COG5635, "Predicted NTPase, NACHT family domain",
+      group short stand-alone DUF4062 proteins together with large multidomain
+      relatives in which the NTP-hydrolysing NACHT domain is a separate domain
+      adjacent to DUF4062. Automated pipelines transfer the NTPase label across that
+      boundary. In a UniProtKB snapshot taken on 2026-10-30, a P-loop NTPase domain
+      (IPR027417) co-occurs with DUF4062 in 2514 of 2925 proteins over 450 aa, or
+      85.9%, but in only 23 of 1720 proteins of 450 aa or less, or 1.3%, and NACHT
+      itself in one. The activity reported for the domain is NAD+ hydrolysis, a
+      different chemistry from NTP hydrolysis. This bears on how DUFMech should treat
+      orthogroup-derived functional labels generally. It is not resolved here, and no
+      NTPase activity has been tested for or excluded in any short member.
+    evidence:
+      - reference: PMID:42146377
+        supports: PARTIAL
+        evidence_source: full_text
+        explanation: >-
+          Places the NACHT ATPase as a domain adjacent to DUF4062 in the human
+          proteins, and reports NAD+ hydrolysis as the activity of the domain itself.
+          It does not test NTP hydrolysis by any DUF4062 domain, so it narrows the
+          architectural question without closing it.
+      - reference: https://rest.uniprot.org/uniprotkb/Q31PW6.json
+        supports: PARTIAL
+        evidence_source: database
+        explanation: >-
+          The co-occurrence counts retained with the candidate's identity analysis
+          show the P-loop domain tracking the long architecture. They are a single API
+          snapshot of InterPro cross-references, not a curated classification, and
+          will drift with releases.
+    posed_by: Claude Code
+    posed_date: '2026-10-30'
+    notes: >-
+      Raised while reviewing a KBase gene-annotate dashboard call for Synechococcus
+      elongatus CP088958.1_900, which was annotated a putative NACHT-family NTPase
+      from its COG5635 orthogroup (ai4curation/ai-gene-review PR 5756).
+  - discussion_id: short-bacterial-duf4062-activity-and-trigger
+    prompt: Is a short stand-alone bacterial DUF4062 protein such as Synechococcus elongatus Synpcc7942_0873 an active NADase, and what activates it?
+    kind: CURATION_TODO
+    status: OPEN
+    rationale: >-
+      The tested bacterial proteins were chosen because they lie in defence islands
+      and share a similar C-terminal auxiliary domain, and activation ran through a
+      phage portal protein. UniProtKB:Q31PW6 (Synpcc7942_0873) has the same compact
+      layout, with PF13271 at 6-146 of 362 residues, a predicted coiled coil at
+      170-197 and an unassigned C-terminal region, and it retains the most conserved
+      glutamate of the family at Glu83. That residue is identical in 93% of 375 short
+      bacterial homologs and sits at Pfam HMM match state 78, whose consensus residue
+      is a highly conserved E with emission probability 0.602. The protein has no
+      Walker A or Walker B motif. None of that is activity. The family is not
+      uniformly catalytic, since three of four human paralogues assayed were inactive,
+      so conservation of the glutamate cannot settle whether this protein is an
+      enzyme, and no causal edge is curated for it. Resolving it needs an assay, not
+      more sequence analysis.
+    evidence:
+      - reference: PMID:42146377
+        supports: PARTIAL
+        evidence_source: full_text
+        explanation: >-
+          Supplies the chemistry of the family, the catalytic glutamate and the
+          portal-triggered mechanism for the tested proteins, and the inactive human
+          paralogues that keep the question open. No cyanobacterial member was tested,
+          and the source is a preprint.
+      - reference: https://rest.uniprot.org/uniprotkb/Q31PW6.json
+        supports: PARTIAL
+        evidence_source: database
+        explanation: >-
+          Grounds the identity of the candidate, its domain interval and the Glu83
+          position through two independent estimates, pairwise conservation across 375
+          homologs and the Pfam profile HMM. Sequence analysis only. It establishes
+          that the residue is present, not that the protein is active.
+    posed_by: Claude Code
+    posed_date: '2026-10-30'
+    notes: >-
+      Open leads. Align the KpSwz sequence from the supplementary material of the
+      preprint to place Glu83 against the tested E97 directly, which would also let
+      the nodes of that graph be grounded. Inspect the companion Evangelion preprint
+      (doi:10.64898/2026.06.25.731849), which reports a putative catalytic Glu87 in a
+      plasmid-borne DUF4062 defence system. Assess whether the neighbouring
+      SNF2/RAD54-family helicase and UvrC-like endonuclease genes of Synpcc7942_0873
+      form a defence island, which was not examined. Contributed from a KBase
+      gene-annotate dashboard review (ai4curation/ai-gene-review PR 5756). Imported
+      identity, counters and seed classification are unchanged.
