@@ -26,7 +26,7 @@ SCHEMA = Path(__file__).parent / "schema" / "dufmech.yaml"
 COUNTERS = ("proteins", "matches", "proteomes", "taxa", "structures",
             "alphafold_models", "domain_architectures")
 OVERLAY_FIELDS = ("curation_status", "review_id", "curation_history", "assertions", "discussions", "datasets",
-                  "cross_corpus_links", "causal_graphs")
+                  "cross_corpus_links", "causal_graphs", "sequence_reasoning_graphs")
 
 
 class RecordError(ValueError):
@@ -126,7 +126,7 @@ def _validate_family_record(
                 raise RecordError(str(exc)) from exc
     curated = record["curation_status"] != "SEEDED" or any(
         record.get(key) for key in ("assertions", "discussions", "datasets", "cross_corpus_links",
-                                   "causal_graphs")
+                                   "causal_graphs", "sequence_reasoning_graphs")
     )
     if target == "FamilyRecord" and (curated or record.get("curation_history")):
         if not record.get("curation_history"):
@@ -151,6 +151,51 @@ def _validate_family_record(
         validate_graphs(graphs)
     except ValueError as exc:
         raise RecordError(str(exc)) from exc
+    reasoning_graphs = record.get("sequence_reasoning_graphs", [])
+    if reasoning_graphs:
+        from dufmech.sequence_reasoning import validate_region_reasoning_graphs
+
+        try:
+            validate_region_reasoning_graphs(
+                record["pfam_id"],
+                reasoning_graphs,
+                causal_graphs=graphs,
+                root=root,
+            )
+        except ValueError as exc:
+            raise RecordError(str(exc)) from exc
+    known_seq_ids = {
+        s["sequence_id"] for rg in reasoning_graphs for s in rg.get("sequences", [])
+    }
+    known_reg_ids = {
+        r["region_id"] for rg in reasoning_graphs for r in rg.get("regions", [])
+    }
+    known_claim_ids = {
+        c["claim_id"] for rg in reasoning_graphs for c in rg.get("synthesized_claims", [])
+    }
+    for assertion in assertions:
+        if assertion.get("sequence_id") and assertion["sequence_id"] not in known_seq_ids:
+            raise RecordError(
+                f"assertion {assertion['assertion_id']} references unknown sequence_id {assertion['sequence_id']!r}"
+            )
+        if assertion.get("region_id") and assertion["region_id"] not in known_reg_ids:
+            raise RecordError(
+                f"assertion {assertion['assertion_id']} references unknown region_id {assertion['region_id']!r}"
+            )
+        if assertion.get("synthesized_claim_id") and assertion["synthesized_claim_id"] not in known_claim_ids:
+            raise RecordError(
+                f"assertion {assertion['assertion_id']} references unknown synthesized_claim_id {assertion['synthesized_claim_id']!r}"
+            )
+    for cg in graphs:
+        for node in cg.get("nodes", []):
+            if node.get("sequence_id") and node["sequence_id"] not in known_seq_ids:
+                raise RecordError(
+                    f"causal node {node['node_id']} references unknown sequence_id {node['sequence_id']!r}"
+                )
+            if node.get("region_id") and node["region_id"] not in known_reg_ids:
+                raise RecordError(
+                    f"causal node {node['node_id']} references unknown region_id {node['region_id']!r}"
+                )
     claims = [*assertions, *(edge for graph in graphs for edge in graph["edges"])]
     for claim in claims:
         for evidence in claim["evidence"]:

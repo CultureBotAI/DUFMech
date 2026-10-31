@@ -152,6 +152,16 @@
         },
         "node_type": {
           "$ref": "#/$defs/CausalNodeType"
+        },
+        "region_id": {
+          "description": "Optional sequence region or residue site identifier for region-localized nodes.",
+          "pattern": "^[A-Za-z0-9_.:-]+$",
+          "type": "string"
+        },
+        "sequence_id": {
+          "description": "Optional reference sequence identifier for sequence-anchored state, activity, or perturbation nodes.",
+          "pattern": "^[A-Za-z0-9_.:-]+$",
+          "type": "string"
         }
       },
       "required": [
@@ -257,6 +267,126 @@
       ],
       "title": "ClaimEvidence",
       "type": "object"
+    },
+    "ClaimScope": {
+      "description": "",
+      "enum": [
+        "TESTED_REGION_ONLY",
+        "TESTED_CONSTRUCT",
+        "SPECIFIC_PROTEIN",
+        "CONSERVED_SUBFAMILY",
+        "FAMILY_WIDE",
+        "UNRESOLVED_SCOPE"
+      ],
+      "title": "ClaimScope",
+      "type": "string"
+    },
+    "CoordinateMapping": {
+      "additionalProperties": false,
+      "description": "Explicit mapping between two regions (e.g., construct to domain, structure to UniProt, or homolog alignment) retaining coverage, gaps, and uncertainty.",
+      "properties": {
+        "alignment_gaps": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "equivalence_status": {
+          "$ref": "#/$defs/MappingEquivalenceStatus"
+        },
+        "mapping_id": {
+          "pattern": "^[A-Za-z0-9_.:-]+$",
+          "type": "string"
+        },
+        "mapping_kind": {
+          "$ref": "#/$defs/CoordinateMappingKind"
+        },
+        "mapping_uncertainty": {
+          "description": "Explicit boundary uncertainty, insertion codes, construct tags, or alignment ambiguity.",
+          "type": "string"
+        },
+        "overlap_residues": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "provenance_note": {
+          "type": "string"
+        },
+        "residue_correspondences": {
+          "items": {
+            "$ref": "#/$defs/ResidueCorrespondence"
+          },
+          "type": "array"
+        },
+        "source_coverage": {
+          "maximum": 1.0,
+          "minimum": 0.0,
+          "type": "number"
+        },
+        "source_region_id": {
+          "pattern": "^[A-Za-z0-9_.:-]+$",
+          "type": "string"
+        },
+        "target_coverage": {
+          "maximum": 1.0,
+          "minimum": 0.0,
+          "type": "number"
+        },
+        "target_region_id": {
+          "pattern": "^[A-Za-z0-9_.:-]+$",
+          "type": "string"
+        }
+      },
+      "required": [
+        "mapping_id",
+        "source_region_id",
+        "target_region_id",
+        "mapping_kind",
+        "equivalence_status",
+        "provenance_note"
+      ],
+      "title": "CoordinateMapping",
+      "type": "object"
+    },
+    "CoordinateMappingKind": {
+      "description": "",
+      "enum": [
+        "CONSTRUCT_TO_REFERENCE",
+        "DOMAIN_TO_CONSTRUCT",
+        "STRUCTURE_TO_UNIPROT",
+        "ISOFORM_TO_CANONICAL",
+        "HOMOLOG_ALIGNMENT",
+        "PROFILE_TO_SEQUENCE",
+        "MUTATION_TO_DOMAIN"
+      ],
+      "title": "CoordinateMappingKind",
+      "type": "string"
+    },
+    "CoordinateStatus": {
+      "description": "",
+      "enum": [
+        "EXACT",
+        "UNCERTAIN_BOUNDARY",
+        "DISCONTINUOUS",
+        "WHOLE_PROTEIN_UNLOCALIZED",
+        "UNKNOWN_LOCALIZATION"
+      ],
+      "title": "CoordinateStatus",
+      "type": "string"
+    },
+    "CoordinateSystem": {
+      "description": "",
+      "enum": [
+        "UNIPROT_CANONICAL",
+        "UNIPROT_ISOFORM",
+        "CONSTRUCT_NUMBERING",
+        "MATURE_PEPTIDE",
+        "PDB_SEQRES",
+        "PDB_AUTHOR",
+        "HMM_PROFILE",
+        "ALIGNMENT_COLUMN",
+        "UNSPECIFIED"
+      ],
+      "title": "CoordinateSystem",
+      "type": "string"
     },
     "CrossCorpusLink": {
       "additionalProperties": false,
@@ -574,6 +704,48 @@
       "title": "DiscussionStatusEnum",
       "type": "string"
     },
+    "EvidenceGroup": {
+      "additionalProperties": false,
+      "description": "Deduplicated group of compatible observations sharing a primary experiment or prediction source so mirrored records are not counted as independent confirmation.",
+      "properties": {
+        "deduplication_rationale": {
+          "description": "Why member observations represent a single independent evidence unit or distinct method.",
+          "type": "string"
+        },
+        "evidence_kind": {
+          "$ref": "#/$defs/EvidenceKind"
+        },
+        "group_id": {
+          "pattern": "^[A-Za-z0-9_.:-]+$",
+          "type": "string"
+        },
+        "observation_ids": {
+          "items": {
+            "pattern": "^[A-Za-z0-9_.:-]+$",
+            "type": "string"
+          },
+          "minItems": 1,
+          "type": "array"
+        },
+        "polarity": {
+          "$ref": "#/$defs/ObservationPolarity"
+        },
+        "primary_experiment_key": {
+          "pattern": "^[A-Za-z0-9_.:/-]+$",
+          "type": "string"
+        }
+      },
+      "required": [
+        "group_id",
+        "primary_experiment_key",
+        "evidence_kind",
+        "polarity",
+        "observation_ids",
+        "deduplication_rationale"
+      ],
+      "title": "EvidenceGroup",
+      "type": "object"
+    },
     "EvidenceKind": {
       "description": "",
       "enum": [
@@ -668,6 +840,13 @@
         "review_id": {
           "pattern": "^(reports/yaml_record_review/[A-Za-z0-9_.-]+[.]md|reviews/structured/[A-Za-z0-9][A-Za-z0-9._-]{0,159}/review[.]yaml)$",
           "type": "string"
+        },
+        "sequence_reasoning_graphs": {
+          "description": "Sequence-coordinate-aware reasoning graphs linking reference sequences, explicit regions, coordinate mappings, deduplicated observations, and evidence-graded functional claims.",
+          "items": {
+            "$ref": "#/$defs/RegionReasoningGraph"
+          },
+          "type": "array"
         }
       },
       "required": [
@@ -765,6 +944,13 @@
         "seed_status": {
           "$ref": "#/$defs/SeedStatus"
         },
+        "sequence_reasoning_graphs": {
+          "description": "Sequence-coordinate-aware reasoning graphs linking reference sequences, explicit regions, coordinate mappings, deduplicated observations, and evidence-graded functional claims.",
+          "items": {
+            "$ref": "#/$defs/RegionReasoningGraph"
+          },
+          "type": "array"
+        },
         "short_name": {
           "type": "string"
         },
@@ -787,6 +973,23 @@
       "title": "FamilyRecord",
       "type": "object"
     },
+    "FunctionAspect": {
+      "description": "",
+      "enum": [
+        "CATALYTIC_ACTIVITY",
+        "SUBSTRATE_SPECIFICITY",
+        "COFACTOR_BINDING",
+        "LIGAND_BINDING",
+        "PROTEIN_INTERACTION",
+        "SUBCELLULAR_LOCALIZATION",
+        "PROCESS_CONTRIBUTION",
+        "STRUCTURAL_ROLE",
+        "ARCHITECTURAL_COOCCURRENCE",
+        "UNKNOWN_FUNCTION"
+      ],
+      "title": "FunctionAspect",
+      "type": "string"
+    },
     "FunctionalAssertion": {
       "additionalProperties": false,
       "description": "Scoped experimental or computational claim, not implied by a DUF name.",
@@ -805,11 +1008,26 @@
         "evidence_kind": {
           "$ref": "#/$defs/EvidenceKind"
         },
+        "region_id": {
+          "description": "Optional region identifier when this assertion is anchored to an explicit sequence interval or site.",
+          "pattern": "^[A-Za-z0-9_.:-]+$",
+          "type": "string"
+        },
         "scope": {
           "description": "Exact family/subfamily/protein scope and limits of generalization.",
           "type": "string"
         },
+        "sequence_id": {
+          "description": "Optional reference sequence identifier when this assertion is anchored to a specific sequence in a sequence reasoning graph.",
+          "pattern": "^[A-Za-z0-9_.:-]+$",
+          "type": "string"
+        },
         "statement": {
+          "type": "string"
+        },
+        "synthesized_claim_id": {
+          "description": "Optional link to a SynthesizedClaim in a RegionReasoningGraph.",
+          "pattern": "^[A-Za-z0-9_.:-]+$",
           "type": "string"
         }
       },
@@ -822,6 +1040,49 @@
       ],
       "title": "FunctionalAssertion",
       "type": "object"
+    },
+    "MappingEquivalenceStatus": {
+      "description": "",
+      "enum": [
+        "EXACT_MATCH",
+        "CONSTRUCT_CONTAINS_DOMAIN",
+        "DOMAIN_CONTAINS_REGION",
+        "RESIDUE_INSIDE_REGION",
+        "PARTIAL_OVERLAP_NOT_EQUIVALENT",
+        "DISJOINT_OUTSIDE_REGION",
+        "DISCONTINUOUS_MAPPING",
+        "SEQUENCE_VERSION_MISMATCH",
+        "UNRESOLVED_MAPPING"
+      ],
+      "title": "MappingEquivalenceStatus",
+      "type": "string"
+    },
+    "ObservationPolarity": {
+      "description": "",
+      "enum": [
+        "POSITIVE",
+        "NEGATIVE",
+        "NEUTRAL_OR_UNCHANGED"
+      ],
+      "title": "ObservationPolarity",
+      "type": "string"
+    },
+    "ObservationSourceKind": {
+      "description": "",
+      "enum": [
+        "LITERATURE_ASSAY",
+        "PDBE_KB",
+        "INTERPRO_PFAM",
+        "CDSEARCH",
+        "CATH_FUNFAM",
+        "NCBIFAM",
+        "QUICKGO",
+        "RHEA",
+        "ALPHAFOLD",
+        "CURATED_ANNOTATION"
+      ],
+      "title": "ObservationSourceKind",
+      "type": "string"
     },
     "ProposedExperiment": {
       "additionalProperties": false,
@@ -878,6 +1139,337 @@
       "title": "ProposedExperiment",
       "type": "object"
     },
+    "ReasoningEdge": {
+      "additionalProperties": false,
+      "description": "Typed edge in a RegionReasoningGraph explicitly distinguishing coordinate mappings, evidence support/contradiction, and homology inferences from biological causation.",
+      "properties": {
+        "edge_category": {
+          "$ref": "#/$defs/ReasoningEdgeCategory"
+        },
+        "edge_id": {
+          "pattern": "^[A-Za-z0-9_.:-]+$",
+          "type": "string"
+        },
+        "evidence_kind": {
+          "$ref": "#/$defs/EvidenceKind"
+        },
+        "object": {
+          "pattern": "^[A-Za-z0-9_.:-]+$",
+          "type": "string"
+        },
+        "predicate": {
+          "$ref": "#/$defs/ReasoningPredicate"
+        },
+        "rationale": {
+          "type": "string"
+        },
+        "subject": {
+          "pattern": "^[A-Za-z0-9_.:-]+$",
+          "type": "string"
+        },
+        "support": {
+          "$ref": "#/$defs/CausalSupport"
+        }
+      },
+      "required": [
+        "edge_id",
+        "subject",
+        "predicate",
+        "object",
+        "edge_category",
+        "support",
+        "evidence_kind",
+        "rationale"
+      ],
+      "title": "ReasoningEdge",
+      "type": "object"
+    },
+    "ReasoningEdgeCategory": {
+      "description": "",
+      "enum": [
+        "EVIDENCE_LINK",
+        "COORDINATE_MAPPING_LINK",
+        "INFERENCE_LINK",
+        "CAUSAL_BIOLOGICAL_LINK"
+      ],
+      "title": "ReasoningEdgeCategory",
+      "type": "string"
+    },
+    "ReasoningPredicate": {
+      "description": "",
+      "enum": [
+        "anchored_to_sequence",
+        "maps_to_region",
+        "observed_on_region",
+        "grouped_into_evidence_unit",
+        "supports_claim",
+        "contradicts_claim",
+        "constrains_claim_scope",
+        "inferred_from_homolog_region",
+        "cooccurs_with_domain",
+        "enables_biological_activity",
+        "produces_metabolite",
+        "degrades_substrate",
+        "required_for_process"
+      ],
+      "title": "ReasoningPredicate",
+      "type": "string"
+    },
+    "RegionKind": {
+      "description": "",
+      "enum": [
+        "DOMAIN_HIT",
+        "DISCONTINUOUS_DOMAIN",
+        "EXPERIMENTAL_CONSTRUCT",
+        "CATALYTIC_SITE",
+        "BINDING_SITE",
+        "MUTATION_SITE",
+        "STRUCTURAL_OBSERVATION_REGION",
+        "ADJACENT_ARCHITECTURAL_DOMAIN",
+        "FULL_LENGTH_PROTEIN",
+        "UNKNOWN_LOCALIZATION"
+      ],
+      "title": "RegionKind",
+      "type": "string"
+    },
+    "RegionObservation": {
+      "additionalProperties": false,
+      "description": "Standardized experimental observation, curated annotation, or computational prediction anchored to a sequence region, separating observation from interpretation.",
+      "properties": {
+        "assay_conditions": {
+          "description": "Substrate, cofactor, buffer, temperature, partner protein, or in vivo context.",
+          "type": "string"
+        },
+        "derived_from_observation_ids": {
+          "items": {
+            "pattern": "^[A-Za-z0-9_.:-]+$",
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "evidence": {
+          "items": {
+            "$ref": "#/$defs/ClaimEvidence"
+          },
+          "type": "array"
+        },
+        "evidence_kind": {
+          "$ref": "#/$defs/EvidenceKind"
+        },
+        "interpretation": {
+          "description": "Proposed functional meaning derived from the observation.",
+          "type": "string"
+        },
+        "limitations": {
+          "description": "Assay scope limits, unlocalized whole-protein perturbation, or model confidence limits.",
+          "type": "string"
+        },
+        "method": {
+          "description": "Experimental assay, structural determination method, or computational model/database.",
+          "type": "string"
+        },
+        "mutation_region_ids": {
+          "items": {
+            "pattern": "^[A-Za-z0-9_.:-]+$",
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "observation_id": {
+          "pattern": "^[A-Za-z0-9_.:-]+$",
+          "type": "string"
+        },
+        "observed_effect": {
+          "description": "Direct empirical measurement or computational hit output, kept distinct from functional interpretation.",
+          "type": "string"
+        },
+        "polarity": {
+          "$ref": "#/$defs/ObservationPolarity"
+        },
+        "primary_experiment_key": {
+          "description": "Canonical key identifying the underlying experiment or primary prediction run so mirrored records or repeated reports are grouped rather than double-counted.",
+          "pattern": "^[A-Za-z0-9_.:/-]+$",
+          "type": "string"
+        },
+        "raw_score": {
+          "type": "number"
+        },
+        "region_id": {
+          "pattern": "^[A-Za-z0-9_.:-]+$",
+          "type": "string"
+        },
+        "score_metric": {
+          "$ref": "#/$defs/ScoreMetricKind"
+        },
+        "sequence_id": {
+          "pattern": "^[A-Za-z0-9_.:-]+$",
+          "type": "string"
+        },
+        "source_kind": {
+          "$ref": "#/$defs/ObservationSourceKind"
+        },
+        "tested_construct_region_id": {
+          "pattern": "^[A-Za-z0-9_.:-]+$",
+          "type": "string"
+        }
+      },
+      "required": [
+        "observation_id",
+        "region_id",
+        "sequence_id",
+        "evidence_kind",
+        "source_kind",
+        "method",
+        "observed_effect",
+        "interpretation",
+        "polarity",
+        "primary_experiment_key"
+      ],
+      "title": "RegionObservation",
+      "type": "object"
+    },
+    "RegionReasoningGraph": {
+      "additionalProperties": false,
+      "description": "Sequence-coordinate-aware reasoning graph connecting reference sequences, explicit 1-based inclusive regions, coordinate mappings, deduplicated observations, and evidence-graded functional claims while separating epistemic evidence links from biological causation.",
+      "properties": {
+        "causal_graph_refs": {
+          "description": "Optional references to CausalGraph.graph_id entries representing biological causal mechanisms.",
+          "items": {
+            "pattern": "^[A-Za-z0-9_-]+$",
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "coordinate_mappings": {
+          "items": {
+            "$ref": "#/$defs/CoordinateMapping"
+          },
+          "type": "array"
+        },
+        "description": {
+          "description": "Summary of the reasoning scope, tested sequences, and unresolved questions.",
+          "type": "string"
+        },
+        "evidence_groups": {
+          "items": {
+            "$ref": "#/$defs/EvidenceGroup"
+          },
+          "type": "array"
+        },
+        "graph_id": {
+          "pattern": "^[A-Za-z0-9_-]+$",
+          "type": "string"
+        },
+        "observations": {
+          "items": {
+            "$ref": "#/$defs/RegionObservation"
+          },
+          "minItems": 1,
+          "type": "array"
+        },
+        "pfam_id": {
+          "pattern": "^PF[0-9]{5}$",
+          "type": "string"
+        },
+        "reasoning_edges": {
+          "items": {
+            "$ref": "#/$defs/ReasoningEdge"
+          },
+          "minItems": 1,
+          "type": "array"
+        },
+        "regions": {
+          "items": {
+            "$ref": "#/$defs/SequenceRegion"
+          },
+          "minItems": 1,
+          "type": "array"
+        },
+        "sequences": {
+          "items": {
+            "$ref": "#/$defs/SequenceIdentity"
+          },
+          "minItems": 1,
+          "type": "array"
+        },
+        "synthesized_claims": {
+          "items": {
+            "$ref": "#/$defs/SynthesizedClaim"
+          },
+          "minItems": 1,
+          "type": "array"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "graph_id",
+        "pfam_id",
+        "title",
+        "sequences",
+        "regions",
+        "observations",
+        "synthesized_claims",
+        "reasoning_edges"
+      ],
+      "title": "RegionReasoningGraph",
+      "type": "object"
+    },
+    "ResidueCorrespondence": {
+      "additionalProperties": false,
+      "description": "Explicit residue-level correspondence between two coordinate systems or homologous sequences.",
+      "properties": {
+        "mutation_substitution": {
+          "pattern": "^[A-Z][0-9]+[A-Z*]$",
+          "type": "string"
+        },
+        "note": {
+          "description": "Context on conservation, catalytic role, or engineered substitution.",
+          "type": "string"
+        },
+        "pdb_insertion_code": {
+          "pattern": "^[A-Za-z0-9]$",
+          "type": "string"
+        },
+        "source_position": {
+          "minimum": 1,
+          "type": "integer"
+        },
+        "source_residue": {
+          "pattern": "^[A-Z]$",
+          "type": "string"
+        },
+        "target_position": {
+          "minimum": 1,
+          "type": "integer"
+        },
+        "target_residue": {
+          "pattern": "^[A-Z]$",
+          "type": "string"
+        }
+      },
+      "required": [
+        "source_position",
+        "target_position"
+      ],
+      "title": "ResidueCorrespondence",
+      "type": "object"
+    },
+    "ScoreMetricKind": {
+      "description": "",
+      "enum": [
+        "E_VALUE",
+        "BITSCORE",
+        "CATH_CONFIDENCE",
+        "PLDDT",
+        "KM_MM",
+        "KCAT_PER_S",
+        "QUALITATIVE"
+      ],
+      "title": "ScoreMetricKind",
+      "type": "string"
+    },
     "SeedStatus": {
       "description": "",
       "enum": [
@@ -888,6 +1480,156 @@
       ],
       "title": "SeedStatus",
       "type": "string"
+    },
+    "SequenceIdentity": {
+      "additionalProperties": false,
+      "description": "Identified reference protein sequence with explicit version or SHA-256 digest and isoform context for coordinate validation.",
+      "properties": {
+        "isoform": {
+          "description": "Explicit UniProt isoform identifier when non-canonical or isoform-pinned.",
+          "pattern": "^([OPQ][0-9][A-Z0-9]{3}[0-9]|[A-NR-Z][0-9]([A-Z][A-Z0-9]{2}[0-9]){1,2})-[0-9]+$",
+          "type": "string"
+        },
+        "organism": {
+          "description": "Source organism scientific name.",
+          "type": "string"
+        },
+        "sequence_id": {
+          "pattern": "^[A-Za-z0-9_.:-]+$",
+          "type": "string"
+        },
+        "sequence_length": {
+          "minimum": 1,
+          "type": "integer"
+        },
+        "sequence_md5": {
+          "pattern": "^[a-f0-9]{32}$",
+          "type": "string"
+        },
+        "sequence_sha256": {
+          "pattern": "^[a-f0-9]{64}$",
+          "type": "string"
+        },
+        "sequence_version": {
+          "description": "UniProt sequence version integer when known.",
+          "minimum": 1,
+          "type": "integer"
+        },
+        "source_url": {
+          "format": "uri",
+          "type": "string"
+        },
+        "taxon_id": {
+          "pattern": "^NCBITaxon:[0-9]+$",
+          "type": "string"
+        },
+        "uniprot_accession": {
+          "pattern": "^([OPQ][0-9][A-Z0-9]{3}[0-9]|[A-NR-Z][0-9]([A-Z][A-Z0-9]{2}[0-9]){1,2})$",
+          "type": "string"
+        },
+        "uniprot_release": {
+          "description": "Upstream UniProt release or snapshot version from which the sequence was captured.",
+          "type": "string"
+        }
+      },
+      "required": [
+        "sequence_id",
+        "uniprot_accession",
+        "sequence_length",
+        "sequence_sha256"
+      ],
+      "title": "SequenceIdentity",
+      "type": "object"
+    },
+    "SequenceInterval": {
+      "additionalProperties": false,
+      "description": "Canonical 1-based inclusive interval [start, end] on an identified reference sequence.",
+      "properties": {
+        "end": {
+          "minimum": 1,
+          "type": "integer"
+        },
+        "end_uncertain": {
+          "type": "boolean"
+        },
+        "residue_identity": {
+          "description": "Expected one-letter amino-acid sequence or residue at this interval when verified.",
+          "pattern": "^[A-Z]+$",
+          "type": "string"
+        },
+        "start": {
+          "minimum": 1,
+          "type": "integer"
+        },
+        "start_uncertain": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "start",
+        "end"
+      ],
+      "title": "SequenceInterval",
+      "type": "object"
+    },
+    "SequenceRegion": {
+      "additionalProperties": false,
+      "description": "An explicit contiguous or discontinuous region, site, construct, or unlocalized whole-protein span on an identified sequence.",
+      "properties": {
+        "conversion_provenance": {
+          "description": "How source coordinates (e.g., construct numbering, PDB author numbering, or HMM profile states) were converted.",
+          "type": "string"
+        },
+        "coordinate_status": {
+          "$ref": "#/$defs/CoordinateStatus"
+        },
+        "interpro_id": {
+          "pattern": "^InterPro:IPR[0-9]{6}$",
+          "type": "string"
+        },
+        "intervals": {
+          "description": "Canonical 1-based inclusive intervals on the reference sequence; ordered and non-overlapping for localized regions, or empty when coordinate_status is UNKNOWN_LOCALIZATION.",
+          "items": {
+            "$ref": "#/$defs/SequenceInterval"
+          },
+          "type": "array"
+        },
+        "label": {
+          "type": "string"
+        },
+        "pfam_id": {
+          "pattern": "^PF[0-9]{5}$",
+          "type": "string"
+        },
+        "region_id": {
+          "pattern": "^[A-Za-z0-9_.:-]+$",
+          "type": "string"
+        },
+        "region_kind": {
+          "$ref": "#/$defs/RegionKind"
+        },
+        "sequence_id": {
+          "pattern": "^[A-Za-z0-9_.:-]+$",
+          "type": "string"
+        },
+        "source_coordinate_system": {
+          "$ref": "#/$defs/CoordinateSystem"
+        },
+        "source_coordinates_text": {
+          "description": "Original coordinates as reported in the source before conversion to 1-based reference numbering.",
+          "type": "string"
+        }
+      },
+      "required": [
+        "region_id",
+        "sequence_id",
+        "label",
+        "region_kind",
+        "coordinate_status",
+        "source_coordinate_system"
+      ],
+      "title": "SequenceRegion",
+      "type": "object"
     },
     "SnapshotProvenance": {
       "additionalProperties": false,
@@ -970,6 +1712,122 @@
         "reference"
       ],
       "title": "SupportingReference",
+      "type": "object"
+    },
+    "SynthesisStatus": {
+      "description": "",
+      "enum": [
+        "EXPERIMENTALLY_DEMONSTRATED",
+        "SUPPORTED_INFERENCE",
+        "COMPUTATIONAL_HYPOTHESIS",
+        "CONFLICTING_UNRESOLVED",
+        "INSUFFICIENT_EVIDENCE",
+        "NEGATIVE_EVIDENCE_ONLY"
+      ],
+      "title": "SynthesisStatus",
+      "type": "string"
+    },
+    "SynthesizedClaim": {
+      "additionalProperties": false,
+      "description": "Evidence-graded functional claim or aspect of function at supported specificity and sequence scope, retaining supporting and contradicting evidence groups.",
+      "properties": {
+        "claim_id": {
+          "pattern": "^[A-Za-z0-9_.:-]+$",
+          "type": "string"
+        },
+        "claimed_scope": {
+          "$ref": "#/$defs/ClaimScope"
+        },
+        "contradicting_evidence_groups": {
+          "items": {
+            "pattern": "^[A-Za-z0-9_.:-]+$",
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "contradicting_observation_ids": {
+          "items": {
+            "pattern": "^[A-Za-z0-9_.:-]+$",
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "discriminating_experiments": {
+          "description": "Specific experiments that would resolve remaining ambiguity or test transfer.",
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "function_aspect": {
+          "$ref": "#/$defs/FunctionAspect"
+        },
+        "label": {
+          "type": "string"
+        },
+        "mapping_ids": {
+          "items": {
+            "pattern": "^[A-Za-z0-9_.:-]+$",
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "ontology_term_id": {
+          "pattern": "^(GO:[0-9]{7}|Rhea:[0-9]+|EC:[0-9]+(\\.[0-9-]+){0,3}|CHEBI:[0-9]+|Pfam:PF[0-9]{5}|InterPro:IPR[0-9]{6}|UniProtKB:[A-Z0-9-]+)$",
+          "type": "string"
+        },
+        "ontology_term_label": {
+          "description": "Canonical label of the ontology term when ontology_term_id is provided.",
+          "type": "string"
+        },
+        "scope_rationale": {
+          "description": "Why the claimed scope is supported at this specificity and not broader.",
+          "type": "string"
+        },
+        "scope_transfer_blocks": {
+          "description": "Explicit blocks preventing silent transfer to full protein, paralogues, or whole family.",
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "supporting_evidence_groups": {
+          "items": {
+            "pattern": "^[A-Za-z0-9_.:-]+$",
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "supporting_observation_ids": {
+          "items": {
+            "pattern": "^[A-Za-z0-9_.:-]+$",
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "synthesis_explanation": {
+          "description": "How independent evidence groups, coordinate mappings, and contradictions were synthesized.",
+          "type": "string"
+        },
+        "synthesis_status": {
+          "$ref": "#/$defs/SynthesisStatus"
+        },
+        "target_region_id": {
+          "pattern": "^[A-Za-z0-9_.:-]+$",
+          "type": "string"
+        }
+      },
+      "required": [
+        "claim_id",
+        "label",
+        "function_aspect",
+        "target_region_id",
+        "claimed_scope",
+        "synthesis_status",
+        "scope_rationale",
+        "synthesis_explanation"
+      ],
+      "title": "SynthesizedClaim",
       "type": "object"
     }
   },
@@ -1062,6 +1920,13 @@
     },
     "seed_status": {
       "$ref": "#/$defs/SeedStatus"
+    },
+    "sequence_reasoning_graphs": {
+      "description": "Sequence-coordinate-aware reasoning graphs linking reference sequences, explicit regions, coordinate mappings, deduplicated observations, and evidence-graded functional claims.",
+      "items": {
+        "$ref": "#/$defs/RegionReasoningGraph"
+      },
+      "type": "array"
     },
     "short_name": {
       "type": "string"
