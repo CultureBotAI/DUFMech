@@ -68,6 +68,11 @@ records-check:
 causal-graphs *args:
     uv run --locked python -m dufmech.causal_graphs "$@"
 
+# Inspect, validate, and query sequence-coordinate reasoning graphs.
+[positional-arguments]
+sequence-reasoning *args:
+    uv run --locked python -m dufmech.sequence_reasoning "$@"
+
 # Shared fleet interfaces backed by the native closed-schema pipeline.
 validate-data: records-check
 

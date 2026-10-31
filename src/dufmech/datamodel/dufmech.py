@@ -52,7 +52,7 @@ from rdflib import (
     URIRef
 )
 
-from linkml_runtime.linkml_model.types import Boolean, Date, Integer, String, Uri
+from linkml_runtime.linkml_model.types import Boolean, Date, Float, Integer, String, Uri
 from linkml_runtime.utils.metamodelcore import Bool, URI, XSDDate
 
 metamodel_version = "1.11.0"
@@ -107,6 +107,7 @@ class FamilyRecord(YAMLRoot):
     discussions: Optional[Union[Union[dict, "Discussion"], list[Union[dict, "Discussion"]]]] = empty_list()
     datasets: Optional[Union[Union[dict, "Dataset"], list[Union[dict, "Dataset"]]]] = empty_list()
     cross_corpus_links: Optional[Union[Union[dict, "CrossCorpusLink"], list[Union[dict, "CrossCorpusLink"]]]] = empty_list()
+    sequence_reasoning_graphs: Optional[Union[Union[dict, "RegionReasoningGraph"], list[Union[dict, "RegionReasoningGraph"]]]] = empty_list()
 
     def __post_init__(self, *_: str, **kwargs: Any):
         if self._is_empty(self.id):
@@ -186,6 +187,8 @@ class FamilyRecord(YAMLRoot):
 
         self._normalize_inlined_as_list(slot_name="cross_corpus_links", slot_type=CrossCorpusLink, key_name="corpus", keyed=False)
 
+        self._normalize_inlined_as_list(slot_name="sequence_reasoning_graphs", slot_type=RegionReasoningGraph, key_name="graph_id", keyed=False)
+
         super().__post_init__(**kwargs)
 
 
@@ -210,6 +213,7 @@ class FamilyCuration(YAMLRoot):
     discussions: Optional[Union[Union[dict, "Discussion"], list[Union[dict, "Discussion"]]]] = empty_list()
     datasets: Optional[Union[Union[dict, "Dataset"], list[Union[dict, "Dataset"]]]] = empty_list()
     cross_corpus_links: Optional[Union[Union[dict, "CrossCorpusLink"], list[Union[dict, "CrossCorpusLink"]]]] = empty_list()
+    sequence_reasoning_graphs: Optional[Union[Union[dict, "RegionReasoningGraph"], list[Union[dict, "RegionReasoningGraph"]]]] = empty_list()
 
     def __post_init__(self, *_: str, **kwargs: Any):
         if self._is_empty(self.pfam_id):
@@ -239,6 +243,8 @@ class FamilyCuration(YAMLRoot):
         self.datasets = [v if isinstance(v, Dataset) else Dataset(**as_dict(v)) for v in self.datasets]
 
         self._normalize_inlined_as_list(slot_name="cross_corpus_links", slot_type=CrossCorpusLink, key_name="corpus", keyed=False)
+
+        self._normalize_inlined_as_list(slot_name="sequence_reasoning_graphs", slot_type=RegionReasoningGraph, key_name="graph_id", keyed=False)
 
         super().__post_init__(**kwargs)
 
@@ -409,6 +415,9 @@ class FunctionalAssertion(YAMLRoot):
     evidence_kind: Union[str, "EvidenceKind"] = None
     scope: str = None
     evidence: Union[Union[dict, "ClaimEvidence"], list[Union[dict, "ClaimEvidence"]]] = None
+    sequence_id: Optional[str] = None
+    region_id: Optional[str] = None
+    synthesized_claim_id: Optional[str] = None
 
     def __post_init__(self, *_: str, **kwargs: Any):
         if self._is_empty(self.assertion_id):
@@ -434,6 +443,15 @@ class FunctionalAssertion(YAMLRoot):
         if self._is_empty(self.evidence):
             self.MissingRequiredField("evidence")
         self._normalize_inlined_as_list(slot_name="evidence", slot_type=ClaimEvidence, key_name="reference", keyed=False)
+
+        if self.sequence_id is not None and not isinstance(self.sequence_id, str):
+            self.sequence_id = str(self.sequence_id)
+
+        if self.region_id is not None and not isinstance(self.region_id, str):
+            self.region_id = str(self.region_id)
+
+        if self.synthesized_claim_id is not None and not isinstance(self.synthesized_claim_id, str):
+            self.synthesized_claim_id = str(self.synthesized_claim_id)
 
         super().__post_init__(**kwargs)
 
@@ -528,6 +546,8 @@ class CausalNode(YAMLRoot):
     label: str = None
     node_type: Union[str, "CausalNodeType"] = None
     grounding: Optional[Union[str, list[str]]] = empty_list()
+    sequence_id: Optional[str] = None
+    region_id: Optional[str] = None
 
     def __post_init__(self, *_: str, **kwargs: Any):
         if self._is_empty(self.node_id):
@@ -548,6 +568,12 @@ class CausalNode(YAMLRoot):
         if not isinstance(self.grounding, list):
             self.grounding = [self.grounding] if self.grounding is not None else []
         self.grounding = [v if isinstance(v, str) else str(v) for v in self.grounding]
+
+        if self.sequence_id is not None and not isinstance(self.sequence_id, str):
+            self.sequence_id = str(self.sequence_id)
+
+        if self.region_id is not None and not isinstance(self.region_id, str):
+            self.region_id = str(self.region_id)
 
         super().__post_init__(**kwargs)
 
@@ -671,6 +697,734 @@ class ClaimEvidence(YAMLRoot):
             self.MissingRequiredField("cache_sha256")
         if not isinstance(self.cache_sha256, str):
             self.cache_sha256 = str(self.cache_sha256)
+
+        super().__post_init__(**kwargs)
+
+
+@dataclass(repr=False)
+class RegionReasoningGraph(YAMLRoot):
+    """
+    Sequence-coordinate-aware reasoning graph connecting reference sequences, explicit 1-based inclusive regions,
+    coordinate mappings, deduplicated observations, and evidence-graded functional claims while separating epistemic
+    evidence links from biological causation.
+    """
+    _inherited_slots: ClassVar[list[str]] = []
+
+    class_class_uri: ClassVar[URIRef] = DUFMECH["RegionReasoningGraph"]
+    class_class_curie: ClassVar[str] = "dufmech:RegionReasoningGraph"
+    class_name: ClassVar[str] = "RegionReasoningGraph"
+    class_model_uri: ClassVar[URIRef] = DUFMECH.RegionReasoningGraph
+
+    graph_id: str = None
+    pfam_id: str = None
+    title: str = None
+    sequences: Union[Union[dict, "SequenceIdentity"], list[Union[dict, "SequenceIdentity"]]] = None
+    regions: Union[Union[dict, "SequenceRegion"], list[Union[dict, "SequenceRegion"]]] = None
+    observations: Union[Union[dict, "RegionObservation"], list[Union[dict, "RegionObservation"]]] = None
+    synthesized_claims: Union[Union[dict, "SynthesizedClaim"], list[Union[dict, "SynthesizedClaim"]]] = None
+    reasoning_edges: Union[Union[dict, "ReasoningEdge"], list[Union[dict, "ReasoningEdge"]]] = None
+    description: Optional[str] = None
+    coordinate_mappings: Optional[Union[Union[dict, "CoordinateMapping"], list[Union[dict, "CoordinateMapping"]]]] = empty_list()
+    evidence_groups: Optional[Union[Union[dict, "EvidenceGroup"], list[Union[dict, "EvidenceGroup"]]]] = empty_list()
+    causal_graph_refs: Optional[Union[str, list[str]]] = empty_list()
+
+    def __post_init__(self, *_: str, **kwargs: Any):
+        if self._is_empty(self.graph_id):
+            self.MissingRequiredField("graph_id")
+        if not isinstance(self.graph_id, str):
+            self.graph_id = str(self.graph_id)
+
+        if self._is_empty(self.pfam_id):
+            self.MissingRequiredField("pfam_id")
+        if not isinstance(self.pfam_id, str):
+            self.pfam_id = str(self.pfam_id)
+
+        if self._is_empty(self.title):
+            self.MissingRequiredField("title")
+        if not isinstance(self.title, str):
+            self.title = str(self.title)
+
+        if self._is_empty(self.sequences):
+            self.MissingRequiredField("sequences")
+        self._normalize_inlined_as_list(slot_name="sequences", slot_type=SequenceIdentity, key_name="sequence_id", keyed=False)
+
+        if self._is_empty(self.regions):
+            self.MissingRequiredField("regions")
+        self._normalize_inlined_as_list(slot_name="regions", slot_type=SequenceRegion, key_name="region_id", keyed=False)
+
+        if self._is_empty(self.observations):
+            self.MissingRequiredField("observations")
+        self._normalize_inlined_as_list(slot_name="observations", slot_type=RegionObservation, key_name="observation_id", keyed=False)
+
+        if self._is_empty(self.synthesized_claims):
+            self.MissingRequiredField("synthesized_claims")
+        self._normalize_inlined_as_list(slot_name="synthesized_claims", slot_type=SynthesizedClaim, key_name="claim_id", keyed=False)
+
+        if self._is_empty(self.reasoning_edges):
+            self.MissingRequiredField("reasoning_edges")
+        self._normalize_inlined_as_list(slot_name="reasoning_edges", slot_type=ReasoningEdge, key_name="edge_id", keyed=False)
+
+        if self.description is not None and not isinstance(self.description, str):
+            self.description = str(self.description)
+
+        self._normalize_inlined_as_list(slot_name="coordinate_mappings", slot_type=CoordinateMapping, key_name="mapping_id", keyed=False)
+
+        self._normalize_inlined_as_list(slot_name="evidence_groups", slot_type=EvidenceGroup, key_name="group_id", keyed=False)
+
+        if not isinstance(self.causal_graph_refs, list):
+            self.causal_graph_refs = [self.causal_graph_refs] if self.causal_graph_refs is not None else []
+        self.causal_graph_refs = [v if isinstance(v, str) else str(v) for v in self.causal_graph_refs]
+
+        super().__post_init__(**kwargs)
+
+
+@dataclass(repr=False)
+class SequenceIdentity(YAMLRoot):
+    """
+    Identified reference protein sequence with explicit version or SHA-256 digest and isoform context for coordinate
+    validation.
+    """
+    _inherited_slots: ClassVar[list[str]] = []
+
+    class_class_uri: ClassVar[URIRef] = DUFMECH["SequenceIdentity"]
+    class_class_curie: ClassVar[str] = "dufmech:SequenceIdentity"
+    class_name: ClassVar[str] = "SequenceIdentity"
+    class_model_uri: ClassVar[URIRef] = DUFMECH.SequenceIdentity
+
+    sequence_id: str = None
+    uniprot_accession: str = None
+    sequence_length: int = None
+    sequence_sha256: str = None
+    isoform: Optional[str] = None
+    sequence_version: Optional[int] = None
+    sequence_md5: Optional[str] = None
+    taxon_id: Optional[str] = None
+    organism: Optional[str] = None
+    uniprot_release: Optional[str] = None
+    source_url: Optional[Union[str, URI]] = None
+
+    def __post_init__(self, *_: str, **kwargs: Any):
+        if self._is_empty(self.sequence_id):
+            self.MissingRequiredField("sequence_id")
+        if not isinstance(self.sequence_id, str):
+            self.sequence_id = str(self.sequence_id)
+
+        if self._is_empty(self.uniprot_accession):
+            self.MissingRequiredField("uniprot_accession")
+        if not isinstance(self.uniprot_accession, str):
+            self.uniprot_accession = str(self.uniprot_accession)
+
+        if self._is_empty(self.sequence_length):
+            self.MissingRequiredField("sequence_length")
+        if not isinstance(self.sequence_length, int):
+            self.sequence_length = int(self.sequence_length)
+
+        if self._is_empty(self.sequence_sha256):
+            self.MissingRequiredField("sequence_sha256")
+        if not isinstance(self.sequence_sha256, str):
+            self.sequence_sha256 = str(self.sequence_sha256)
+
+        if self.isoform is not None and not isinstance(self.isoform, str):
+            self.isoform = str(self.isoform)
+
+        if self.sequence_version is not None and not isinstance(self.sequence_version, int):
+            self.sequence_version = int(self.sequence_version)
+
+        if self.sequence_md5 is not None and not isinstance(self.sequence_md5, str):
+            self.sequence_md5 = str(self.sequence_md5)
+
+        if self.taxon_id is not None and not isinstance(self.taxon_id, str):
+            self.taxon_id = str(self.taxon_id)
+
+        if self.organism is not None and not isinstance(self.organism, str):
+            self.organism = str(self.organism)
+
+        if self.uniprot_release is not None and not isinstance(self.uniprot_release, str):
+            self.uniprot_release = str(self.uniprot_release)
+
+        if self.source_url is not None and not isinstance(self.source_url, URI):
+            self.source_url = URI(self.source_url)
+
+        super().__post_init__(**kwargs)
+
+
+@dataclass(repr=False)
+class SequenceInterval(YAMLRoot):
+    """
+    Canonical 1-based inclusive interval [start, end] on an identified reference sequence.
+    """
+    _inherited_slots: ClassVar[list[str]] = []
+
+    class_class_uri: ClassVar[URIRef] = DUFMECH["SequenceInterval"]
+    class_class_curie: ClassVar[str] = "dufmech:SequenceInterval"
+    class_name: ClassVar[str] = "SequenceInterval"
+    class_model_uri: ClassVar[URIRef] = DUFMECH.SequenceInterval
+
+    start: int = None
+    end: int = None
+    start_uncertain: Optional[Union[bool, Bool]] = None
+    end_uncertain: Optional[Union[bool, Bool]] = None
+    residue_identity: Optional[str] = None
+
+    def __post_init__(self, *_: str, **kwargs: Any):
+        if self._is_empty(self.start):
+            self.MissingRequiredField("start")
+        if not isinstance(self.start, int):
+            self.start = int(self.start)
+
+        if self._is_empty(self.end):
+            self.MissingRequiredField("end")
+        if not isinstance(self.end, int):
+            self.end = int(self.end)
+
+        if self.start_uncertain is not None and not isinstance(self.start_uncertain, Bool):
+            self.start_uncertain = Bool(self.start_uncertain)
+
+        if self.end_uncertain is not None and not isinstance(self.end_uncertain, Bool):
+            self.end_uncertain = Bool(self.end_uncertain)
+
+        if self.residue_identity is not None and not isinstance(self.residue_identity, str):
+            self.residue_identity = str(self.residue_identity)
+
+        super().__post_init__(**kwargs)
+
+
+@dataclass(repr=False)
+class SequenceRegion(YAMLRoot):
+    """
+    An explicit contiguous or discontinuous region, site, construct, or unlocalized whole-protein span on an
+    identified sequence.
+    """
+    _inherited_slots: ClassVar[list[str]] = []
+
+    class_class_uri: ClassVar[URIRef] = DUFMECH["SequenceRegion"]
+    class_class_curie: ClassVar[str] = "dufmech:SequenceRegion"
+    class_name: ClassVar[str] = "SequenceRegion"
+    class_model_uri: ClassVar[URIRef] = DUFMECH.SequenceRegion
+
+    region_id: str = None
+    sequence_id: str = None
+    label: str = None
+    region_kind: Union[str, "RegionKind"] = None
+    coordinate_status: Union[str, "CoordinateStatus"] = None
+    source_coordinate_system: Union[str, "CoordinateSystem"] = None
+    intervals: Optional[Union[Union[dict, SequenceInterval], list[Union[dict, SequenceInterval]]]] = empty_list()
+    source_coordinates_text: Optional[str] = None
+    conversion_provenance: Optional[str] = None
+    pfam_id: Optional[str] = None
+    interpro_id: Optional[str] = None
+
+    def __post_init__(self, *_: str, **kwargs: Any):
+        if self._is_empty(self.region_id):
+            self.MissingRequiredField("region_id")
+        if not isinstance(self.region_id, str):
+            self.region_id = str(self.region_id)
+
+        if self._is_empty(self.sequence_id):
+            self.MissingRequiredField("sequence_id")
+        if not isinstance(self.sequence_id, str):
+            self.sequence_id = str(self.sequence_id)
+
+        if self._is_empty(self.label):
+            self.MissingRequiredField("label")
+        if not isinstance(self.label, str):
+            self.label = str(self.label)
+
+        if self._is_empty(self.region_kind):
+            self.MissingRequiredField("region_kind")
+        if not isinstance(self.region_kind, RegionKind):
+            self.region_kind = RegionKind(self.region_kind)
+
+        if self._is_empty(self.coordinate_status):
+            self.MissingRequiredField("coordinate_status")
+        if not isinstance(self.coordinate_status, CoordinateStatus):
+            self.coordinate_status = CoordinateStatus(self.coordinate_status)
+
+        if self._is_empty(self.source_coordinate_system):
+            self.MissingRequiredField("source_coordinate_system")
+        if not isinstance(self.source_coordinate_system, CoordinateSystem):
+            self.source_coordinate_system = CoordinateSystem(self.source_coordinate_system)
+
+        self._normalize_inlined_as_list(slot_name="intervals", slot_type=SequenceInterval, key_name="start", keyed=False)
+
+        if self.source_coordinates_text is not None and not isinstance(self.source_coordinates_text, str):
+            self.source_coordinates_text = str(self.source_coordinates_text)
+
+        if self.conversion_provenance is not None and not isinstance(self.conversion_provenance, str):
+            self.conversion_provenance = str(self.conversion_provenance)
+
+        if self.pfam_id is not None and not isinstance(self.pfam_id, str):
+            self.pfam_id = str(self.pfam_id)
+
+        if self.interpro_id is not None and not isinstance(self.interpro_id, str):
+            self.interpro_id = str(self.interpro_id)
+
+        super().__post_init__(**kwargs)
+
+
+@dataclass(repr=False)
+class ResidueCorrespondence(YAMLRoot):
+    """
+    Explicit residue-level correspondence between two coordinate systems or homologous sequences.
+    """
+    _inherited_slots: ClassVar[list[str]] = []
+
+    class_class_uri: ClassVar[URIRef] = DUFMECH["ResidueCorrespondence"]
+    class_class_curie: ClassVar[str] = "dufmech:ResidueCorrespondence"
+    class_name: ClassVar[str] = "ResidueCorrespondence"
+    class_model_uri: ClassVar[URIRef] = DUFMECH.ResidueCorrespondence
+
+    source_position: int = None
+    target_position: int = None
+    source_residue: Optional[str] = None
+    target_residue: Optional[str] = None
+    pdb_insertion_code: Optional[str] = None
+    mutation_substitution: Optional[str] = None
+    note: Optional[str] = None
+
+    def __post_init__(self, *_: str, **kwargs: Any):
+        if self._is_empty(self.source_position):
+            self.MissingRequiredField("source_position")
+        if not isinstance(self.source_position, int):
+            self.source_position = int(self.source_position)
+
+        if self._is_empty(self.target_position):
+            self.MissingRequiredField("target_position")
+        if not isinstance(self.target_position, int):
+            self.target_position = int(self.target_position)
+
+        if self.source_residue is not None and not isinstance(self.source_residue, str):
+            self.source_residue = str(self.source_residue)
+
+        if self.target_residue is not None and not isinstance(self.target_residue, str):
+            self.target_residue = str(self.target_residue)
+
+        if self.pdb_insertion_code is not None and not isinstance(self.pdb_insertion_code, str):
+            self.pdb_insertion_code = str(self.pdb_insertion_code)
+
+        if self.mutation_substitution is not None and not isinstance(self.mutation_substitution, str):
+            self.mutation_substitution = str(self.mutation_substitution)
+
+        if self.note is not None and not isinstance(self.note, str):
+            self.note = str(self.note)
+
+        super().__post_init__(**kwargs)
+
+
+@dataclass(repr=False)
+class CoordinateMapping(YAMLRoot):
+    """
+    Explicit mapping between two regions (e.g., construct to domain, structure to UniProt, or homolog alignment)
+    retaining coverage, gaps, and uncertainty.
+    """
+    _inherited_slots: ClassVar[list[str]] = []
+
+    class_class_uri: ClassVar[URIRef] = DUFMECH["CoordinateMapping"]
+    class_class_curie: ClassVar[str] = "dufmech:CoordinateMapping"
+    class_name: ClassVar[str] = "CoordinateMapping"
+    class_model_uri: ClassVar[URIRef] = DUFMECH.CoordinateMapping
+
+    mapping_id: str = None
+    source_region_id: str = None
+    target_region_id: str = None
+    mapping_kind: Union[str, "CoordinateMappingKind"] = None
+    equivalence_status: Union[str, "MappingEquivalenceStatus"] = None
+    provenance_note: str = None
+    overlap_residues: Optional[int] = None
+    source_coverage: Optional[float] = None
+    target_coverage: Optional[float] = None
+    alignment_gaps: Optional[int] = None
+    residue_correspondences: Optional[Union[Union[dict, ResidueCorrespondence], list[Union[dict, ResidueCorrespondence]]]] = empty_list()
+    mapping_uncertainty: Optional[str] = None
+
+    def __post_init__(self, *_: str, **kwargs: Any):
+        if self._is_empty(self.mapping_id):
+            self.MissingRequiredField("mapping_id")
+        if not isinstance(self.mapping_id, str):
+            self.mapping_id = str(self.mapping_id)
+
+        if self._is_empty(self.source_region_id):
+            self.MissingRequiredField("source_region_id")
+        if not isinstance(self.source_region_id, str):
+            self.source_region_id = str(self.source_region_id)
+
+        if self._is_empty(self.target_region_id):
+            self.MissingRequiredField("target_region_id")
+        if not isinstance(self.target_region_id, str):
+            self.target_region_id = str(self.target_region_id)
+
+        if self._is_empty(self.mapping_kind):
+            self.MissingRequiredField("mapping_kind")
+        if not isinstance(self.mapping_kind, CoordinateMappingKind):
+            self.mapping_kind = CoordinateMappingKind(self.mapping_kind)
+
+        if self._is_empty(self.equivalence_status):
+            self.MissingRequiredField("equivalence_status")
+        if not isinstance(self.equivalence_status, MappingEquivalenceStatus):
+            self.equivalence_status = MappingEquivalenceStatus(self.equivalence_status)
+
+        if self._is_empty(self.provenance_note):
+            self.MissingRequiredField("provenance_note")
+        if not isinstance(self.provenance_note, str):
+            self.provenance_note = str(self.provenance_note)
+
+        if self.overlap_residues is not None and not isinstance(self.overlap_residues, int):
+            self.overlap_residues = int(self.overlap_residues)
+
+        if self.source_coverage is not None and not isinstance(self.source_coverage, float):
+            self.source_coverage = float(self.source_coverage)
+
+        if self.target_coverage is not None and not isinstance(self.target_coverage, float):
+            self.target_coverage = float(self.target_coverage)
+
+        if self.alignment_gaps is not None and not isinstance(self.alignment_gaps, int):
+            self.alignment_gaps = int(self.alignment_gaps)
+
+        self._normalize_inlined_as_list(slot_name="residue_correspondences", slot_type=ResidueCorrespondence, key_name="source_position", keyed=False)
+
+        if self.mapping_uncertainty is not None and not isinstance(self.mapping_uncertainty, str):
+            self.mapping_uncertainty = str(self.mapping_uncertainty)
+
+        super().__post_init__(**kwargs)
+
+
+@dataclass(repr=False)
+class RegionObservation(YAMLRoot):
+    """
+    Standardized experimental observation, curated annotation, or computational prediction anchored to a sequence
+    region, separating observation from interpretation.
+    """
+    _inherited_slots: ClassVar[list[str]] = []
+
+    class_class_uri: ClassVar[URIRef] = DUFMECH["RegionObservation"]
+    class_class_curie: ClassVar[str] = "dufmech:RegionObservation"
+    class_name: ClassVar[str] = "RegionObservation"
+    class_model_uri: ClassVar[URIRef] = DUFMECH.RegionObservation
+
+    observation_id: str = None
+    region_id: str = None
+    sequence_id: str = None
+    evidence_kind: Union[str, "EvidenceKind"] = None
+    source_kind: Union[str, "ObservationSourceKind"] = None
+    method: str = None
+    observed_effect: str = None
+    interpretation: str = None
+    polarity: Union[str, "ObservationPolarity"] = None
+    primary_experiment_key: str = None
+    assay_conditions: Optional[str] = None
+    tested_construct_region_id: Optional[str] = None
+    mutation_region_ids: Optional[Union[str, list[str]]] = empty_list()
+    raw_score: Optional[float] = None
+    score_metric: Optional[Union[str, "ScoreMetricKind"]] = None
+    derived_from_observation_ids: Optional[Union[str, list[str]]] = empty_list()
+    limitations: Optional[str] = None
+    evidence: Optional[Union[Union[dict, ClaimEvidence], list[Union[dict, ClaimEvidence]]]] = empty_list()
+
+    def __post_init__(self, *_: str, **kwargs: Any):
+        if self._is_empty(self.observation_id):
+            self.MissingRequiredField("observation_id")
+        if not isinstance(self.observation_id, str):
+            self.observation_id = str(self.observation_id)
+
+        if self._is_empty(self.region_id):
+            self.MissingRequiredField("region_id")
+        if not isinstance(self.region_id, str):
+            self.region_id = str(self.region_id)
+
+        if self._is_empty(self.sequence_id):
+            self.MissingRequiredField("sequence_id")
+        if not isinstance(self.sequence_id, str):
+            self.sequence_id = str(self.sequence_id)
+
+        if self._is_empty(self.evidence_kind):
+            self.MissingRequiredField("evidence_kind")
+        if not isinstance(self.evidence_kind, EvidenceKind):
+            self.evidence_kind = EvidenceKind(self.evidence_kind)
+
+        if self._is_empty(self.source_kind):
+            self.MissingRequiredField("source_kind")
+        if not isinstance(self.source_kind, ObservationSourceKind):
+            self.source_kind = ObservationSourceKind(self.source_kind)
+
+        if self._is_empty(self.method):
+            self.MissingRequiredField("method")
+        if not isinstance(self.method, str):
+            self.method = str(self.method)
+
+        if self._is_empty(self.observed_effect):
+            self.MissingRequiredField("observed_effect")
+        if not isinstance(self.observed_effect, str):
+            self.observed_effect = str(self.observed_effect)
+
+        if self._is_empty(self.interpretation):
+            self.MissingRequiredField("interpretation")
+        if not isinstance(self.interpretation, str):
+            self.interpretation = str(self.interpretation)
+
+        if self._is_empty(self.polarity):
+            self.MissingRequiredField("polarity")
+        if not isinstance(self.polarity, ObservationPolarity):
+            self.polarity = ObservationPolarity(self.polarity)
+
+        if self._is_empty(self.primary_experiment_key):
+            self.MissingRequiredField("primary_experiment_key")
+        if not isinstance(self.primary_experiment_key, str):
+            self.primary_experiment_key = str(self.primary_experiment_key)
+
+        if self.assay_conditions is not None and not isinstance(self.assay_conditions, str):
+            self.assay_conditions = str(self.assay_conditions)
+
+        if self.tested_construct_region_id is not None and not isinstance(self.tested_construct_region_id, str):
+            self.tested_construct_region_id = str(self.tested_construct_region_id)
+
+        if not isinstance(self.mutation_region_ids, list):
+            self.mutation_region_ids = [self.mutation_region_ids] if self.mutation_region_ids is not None else []
+        self.mutation_region_ids = [v if isinstance(v, str) else str(v) for v in self.mutation_region_ids]
+
+        if self.raw_score is not None and not isinstance(self.raw_score, float):
+            self.raw_score = float(self.raw_score)
+
+        if self.score_metric is not None and not isinstance(self.score_metric, ScoreMetricKind):
+            self.score_metric = ScoreMetricKind(self.score_metric)
+
+        if not isinstance(self.derived_from_observation_ids, list):
+            self.derived_from_observation_ids = [self.derived_from_observation_ids] if self.derived_from_observation_ids is not None else []
+        self.derived_from_observation_ids = [v if isinstance(v, str) else str(v) for v in self.derived_from_observation_ids]
+
+        if self.limitations is not None and not isinstance(self.limitations, str):
+            self.limitations = str(self.limitations)
+
+        self._normalize_inlined_as_list(slot_name="evidence", slot_type=ClaimEvidence, key_name="reference", keyed=False)
+
+        super().__post_init__(**kwargs)
+
+
+@dataclass(repr=False)
+class EvidenceGroup(YAMLRoot):
+    """
+    Deduplicated group of compatible observations sharing a primary experiment or prediction source so mirrored
+    records are not counted as independent confirmation.
+    """
+    _inherited_slots: ClassVar[list[str]] = []
+
+    class_class_uri: ClassVar[URIRef] = DUFMECH["EvidenceGroup"]
+    class_class_curie: ClassVar[str] = "dufmech:EvidenceGroup"
+    class_name: ClassVar[str] = "EvidenceGroup"
+    class_model_uri: ClassVar[URIRef] = DUFMECH.EvidenceGroup
+
+    group_id: str = None
+    primary_experiment_key: str = None
+    evidence_kind: Union[str, "EvidenceKind"] = None
+    polarity: Union[str, "ObservationPolarity"] = None
+    observation_ids: Union[str, list[str]] = None
+    deduplication_rationale: str = None
+
+    def __post_init__(self, *_: str, **kwargs: Any):
+        if self._is_empty(self.group_id):
+            self.MissingRequiredField("group_id")
+        if not isinstance(self.group_id, str):
+            self.group_id = str(self.group_id)
+
+        if self._is_empty(self.primary_experiment_key):
+            self.MissingRequiredField("primary_experiment_key")
+        if not isinstance(self.primary_experiment_key, str):
+            self.primary_experiment_key = str(self.primary_experiment_key)
+
+        if self._is_empty(self.evidence_kind):
+            self.MissingRequiredField("evidence_kind")
+        if not isinstance(self.evidence_kind, EvidenceKind):
+            self.evidence_kind = EvidenceKind(self.evidence_kind)
+
+        if self._is_empty(self.polarity):
+            self.MissingRequiredField("polarity")
+        if not isinstance(self.polarity, ObservationPolarity):
+            self.polarity = ObservationPolarity(self.polarity)
+
+        if self._is_empty(self.observation_ids):
+            self.MissingRequiredField("observation_ids")
+        if not isinstance(self.observation_ids, list):
+            self.observation_ids = [self.observation_ids] if self.observation_ids is not None else []
+        self.observation_ids = [v if isinstance(v, str) else str(v) for v in self.observation_ids]
+
+        if self._is_empty(self.deduplication_rationale):
+            self.MissingRequiredField("deduplication_rationale")
+        if not isinstance(self.deduplication_rationale, str):
+            self.deduplication_rationale = str(self.deduplication_rationale)
+
+        super().__post_init__(**kwargs)
+
+
+@dataclass(repr=False)
+class SynthesizedClaim(YAMLRoot):
+    """
+    Evidence-graded functional claim or aspect of function at supported specificity and sequence scope, retaining
+    supporting and contradicting evidence groups.
+    """
+    _inherited_slots: ClassVar[list[str]] = []
+
+    class_class_uri: ClassVar[URIRef] = DUFMECH["SynthesizedClaim"]
+    class_class_curie: ClassVar[str] = "dufmech:SynthesizedClaim"
+    class_name: ClassVar[str] = "SynthesizedClaim"
+    class_model_uri: ClassVar[URIRef] = DUFMECH.SynthesizedClaim
+
+    claim_id: str = None
+    label: str = None
+    function_aspect: Union[str, "FunctionAspect"] = None
+    target_region_id: str = None
+    claimed_scope: Union[str, "ClaimScope"] = None
+    synthesis_status: Union[str, "SynthesisStatus"] = None
+    scope_rationale: str = None
+    synthesis_explanation: str = None
+    ontology_term_id: Optional[str] = None
+    ontology_term_label: Optional[str] = None
+    supporting_evidence_groups: Optional[Union[str, list[str]]] = empty_list()
+    contradicting_evidence_groups: Optional[Union[str, list[str]]] = empty_list()
+    supporting_observation_ids: Optional[Union[str, list[str]]] = empty_list()
+    contradicting_observation_ids: Optional[Union[str, list[str]]] = empty_list()
+    mapping_ids: Optional[Union[str, list[str]]] = empty_list()
+    scope_transfer_blocks: Optional[Union[str, list[str]]] = empty_list()
+    discriminating_experiments: Optional[Union[str, list[str]]] = empty_list()
+
+    def __post_init__(self, *_: str, **kwargs: Any):
+        if self._is_empty(self.claim_id):
+            self.MissingRequiredField("claim_id")
+        if not isinstance(self.claim_id, str):
+            self.claim_id = str(self.claim_id)
+
+        if self._is_empty(self.label):
+            self.MissingRequiredField("label")
+        if not isinstance(self.label, str):
+            self.label = str(self.label)
+
+        if self._is_empty(self.function_aspect):
+            self.MissingRequiredField("function_aspect")
+        if not isinstance(self.function_aspect, FunctionAspect):
+            self.function_aspect = FunctionAspect(self.function_aspect)
+
+        if self._is_empty(self.target_region_id):
+            self.MissingRequiredField("target_region_id")
+        if not isinstance(self.target_region_id, str):
+            self.target_region_id = str(self.target_region_id)
+
+        if self._is_empty(self.claimed_scope):
+            self.MissingRequiredField("claimed_scope")
+        if not isinstance(self.claimed_scope, ClaimScope):
+            self.claimed_scope = ClaimScope(self.claimed_scope)
+
+        if self._is_empty(self.synthesis_status):
+            self.MissingRequiredField("synthesis_status")
+        if not isinstance(self.synthesis_status, SynthesisStatus):
+            self.synthesis_status = SynthesisStatus(self.synthesis_status)
+
+        if self._is_empty(self.scope_rationale):
+            self.MissingRequiredField("scope_rationale")
+        if not isinstance(self.scope_rationale, str):
+            self.scope_rationale = str(self.scope_rationale)
+
+        if self._is_empty(self.synthesis_explanation):
+            self.MissingRequiredField("synthesis_explanation")
+        if not isinstance(self.synthesis_explanation, str):
+            self.synthesis_explanation = str(self.synthesis_explanation)
+
+        if self.ontology_term_id is not None and not isinstance(self.ontology_term_id, str):
+            self.ontology_term_id = str(self.ontology_term_id)
+
+        if self.ontology_term_label is not None and not isinstance(self.ontology_term_label, str):
+            self.ontology_term_label = str(self.ontology_term_label)
+
+        if not isinstance(self.supporting_evidence_groups, list):
+            self.supporting_evidence_groups = [self.supporting_evidence_groups] if self.supporting_evidence_groups is not None else []
+        self.supporting_evidence_groups = [v if isinstance(v, str) else str(v) for v in self.supporting_evidence_groups]
+
+        if not isinstance(self.contradicting_evidence_groups, list):
+            self.contradicting_evidence_groups = [self.contradicting_evidence_groups] if self.contradicting_evidence_groups is not None else []
+        self.contradicting_evidence_groups = [v if isinstance(v, str) else str(v) for v in self.contradicting_evidence_groups]
+
+        if not isinstance(self.supporting_observation_ids, list):
+            self.supporting_observation_ids = [self.supporting_observation_ids] if self.supporting_observation_ids is not None else []
+        self.supporting_observation_ids = [v if isinstance(v, str) else str(v) for v in self.supporting_observation_ids]
+
+        if not isinstance(self.contradicting_observation_ids, list):
+            self.contradicting_observation_ids = [self.contradicting_observation_ids] if self.contradicting_observation_ids is not None else []
+        self.contradicting_observation_ids = [v if isinstance(v, str) else str(v) for v in self.contradicting_observation_ids]
+
+        if not isinstance(self.mapping_ids, list):
+            self.mapping_ids = [self.mapping_ids] if self.mapping_ids is not None else []
+        self.mapping_ids = [v if isinstance(v, str) else str(v) for v in self.mapping_ids]
+
+        if not isinstance(self.scope_transfer_blocks, list):
+            self.scope_transfer_blocks = [self.scope_transfer_blocks] if self.scope_transfer_blocks is not None else []
+        self.scope_transfer_blocks = [v if isinstance(v, str) else str(v) for v in self.scope_transfer_blocks]
+
+        if not isinstance(self.discriminating_experiments, list):
+            self.discriminating_experiments = [self.discriminating_experiments] if self.discriminating_experiments is not None else []
+        self.discriminating_experiments = [v if isinstance(v, str) else str(v) for v in self.discriminating_experiments]
+
+        super().__post_init__(**kwargs)
+
+
+@dataclass(repr=False)
+class ReasoningEdge(YAMLRoot):
+    """
+    Typed edge in a RegionReasoningGraph explicitly distinguishing coordinate mappings, evidence
+    support/contradiction, and homology inferences from biological causation.
+    """
+    _inherited_slots: ClassVar[list[str]] = []
+
+    class_class_uri: ClassVar[URIRef] = DUFMECH["ReasoningEdge"]
+    class_class_curie: ClassVar[str] = "dufmech:ReasoningEdge"
+    class_name: ClassVar[str] = "ReasoningEdge"
+    class_model_uri: ClassVar[URIRef] = DUFMECH.ReasoningEdge
+
+    edge_id: str = None
+    subject: str = None
+    predicate: Union[str, "ReasoningPredicate"] = None
+    object: str = None
+    edge_category: Union[str, "ReasoningEdgeCategory"] = None
+    support: Union[str, "CausalSupport"] = None
+    evidence_kind: Union[str, "EvidenceKind"] = None
+    rationale: str = None
+
+    def __post_init__(self, *_: str, **kwargs: Any):
+        if self._is_empty(self.edge_id):
+            self.MissingRequiredField("edge_id")
+        if not isinstance(self.edge_id, str):
+            self.edge_id = str(self.edge_id)
+
+        if self._is_empty(self.subject):
+            self.MissingRequiredField("subject")
+        if not isinstance(self.subject, str):
+            self.subject = str(self.subject)
+
+        if self._is_empty(self.predicate):
+            self.MissingRequiredField("predicate")
+        if not isinstance(self.predicate, ReasoningPredicate):
+            self.predicate = ReasoningPredicate(self.predicate)
+
+        if self._is_empty(self.object):
+            self.MissingRequiredField("object")
+        if not isinstance(self.object, str):
+            self.object = str(self.object)
+
+        if self._is_empty(self.edge_category):
+            self.MissingRequiredField("edge_category")
+        if not isinstance(self.edge_category, ReasoningEdgeCategory):
+            self.edge_category = ReasoningEdgeCategory(self.edge_category)
+
+        if self._is_empty(self.support):
+            self.MissingRequiredField("support")
+        if not isinstance(self.support, CausalSupport):
+            self.support = CausalSupport(self.support)
+
+        if self._is_empty(self.evidence_kind):
+            self.MissingRequiredField("evidence_kind")
+        if not isinstance(self.evidence_kind, EvidenceKind):
+            self.evidence_kind = EvidenceKind(self.evidence_kind)
+
+        if self._is_empty(self.rationale):
+            self.MissingRequiredField("rationale")
+        if not isinstance(self.rationale, str):
+            self.rationale = str(self.rationale)
 
         super().__post_init__(**kwargs)
 
@@ -1096,6 +1850,196 @@ class EvidenceKind(EnumDefinitionImpl):
         name="EvidenceKind",
     )
 
+class RegionKind(EnumDefinitionImpl):
+
+    DOMAIN_HIT = PermissibleValue(text="DOMAIN_HIT")
+    DISCONTINUOUS_DOMAIN = PermissibleValue(text="DISCONTINUOUS_DOMAIN")
+    EXPERIMENTAL_CONSTRUCT = PermissibleValue(text="EXPERIMENTAL_CONSTRUCT")
+    CATALYTIC_SITE = PermissibleValue(text="CATALYTIC_SITE")
+    BINDING_SITE = PermissibleValue(text="BINDING_SITE")
+    MUTATION_SITE = PermissibleValue(text="MUTATION_SITE")
+    STRUCTURAL_OBSERVATION_REGION = PermissibleValue(text="STRUCTURAL_OBSERVATION_REGION")
+    ADJACENT_ARCHITECTURAL_DOMAIN = PermissibleValue(text="ADJACENT_ARCHITECTURAL_DOMAIN")
+    FULL_LENGTH_PROTEIN = PermissibleValue(text="FULL_LENGTH_PROTEIN")
+    UNKNOWN_LOCALIZATION = PermissibleValue(text="UNKNOWN_LOCALIZATION")
+
+    _defn = EnumDefinition(
+        name="RegionKind",
+    )
+
+class CoordinateStatus(EnumDefinitionImpl):
+
+    EXACT = PermissibleValue(text="EXACT")
+    UNCERTAIN_BOUNDARY = PermissibleValue(text="UNCERTAIN_BOUNDARY")
+    DISCONTINUOUS = PermissibleValue(text="DISCONTINUOUS")
+    WHOLE_PROTEIN_UNLOCALIZED = PermissibleValue(text="WHOLE_PROTEIN_UNLOCALIZED")
+    UNKNOWN_LOCALIZATION = PermissibleValue(text="UNKNOWN_LOCALIZATION")
+
+    _defn = EnumDefinition(
+        name="CoordinateStatus",
+    )
+
+class CoordinateSystem(EnumDefinitionImpl):
+
+    UNIPROT_CANONICAL = PermissibleValue(text="UNIPROT_CANONICAL")
+    UNIPROT_ISOFORM = PermissibleValue(text="UNIPROT_ISOFORM")
+    CONSTRUCT_NUMBERING = PermissibleValue(text="CONSTRUCT_NUMBERING")
+    MATURE_PEPTIDE = PermissibleValue(text="MATURE_PEPTIDE")
+    PDB_SEQRES = PermissibleValue(text="PDB_SEQRES")
+    PDB_AUTHOR = PermissibleValue(text="PDB_AUTHOR")
+    HMM_PROFILE = PermissibleValue(text="HMM_PROFILE")
+    ALIGNMENT_COLUMN = PermissibleValue(text="ALIGNMENT_COLUMN")
+    UNSPECIFIED = PermissibleValue(text="UNSPECIFIED")
+
+    _defn = EnumDefinition(
+        name="CoordinateSystem",
+    )
+
+class CoordinateMappingKind(EnumDefinitionImpl):
+
+    CONSTRUCT_TO_REFERENCE = PermissibleValue(text="CONSTRUCT_TO_REFERENCE")
+    DOMAIN_TO_CONSTRUCT = PermissibleValue(text="DOMAIN_TO_CONSTRUCT")
+    STRUCTURE_TO_UNIPROT = PermissibleValue(text="STRUCTURE_TO_UNIPROT")
+    ISOFORM_TO_CANONICAL = PermissibleValue(text="ISOFORM_TO_CANONICAL")
+    HOMOLOG_ALIGNMENT = PermissibleValue(text="HOMOLOG_ALIGNMENT")
+    PROFILE_TO_SEQUENCE = PermissibleValue(text="PROFILE_TO_SEQUENCE")
+    MUTATION_TO_DOMAIN = PermissibleValue(text="MUTATION_TO_DOMAIN")
+
+    _defn = EnumDefinition(
+        name="CoordinateMappingKind",
+    )
+
+class MappingEquivalenceStatus(EnumDefinitionImpl):
+
+    EXACT_MATCH = PermissibleValue(text="EXACT_MATCH")
+    CONSTRUCT_CONTAINS_DOMAIN = PermissibleValue(text="CONSTRUCT_CONTAINS_DOMAIN")
+    DOMAIN_CONTAINS_REGION = PermissibleValue(text="DOMAIN_CONTAINS_REGION")
+    RESIDUE_INSIDE_REGION = PermissibleValue(text="RESIDUE_INSIDE_REGION")
+    PARTIAL_OVERLAP_NOT_EQUIVALENT = PermissibleValue(text="PARTIAL_OVERLAP_NOT_EQUIVALENT")
+    DISJOINT_OUTSIDE_REGION = PermissibleValue(text="DISJOINT_OUTSIDE_REGION")
+    DISCONTINUOUS_MAPPING = PermissibleValue(text="DISCONTINUOUS_MAPPING")
+    SEQUENCE_VERSION_MISMATCH = PermissibleValue(text="SEQUENCE_VERSION_MISMATCH")
+    UNRESOLVED_MAPPING = PermissibleValue(text="UNRESOLVED_MAPPING")
+
+    _defn = EnumDefinition(
+        name="MappingEquivalenceStatus",
+    )
+
+class ObservationSourceKind(EnumDefinitionImpl):
+
+    LITERATURE_ASSAY = PermissibleValue(text="LITERATURE_ASSAY")
+    PDBE_KB = PermissibleValue(text="PDBE_KB")
+    INTERPRO_PFAM = PermissibleValue(text="INTERPRO_PFAM")
+    CDSEARCH = PermissibleValue(text="CDSEARCH")
+    CATH_FUNFAM = PermissibleValue(text="CATH_FUNFAM")
+    NCBIFAM = PermissibleValue(text="NCBIFAM")
+    QUICKGO = PermissibleValue(text="QUICKGO")
+    RHEA = PermissibleValue(text="RHEA")
+    ALPHAFOLD = PermissibleValue(text="ALPHAFOLD")
+    CURATED_ANNOTATION = PermissibleValue(text="CURATED_ANNOTATION")
+
+    _defn = EnumDefinition(
+        name="ObservationSourceKind",
+    )
+
+class ObservationPolarity(EnumDefinitionImpl):
+
+    POSITIVE = PermissibleValue(text="POSITIVE")
+    NEGATIVE = PermissibleValue(text="NEGATIVE")
+    NEUTRAL_OR_UNCHANGED = PermissibleValue(text="NEUTRAL_OR_UNCHANGED")
+
+    _defn = EnumDefinition(
+        name="ObservationPolarity",
+    )
+
+class ScoreMetricKind(EnumDefinitionImpl):
+
+    E_VALUE = PermissibleValue(text="E_VALUE")
+    BITSCORE = PermissibleValue(text="BITSCORE")
+    CATH_CONFIDENCE = PermissibleValue(text="CATH_CONFIDENCE")
+    PLDDT = PermissibleValue(text="PLDDT")
+    KM_MM = PermissibleValue(text="KM_MM")
+    KCAT_PER_S = PermissibleValue(text="KCAT_PER_S")
+    QUALITATIVE = PermissibleValue(text="QUALITATIVE")
+
+    _defn = EnumDefinition(
+        name="ScoreMetricKind",
+    )
+
+class FunctionAspect(EnumDefinitionImpl):
+
+    CATALYTIC_ACTIVITY = PermissibleValue(text="CATALYTIC_ACTIVITY")
+    SUBSTRATE_SPECIFICITY = PermissibleValue(text="SUBSTRATE_SPECIFICITY")
+    COFACTOR_BINDING = PermissibleValue(text="COFACTOR_BINDING")
+    LIGAND_BINDING = PermissibleValue(text="LIGAND_BINDING")
+    PROTEIN_INTERACTION = PermissibleValue(text="PROTEIN_INTERACTION")
+    SUBCELLULAR_LOCALIZATION = PermissibleValue(text="SUBCELLULAR_LOCALIZATION")
+    PROCESS_CONTRIBUTION = PermissibleValue(text="PROCESS_CONTRIBUTION")
+    STRUCTURAL_ROLE = PermissibleValue(text="STRUCTURAL_ROLE")
+    ARCHITECTURAL_COOCCURRENCE = PermissibleValue(text="ARCHITECTURAL_COOCCURRENCE")
+    UNKNOWN_FUNCTION = PermissibleValue(text="UNKNOWN_FUNCTION")
+
+    _defn = EnumDefinition(
+        name="FunctionAspect",
+    )
+
+class ClaimScope(EnumDefinitionImpl):
+
+    TESTED_REGION_ONLY = PermissibleValue(text="TESTED_REGION_ONLY")
+    TESTED_CONSTRUCT = PermissibleValue(text="TESTED_CONSTRUCT")
+    SPECIFIC_PROTEIN = PermissibleValue(text="SPECIFIC_PROTEIN")
+    CONSERVED_SUBFAMILY = PermissibleValue(text="CONSERVED_SUBFAMILY")
+    FAMILY_WIDE = PermissibleValue(text="FAMILY_WIDE")
+    UNRESOLVED_SCOPE = PermissibleValue(text="UNRESOLVED_SCOPE")
+
+    _defn = EnumDefinition(
+        name="ClaimScope",
+    )
+
+class SynthesisStatus(EnumDefinitionImpl):
+
+    EXPERIMENTALLY_DEMONSTRATED = PermissibleValue(text="EXPERIMENTALLY_DEMONSTRATED")
+    SUPPORTED_INFERENCE = PermissibleValue(text="SUPPORTED_INFERENCE")
+    COMPUTATIONAL_HYPOTHESIS = PermissibleValue(text="COMPUTATIONAL_HYPOTHESIS")
+    CONFLICTING_UNRESOLVED = PermissibleValue(text="CONFLICTING_UNRESOLVED")
+    INSUFFICIENT_EVIDENCE = PermissibleValue(text="INSUFFICIENT_EVIDENCE")
+    NEGATIVE_EVIDENCE_ONLY = PermissibleValue(text="NEGATIVE_EVIDENCE_ONLY")
+
+    _defn = EnumDefinition(
+        name="SynthesisStatus",
+    )
+
+class ReasoningEdgeCategory(EnumDefinitionImpl):
+
+    EVIDENCE_LINK = PermissibleValue(text="EVIDENCE_LINK")
+    COORDINATE_MAPPING_LINK = PermissibleValue(text="COORDINATE_MAPPING_LINK")
+    INFERENCE_LINK = PermissibleValue(text="INFERENCE_LINK")
+    CAUSAL_BIOLOGICAL_LINK = PermissibleValue(text="CAUSAL_BIOLOGICAL_LINK")
+
+    _defn = EnumDefinition(
+        name="ReasoningEdgeCategory",
+    )
+
+class ReasoningPredicate(EnumDefinitionImpl):
+
+    anchored_to_sequence = PermissibleValue(text="anchored_to_sequence")
+    maps_to_region = PermissibleValue(text="maps_to_region")
+    observed_on_region = PermissibleValue(text="observed_on_region")
+    grouped_into_evidence_unit = PermissibleValue(text="grouped_into_evidence_unit")
+    supports_claim = PermissibleValue(text="supports_claim")
+    contradicts_claim = PermissibleValue(text="contradicts_claim")
+    constrains_claim_scope = PermissibleValue(text="constrains_claim_scope")
+    inferred_from_homolog_region = PermissibleValue(text="inferred_from_homolog_region")
+    cooccurs_with_domain = PermissibleValue(text="cooccurs_with_domain")
+    enables_biological_activity = PermissibleValue(text="enables_biological_activity")
+    produces_metabolite = PermissibleValue(text="produces_metabolite")
+    degrades_substrate = PermissibleValue(text="degrades_substrate")
+    required_for_process = PermissibleValue(text="required_for_process")
+
+    _defn = EnumDefinition(
+        name="ReasoningPredicate",
+    )
+
 class DiscussionKindEnum(EnumDefinitionImpl):
     """
     Kind of unresolved / in-progress item captured by a Discussion. Knowledge gaps are represented as a discussion
@@ -1384,6 +2328,9 @@ slots.familyRecord__datasets = Slot(uri=DUFMECH.datasets, name="familyRecord__da
 slots.familyRecord__cross_corpus_links = Slot(uri=DUFMECH.cross_corpus_links, name="familyRecord__cross_corpus_links", curie=DUFMECH.curie('cross_corpus_links'),
                    model_uri=DUFMECH.familyRecord__cross_corpus_links, domain=None, range=Optional[Union[Union[dict, CrossCorpusLink], list[Union[dict, CrossCorpusLink]]]])
 
+slots.familyRecord__sequence_reasoning_graphs = Slot(uri=DUFMECH.sequence_reasoning_graphs, name="familyRecord__sequence_reasoning_graphs", curie=DUFMECH.curie('sequence_reasoning_graphs'),
+                   model_uri=DUFMECH.familyRecord__sequence_reasoning_graphs, domain=None, range=Optional[Union[Union[dict, RegionReasoningGraph], list[Union[dict, RegionReasoningGraph]]]])
+
 slots.familyCuration__pfam_id = Slot(uri=DUFMECH.pfam_id, name="familyCuration__pfam_id", curie=DUFMECH.curie('pfam_id'),
                    model_uri=DUFMECH.familyCuration__pfam_id, domain=None, range=str,
                    pattern=re.compile(r'^PF[0-9]{5}$'))
@@ -1413,6 +2360,9 @@ slots.familyCuration__datasets = Slot(uri=DUFMECH.datasets, name="familyCuration
 
 slots.familyCuration__cross_corpus_links = Slot(uri=DUFMECH.cross_corpus_links, name="familyCuration__cross_corpus_links", curie=DUFMECH.curie('cross_corpus_links'),
                    model_uri=DUFMECH.familyCuration__cross_corpus_links, domain=None, range=Optional[Union[Union[dict, CrossCorpusLink], list[Union[dict, CrossCorpusLink]]]])
+
+slots.familyCuration__sequence_reasoning_graphs = Slot(uri=DUFMECH.sequence_reasoning_graphs, name="familyCuration__sequence_reasoning_graphs", curie=DUFMECH.curie('sequence_reasoning_graphs'),
+                   model_uri=DUFMECH.familyCuration__sequence_reasoning_graphs, domain=None, range=Optional[Union[Union[dict, RegionReasoningGraph], list[Union[dict, RegionReasoningGraph]]]])
 
 slots.curationEvent__timestamp = Slot(uri=DUFMECH.timestamp, name="curationEvent__timestamp", curie=DUFMECH.curie('timestamp'),
                    model_uri=DUFMECH.curationEvent__timestamp, domain=None, range=str,
@@ -1492,6 +2442,18 @@ slots.functionalAssertion__evidence_kind = Slot(uri=DUFMECH.evidence_kind, name=
 slots.functionalAssertion__scope = Slot(uri=DUFMECH.scope, name="functionalAssertion__scope", curie=DUFMECH.curie('scope'),
                    model_uri=DUFMECH.functionalAssertion__scope, domain=None, range=str)
 
+slots.functionalAssertion__sequence_id = Slot(uri=DUFMECH.sequence_id, name="functionalAssertion__sequence_id", curie=DUFMECH.curie('sequence_id'),
+                   model_uri=DUFMECH.functionalAssertion__sequence_id, domain=None, range=Optional[str],
+                   pattern=re.compile(r'^[A-Za-z0-9_.:-]+$'))
+
+slots.functionalAssertion__region_id = Slot(uri=DUFMECH.region_id, name="functionalAssertion__region_id", curie=DUFMECH.curie('region_id'),
+                   model_uri=DUFMECH.functionalAssertion__region_id, domain=None, range=Optional[str],
+                   pattern=re.compile(r'^[A-Za-z0-9_.:-]+$'))
+
+slots.functionalAssertion__synthesized_claim_id = Slot(uri=DUFMECH.synthesized_claim_id, name="functionalAssertion__synthesized_claim_id", curie=DUFMECH.curie('synthesized_claim_id'),
+                   model_uri=DUFMECH.functionalAssertion__synthesized_claim_id, domain=None, range=Optional[str],
+                   pattern=re.compile(r'^[A-Za-z0-9_.:-]+$'))
+
 slots.functionalAssertion__evidence = Slot(uri=DUFMECH.evidence, name="functionalAssertion__evidence", curie=DUFMECH.curie('evidence'),
                    model_uri=DUFMECH.functionalAssertion__evidence, domain=None, range=Union[Union[dict, ClaimEvidence], list[Union[dict, ClaimEvidence]]])
 
@@ -1544,6 +2506,14 @@ slots.causalNode__grounding = Slot(uri=DUFMECH.grounding, name="causalNode__grou
                    model_uri=DUFMECH.causalNode__grounding, domain=None, range=Optional[Union[str, list[str]]],
                    pattern=re.compile(r'^[A-Za-z][A-Za-z0-9_.-]*:\S+$'))
 
+slots.causalNode__sequence_id = Slot(uri=DUFMECH.sequence_id, name="causalNode__sequence_id", curie=DUFMECH.curie('sequence_id'),
+                   model_uri=DUFMECH.causalNode__sequence_id, domain=None, range=Optional[str],
+                   pattern=re.compile(r'^[A-Za-z0-9_.:-]+$'))
+
+slots.causalNode__region_id = Slot(uri=DUFMECH.region_id, name="causalNode__region_id", curie=DUFMECH.curie('region_id'),
+                   model_uri=DUFMECH.causalNode__region_id, domain=None, range=Optional[str],
+                   pattern=re.compile(r'^[A-Za-z0-9_.:-]+$'))
+
 slots.causalEdge__edge_id = Slot(uri=DUFMECH.edge_id, name="causalEdge__edge_id", curie=DUFMECH.curie('edge_id'),
                    model_uri=DUFMECH.causalEdge__edge_id, domain=None, range=str,
                    pattern=re.compile(r'^[A-Za-z0-9_-]+$'))
@@ -1594,6 +2564,369 @@ slots.claimEvidence__cache_path = Slot(uri=DUFMECH.cache_path, name="claimEviden
 slots.claimEvidence__cache_sha256 = Slot(uri=DUFMECH.cache_sha256, name="claimEvidence__cache_sha256", curie=DUFMECH.curie('cache_sha256'),
                    model_uri=DUFMECH.claimEvidence__cache_sha256, domain=None, range=str,
                    pattern=re.compile(r'^[a-f0-9]{64}$'))
+
+slots.regionReasoningGraph__graph_id = Slot(uri=DUFMECH.graph_id, name="regionReasoningGraph__graph_id", curie=DUFMECH.curie('graph_id'),
+                   model_uri=DUFMECH.regionReasoningGraph__graph_id, domain=None, range=str,
+                   pattern=re.compile(r'^[A-Za-z0-9_-]+$'))
+
+slots.regionReasoningGraph__pfam_id = Slot(uri=DUFMECH.pfam_id, name="regionReasoningGraph__pfam_id", curie=DUFMECH.curie('pfam_id'),
+                   model_uri=DUFMECH.regionReasoningGraph__pfam_id, domain=None, range=str,
+                   pattern=re.compile(r'^PF[0-9]{5}$'))
+
+slots.regionReasoningGraph__title = Slot(uri=DUFMECH.title, name="regionReasoningGraph__title", curie=DUFMECH.curie('title'),
+                   model_uri=DUFMECH.regionReasoningGraph__title, domain=None, range=str)
+
+slots.regionReasoningGraph__description = Slot(uri=DUFMECH.description, name="regionReasoningGraph__description", curie=DUFMECH.curie('description'),
+                   model_uri=DUFMECH.regionReasoningGraph__description, domain=None, range=Optional[str])
+
+slots.regionReasoningGraph__sequences = Slot(uri=DUFMECH.sequences, name="regionReasoningGraph__sequences", curie=DUFMECH.curie('sequences'),
+                   model_uri=DUFMECH.regionReasoningGraph__sequences, domain=None, range=Union[Union[dict, SequenceIdentity], list[Union[dict, SequenceIdentity]]])
+
+slots.regionReasoningGraph__regions = Slot(uri=DUFMECH.regions, name="regionReasoningGraph__regions", curie=DUFMECH.curie('regions'),
+                   model_uri=DUFMECH.regionReasoningGraph__regions, domain=None, range=Union[Union[dict, SequenceRegion], list[Union[dict, SequenceRegion]]])
+
+slots.regionReasoningGraph__coordinate_mappings = Slot(uri=DUFMECH.coordinate_mappings, name="regionReasoningGraph__coordinate_mappings", curie=DUFMECH.curie('coordinate_mappings'),
+                   model_uri=DUFMECH.regionReasoningGraph__coordinate_mappings, domain=None, range=Optional[Union[Union[dict, CoordinateMapping], list[Union[dict, CoordinateMapping]]]])
+
+slots.regionReasoningGraph__observations = Slot(uri=DUFMECH.observations, name="regionReasoningGraph__observations", curie=DUFMECH.curie('observations'),
+                   model_uri=DUFMECH.regionReasoningGraph__observations, domain=None, range=Union[Union[dict, RegionObservation], list[Union[dict, RegionObservation]]])
+
+slots.regionReasoningGraph__evidence_groups = Slot(uri=DUFMECH.evidence_groups, name="regionReasoningGraph__evidence_groups", curie=DUFMECH.curie('evidence_groups'),
+                   model_uri=DUFMECH.regionReasoningGraph__evidence_groups, domain=None, range=Optional[Union[Union[dict, EvidenceGroup], list[Union[dict, EvidenceGroup]]]])
+
+slots.regionReasoningGraph__synthesized_claims = Slot(uri=DUFMECH.synthesized_claims, name="regionReasoningGraph__synthesized_claims", curie=DUFMECH.curie('synthesized_claims'),
+                   model_uri=DUFMECH.regionReasoningGraph__synthesized_claims, domain=None, range=Union[Union[dict, SynthesizedClaim], list[Union[dict, SynthesizedClaim]]])
+
+slots.regionReasoningGraph__reasoning_edges = Slot(uri=DUFMECH.reasoning_edges, name="regionReasoningGraph__reasoning_edges", curie=DUFMECH.curie('reasoning_edges'),
+                   model_uri=DUFMECH.regionReasoningGraph__reasoning_edges, domain=None, range=Union[Union[dict, ReasoningEdge], list[Union[dict, ReasoningEdge]]])
+
+slots.regionReasoningGraph__causal_graph_refs = Slot(uri=DUFMECH.causal_graph_refs, name="regionReasoningGraph__causal_graph_refs", curie=DUFMECH.curie('causal_graph_refs'),
+                   model_uri=DUFMECH.regionReasoningGraph__causal_graph_refs, domain=None, range=Optional[Union[str, list[str]]],
+                   pattern=re.compile(r'^[A-Za-z0-9_-]+$'))
+
+slots.sequenceIdentity__sequence_id = Slot(uri=DUFMECH.sequence_id, name="sequenceIdentity__sequence_id", curie=DUFMECH.curie('sequence_id'),
+                   model_uri=DUFMECH.sequenceIdentity__sequence_id, domain=None, range=str,
+                   pattern=re.compile(r'^[A-Za-z0-9_.:-]+$'))
+
+slots.sequenceIdentity__uniprot_accession = Slot(uri=DUFMECH.uniprot_accession, name="sequenceIdentity__uniprot_accession", curie=DUFMECH.curie('uniprot_accession'),
+                   model_uri=DUFMECH.sequenceIdentity__uniprot_accession, domain=None, range=str,
+                   pattern=re.compile(r'^([OPQ][0-9][A-Z0-9]{3}[0-9]|[A-NR-Z][0-9]([A-Z][A-Z0-9]{2}[0-9]){1,2})$'))
+
+slots.sequenceIdentity__isoform = Slot(uri=DUFMECH.isoform, name="sequenceIdentity__isoform", curie=DUFMECH.curie('isoform'),
+                   model_uri=DUFMECH.sequenceIdentity__isoform, domain=None, range=Optional[str],
+                   pattern=re.compile(r'^([OPQ][0-9][A-Z0-9]{3}[0-9]|[A-NR-Z][0-9]([A-Z][A-Z0-9]{2}[0-9]){1,2})-[0-9]+$'))
+
+slots.sequenceIdentity__sequence_version = Slot(uri=DUFMECH.sequence_version, name="sequenceIdentity__sequence_version", curie=DUFMECH.curie('sequence_version'),
+                   model_uri=DUFMECH.sequenceIdentity__sequence_version, domain=None, range=Optional[int])
+
+slots.sequenceIdentity__sequence_length = Slot(uri=DUFMECH.sequence_length, name="sequenceIdentity__sequence_length", curie=DUFMECH.curie('sequence_length'),
+                   model_uri=DUFMECH.sequenceIdentity__sequence_length, domain=None, range=int)
+
+slots.sequenceIdentity__sequence_sha256 = Slot(uri=DUFMECH.sequence_sha256, name="sequenceIdentity__sequence_sha256", curie=DUFMECH.curie('sequence_sha256'),
+                   model_uri=DUFMECH.sequenceIdentity__sequence_sha256, domain=None, range=str,
+                   pattern=re.compile(r'^[a-f0-9]{64}$'))
+
+slots.sequenceIdentity__sequence_md5 = Slot(uri=DUFMECH.sequence_md5, name="sequenceIdentity__sequence_md5", curie=DUFMECH.curie('sequence_md5'),
+                   model_uri=DUFMECH.sequenceIdentity__sequence_md5, domain=None, range=Optional[str],
+                   pattern=re.compile(r'^[a-f0-9]{32}$'))
+
+slots.sequenceIdentity__taxon_id = Slot(uri=DUFMECH.taxon_id, name="sequenceIdentity__taxon_id", curie=DUFMECH.curie('taxon_id'),
+                   model_uri=DUFMECH.sequenceIdentity__taxon_id, domain=None, range=Optional[str],
+                   pattern=re.compile(r'^NCBITaxon:[0-9]+$'))
+
+slots.sequenceIdentity__organism = Slot(uri=DUFMECH.organism, name="sequenceIdentity__organism", curie=DUFMECH.curie('organism'),
+                   model_uri=DUFMECH.sequenceIdentity__organism, domain=None, range=Optional[str])
+
+slots.sequenceIdentity__uniprot_release = Slot(uri=DUFMECH.uniprot_release, name="sequenceIdentity__uniprot_release", curie=DUFMECH.curie('uniprot_release'),
+                   model_uri=DUFMECH.sequenceIdentity__uniprot_release, domain=None, range=Optional[str])
+
+slots.sequenceIdentity__source_url = Slot(uri=DUFMECH.source_url, name="sequenceIdentity__source_url", curie=DUFMECH.curie('source_url'),
+                   model_uri=DUFMECH.sequenceIdentity__source_url, domain=None, range=Optional[Union[str, URI]])
+
+slots.sequenceInterval__start = Slot(uri=DUFMECH.start, name="sequenceInterval__start", curie=DUFMECH.curie('start'),
+                   model_uri=DUFMECH.sequenceInterval__start, domain=None, range=int)
+
+slots.sequenceInterval__end = Slot(uri=DUFMECH.end, name="sequenceInterval__end", curie=DUFMECH.curie('end'),
+                   model_uri=DUFMECH.sequenceInterval__end, domain=None, range=int)
+
+slots.sequenceInterval__start_uncertain = Slot(uri=DUFMECH.start_uncertain, name="sequenceInterval__start_uncertain", curie=DUFMECH.curie('start_uncertain'),
+                   model_uri=DUFMECH.sequenceInterval__start_uncertain, domain=None, range=Optional[Union[bool, Bool]])
+
+slots.sequenceInterval__end_uncertain = Slot(uri=DUFMECH.end_uncertain, name="sequenceInterval__end_uncertain", curie=DUFMECH.curie('end_uncertain'),
+                   model_uri=DUFMECH.sequenceInterval__end_uncertain, domain=None, range=Optional[Union[bool, Bool]])
+
+slots.sequenceInterval__residue_identity = Slot(uri=DUFMECH.residue_identity, name="sequenceInterval__residue_identity", curie=DUFMECH.curie('residue_identity'),
+                   model_uri=DUFMECH.sequenceInterval__residue_identity, domain=None, range=Optional[str],
+                   pattern=re.compile(r'^[A-Z]+$'))
+
+slots.sequenceRegion__region_id = Slot(uri=DUFMECH.region_id, name="sequenceRegion__region_id", curie=DUFMECH.curie('region_id'),
+                   model_uri=DUFMECH.sequenceRegion__region_id, domain=None, range=str,
+                   pattern=re.compile(r'^[A-Za-z0-9_.:-]+$'))
+
+slots.sequenceRegion__sequence_id = Slot(uri=DUFMECH.sequence_id, name="sequenceRegion__sequence_id", curie=DUFMECH.curie('sequence_id'),
+                   model_uri=DUFMECH.sequenceRegion__sequence_id, domain=None, range=str,
+                   pattern=re.compile(r'^[A-Za-z0-9_.:-]+$'))
+
+slots.sequenceRegion__label = Slot(uri=DUFMECH.label, name="sequenceRegion__label", curie=DUFMECH.curie('label'),
+                   model_uri=DUFMECH.sequenceRegion__label, domain=None, range=str)
+
+slots.sequenceRegion__region_kind = Slot(uri=DUFMECH.region_kind, name="sequenceRegion__region_kind", curie=DUFMECH.curie('region_kind'),
+                   model_uri=DUFMECH.sequenceRegion__region_kind, domain=None, range=Union[str, "RegionKind"])
+
+slots.sequenceRegion__coordinate_status = Slot(uri=DUFMECH.coordinate_status, name="sequenceRegion__coordinate_status", curie=DUFMECH.curie('coordinate_status'),
+                   model_uri=DUFMECH.sequenceRegion__coordinate_status, domain=None, range=Union[str, "CoordinateStatus"])
+
+slots.sequenceRegion__intervals = Slot(uri=DUFMECH.intervals, name="sequenceRegion__intervals", curie=DUFMECH.curie('intervals'),
+                   model_uri=DUFMECH.sequenceRegion__intervals, domain=None, range=Optional[Union[Union[dict, SequenceInterval], list[Union[dict, SequenceInterval]]]])
+
+slots.sequenceRegion__source_coordinate_system = Slot(uri=DUFMECH.source_coordinate_system, name="sequenceRegion__source_coordinate_system", curie=DUFMECH.curie('source_coordinate_system'),
+                   model_uri=DUFMECH.sequenceRegion__source_coordinate_system, domain=None, range=Union[str, "CoordinateSystem"])
+
+slots.sequenceRegion__source_coordinates_text = Slot(uri=DUFMECH.source_coordinates_text, name="sequenceRegion__source_coordinates_text", curie=DUFMECH.curie('source_coordinates_text'),
+                   model_uri=DUFMECH.sequenceRegion__source_coordinates_text, domain=None, range=Optional[str])
+
+slots.sequenceRegion__conversion_provenance = Slot(uri=DUFMECH.conversion_provenance, name="sequenceRegion__conversion_provenance", curie=DUFMECH.curie('conversion_provenance'),
+                   model_uri=DUFMECH.sequenceRegion__conversion_provenance, domain=None, range=Optional[str])
+
+slots.sequenceRegion__pfam_id = Slot(uri=DUFMECH.pfam_id, name="sequenceRegion__pfam_id", curie=DUFMECH.curie('pfam_id'),
+                   model_uri=DUFMECH.sequenceRegion__pfam_id, domain=None, range=Optional[str],
+                   pattern=re.compile(r'^PF[0-9]{5}$'))
+
+slots.sequenceRegion__interpro_id = Slot(uri=DUFMECH.interpro_id, name="sequenceRegion__interpro_id", curie=DUFMECH.curie('interpro_id'),
+                   model_uri=DUFMECH.sequenceRegion__interpro_id, domain=None, range=Optional[str],
+                   pattern=re.compile(r'^InterPro:IPR[0-9]{6}$'))
+
+slots.residueCorrespondence__source_position = Slot(uri=DUFMECH.source_position, name="residueCorrespondence__source_position", curie=DUFMECH.curie('source_position'),
+                   model_uri=DUFMECH.residueCorrespondence__source_position, domain=None, range=int)
+
+slots.residueCorrespondence__source_residue = Slot(uri=DUFMECH.source_residue, name="residueCorrespondence__source_residue", curie=DUFMECH.curie('source_residue'),
+                   model_uri=DUFMECH.residueCorrespondence__source_residue, domain=None, range=Optional[str],
+                   pattern=re.compile(r'^[A-Z]$'))
+
+slots.residueCorrespondence__target_position = Slot(uri=DUFMECH.target_position, name="residueCorrespondence__target_position", curie=DUFMECH.curie('target_position'),
+                   model_uri=DUFMECH.residueCorrespondence__target_position, domain=None, range=int)
+
+slots.residueCorrespondence__target_residue = Slot(uri=DUFMECH.target_residue, name="residueCorrespondence__target_residue", curie=DUFMECH.curie('target_residue'),
+                   model_uri=DUFMECH.residueCorrespondence__target_residue, domain=None, range=Optional[str],
+                   pattern=re.compile(r'^[A-Z]$'))
+
+slots.residueCorrespondence__pdb_insertion_code = Slot(uri=DUFMECH.pdb_insertion_code, name="residueCorrespondence__pdb_insertion_code", curie=DUFMECH.curie('pdb_insertion_code'),
+                   model_uri=DUFMECH.residueCorrespondence__pdb_insertion_code, domain=None, range=Optional[str],
+                   pattern=re.compile(r'^[A-Za-z0-9]$'))
+
+slots.residueCorrespondence__mutation_substitution = Slot(uri=DUFMECH.mutation_substitution, name="residueCorrespondence__mutation_substitution", curie=DUFMECH.curie('mutation_substitution'),
+                   model_uri=DUFMECH.residueCorrespondence__mutation_substitution, domain=None, range=Optional[str],
+                   pattern=re.compile(r'^[A-Z][0-9]+[A-Z*]$'))
+
+slots.residueCorrespondence__note = Slot(uri=DUFMECH.note, name="residueCorrespondence__note", curie=DUFMECH.curie('note'),
+                   model_uri=DUFMECH.residueCorrespondence__note, domain=None, range=Optional[str])
+
+slots.coordinateMapping__mapping_id = Slot(uri=DUFMECH.mapping_id, name="coordinateMapping__mapping_id", curie=DUFMECH.curie('mapping_id'),
+                   model_uri=DUFMECH.coordinateMapping__mapping_id, domain=None, range=str,
+                   pattern=re.compile(r'^[A-Za-z0-9_.:-]+$'))
+
+slots.coordinateMapping__source_region_id = Slot(uri=DUFMECH.source_region_id, name="coordinateMapping__source_region_id", curie=DUFMECH.curie('source_region_id'),
+                   model_uri=DUFMECH.coordinateMapping__source_region_id, domain=None, range=str,
+                   pattern=re.compile(r'^[A-Za-z0-9_.:-]+$'))
+
+slots.coordinateMapping__target_region_id = Slot(uri=DUFMECH.target_region_id, name="coordinateMapping__target_region_id", curie=DUFMECH.curie('target_region_id'),
+                   model_uri=DUFMECH.coordinateMapping__target_region_id, domain=None, range=str,
+                   pattern=re.compile(r'^[A-Za-z0-9_.:-]+$'))
+
+slots.coordinateMapping__mapping_kind = Slot(uri=DUFMECH.mapping_kind, name="coordinateMapping__mapping_kind", curie=DUFMECH.curie('mapping_kind'),
+                   model_uri=DUFMECH.coordinateMapping__mapping_kind, domain=None, range=Union[str, "CoordinateMappingKind"])
+
+slots.coordinateMapping__equivalence_status = Slot(uri=DUFMECH.equivalence_status, name="coordinateMapping__equivalence_status", curie=DUFMECH.curie('equivalence_status'),
+                   model_uri=DUFMECH.coordinateMapping__equivalence_status, domain=None, range=Union[str, "MappingEquivalenceStatus"])
+
+slots.coordinateMapping__overlap_residues = Slot(uri=DUFMECH.overlap_residues, name="coordinateMapping__overlap_residues", curie=DUFMECH.curie('overlap_residues'),
+                   model_uri=DUFMECH.coordinateMapping__overlap_residues, domain=None, range=Optional[int])
+
+slots.coordinateMapping__source_coverage = Slot(uri=DUFMECH.source_coverage, name="coordinateMapping__source_coverage", curie=DUFMECH.curie('source_coverage'),
+                   model_uri=DUFMECH.coordinateMapping__source_coverage, domain=None, range=Optional[float])
+
+slots.coordinateMapping__target_coverage = Slot(uri=DUFMECH.target_coverage, name="coordinateMapping__target_coverage", curie=DUFMECH.curie('target_coverage'),
+                   model_uri=DUFMECH.coordinateMapping__target_coverage, domain=None, range=Optional[float])
+
+slots.coordinateMapping__alignment_gaps = Slot(uri=DUFMECH.alignment_gaps, name="coordinateMapping__alignment_gaps", curie=DUFMECH.curie('alignment_gaps'),
+                   model_uri=DUFMECH.coordinateMapping__alignment_gaps, domain=None, range=Optional[int])
+
+slots.coordinateMapping__residue_correspondences = Slot(uri=DUFMECH.residue_correspondences, name="coordinateMapping__residue_correspondences", curie=DUFMECH.curie('residue_correspondences'),
+                   model_uri=DUFMECH.coordinateMapping__residue_correspondences, domain=None, range=Optional[Union[Union[dict, ResidueCorrespondence], list[Union[dict, ResidueCorrespondence]]]])
+
+slots.coordinateMapping__mapping_uncertainty = Slot(uri=DUFMECH.mapping_uncertainty, name="coordinateMapping__mapping_uncertainty", curie=DUFMECH.curie('mapping_uncertainty'),
+                   model_uri=DUFMECH.coordinateMapping__mapping_uncertainty, domain=None, range=Optional[str])
+
+slots.coordinateMapping__provenance_note = Slot(uri=DUFMECH.provenance_note, name="coordinateMapping__provenance_note", curie=DUFMECH.curie('provenance_note'),
+                   model_uri=DUFMECH.coordinateMapping__provenance_note, domain=None, range=str)
+
+slots.regionObservation__observation_id = Slot(uri=DUFMECH.observation_id, name="regionObservation__observation_id", curie=DUFMECH.curie('observation_id'),
+                   model_uri=DUFMECH.regionObservation__observation_id, domain=None, range=str,
+                   pattern=re.compile(r'^[A-Za-z0-9_.:-]+$'))
+
+slots.regionObservation__region_id = Slot(uri=DUFMECH.region_id, name="regionObservation__region_id", curie=DUFMECH.curie('region_id'),
+                   model_uri=DUFMECH.regionObservation__region_id, domain=None, range=str,
+                   pattern=re.compile(r'^[A-Za-z0-9_.:-]+$'))
+
+slots.regionObservation__sequence_id = Slot(uri=DUFMECH.sequence_id, name="regionObservation__sequence_id", curie=DUFMECH.curie('sequence_id'),
+                   model_uri=DUFMECH.regionObservation__sequence_id, domain=None, range=str,
+                   pattern=re.compile(r'^[A-Za-z0-9_.:-]+$'))
+
+slots.regionObservation__evidence_kind = Slot(uri=DUFMECH.evidence_kind, name="regionObservation__evidence_kind", curie=DUFMECH.curie('evidence_kind'),
+                   model_uri=DUFMECH.regionObservation__evidence_kind, domain=None, range=Union[str, "EvidenceKind"])
+
+slots.regionObservation__source_kind = Slot(uri=DUFMECH.source_kind, name="regionObservation__source_kind", curie=DUFMECH.curie('source_kind'),
+                   model_uri=DUFMECH.regionObservation__source_kind, domain=None, range=Union[str, "ObservationSourceKind"])
+
+slots.regionObservation__method = Slot(uri=DUFMECH.method, name="regionObservation__method", curie=DUFMECH.curie('method'),
+                   model_uri=DUFMECH.regionObservation__method, domain=None, range=str)
+
+slots.regionObservation__assay_conditions = Slot(uri=DUFMECH.assay_conditions, name="regionObservation__assay_conditions", curie=DUFMECH.curie('assay_conditions'),
+                   model_uri=DUFMECH.regionObservation__assay_conditions, domain=None, range=Optional[str])
+
+slots.regionObservation__tested_construct_region_id = Slot(uri=DUFMECH.tested_construct_region_id, name="regionObservation__tested_construct_region_id", curie=DUFMECH.curie('tested_construct_region_id'),
+                   model_uri=DUFMECH.regionObservation__tested_construct_region_id, domain=None, range=Optional[str],
+                   pattern=re.compile(r'^[A-Za-z0-9_.:-]+$'))
+
+slots.regionObservation__mutation_region_ids = Slot(uri=DUFMECH.mutation_region_ids, name="regionObservation__mutation_region_ids", curie=DUFMECH.curie('mutation_region_ids'),
+                   model_uri=DUFMECH.regionObservation__mutation_region_ids, domain=None, range=Optional[Union[str, list[str]]],
+                   pattern=re.compile(r'^[A-Za-z0-9_.:-]+$'))
+
+slots.regionObservation__observed_effect = Slot(uri=DUFMECH.observed_effect, name="regionObservation__observed_effect", curie=DUFMECH.curie('observed_effect'),
+                   model_uri=DUFMECH.regionObservation__observed_effect, domain=None, range=str)
+
+slots.regionObservation__interpretation = Slot(uri=DUFMECH.interpretation, name="regionObservation__interpretation", curie=DUFMECH.curie('interpretation'),
+                   model_uri=DUFMECH.regionObservation__interpretation, domain=None, range=str)
+
+slots.regionObservation__polarity = Slot(uri=DUFMECH.polarity, name="regionObservation__polarity", curie=DUFMECH.curie('polarity'),
+                   model_uri=DUFMECH.regionObservation__polarity, domain=None, range=Union[str, "ObservationPolarity"])
+
+slots.regionObservation__raw_score = Slot(uri=DUFMECH.raw_score, name="regionObservation__raw_score", curie=DUFMECH.curie('raw_score'),
+                   model_uri=DUFMECH.regionObservation__raw_score, domain=None, range=Optional[float])
+
+slots.regionObservation__score_metric = Slot(uri=DUFMECH.score_metric, name="regionObservation__score_metric", curie=DUFMECH.curie('score_metric'),
+                   model_uri=DUFMECH.regionObservation__score_metric, domain=None, range=Optional[Union[str, "ScoreMetricKind"]])
+
+slots.regionObservation__primary_experiment_key = Slot(uri=DUFMECH.primary_experiment_key, name="regionObservation__primary_experiment_key", curie=DUFMECH.curie('primary_experiment_key'),
+                   model_uri=DUFMECH.regionObservation__primary_experiment_key, domain=None, range=str,
+                   pattern=re.compile(r'^[A-Za-z0-9_.:/-]+$'))
+
+slots.regionObservation__derived_from_observation_ids = Slot(uri=DUFMECH.derived_from_observation_ids, name="regionObservation__derived_from_observation_ids", curie=DUFMECH.curie('derived_from_observation_ids'),
+                   model_uri=DUFMECH.regionObservation__derived_from_observation_ids, domain=None, range=Optional[Union[str, list[str]]],
+                   pattern=re.compile(r'^[A-Za-z0-9_.:-]+$'))
+
+slots.regionObservation__limitations = Slot(uri=DUFMECH.limitations, name="regionObservation__limitations", curie=DUFMECH.curie('limitations'),
+                   model_uri=DUFMECH.regionObservation__limitations, domain=None, range=Optional[str])
+
+slots.regionObservation__evidence = Slot(uri=DUFMECH.evidence, name="regionObservation__evidence", curie=DUFMECH.curie('evidence'),
+                   model_uri=DUFMECH.regionObservation__evidence, domain=None, range=Optional[Union[Union[dict, ClaimEvidence], list[Union[dict, ClaimEvidence]]]])
+
+slots.evidenceGroup__group_id = Slot(uri=DUFMECH.group_id, name="evidenceGroup__group_id", curie=DUFMECH.curie('group_id'),
+                   model_uri=DUFMECH.evidenceGroup__group_id, domain=None, range=str,
+                   pattern=re.compile(r'^[A-Za-z0-9_.:-]+$'))
+
+slots.evidenceGroup__primary_experiment_key = Slot(uri=DUFMECH.primary_experiment_key, name="evidenceGroup__primary_experiment_key", curie=DUFMECH.curie('primary_experiment_key'),
+                   model_uri=DUFMECH.evidenceGroup__primary_experiment_key, domain=None, range=str,
+                   pattern=re.compile(r'^[A-Za-z0-9_.:/-]+$'))
+
+slots.evidenceGroup__evidence_kind = Slot(uri=DUFMECH.evidence_kind, name="evidenceGroup__evidence_kind", curie=DUFMECH.curie('evidence_kind'),
+                   model_uri=DUFMECH.evidenceGroup__evidence_kind, domain=None, range=Union[str, "EvidenceKind"])
+
+slots.evidenceGroup__polarity = Slot(uri=DUFMECH.polarity, name="evidenceGroup__polarity", curie=DUFMECH.curie('polarity'),
+                   model_uri=DUFMECH.evidenceGroup__polarity, domain=None, range=Union[str, "ObservationPolarity"])
+
+slots.evidenceGroup__observation_ids = Slot(uri=DUFMECH.observation_ids, name="evidenceGroup__observation_ids", curie=DUFMECH.curie('observation_ids'),
+                   model_uri=DUFMECH.evidenceGroup__observation_ids, domain=None, range=Union[str, list[str]],
+                   pattern=re.compile(r'^[A-Za-z0-9_.:-]+$'))
+
+slots.evidenceGroup__deduplication_rationale = Slot(uri=DUFMECH.deduplication_rationale, name="evidenceGroup__deduplication_rationale", curie=DUFMECH.curie('deduplication_rationale'),
+                   model_uri=DUFMECH.evidenceGroup__deduplication_rationale, domain=None, range=str)
+
+slots.synthesizedClaim__claim_id = Slot(uri=DUFMECH.claim_id, name="synthesizedClaim__claim_id", curie=DUFMECH.curie('claim_id'),
+                   model_uri=DUFMECH.synthesizedClaim__claim_id, domain=None, range=str,
+                   pattern=re.compile(r'^[A-Za-z0-9_.:-]+$'))
+
+slots.synthesizedClaim__label = Slot(uri=DUFMECH.label, name="synthesizedClaim__label", curie=DUFMECH.curie('label'),
+                   model_uri=DUFMECH.synthesizedClaim__label, domain=None, range=str)
+
+slots.synthesizedClaim__function_aspect = Slot(uri=DUFMECH.function_aspect, name="synthesizedClaim__function_aspect", curie=DUFMECH.curie('function_aspect'),
+                   model_uri=DUFMECH.synthesizedClaim__function_aspect, domain=None, range=Union[str, "FunctionAspect"])
+
+slots.synthesizedClaim__ontology_term_id = Slot(uri=DUFMECH.ontology_term_id, name="synthesizedClaim__ontology_term_id", curie=DUFMECH.curie('ontology_term_id'),
+                   model_uri=DUFMECH.synthesizedClaim__ontology_term_id, domain=None, range=Optional[str],
+                   pattern=re.compile(r'^(GO:[0-9]{7}|Rhea:[0-9]+|EC:[0-9]+(\.[0-9-]+){0,3}|CHEBI:[0-9]+|Pfam:PF[0-9]{5}|InterPro:IPR[0-9]{6}|UniProtKB:[A-Z0-9-]+)$'))
+
+slots.synthesizedClaim__ontology_term_label = Slot(uri=DUFMECH.ontology_term_label, name="synthesizedClaim__ontology_term_label", curie=DUFMECH.curie('ontology_term_label'),
+                   model_uri=DUFMECH.synthesizedClaim__ontology_term_label, domain=None, range=Optional[str])
+
+slots.synthesizedClaim__target_region_id = Slot(uri=DUFMECH.target_region_id, name="synthesizedClaim__target_region_id", curie=DUFMECH.curie('target_region_id'),
+                   model_uri=DUFMECH.synthesizedClaim__target_region_id, domain=None, range=str,
+                   pattern=re.compile(r'^[A-Za-z0-9_.:-]+$'))
+
+slots.synthesizedClaim__claimed_scope = Slot(uri=DUFMECH.claimed_scope, name="synthesizedClaim__claimed_scope", curie=DUFMECH.curie('claimed_scope'),
+                   model_uri=DUFMECH.synthesizedClaim__claimed_scope, domain=None, range=Union[str, "ClaimScope"])
+
+slots.synthesizedClaim__synthesis_status = Slot(uri=DUFMECH.synthesis_status, name="synthesizedClaim__synthesis_status", curie=DUFMECH.curie('synthesis_status'),
+                   model_uri=DUFMECH.synthesizedClaim__synthesis_status, domain=None, range=Union[str, "SynthesisStatus"])
+
+slots.synthesizedClaim__supporting_evidence_groups = Slot(uri=DUFMECH.supporting_evidence_groups, name="synthesizedClaim__supporting_evidence_groups", curie=DUFMECH.curie('supporting_evidence_groups'),
+                   model_uri=DUFMECH.synthesizedClaim__supporting_evidence_groups, domain=None, range=Optional[Union[str, list[str]]],
+                   pattern=re.compile(r'^[A-Za-z0-9_.:-]+$'))
+
+slots.synthesizedClaim__contradicting_evidence_groups = Slot(uri=DUFMECH.contradicting_evidence_groups, name="synthesizedClaim__contradicting_evidence_groups", curie=DUFMECH.curie('contradicting_evidence_groups'),
+                   model_uri=DUFMECH.synthesizedClaim__contradicting_evidence_groups, domain=None, range=Optional[Union[str, list[str]]],
+                   pattern=re.compile(r'^[A-Za-z0-9_.:-]+$'))
+
+slots.synthesizedClaim__supporting_observation_ids = Slot(uri=DUFMECH.supporting_observation_ids, name="synthesizedClaim__supporting_observation_ids", curie=DUFMECH.curie('supporting_observation_ids'),
+                   model_uri=DUFMECH.synthesizedClaim__supporting_observation_ids, domain=None, range=Optional[Union[str, list[str]]],
+                   pattern=re.compile(r'^[A-Za-z0-9_.:-]+$'))
+
+slots.synthesizedClaim__contradicting_observation_ids = Slot(uri=DUFMECH.contradicting_observation_ids, name="synthesizedClaim__contradicting_observation_ids", curie=DUFMECH.curie('contradicting_observation_ids'),
+                   model_uri=DUFMECH.synthesizedClaim__contradicting_observation_ids, domain=None, range=Optional[Union[str, list[str]]],
+                   pattern=re.compile(r'^[A-Za-z0-9_.:-]+$'))
+
+slots.synthesizedClaim__mapping_ids = Slot(uri=DUFMECH.mapping_ids, name="synthesizedClaim__mapping_ids", curie=DUFMECH.curie('mapping_ids'),
+                   model_uri=DUFMECH.synthesizedClaim__mapping_ids, domain=None, range=Optional[Union[str, list[str]]],
+                   pattern=re.compile(r'^[A-Za-z0-9_.:-]+$'))
+
+slots.synthesizedClaim__scope_rationale = Slot(uri=DUFMECH.scope_rationale, name="synthesizedClaim__scope_rationale", curie=DUFMECH.curie('scope_rationale'),
+                   model_uri=DUFMECH.synthesizedClaim__scope_rationale, domain=None, range=str)
+
+slots.synthesizedClaim__scope_transfer_blocks = Slot(uri=DUFMECH.scope_transfer_blocks, name="synthesizedClaim__scope_transfer_blocks", curie=DUFMECH.curie('scope_transfer_blocks'),
+                   model_uri=DUFMECH.synthesizedClaim__scope_transfer_blocks, domain=None, range=Optional[Union[str, list[str]]])
+
+slots.synthesizedClaim__synthesis_explanation = Slot(uri=DUFMECH.synthesis_explanation, name="synthesizedClaim__synthesis_explanation", curie=DUFMECH.curie('synthesis_explanation'),
+                   model_uri=DUFMECH.synthesizedClaim__synthesis_explanation, domain=None, range=str)
+
+slots.synthesizedClaim__discriminating_experiments = Slot(uri=DUFMECH.discriminating_experiments, name="synthesizedClaim__discriminating_experiments", curie=DUFMECH.curie('discriminating_experiments'),
+                   model_uri=DUFMECH.synthesizedClaim__discriminating_experiments, domain=None, range=Optional[Union[str, list[str]]])
+
+slots.reasoningEdge__edge_id = Slot(uri=DUFMECH.edge_id, name="reasoningEdge__edge_id", curie=DUFMECH.curie('edge_id'),
+                   model_uri=DUFMECH.reasoningEdge__edge_id, domain=None, range=str,
+                   pattern=re.compile(r'^[A-Za-z0-9_.:-]+$'))
+
+slots.reasoningEdge__subject = Slot(uri=DUFMECH.subject, name="reasoningEdge__subject", curie=DUFMECH.curie('subject'),
+                   model_uri=DUFMECH.reasoningEdge__subject, domain=None, range=str,
+                   pattern=re.compile(r'^[A-Za-z0-9_.:-]+$'))
+
+slots.reasoningEdge__predicate = Slot(uri=DUFMECH.predicate, name="reasoningEdge__predicate", curie=DUFMECH.curie('predicate'),
+                   model_uri=DUFMECH.reasoningEdge__predicate, domain=None, range=Union[str, "ReasoningPredicate"])
+
+slots.reasoningEdge__object = Slot(uri=DUFMECH.object, name="reasoningEdge__object", curie=DUFMECH.curie('object'),
+                   model_uri=DUFMECH.reasoningEdge__object, domain=None, range=str,
+                   pattern=re.compile(r'^[A-Za-z0-9_.:-]+$'))
+
+slots.reasoningEdge__edge_category = Slot(uri=DUFMECH.edge_category, name="reasoningEdge__edge_category", curie=DUFMECH.curie('edge_category'),
+                   model_uri=DUFMECH.reasoningEdge__edge_category, domain=None, range=Union[str, "ReasoningEdgeCategory"])
+
+slots.reasoningEdge__support = Slot(uri=DUFMECH.support, name="reasoningEdge__support", curie=DUFMECH.curie('support'),
+                   model_uri=DUFMECH.reasoningEdge__support, domain=None, range=Union[str, "CausalSupport"])
+
+slots.reasoningEdge__evidence_kind = Slot(uri=DUFMECH.evidence_kind, name="reasoningEdge__evidence_kind", curie=DUFMECH.curie('evidence_kind'),
+                   model_uri=DUFMECH.reasoningEdge__evidence_kind, domain=None, range=Union[str, "EvidenceKind"])
+
+slots.reasoningEdge__rationale = Slot(uri=DUFMECH.rationale, name="reasoningEdge__rationale", curie=DUFMECH.curie('rationale'),
+                   model_uri=DUFMECH.reasoningEdge__rationale, domain=None, range=str)
 
 slots.crossCorpusLink__corpus = Slot(uri=MECH_SHARED.corpus, name="crossCorpusLink__corpus", curie=MECH_SHARED.curie('corpus'),
                    model_uri=DUFMECH.crossCorpusLink__corpus, domain=None, range=str)

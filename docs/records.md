@@ -10,12 +10,13 @@ curation. They are not interchangeable review states.
   snapshot. All imported families begin as `SEEDED`, not scientifically reviewed.
 - `curation/families/PFxxxxx.yaml` holds human-owned overlays. The closed
   `FamilyCuration` schema permits assertions, discussions, datasets, cross-corpus
-  links and causal graphs, but cannot override the Pfam identity, source label or
-  counters.
+  links, causal graphs and sequence-coordinate reasoning graphs, but cannot override
+  the Pfam identity, source label or counters.
 - A non-seed status or any curated assertion, discussion, dataset, cross-corpus
-  link or causal graph requires `curation_history: history/records/PFxxxxx` and at
-  least one actual canonical event about that family's overlay or projection.
-  Append it through `just new-history`; the generator does not invent actors or events.
+  link, causal graph or sequence-coordinate reasoning graph requires
+  `curation_history: history/records/PFxxxxx` and at least one actual canonical event
+  about that family's overlay or projection. Append it through `just new-history`;
+  the generator does not invent actors or events.
 - `evidence/*.txt` contains appropriately licensed, minimal source extracts for
   assertion and causal-edge quotation checks. Never commit restricted full-text publications.
 - Timestamped structured review bundles and canonical history YAML remain separate retained
@@ -176,5 +177,8 @@ KGX, SSSOM, paid/provider-specific research and embedding services are optional
 products without a committed downstream consumer here. Disease-specific exports
 and clinical metadata do not apply to a family seed corpus. Evidence-backed causal
 graphs can be curated separately; see [causal-graphs.md](causal-graphs.md).
+Sequence-coordinate-aware reasoning graphs, region normalization, dependent-evidence
+deduplication, and claim synthesis are documented in
+[sequence-coordinate-reasoning.md](sequence-coordinate-reasoning.md).
 The source adapters remain available, and curated discussions can hold unresolved
 questions without pretending that automated seed classification resolves them.
