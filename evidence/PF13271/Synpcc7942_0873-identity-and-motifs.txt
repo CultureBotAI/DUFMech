@@ -1,0 +1,64 @@
+PF13271 / Synechococcus elongatus Synpcc7942_0873 identity and motif analysis,
+inspected 2026-10-30
+
+Sources inspected (locally derived analysis plus two API records):
+https://rest.uniprot.org/uniprotkb/Q31PW6.json
+https://www.ebi.ac.uk/interpro/api/entry/pfam/PF13271/protein/uniprot/Q31PW6/
+https://rest.uniprot.org/uniprotkb/search?query=xref:interpro-IPR025139
+
+IDENTITY
+UniProtKB:Q31PW6 = Synpcc7942_0873, Synechococcus elongatus PCC 7942,
+NCBITaxon:1140. 362 residues; sequence MD5 D2BDF8A5FFDF8C7E75588DB06887F4F3;
+UniParc UPI000049B91D. EMBL CP000100, protein ABB56903.1, RefSeq WP_011242979.1.
+TrEMBL (unreviewed), protein existence PE 4 (predicted). No GOA annotations.
+Q31PW6 Pfam:PF13271 interval: 6-146, inclusive
+UniProt annotates the same DUF4062 domain at 6-146 and a Coils-predicted coiled
+coil at 170-197. Residues ~150-362 carry no InterPro/Pfam match.
+
+This protein is the only object of the assertions in this record's overlay. It is
+not a tested protein: no experiment has been performed on it.
+
+MOTIF ANALYSIS (locally computed; BERIL run 20261030T221227Z-duf4062-ntpase-check)
+Regular-expression scan of the full 362-residue sequence:
+  Walker A, strict G....GK[ST]      0 hits
+  Walker A, relaxed [GA]....GK[ST]  0 hits
+  bare GK[ST]                       0 hits
+  Walker B, [LIVMFA]{4}D[DE]        0 hits
+No P-loop NTPase or NACHT domain is annotated for this protein by InterPro.
+
+DOMAIN CO-OCCURRENCE IN UniProtKB (locally computed from the counts returned by
+the UniProtKB search API, same run; IPR025139 = DUF4062, IPR007111 = NACHT,
+IPR027417 = P-loop containing nucleoside triphosphate hydrolase)
+  all DUF4062 proteins                     4645
+  with P-loop (IPR027417)                  2537   54.6%
+  with NACHT (IPR007111)                   1243   26.8%
+  DUF4062 proteins over 450 aa             2925
+  of those, with P-loop                    2514   85.9%
+  DUF4062 proteins of 450 aa or less       1720
+  of those, with P-loop                      23    1.3%
+  of those, with NACHT                        1    0.06%
+The four reviewed (Swiss-Prot) DUF4062 entries are all large NACHT-containing
+proteins: TEP1 from human, mouse and rat (2627-2629 aa) and Dictyostelium
+DDB_G0287407 (1663 aa).
+
+CONSERVED GLUTAMATE (locally computed; BERIL runs
+20261030T221430Z-duf4062-conserved-glu and 20261030T221521Z-duf4062-hmm-glu)
+Method 1, pairwise: 375 bacterial DUF4062 proteins of 200-450 aa (UniProtKB,
+IPR025139), each aligned globally to Q31PW6 (Biopython PairwiseAligner, BLOSUM62,
+gap -11/-1), retained at >= 20% identity over the domain region.
+  Glu83 identical in 93% of homologs; third most conserved position of the domain
+  after Met1 and Gly70 (99%). Next-best Glu: Glu38 (73%), Glu19 (53%), Glu81 (29%).
+Method 2, profile HMM: the Pfam PF13271 HMM (length 146) aligned to the query with
+pyhmmer.
+  Domain hit: query 6-146, HMM 1-141, i-Evalue 1.4e-53, score 167.1
+  Glu83 maps to HMM match state 78, consensus residue uppercase E,
+    match emission probability for Glu P(E) = 0.602 (highest of any query Glu)
+  Glu81 maps to state 76, P(E) = 0.197
+Sequence context of Glu83: residues 76-84 are GLSYTEKEY.
+
+LIMITS
+The correspondence between Q31PW6 Glu83 and the experimentally tested Klebsiella
+E97 is inferred from family-wide conservation and the Pfam model. The Klebsiella
+sequence used in the source experiments is given only in that preprint's
+supplementary material and was not aligned here. No activity has been measured for
+Q31PW6.

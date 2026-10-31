@@ -1,0 +1,54 @@
+PF13271 / DUF4062: minimal source extract, inspected 2026-10-30
+
+Osinski A, Mayro B, Lopez VA, Schrad J, Choi H, Tomchick DR, Pawlowski K,
+Forsberg K, Shahmoradian SH, Tagliabracci VS.
+"TIR-like NADases act in bacterial immunity and the RNA vault."
+bioRxiv preprint, posted 2026-05-05. NOT PEER REVIEWED.
+PMID:42146377; PMCID:PMC13174449; doi:10.64898/2026.05.01.722283
+https://pubmed.ncbi.nlm.nih.gov/42146377/
+License: Creative Commons Attribution 4.0 International (CC BY 4.0), as stated in
+the PMC record for this preprint. Attribution is to the authors above.
+
+Minimal verbatim quotations retained for causal-edge checking, each labelled with
+its section. No figures, images or raw data are retained.
+
+--- Abstract
+DUF4062 is a widespread family of TIR-like NADases that hydrolyze NAD
+
+--- Results: DUF4062 is a new family of TIR-like domains
+a conserved Glu as a likely catalytic residue
+
+--- Results: Bacterial DUF4062 mediates antiphage defense
+Phage defense required the active site E97 of K. pneumoniae DUF4062 and its auxiliary domain
+
+NAD+ levels were reduced upon phage infection in cells expressing WT KpSwz, but not the E97A mutant
+
+--- Results: KpSwz is a portal-activated NADase
+this activity required the active-site residue E97 and portalBas14
+
+--- Results: Human TEP1 is an active NADase
+Only TEP1 hydrolyzed NAD+ and NADP+, producing ADP-ribose or ADP-ribose phosphate (ADPRP) and nicotinamide (NAM) with activity dependent on the active site E1008
+
+The isolated DUF4062 domain (TEP1886–1113, hereafter TEP1TIR) was sufficient to hydrolyze NAD+ and NADP+
+
+apparent Km of ~6.9 mM for NADP+ and undeterminable for NAD+
+
+the DUF4062 domain lies adjacent to a NACHT ATPase
+
+--- Results: TEP1 is active in the RNA vault
+Purified vaults containing TEP1, but not the E1008A mutant, displayed NADase and NADPase activities
+
+--- Curator notes (not from the source)
+- The bacterial experiments used five selected DUF4062 proteins lying in predicted
+  defence islands, chiefly the Klebsiella pneumoniae protein the authors name
+  Swarozyc (KpSwz). The exact sequences and accessions are given in the preprint's
+  supplementary material, which was not inspected here, so no accession is asserted
+  for KpSwz and its E97 cannot be placed on a Pfam interval from this extract.
+- Of four human DUF4062-NACHT proteins assayed (NWD1, NWD2, NPHP3, TEP1) only TEP1
+  hydrolysed NAD+/NADP+. Catalytic activity is therefore not uniform across proteins
+  carrying this domain.
+- The reported TEP1 kinetics are slow, with an apparent Km near 6.9 mM for NADP+ and
+  undeterminable for NAD+, and specific activity rising with enzyme concentration.
+  A physiological turnover rate is not established.
+- In the human proteins the NTP-hydrolysing NACHT domain is a separate domain
+  adjacent to DUF4062, not part of DUF4062 itself.

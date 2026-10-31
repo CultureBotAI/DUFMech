@@ -36465,14 +36465,16 @@
       "scope_statuses": []
     },
     {
-      "curation_status": "SEEDED",
-      "edge_count": 0,
-      "graph_count": 0,
-      "graph_state": "ABSENT",
+      "curation_status": "IN_PROGRESS",
+      "edge_count": 7,
+      "graph_count": 2,
+      "graph_state": "PRESENT",
       "name": "DUF4062",
       "pfam_id": "PF13271",
-      "record_digest": "880be446d1b56e83320f5ef401282be3fdb1f3e38ba32ee283bf3b898a0a2462",
-      "scope_statuses": []
+      "record_digest": "742e08093c22cc4dffd62c61fd58c271724e2c66691219df0e7671c2d13666fb",
+      "scope_statuses": [
+        "MECHANISTIC"
+      ]
     },
     {
       "curation_status": "SEEDED",
@@ -83308,8 +83310,8 @@
     }
   ],
   "graph_states": {
-    "ABSENT": 8162,
-    "PRESENT": 134
+    "ABSENT": 8161,
+    "PRESENT": 135
   },
   "kind": "structural_inventory_not_scientific_review",
   "records": 8296

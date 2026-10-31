@@ -1,0 +1,74 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF13271
+  path: curation/families/PF13271.yaml
+session:
+  id: 2026-10-30T223000Z-claude-code-9805d8
+  timestamp: '2026-10-30T22:30:00Z'
+  actors:
+  - type: ai_agent
+    name: Claude Code
+    model: claude-opus-5
+    agent_tool: claude-code
+events:
+- type: CREATE
+  outcome: changed
+  summary: 'Create PF13271 (DUF4062) overlay: two mechanistic NAD+-hydrolase causal
+    graphs (human TEP1; Klebsiella portal-activated Swarozyc) and two open discussions
+    on the NTPase label and short bacterial members'
+  details: "Created the first overlay for PF13271 (DUF4062) from a 2026 bioRxiv preprint\n\
+    (PMID:42146377, CC BY 4.0, NOT peer reviewed) plus local sequence analysis.\n\n\
+    Two MECHANISTIC causal graphs, each with hash-checked source extracts:\n\n1. tep1-duf4062-domain-nad-hydrolysis.\
+    \ Human TEP1 (UniProtKB:Q99973, PF13271 at\n   901-1015) hydrolyses NAD+ and NADP+\
+    \ to ADP-ribose or ADP-ribose phosphate plus\n   nicotinamide; the isolated DUF4062-containing\
+    \ construct TEP1 886-1113 is\n   sufficient; activity depends on Glu1008; reconstituted\
+    \ MVP+TEP1 vaults are active\n   and E1008A vaults are not. Grounded: the retrieved\
+    \ sequence confirms residue 1008\n   is Glu and 908/954/976 are Arg, all inside\
+    \ the Pfam interval. Coordinate limit\n   recorded, the tested construct is wider\
+    \ than the interval at both ends.\n\n2. kpswz-portal-triggered-nad-depletion.\
+    \ The Klebsiella DUF4062 protein the authors\n   name Swarozyc hydrolyses NAD+\
+    \ only with the phage Bas14 portal protein and Glu97;\n   infected cells expressing\
+    \ it lose NAD+ while E97A cells do not; phage defence in\n   E. coli required\
+    \ Glu97 and the auxiliary domain, with protection at low and culture\n   collapse\
+    \ at high multiplicity. Nodes are deliberately ungrounded: the tested\n   sequences\
+    \ are only in the preprint's supplementary material, which was not\n   inspected,\
+    \ so no accession is asserted and E97 is not placed on a PF13271 interval.\n \
+    \  The authors' proposed TIR-repositioning step is observed only by modelling\
+    \ and was\n   deliberately left out of the graph.\n\nTwo OPEN discussions:\n-\
+    \ duf4062-ntpase-label-versus-adjacent-nacht (INTERPRETATION): orthogroup labels\
+    \ such\n  as COG5635 transfer an NTPase label from large relatives whose NACHT\
+    \ domain is\n  adjacent to, not part of, DUF4062. In a 2026-10-30 UniProtKB snapshot\
+    \ a P-loop\n  domain co-occurs with DUF4062 in 85.9% of proteins over 450 aa but\
+    \ 1.3% of those of\n  450 aa or less.\n- short-bacterial-duf4062-activity-and-trigger\
+    \ (CURATION_TODO): whether a short\n  stand-alone bacterial member is actually\
+    \ an active NADase. UniProtKB:Q31PW6\n  (Synpcc7942_0873, PF13271 at 6-146 of\
+    \ 362 aa) retains the family's most conserved\n  Glu at Glu83 (93% of 375 short\
+    \ bacterial homologs; Pfam HMM state 78, P(E)=0.602)\n  and has no Walker A or\
+    \ Walker B motif. No causal edge is curated for it, because\n  conservation is\
+    \ not activity and three of four human paralogues assayed were\n  inactive.\n\n\
+    Evidence extracts at evidence/PF13271/ with SHA-256 recorded: the preprint\nquotations\
+    \ (minimal, attributed, CC BY 4.0), the TEP1 identity/coordinate check, and\n\
+    the Synpcc7942_0873 identity and motif analysis.\n\nAlso regenerated the KGX and\
+    \ SSSOM interchange files with `just exports --apply`;\nthe only change is PF13271's\
+    \ curation_status, SEEDED to IN_PROGRESS, one line each.\n\nChecks: `just records\
+    \ --apply`, `just validate-all`, `just sources-check` (0 errors;\nits 16 warnings\
+    \ also occur on an unmodified tree), `just causal-graphs --apply`.\nRemaining:\
+    \ `just qc` fails on the Pages site-source pin ledger for\ndata/families/PF13271.yaml,\
+    \ which per docs/records.md needs an authorized source\ncheckpoint captured against\
+    \ a published commit; that publication step was not\nauthorized here and no pin\
+    \ was invented. Two test_review_research_runtime failures\nalso occur on an unmodified\
+    \ tree in this environment (LinkML loader lock).\n\nLimits: all functional evidence\
+    \ is a single preprint; no experiment has been done on\nQ31PW6; Glu83 is positioned\
+    \ by family conservation and the Pfam HMM, not by alignment\nto the tested Klebsiella\
+    \ sequence; the Evangelion preprint\n(doi:10.64898/2026.06.25.731849) was not\
+    \ inspected; the UniProtKB counts are one\nsnapshot. Imported identity, counters\
+    \ and seed classification are unchanged, and the\nrecord is IN_PROGRESS, not reviewed.\
+    \ Contributed from a KBase gene-annotate dashboard\nreview of CP088958.1_900 (ai4curation/ai-gene-review\
+    \ PR 5756).\n"
+  sections:
+  - causal_graphs
+  - discussions
+links:
+  urls:
+  - https://pubmed.ncbi.nlm.nih.gov/42146377/
