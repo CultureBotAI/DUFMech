@@ -11,6 +11,7 @@ import pytest
 
 from dufmech.records import RecordError, validate_record, validator
 from dufmech.sequence_reasoning import (
+    SequenceReasoningError,
     build_reasoning_edge,
     build_region_observation,
     build_representative_reasoning_graphs,
@@ -737,3 +738,244 @@ def test_representative_end_to_end_graphs_queries_trace_views_and_cli(
     }]
     with pytest.raises(RecordError, match="references unknown region_id 'nonexistent_region'"):
         validate_record(bad_curation, REPO_ROOT, target="FamilyCuration")
+
+
+def test_adversarial_review_regressions() -> None:
+    """Verify fixes for all 7 independent adversarial review findings."""
+    # Finding 1: ISOFORM_TO_CANONICAL projects via residue_correspondences (never raw intersection),
+    # and cross-accession non-alignment mappings return UNRESOLVED_MAPPING.
+    seq_iso2 = build_sequence_identity(
+        "P12345",
+        sequence_length=180,
+        sequence_sha256=hashlib.sha256(b"P12345_ISO2_SPLICE_SHIFTED").hexdigest(),
+        isoform="P12345-2",
+        sequence_version=1,
+        sequence_id="seq_P12345_iso2",
+    )
+    seq_canon = build_sequence_identity(
+        "P12345",
+        sequence_length=200,
+        sequence_sha256=hashlib.sha256(b"P12345_CANON_200").hexdigest(),
+        isoform="P12345-1",
+        sequence_version=1,
+        sequence_id="seq_P12345_canon",
+    )
+    reg_iso2_site = build_sequence_region(
+        region_id="reg_iso2_site50",
+        sequence_identity=seq_iso2,
+        label="Isoform-2 residue 50 (shifted to canonical residue 70, outside domain 40..60)",
+        region_kind="MUTATION_SITE",
+        coordinate_status="EXACT",
+        intervals=[{"start": 50, "end": 50, "residue_identity": "E"}],
+        source_coordinate_system="UNIPROT_ISOFORM",
+        conversion_provenance="Isoform P12345-2 lacks exon 2 (residues 21..40 of canonical).",
+    )
+    reg_canon_dom = build_sequence_region(
+        region_id="reg_canon_dom_40_60",
+        sequence_identity=seq_canon,
+        label="Canonical domain 40..60",
+        region_kind="DOMAIN_HIT",
+        coordinate_status="EXACT",
+        intervals=[{"start": 40, "end": 60}],
+        pfam_id="PF13271",
+    )
+    iso_map = classify_region_mapping(
+        mapping_id="map_iso2_50_to_canon_70",
+        source_region=reg_iso2_site,
+        target_region=reg_canon_dom,
+        source_sequence=seq_iso2,
+        target_sequence=seq_canon,
+        mapping_kind="ISOFORM_TO_CANONICAL",
+        residue_correspondences=[
+            {
+                "source_position": 50,
+                "source_residue": "E",
+                "target_position": 70,
+                "target_residue": "E",
+            }
+        ],
+    )
+    # Raw position 50 is inside 40..60, but projected canonical position 70 is outside 40..60!
+    assert iso_map["equivalence_status"] == "DISJOINT_OUTSIDE_REGION"
+    assert iso_map["overlap_residues"] == 0
+
+    seq_other = build_sequence_identity(
+        "Q99973",
+        sequence_length=200,
+        sequence_sha256=hashlib.sha256(b"Q99973_OTHER_200").hexdigest(),
+        sequence_version=1,
+        sequence_id="seq_Q99973_other",
+    )
+    reg_other = build_sequence_region(
+        region_id="reg_other_40_60",
+        sequence_identity=seq_other,
+        label="Different protein region 40..60",
+        region_kind="EXPERIMENTAL_CONSTRUCT",
+        coordinate_status="EXACT",
+        intervals=[{"start": 40, "end": 60}],
+    )
+    cross_acc_map = classify_region_mapping(
+        mapping_id="map_cross_acc_non_align",
+        source_region=reg_other,
+        target_region=reg_canon_dom,
+        source_sequence=seq_other,
+        target_sequence=seq_canon,
+        mapping_kind="CONSTRUCT_TO_REFERENCE",
+    )
+    assert cross_acc_map["equivalence_status"] == "UNRESOLVED_MAPPING"
+
+    # Finding 2: Per-observation mutation localization — a COMPUTATIONAL or NEGATIVE
+    # observation with RESIDUE_INSIDE_REGION must NOT localize an unlocalized full-length WT assay,
+    # and unmapped mutation_region_ids must block localization.
+    reg_full = build_sequence_region(
+        region_id="reg_canon_full",
+        sequence_identity=seq_canon,
+        label="Full-length canonical protein 1..200",
+        region_kind="FULL_LENGTH_PROTEIN",
+        coordinate_status="WHOLE_PROTEIN_UNLOCALIZED",
+        intervals=[{"start": 1, "end": 200}],
+    )
+    reg_canon_site50 = build_sequence_region(
+        region_id="reg_canon_site50",
+        sequence_identity=seq_canon,
+        label="Conserved site 50 inside 40..60",
+        region_kind="CATALYTIC_SITE",
+        coordinate_status="EXACT",
+        intervals=[{"start": 50, "end": 50, "residue_identity": "E"}],
+    )
+    map_full_to_dom = classify_region_mapping(
+        mapping_id="map_full_to_dom",
+        source_region=reg_full,
+        target_region=reg_canon_dom,
+        source_sequence=seq_canon,
+        target_sequence=seq_canon,
+        mapping_kind="CONSTRUCT_TO_REFERENCE",
+    )
+    map_site50_to_dom = classify_region_mapping(
+        mapping_id="map_site50_to_dom",
+        source_region=reg_canon_site50,
+        target_region=reg_canon_dom,
+        source_sequence=seq_canon,
+        target_sequence=seq_canon,
+        mapping_kind="MUTATION_TO_DOMAIN",
+    )
+    obs_wt_unlocalized = build_region_observation(
+        observation_id="obs_wt_full_unlocalized",
+        region=reg_full,
+        evidence_kind="EXPERIMENTAL",
+        source_kind="LITERATURE_ASSAY",
+        method="Whole-protein WT assay without domain truncation or mutagenesis",
+        observed_effect="Full-length protein active.",
+        interpretation="Activity somewhere in 1..200.",
+        polarity="POSITIVE",
+        primary_experiment_key="PMID:11111111/P12345_1-200/WT",
+    )
+    obs_comp_site = build_region_observation(
+        observation_id="obs_comp_site50",
+        region=reg_canon_dom,
+        evidence_kind="COMPUTATIONAL",
+        source_kind="CURATED_ANNOTATION",
+        method="Predicted active site at residue 50",
+        mutation_region_ids=["reg_canon_site50"],
+        observed_effect="Residue 50 is conserved.",
+        interpretation="Predicted catalytic site.",
+        polarity="POSITIVE",
+        primary_experiment_key="ALIGN:P12345/site50",
+    )
+    leak_groups = deduplicate_observations([obs_wt_unlocalized, obs_comp_site])
+    leak_claim = synthesize_region_claim(
+        claim_id="claim_no_mutation_leakage",
+        label="Unlocalized WT assay + computational site must not be EXPERIMENTALLY_DEMONSTRATED",
+        function_aspect="CATALYTIC_ACTIVITY",
+        target_region=reg_canon_dom,
+        regions_by_id={
+            "reg_canon_dom_40_60": reg_canon_dom,
+            "reg_canon_full": reg_full,
+            "reg_canon_site50": reg_canon_site50,
+        },
+        observations=[obs_wt_unlocalized, obs_comp_site],
+        evidence_groups=leak_groups,
+        coordinate_mappings=[map_full_to_dom, map_site50_to_dom],
+    )
+    assert leak_claim["synthesis_status"] != "EXPERIMENTALLY_DEMONSTRATED"
+
+    # Finding 3: validate_region_reasoning_graphs rejects forged CoordinateMapping.equivalence_status,
+    # duplicate EvidenceGroup keys, and unlocalized EXPERIMENTALLY_DEMONSTRATED claims.
+    graphs = build_representative_reasoning_graphs()
+    bad_map_graph = copy.deepcopy(graphs[2])
+    bad_map_graph["coordinate_mappings"][0]["equivalence_status"] = "RESIDUE_INSIDE_REGION"
+    with pytest.raises(ValueError, match="declared equivalence_status 'RESIDUE_INSIDE_REGION' != computed 'DISJOINT_OUTSIDE_REGION'"):
+        validate_region_reasoning_graphs("PF00001", [bad_map_graph])
+
+    bad_grp_graph = copy.deepcopy(graphs[0])
+    dup_grp = copy.deepcopy(bad_grp_graph["evidence_groups"][0])
+    dup_grp["group_id"] = "grp_dup_inflated"
+    bad_grp_graph["evidence_groups"].append(dup_grp)
+    with pytest.raises(ValueError, match="duplicates group key"):
+        validate_region_reasoning_graphs("PF13271", [bad_grp_graph])
+
+    bad_unloc_claim_graph = copy.deepcopy(graphs[0])
+    bad_unloc_claim_graph["synthesized_claims"][0]["mapping_ids"] = []
+    with pytest.raises(
+        ValueError,
+        match="EXPERIMENTALLY_DEMONSTRATED without any POSITIVE EXPERIMENTAL observation localized",
+    ):
+        validate_region_reasoning_graphs("PF13271", [bad_unloc_claim_graph])
+
+    # Finding 4: deduplicate_observations checks all entries in derived_from_observation_ids.
+    obs_root_a = build_region_observation(
+        observation_id="obs_root_a",
+        region=reg_canon_dom,
+        evidence_kind="EXPERIMENTAL",
+        source_kind="LITERATURE_ASSAY",
+        method="Assay A",
+        observed_effect="Effect A",
+        interpretation="Interp A",
+        polarity="POSITIVE",
+        primary_experiment_key="PMID:11111111/A",
+    )
+    obs_root_b = build_region_observation(
+        observation_id="obs_root_b",
+        region=reg_canon_dom,
+        evidence_kind="EXPERIMENTAL",
+        source_kind="LITERATURE_ASSAY",
+        method="Assay B",
+        observed_effect="Effect B",
+        interpretation="Interp B",
+        polarity="POSITIVE",
+        primary_experiment_key="PMID:22222222/B",
+    )
+    obs_multi_parent_conflict = build_region_observation(
+        observation_id="obs_multi_conflict",
+        region=reg_canon_dom,
+        evidence_kind="EXPERIMENTAL",
+        source_kind="QUICKGO",
+        method="Mirrored record citing two different experiments",
+        observed_effect="Effect",
+        interpretation="Interp",
+        polarity="POSITIVE",
+        primary_experiment_key="PMID:11111111/A",
+        derived_from_observation_ids=["obs_root_a", "obs_root_b"],
+    )
+    with pytest.raises(ValueError, match="conflicting primary_experiment_key values"):
+        deduplicate_observations([obs_root_a, obs_root_b, obs_multi_parent_conflict])
+
+    # Finding 5 & 7: Adapter accession mismatch check and single-bound query_claims_for_region error.
+    with pytest.raises(ValueError, match="!= sequence_identity"):
+        normalize_pdbe_kb_row(
+            {
+                "uniprot_accession": "Q99973",
+                "pdb_id": "8XYZ",
+                "chain_id": "A",
+                "uniprot_start": 40,
+                "uniprot_end": 60,
+                "pdb_residues": [1, 2, 3],
+            },
+            sequence_identity=seq_canon,
+        )
+    with pytest.raises(
+        SequenceReasoningError,
+        match="Both start and end must be provided together when querying by coordinate interval",
+    ):
+        query_claims_for_region(graphs[0], sequence_id="seq_Q99973_v3", start=901)
+

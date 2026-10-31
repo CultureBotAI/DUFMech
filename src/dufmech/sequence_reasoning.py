@@ -642,7 +642,7 @@ def classify_region_mapping(
     source_sequence: Mapping[str, Any],
     target_sequence: Mapping[str, Any],
     mapping_kind: str = "CONSTRUCT_TO_REFERENCE",
-    residue_correspondences: Sequence[Mapping[str, Any]] = (),
+    residue_correspondences: Sequence[Mapping[str, Any]] | None = (),
     alignment_gaps: int | None = None,
     mapping_uncertainty: str | None = None,
     provenance_note: str | None = None,
@@ -662,7 +662,7 @@ def classify_region_mapping(
         raise ValueError(f"target_region {tgt_reg_id} does not belong to sequence {tgt_seq_id}")
 
     checked_correspondences: list[dict[str, Any]] = []
-    for idx, corr in enumerate(residue_correspondences):
+    for idx, corr in enumerate(residue_correspondences or ()):
         item: dict[str, Any] = {
             "source_position": _require_positive_int(
                 corr.get("source_position"), f"residue_correspondences[{idx}].source_position"
@@ -706,27 +706,118 @@ def classify_region_mapping(
                     "mapping_uncertainty": uncertainty,
                     "provenance_note": provenance_note or uncertainty,
                 }
-        elif mapping_kind in {"HOMOLOG_ALIGNMENT", "PROFILE_TO_SEQUENCE"}:
-            status = "RESIDUE_INSIDE_REGION" if checked_correspondences else "UNRESOLVED_MAPPING"
-            note = provenance_note or (
-                f"Cross-sequence alignment ({mapping_kind}) between {src_reg_id} ({src_seq_id}) "
-                f"and {tgt_reg_id} ({tgt_seq_id})."
-            )
-            result: dict[str, Any] = {
+            # Explicit ISOFORM_TO_CANONICAL mapping with residue_correspondences:
+            # project source_region positions onto target_region via checked_correspondences
+            # rather than intersecting raw unprojected coordinate numbers.
+            src_raw = region_residue_positions(source_region)
+            tgt_positions = region_residue_positions(target_region)
+            corr_map = {c["source_position"]: c["target_position"] for c in checked_correspondences}
+            projected_src = {corr_map[p] for p in src_raw if p in corr_map}
+            all_mapped = bool(src_raw) and all(p in corr_map for p in src_raw)
+            overlap = len(projected_src & tgt_positions)
+            src_cov = round(overlap / len(src_raw), 6) if src_raw else 0.0
+            tgt_cov = round(overlap / len(tgt_positions), 6) if tgt_positions else 0.0
+            if not projected_src:
+                iso_eq = "UNRESOLVED_MAPPING"
+            elif overlap == 0:
+                iso_eq = "DISJOINT_OUTSIDE_REGION"
+            elif all_mapped and projected_src == tgt_positions:
+                iso_eq = (
+                    "DISCONTINUOUS_MAPPING"
+                    if (
+                        source_region.get("coordinate_status") == "DISCONTINUOUS"
+                        or target_region.get("coordinate_status") == "DISCONTINUOUS"
+                    )
+                    else "EXACT_MATCH"
+                )
+            elif all_mapped and len(src_raw) == 1 and projected_src.issubset(tgt_positions):
+                iso_eq = "RESIDUE_INSIDE_REGION"
+            elif tgt_positions.issubset(projected_src) and len(src_raw) > len(tgt_positions):
+                iso_eq = (
+                    "CONSTRUCT_CONTAINS_DOMAIN"
+                    if source_region.get("region_kind")
+                    in {
+                        "EXPERIMENTAL_CONSTRUCT",
+                        "FULL_LENGTH_PROTEIN",
+                        "STRUCTURAL_OBSERVATION_REGION",
+                    }
+                    else "DOMAIN_CONTAINS_REGION"
+                )
+            elif all_mapped and projected_src.issubset(tgt_positions) and len(tgt_positions) > len(projected_src):
+                iso_eq = "DOMAIN_CONTAINS_REGION"
+            else:
+                iso_eq = "PARTIAL_OVERLAP_NOT_EQUIVALENT"
+            iso_result: dict[str, Any] = {
                 "mapping_id": mapping_id,
                 "source_region_id": src_reg_id,
                 "target_region_id": tgt_reg_id,
                 "mapping_kind": mapping_kind,
-                "equivalence_status": status,
-                "provenance_note": note,
+                "equivalence_status": iso_eq,
+                "overlap_residues": overlap,
+                "source_coverage": src_cov,
+                "target_coverage": tgt_cov,
+                "residue_correspondences": checked_correspondences,
+                "provenance_note": provenance_note
+                or (
+                    f"Projected isoform region {src_reg_id} ({src_seq_id}) -> {tgt_reg_id} ({tgt_seq_id}) "
+                    f"via {len(checked_correspondences)} residue correspondence(s): {iso_eq}."
+                ),
             }
             if alignment_gaps is not None:
-                result["alignment_gaps"] = _require_positive_int(alignment_gaps, "alignment_gaps", minimum=0)
-            if checked_correspondences:
-                result["residue_correspondences"] = checked_correspondences
+                iso_result["alignment_gaps"] = _require_positive_int(
+                    alignment_gaps, "alignment_gaps", minimum=0
+                )
             if mapping_uncertainty:
-                result["mapping_uncertainty"] = mapping_uncertainty
-            return result
+                iso_result["mapping_uncertainty"] = mapping_uncertainty
+            return iso_result
+        elif not same_accession:
+            if mapping_kind in {"HOMOLOG_ALIGNMENT", "PROFILE_TO_SEQUENCE"}:
+                tgt_positions = region_residue_positions(target_region)
+                if not checked_correspondences:
+                    status = "UNRESOLVED_MAPPING"
+                elif all(c["target_position"] in tgt_positions for c in checked_correspondences):
+                    status = "RESIDUE_INSIDE_REGION"
+                else:
+                    status = "DISJOINT_OUTSIDE_REGION"
+                note = provenance_note or (
+                    f"Cross-sequence alignment ({mapping_kind}) between {src_reg_id} ({src_seq_id}) "
+                    f"and {tgt_reg_id} ({tgt_seq_id})."
+                )
+                result: dict[str, Any] = {
+                    "mapping_id": mapping_id,
+                    "source_region_id": src_reg_id,
+                    "target_region_id": tgt_reg_id,
+                    "mapping_kind": mapping_kind,
+                    "equivalence_status": status,
+                    "provenance_note": note,
+                }
+                if alignment_gaps is not None:
+                    result["alignment_gaps"] = _require_positive_int(
+                        alignment_gaps, "alignment_gaps", minimum=0
+                    )
+                if checked_correspondences:
+                    result["residue_correspondences"] = checked_correspondences
+                if mapping_uncertainty:
+                    result["mapping_uncertainty"] = mapping_uncertainty
+                return result
+            uncertainty = mapping_uncertainty or (
+                f"Cross-protein mapping ({mapping_kind}) between distinct accessions "
+                f"{source_sequence.get('uniprot_accession')} ({src_seq_id}) and "
+                f"{target_sequence.get('uniprot_accession')} ({tgt_seq_id}) requires "
+                "HOMOLOG_ALIGNMENT or PROFILE_TO_SEQUENCE; raw residue numbers cannot be intersected across distinct proteins."
+            )
+            return {
+                "mapping_id": mapping_id,
+                "source_region_id": src_reg_id,
+                "target_region_id": tgt_reg_id,
+                "mapping_kind": mapping_kind,
+                "equivalence_status": "UNRESOLVED_MAPPING",
+                "overlap_residues": 0,
+                "source_coverage": 0.0,
+                "target_coverage": 0.0,
+                "mapping_uncertainty": uncertainty,
+                "provenance_note": provenance_note or uncertainty,
+            }
 
     src_status = source_region.get("coordinate_status")
     tgt_status = target_region.get("coordinate_status")
@@ -966,6 +1057,10 @@ def normalize_pdbe_kb_row(
 ) -> tuple[dict[str, Any], dict[str, Any], dict[str, Any] | None]:
     """Normalize a DUFMech PdbeKbAnnotationRow dict into (SequenceRegion, RegionObservation, CoordinateMapping)."""
     acc = str(row["uniprot_accession"])
+    if acc != sequence_identity.get("uniprot_accession"):
+        raise ValueError(
+            f"PDBe-KB row accession {acc} != sequence_identity {sequence_identity.get('uniprot_accession')}"
+        )
     pdb_id = str(row["pdb_id"]).lower()
     chain_id = str(row["chain_id"])
     u_start = int(row["uniprot_start"])
@@ -983,12 +1078,13 @@ def normalize_pdbe_kb_row(
         conversion_provenance="PDBe-KB SIFTS residue-level mapping from PDB chain to 1-based UniProt coordinates.",
     )
     correspondences: list[dict[str, Any]] = []
-    for res in row.get("pdb_residues") or ():
+    pdb_res_list = list(row.get("pdb_residues") or ())
+    for idx, res in enumerate(pdb_res_list):
         match = re.fullmatch(r"^(-?[0-9]+)([A-Za-z0-9]?)$", str(res).strip())
         if match and int(match.group(1)) >= 1:
             corr: dict[str, Any] = {
                 "source_position": int(match.group(1)),
-                "target_position": u_start,
+                "target_position": min(u_start + idx, u_end),
             }
             if match.group(2):
                 corr["pdb_insertion_code"] = match.group(2)
@@ -1042,6 +1138,10 @@ def normalize_cdsearch_row(
 ) -> tuple[dict[str, Any], dict[str, Any]]:
     """Normalize a DUFMech CdSearchDomainRow dict into (SequenceRegion, RegionObservation)."""
     acc = str(row["uniprot_accession"])
+    if acc != sequence_identity.get("uniprot_accession"):
+        raise ValueError(
+            f"CD-Search row accession {acc} != sequence_identity {sequence_identity.get('uniprot_accession')}"
+        )
     cdd_acc = str(row["cdd_accession"])
     start = int(row["start"])
     end = int(row["end"])
@@ -1086,6 +1186,10 @@ def normalize_cath_row(
 ) -> tuple[dict[str, Any], dict[str, Any]]:
     """Normalize a DUFMech CathFunFamRow dict into (SequenceRegion, RegionObservation)."""
     acc = str(row["uniprot_accession"])
+    if acc != sequence_identity.get("uniprot_accession"):
+        raise ValueError(
+            f"CATH row accession {acc} != sequence_identity {sequence_identity.get('uniprot_accession')}"
+        )
     superfamily_id = str(row["cath_superfamily_id"])
     funfam_id = str(row.get("funfam_id", "0"))
     start = int(row.get("uniprot_start") or row["member_start"])
@@ -1130,6 +1234,10 @@ def normalize_ncbifam_row(
 ) -> tuple[dict[str, Any], dict[str, Any]]:
     """Normalize a DUFMech NcbifamHitRow dict into (SequenceRegion, RegionObservation)."""
     acc = str(row["uniprot_accession"])
+    if acc != sequence_identity.get("uniprot_accession"):
+        raise ValueError(
+            f"NCBIfam row accession {acc} != sequence_identity {sequence_identity.get('uniprot_accession')}"
+        )
     hmm_acc = str(row["hmm_accession"])
     start = int(row["seq_start"])
     end = int(row["seq_end"])
@@ -1178,6 +1286,10 @@ def normalize_quickgo_row(
     by themselves localize a function to an individual domain.
     """
     acc = str(row["uniprot_accession"])
+    if acc != sequence_identity.get("uniprot_accession"):
+        raise ValueError(
+            f"QuickGO row accession {acc} != sequence_identity {sequence_identity.get('uniprot_accession')}"
+        )
     go_id = str(row["go_id"])
     go_name = str(row.get("go_name") or go_id)
     ev_code = str(row.get("go_evidence") or row.get("eco_id") or "IEA").strip()
@@ -1239,6 +1351,10 @@ def normalize_rhea_row(
 ) -> dict[str, Any]:
     """Normalize a DUFMech RheaReactionRow dict into a RegionObservation."""
     acc = str(row["uniprot_accession"])
+    if acc != sequence_identity.get("uniprot_accession"):
+        raise ValueError(
+            f"Rhea row accession {acc} != sequence_identity {sequence_identity.get('uniprot_accession')}"
+        )
     rhea_id = str(row["rhea_id"])
     equation = str(row.get("equation") or rhea_id)
     obs_id = observation_id or f"obs_rhea_{acc}_{rhea_id.replace(':', '_')}"
@@ -1310,28 +1426,31 @@ def deduplicate_observations(
             raise ValueError(f"duplicate observation_id: {oid}")
         obs_by_id[oid] = obs
 
-    # Resolve canonical primary_experiment_key across derived_from_observation_ids chains.
-    canonical_key: dict[str, str] = {}
-    for oid, obs in obs_by_id.items():
-        parents = list(obs.get("derived_from_observation_ids") or ())
-        if parents:
-            root_parent = parents[0]
-            visited = {oid}
-            while root_parent in obs_by_id:
-                if root_parent in visited:
-                    raise ValueError(f"cycle in derived_from_observation_ids involving {oid}")
-                visited.add(root_parent)
-                next_parents = list(obs_by_id[root_parent].get("derived_from_observation_ids") or ())
-                if not next_parents:
-                    break
-                root_parent = next_parents[0]
-            if root_parent not in obs_by_id:
+    def _resolve_root_keys(start_oid: str, trail: set[str]) -> set[str]:
+        parents = list(obs_by_id[start_oid].get("derived_from_observation_ids") or ())
+        if not parents:
+            return {str(obs_by_id[start_oid]["primary_experiment_key"])}
+        roots: set[str] = set()
+        for parent_id in parents:
+            pid = str(parent_id)
+            if pid not in obs_by_id:
                 raise ValueError(
-                    f"observation {oid} references unknown derived_from_observation_id {root_parent!r}"
+                    f"observation {start_oid} references unknown derived_from_observation_id {pid!r}"
                 )
-            canonical_key[oid] = str(obs_by_id[root_parent]["primary_experiment_key"])
-        else:
-            canonical_key[oid] = str(obs["primary_experiment_key"])
+            if pid in trail:
+                raise ValueError(f"cycle in derived_from_observation_ids involving {pid}")
+            roots.update(_resolve_root_keys(pid, trail | {pid}))
+        return roots
+
+    # Resolve canonical primary_experiment_key across all derived_from_observation_ids chains.
+    canonical_key: dict[str, str] = {}
+    for oid in obs_by_id:
+        root_keys = sorted(_resolve_root_keys(oid, {oid}))
+        if len(root_keys) > 1:
+            raise ValueError(
+                f"observation {oid} derives from observations with conflicting primary_experiment_key values {root_keys}"
+            )
+        canonical_key[oid] = root_keys[0]
 
     grouped: dict[tuple[str, str, str], list[Mapping[str, Any]]] = {}
     for oid, obs in obs_by_id.items():
@@ -1465,31 +1584,13 @@ def synthesize_region_claim(
     for m in coordinate_mappings:
         mappings_by_pair[(str(m["source_region_id"]), str(m["target_region_id"]))] = m
 
-    # Check if any observation includes a mutation inside the target domain.
-    has_internal_mutation = False
     has_disjoint_mutation_block: list[str] = []
-    for obs in observations:
-        for mut_reg_id in obs.get("mutation_region_ids") or ():
-            mut_map = mappings_by_pair.get((str(mut_reg_id), target_reg_id))
-            if mut_map is not None:
-                if mut_map.get("equivalence_status") == "RESIDUE_INSIDE_REGION":
-                    has_internal_mutation = True
-                elif mut_map.get("equivalence_status") in {
-                    "DISJOINT_OUTSIDE_REGION",
-                    "PARTIAL_OVERLAP_NOT_EQUIVALENT",
-                    "SEQUENCE_VERSION_MISMATCH",
-                }:
-                    has_disjoint_mutation_block.append(
-                        f"Perturbation/mutation region {mut_reg_id} maps to {target_reg_id} as "
-                        f"{mut_map.get('equivalence_status')} ({mut_map.get('mapping_uncertainty') or mut_map.get('provenance_note')})."
-                    )
-
     supporting_group_ids: list[str] = []
     contradicting_group_ids: list[str] = []
     supporting_obs_ids: list[str] = []
     contradicting_obs_ids: list[str] = []
     relevant_mapping_ids: list[str] = []
-    localization_blocks: list[str] = list(has_disjoint_mutation_block)
+    localization_blocks: list[str] = []
 
     localized_exp_pos_groups = 0
     localized_exp_neg_groups = 0
@@ -1504,17 +1605,64 @@ def synthesize_region_claim(
         if not member_obs:
             continue
 
-        # Determine how this group's regions map to target_region_id.
+        # Determine how this group's regions map to target_region_id, scoping mutation
+        # localization strictly to the observation being evaluated.
         group_localized = False
         group_homolog_aligned = False
         group_disjoint_mutation = False
         for obs in member_obs:
+            obs_has_internal_mutation = False
+            obs_disjoint_mutation = False
+            for mut_reg_id in obs.get("mutation_region_ids") or ():
+                m_mut = mappings_by_pair.get((str(mut_reg_id), target_reg_id))
+                if m_mut is None:
+                    obs_disjoint_mutation = True
+                    group_disjoint_mutation = True
+                    unmapped_msg = (
+                        f"Observation {obs['observation_id']} references mutation_region_id "
+                        f"{mut_reg_id} without a CoordinateMapping to target region {target_reg_id}."
+                    )
+                    if unmapped_msg not in has_disjoint_mutation_block:
+                        has_disjoint_mutation_block.append(unmapped_msg)
+                    if unmapped_msg not in localization_blocks:
+                        localization_blocks.append(unmapped_msg)
+                else:
+                    mid = str(m_mut["mapping_id"])
+                    if mid not in relevant_mapping_ids:
+                        relevant_mapping_ids.append(mid)
+                    eq_mut = str(m_mut.get("equivalence_status", ""))
+                    if (
+                        eq_mut == "RESIDUE_INSIDE_REGION"
+                        and obs.get("evidence_kind") == "EXPERIMENTAL"
+                        and obs.get("polarity") == "POSITIVE"
+                    ):
+                        obs_has_internal_mutation = True
+                    elif eq_mut in {
+                        "DISJOINT_OUTSIDE_REGION",
+                        "PARTIAL_OVERLAP_NOT_EQUIVALENT",
+                        "SEQUENCE_VERSION_MISMATCH",
+                        "UNRESOLVED_MAPPING",
+                    }:
+                        obs_disjoint_mutation = True
+                        group_disjoint_mutation = True
+                        mut_block = (
+                            f"Perturbation/mutation region {mut_reg_id} maps to {target_reg_id} as "
+                            f"{eq_mut} ({m_mut.get('mapping_uncertainty') or m_mut.get('provenance_note')})."
+                        )
+                        if mut_block not in has_disjoint_mutation_block:
+                            has_disjoint_mutation_block.append(mut_block)
+                        if mut_block not in localization_blocks:
+                            localization_blocks.append(mut_block)
+
             obs_reg_id = str(obs["region_id"])
             if obs_reg_id == target_reg_id:
                 if target_region.get("coordinate_status") not in {
                     "WHOLE_PROTEIN_UNLOCALIZED",
                     "UNKNOWN_LOCALIZATION",
                 }:
+                    if not obs_disjoint_mutation:
+                        group_localized = True
+                elif obs_has_internal_mutation and not obs_disjoint_mutation:
                     group_localized = True
                 else:
                     localization_blocks.append(
@@ -1537,25 +1685,21 @@ def synthesize_region_claim(
                         ok, block_msg = _is_localized_domain_mapping(
                             m,
                             regions_by_id=regions_by_id,
-                            has_domain_internal_mutation=has_internal_mutation,
+                            has_domain_internal_mutation=(
+                                obs_has_internal_mutation and not obs_disjoint_mutation
+                            ),
                         )
-                        if ok:
+                        if ok and not obs_disjoint_mutation:
                             group_localized = True
                         elif block_msg and block_msg not in localization_blocks:
                             localization_blocks.append(block_msg)
-
-            for mut_reg_id in obs.get("mutation_region_ids") or ():
-                m_mut = mappings_by_pair.get((str(mut_reg_id), target_reg_id))
-                if m_mut is not None:
-                    mid = str(m_mut["mapping_id"])
-                    if mid not in relevant_mapping_ids:
-                        relevant_mapping_ids.append(mid)
-                    if m_mut.get("equivalence_status") in {
-                        "DISJOINT_OUTSIDE_REGION",
-                        "PARTIAL_OVERLAP_NOT_EQUIVALENT",
-                        "SEQUENCE_VERSION_MISMATCH",
-                    }:
-                        group_disjoint_mutation = True
+                else:
+                    unmapped_obs_msg = (
+                        f"Observation {obs['observation_id']} on {obs_reg_id} has no "
+                        f"CoordinateMapping to target region {target_reg_id}."
+                    )
+                    if unmapped_obs_msg not in localization_blocks:
+                        localization_blocks.append(unmapped_obs_msg)
 
         if g_pol == "POSITIVE":
             supporting_group_ids.append(gid)
@@ -1916,6 +2060,23 @@ def validate_region_reasoning_graphs(
             if mp.get("equivalence_status") not in EQUIVALENCE_STATUSES:
                 raise ValueError(f"{label}.coordinate_mappings[{m_idx}] has invalid equivalence_status")
             actual_text(mp.get("provenance_note"), f"{label}.coordinate_mappings[{m_idx}].provenance_note")
+            computed_mp = classify_region_mapping(
+                mapping_id=mid,
+                source_region=reg_by_id[s_rid],
+                target_region=reg_by_id[t_rid],
+                source_sequence=seq_by_id[reg_by_id[s_rid]["sequence_id"]],
+                target_sequence=seq_by_id[reg_by_id[t_rid]["sequence_id"]],
+                mapping_kind=str(mp.get("mapping_kind", "")),
+                residue_correspondences=mp.get("residue_correspondences"),
+                alignment_gaps=mp.get("alignment_gaps"),
+                mapping_uncertainty=mp.get("mapping_uncertainty"),
+                provenance_note=str(mp.get("provenance_note", "")),
+            )
+            if mp.get("equivalence_status") != computed_mp["equivalence_status"]:
+                raise ValueError(
+                    f"{label}.coordinate_mappings[{m_idx}] ({mid}) declared equivalence_status "
+                    f"{mp.get('equivalence_status')!r} != computed {computed_mp['equivalence_status']!r}"
+                )
             map_by_id[mid] = mp
 
         observations = graph.get("observations")
@@ -1972,17 +2133,25 @@ def validate_region_reasoning_graphs(
                 raise ValueError(f"{label}: duplicate observation_id {oid}")
             obs_by_id[oid] = checked_obs
 
+        computed_groups = deduplicate_observations(list(obs_by_id.values()))
+        obs_root_key: dict[str, str] = {}
+        for cg in computed_groups:
+            for oid in cg["observation_ids"]:
+                obs_root_key[oid] = cg["primary_experiment_key"]
+
         groups = graph.get("evidence_groups") or []
         if not isinstance(groups, list):
             raise SequenceReasoningError(f"{label}.evidence_groups must be a list")
         grp_by_id: dict[str, Mapping[str, Any]] = {}
+        seen_group_keys: set[tuple[str, str, str]] = set()
+        seen_grouped_obs: set[str] = set()
         for grp_idx, grp in enumerate(groups):
             if not isinstance(grp, Mapping):
                 raise SequenceReasoningError(f"{label}.evidence_groups[{grp_idx}] must be a mapping")
             gid = _require_token(grp.get("group_id"), f"{label}.evidence_groups[{grp_idx}].group_id")
             if gid in grp_by_id:
                 raise ValueError(f"{label}: duplicate group_id {gid}")
-            _require_token(
+            exp_key = _require_token(
                 grp.get("primary_experiment_key"),
                 f"{label}.evidence_groups[{grp_idx}].primary_experiment_key",
                 EXPERIMENT_KEY_RE,
@@ -1991,6 +2160,13 @@ def validate_region_reasoning_graphs(
             pol = str(grp.get("polarity", ""))
             if ev_kind not in EVIDENCE_KINDS or pol not in POLARITIES:
                 raise ValueError(f"{label}.evidence_groups[{grp_idx}] has invalid evidence_kind or polarity")
+            g_key = (exp_key, ev_kind, pol)
+            if g_key in seen_group_keys:
+                raise ValueError(
+                    f"{label}.evidence_groups[{grp_idx}] duplicates group key {g_key!r}; "
+                    "observations sharing primary_experiment_key, evidence_kind, and polarity must be deduplicated"
+                )
+            seen_group_keys.add(g_key)
             obs_ids = grp.get("observation_ids")
             if not isinstance(obs_ids, list) or not obs_ids:
                 raise ValueError(f"{label}.evidence_groups[{grp_idx}].observation_ids must be a non-empty list")
@@ -1999,11 +2175,21 @@ def validate_region_reasoning_graphs(
                     raise ValueError(
                         f"{label}.evidence_groups[{grp_idx}] references unknown observation_id {oid!r}"
                     )
+                if oid in seen_grouped_obs:
+                    raise ValueError(
+                        f"{label}.evidence_groups[{grp_idx}] duplicates observation_id {oid!r} across groups"
+                    )
+                seen_grouped_obs.add(oid)
                 member = obs_by_id[oid]
                 if member["evidence_kind"] != ev_kind or member["polarity"] != pol:
                     raise ValueError(
                         f"{label}.evidence_groups[{grp_idx}] mixes incompatible observation {oid} "
                         f"({member['evidence_kind']}/{member['polarity']}) with group ({ev_kind}/{pol})"
+                    )
+                if obs_root_key.get(oid) != exp_key:
+                    raise ValueError(
+                        f"{label}.evidence_groups[{grp_idx}] observation {oid!r} resolves to "
+                        f"primary_experiment_key {obs_root_key.get(oid)!r}, not group key {exp_key!r}"
                     )
             actual_text(
                 grp.get("deduplication_rationale"),
@@ -2052,15 +2238,27 @@ def validate_region_reasoning_graphs(
                     raise ValueError(f"{label}.synthesized_claims[{c_idx}] unknown mapping_id {mid!r}")
 
             if status == "EXPERIMENTALLY_DEMONSTRATED":
+                target_reg = reg_by_id[t_rid]
+                if target_reg.get("coordinate_status") in {
+                    "WHOLE_PROTEIN_UNLOCALIZED",
+                    "UNKNOWN_LOCALIZATION",
+                }:
+                    raise ValueError(
+                        f"{label}.synthesized_claims[{c_idx}] ({cid}) cannot be "
+                        f"EXPERIMENTALLY_DEMONSTRATED on unlocalized target region {t_rid}"
+                    )
                 supp_obs = [obs_by_id[oid] for oid in (clm.get("supporting_observation_ids") or ())]
-                if not any(
-                    o["evidence_kind"] == "EXPERIMENTAL" and o["polarity"] == "POSITIVE"
+                pos_exp_obs = [
+                    o
                     for o in supp_obs
-                ):
+                    if o["evidence_kind"] == "EXPERIMENTAL" and o["polarity"] == "POSITIVE"
+                ]
+                if not pos_exp_obs:
                     raise ValueError(
                         f"{label}.synthesized_claims[{c_idx}] ({cid}) is EXPERIMENTALLY_DEMONSTRATED "
                         "without any POSITIVE EXPERIMENTAL supporting observation"
                     )
+                claim_maps = [map_by_id[mid] for mid in (clm.get("mapping_ids") or ())]
                 for mid in clm.get("mapping_ids") or ():
                     mp = map_by_id[mid]
                     if mp.get("equivalence_status") in {
@@ -2073,6 +2271,58 @@ def validate_region_reasoning_graphs(
                             f"{label}.synthesized_claims[{c_idx}] ({cid}) cannot be "
                             f"EXPERIMENTALLY_DEMONSTRATED with mapping {mid} ({mp.get('equivalence_status')})"
                         )
+                has_localized_pos_exp = False
+                for o in pos_exp_obs:
+                    mut_rids = list(o.get("mutation_region_ids") or ())
+                    obs_has_internal_mut = False
+                    obs_disjoint_mut = False
+                    for m_rid in mut_rids:
+                        m_maps = [
+                            m
+                            for m in claim_maps
+                            if m.get("source_region_id") == m_rid and m.get("target_region_id") == t_rid
+                        ]
+                        if not m_maps:
+                            obs_disjoint_mut = True
+                        else:
+                            for m_mp in m_maps:
+                                if m_mp.get("equivalence_status") == "RESIDUE_INSIDE_REGION":
+                                    obs_has_internal_mut = True
+                                else:
+                                    obs_disjoint_mut = True
+                    if obs_disjoint_mut:
+                        continue
+                    obs_rid = o["region_id"]
+                    obs_reg = reg_by_id[obs_rid]
+                    if obs_rid == t_rid:
+                        if (
+                            obs_reg.get("coordinate_status")
+                            in {"WHOLE_PROTEIN_UNLOCALIZED", "UNKNOWN_LOCALIZATION"}
+                            and not obs_has_internal_mut
+                        ):
+                            continue
+                        has_localized_pos_exp = True
+                        break
+                    r_maps = [
+                        m
+                        for m in claim_maps
+                        if m.get("source_region_id") == obs_rid and m.get("target_region_id") == t_rid
+                    ]
+                    if any(
+                        _is_localized_domain_mapping(
+                            m,
+                            regions_by_id=reg_by_id,
+                            has_domain_internal_mutation=obs_has_internal_mut,
+                        )[0]
+                        for m in r_maps
+                    ):
+                        has_localized_pos_exp = True
+                        break
+                if not has_localized_pos_exp:
+                    raise ValueError(
+                        f"{label}.synthesized_claims[{c_idx}] ({cid}) is EXPERIMENTALLY_DEMONSTRATED "
+                        f"without any POSITIVE EXPERIMENTAL observation localized to target region {t_rid}"
+                    )
             if scope == "FAMILY_WIDE" and (clm.get("scope_transfer_blocks") or ()):
                 raise ValueError(
                     f"{label}.synthesized_claims[{c_idx}] ({cid}) claims FAMILY_WIDE scope "
@@ -2144,7 +2394,11 @@ def query_claims_for_region(
         raise ValueError(f"unknown sequence_id in graph {graph.get('graph_id')!r}: {sequence_id!r}")
     seq_len = int(seq_by_id[sequence_id]["sequence_length"])
     query_positions: set[int] | None = None
-    if start is not None or end is not None:
+    if (start is None) != (end is None):
+        raise SequenceReasoningError(
+            "Both start and end must be provided together when querying by coordinate interval"
+        )
+    if start is not None and end is not None:
         q_start = _require_positive_int(start, "start", minimum=1)
         q_end = _require_positive_int(end, "end", minimum=1)
         if q_start > q_end or q_end > seq_len:
@@ -3108,7 +3362,20 @@ def build_representative_reasoning_graphs() -> list[dict[str, Any]]:
     return [graph1, graph2, graph3]
 
 
-def _load_graphs_from_family_yaml(path: Path) -> list[dict[str, Any]]:
+def _infer_repo_root(path: Path) -> Path | None:
+    resolved = path.resolve()
+    for parent in resolved.parents:
+        if (parent / "curation" / "families").is_dir() or (parent / "src" / "dufmech").is_dir():
+            return parent
+    default_root = Path(__file__).resolve().parents[2]
+    if (default_root / "src" / "dufmech").is_dir():
+        return default_root
+    return None
+
+
+def _load_graphs_from_family_yaml(
+    path: Path, *, root: Path | None = None
+) -> list[dict[str, Any]]:
     data = read_yaml(path.read_text(encoding="utf-8"))
     if not isinstance(data, Mapping):
         raise SequenceReasoningError(f"{path} must contain a YAML mapping")
@@ -3119,6 +3386,7 @@ def _load_graphs_from_family_yaml(path: Path) -> list[dict[str, Any]]:
             pfam_id,
             graphs,
             causal_graphs=data.get("causal_graphs"),
+            root=root if root is not None else _infer_repo_root(path),
         )
     return graphs
 
