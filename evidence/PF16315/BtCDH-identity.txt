@@ -1,0 +1,31 @@
+PF16315 / BtCDH (BT_3328) identity, inspected 2026-10-30
+
+Sources inspected:
+https://rest.uniprot.org/uniprotkb/Q8A2H7.json
+https://www.ebi.ac.uk/interpro/api/entry/pfam/PF16315/protein/uniprot/Q8A2H7/
+https://www.ebi.ac.uk/interpro/api/entry/pfam/PF16378/protein/uniprot/Q8A2H7/
+https://www.ebi.ac.uk/interpro/api/entry/pfam/PF16378/protein/uniprot/Q8A2H6/
+
+UniProtKB:Q8A2H7 = BT_3328, "DUF4955 domain-containing protein", Bacteroides
+thetaiotaomicron VPI-5482, NCBITaxon:226186. Unreviewed (TrEMBL). 868 residues;
+sequence MD5 FF2AB748A899DBE1DC19E9EBFAB16827. The source names the protein BtCDH
+and gives the same length and locus (BT_3328 from B. thetaiotaomicron VPI-5482).
+
+Q8A2H7 Pfam:PF16315 interval: 716-867, inclusive (InterPro match score 1.3e-69)
+Q8A2H7 Pfam:PF16378 interval: 25-199, inclusive (InterPro match score 2.4e-21)
+Residues 200-715 carry no Pfam match.
+
+N-terminus 1-25: MKKVISIICITLLVALYSCDERDDL
+position 19 = C (lipobox LYSC; UniProt annotates a lipidation site at 19)
+
+COORDINATE LIMIT
+The source's recombinant enzyme is the full-length protein lacking the N-terminal
+lipoprotein signal sequence, i.e. roughly residues 19-868. It spans PF16378,
+the unassigned 200-715 region and PF16315. Activity measured on that construct
+is therefore a property of the whole mature protein, not of the PF16315 interval.
+No truncation, domain-deletion or active-site mutant has been reported, so the
+catalytic residues are not located on any interval.
+
+Neighbouring surface glycan-binding protein BT3329 (UniProtKB:Q8A2H6, 645 aa)
+Pfam:PF16378 interval: 25-207, inclusive (InterPro match score 3.7e-92)
+BT3329 has no PF16315 match.
