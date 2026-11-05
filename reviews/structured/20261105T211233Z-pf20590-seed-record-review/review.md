@@ -1,0 +1,650 @@
+# PF20590 DUF6791: seed identity, provenance and evidence-scope review
+
+- Review: 20261105T211233Z-pf20590-seed-record-review
+- Repository: CultureBotAI/DUFMech
+- Started UTC: 2026-11-05T21:01:08Z
+- Finished UTC: 2026-11-05T21:12:33Z
+- Reviewer: Codex (independent)
+- Completion: completed
+- Verdict: needs_curation
+- Scientific review: false
+
+## Summary
+
+PF20590 (DUF6791; InterPro:IPR046741) matches the verified frozen source and retains seed_status=UNKNOWN_CANDIDATE, characterization_status=UNSCORED and curation_status=SEEDED. The complete imported description for PF20590 (DUF6791; InterPro:IPR046741) states: This presumed domain is functionally uncharacterised. This domain family is found, and is approximately 160 amino acids in length. The domain is found in sequences that belong to the Thif family and is in association with [pfam:PF00899], located at its N-terminal. The frozen inventory records 424 proteins, 424 matches, 409 proteomes, 941 taxa, 0 structure entries, 253 AlphaFold models and a domain-architecture count of 2. These are database inventory values, not counts of independent experiments or measures of model quality. Biological and structural statements were assessed for representation and scope; sequences, models, structures and primary assays were not independently verified. One minor provisional provenance follow-up asks how the incomplete occurrence clause and unclear N-terminal reference should be read from the original annotation. It establishes no missing taxon, domain order, biological error or experimentally demonstrated function.
+
+## Scope And Provenance
+
+Full inspection of the selected seed projection and corresponding frozen source row for identity, imported claim scope, evidence representation, provenance, completeness, ownership and status. Primary-literature support and current upstream metadata were not reassessed.
+
+Selection: One record from the path-ordered queue of data/families/*.yaml lacking a target in the validated cumulative scripts/record_review.py list inventory. Fresh branch base: 5642a645349854802748ae387c0e2df121c5e83f. The corpus has 8296 records; 6131 were covered and 2165 unreviewed at selection. Coverage includes immutable reviews retained on earlier local batch branches as recorded in the session ledger. This bundle covers only PF20590.
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base 5642a645349854802748ae387c0e2df121c5e83f.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| PF20590 | data/families/PF20590.yaml | generated | PF20590 |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Native snapshot and target inspection | passed | True | PF20590 | Verified manifest and captured exact projection, frozen row, source hashes and semantic digest. |
+| Additional rubric input capture | passed | True | PF20590 | Captured rubric and recipe bytes while preserving native source inputs and snapshot identity. |
+| Exact frozen-row correspondence | passed | True | PF20590 | The inspected record agrees with its frozen row for accession, labels, description, source URL, InterPro accession, seed status and every counter; no curated payload is present. |
+| Native closed-schema and projection checks | passed | True | PF20590 | 8296 schema-valid records; 0 generated files differ. |
+| Canonical history check | passed | True | PF20590 | 489 valid canonical history records. |
+| Generated schema check | passed | True | PF20590 | Generated schema check found 0 differing generated files. |
+
+## Scientific And Domain Assessments
+
+### Exact Pfam/InterPro identity and naming
+
+identity: supported. Targets: PF20590.
+
+The filename, pfam_id=PF20590, id=Pfam:PF20590, short_name=DUF6791, name=Domain of unknown function (DUF6791), source URL and InterPro accession InterPro:IPR046741 agree with the selected frozen row. This establishes frozen identity correspondence, not current upstream taxonomy or function.
+
+### Frozen counters, raw hashes and semantic binding
+
+provenance: supported. Targets: PF20590.
+
+The record binds interpro-pfam-duf-2026-10-10 by SHA-256 and retains its generation timestamp. Its 424 proteins, 424 matches, 0 structure entries and 253 AlphaFold models are frozen database counters, not independent experiments. Raw input hashes and the dufmech-record-content-v1 digest preserve different checks.
+
+### Imported description versus experimental support
+
+evidence: unknown. Targets: PF20590.
+
+The complete imported description for PF20590 (DUF6791; InterPro:IPR046741) states: This presumed domain is functionally uncharacterised. This domain family is found, and is approximately 160 amino acids in length. The domain is found in sequences that belong to the Thif family and is in association with [pfam:PF00899], located at its N-terminal. The frozen inventory records 424 proteins, 424 matches, 409 proteomes, 941 taxa, 0 structure entries, 253 AlphaFold models and a domain-architecture count of 2. These are database inventory values, not counts of independent experiments or measures of model quality. Biological and structural statements were assessed for representation and scope; sequences, models, structures and primary assays were not independently verified.
+
+### Family, domain and tested-protein boundaries
+
+scope: supported. Targets: PF20590.
+
+DUF6791/IPR046741 describes a functionally uncharacterised presumed domain approximately 160 amino acids long. The literal clause 'This domain family is found, and' leaves an incomplete occurrence statement; do not invent an organism distribution. The description associates the domain with Thif-family sequences and [pfam:PF00899], followed by 'located at its N-terminal'. Preserve that positional uncertainty without choosing a terminal referent, domain order or exact boundary by assumption. Neither association nor family naming establishes physical interaction, catalytic activity or functional transfer. No related-family or sequence record was independently inspected. The 424 proteins and matches, 409 proteomes and two architectures do not resolve the wording. The complete seed and frozen row correspond, but the incomplete occurrence clause and ambiguous terminal referent warrant one minor provisional source-text provenance follow-up. This does not establish erroneous biology, a projection mismatch or a missing taxon, and it does not authorize a guessed repair of the generated projection. This bounded review retains scientific_review=false and records needs_curation/NEEDS_FOLLOWUP for that task.
+
+### Seed content and remaining scientific work
+
+completeness: unknown. Targets: PF20590.
+
+An authoritative fuller source and representative domain architectures would be needed to resolve the omitted distribution and the referent of located at its N-terminal. The Thif label and association with PF00899 do not identify a tested activity for this domain. No taxon or domain order is inferred here. The local search did not separately query Thif, PF00899 or associated biochemical terms. The hidden/ignored-inclusive local search was limited to literal PF20590 and DUF6791 under curation/families, evidence and history. It found no matching paths or content there; this establishes no repository-wide synonym absence or external literature absence. Other former names, aliases, proteins, systems, products, organisms and citation tokens were not searched beyond those two literal terms. No accession-named overlay, evidence or history path was found by the bounded hidden/ignored-inclusive inventory; the inspected projection has no curated claim payload. Optional-field absence is not a seed-schema defect.
+
+### Seed, scoring and review states
+
+consistency: supported. Targets: PF20590.
+
+seed_status=UNKNOWN_CANDIDATE, characterization_status=UNSCORED and curation_status=SEEDED express separate states. UNKNOWN_CANDIDATE is the retained lexical seed class, not an experimentally established absence of function. No REVIEWED gate or curation event is implied by this bundle.
+
+### Maintained correction surface and scoped result
+
+ownership: supported. Targets: PF20590.
+
+The proposed task is a bounded annotation-provenance check of the incomplete occurrence sentence and terminal reference. Preserve the immutable worklist and generated projection. Any source-supported clarification belongs in curation/families/PF20590.yaml with appropriate evidence, canonical history and normal generation. This review records the follow-up and does not perform or authorize a source correction or scientific status promotion.
+
+### Incomplete occurrence statement and unclear terminal reference
+
+provenance: concern. Targets: PF20590.
+
+The complete projection and frozen row both retain 'This domain family is found, and' and 'located at its N-terminal'. Exact import does not resolve the incomplete occurrence statement or identify the terminal referent. Trace the original annotation before clarifying either phrase. Preserve the approximate 160 residue domain scope and uncharacterised status; no taxon, domain order, associated-family function or erroneous biology is inferred.
+
+## Findings
+
+### PF20590-description-provenance: Resolve the incomplete occurrence clause and terminal referent
+
+minor / open / provisional; issue key: PF20590-incomplete-occurrence-and-terminal-referent.
+
+The frozen description literally says 'This domain family is found, and is approximately 160 amino acids in length',leaving its occurrence statement incomplete. It later associates the domain with Thif-family sequences and [pfam:PF00899],then says 'located at its N-terminal' without a clear antecedent. Trace the original annotation to resolve these textual uncertainties before adopting clarified distribution or domain order. Do not invent a missing taxon,choose the terminal referent by assumption,transfer associated-family function orassert erroneous biology. The approximate domain length and uncharacterised status themselves are not defects.
+
+## Recommended Actions And Acceptance Checks
+
+### PF20590-resolve-description-origin
+
+Consult the annotation provenance for the incomplete occurrence clause andN-terminal phrase,record its exact supported wording,andclarify only what that evidence establishes. Preserve unresolved uncertainty rather than silently repairing the generated projection.
+
+- Record the exact relevant original annotation wording and provenance; establish whether the incomplete occurrence clause is an omission orintentional wording.
+- Resolve the N-terminal antecedent only if the source supports a specific relationship between this domain,the containing protein andPF00899; otherwise retain explicit ambiguity.
+- Do not infer a missing organism distribution,Thif/PF00899 function,experimental activity orbiological/source error from these textual defects alone; retain the approximate160-residue domain scope andUNSCORED/SEEDED states.
+- If clarification is adopted,use the human-owned overlay with evidence andcanonical history; preserve immutable snapshot/projection ancestry andrun normal generation/validation.
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| record | data/families/PF20590.yaml; Entire projection, including identity, description, counters, status and provenance | supports | Read the complete PF20590 seed record; it contains imported metadata and no assertions, causal_graphs, discussions, datasets, cross_corpus_links, curation_history, curation_events or review_id. |
+| snapshot | data/worklists/interpro-pfam-duf-2026-10-10.json; pfam_id=PF20590; companion manifest and TSV; native verified inspection | supports | The exact frozen row matches the projection. The native inspection verifies the retained JSON/TSV manifest; the migration snapshot generation timestamp is 2026-10-10T07:44:21.614711Z. This is not the acquisition time of this retained row. The review date does not refresh these source facts. |
+| profile | docs/record-review-profile.md; Domains and Ownership; Verdicts and Status Gates; linked record-review contract and native checklist | supports | Read the local rules distinguishing imported description, seed class, evidence scoring, curated claims and scientific review, and the separate projection/overlay ownership. |
+| validation | justfile; records-check, history-check, validate-schema recipes; actual batch input-check runs | supports | Observed exit 0 from all three input recipes. 8296 schema-valid records; 0 generated files differ. 489 valid canonical history records. Generated schema check found 0 differing generated files. These checks do not establish scientific truth. |
+| local-search | curation/families; evidence; history; Path inventory filtered for PF20590 | supports | No path containing this accession was found in the bounded inventory. The exact overlay was also absent from native inspection; the record has no curated claim fields. |
+| duf-projection-pf20590 | data/families/PF20590.yaml; dufmech-reviewed-projection-v1 | context_only | Byte-exact projection retained at save for digest verification, not scientific assessment. |
+
+## Limits And Additional Notes
+
+- scientific_review is false. Primary papers, original figures and assays, live database entries, current taxonomy and complete family-member coverage were not reviewed; source citation tokens are not verified primary evidence.
+- The hidden/ignored-inclusive absence search is restricted to accession-bearing paths under curation/families, evidence and history. It does not exclude evidence in other local collections or the literature.
+- Required input checks passed. Native saving validates the supplied content and constructs the immutable pair. The persisted pair is then read back through the native validator and covered by the batch just reviews-check recipe; this document does not preclaim those later results. Full publication QC is tracked separately and may require Pages source-pin updates.
+- No scientific status, record, overlay, frozen input, canonical curation history or generated Pages artifact was changed by this review.
+- One record per bundle; assessment prose was authored from the actual inspected record. The helper assembles provenance and schema fields; inspection and successful checks alone are not scientific findings.
+- The explicit follow-up finding concerns imported textual representation. It does not resolve scientific truth or authorize the proposed corrective work.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+kind: record
+repository: CultureBotAI/DUFMech
+source:
+  git_revision: 5642a645349854802748ae387c0e2df121c5e83f
+  inputs:
+  - path: data/families/PF20590.yaml
+    role: target
+    sha256: eb0b5c4fa8985a439e9ab2819ca29d60bff56494c19350211b0d96776c6d496f
+  - path: data/worklists/interpro-pfam-duf-2026-10-10.json
+    role: context
+    sha256: 17fb625876c9326ed284263a47bcd84e0d7844a31c040dc06cd2260c36f1c383
+  - path: data/worklists/interpro-pfam-duf-2026-10-10.manifest.json
+    role: context
+    sha256: 31c07ffb6a169c851ea0e6e9dd527a10c04028eafeb29187bd62dc2ae848696e
+  - path: data/worklists/interpro-pfam-duf-2026-10-10.tsv
+    role: context
+    sha256: be023c8dd9d8d3864926b5032d6f7e87a884b1a567391696822dbbecc692dae7
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: 681377625fe3045abfa2433784707424931a69987e2f02b84f907dcb28f4831b
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: d1399ec6d404b485ac03680db36b07536f1233dacfd282c407b0a07a509a0d69
+    role: context
+  - path: docs/history.md
+    sha256: 356ead13b3a462a91158eb57cfba4c011d95462662c30f811ba2e1335a2b402e
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 78000e079c219bd049f628f517465b6e36fb35a26497f7ba7791c098fac73059
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: docs/records.md
+    sha256: 4a09829f77f279ba5be373cfa15ea957d69e978d0bb74a5ab3377988d8c29ad2
+    role: context
+  - path: docs/reviews.md
+    sha256: 02563bb1eeae36f08ca7e9e38bacc36461c65e7399df4f6c75a7215a34895ce3
+    role: context
+  - path: docs/sources.md
+    sha256: f530f8785142b9b76f20f0853ec54a21dd96ae0e5827b820a332096ba483d70f
+    role: context
+  - path: justfile
+    sha256: 16b490ea5da25e8c6b5f9649fd920df8b87a3e8438c1b6c1a5b8ca029deb3e36
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  snapshot_id: interpro-pfam-duf-2026-10-10
+  state: working_tree
+targets:
+- kind: generated
+  label: PF20590
+  owner_paths:
+  - path: curation/families/PF20590.yaml
+    repository: CultureBotAI/DUFMech
+    role: Maintained scientific overlay; create only with authorized curation.
+  - path: src/dufmech/records.py
+    repository: CultureBotAI/DUFMech
+    role: Projection generator; frozen snapshot identity is not hand-edited.
+  path: data/families/PF20590.yaml
+  record_class: FamilyRecord
+  semantic_digest:
+    algorithm: dufmech-record-content-v1
+    description: Canonical JSON SHA-256 of effective FamilyRecord excluding only curation_status,
+      review_id and curation_events.
+    sha256: ebdd8d8efe4d545aea062d35b05b8c87ceda486f365cbfab9a5dd98d5e2e952a
+  target_id: PF20590
+schema_version: 1.0.0
+review_id: 20261105T211233Z-pf20590-seed-record-review
+title: 'PF20590 DUF6791: seed identity, provenance and evidence-scope review'
+started_at: '2026-11-05T21:01:08Z'
+finished_at: '2026-11-05T21:12:33Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  model: GPT-6
+  independence: independent
+  independence_basis: This review session did not author or modify the inspected seed
+    projection or frozen source. This is an independent repository audit by an AI
+    agent, not external scientific peer review.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: needs_curation
+native_verdict: NEEDS_FOLLOWUP
+scientific_review: false
+summary: 'PF20590 (DUF6791; InterPro:IPR046741) matches the verified frozen source
+  and retains seed_status=UNKNOWN_CANDIDATE, characterization_status=UNSCORED and
+  curation_status=SEEDED. The complete imported description for PF20590 (DUF6791;
+  InterPro:IPR046741) states: This presumed domain is functionally uncharacterised.
+  This domain family is found, and is approximately 160 amino acids in length. The
+  domain is found in sequences that belong to the Thif family and is in association
+  with [pfam:PF00899], located at its N-terminal. The frozen inventory records 424
+  proteins, 424 matches, 409 proteomes, 941 taxa, 0 structure entries, 253 AlphaFold
+  models and a domain-architecture count of 2. These are database inventory values,
+  not counts of independent experiments or measures of model quality. Biological and
+  structural statements were assessed for representation and scope; sequences, models,
+  structures and primary assays were not independently verified. One minor provisional
+  provenance follow-up asks how the incomplete occurrence clause and unclear N-terminal
+  reference should be read from the original annotation. It establishes no missing
+  taxon, domain order, biological error or experimentally demonstrated function.'
+scope:
+  description: Full inspection of the selected seed projection and corresponding frozen
+    source row for identity, imported claim scope, evidence representation, provenance,
+    completeness, ownership and status. Primary-literature support and current upstream
+    metadata were not reassessed.
+  selection: 'One record from the path-ordered queue of data/families/*.yaml lacking
+    a target in the validated cumulative scripts/record_review.py list inventory.
+    Fresh branch base: 5642a645349854802748ae387c0e2df121c5e83f. The corpus has 8296
+    records; 6131 were covered and 2165 unreviewed at selection. Coverage includes
+    immutable reviews retained on earlier local batch branches as recorded in the
+    session ledger. This bundle covers only PF20590.'
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - PF20590
+  exclusions:
+  - target: Primary literature, live Pfam/InterPro/UniProt state and other family
+      members
+    reason: The selected object is a seed projection without curated functional assertions.
+      This is a local metadata and representation review; it does not establish experimental
+      characterization.
+checks:
+- check_id: native-inspect
+  name: Native snapshot and target inspection
+  command: uv run --locked dufmech-review inspect record PF20590
+  status: passed
+  required: true
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Verified manifest and captured exact projection, frozen row, source hashes
+    and semantic digest.
+  target_ids:
+  - PF20590
+  evidence_ids:
+  - record
+  - snapshot
+- check_id: common-inspect
+  name: Additional rubric input capture
+  command: uv run --locked python scripts/record_review.py inspect --targets /private/tmp/dufmech-review-session-20261019/batch-600-attempt-001/PF20590-targets.yaml
+    --input data/families/PF20590.yaml --input data/worklists/interpro-pfam-duf-2026-10-10.json
+    --input data/worklists/interpro-pfam-duf-2026-10-10.manifest.json --input data/worklists/interpro-pfam-duf-2026-10-10.tsv
+    --input docs/records.md --input docs/reviews.md --input docs/history.md --input
+    docs/sources.md --input docs/record-reviews.md --input docs/record-review-profile.md
+    --input .claude/skills/review-yaml-record/SKILL.md --input .claude/skills/curate-yaml-record/references/review-checklist.md
+    --input schema/record_review.yaml --input justfile
+  status: passed
+  required: true
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Captured rubric and recipe bytes while preserving native source inputs
+    and snapshot identity.
+  target_ids:
+  - PF20590
+  evidence_ids:
+  - profile
+- check_id: row-correspondence
+  name: Exact frozen-row correspondence
+  command: .venv/bin/python /private/tmp/dufmech-review-session-20261019/batch-600-attempt-001/prepare.py
+    PF20590
+  status: passed
+  required: true
+  exit_code: 0
+  expected_exit_code: 0
+  summary: The inspected record agrees with its frozen row for accession, labels,
+    description, source URL, InterPro accession, seed status and every counter; no
+    curated payload is present.
+  target_ids:
+  - PF20590
+  evidence_ids:
+  - record
+  - snapshot
+- check_id: records
+  name: Native closed-schema and projection checks
+  command: just records-check
+  status: passed
+  required: true
+  exit_code: 0
+  expected_exit_code: 0
+  summary: 8296 schema-valid records; 0 generated files differ.
+  target_ids:
+  - PF20590
+  evidence_ids:
+  - validation
+  scope_note: Shared batch input check executed before saving these reviews. The selected
+    projection and its maintained inputs remained unchanged.
+- check_id: history
+  name: Canonical history check
+  command: just history-check
+  status: passed
+  required: true
+  exit_code: 0
+  expected_exit_code: 0
+  summary: 489 valid canonical history records.
+  target_ids:
+  - PF20590
+  evidence_ids:
+  - validation
+  scope_note: Shared batch input check; this seed has no curation_history or generated
+    curation_events.
+- check_id: schema
+  name: Generated schema check
+  command: just validate-schema
+  status: passed
+  required: true
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Generated schema check found 0 differing generated files.
+  target_ids:
+  - PF20590
+  evidence_ids:
+  - validation
+evidence:
+- evidence_id: record
+  kind: record_content
+  reference: data/families/PF20590.yaml
+  locator: Entire projection, including identity, description, counters, status and
+    provenance
+  accessed_at: '2026-11-05T21:12:33Z'
+  support: supports
+  summary: Read the complete PF20590 seed record; it contains imported metadata and
+    no assertions, causal_graphs, discussions, datasets, cross_corpus_links, curation_history,
+    curation_events or review_id.
+  snapshot_sha256: eb0b5c4fa8985a439e9ab2819ca29d60bff56494c19350211b0d96776c6d496f
+- evidence_id: snapshot
+  kind: database
+  reference: data/worklists/interpro-pfam-duf-2026-10-10.json
+  locator: pfam_id=PF20590; companion manifest and TSV; native verified inspection
+  accessed_at: '2026-11-05T21:12:33Z'
+  support: supports
+  summary: The exact frozen row matches the projection. The native inspection verifies
+    the retained JSON/TSV manifest; the migration snapshot generation timestamp is
+    2026-10-10T07:44:21.614711Z. This is not the acquisition time of this retained
+    row. The review date does not refresh these source facts.
+  snapshot_sha256: 17fb625876c9326ed284263a47bcd84e0d7844a31c040dc06cd2260c36f1c383
+- evidence_id: profile
+  kind: authority
+  reference: docs/record-review-profile.md
+  locator: Domains and Ownership; Verdicts and Status Gates; linked record-review
+    contract and native checklist
+  accessed_at: '2026-11-05T21:12:33Z'
+  support: supports
+  summary: Read the local rules distinguishing imported description, seed class, evidence
+    scoring, curated claims and scientific review, and the separate projection/overlay
+    ownership.
+- evidence_id: validation
+  kind: validation
+  reference: justfile
+  locator: records-check, history-check, validate-schema recipes; actual batch input-check
+    runs
+  accessed_at: '2026-11-05T21:12:33Z'
+  support: supports
+  summary: Observed exit 0 from all three input recipes. 8296 schema-valid records;
+    0 generated files differ. 489 valid canonical history records. Generated schema
+    check found 0 differing generated files. These checks do not establish scientific
+    truth.
+- evidence_id: local-search
+  kind: search
+  reference: curation/families; evidence; history
+  locator: Path inventory filtered for PF20590
+  accessed_at: '2026-11-05T21:12:33Z'
+  support: supports
+  summary: No path containing this accession was found in the bounded inventory. The
+    exact overlay was also absent from native inspection; the record has no curated
+    claim fields.
+  search_scope: All paths under curation/families, evidence, and history, including
+    hidden and ignored files, filtered for the exact accession PF20590. This is a
+    local path inventory, not a literature search or an assertion that other corpora
+    lack evidence.
+- evidence_id: duf-projection-pf20590
+  kind: record_content
+  reference: data/families/PF20590.yaml
+  locator: dufmech-reviewed-projection-v1
+  accessed_at: '2026-11-05T21:12:33Z'
+  support: context_only
+  snapshot_sha256: eb0b5c4fa8985a439e9ab2819ca29d60bff56494c19350211b0d96776c6d496f
+  quote: "id: Pfam:PF20590\npfam_id: PF20590\nname: Domain of unknown function (DUF6791)\n\
+    short_name: DUF6791\nseed_status: UNKNOWN_CANDIDATE\ncharacterization_status:\
+    \ UNSCORED\ncuration_status: SEEDED\nsource_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF20590\n\
+    counters:\n  proteins: 424\n  matches: 424\n  proteomes: 409\n  taxa: 941\n  structures:\
+    \ 0\n  alphafold_models: 253\n  domain_architectures: 2\nprovenance:\n  snapshot_id:\
+    \ interpro-pfam-duf-2026-10-10\n  path: data/worklists/interpro-pfam-duf-2026-10-10.json\n\
+    \  sha256: 17fb625876c9326ed284263a47bcd84e0d7844a31c040dc06cd2260c36f1c383\n\
+    \  generated_at: '2026-10-10T07:44:21.614711Z'\n  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/\n\
+    interpro_id: InterPro:IPR046741\ndescription: This presumed domain is functionally\
+    \ uncharacterised. This domain family is found, and is\n  approximately 160 amino\
+    \ acids in length. The domain is found in sequences that belong to the Thif family\n\
+    \  and is in association with [pfam:PF00899], located at its N-terminal.\n"
+  summary: Byte-exact projection retained at save for digest verification, not scientific
+    assessment.
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Exact Pfam/InterPro identity and naming
+  outcome: supported
+  summary: The filename, pfam_id=PF20590, id=Pfam:PF20590, short_name=DUF6791, name=Domain
+    of unknown function (DUF6791), source URL and InterPro accession InterPro:IPR046741
+    agree with the selected frozen row. This establishes frozen identity correspondence,
+    not current upstream taxonomy or function.
+  target_ids:
+  - PF20590
+  evidence_ids:
+  - record
+  - snapshot
+- assessment_id: provenance
+  area: provenance
+  topic: Frozen counters, raw hashes and semantic binding
+  outcome: supported
+  summary: The record binds interpro-pfam-duf-2026-10-10 by SHA-256 and retains its
+    generation timestamp. Its 424 proteins, 424 matches, 0 structure entries and 253
+    AlphaFold models are frozen database counters, not independent experiments. Raw
+    input hashes and the dufmech-record-content-v1 digest preserve different checks.
+  target_ids:
+  - PF20590
+  evidence_ids:
+  - record
+  - snapshot
+  - validation
+- assessment_id: evidence-tier
+  area: evidence
+  topic: Imported description versus experimental support
+  outcome: unknown
+  summary: 'The complete imported description for PF20590 (DUF6791; InterPro:IPR046741)
+    states: This presumed domain is functionally uncharacterised. This domain family
+    is found, and is approximately 160 amino acids in length. The domain is found
+    in sequences that belong to the Thif family and is in association with [pfam:PF00899],
+    located at its N-terminal. The frozen inventory records 424 proteins, 424 matches,
+    409 proteomes, 941 taxa, 0 structure entries, 253 AlphaFold models and a domain-architecture
+    count of 2. These are database inventory values, not counts of independent experiments
+    or measures of model quality. Biological and structural statements were assessed
+    for representation and scope; sequences, models, structures and primary assays
+    were not independently verified.'
+  target_ids:
+  - PF20590
+  evidence_ids:
+  - record
+  - snapshot
+  dimensions:
+  - name: evidence-tier
+    value: Imported database description; primary support not reassessed
+    definition: Evidence actually examined for this audit; it is not a label for all
+      evidence that may exist for the family.
+    evidence_ids:
+    - record
+    - snapshot
+- assessment_id: claim-scope
+  area: scope
+  topic: Family, domain and tested-protein boundaries
+  outcome: supported
+  summary: DUF6791/IPR046741 describes a functionally uncharacterised presumed domain
+    approximately 160 amino acids long. The literal clause 'This domain family is
+    found, and' leaves an incomplete occurrence statement; do not invent an organism
+    distribution. The description associates the domain with Thif-family sequences
+    and [pfam:PF00899], followed by 'located at its N-terminal'. Preserve that positional
+    uncertainty without choosing a terminal referent, domain order or exact boundary
+    by assumption. Neither association nor family naming establishes physical interaction,
+    catalytic activity or functional transfer. No related-family or sequence record
+    was independently inspected. The 424 proteins and matches, 409 proteomes and two
+    architectures do not resolve the wording. The complete seed and frozen row correspond,
+    but the incomplete occurrence clause and ambiguous terminal referent warrant one
+    minor provisional source-text provenance follow-up. This does not establish erroneous
+    biology, a projection mismatch or a missing taxon, and it does not authorize a
+    guessed repair of the generated projection. This bounded review retains scientific_review=false
+    and records needs_curation/NEEDS_FOLLOWUP for that task.
+  target_ids:
+  - PF20590
+  evidence_ids:
+  - record
+  - snapshot
+- assessment_id: completeness
+  area: completeness
+  topic: Seed content and remaining scientific work
+  outcome: unknown
+  summary: An authoritative fuller source and representative domain architectures
+    would be needed to resolve the omitted distribution and the referent of located
+    at its N-terminal. The Thif label and association with PF00899 do not identify
+    a tested activity for this domain. No taxon or domain order is inferred here.
+    The local search did not separately query Thif, PF00899 or associated biochemical
+    terms. The hidden/ignored-inclusive local search was limited to literal PF20590
+    and DUF6791 under curation/families, evidence and history. It found no matching
+    paths or content there; this establishes no repository-wide synonym absence or
+    external literature absence. Other former names, aliases, proteins, systems, products,
+    organisms and citation tokens were not searched beyond those two literal terms.
+    No accession-named overlay, evidence or history path was found by the bounded
+    hidden/ignored-inclusive inventory; the inspected projection has no curated claim
+    payload. Optional-field absence is not a seed-schema defect.
+  target_ids:
+  - PF20590
+  evidence_ids:
+  - record
+  - local-search
+  - profile
+- assessment_id: status
+  area: consistency
+  topic: Seed, scoring and review states
+  outcome: supported
+  summary: seed_status=UNKNOWN_CANDIDATE, characterization_status=UNSCORED and curation_status=SEEDED
+    express separate states. UNKNOWN_CANDIDATE is the retained lexical seed class,
+    not an experimentally established absence of function. No REVIEWED gate or curation
+    event is implied by this bundle.
+  target_ids:
+  - PF20590
+  evidence_ids:
+  - record
+  - profile
+- assessment_id: ownership
+  area: ownership
+  topic: Maintained correction surface and scoped result
+  outcome: supported
+  summary: The proposed task is a bounded annotation-provenance check of the incomplete
+    occurrence sentence and terminal reference. Preserve the immutable worklist and
+    generated projection. Any source-supported clarification belongs in curation/families/PF20590.yaml
+    with appropriate evidence, canonical history and normal generation. This review
+    records the follow-up and does not perform or authorize a source correction or
+    scientific status promotion.
+  target_ids:
+  - PF20590
+  evidence_ids:
+  - profile
+  - record
+  - validation
+- assessment_id: description-provenance
+  area: provenance
+  topic: Incomplete occurrence statement and unclear terminal reference
+  outcome: concern
+  summary: The complete projection and frozen row both retain 'This domain family
+    is found, and' and 'located at its N-terminal'. Exact import does not resolve
+    the incomplete occurrence statement or identify the terminal referent. Trace the
+    original annotation before clarifying either phrase. Preserve the approximate
+    160 residue domain scope and uncharacterised status; no taxon, domain order, associated-family
+    function or erroneous biology is inferred.
+  target_ids:
+  - PF20590
+  evidence_ids:
+  - record
+  - snapshot
+findings:
+- finding_id: PF20590-description-provenance
+  issue_key: PF20590-incomplete-occurrence-and-terminal-referent
+  category: consistency
+  severity: minor
+  status: open
+  certainty: provisional
+  title: Resolve the incomplete occurrence clause and terminal referent
+  description: The frozen description literally says 'This domain family is found,
+    and is approximately 160 amino acids in length',leaving its occurrence statement
+    incomplete. It later associates the domain with Thif-family sequences and [pfam:PF00899],then
+    says 'located at its N-terminal' without a clear antecedent. Trace the original
+    annotation to resolve these textual uncertainties before adopting clarified distribution
+    or domain order. Do not invent a missing taxon,choose the terminal referent by
+    assumption,transfer associated-family function orassert erroneous biology. The
+    approximate domain length and uncharacterised status themselves are not defects.
+  target_ids:
+  - PF20590
+  field_paths:
+  - description
+  evidence_ids:
+  - record
+  - snapshot
+  normalization_reason: One bounded source-text provenance task covering the incomplete
+    clause and its linked positional wording,not separate findings for missing evidence,unknown
+    function oruninspected predictions.
+  ownership_note: Preserve the immutable worklist and generated projection. Any source-supported
+    clarification belongs in curation/families/PF20590.yaml with appropriately licensed
+    evidence and canonical history,followed by normal generation/validation. This
+    review does not authorize that edit.
+actions:
+- action_id: PF20590-resolve-description-origin
+  description: Consult the annotation provenance for the incomplete occurrence clause
+    andN-terminal phrase,record its exact supported wording,andclarify only what that
+    evidence establishes. Preserve unresolved uncertainty rather than silently repairing
+    the generated projection.
+  finding_ids:
+  - PF20590-description-provenance
+  target_ids:
+  - PF20590
+  ownership_note: Preserve the immutable worklist and generated projection. Any source-supported
+    clarification belongs in curation/families/PF20590.yaml with appropriately licensed
+    evidence and canonical history,followed by normal generation/validation. This
+    review does not authorize that edit.
+  acceptance_checks:
+  - Record the exact relevant original annotation wording and provenance; establish
+    whether the incomplete occurrence clause is an omission orintentional wording.
+  - Resolve the N-terminal antecedent only if the source supports a specific relationship
+    between this domain,the containing protein andPF00899; otherwise retain explicit
+    ambiguity.
+  - Do not infer a missing organism distribution,Thif/PF00899 function,experimental
+    activity orbiological/source error from these textual defects alone; retain the
+    approximate160-residue domain scope andUNSCORED/SEEDED states.
+  - If clarification is adopted,use the human-owned overlay with evidence andcanonical
+    history; preserve immutable snapshot/projection ancestry andrun normal generation/validation.
+limitations:
+- scientific_review is false. Primary papers, original figures and assays, live database
+  entries, current taxonomy and complete family-member coverage were not reviewed;
+  source citation tokens are not verified primary evidence.
+- The hidden/ignored-inclusive absence search is restricted to accession-bearing paths
+  under curation/families, evidence and history. It does not exclude evidence in other
+  local collections or the literature.
+- Required input checks passed. Native saving validates the supplied content and constructs
+  the immutable pair. The persisted pair is then read back through the native validator
+  and covered by the batch just reviews-check recipe; this document does not preclaim
+  those later results. Full publication QC is tracked separately and may require Pages
+  source-pin updates.
+- No scientific status, record, overlay, frozen input, canonical curation history
+  or generated Pages artifact was changed by this review.
+notes:
+- One record per bundle; assessment prose was authored from the actual inspected record.
+  The helper assembles provenance and schema fields; inspection and successful checks
+  alone are not scientific findings.
+- The explicit follow-up finding concerns imported textual representation. It does
+  not resolve scientific truth or authorize the proposed corrective work.
+tags:
+- seed-review
+- unreviewed-record-coverage
+```
