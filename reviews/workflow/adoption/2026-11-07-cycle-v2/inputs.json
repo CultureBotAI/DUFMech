@@ -1,0 +1,32 @@
+{
+  "schema_version": "1.0.0",
+  "prepared_on": "2026-11-07",
+  "adoption_issue": "https://github.com/CultureBotAI/DUFMech/issues/399",
+  "lane_pr": "https://github.com/CultureBotAI/culturebotai-claw/pull/924",
+  "release": {
+    "commit": "c26f3a0906916f9641a5f82b004b5541ae5fbe52",
+    "tag": "mech-cycle-v2.0.0",
+    "parent_version": "2.0.0"
+  },
+  "previous_profile": {
+    "revision": "5642a645349854802748ae387c0e2df121c5e83f",
+    "path": "workflow/mech-workflow.yaml",
+    "sha256": "1f3ab681ce30df16604d91b2321e7c5de481bc31cb070f78b4d81102eed9f4af"
+  },
+  "candidate_inputs": {
+    "workflow/mech-workflow.yaml": "70e2acf72e4768a1037ca70a321fd9188fd30fb3ec91d7d4ffd205a09be66e2f",
+    "workflow/legacy/mech-workflow-v1.yaml": "1f3ab681ce30df16604d91b2321e7c5de481bc31cb070f78b4d81102eed9f4af",
+    "workflow/parent/mech-cycle.yaml": "99b664b587c96d03acc023e56e0556c0b3a0bb9bdc03713d94f7e9546a52e266",
+    "workflow/parent/workflow.yaml": "9dfa77d21173b16bc119a60e83ac3f512fa9718d4cdf6a339d99ad83037d8bfb",
+    ".claude/skills/dufmech-evolve-workflow/SKILL.md": "fd50ea7e8bba6c7e25bf85cf242ced076dc7e8e63281e4137e9b8efa93b46c6c",
+    ".claude/skills/triage-and-resolve-issues/SKILL.md": "17691481de0c6e3c85c486b15cde56bbb7bc55fd6cacfc9159d63d065f84e189",
+    ".github/workflows/validate.yaml": "2c014c50fc76025d6349db367d58df63c0ca85d38f692e5d045b36dfe7c51f15",
+    "reviews/workflow/adoption/2026-11-07-cycle-v2/backlog-context.json": "4cd4f6bfb6fbf29e441d1e8f9247899b6f68a39686742f15fad6b33c57bf76f4"
+  },
+  "helper": {
+    "path": "scripts/adhoc/prepare_cycle_v2_canary.py",
+    "sha256": "03bc563194c7158a5aa72aeaccd49be93b9d39c79b9cef82e9f7947b21fd4eaa"
+  },
+  "runtime_activation": "NOT PERFORMED",
+  "intel_effective_hashes": "Must be computed and reviewed on the deployment host"
+}
