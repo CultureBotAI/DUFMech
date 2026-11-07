@@ -1,0 +1,816 @@
+{
+  "purpose": "Dated candidate-design context, never the future stage-1 frozen inventory",
+  "issues_observed_at": "2026-11-07T09:11:47.877651+00:00",
+  "prs_observed_at": "2026-11-07T09:11:48.354442+00:00",
+  "issues": [
+    {
+      "number": 96,
+      "title": "Map UniProt UPF family names to evidence-backed Pfam worklist identifiers",
+      "url": "https://github.com/CultureBotAI/DUFMech/issues/96",
+      "updatedAt": "2026-10-06T01:27:56Z",
+      "labels": []
+    },
+    {
+      "number": 143,
+      "title": "Example-candidate selection uses different definitions of 'has an example' per reason",
+      "url": "https://github.com/CultureBotAI/DUFMech/issues/143",
+      "updatedAt": "2026-10-07T23:06:58Z",
+      "labels": []
+    },
+    {
+      "number": 145,
+      "title": "Record the source of renamed TraitMech families in example-candidate manifests",
+      "url": "https://github.com/CultureBotAI/DUFMech/issues/145",
+      "updatedAt": "2026-10-07T23:07:00Z",
+      "labels": []
+    },
+    {
+      "number": 154,
+      "title": "InterProEntryClient: empty 200 body retried as error; Retry-After ignored; no pacing",
+      "url": "https://github.com/CultureBotAI/DUFMech/issues/154",
+      "updatedAt": "2026-10-08T01:28:57Z",
+      "labels": []
+    },
+    {
+      "number": 160,
+      "title": "Show former DUF/UPF names on EX_DUF family records and pages",
+      "url": "https://github.com/CultureBotAI/DUFMech/issues/160",
+      "updatedAt": "2026-10-08T03:14:41Z",
+      "labels": []
+    },
+    {
+      "number": 170,
+      "title": "Wording nits after the EX_DUF migration",
+      "url": "https://github.com/CultureBotAI/DUFMech/issues/170",
+      "updatedAt": "2026-10-08T03:41:10Z",
+      "labels": []
+    },
+    {
+      "number": 204,
+      "title": "PF01973 follow-up: resolve archaeal MptE constructs and native biochemical scope",
+      "url": "https://github.com/CultureBotAI/DUFMech/issues/204",
+      "updatedAt": "2026-10-14T22:56:58Z",
+      "labels": []
+    },
+    {
+      "number": 205,
+      "title": "PF01973 follow-up: map later Maf/GlfM systems and discriminate residue mechanisms",
+      "url": "https://github.com/CultureBotAI/DUFMech/issues/205",
+      "updatedAt": "2026-10-15T02:40:04Z",
+      "labels": []
+    },
+    {
+      "number": 207,
+      "title": "PF01973 follow-up: resolve Unay2024 Maf2 construct sequence and plasmid discrepancies",
+      "url": "https://github.com/CultureBotAI/DUFMech/issues/207",
+      "updatedAt": "2026-10-15T02:57:39Z",
+      "labels": []
+    },
+    {
+      "number": 213,
+      "title": "PF01976 follow-up: resolve redox mechanism and member evidence",
+      "url": "https://github.com/CultureBotAI/DUFMech/issues/213",
+      "updatedAt": "2026-10-15T04:48:13Z",
+      "labels": []
+    },
+    {
+      "number": 214,
+      "title": "PF01976 follow-up: resolve prenyl-synthase domain attribution",
+      "url": "https://github.com/CultureBotAI/DUFMech/issues/214",
+      "updatedAt": "2026-10-15T04:48:15Z",
+      "labels": []
+    },
+    {
+      "number": 215,
+      "title": "PF01976 follow-up: resolve DVU3364 allele-specific causality",
+      "url": "https://github.com/CultureBotAI/DUFMech/issues/215",
+      "updatedAt": "2026-10-15T04:48:16Z",
+      "labels": []
+    },
+    {
+      "number": 217,
+      "title": "PF01977: extend exact-member and partner-dependent causal coverage beyond AnFdc",
+      "url": "https://github.com/CultureBotAI/DUFMech/issues/217",
+      "updatedAt": "2026-10-15T13:00:20Z",
+      "labels": []
+    },
+    {
+      "number": 218,
+      "title": "PF01977: extend AnFdc mechanism contexts without conflating domains or atomic trajectories",
+      "url": "https://github.com/CultureBotAI/DUFMech/issues/218",
+      "updatedAt": "2026-10-15T13:00:25Z",
+      "labels": []
+    },
+    {
+      "number": 219,
+      "title": "PF01977: resolve assay-label discrepancies, cofactor normalization and construct details",
+      "url": "https://github.com/CultureBotAI/DUFMech/issues/219",
+      "updatedAt": "2026-10-15T13:00:28Z",
+      "labels": []
+    },
+    {
+      "number": 228,
+      "title": "PF01978: resolve TrmB construct identity and domain-specific attribution",
+      "url": "https://github.com/CultureBotAI/DUFMech/issues/228",
+      "updatedAt": "2026-10-15T19:58:28Z",
+      "labels": []
+    },
+    {
+      "number": 229,
+      "title": "PF01978: resolve assay carryover, controls and residual TrmB activity",
+      "url": "https://github.com/CultureBotAI/DUFMech/issues/229",
+      "updatedAt": "2026-10-15T19:58:32Z",
+      "labels": []
+    },
+    {
+      "number": 230,
+      "title": "PF01978: extend promoter, anti-inducer and exact-member causal coverage",
+      "url": "https://github.com/CultureBotAI/DUFMech/issues/230",
+      "updatedAt": "2026-10-15T19:58:37Z",
+      "labels": []
+    },
+    {
+      "number": 240,
+      "title": "PF01980: resolve TrmO physical constructs and domain-specific mechanism",
+      "url": "https://github.com/CultureBotAI/DUFMech/issues/240",
+      "updatedAt": "2026-10-15T22:26:33Z",
+      "labels": []
+    },
+    {
+      "number": 241,
+      "title": "PF01980: resolve source discrepancies and physiological interpretation",
+      "url": "https://github.com/CultureBotAI/DUFMech/issues/241",
+      "updatedAt": "2026-10-15T22:19:07Z",
+      "labels": []
+    },
+    {
+      "number": 242,
+      "title": "PF01980: extend exact-member TrmO literature and causal coverage",
+      "url": "https://github.com/CultureBotAI/DUFMech/issues/242",
+      "updatedAt": "2026-10-15T22:18:55Z",
+      "labels": []
+    },
+    {
+      "number": 247,
+      "title": "PF01981: resolve historical PTH2 constructs and residue mechanisms",
+      "url": "https://github.com/CultureBotAI/DUFMech/issues/247",
+      "updatedAt": "2026-10-15T23:43:19Z",
+      "labels": []
+    },
+    {
+      "number": 248,
+      "title": "PF01981: resolve source discrepancies and physiological interpretation",
+      "url": "https://github.com/CultureBotAI/DUFMech/issues/248",
+      "updatedAt": "2026-10-15T23:43:22Z",
+      "labels": []
+    },
+    {
+      "number": 249,
+      "title": "PF01981: extend exact-member PTH2 literature and causal coverage",
+      "url": "https://github.com/CultureBotAI/DUFMech/issues/249",
+      "updatedAt": "2026-10-15T23:43:27Z",
+      "labels": []
+    },
+    {
+      "number": 252,
+      "title": "PF01982: reconcile RibK donor specificity and metal dependence",
+      "url": "https://github.com/CultureBotAI/DUFMech/issues/252",
+      "updatedAt": "2026-10-16T02:47:39Z",
+      "labels": []
+    },
+    {
+      "number": 253,
+      "title": "PF01982: resolve physical constructs, residue mechanisms and native regulation",
+      "url": "https://github.com/CultureBotAI/DUFMech/issues/253",
+      "updatedAt": "2026-10-16T02:47:43Z",
+      "labels": []
+    },
+    {
+      "number": 254,
+      "title": "PF01982: reconcile assay descriptions and extend source/member coverage",
+      "url": "https://github.com/CultureBotAI/DUFMech/issues/254",
+      "updatedAt": "2026-10-16T02:47:47Z",
+      "labels": []
+    },
+    {
+      "number": 260,
+      "title": "PF01983: resolve exact constructs and assay details",
+      "url": "https://github.com/CultureBotAI/DUFMech/issues/260",
+      "updatedAt": "2026-10-16T04:13:14Z",
+      "labels": []
+    },
+    {
+      "number": 261,
+      "title": "PF01983: distinguish quantitative and atomic mechanisms from product fractions",
+      "url": "https://github.com/CultureBotAI/DUFMech/issues/261",
+      "updatedAt": "2026-10-16T04:13:17Z",
+      "labels": []
+    },
+    {
+      "number": 262,
+      "title": "PF01983: extend original-source and exact-member evidence",
+      "url": "https://github.com/CultureBotAI/DUFMech/issues/262",
+      "updatedAt": "2026-10-16T04:13:21Z",
+      "labels": []
+    },
+    {
+      "number": 265,
+      "title": "PF01984: resolve constructs, replicate accounting and native-gel recipe",
+      "url": "https://github.com/CultureBotAI/DUFMech/issues/265",
+      "updatedAt": "2026-10-16T05:26:50Z",
+      "labels": []
+    },
+    {
+      "number": 266,
+      "title": "PF01984: resolve association and thermal mechanism limits",
+      "url": "https://github.com/CultureBotAI/DUFMech/issues/266",
+      "updatedAt": "2026-10-16T05:26:51Z",
+      "labels": []
+    },
+    {
+      "number": 267,
+      "title": "PF01984: extend primary-source and family-member coverage",
+      "url": "https://github.com/CultureBotAI/DUFMech/issues/267",
+      "updatedAt": "2026-10-16T05:26:54Z",
+      "labels": []
+    },
+    {
+      "number": 270,
+      "title": "PF01985: resolve bacterial allele and culture-control attribution",
+      "url": "https://github.com/CultureBotAI/DUFMech/issues/270",
+      "updatedAt": "2026-10-16T06:48:19Z",
+      "labels": []
+    },
+    {
+      "number": 271,
+      "title": "PF01985: authenticate constructs and distinguish folding from contact effects",
+      "url": "https://github.com/CultureBotAI/DUFMech/issues/271",
+      "updatedAt": "2026-10-16T06:51:55Z",
+      "labels": []
+    },
+    {
+      "number": 272,
+      "title": "PF01985: extend primary-source and CRM member coverage",
+      "url": "https://github.com/CultureBotAI/DUFMech/issues/272",
+      "updatedAt": "2026-10-16T08:13:43Z",
+      "labels": []
+    },
+    {
+      "number": 274,
+      "title": "PF01985: resolve plant allele and assay-sampling controls",
+      "url": "https://github.com/CultureBotAI/DUFMech/issues/274",
+      "updatedAt": "2026-10-16T08:07:19Z",
+      "labels": []
+    },
+    {
+      "number": 277,
+      "title": "PF01986: establish experimental activity and discriminate repair alternatives",
+      "url": "https://github.com/CultureBotAI/DUFMech/issues/277",
+      "updatedAt": "2026-10-16T09:51:54Z",
+      "labels": []
+    },
+    {
+      "number": 278,
+      "title": "PF01986: extend original-source and exact-member coverage",
+      "url": "https://github.com/CultureBotAI/DUFMech/issues/278",
+      "updatedAt": "2026-10-16T09:51:55Z",
+      "labels": []
+    },
+    {
+      "number": 279,
+      "title": "Publish PF01986 with a retained source checkpoint and regenerated Pages",
+      "url": "https://github.com/CultureBotAI/DUFMech/issues/279",
+      "updatedAt": "2026-10-16T09:51:56Z",
+      "labels": []
+    },
+    {
+      "number": 353,
+      "title": "Support worklist snapshot-lineage propagation across reviews, protein_examples, report/pages, and exduf for UPF\\d{4} and PF21084 onboarding",
+      "url": "https://github.com/CultureBotAI/DUFMech/issues/353",
+      "updatedAt": "2026-10-25T08:35:40Z",
+      "labels": []
+    },
+    {
+      "number": 369,
+      "title": "Autolinked DOIs keep Markdown and table punctuation in the link target",
+      "url": "https://github.com/CultureBotAI/DUFMech/issues/369",
+      "updatedAt": "2026-10-26T06:02:19Z",
+      "labels": []
+    },
+    {
+      "number": 370,
+      "title": "Site contract never resolves 404.html's own-site links",
+      "url": "https://github.com/CultureBotAI/DUFMech/issues/370",
+      "updatedAt": "2026-10-25T23:27:40Z",
+      "labels": []
+    },
+    {
+      "number": 371,
+      "title": "curie_url would send a URL-shaped grounding to bioregistry",
+      "url": "https://github.com/CultureBotAI/DUFMech/issues/371",
+      "updatedAt": "2026-10-25T23:27:41Z",
+      "labels": []
+    },
+    {
+      "number": 372,
+      "title": "Curation-status values have no definitions, so the site cannot explain them (IN_PROGRESS on 141 families)",
+      "url": "https://github.com/CultureBotAI/DUFMech/issues/372",
+      "updatedAt": "2026-10-25T23:27:42Z",
+      "labels": []
+    },
+    {
+      "number": 373,
+      "title": "pages/ is within 3.5 MB of its 450 MB budget, and pages/source/ keeps growing",
+      "url": "https://github.com/CultureBotAI/DUFMech/issues/373",
+      "updatedAt": "2026-10-25T23:27:43Z",
+      "labels": []
+    },
+    {
+      "number": 374,
+      "title": "Decide whether protein-example links open the UniProt entry or the frozen REST JSON",
+      "url": "https://github.com/CultureBotAI/DUFMech/issues/374",
+      "updatedAt": "2026-10-25T23:27:43Z",
+      "labels": []
+    },
+    {
+      "number": 375,
+      "title": "Report-a-problem link needs JavaScript because of the page budget",
+      "url": "https://github.com/CultureBotAI/DUFMech/issues/375",
+      "updatedAt": "2026-10-25T23:27:45Z",
+      "labels": []
+    },
+    {
+      "number": 376,
+      "title": "CURIEs inside causal-graph prose are still plain text",
+      "url": "https://github.com/CultureBotAI/DUFMech/issues/376",
+      "updatedAt": "2026-10-25T23:27:45Z",
+      "labels": []
+    },
+    {
+      "number": 377,
+      "title": "autolink merges two parenthesised URLs joined without whitespace into one wrong link",
+      "url": "https://github.com/CultureBotAI/DUFMech/issues/377",
+      "updatedAt": "2026-10-26T06:02:21Z",
+      "labels": []
+    },
+    {
+      "number": 378,
+      "title": "curie_url still sends non-http scheme values to bioregistry",
+      "url": "https://github.com/CultureBotAI/DUFMech/issues/378",
+      "updatedAt": "2026-10-26T02:08:29Z",
+      "labels": []
+    },
+    {
+      "number": 379,
+      "title": "Breadcrumb separators are announced by screen readers",
+      "url": "https://github.com/CultureBotAI/DUFMech/issues/379",
+      "updatedAt": "2026-10-26T02:08:31Z",
+      "labels": []
+    },
+    {
+      "number": 380,
+      "title": "Map 'View data as table' opens an empty table without JavaScript",
+      "url": "https://github.com/CultureBotAI/DUFMech/issues/380",
+      "updatedAt": "2026-10-26T02:08:32Z",
+      "labels": []
+    },
+    {
+      "number": 381,
+      "title": "Map search placeholder example 'radical SAM' matches no family",
+      "url": "https://github.com/CultureBotAI/DUFMech/issues/381",
+      "updatedAt": "2026-10-26T02:08:33Z",
+      "labels": []
+    },
+    {
+      "number": 382,
+      "title": "Every page's build id hashes all family data, so any curation commit rewrites every page",
+      "url": "https://github.com/CultureBotAI/DUFMech/issues/382",
+      "updatedAt": "2026-10-26T07:13:46Z",
+      "labels": []
+    },
+    {
+      "number": 388,
+      "title": "Redesign family pages claim-first, with PF13271 as the pilot",
+      "url": "https://github.com/CultureBotAI/DUFMech/issues/388",
+      "updatedAt": "2026-11-02T04:27:53Z",
+      "labels": [
+        {
+          "id": "LA_kwDOU2F27M8AAAAC5__SGA",
+          "name": "enhancement",
+          "description": "New feature or request",
+          "color": "a2eeef"
+        }
+      ]
+    },
+    {
+      "number": 389,
+      "title": "Family pages: lead with a curated-finding card built from causal-graph edges",
+      "url": "https://github.com/CultureBotAI/DUFMech/issues/389",
+      "updatedAt": "2026-11-02T04:27:37Z",
+      "labels": [
+        {
+          "id": "LA_kwDOU2F27M8AAAAC5__SGA",
+          "name": "enhancement",
+          "description": "New feature or request",
+          "color": "a2eeef"
+        }
+      ]
+    },
+    {
+      "number": 390,
+      "title": "Family pages: facts rail, footer tabs, and one link in place of the inline status guide",
+      "url": "https://github.com/CultureBotAI/DUFMech/issues/390",
+      "updatedAt": "2026-11-02T04:27:39Z",
+      "labels": [
+        {
+          "id": "LA_kwDOU2F27M8AAAAC5__SGA",
+          "name": "enhancement",
+          "description": "New feature or request",
+          "color": "a2eeef"
+        }
+      ]
+    },
+    {
+      "number": 391,
+      "title": "Render causal graphs as static node diagrams, with scope and limitations in <details>",
+      "url": "https://github.com/CultureBotAI/DUFMech/issues/391",
+      "updatedAt": "2026-11-02T04:27:41Z",
+      "labels": [
+        {
+          "id": "LA_kwDOU2F27M8AAAAC5__SGA",
+          "name": "enhancement",
+          "description": "New feature or request",
+          "color": "a2eeef"
+        }
+      ]
+    },
+    {
+      "number": 392,
+      "title": "Show open discussions as question cards with the full rationale one click away",
+      "url": "https://github.com/CultureBotAI/DUFMech/issues/392",
+      "updatedAt": "2026-11-02T04:27:42Z",
+      "labels": [
+        {
+          "id": "LA_kwDOU2F27M8AAAAC5__SGA",
+          "name": "enhancement",
+          "description": "New feature or request",
+          "color": "a2eeef"
+        }
+      ]
+    },
+    {
+      "number": 393,
+      "title": "Draw domain tracks with residue markers for each protein example",
+      "url": "https://github.com/CultureBotAI/DUFMech/issues/393",
+      "updatedAt": "2026-11-02T04:27:44Z",
+      "labels": [
+        {
+          "id": "LA_kwDOU2F27M8AAAAC5__SGA",
+          "name": "enhancement",
+          "description": "New feature or request",
+          "color": "a2eeef"
+        }
+      ]
+    },
+    {
+      "number": 394,
+      "title": "Schema: add residue_sites and a catalytic-site card checked against UniProt",
+      "url": "https://github.com/CultureBotAI/DUFMech/issues/394",
+      "updatedAt": "2026-11-02T04:27:46Z",
+      "labels": [
+        {
+          "id": "LA_kwDOU2F27M8AAAAC5__SGA",
+          "name": "enhancement",
+          "description": "New feature or request",
+          "color": "a2eeef"
+        }
+      ]
+    },
+    {
+      "number": 395,
+      "title": "Store conservation and architecture-split figures as data and render them",
+      "url": "https://github.com/CultureBotAI/DUFMech/issues/395",
+      "updatedAt": "2026-11-02T04:27:48Z",
+      "labels": [
+        {
+          "id": "LA_kwDOU2F27M8AAAAC5__SGA",
+          "name": "enhancement",
+          "description": "New feature or request",
+          "color": "a2eeef"
+        }
+      ]
+    },
+    {
+      "number": 396,
+      "title": "Map HMM match states to residue positions and show a sequence logo at key sites",
+      "url": "https://github.com/CultureBotAI/DUFMech/issues/396",
+      "updatedAt": "2026-11-02T04:27:50Z",
+      "labels": [
+        {
+          "id": "LA_kwDOU2F27M8AAAAC5__SGA",
+          "name": "enhancement",
+          "description": "New feature or request",
+          "color": "a2eeef"
+        }
+      ]
+    },
+    {
+      "number": 397,
+      "title": "Structure panel: Foldseek hits for domain models and pLDDT strips per example",
+      "url": "https://github.com/CultureBotAI/DUFMech/issues/397",
+      "updatedAt": "2026-11-02T04:27:52Z",
+      "labels": [
+        {
+          "id": "LA_kwDOU2F27M8AAAAC5__SGA",
+          "name": "enhancement",
+          "description": "New feature or request",
+          "color": "a2eeef"
+        }
+      ]
+    }
+  ],
+  "open_prs": [
+    {
+      "number": 280,
+      "title": "Curate PF01986 repair hypotheses with scoped evidence",
+      "url": "https://github.com/CultureBotAI/DUFMech/pull/280",
+      "headRefOid": "7619bbd5376db6a9527fc767acb61a2a3f0b8bcf"
+    },
+    {
+      "number": 289,
+      "title": "Review seed records PF01986-PF02001 (batch 1)",
+      "url": "https://github.com/CultureBotAI/DUFMech/pull/289",
+      "headRefOid": "8ddd241669fc18d7bd85609877933ad131b5ea1b"
+    },
+    {
+      "number": 290,
+      "title": "Review seed records PF02006-PF02413 (batch 2)",
+      "url": "https://github.com/CultureBotAI/DUFMech/pull/290",
+      "headRefOid": "5c2cf7732728db2632309e7952e413af3eb6e33d"
+    },
+    {
+      "number": 291,
+      "title": "Review seed records PF02415-PF02582 with two follow-up findings (batch 3)",
+      "url": "https://github.com/CultureBotAI/DUFMech/pull/291",
+      "headRefOid": "186d9c0cc0b701e8e2379c08e1a19ca4fc52437b"
+    },
+    {
+      "number": 292,
+      "title": "Review seed records PF02585-PF02595 with two follow-up findings (batch 4)",
+      "url": "https://github.com/CultureBotAI/DUFMech/pull/292",
+      "headRefOid": "7a1954593058eba3641e02dfdb92e996db291f53"
+    },
+    {
+      "number": 293,
+      "title": "Review seed records PF02596-PF02623 (batch 5)",
+      "url": "https://github.com/CultureBotAI/DUFMech/pull/293",
+      "headRefOid": "4e32604432414a92741e40b17322f5819cab6e87"
+    },
+    {
+      "number": 294,
+      "title": "Review seed records PF02624-PF02643 with one follow-up finding (batch 6)",
+      "url": "https://github.com/CultureBotAI/DUFMech/pull/294",
+      "headRefOid": "9f34cc5a5020ec88734217640276e67117b6e252"
+    },
+    {
+      "number": 295,
+      "title": "Review seed records PF02645-PF02675 (batch 7)",
+      "url": "https://github.com/CultureBotAI/DUFMech/pull/295",
+      "headRefOid": "4486602b0457b4b404d160b38f2b453a20d56fd2"
+    },
+    {
+      "number": 296,
+      "title": "Review seed records PF02676-PF02697 (batch 8)",
+      "url": "https://github.com/CultureBotAI/DUFMech/pull/296",
+      "headRefOid": "c9f21cb14426dd2258379b237de5c4e7dbfc6631"
+    },
+    {
+      "number": 297,
+      "title": "Review seed records PF02698-PF02958 (batch 9)",
+      "url": "https://github.com/CultureBotAI/DUFMech/pull/297",
+      "headRefOid": "788b2d9d53af495e794b9b061e597478d4cfebfe"
+    },
+    {
+      "number": 298,
+      "title": "Review seed records PF02989-PF03080 with one traceability finding (batch 10)",
+      "url": "https://github.com/CultureBotAI/DUFMech/pull/298",
+      "headRefOid": "46f9432d78358afcfc3bbe90229a0fd968bee78f"
+    },
+    {
+      "number": 299,
+      "title": "Review seed records PF03086-PF03159 (batch 11)",
+      "url": "https://github.com/CultureBotAI/DUFMech/pull/299",
+      "headRefOid": "6ce737969ce716574346fc506e9736a55216e283"
+    },
+    {
+      "number": 300,
+      "title": "Review seed records PF03162-PF03237 with one citation-context finding (batch 12)",
+      "url": "https://github.com/CultureBotAI/DUFMech/pull/300",
+      "headRefOid": "24b98bf35cfbcb14e584798f418e9410595ddf27"
+    },
+    {
+      "number": 301,
+      "title": "Review seed records PF03266-PF03380 with one traceability finding (batch 13)",
+      "url": "https://github.com/CultureBotAI/DUFMech/pull/301",
+      "headRefOid": "1ecc85fd9d2af418ff5f2cf05219d8fbd4e3f36b"
+    },
+    {
+      "number": 302,
+      "title": "Review seed records PF03381-PF03434 (batch 14)",
+      "url": "https://github.com/CultureBotAI/DUFMech/pull/302",
+      "headRefOid": "32ff45434dec44aeef319b152cd8e77db517a0ab"
+    },
+    {
+      "number": 303,
+      "title": "Review seed records PF03436-PF03564 (batch 15)",
+      "url": "https://github.com/CultureBotAI/DUFMech/pull/303",
+      "headRefOid": "1660edb749a0d0a4eb3f93a2727a0604110aeedb"
+    },
+    {
+      "number": 304,
+      "title": "Review seed records PF03618-PF03660 (batch 16)",
+      "url": "https://github.com/CultureBotAI/DUFMech/pull/304",
+      "headRefOid": "ffc3be86b1c8440bc351dd29f9722fd1612ad9b3"
+    },
+    {
+      "number": 305,
+      "title": "Review seed records PF03661-PF03702 (batch 17)",
+      "url": "https://github.com/CultureBotAI/DUFMech/pull/305",
+      "headRefOid": "36985881f1296bbf7855d097bae6ae374a025307"
+    },
+    {
+      "number": 306,
+      "title": "Review seed records PF03703-PF03752 (batch 18)",
+      "url": "https://github.com/CultureBotAI/DUFMech/pull/306",
+      "headRefOid": "e7c2021d554add517ce3a7affe1c58abd86cde77"
+    },
+    {
+      "number": 307,
+      "title": "Review seed records PF03754-PF03787 (batch 19)",
+      "url": "https://github.com/CultureBotAI/DUFMech/pull/307",
+      "headRefOid": "2370a0399b6bbb7f3227f7fc6d46cacaea68ce3e"
+    },
+    {
+      "number": 308,
+      "title": "Review seed records PF03804-PF03929 (batch 20)",
+      "url": "https://github.com/CultureBotAI/DUFMech/pull/308",
+      "headRefOid": "f15ac5afecd0ed18f78e86c59245d1aab045161e"
+    },
+    {
+      "number": 309,
+      "title": "Review seed records PF03935-PF03988 (batch 21)",
+      "url": "https://github.com/CultureBotAI/DUFMech/pull/309",
+      "headRefOid": "a1cd9d54b76271f94ca9bdb5a730e3e2c55f0a9c"
+    },
+    {
+      "number": 310,
+      "title": "Review seed records PF03990-PF04010 (batch 22)",
+      "url": "https://github.com/CultureBotAI/DUFMech/pull/310",
+      "headRefOid": "626b879040ed4b2cbd481e03b230d650e91b7a61"
+    },
+    {
+      "number": 311,
+      "title": "Review seed records PF04013-PF04027 (batch 23)",
+      "url": "https://github.com/CultureBotAI/DUFMech/pull/311",
+      "headRefOid": "20633a106dcff8a35701b197eadce9c8e6a67d89"
+    },
+    {
+      "number": 312,
+      "title": "Review seed records PF04028-PF04070 (batch 24)",
+      "url": "https://github.com/CultureBotAI/DUFMech/pull/312",
+      "headRefOid": "a08832ddf88923ee3c3e91f25c8ebad7719c108f"
+    },
+    {
+      "number": 313,
+      "title": "Review seed records PF04071-PF04143 (batch 25)",
+      "url": "https://github.com/CultureBotAI/DUFMech/pull/313",
+      "headRefOid": "7517d2795862472ca908d13a094f661a34a1de00"
+    },
+    {
+      "number": 314,
+      "title": "Review seed records PF04148-PF04188 (batch 26)",
+      "url": "https://github.com/CultureBotAI/DUFMech/pull/314",
+      "headRefOid": "bcde198e47db10b77b449ca543dc40a25c2f25dc"
+    },
+    {
+      "number": 315,
+      "title": "Review seed records PF04190-PF04235 (batch 27)",
+      "url": "https://github.com/CultureBotAI/DUFMech/pull/315",
+      "headRefOid": "7fb9cf3b9a32370884363c994138e7fe3d851ac0"
+    },
+    {
+      "number": 316,
+      "title": "Review seed records PF04237-PF04252 (batch 28)",
+      "url": "https://github.com/CultureBotAI/DUFMech/pull/316",
+      "headRefOid": "54279929d74f87c8eb39b3e555896a6afc907edb"
+    },
+    {
+      "number": 317,
+      "title": "Review seed records PF04254-PF04282 (batch 29)",
+      "url": "https://github.com/CultureBotAI/DUFMech/pull/317",
+      "headRefOid": "eaec3dd84837504527ec757ba73c04f6bcfc2064"
+    },
+    {
+      "number": 318,
+      "title": "Review seed records PF04283-PF04303 (batch 30)",
+      "url": "https://github.com/CultureBotAI/DUFMech/pull/318",
+      "headRefOid": "da3260f59504cfe7f6264e35de3d64fcea015aa2"
+    },
+    {
+      "number": 320,
+      "title": "Review seed records PF04304-PF04315 (batch 31)",
+      "url": "https://github.com/CultureBotAI/DUFMech/pull/320",
+      "headRefOid": "6f1d96da33e1fe777d000c759aaa90bd8f0c4800"
+    },
+    {
+      "number": 321,
+      "title": "Review seed records PF04317-PF04334 (batch 32)",
+      "url": "https://github.com/CultureBotAI/DUFMech/pull/321",
+      "headRefOid": "b1f759bfe3245a09129f84613df0b2885e8a7a34"
+    },
+    {
+      "number": 322,
+      "title": "Review seed records PF04336-PF04357 (batch 33)",
+      "url": "https://github.com/CultureBotAI/DUFMech/pull/322",
+      "headRefOid": "faef50e3c478ebd3da3513eda2fba0da7eda5848"
+    },
+    {
+      "number": 323,
+      "title": "Review seed records PF04359-PF04375 (batch 34)",
+      "url": "https://github.com/CultureBotAI/DUFMech/pull/323",
+      "headRefOid": "b62d303e33e365bdab4a4f518988ee81c9ce54d3"
+    },
+    {
+      "number": 324,
+      "title": "Review seed records PF04378-PF04394 (batch 35)",
+      "url": "https://github.com/CultureBotAI/DUFMech/pull/324",
+      "headRefOid": "4729f00be89239e94bd2ae8021982a1892b2215c"
+    },
+    {
+      "number": 325,
+      "title": "Review seed records PF04398-PF04415 (batch 36)",
+      "url": "https://github.com/CultureBotAI/DUFMech/pull/325",
+      "headRefOid": "75badeda99ad727ad8a2c3da92edfe659a2b5dd2"
+    },
+    {
+      "number": 326,
+      "title": "Review seed records PF04417-PF04448 (batch 37)",
+      "url": "https://github.com/CultureBotAI/DUFMech/pull/326",
+      "headRefOid": "3041be646f79caed2bb8d9cfc68765674366534c"
+    },
+    {
+      "number": 327,
+      "title": "Review seed records PF04452-PF04472 (batch 38)",
+      "url": "https://github.com/CultureBotAI/DUFMech/pull/327",
+      "headRefOid": "e90e23bfa3c4871b39ca987a83b25d766af98bfb"
+    },
+    {
+      "number": 328,
+      "title": "Review seed records PF04473-PF04502 (batch 39)",
+      "url": "https://github.com/CultureBotAI/DUFMech/pull/328",
+      "headRefOid": "80ea325a53ad887a265bffed11fe979f2f938c68"
+    },
+    {
+      "number": 329,
+      "title": "Review seed records PF04504-PF04526 (batch 40)",
+      "url": "https://github.com/CultureBotAI/DUFMech/pull/329",
+      "headRefOid": "4edcc2bf3b4fe0930ce8312ca811033412b4b8b9"
+    },
+    {
+      "number": 330,
+      "title": "Review seed records PF04532-PF04577 (batch 41)",
+      "url": "https://github.com/CultureBotAI/DUFMech/pull/330",
+      "headRefOid": "81610d27869d2dcdfb9afbce7eaba9862d5d7b07"
+    },
+    {
+      "number": 331,
+      "title": "Review seed records PF04578-PF04652 (batch 42)",
+      "url": "https://github.com/CultureBotAI/DUFMech/pull/331",
+      "headRefOid": "52a87dae4bfcbccb9a1c01556f001c1ac57d4453"
+    },
+    {
+      "number": 332,
+      "title": "Review seed records PF04654-PF04746 (batch 43)",
+      "url": "https://github.com/CultureBotAI/DUFMech/pull/332",
+      "headRefOid": "096c9a3d4e088b232f28e2664a2925c47f6b24cd"
+    },
+    {
+      "number": 368,
+      "title": "feat(site): unify website features with the X-Mech catalogue",
+      "url": "https://github.com/CultureBotAI/DUFMech/pull/368",
+      "headRefOid": "c03590c8d68ed3082f5c2635aa4b7b7ab8c43440"
+    },
+    {
+      "number": 385,
+      "title": "PF16315 (DUF4955): BtCDH is a cell-surface PL29 glycosaminoglycan lyase",
+      "url": "https://github.com/CultureBotAI/DUFMech/pull/385",
+      "headRefOid": "8048d2908d2d8f61154acb4448c2047c63991b64"
+    },
+    {
+      "number": 387,
+      "title": "Add sequence-coordinate-aware reasoning infrastructure",
+      "url": "https://github.com/CultureBotAI/DUFMech/pull/387",
+      "headRefOid": "f54fbbee9bb857bd670971d93cbcfc6c7f4ae1a6"
+    }
+  ]
+}
