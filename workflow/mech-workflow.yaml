@@ -1,18 +1,34 @@
-schema_version: 1.0.0
+schema_version: 2.0.0
 profile_id: dufmech-goal-cycle
-profile_version: 1.0.0
+profile_version: 2.0.0
 repository_key: dufmech
 github_repository: CultureBotAI/DUFMech
 parent:
   id: mech-goal-cycle
-  version: 1.0.0
+  version: 2.0.0
   repository: CultureBotAI/culturebotai-claw
-  revision: e795fd87e27bccc527186e565f17a0128dea4a1c
-  sha256: 32d499de747333e42ed45d40940bfa06c60f85710814155e0fad5f7c4d2fee82
-  schema_sha256: 66194b3aba4540e9ee7adf91bc1fd7fb597aede130ef1603031a92002152e1d8
+  revision: c26f3a0906916f9641a5f82b004b5541ae5fbe52
+  sha256: 99b664b587c96d03acc023e56e0556c0b3a0bb9bdc03713d94f7e9546a52e266
+  schema_sha256: 9dfa77d21173b16bc119a60e83ac3f512fa9718d4cdf6a339d99ad83037d8bfb
 adaptation_skill: .claude/skills/dufmech-evolve-workflow/SKILL.md
 stages:
 - stage: 1
+  key: open_issue_triage
+  goal_text: Use triage-and-resolve-issues on DUFMech's supervisor-frozen open-issue inventory. Read every
+    member's evidence, comments and linked open work before grouping family/member/construct claims, worklist
+    and sequence provenance, and browser/accessibility defects or proposals. Coordinate with existing
+    curation and infrastructure PRs; do not duplicate them. Assign one severity:critical/high/medium/low
+    label with reasons and retain stable groups, plans and every disposition. Resolve all critical/high
+    issues or hold on their blocking prerequisites; then work the one or two largest eligible remaining
+    groups within the primary and secondary's single shared four-hour wall-clock budget. Preserve DUF/UPF/EX_DUF
+    identity, exact protein/construct/residue scope, source rights and uncertainty; a family assignment
+    or model is not experimental function. Use native maintained writers and validation, retain the five
+    required evidence outputs, finish the full authorized commit sequence, and stop for supervisor closure.
+  skill_paths:
+  - .claude/skills/dufmech-evolve-workflow/SKILL.md
+  - .claude/skills/triage-and-resolve-issues/SKILL.md
+  applicability: enabled
+- stage: 2
   key: add_records
   goal_text: Use the repository-local add/discovery skills to review candidates and add new DUF, UPF and
     EX_DUF Pfam families until a repeated, recorded search of the bounded frontier finds no further admissible
@@ -21,7 +37,7 @@ stages:
   - .claude/skills/dufmech-evolve-workflow/SKILL.md
   - .claude/skills/add-record/SKILL.md
   applicability: enabled
-- stage: 2
+- stage: 3
   key: causal_graphs
   goal_text: Review every eligible record and use the repository-local causal-graph and curation instructions
     to review, edit and update its evidence-backed native mechanism representation. Record source-limited
@@ -31,7 +47,7 @@ stages:
   - .claude/skills/curate-causal-graphs/SKILL.md
   - .claude/skills/curate-yaml-record/SKILL.md
   applicability: enabled
-- stage: 3
+- stage: 4
   key: protein_examples
   goal_text: Review all records and add verified UniProt protein examples or the native equivalent where
     applicable, prioritizing gene and protein elements of mechanism graphs. Preserve exact organism, sequence
@@ -41,7 +57,7 @@ stages:
   - .claude/skills/ground-causal-graph-proteins/SKILL.md
   - .claude/skills/dufmech-protein-examples/SKILL.md
   applicability: enabled
-- stage: 4
+- stage: 5
   key: record_review
   goal_text: Use DUFMech repository-local record-review and cohort-review skills to review every eligible
     record in a frozen inventory. Save actual versioned review reports, stable findings, coverage, provenance,
@@ -53,7 +69,7 @@ stages:
   - .claude/skills/review-yaml-record/SKILL.md
   - .claude/skills/review-yaml-category/SKILL.md
   applicability: enabled
-- stage: 5
+- stage: 6
   key: resolve_review_findings
   goal_text: Consume the current cycle's accepted review outputs and carried-forward findings in DUFMech.
     Group related problems by cause and repair ownership, deduplicate against real GitHub issues, create
@@ -64,7 +80,7 @@ stages:
   - .claude/skills/dufmech-evolve-workflow/SKILL.md
   - .claude/skills/review-open-issues/SKILL.md
   applicability: enabled
-- stage: 6
+- stage: 7
   key: infrastructure
   goal_text: Freeze DUFMech INFRA_TASKS.md at a documented cutoff and turn the bounded intake into a dependency-aware
     implementation plan. Group related needs into real GitHub issues, implement selected requirements
