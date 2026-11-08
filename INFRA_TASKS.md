@@ -48,6 +48,10 @@ tasks:
     summary: Support worklist snapshot-lineage propagation across reviews, protein_examples, report/pages, and exduf for UPF\d{4} and PF21084 onboarding
     status: open
     issue_url: https://github.com/CultureBotAI/DUFMech/issues/353
+  - task_id: dufmech-infra-0004
+    summary: Carry the reviewed seven-goal adoption candidate into the final v1 infrastructure closure head
+    status: open
+    issue_url: https://github.com/CultureBotAI/DUFMech/issues/399
 ```
 <!-- mech-infra-tasks:end -->
 
@@ -151,5 +155,53 @@ tasks:
 - **Desired outcome**:
   - Update `src/dufmech/reviews.py`, `src/dufmech/protein_examples.py`, `src/dufmech/report.py`, and `src/dufmech/exduf.py` in Stage 6 (`infrastructure`) so metadata-preserving worklist migrations that onboard newly classified `currently_unknown_name` families (`82` `UPF\d{4}` + `PF21084` `WHD_DUF4423_like`) preserve ancestor lineage for unchanged families, provide a compatible `protein_examples` snapshot derivation, and do not invalidate completed review digests on unchanged `REVIEWED` records.
 
+### `dufmech-infra-0004` — Carry the seven-goal candidate through v1 infrastructure closure
 
+- **Origin**: Operator readiness intake on 2026-11-07 for cycle 3, before its
+  v1 stage 6 (`infrastructure`) scope freeze; this is preparation, not completed
+  goal evidence.
+- **Status**: `open`
+- **Issue**: [Adoption #399](https://github.com/CultureBotAI/DUFMech/issues/399)
+- **Priority**: High
+- **Dependencies**: Verified closure of the active v1 stage 5 before dispatching
+  stage 6; the reviewed adoption from
+  [PR #402](https://github.com/CultureBotAI/DUFMech/pull/402), merged at
+  `3bf5c67a9a2d3fa2729dd55cb1fb6f494ca1904f`.
+- **Observation**: #402 prepares the seven-goal candidate on main. The activation
+  contract requires its profile, parent/schema and migration assessment in the
+  actual reviewed final v1 infrastructure closure head. Presence only on a newer,
+  unrelated main is insufficient.
+- **Intake timing**: This entry must be merged and present in the repository
+  notebook that the supervisor reads **before stage 5 advances and freezes the
+  stage-6 scope**. A merge after that cutoff cannot enlarge the frozen intake;
+  report the missed prerequisite and use a separately reviewed resolution.
+- **Implementation and acceptance**:
+  1. Consume the exact supervisor-frozen `infra_scope` content, hash and cutoff;
+     account for this task and the other non-resolved tasks in the bounded plan.
+     Preserve the active v1 goal, six-stage numbering, runtime pin and retained
+     evidence throughout the work.
+  2. Through DUFMech's own reviewed stage-6 branch and commit sequence, retain the
+     merged #402 candidate bytes at `workflow/mech-workflow.yaml`,
+     `workflow/parent/mech-cycle.yaml`, `workflow/parent/workflow.yaml`, and
+     `reviews/workflow/adoption/2026-11-07-cycle-v2/migration-review.md` in the
+     final closure head. Retain the companion `inputs.json`, historical v1
+     profile, skills and other hash-bound inputs named there. Do not rewrite
+     governed snapshots or substitute a runtime receipt for committed source.
+  3. Validate the candidate with the reviewed CLAW workflow loader, verify the
+     retained `inputs.json` hashes, run native `just qc`, and obtain independent
+     review of the final infrastructure head. Record the actual commit, PR,
+     candidate-file hashes, validation and review in the stage-6 evidence. Check
+     these bytes from that closure commit, not only the working tree or main;
+     changed candidate bytes need a fresh reviewed assessment.
+  4. Record this task's delivered or explicitly deferred disposition without
+     claiming activation or closing #399. That adoption issue remains open until
+     the authorized v2 stage 1 has supervisor-verified closure. Missing candidate
+     bytes or a missing review remain activation blockers; never fabricate their
+     attribution to another PR or goal.
+- **Activation handoff**: Only after verified v1 stage-6 closure may the operator
+  recompute the old and candidate effective digests on Intel and independently
+  review the exact migration object and committed review artifact. Compatible
+  publisher/readers and separately approved activation remain required. This
+  intake neither installs that object nor authorizes a goal send or a change to
+  any other Mech.
 
