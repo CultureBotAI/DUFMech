@@ -1,0 +1,52 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF16315
+  path: curation/families/PF16315.yaml
+session:
+  id: 2026-10-30T234422Z-claude-code-70e440
+  timestamp: '2026-10-30T23:44:22Z'
+  actors:
+  - type: ai_agent
+    name: Claude Code
+    model: claude-opus-5
+    agent_tool: claude-code
+events:
+- type: CREATE
+  outcome: changed
+  summary: 'Create PF16315 (DUF4955) overlay: one mechanistic causal graph for the
+    cell-surface PL29 glycosaminoglycan lyase BtCDH (BT_3328) and two open discussions
+    on domain-level assignment'
+  details: "Created the first overlay for PF16315 (DUF4955) from two peer-reviewed\
+    \ CC BY\npapers (PMID:30262663, PMID:32005816) plus current InterPro and UniProt\
+    \ mappings.\n\nOne MECHANISTIC causal graph, btcdh-pl29-surface-gag-lyase, with\
+    \ hash-checked\nsource extracts. Bacteroides thetaiotaomicron BtCDH (UniProtKB:Q8A2H7,\
+    \ BT_3328,\nPF16315 at 716-867) cleaves chondroitin sulfate and hyaluronan to\n\
+    Delta4,5-unsaturated di- to octasaccharides by beta-elimination; the protein is\n\
+    reachable by protease on intact cells and stains on intact cells, and whole cells\n\
+    degrade chondroitin sulfate under transport-limiting conditions; deleting the\n\
+    open reading frame reduces that surface degradation without abolishing it. Three\n\
+    edges, all DIRECT and OBSERVED. Grounded on Q8A2H7 with the Pfam intervals and\n\
+    the lipidated Cys19 checked against the retrieved sequence.\n\nCoordinate limit\
+    \ recorded: the assayed enzyme is the mature full-length protein\n(roughly 19-868),\
+    \ which spans PF16315, PF16378 and an unassigned 200-715 region,\nso the activity\
+    \ is a property of the whole protein and not of the PF16315\ninterval. No causal\
+    \ edge assigns the chemistry to the domain.\n\nLimitations recorded on the graph:\
+    \ the two studies disagree on dermatan sulfate\nand on cleavage mode (endo-acting\
+    \ from limit products, versus from the reducing\nend from labelled oligosaccharides);\
+    \ deleting the gene does not stop growth on\nthese substrates in pure culture;\
+    \ one of the family's 259 proteins has been\nassayed.\n\nTwo OPEN discussions:\n\
+    - pl29-chemistry-not-yet-assigned-to-duf4955 (KNOWLEDGE_GAP): no truncation,\n\
+    \  variant or structure separates PF16315 from the unassigned 200-715 region,\
+    \ so\n  which part carries the active site is unresolved.\n- duf4988-shared-with-non-catalytic-surface-binding-partner\
+    \ (INTERPRETATION): the\n  PF16378 region of BtCDH also matches the non-enzymatic\
+    \ surface glycan-binding\n  protein BT3329 (UniProtKB:Q8A2H6, 25-207, 3.7e-92),\
+    \ which has no PF16315, so\n  PF16378 reads as a shared surface module rather\
+    \ than a catalytic part. No edge\n  is asserted on PF16378 and its record is untouched.\n\
+    \nImported identity, labels, counters and seed classification unchanged.\ncuration_status\
+    \ left IN_PROGRESS. Contributed from a KBase gene-annotate dashboard\nreview of\
+    \ an environmental B. thetaiotaomicron BtCDH allele\n(ai4curation/ai-gene-review\
+    \ PR 5758).\n"
+  sections:
+  - causal_graphs
+  - discussions
