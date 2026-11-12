@@ -1,0 +1,535 @@
+# PF03195 LOB: seed identity, provenance and evidence-scope review
+
+- Review: 20261020T040614Z-pf03195-seed-record-review
+- Repository: CultureBotAI/DUFMech
+- Started UTC: 2026-10-20T04:01:50Z
+- Finished UTC: 2026-10-20T04:06:14Z
+- Reviewer: Codex (independent)
+- Completion: completed
+- Verdict: seed_only
+- Scientific review: false
+
+## Summary
+
+PF03195 (LOB; InterPro:IPR004883) matches the verified frozen source and retains seed_status=EX_DUF, characterization_status=UNSCORED and curation_status=SEEDED. The LOB description reports a plant expression pattern, an approximately 100-amino-acid N-terminal domain and a source-era count of 42 additional Arabidopsis proteins. It describes conserved blocks and a defining cysteine pattern while explicitly calling the source protein's function unknown. PUB00018358 was not independently resolved.
+
+## Scope And Provenance
+
+Full inspection of the selected seed projection and corresponding frozen source row for identity, imported claim scope, evidence representation, provenance, completeness, ownership and status. Primary-literature support and current upstream metadata were not reassessed.
+
+Selection: One record from the path-ordered queue of data/families/*.yaml lacking a target in the validated cumulative scripts/record_review.py list inventory. Fresh branch base: 6c5277fbd5ab0a7b7f0244f5c248758ac77b3530. The corpus has 8296 records; 251 were covered and 8045 unreviewed at selection. Coverage includes immutable reviews retained on earlier local batch branches as recorded in the session ledger. This bundle covers only PF03195.
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base 6c5277fbd5ab0a7b7f0244f5c248758ac77b3530.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| PF03195 | data/families/PF03195.yaml | generated | PF03195 |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Native snapshot and target inspection | passed | True | PF03195 | Verified manifest and captured exact projection, frozen row, source hashes and semantic digest. |
+| Additional rubric input capture | passed | True | PF03195 | Captured rubric and recipe bytes while preserving native source inputs and snapshot identity. |
+| Exact frozen-row correspondence | passed | True | PF03195 | The inspected record agrees with its frozen row for accession, labels, description, source URL, InterPro accession, seed status and every counter; no curated payload is present. |
+| Native closed-schema and projection checks | passed | True | PF03195 | 8296 schema-valid records; 0 generated files differ. |
+| Canonical history check | passed | True | PF03195 | 420 valid canonical history records. |
+| Generated schema check | passed | True | PF03195 | Generated schema check found 0 differing generated files. |
+
+## Scientific And Domain Assessments
+
+### Exact Pfam/InterPro identity and naming
+
+identity: supported. Targets: PF03195.
+
+The filename, pfam_id=PF03195, id=Pfam:PF03195, short_name=LOB, name=Lateral organ boundaries (LOB) domain, source URL and InterPro accession InterPro:IPR004883 agree with the selected frozen row. This establishes frozen identity correspondence, not current upstream taxonomy or function.
+
+### Frozen counters, raw hashes and semantic binding
+
+provenance: supported. Targets: PF03195.
+
+The record binds interpro-pfam-duf-2026-10-10 by SHA-256 and retains its generation timestamp. Its 19543 proteins, 19689 matches, 1 structure entries and 15891 AlphaFold models are frozen database counters, not independent experiments. Raw input hashes and the dufmech-record-content-v1 digest preserve different checks.
+
+### Imported description versus experimental support
+
+evidence: unknown. Targets: PF03195.
+
+The LOB description reports a plant expression pattern, an approximately 100-amino-acid N-terminal domain and a source-era count of 42 additional Arabidopsis proteins. It describes conserved blocks and a defining cysteine pattern while explicitly calling the source protein's function unknown. PUB00018358 was not independently resolved.
+
+### Family, domain and tested-protein boundaries
+
+scope: supported. Targets: PF03195.
+
+An expression pattern and conserved sequence pattern do not themselves demonstrate a molecular activity or a causal role in organ development. The approximate domain length is not a full-protein length. The historical Arabidopsis count and the broader frozen family count describe different populations and are not inherently contradictory; universal motif wording was not tested against a current alignment.
+
+### Seed content and remaining scientific work
+
+completeness: unknown. Targets: PF03195.
+
+Future scientific review should separate expression, domain identity and functional evidence, retaining exact organism and protein scope. One structure, 19543 proteins and 207 architectures do not establish a shared mechanism. EX_DUF naming history does not override the unknown-function wording or convert this source metadata into experimental review. No accession-named overlay, evidence or history path was found by the bounded hidden/ignored-inclusive inventory; the inspected projection has no curated claim payload. Optional-field absence is not a seed-schema defect.
+
+### Seed, scoring and review states
+
+consistency: supported. Targets: PF03195.
+
+seed_status=EX_DUF, characterization_status=UNSCORED and curation_status=SEEDED express separate states. EX_DUF records historical renaming and is compatible with imported functional descriptions; it is not evidence that all members were tested. No REVIEWED gate or curation event is implied by this bundle.
+
+### Maintained correction surface and scoped result
+
+ownership: supported. Targets: PF03195.
+
+Scientific additions would belong in the human-owned curation/families/PF03195.yaml overlay with appropriately licensed evidence and actual canonical history, followed by generation through src/dufmech/records.py. Frozen snapshots and generated records are not direct correction surfaces. No corrective edit is proposed by this seed audit.
+
+## Findings
+
+No findings recorded within this review's declared scope.
+
+## Recommended Actions And Acceptance Checks
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| record | data/families/PF03195.yaml; Entire projection, including identity, description, counters, status and provenance | supports | Read the complete PF03195 seed record; it contains imported metadata and no assertions, causal_graphs, discussions, datasets, cross_corpus_links, curation_history, curation_events or review_id. |
+| snapshot | data/worklists/interpro-pfam-duf-2026-10-10.json; pfam_id=PF03195; companion manifest and TSV; native verified inspection | supports | The exact frozen row matches the projection. The native inspection verifies the retained JSON/TSV manifest; the migration snapshot generation timestamp is 2026-10-10T07:44:21.614711Z. This is not the acquisition time of this retained row. The review date does not refresh these source facts. |
+| profile | docs/record-review-profile.md; Domains and Ownership; Verdicts and Status Gates; linked record-review contract and native checklist | supports | Read the local rules distinguishing imported description, seed class, evidence scoring, curated claims and scientific review, and the separate projection/overlay ownership. |
+| validation | justfile; records-check, history-check, validate-schema recipes; actual batch input-check runs | supports | Observed exit 0 from all three input recipes. 8296 schema-valid records; 0 generated files differ. 420 valid canonical history records. Generated schema check found 0 differing generated files. These checks do not establish scientific truth. |
+| local-search | curation/families; evidence; history; Path inventory filtered for PF03195 | supports | No path containing this accession was found in the bounded inventory. The exact overlay was also absent from native inspection; the record has no curated claim fields. |
+| duf-projection-pf03195 | data/families/PF03195.yaml; dufmech-reviewed-projection-v1 | context_only | Byte-exact projection retained at save for digest verification, not scientific assessment. |
+
+## Limits And Additional Notes
+
+- scientific_review is false. Primary papers, original figures and assays, live database entries, current taxonomy and complete family-member coverage were not reviewed; source citation tokens are not verified primary evidence.
+- The hidden/ignored-inclusive absence search is restricted to accession-bearing paths under curation/families, evidence and history. It does not exclude evidence in other local collections or the literature.
+- Required input checks passed. Native saving validates the supplied content and constructs the immutable pair. The persisted pair is then read back through the native validator and covered by the batch just reviews-check recipe; this document does not preclaim those later results. Full publication QC is tracked separately and may require Pages source-pin updates.
+- No scientific status, record, overlay, frozen input, canonical curation history or generated Pages artifact was changed by this review.
+- One record per bundle; assessment prose was authored from the actual inspected record. The helper assembles provenance and schema fields; inspection and successful checks alone are not scientific findings.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+kind: record
+repository: CultureBotAI/DUFMech
+source:
+  git_revision: 6c5277fbd5ab0a7b7f0244f5c248758ac77b3530
+  inputs:
+  - path: data/families/PF03195.yaml
+    role: target
+    sha256: 2fdb2742c3bd3c80ee3b8159f397d4bfc1561d909bab014c2d13e0efbb2c1eaa
+  - path: data/worklists/interpro-pfam-duf-2026-10-10.json
+    role: context
+    sha256: 17fb625876c9326ed284263a47bcd84e0d7844a31c040dc06cd2260c36f1c383
+  - path: data/worklists/interpro-pfam-duf-2026-10-10.manifest.json
+    role: context
+    sha256: 31c07ffb6a169c851ea0e6e9dd527a10c04028eafeb29187bd62dc2ae848696e
+  - path: data/worklists/interpro-pfam-duf-2026-10-10.tsv
+    role: context
+    sha256: be023c8dd9d8d3864926b5032d6f7e87a884b1a567391696822dbbecc692dae7
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: 681377625fe3045abfa2433784707424931a69987e2f02b84f907dcb28f4831b
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: d1399ec6d404b485ac03680db36b07536f1233dacfd282c407b0a07a509a0d69
+    role: context
+  - path: docs/history.md
+    sha256: 356ead13b3a462a91158eb57cfba4c011d95462662c30f811ba2e1335a2b402e
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 78000e079c219bd049f628f517465b6e36fb35a26497f7ba7791c098fac73059
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: docs/records.md
+    sha256: 4a09829f77f279ba5be373cfa15ea957d69e978d0bb74a5ab3377988d8c29ad2
+    role: context
+  - path: docs/reviews.md
+    sha256: 02563bb1eeae36f08ca7e9e38bacc36461c65e7399df4f6c75a7215a34895ce3
+    role: context
+  - path: docs/sources.md
+    sha256: f530f8785142b9b76f20f0853ec54a21dd96ae0e5827b820a332096ba483d70f
+    role: context
+  - path: justfile
+    sha256: 16b490ea5da25e8c6b5f9649fd920df8b87a3e8438c1b6c1a5b8ca029deb3e36
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  snapshot_id: interpro-pfam-duf-2026-10-10
+  state: working_tree
+targets:
+- kind: generated
+  label: PF03195
+  owner_paths:
+  - path: curation/families/PF03195.yaml
+    repository: CultureBotAI/DUFMech
+    role: Maintained scientific overlay; create only with authorized curation.
+  - path: src/dufmech/records.py
+    repository: CultureBotAI/DUFMech
+    role: Projection generator; frozen snapshot identity is not hand-edited.
+  path: data/families/PF03195.yaml
+  record_class: FamilyRecord
+  semantic_digest:
+    algorithm: dufmech-record-content-v1
+    description: Canonical JSON SHA-256 of effective FamilyRecord excluding only curation_status,
+      review_id and curation_events.
+    sha256: f2afc535972901dc5cfebe657dc79aad7bbec9301b22b65b689a531d2d39beab
+  target_id: PF03195
+schema_version: 1.0.0
+review_id: 20261020T040614Z-pf03195-seed-record-review
+title: 'PF03195 LOB: seed identity, provenance and evidence-scope review'
+started_at: '2026-10-20T04:01:50Z'
+finished_at: '2026-10-20T04:06:14Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  model: GPT-6
+  independence: independent
+  independence_basis: This review session did not author or modify the inspected seed
+    projection or frozen source. This is an independent repository audit by an AI
+    agent, not external scientific peer review.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: seed_only
+native_verdict: SEED_ONLY
+scientific_review: false
+summary: PF03195 (LOB; InterPro:IPR004883) matches the verified frozen source and
+  retains seed_status=EX_DUF, characterization_status=UNSCORED and curation_status=SEEDED.
+  The LOB description reports a plant expression pattern, an approximately 100-amino-acid
+  N-terminal domain and a source-era count of 42 additional Arabidopsis proteins.
+  It describes conserved blocks and a defining cysteine pattern while explicitly calling
+  the source protein's function unknown. PUB00018358 was not independently resolved.
+scope:
+  description: Full inspection of the selected seed projection and corresponding frozen
+    source row for identity, imported claim scope, evidence representation, provenance,
+    completeness, ownership and status. Primary-literature support and current upstream
+    metadata were not reassessed.
+  selection: 'One record from the path-ordered queue of data/families/*.yaml lacking
+    a target in the validated cumulative scripts/record_review.py list inventory.
+    Fresh branch base: 6c5277fbd5ab0a7b7f0244f5c248758ac77b3530. The corpus has 8296
+    records; 251 were covered and 8045 unreviewed at selection. Coverage includes
+    immutable reviews retained on earlier local batch branches as recorded in the
+    session ledger. This bundle covers only PF03195.'
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - PF03195
+  exclusions:
+  - target: Primary literature, live Pfam/InterPro/UniProt state and other family
+      members
+    reason: The selected object is a seed projection without curated functional assertions.
+      This is a local metadata and representation review; it does not establish experimental
+      characterization.
+checks:
+- check_id: native-inspect
+  name: Native snapshot and target inspection
+  command: uv run --locked dufmech-review inspect record PF03195
+  status: passed
+  required: true
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Verified manifest and captured exact projection, frozen row, source hashes
+    and semantic digest.
+  target_ids:
+  - PF03195
+  evidence_ids:
+  - record
+  - snapshot
+- check_id: common-inspect
+  name: Additional rubric input capture
+  command: uv run --locked python scripts/record_review.py inspect --targets /private/tmp/dufmech-review-session-20261019/batch-012/PF03195-targets.yaml
+    --input data/families/PF03195.yaml --input data/worklists/interpro-pfam-duf-2026-10-10.json
+    --input data/worklists/interpro-pfam-duf-2026-10-10.manifest.json --input data/worklists/interpro-pfam-duf-2026-10-10.tsv
+    --input docs/records.md --input docs/reviews.md --input docs/history.md --input
+    docs/sources.md --input docs/record-reviews.md --input docs/record-review-profile.md
+    --input .claude/skills/review-yaml-record/SKILL.md --input .claude/skills/curate-yaml-record/references/review-checklist.md
+    --input schema/record_review.yaml --input justfile
+  status: passed
+  required: true
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Captured rubric and recipe bytes while preserving native source inputs
+    and snapshot identity.
+  target_ids:
+  - PF03195
+  evidence_ids:
+  - profile
+- check_id: row-correspondence
+  name: Exact frozen-row correspondence
+  command: .venv/bin/python /private/tmp/dufmech-review-session-20261019/batch-012/prepare.py
+    PF03195
+  status: passed
+  required: true
+  exit_code: 0
+  expected_exit_code: 0
+  summary: The inspected record agrees with its frozen row for accession, labels,
+    description, source URL, InterPro accession, seed status and every counter; no
+    curated payload is present.
+  target_ids:
+  - PF03195
+  evidence_ids:
+  - record
+  - snapshot
+- check_id: records
+  name: Native closed-schema and projection checks
+  command: just records-check
+  status: passed
+  required: true
+  exit_code: 0
+  expected_exit_code: 0
+  summary: 8296 schema-valid records; 0 generated files differ.
+  target_ids:
+  - PF03195
+  evidence_ids:
+  - validation
+  scope_note: Shared batch input check executed before saving these reviews. The selected
+    projection and its maintained inputs remained unchanged.
+- check_id: history
+  name: Canonical history check
+  command: just history-check
+  status: passed
+  required: true
+  exit_code: 0
+  expected_exit_code: 0
+  summary: 420 valid canonical history records.
+  target_ids:
+  - PF03195
+  evidence_ids:
+  - validation
+  scope_note: Shared batch input check; this seed has no curation_history or generated
+    curation_events.
+- check_id: schema
+  name: Generated schema check
+  command: just validate-schema
+  status: passed
+  required: true
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Generated schema check found 0 differing generated files.
+  target_ids:
+  - PF03195
+  evidence_ids:
+  - validation
+evidence:
+- evidence_id: record
+  kind: record_content
+  reference: data/families/PF03195.yaml
+  locator: Entire projection, including identity, description, counters, status and
+    provenance
+  accessed_at: '2026-10-20T04:06:14Z'
+  support: supports
+  summary: Read the complete PF03195 seed record; it contains imported metadata and
+    no assertions, causal_graphs, discussions, datasets, cross_corpus_links, curation_history,
+    curation_events or review_id.
+  snapshot_sha256: 2fdb2742c3bd3c80ee3b8159f397d4bfc1561d909bab014c2d13e0efbb2c1eaa
+- evidence_id: snapshot
+  kind: database
+  reference: data/worklists/interpro-pfam-duf-2026-10-10.json
+  locator: pfam_id=PF03195; companion manifest and TSV; native verified inspection
+  accessed_at: '2026-10-20T04:06:14Z'
+  support: supports
+  summary: The exact frozen row matches the projection. The native inspection verifies
+    the retained JSON/TSV manifest; the migration snapshot generation timestamp is
+    2026-10-10T07:44:21.614711Z. This is not the acquisition time of this retained
+    row. The review date does not refresh these source facts.
+  snapshot_sha256: 17fb625876c9326ed284263a47bcd84e0d7844a31c040dc06cd2260c36f1c383
+- evidence_id: profile
+  kind: authority
+  reference: docs/record-review-profile.md
+  locator: Domains and Ownership; Verdicts and Status Gates; linked record-review
+    contract and native checklist
+  accessed_at: '2026-10-20T04:06:14Z'
+  support: supports
+  summary: Read the local rules distinguishing imported description, seed class, evidence
+    scoring, curated claims and scientific review, and the separate projection/overlay
+    ownership.
+- evidence_id: validation
+  kind: validation
+  reference: justfile
+  locator: records-check, history-check, validate-schema recipes; actual batch input-check
+    runs
+  accessed_at: '2026-10-20T04:06:14Z'
+  support: supports
+  summary: Observed exit 0 from all three input recipes. 8296 schema-valid records;
+    0 generated files differ. 420 valid canonical history records. Generated schema
+    check found 0 differing generated files. These checks do not establish scientific
+    truth.
+- evidence_id: local-search
+  kind: search
+  reference: curation/families; evidence; history
+  locator: Path inventory filtered for PF03195
+  accessed_at: '2026-10-20T04:06:14Z'
+  support: supports
+  summary: No path containing this accession was found in the bounded inventory. The
+    exact overlay was also absent from native inspection; the record has no curated
+    claim fields.
+  search_scope: All paths under curation/families, evidence, and history, including
+    hidden and ignored files, filtered for the exact accession PF03195. This is a
+    local path inventory, not a literature search or an assertion that other corpora
+    lack evidence.
+- evidence_id: duf-projection-pf03195
+  kind: record_content
+  reference: data/families/PF03195.yaml
+  locator: dufmech-reviewed-projection-v1
+  accessed_at: '2026-10-20T04:06:14Z'
+  support: context_only
+  snapshot_sha256: 2fdb2742c3bd3c80ee3b8159f397d4bfc1561d909bab014c2d13e0efbb2c1eaa
+  quote: "id: Pfam:PF03195\npfam_id: PF03195\nname: Lateral organ boundaries (LOB)\
+    \ domain\nshort_name: LOB\nseed_status: EX_DUF\ncharacterization_status: UNSCORED\n\
+    curation_status: SEEDED\nsource_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF03195\n\
+    counters:\n  proteins: 19543\n  matches: 19689\n  proteomes: 382\n  taxa: 1125\n\
+    \  structures: 1\n  alphafold_models: 15891\n  domain_architectures: 207\nprovenance:\n\
+    \  snapshot_id: interpro-pfam-duf-2026-10-10\n  path: data/worklists/interpro-pfam-duf-2026-10-10.json\n\
+    \  sha256: 17fb625876c9326ed284263a47bcd84e0d7844a31c040dc06cd2260c36f1c383\n\
+    \  generated_at: '2026-10-10T07:44:21.614711Z'\n  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/\n\
+    interpro_id: InterPro:IPR004883\ndescription: The lateral organ boundaries (LOB)\
+    \ gene encodes a plant-specific protein of unknown function\n  that is expressed\
+    \ at the adaxial base of initiating lateral organs. The N-terminal of the LOB\
+    \ protein\n  contains an approximately 100-amino acid conserved domain (the LOB\
+    \ domain) that is present in 42 other\n  Arabidopsis thaliana proteins as well\
+    \ as in proteins from a variety of other plant species. The LOB\n  domain contains\
+    \ conserved blocks of amino acids that identify the LOB domain (LBD) gene family.\
+    \ In particular,\n  a conserved C-x(2)-C-x(6)-C-x(3)-C motif, which is the defining\
+    \ feature of the LOB domain, is present\n  in all LBD proteins [[cite:PUB00018358]].\n"
+  summary: Byte-exact projection retained at save for digest verification, not scientific
+    assessment.
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Exact Pfam/InterPro identity and naming
+  outcome: supported
+  summary: The filename, pfam_id=PF03195, id=Pfam:PF03195, short_name=LOB, name=Lateral
+    organ boundaries (LOB) domain, source URL and InterPro accession InterPro:IPR004883
+    agree with the selected frozen row. This establishes frozen identity correspondence,
+    not current upstream taxonomy or function.
+  target_ids:
+  - PF03195
+  evidence_ids:
+  - record
+  - snapshot
+- assessment_id: provenance
+  area: provenance
+  topic: Frozen counters, raw hashes and semantic binding
+  outcome: supported
+  summary: The record binds interpro-pfam-duf-2026-10-10 by SHA-256 and retains its
+    generation timestamp. Its 19543 proteins, 19689 matches, 1 structure entries and
+    15891 AlphaFold models are frozen database counters, not independent experiments.
+    Raw input hashes and the dufmech-record-content-v1 digest preserve different checks.
+  target_ids:
+  - PF03195
+  evidence_ids:
+  - record
+  - snapshot
+  - validation
+- assessment_id: evidence-tier
+  area: evidence
+  topic: Imported description versus experimental support
+  outcome: unknown
+  summary: The LOB description reports a plant expression pattern, an approximately
+    100-amino-acid N-terminal domain and a source-era count of 42 additional Arabidopsis
+    proteins. It describes conserved blocks and a defining cysteine pattern while
+    explicitly calling the source protein's function unknown. PUB00018358 was not
+    independently resolved.
+  target_ids:
+  - PF03195
+  evidence_ids:
+  - record
+  - snapshot
+  dimensions:
+  - name: evidence-tier
+    value: Imported database description; primary support not reassessed
+    definition: Evidence actually examined for this audit; it is not a label for all
+      evidence that may exist for the family.
+    evidence_ids:
+    - record
+    - snapshot
+- assessment_id: claim-scope
+  area: scope
+  topic: Family, domain and tested-protein boundaries
+  outcome: supported
+  summary: An expression pattern and conserved sequence pattern do not themselves
+    demonstrate a molecular activity or a causal role in organ development. The approximate
+    domain length is not a full-protein length. The historical Arabidopsis count and
+    the broader frozen family count describe different populations and are not inherently
+    contradictory; universal motif wording was not tested against a current alignment.
+  target_ids:
+  - PF03195
+  evidence_ids:
+  - record
+  - snapshot
+- assessment_id: completeness
+  area: completeness
+  topic: Seed content and remaining scientific work
+  outcome: unknown
+  summary: Future scientific review should separate expression, domain identity and
+    functional evidence, retaining exact organism and protein scope. One structure,
+    19543 proteins and 207 architectures do not establish a shared mechanism. EX_DUF
+    naming history does not override the unknown-function wording or convert this
+    source metadata into experimental review. No accession-named overlay, evidence
+    or history path was found by the bounded hidden/ignored-inclusive inventory; the
+    inspected projection has no curated claim payload. Optional-field absence is not
+    a seed-schema defect.
+  target_ids:
+  - PF03195
+  evidence_ids:
+  - record
+  - local-search
+  - profile
+- assessment_id: status
+  area: consistency
+  topic: Seed, scoring and review states
+  outcome: supported
+  summary: seed_status=EX_DUF, characterization_status=UNSCORED and curation_status=SEEDED
+    express separate states. EX_DUF records historical renaming and is compatible
+    with imported functional descriptions; it is not evidence that all members were
+    tested. No REVIEWED gate or curation event is implied by this bundle.
+  target_ids:
+  - PF03195
+  evidence_ids:
+  - record
+  - profile
+- assessment_id: ownership
+  area: ownership
+  topic: Maintained correction surface and scoped result
+  outcome: supported
+  summary: Scientific additions would belong in the human-owned curation/families/PF03195.yaml
+    overlay with appropriately licensed evidence and actual canonical history, followed
+    by generation through src/dufmech/records.py. Frozen snapshots and generated records
+    are not direct correction surfaces. No corrective edit is proposed by this seed
+    audit.
+  target_ids:
+  - PF03195
+  evidence_ids:
+  - profile
+  - record
+  - validation
+findings: []
+actions: []
+limitations:
+- scientific_review is false. Primary papers, original figures and assays, live database
+  entries, current taxonomy and complete family-member coverage were not reviewed;
+  source citation tokens are not verified primary evidence.
+- The hidden/ignored-inclusive absence search is restricted to accession-bearing paths
+  under curation/families, evidence and history. It does not exclude evidence in other
+  local collections or the literature.
+- Required input checks passed. Native saving validates the supplied content and constructs
+  the immutable pair. The persisted pair is then read back through the native validator
+  and covered by the batch just reviews-check recipe; this document does not preclaim
+  those later results. Full publication QC is tracked separately and may require Pages
+  source-pin updates.
+- No scientific status, record, overlay, frozen input, canonical curation history
+  or generated Pages artifact was changed by this review.
+notes:
+- One record per bundle; assessment prose was authored from the actual inspected record.
+  The helper assembles provenance and schema fields; inspection and successful checks
+  alone are not scientific findings.
+tags:
+- seed-review
+- unreviewed-record-coverage
+```
