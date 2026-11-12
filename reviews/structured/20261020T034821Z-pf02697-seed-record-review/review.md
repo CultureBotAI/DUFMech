@@ -1,0 +1,658 @@
+# PF02697 VAPB_antitox: seed identity, provenance and evidence-scope review
+
+- Review: 20261020T034821Z-pf02697-seed-record-review
+- Repository: CultureBotAI/DUFMech
+- Started UTC: 2026-10-20T03:45:45Z
+- Finished UTC: 2026-10-20T03:48:21Z
+- Reviewer: Codex (independent)
+- Completion: completed
+- Verdict: seed_only
+- Scientific review: false
+
+## Summary
+
+PF02697 (VAPB_antitox; InterPro:IPR003847) matches the verified frozen source and retains seed_status=EX_DUF, characterization_status=UNSCORED and curation_status=SEEDED. The PF02697 frozen description proposes a possible VAPBC-like antitoxin role and retains PUB00056596 as an unresolved citation. Separately, two inspected local PF01954 documents preserve a historical lead: they report a mapping of F8AID5 to PF02697 while explaining why that lead was excluded from PF01954. This review verifies the presence and wording of those local documents, not the reported mapping, underlying publication or biological interpretation.
+
+## Scope And Provenance
+
+Full local inspection of PF02697 and its frozen row for identity, imported claim scope, provenance, representation and status, together with two explicitly captured PF01954 documents as cross-family context. The existence and wording of the local lead were assessed; its primary-source support and reported member mapping were not reverified.
+
+Selection: One record from the path-ordered queue of data/families/*.yaml lacking a target in the validated cumulative scripts/record_review.py list inventory. Fresh branch base: 6c5277fbd5ab0a7b7f0244f5c248758ac77b3530. The corpus has 8296 records; 211 were covered and 8085 unreviewed at selection. Coverage includes immutable reviews retained on earlier local batch branches as recorded in the session ledger. This bundle covers only PF02697.
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base 6c5277fbd5ab0a7b7f0244f5c248758ac77b3530.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| PF02697 | data/families/PF02697.yaml | generated | PF02697 |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Native snapshot and target inspection | passed | True | PF02697 | Verified manifest and captured exact projection, frozen row, source hashes and semantic digest. |
+| Additional rubric and local-context input capture | passed | True | PF02697 | Captured rubric, recipe and both named PF01954 local-context files while preserving the native PF02697 source inputs and snapshot identity. |
+| Exact frozen-row correspondence | passed | True | PF02697 | The PF02697 projection agrees with its frozen row for identity, optional fields, seed status and counters and has no own curated payload. Separate local-context documents were captured; their scientific claims were not verified by this correspondence check. |
+| Native closed-schema and projection checks | passed | True | PF02697 | 8296 schema-valid records; 0 generated files differ. |
+| Canonical history check | passed | True | PF02697 | 420 valid canonical history records. |
+| Generated schema check | passed | True | PF02697 | Generated schema check found 0 differing generated files. |
+| Bounded accession content search | passed | True | PF02697 | The hidden/ignored-inclusive content search found PF02697 references in exactly the two explicitly inspected PF01954 context files. |
+
+## Scientific And Domain Assessments
+
+### Exact Pfam/InterPro identity and naming
+
+identity: supported. Targets: PF02697.
+
+The filename, pfam_id=PF02697, id=Pfam:PF02697, short_name=VAPB_antitox, name=Putative antitoxin, source URL and InterPro accession InterPro:IPR003847 agree with the selected frozen row. This establishes frozen identity correspondence, not current upstream taxonomy or function.
+
+### Frozen counters, raw hashes and semantic binding
+
+provenance: supported. Targets: PF02697.
+
+The record binds interpro-pfam-duf-2026-10-10 by SHA-256 and retains its generation timestamp. Its 798 proteins, 798 matches, 0 structure entries and 758 AlphaFold models are frozen database counters, not independent experiments. Raw input hashes and the dufmech-record-content-v1 digest preserve different checks.
+
+### Imported seed description and historical local context versus verified scientific support
+
+evidence: unknown. Targets: PF02697.
+
+The PF02697 frozen description proposes a possible VAPBC-like antitoxin role and retains PUB00056596 as an unresolved citation. Separately, two inspected local PF01954 documents preserve a historical lead: they report a mapping of F8AID5 to PF02697 while explaining why that lead was excluded from PF01954. This review verifies the presence and wording of those local documents, not the reported mapping, underlying publication or biological interpretation.
+
+### Family, domain and tested-protein boundaries
+
+scope: supported. Targets: PF02697.
+
+The PF02697 seed projection, the PF01954 curation target and the reported F8AID5 lead remain distinct. A discussion about excluding a lead from PF01954 does not by itself establish positive functional evidence for all PF02697 members. The putative and possible qualifiers remain in force. The prior documents are contextual inputs to this one-record review; PF01954 is not an additional review target, and no molecular mechanism or family-wide effect is adopted.
+
+### Seed content and remaining scientific work
+
+completeness: unknown. Targets: PF02697.
+
+The local lead should remain discoverable for a separately scoped scientific review of its original sources and exact member attribution. No such verification occurred here. PF02697 has no own overlay or curated claim payload, although relevant text exists under PF01954. The 798 proteins, zero structures and 758 AlphaFold models are frozen coverage counts, not evidence that the tentative function has been established. The bounded path inventory and separate content search answer different questions: no accession-named PF02697 payload was found, but two PF01954 documents provide local context.
+
+### Seed, scoring and review states
+
+consistency: supported. Targets: PF02697.
+
+seed_status=EX_DUF, characterization_status=UNSCORED and curation_status=SEEDED express separate states. EX_DUF records historical renaming and is compatible with imported functional descriptions; it is not evidence that all members were tested. No REVIEWED gate or curation event is implied by this bundle.
+
+### Maintained correction surface and scoped result
+
+ownership: supported. Targets: PF02697.
+
+Any future adopted PF02697 scientific content belongs in its own maintained curation overlay with appropriate evidence and actual canonical history. The inspected PF01954 files remain context and are not transferred assertions. This review proposes no corrective record edit and makes no status promotion.
+
+### Existence and source binding of the cross-family local lead
+
+provenance: supported. Targets: PF02697.
+
+Both named PF01954 files were inspected as local repository content and are retained in the source-input hash set. Their text explicitly connects the historical lead to PF02697 while excluding it from PF01954. This positively establishes the provenance and presence of the lead, not its scientific correctness.
+
+### Scientific support of the historical local lead remains unassessed
+
+evidence: unknown. Targets: PF02697.
+
+The historical note reports an external source inspection and a member mapping, but neither was independently repeated here. The local lead therefore remains unknown scientific support in this review and does not justify changing UNSCORED/SEEDED or the SEED_ONLY verdict.
+
+## Findings
+
+No findings recorded within this review's declared scope.
+
+## Recommended Actions And Acceptance Checks
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| record | data/families/PF02697.yaml; Entire projection, including identity, description, counters, status and provenance | supports | Read the complete PF02697 seed record; it contains imported metadata and no assertions, causal_graphs, discussions, datasets, cross_corpus_links, curation_history, curation_events or review_id. |
+| snapshot | data/worklists/interpro-pfam-duf-2026-10-10.json; pfam_id=PF02697; companion manifest and TSV; native verified inspection | supports | The exact frozen row matches the projection. The native inspection verifies the retained JSON/TSV manifest; the migration snapshot generation timestamp is 2026-10-10T07:44:21.614711Z. This is not the acquisition time of this retained row. The review date does not refresh these source facts. |
+| profile | docs/record-review-profile.md; Domains and Ownership; Verdicts and Status Gates; linked record-review contract and native checklist | supports | Read the local rules distinguishing imported description, seed class, evidence scoring, curated claims and scientific review, and the separate projection/overlay ownership. |
+| validation | justfile; records-check, history-check, validate-schema recipes; actual batch input-check runs | supports | Observed exit 0 from all three input recipes. 8296 schema-valid records; 0 generated files differ. 420 valid canonical history records. Generated schema check found 0 differing generated files. These checks do not establish scientific truth. |
+| local-search | curation/families; evidence; history; Path inventory filtered for PF02697 | supports | No accession-named PF02697 path was found in the bounded path inventory, and PF02697 has no own overlay or curated projection payload. A separate content search identified the two captured PF01954 context files; the path result does not mean that local context is absent. |
+| local-context-overlay | curation/families/PF01954.yaml; Complete overlay read; discussion af2212-exclude-cross-family-ta-transfers | context_only | The PF01954 overlay retains a dated discussion reporting a PF02697 member mapping as a reason to exclude a later lead from PF01954. This establishes a local contextual lead, not independent verification of the reported mapping or functional evidence. |
+| local-context-note | evidence/PF01954/later-ta-exclusion-20261012.txt; Complete retained note dated 2026-10-12; reported family mapping and historical access limitations | context_only | The retained note reports F8AID5 as mapped to PF02697 and identifies PMID:40424603 as its historical source lead. It records limits of the earlier source inspection. These are statements in a local curation note; the original material and mapping were not rechecked in this review. |
+| local-context-search | curation/families; evidence; history; Literal PF02697 content references in the bounded roots | supports | The bounded content search identified the two named PF01954 files. This is distinct from the empty inventory of accession-named PF02697 paths. |
+| duf-projection-pf02697 | data/families/PF02697.yaml; dufmech-reviewed-projection-v1 | context_only | Byte-exact projection retained at save for digest verification, not scientific assessment. |
+
+## Limits And Additional Notes
+
+- scientific_review is false. This session inspected the PF02697 seed and two retained PF01954 context documents. It did not inspect the underlying publication, original figures or live member mapping. Statements about earlier source access in those documents describe that earlier curation, not work performed in this review.
+- Absence is limited to accession-named paths under curation/families, evidence and history, including hidden/ignored files. A separate bounded content search found the two named context files. Neither search establishes that other local collections or the literature lack evidence.
+- Required input checks passed. Native saving validates the supplied content and constructs the immutable pair. The persisted pair is then read back through the native validator and covered by the batch just reviews-check recipe; this document does not preclaim those later results. Full publication QC is tracked separately and may require Pages source-pin updates.
+- No scientific status, record, overlay, frozen input, canonical curation history or generated Pages artifact was changed by this review.
+- One record per bundle; assessment prose was authored from the actual inspected record. The helper assembles provenance and schema fields; inspection and successful checks alone are not scientific findings.
+- The PF01954 context files are source inputs only. The single target, native semantic digest, seed-only verdict, empty findings/actions and scientific_review=false are preserved; no cross-family scientific assertion is adopted.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+kind: record
+repository: CultureBotAI/DUFMech
+source:
+  git_revision: 6c5277fbd5ab0a7b7f0244f5c248758ac77b3530
+  inputs:
+  - path: data/families/PF02697.yaml
+    role: target
+    sha256: 5ee013ddcae64f18161c2848a9b595be9dab75a12ab908a655984249f0feda5a
+  - path: data/worklists/interpro-pfam-duf-2026-10-10.json
+    role: context
+    sha256: 17fb625876c9326ed284263a47bcd84e0d7844a31c040dc06cd2260c36f1c383
+  - path: data/worklists/interpro-pfam-duf-2026-10-10.manifest.json
+    role: context
+    sha256: 31c07ffb6a169c851ea0e6e9dd527a10c04028eafeb29187bd62dc2ae848696e
+  - path: data/worklists/interpro-pfam-duf-2026-10-10.tsv
+    role: context
+    sha256: be023c8dd9d8d3864926b5032d6f7e87a884b1a567391696822dbbecc692dae7
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: 681377625fe3045abfa2433784707424931a69987e2f02b84f907dcb28f4831b
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: d1399ec6d404b485ac03680db36b07536f1233dacfd282c407b0a07a509a0d69
+    role: context
+  - path: curation/families/PF01954.yaml
+    sha256: bab2c9a597f71b0fdac2412a077a0266cfb6a21868fb58ee7db678c7a11fffc0
+    role: context
+  - path: docs/history.md
+    sha256: 356ead13b3a462a91158eb57cfba4c011d95462662c30f811ba2e1335a2b402e
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 78000e079c219bd049f628f517465b6e36fb35a26497f7ba7791c098fac73059
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: docs/records.md
+    sha256: 4a09829f77f279ba5be373cfa15ea957d69e978d0bb74a5ab3377988d8c29ad2
+    role: context
+  - path: docs/reviews.md
+    sha256: 02563bb1eeae36f08ca7e9e38bacc36461c65e7399df4f6c75a7215a34895ce3
+    role: context
+  - path: docs/sources.md
+    sha256: f530f8785142b9b76f20f0853ec54a21dd96ae0e5827b820a332096ba483d70f
+    role: context
+  - path: evidence/PF01954/later-ta-exclusion-20261012.txt
+    sha256: dcec237b0370b65f99d2ec602d156325d4f82acf64d371a5afe7fdc1d1cd3ba1
+    role: context
+  - path: justfile
+    sha256: 16b490ea5da25e8c6b5f9649fd920df8b87a3e8438c1b6c1a5b8ca029deb3e36
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  snapshot_id: interpro-pfam-duf-2026-10-10
+  state: working_tree
+targets:
+- kind: generated
+  label: PF02697
+  owner_paths:
+  - path: curation/families/PF02697.yaml
+    repository: CultureBotAI/DUFMech
+    role: Maintained scientific overlay; create only with authorized curation.
+  - path: src/dufmech/records.py
+    repository: CultureBotAI/DUFMech
+    role: Projection generator; frozen snapshot identity is not hand-edited.
+  path: data/families/PF02697.yaml
+  record_class: FamilyRecord
+  semantic_digest:
+    algorithm: dufmech-record-content-v1
+    description: Canonical JSON SHA-256 of effective FamilyRecord excluding only curation_status,
+      review_id and curation_events.
+    sha256: 9051f8f9b199f2e326fc0e48b9c3d068cccaa387ef5f443e6bfee9f2839223bd
+  target_id: PF02697
+schema_version: 1.0.0
+review_id: 20261020T034821Z-pf02697-seed-record-review
+title: 'PF02697 VAPB_antitox: seed identity, provenance and evidence-scope review'
+started_at: '2026-10-20T03:45:45Z'
+finished_at: '2026-10-20T03:48:21Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  model: GPT-6
+  independence: independent
+  independence_basis: This review session did not author or modify the inspected seed
+    projection or frozen source. This is an independent repository audit by an AI
+    agent, not external scientific peer review.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: seed_only
+native_verdict: SEED_ONLY
+scientific_review: false
+summary: 'PF02697 (VAPB_antitox; InterPro:IPR003847) matches the verified frozen source
+  and retains seed_status=EX_DUF, characterization_status=UNSCORED and curation_status=SEEDED.
+  The PF02697 frozen description proposes a possible VAPBC-like antitoxin role and
+  retains PUB00056596 as an unresolved citation. Separately, two inspected local PF01954
+  documents preserve a historical lead: they report a mapping of F8AID5 to PF02697
+  while explaining why that lead was excluded from PF01954. This review verifies the
+  presence and wording of those local documents, not the reported mapping, underlying
+  publication or biological interpretation.'
+scope:
+  description: Full local inspection of PF02697 and its frozen row for identity, imported
+    claim scope, provenance, representation and status, together with two explicitly
+    captured PF01954 documents as cross-family context. The existence and wording
+    of the local lead were assessed; its primary-source support and reported member
+    mapping were not reverified.
+  selection: 'One record from the path-ordered queue of data/families/*.yaml lacking
+    a target in the validated cumulative scripts/record_review.py list inventory.
+    Fresh branch base: 6c5277fbd5ab0a7b7f0244f5c248758ac77b3530. The corpus has 8296
+    records; 211 were covered and 8085 unreviewed at selection. Coverage includes
+    immutable reviews retained on earlier local batch branches as recorded in the
+    session ledger. This bundle covers only PF02697.'
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - PF02697
+  exclusions:
+  - target: Primary literature, live database state, scientific reassessment of the
+      reported member mapping, and scientific assessment of other family records
+    reason: The PF01954 overlay and retained note were read only as local context
+      for PF02697. PF01954 is not an additional target; historical statements in those
+      files are not fresh scientific verification.
+checks:
+- check_id: native-inspect
+  name: Native snapshot and target inspection
+  command: uv run --locked dufmech-review inspect record PF02697
+  status: passed
+  required: true
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Verified manifest and captured exact projection, frozen row, source hashes
+    and semantic digest.
+  target_ids:
+  - PF02697
+  evidence_ids:
+  - record
+  - snapshot
+- check_id: common-inspect
+  name: Additional rubric and local-context input capture
+  command: uv run --locked python scripts/record_review.py inspect --targets /private/tmp/dufmech-review-session-20261019/batch-008/PF02697-targets.yaml
+    --input data/families/PF02697.yaml --input data/worklists/interpro-pfam-duf-2026-10-10.json
+    --input data/worklists/interpro-pfam-duf-2026-10-10.manifest.json --input data/worklists/interpro-pfam-duf-2026-10-10.tsv
+    --input docs/records.md --input docs/reviews.md --input docs/history.md --input
+    docs/sources.md --input docs/record-reviews.md --input docs/record-review-profile.md
+    --input .claude/skills/review-yaml-record/SKILL.md --input .claude/skills/curate-yaml-record/references/review-checklist.md
+    --input schema/record_review.yaml --input justfile --input curation/families/PF01954.yaml
+    --input evidence/PF01954/later-ta-exclusion-20261012.txt
+  status: passed
+  required: true
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Captured rubric, recipe and both named PF01954 local-context files while
+    preserving the native PF02697 source inputs and snapshot identity.
+  target_ids:
+  - PF02697
+  evidence_ids:
+  - profile
+  - local-context-overlay
+  - local-context-note
+- check_id: row-correspondence
+  name: Exact frozen-row correspondence
+  command: .venv/bin/python /private/tmp/dufmech-review-session-20261019/batch-008/prepare.py
+    PF02697
+  status: passed
+  required: true
+  exit_code: 0
+  expected_exit_code: 0
+  summary: The PF02697 projection agrees with its frozen row for identity, optional
+    fields, seed status and counters and has no own curated payload. Separate local-context
+    documents were captured; their scientific claims were not verified by this correspondence
+    check.
+  target_ids:
+  - PF02697
+  evidence_ids:
+  - record
+  - snapshot
+- check_id: records
+  name: Native closed-schema and projection checks
+  command: just records-check
+  status: passed
+  required: true
+  exit_code: 0
+  expected_exit_code: 0
+  summary: 8296 schema-valid records; 0 generated files differ.
+  target_ids:
+  - PF02697
+  evidence_ids:
+  - validation
+  scope_note: Shared batch input check executed before saving these reviews. The selected
+    projection and its maintained inputs remained unchanged.
+- check_id: history
+  name: Canonical history check
+  command: just history-check
+  status: passed
+  required: true
+  exit_code: 0
+  expected_exit_code: 0
+  summary: 420 valid canonical history records.
+  target_ids:
+  - PF02697
+  evidence_ids:
+  - validation
+  scope_note: Shared batch input check; this seed has no curation_history or generated
+    curation_events.
+- check_id: schema
+  name: Generated schema check
+  command: just validate-schema
+  status: passed
+  required: true
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Generated schema check found 0 differing generated files.
+  target_ids:
+  - PF02697
+  evidence_ids:
+  - validation
+- check_id: local-context-search
+  name: Bounded accession content search
+  command: rg -l --hidden --no-ignore --fixed-strings --word-regexp -- PF02697 curation/families
+    evidence history
+  status: passed
+  required: true
+  exit_code: 0
+  expected_exit_code: 0
+  summary: The hidden/ignored-inclusive content search found PF02697 references in
+    exactly the two explicitly inspected PF01954 context files.
+  target_ids:
+  - PF02697
+  evidence_ids:
+  - local-context-search
+  - local-context-overlay
+  - local-context-note
+evidence:
+- evidence_id: record
+  kind: record_content
+  reference: data/families/PF02697.yaml
+  locator: Entire projection, including identity, description, counters, status and
+    provenance
+  accessed_at: '2026-10-20T03:48:21Z'
+  support: supports
+  summary: Read the complete PF02697 seed record; it contains imported metadata and
+    no assertions, causal_graphs, discussions, datasets, cross_corpus_links, curation_history,
+    curation_events or review_id.
+  snapshot_sha256: 5ee013ddcae64f18161c2848a9b595be9dab75a12ab908a655984249f0feda5a
+- evidence_id: snapshot
+  kind: database
+  reference: data/worklists/interpro-pfam-duf-2026-10-10.json
+  locator: pfam_id=PF02697; companion manifest and TSV; native verified inspection
+  accessed_at: '2026-10-20T03:48:21Z'
+  support: supports
+  summary: The exact frozen row matches the projection. The native inspection verifies
+    the retained JSON/TSV manifest; the migration snapshot generation timestamp is
+    2026-10-10T07:44:21.614711Z. This is not the acquisition time of this retained
+    row. The review date does not refresh these source facts.
+  snapshot_sha256: 17fb625876c9326ed284263a47bcd84e0d7844a31c040dc06cd2260c36f1c383
+- evidence_id: profile
+  kind: authority
+  reference: docs/record-review-profile.md
+  locator: Domains and Ownership; Verdicts and Status Gates; linked record-review
+    contract and native checklist
+  accessed_at: '2026-10-20T03:48:21Z'
+  support: supports
+  summary: Read the local rules distinguishing imported description, seed class, evidence
+    scoring, curated claims and scientific review, and the separate projection/overlay
+    ownership.
+- evidence_id: validation
+  kind: validation
+  reference: justfile
+  locator: records-check, history-check, validate-schema recipes; actual batch input-check
+    runs
+  accessed_at: '2026-10-20T03:48:21Z'
+  support: supports
+  summary: Observed exit 0 from all three input recipes. 8296 schema-valid records;
+    0 generated files differ. 420 valid canonical history records. Generated schema
+    check found 0 differing generated files. These checks do not establish scientific
+    truth.
+- evidence_id: local-search
+  kind: search
+  reference: curation/families; evidence; history
+  locator: Path inventory filtered for PF02697
+  accessed_at: '2026-10-20T03:48:21Z'
+  support: supports
+  summary: No accession-named PF02697 path was found in the bounded path inventory,
+    and PF02697 has no own overlay or curated projection payload. A separate content
+    search identified the two captured PF01954 context files; the path result does
+    not mean that local context is absent.
+  search_scope: All paths under curation/families, evidence, and history, including
+    hidden and ignored files, filtered for the exact accession PF02697. This is a
+    local path inventory, not a literature search or an assertion that other corpora
+    lack evidence.
+- evidence_id: local-context-overlay
+  kind: record_content
+  reference: curation/families/PF01954.yaml
+  locator: Complete overlay read; discussion af2212-exclude-cross-family-ta-transfers
+  accessed_at: '2026-10-20T03:48:21Z'
+  support: context_only
+  summary: The PF01954 overlay retains a dated discussion reporting a PF02697 member
+    mapping as a reason to exclude a later lead from PF01954. This establishes a local
+    contextual lead, not independent verification of the reported mapping or functional
+    evidence.
+  snapshot_sha256: bab2c9a597f71b0fdac2412a077a0266cfb6a21868fb58ee7db678c7a11fffc0
+- evidence_id: local-context-note
+  kind: record_content
+  reference: evidence/PF01954/later-ta-exclusion-20261012.txt
+  locator: Complete retained note dated 2026-10-12; reported family mapping and historical
+    access limitations
+  accessed_at: '2026-10-20T03:48:21Z'
+  support: context_only
+  summary: The retained note reports F8AID5 as mapped to PF02697 and identifies PMID:40424603
+    as its historical source lead. It records limits of the earlier source inspection.
+    These are statements in a local curation note; the original material and mapping
+    were not rechecked in this review.
+  snapshot_sha256: dcec237b0370b65f99d2ec602d156325d4f82acf64d371a5afe7fdc1d1cd3ba1
+- evidence_id: local-context-search
+  kind: search
+  reference: curation/families; evidence; history
+  locator: Literal PF02697 content references in the bounded roots
+  accessed_at: '2026-10-20T03:48:21Z'
+  support: supports
+  summary: The bounded content search identified the two named PF01954 files. This
+    is distinct from the empty inventory of accession-named PF02697 paths.
+  search_scope: Literal accession content search under curation/families, evidence
+    and history, including hidden and ignored files. This bounded search identifies
+    local references; it does not establish literature completeness or scientific
+    support.
+- evidence_id: duf-projection-pf02697
+  kind: record_content
+  reference: data/families/PF02697.yaml
+  locator: dufmech-reviewed-projection-v1
+  accessed_at: '2026-10-20T03:48:21Z'
+  support: context_only
+  snapshot_sha256: 5ee013ddcae64f18161c2848a9b595be9dab75a12ab908a655984249f0feda5a
+  quote: "id: Pfam:PF02697\npfam_id: PF02697\nname: Putative antitoxin\nshort_name:\
+    \ VAPB_antitox\nseed_status: EX_DUF\ncharacterization_status: UNSCORED\ncuration_status:\
+    \ SEEDED\nsource_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF02697\n\
+    counters:\n  proteins: 798\n  matches: 798\n  proteomes: 365\n  taxa: 714\n  structures:\
+    \ 0\n  alphafold_models: 758\n  domain_architectures: 2\nprovenance:\n  snapshot_id:\
+    \ interpro-pfam-duf-2026-10-10\n  path: data/worklists/interpro-pfam-duf-2026-10-10.json\n\
+    \  sha256: 17fb625876c9326ed284263a47bcd84e0d7844a31c040dc06cd2260c36f1c383\n\
+    \  generated_at: '2026-10-10T07:44:21.614711Z'\n  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/\n\
+    interpro_id: InterPro:IPR003847\ndescription: Proteins in this family are possibly\
+    \ the antitoxin component of a VAPBC-like toxin-antitoxin\n  (TA) module, which\
+    \ is widespread in the in both archaea and bacteria [[cite:PUB00056596]].\n"
+  summary: Byte-exact projection retained at save for digest verification, not scientific
+    assessment.
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Exact Pfam/InterPro identity and naming
+  outcome: supported
+  summary: The filename, pfam_id=PF02697, id=Pfam:PF02697, short_name=VAPB_antitox,
+    name=Putative antitoxin, source URL and InterPro accession InterPro:IPR003847
+    agree with the selected frozen row. This establishes frozen identity correspondence,
+    not current upstream taxonomy or function.
+  target_ids:
+  - PF02697
+  evidence_ids:
+  - record
+  - snapshot
+- assessment_id: provenance
+  area: provenance
+  topic: Frozen counters, raw hashes and semantic binding
+  outcome: supported
+  summary: The record binds interpro-pfam-duf-2026-10-10 by SHA-256 and retains its
+    generation timestamp. Its 798 proteins, 798 matches, 0 structure entries and 758
+    AlphaFold models are frozen database counters, not independent experiments. Raw
+    input hashes and the dufmech-record-content-v1 digest preserve different checks.
+  target_ids:
+  - PF02697
+  evidence_ids:
+  - record
+  - snapshot
+  - validation
+- assessment_id: evidence-tier
+  area: evidence
+  topic: Imported seed description and historical local context versus verified scientific
+    support
+  outcome: unknown
+  summary: 'The PF02697 frozen description proposes a possible VAPBC-like antitoxin
+    role and retains PUB00056596 as an unresolved citation. Separately, two inspected
+    local PF01954 documents preserve a historical lead: they report a mapping of F8AID5
+    to PF02697 while explaining why that lead was excluded from PF01954. This review
+    verifies the presence and wording of those local documents, not the reported mapping,
+    underlying publication or biological interpretation.'
+  target_ids:
+  - PF02697
+  evidence_ids:
+  - record
+  - snapshot
+  - local-context-overlay
+  - local-context-note
+  dimensions:
+  - name: evidence-tier
+    value: Imported database description and retained local curation context; primary
+      support not reassessed
+    definition: Inputs actually examined here. Reported source inspection by earlier
+      curation is contextual information, not scientific verification performed by
+      this review.
+    evidence_ids:
+    - record
+    - snapshot
+    - local-context-overlay
+    - local-context-note
+- assessment_id: claim-scope
+  area: scope
+  topic: Family, domain and tested-protein boundaries
+  outcome: supported
+  summary: The PF02697 seed projection, the PF01954 curation target and the reported
+    F8AID5 lead remain distinct. A discussion about excluding a lead from PF01954
+    does not by itself establish positive functional evidence for all PF02697 members.
+    The putative and possible qualifiers remain in force. The prior documents are
+    contextual inputs to this one-record review; PF01954 is not an additional review
+    target, and no molecular mechanism or family-wide effect is adopted.
+  target_ids:
+  - PF02697
+  evidence_ids:
+  - record
+  - snapshot
+  - local-context-overlay
+  - local-context-note
+- assessment_id: completeness
+  area: completeness
+  topic: Seed content and remaining scientific work
+  outcome: unknown
+  summary: 'The local lead should remain discoverable for a separately scoped scientific
+    review of its original sources and exact member attribution. No such verification
+    occurred here. PF02697 has no own overlay or curated claim payload, although relevant
+    text exists under PF01954. The 798 proteins, zero structures and 758 AlphaFold
+    models are frozen coverage counts, not evidence that the tentative function has
+    been established. The bounded path inventory and separate content search answer
+    different questions: no accession-named PF02697 payload was found, but two PF01954
+    documents provide local context.'
+  target_ids:
+  - PF02697
+  evidence_ids:
+  - record
+  - local-search
+  - profile
+  - local-context-overlay
+  - local-context-note
+  - local-context-search
+- assessment_id: status
+  area: consistency
+  topic: Seed, scoring and review states
+  outcome: supported
+  summary: seed_status=EX_DUF, characterization_status=UNSCORED and curation_status=SEEDED
+    express separate states. EX_DUF records historical renaming and is compatible
+    with imported functional descriptions; it is not evidence that all members were
+    tested. No REVIEWED gate or curation event is implied by this bundle.
+  target_ids:
+  - PF02697
+  evidence_ids:
+  - record
+  - profile
+- assessment_id: ownership
+  area: ownership
+  topic: Maintained correction surface and scoped result
+  outcome: supported
+  summary: Any future adopted PF02697 scientific content belongs in its own maintained
+    curation overlay with appropriate evidence and actual canonical history. The inspected
+    PF01954 files remain context and are not transferred assertions. This review proposes
+    no corrective record edit and makes no status promotion.
+  target_ids:
+  - PF02697
+  evidence_ids:
+  - profile
+  - record
+  - validation
+  - local-context-overlay
+  - local-context-note
+- assessment_id: local-context-provenance
+  area: provenance
+  topic: Existence and source binding of the cross-family local lead
+  outcome: supported
+  summary: Both named PF01954 files were inspected as local repository content and
+    are retained in the source-input hash set. Their text explicitly connects the
+    historical lead to PF02697 while excluding it from PF01954. This positively establishes
+    the provenance and presence of the lead, not its scientific correctness.
+  target_ids:
+  - PF02697
+  evidence_ids:
+  - local-context-overlay
+  - local-context-note
+  - local-context-search
+- assessment_id: local-context-scientific-support
+  area: evidence
+  topic: Scientific support of the historical local lead remains unassessed
+  outcome: unknown
+  summary: The historical note reports an external source inspection and a member
+    mapping, but neither was independently repeated here. The local lead therefore
+    remains unknown scientific support in this review and does not justify changing
+    UNSCORED/SEEDED or the SEED_ONLY verdict.
+  target_ids:
+  - PF02697
+  evidence_ids:
+  - local-context-overlay
+  - local-context-note
+findings: []
+actions: []
+limitations:
+- scientific_review is false. This session inspected the PF02697 seed and two retained
+  PF01954 context documents. It did not inspect the underlying publication, original
+  figures or live member mapping. Statements about earlier source access in those
+  documents describe that earlier curation, not work performed in this review.
+- Absence is limited to accession-named paths under curation/families, evidence and
+  history, including hidden/ignored files. A separate bounded content search found
+  the two named context files. Neither search establishes that other local collections
+  or the literature lack evidence.
+- Required input checks passed. Native saving validates the supplied content and constructs
+  the immutable pair. The persisted pair is then read back through the native validator
+  and covered by the batch just reviews-check recipe; this document does not preclaim
+  those later results. Full publication QC is tracked separately and may require Pages
+  source-pin updates.
+- No scientific status, record, overlay, frozen input, canonical curation history
+  or generated Pages artifact was changed by this review.
+notes:
+- One record per bundle; assessment prose was authored from the actual inspected record.
+  The helper assembles provenance and schema fields; inspection and successful checks
+  alone are not scientific findings.
+- The PF01954 context files are source inputs only. The single target, native semantic
+  digest, seed-only verdict, empty findings/actions and scientific_review=false are
+  preserved; no cross-family scientific assertion is adopted.
+tags:
+- seed-review
+- unreviewed-record-coverage
+```
