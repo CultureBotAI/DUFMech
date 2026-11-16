@@ -55,3 +55,34 @@ readback outages, rejected and uncertain comment requests, missing closure
 responses, fsync ordering and invalid journal paths/bindings. Mutation controls
 run against private copies in fresh Python processes. These tests make no live
 closure, reopen, comment, merge or deployment request.
+
+## Durable test scratch (#466)
+
+The journal deliberately rejects system temporary paths. Local test runs must put
+fixtures in a durable directory **outside the DUFMech source checkout**; a checkout's
+own ignored scratch directory is unsuitable because source-provenance checks can
+mistake its copied fixtures for canonical inputs. This does not relax either guard.
+
+From the repository root, choose a fresh sibling work directory, for example:
+
+```bash
+duf_test_root="${HOME}/agent-work/DUFMech-ci-fixtures/closure-$(date -u +%Y%m%dT%H%M%SZ)-$$"
+mkdir -p "$duf_test_root/tmp"
+TMPDIR="$duf_test_root/tmp" TMP="$duf_test_root/tmp" TEMP="$duf_test_root/tmp" \
+  PYTEST_ADDOPTS="--basetemp=\"$duf_test_root/pytest\"" \
+  uv run --locked --extra dev pytest -q \
+  tests/test_close_consolidated_reviews.py tests/test_ci_durable_scratch.py
+```
+
+Verify that this chosen directory is outside your checkout before using it.
+Use the same four variables for a full `just qc` run. Keep each run's fixture
+directory separate: pytest may recreate its own basetemp, so never point it at
+retained receipts or another run's work.
+
+The native validation workflow uses the runner's existing home directory at
+`$HOME/agent-work/DUFMech/ci-$GITHUB_RUN_ID-$GITHUB_RUN_ATTEMPT`.
+Before validation it exports TMPDIR, TMP, TEMP and a separate pytest basetemp
+through GITHUB_ENV. The executable regression reads the actual configured shell
+step, exercises distinct run/attempt identities with an isolated child-process
+home, then creates a native durable journal through a real pytest tmp_path.
+It does not change the parent environment or call GitHub.
