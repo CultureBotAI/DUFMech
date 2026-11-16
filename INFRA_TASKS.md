@@ -52,6 +52,10 @@ tasks:
     summary: Carry the reviewed seven-goal adoption candidate into the final v1 infrastructure closure head
     status: open
     issue_url: https://github.com/CultureBotAI/DUFMech/issues/399
+  - task_id: dufmech-infra-0005
+    summary: Consolidate source-pin-blocked review PRs before creating more independent batches
+    status: open
+    issue_url: https://github.com/CultureBotAI/DUFMech/issues/460
 ```
 <!-- mech-infra-tasks:end -->
 
@@ -205,3 +209,31 @@ tasks:
   intake neither installs that object nor authorizes a goal send or a change to
   any other Mech.
 
+
+### `dufmech-infra-0005` — Consolidate retained review batches and complete source publication
+
+- **Origin**: Bounded repository maintenance inventory on 2026-11-16; separate
+  from any active native cycle or frozen stage scope.
+- **Status**: `open`; preparation is not a merged repair or completed native goal.
+- **Issues**: [Queue #460](https://github.com/CultureBotAI/DUFMech/issues/460),
+  [source-pin CI #459](https://github.com/CultureBotAI/DUFMech/issues/459).
+- **Priority**: High.
+- **Observation**: The frozen queue has 95 independent review-only PRs whose
+  1,900 added files are missing from their site-source ledgers. They contain 950
+  distinct historical observations, not duplicate or already-merged work.
+- **Evidence**: `docs/provenance/review-queue-20261116-audit/`; exact input heads,
+  three-dot deltas, per-file Git blobs and SHA256 preservation proof.
+- **Acceptance**: Consolidate unchanged review bytes on current main, retain an
+  actual annotated source checkpoint, capture it with the native writer,
+  regenerate Pages and pass full QC and independent review. Preserve original
+  branches. Close replaced PRs only after verifying their exact payload in the
+  durably pushed replacement. Record actual checks rather than implying that
+  closure means merge or scientific approval.
+- **Queue maintenance**: Until this publication dependency is resolved, retain
+  new batches in the bounded pending review queue instead of opening additional
+  independent failing PRs. A single consolidation PR is the publication unit;
+  the scientific PRs and inert freshness candidate keep their separate scopes.
+  This instruction does not resume or redirect an active goal.
+- **Dependencies and disposition**: Human merge decisions, current-base checks,
+  and existing runtime/adoption holds remain. Do not rewrite previous intake,
+  review receipts, timestamps, verdicts, or the existing cycle's frozen scope.

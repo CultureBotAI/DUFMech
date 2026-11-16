@@ -1,0 +1,31 @@
+{
+  "date": "2026-11-16",
+  "issues": [
+    459,
+    460
+  ],
+  "edits": [
+    "Set executable mode for both shebang helpers.",
+    "Apply import sorting/spacing to both helpers.",
+    "Parenthesize two multiline adjacent string entries in audit_pr_preservation.py.",
+    "Remove unused digests Counter in audit_review_sources.py."
+  ],
+  "helpers": [
+    {
+      "helper": "scripts/adhoc/audit_pr_preservation.py",
+      "original_archive": "original-audit_pr_preservation.py.gz",
+      "original_sha256": "49664f3a421131dbd35a8fea6d76439b7ce92f4da0ff4b677242424416cbde25",
+      "packaged_sha256": "3853092ac90fa5f67970ee5d2d1028fffab9496a1518f5c20370beb8816203f7",
+      "original_archive_sha256": "3612c527516bcdc69ba97407669bcd1973669338e75690ca31d28e9adc30690e",
+      "mode": "0755"
+    },
+    {
+      "helper": "scripts/adhoc/audit_review_sources.py",
+      "original_archive": "original-audit_review_sources.py.gz",
+      "original_sha256": "43e8d0d0210229507f7908a9a48a6ac7f7b3d5ded23d991be7c2e77b736b319e",
+      "packaged_sha256": "39bceaf4d6a3ef4ff9450013404ac05d615d45b35e6bdbcaa83cd007d3a47f26",
+      "original_archive_sha256": "30cb7075bd57522d86ae84d83f1a4696e51e8a06397ce05041f2f5fe6d1311b4",
+      "mode": "0755"
+    }
+  ]
+}
