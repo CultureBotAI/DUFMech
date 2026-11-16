@@ -1,0 +1,48 @@
+{
+  "date": "2026-11-16",
+  "issues": [
+    459,
+    460
+  ],
+  "helper": {
+    "path": "scripts/adhoc/inventory_review_git_refs.py",
+    "original_sha256": "b6a16dceaf23613d1724b1bec1a4ba40f19534f0b762c56cb52d167cb97c0c7d",
+    "packaged_sha256": "f1e21eef99336f6610423e9eec06ebccc237f1ed48e92fc30bebc692e39eb0ea",
+    "packaging_edits": [
+      "Set executable mode0755.",
+      "Make subprocess.run check=False explicit, preserving its existing non-raising behavior."
+    ]
+  },
+  "evidence": {
+    "initial_inventory": {
+      "original_sha256": "ce2b2dc31c1e9372f1e8d074ccf2d081b517e05837cf683cfe9335d9f33abc3e",
+      "public_archive": "initial-source-git-inventory.json.gz",
+      "transformation": "gzip with mtime0; decompressed bytes unchanged"
+    },
+    "tag_ancestry_proof": {
+      "original_sha256": "9f1446ea85f6a3e6bb7a1bea13ea3fc974472005872ef9659dc38a815ee41d9e",
+      "public_sha256": "1e2ec0dbd9f0c1e27930cc50b126165dfaa290a2344fcadfe2431d6a5af6c524",
+      "transformation": "Remove local captured_ref names; rename local-observation boolean and append an explicit publication note. Remote tag/commit/source identities unchanged."
+    },
+    "remote_tags": {
+      "original_sha256": "912d4b7e03889b2890bb951c8035b31a3b1558da6734010af7cd61aafa52acb1",
+      "public_sha256": "912d4b7e03889b2890bb951c8035b31a3b1558da6734010af7cd61aafa52acb1",
+      "transformation": "none"
+    },
+    "final_original_inventory": {
+      "original_sha256": "ce6b33c8d173527468010d8986bfddf363b813db9fc85b7be97bd3a665816403",
+      "public_archive": "final-original-helper-inventory.json.gz",
+      "transformation": "gzip with mtime0; decompressed bytes unchanged"
+    },
+    "final_packaged_inventory": {
+      "original_sha256": "0ff835a7ad956ee58ef928587c6845c3b66b3a7c9e35ec693748dd214530b7e6",
+      "public_archive": "final-source-git-inventory.json.gz",
+      "transformation": "gzip with mtime0; decompressed bytes unchanged"
+    },
+    "historical_pr_retention": {
+      "original_sha256": "739297a0b9857c5fe714a478d2e366439476a5d5a77b75a82938c4d97f346824",
+      "public_sha256": "739297a0b9857c5fe714a478d2e366439476a5d5a77b75a82938c4d97f346824",
+      "transformation": "none"
+    }
+  }
+}

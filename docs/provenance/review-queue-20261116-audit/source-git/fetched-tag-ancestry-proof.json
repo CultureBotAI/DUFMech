@@ -1,0 +1,507 @@
+{
+  "checked_at": "2026-11-16T20:04:17.647630+00:00",
+  "fetched_ref_count": 77,
+  "previous_missing_count": 33,
+  "now_retained_by_fetched_source_tags": 32,
+  "sources": [
+    {
+      "source": "05737a0eaecdfe4263d61150fcdd17ac62cb0da7",
+      "retained_in_fetched_source_tags": true,
+      "retaining_tags": [
+        {
+          "remote_ref": "refs/tags/source/dufmech-direct-uniprot-20261014",
+          "tag_object": "e9b55bcc0b2dfc94b864fe10b81b04b650debd92",
+          "tag_commit": "310b94f425a708f170dce1ff5f41331dd8d5806d"
+        }
+      ]
+    },
+    {
+      "source": "0fc1b328560ad751c28eebfb5093414f59205e0c",
+      "retained_in_fetched_source_tags": true,
+      "retaining_tags": [
+        {
+          "remote_ref": "refs/tags/source/dufmech-pr-208-candidate",
+          "tag_object": "430d8c1be92a114b1ae9cb4b3f4796ecf6bf2e40",
+          "tag_commit": "0fc1b328560ad751c28eebfb5093414f59205e0c"
+        },
+        {
+          "remote_ref": "refs/tags/source/dufmech-pr-208-reviewed",
+          "tag_object": "8eb22ed5a3fdaf38fc052d699f0bf9a515dea3d1",
+          "tag_commit": "4a6164af4ef191b0a3029f389864760bff55b75f"
+        }
+      ]
+    },
+    {
+      "source": "13b3b6b3058c22af38a792ecf6aafd436ea91dcd",
+      "retained_in_fetched_source_tags": true,
+      "retaining_tags": [
+        {
+          "remote_ref": "refs/tags/source/dufmech-pr-211-candidate",
+          "tag_object": "f8ef3ec438f1e97ca51453061f4fc634860f5b9a",
+          "tag_commit": "13b3b6b3058c22af38a792ecf6aafd436ea91dcd"
+        },
+        {
+          "remote_ref": "refs/tags/source/dufmech-pr-211-reviewed",
+          "tag_object": "fca9f4a3eebb52862bda188b05f62b0302db7b7c",
+          "tag_commit": "15e55656dfc2822874800a2173a793e5708edf4b"
+        }
+      ]
+    },
+    {
+      "source": "14b806047b4c5da3c2196aafebdb9238842f2685",
+      "retained_in_fetched_source_tags": true,
+      "retaining_tags": [
+        {
+          "remote_ref": "refs/tags/source/dufmech-pr-185",
+          "tag_object": "12a77b3c6fb0ffa64fdc4230fc84be737eca27f1",
+          "tag_commit": "4c21ce91ae6ca4c0dba6d311535af12cad2b8902"
+        },
+        {
+          "remote_ref": "refs/tags/source/dufmech-pr-185-final",
+          "tag_object": "97780047e8471e78786f4bfa6a554e5e834c8890",
+          "tag_commit": "5f0bce3d349539563b98ebefd553d8d6be83e9b4"
+        },
+        {
+          "remote_ref": "refs/tags/source/dufmech-pr-185-release",
+          "tag_object": "be2ff79424f67471a253d496b7efb42e3a1a8ae0",
+          "tag_commit": "66256b0d2ac270915a867db4335d90b9780de93d"
+        }
+      ]
+    },
+    {
+      "source": "15bb95d4cdab41b02df74ea6ffa24d1bb67b80ef",
+      "retained_in_fetched_source_tags": true,
+      "retaining_tags": [
+        {
+          "remote_ref": "refs/tags/source/dufmech-pr-263",
+          "tag_object": "4e186133798b97c3272b0c780e5d87d65e57aec9",
+          "tag_commit": "8ded514cc4de0b14c22d42e6e0cf59318fb68866"
+        },
+        {
+          "remote_ref": "refs/tags/source/dufmech-pr-263-candidate",
+          "tag_object": "bb7484ebdeca2556ea68b91bbe50a7d7b768e245",
+          "tag_commit": "15bb95d4cdab41b02df74ea6ffa24d1bb67b80ef"
+        }
+      ]
+    },
+    {
+      "source": "1dd0919391b090b6a95255afa2a690abf4826675",
+      "retained_in_fetched_source_tags": true,
+      "retaining_tags": [
+        {
+          "remote_ref": "refs/tags/source/dufmech-pr-255-candidate",
+          "tag_object": "cb59486b3362dbbf78f563a5745486af2bad4e71",
+          "tag_commit": "1dd0919391b090b6a95255afa2a690abf4826675"
+        },
+        {
+          "remote_ref": "refs/tags/source/dufmech-pr-255-reviewed",
+          "tag_object": "8eb157ed03a5efbcbe5c38743179c10bbd4fa9d1",
+          "tag_commit": "07353e71c46300e40a530f93868cfbc18572f13c"
+        }
+      ]
+    },
+    {
+      "source": "2698be1490ec651eeae2f5330a95e084355a0ce1",
+      "retained_in_fetched_source_tags": true,
+      "retaining_tags": [
+        {
+          "remote_ref": "refs/tags/source/dufmech-pr-256",
+          "tag_object": "8c7f7e669f5c459f7b7781da558187ae81320705",
+          "tag_commit": "33c9c152cb7766e402daff82183dde9f85ad1fac"
+        },
+        {
+          "remote_ref": "refs/tags/source/dufmech-pr-256-candidate",
+          "tag_object": "3cb49f90af0386f4685e6371c2d5334682ac3d02",
+          "tag_commit": "2698be1490ec651eeae2f5330a95e084355a0ce1"
+        }
+      ]
+    },
+    {
+      "source": "288ffa7e633395b2a777623fc161b661e434f123",
+      "retained_in_fetched_source_tags": true,
+      "retaining_tags": [
+        {
+          "remote_ref": "refs/tags/source/dufmech-pr-225",
+          "tag_object": "c6d05455256344e872f1746ac0c9fe42f4f26ffc",
+          "tag_commit": "af999e086a21eae74387fc5bcd1a31b3ae2f4ed2"
+        },
+        {
+          "remote_ref": "refs/tags/source/dufmech-pr-225-candidate",
+          "tag_object": "79a0b6a3f7dffaae8c361896e313b490cab79c8e",
+          "tag_commit": "288ffa7e633395b2a777623fc161b661e434f123"
+        }
+      ]
+    },
+    {
+      "source": "2a9a930b2b5b73c88f7d2d570f9f49c45d3f48c2",
+      "retained_in_fetched_source_tags": true,
+      "retaining_tags": [
+        {
+          "remote_ref": "refs/tags/source/dufmech-pr-191-data",
+          "tag_object": "c5ee4921b1c5b8e68551407a19519145526299ed",
+          "tag_commit": "2a9a930b2b5b73c88f7d2d570f9f49c45d3f48c2"
+        },
+        {
+          "remote_ref": "refs/tags/source/dufmech-pr-191-release",
+          "tag_object": "6f552fa482f6c6bbab6d9810f0b174ab7ab32f4d",
+          "tag_commit": "0e1bbcbc62ff9b47e98d6100856f8aaa343179f9"
+        }
+      ]
+    },
+    {
+      "source": "2f81f77105785fc28cb6a1282a69715c8d176b6c",
+      "retained_in_fetched_source_tags": true,
+      "retaining_tags": [
+        {
+          "remote_ref": "refs/tags/source/dufmech-pr-231-audit",
+          "tag_object": "63cb8111b0f763971db66f58d7908a6a4d4d015a",
+          "tag_commit": "ead477b32543baeb6f866ac73623636a01a53bf6"
+        },
+        {
+          "remote_ref": "refs/tags/source/dufmech-pr-231-candidate",
+          "tag_object": "045ac466321b475e95d1fe16c63ffafe18163f93",
+          "tag_commit": "2f81f77105785fc28cb6a1282a69715c8d176b6c"
+        }
+      ]
+    },
+    {
+      "source": "38467c6685ee5df681c285d05313d06f804be60a",
+      "retained_in_fetched_source_tags": true,
+      "retaining_tags": [
+        {
+          "remote_ref": "refs/tags/source/dufmech-pr-237-audit",
+          "tag_object": "0a3c4c50dbd5f64f1c886ba1ee6631ce79fbe64a",
+          "tag_commit": "883693c9a7ac10ea94a380f772edfb84f9415e69"
+        },
+        {
+          "remote_ref": "refs/tags/source/dufmech-pr-237-candidate",
+          "tag_object": "de8f8563e1a5c1e50e752d0db56688d9a5a96450",
+          "tag_commit": "38467c6685ee5df681c285d05313d06f804be60a"
+        }
+      ]
+    },
+    {
+      "source": "39d7e4884e02f666780315f5c186c65d19145784",
+      "retained_in_fetched_source_tags": true,
+      "retaining_tags": [
+        {
+          "remote_ref": "refs/tags/source/dufmech-pr-180",
+          "tag_object": "096c1e7e68e836023a92018f7ef458b9672d4785",
+          "tag_commit": "86d2e0845317773e5cabc1b8c1508f62b6b5dfbf"
+        }
+      ]
+    },
+    {
+      "source": "39df6f38da08c971df1f02ab247f2c7513d44adb",
+      "retained_in_fetched_source_tags": true,
+      "retaining_tags": [
+        {
+          "remote_ref": "refs/tags/source/dufmech-pr-250",
+          "tag_object": "6bf0a821d30bc51e314918d0f034c3b800acb4fd",
+          "tag_commit": "cf2df9ae519016340980395316fdc275a26bc3a9"
+        },
+        {
+          "remote_ref": "refs/tags/source/dufmech-pr-250-candidate",
+          "tag_object": "7d7c92eb0259bd302860b8d6174b0a78c330f55b",
+          "tag_commit": "39df6f38da08c971df1f02ab247f2c7513d44adb"
+        }
+      ]
+    },
+    {
+      "source": "4716dd2f9372a0bbf5d03747c383ae41464765a5",
+      "retained_in_fetched_source_tags": true,
+      "retaining_tags": [
+        {
+          "remote_ref": "refs/tags/source/dufmech-pr-221-candidate",
+          "tag_object": "7877e149659178d9bf4b33d5f29b841867df8595",
+          "tag_commit": "4716dd2f9372a0bbf5d03747c383ae41464765a5"
+        },
+        {
+          "remote_ref": "refs/tags/source/dufmech-pr-221-reviewed",
+          "tag_object": "e172d4b18b1708297dae54d004612a90e391a00f",
+          "tag_commit": "a39a20bf4cbe38fabb711e7c06343668f6e8269f"
+        }
+      ]
+    },
+    {
+      "source": "48012e1f00b385d0f387c3c04789a5d9fcad133f",
+      "retained_in_fetched_source_tags": true,
+      "retaining_tags": [
+        {
+          "remote_ref": "refs/tags/source/dufmech-causal-graphs-20261014T1953",
+          "tag_object": "e5a080d7911e3c9e2a79aae9337ed31406ee90b9",
+          "tag_commit": "10978e82f3e0f65c57201c7e59a980af1c9787ca"
+        }
+      ]
+    },
+    {
+      "source": "56e3c0e4c9b8e7345cb83c2ddffefc687ef35bab",
+      "retained_in_fetched_source_tags": true,
+      "retaining_tags": [
+        {
+          "remote_ref": "refs/tags/source/dufmech-pr-268",
+          "tag_object": "906b90115daf3aed0b2a544f4b53664caeb93107",
+          "tag_commit": "db8b9b95a1d1ec3f5dbe24d97998a760dd7543e2"
+        },
+        {
+          "remote_ref": "refs/tags/source/dufmech-pr-268-corrected-v2",
+          "tag_object": "d8c45f8a312f35fe3f7e7ee1e7e6455c37d5ac71",
+          "tag_commit": "56e3c0e4c9b8e7345cb83c2ddffefc687ef35bab"
+        }
+      ]
+    },
+    {
+      "source": "5e92882f31859625c1061a17127001e59b307972",
+      "retained_in_fetched_source_tags": true,
+      "retaining_tags": [
+        {
+          "remote_ref": "refs/tags/source/dufmech-pr-210-candidate",
+          "tag_object": "c9443bb2ff0836dcf232236bca79b126f69b6d29",
+          "tag_commit": "5e92882f31859625c1061a17127001e59b307972"
+        },
+        {
+          "remote_ref": "refs/tags/source/dufmech-pr-210-reviewed",
+          "tag_object": "abff585a3900506fc27c4e7727be439289f7057b",
+          "tag_commit": "a03d61551c0d99197f67141bc082e8e9e4db2769"
+        }
+      ]
+    },
+    {
+      "source": "611617feeda7ac0480898e7042bbd2fb4bdaf930",
+      "retained_in_fetched_source_tags": false,
+      "retaining_tags": []
+    },
+    {
+      "source": "7207aae4a61efb550445799612cdd277cb45791e",
+      "retained_in_fetched_source_tags": true,
+      "retaining_tags": [
+        {
+          "remote_ref": "refs/tags/source/dufmech-pr-258",
+          "tag_object": "82eab14090cbf95a24ccc83093b2a214d648052a",
+          "tag_commit": "e27f0948f98029921b38eb489b7577b784cda83b"
+        },
+        {
+          "remote_ref": "refs/tags/source/dufmech-pr-258-candidate",
+          "tag_object": "3f86644e86ca3e553379345ad2e2c76e54fa7449",
+          "tag_commit": "7207aae4a61efb550445799612cdd277cb45791e"
+        }
+      ]
+    },
+    {
+      "source": "79a54d2ea0c7454e400aa522caa7bcf36fa2e13f",
+      "retained_in_fetched_source_tags": true,
+      "retaining_tags": [
+        {
+          "remote_ref": "refs/tags/source/dufmech-pr-235-audit",
+          "tag_object": "e1edb9a5e3de0cf204bb47259b7a0ae68d360271",
+          "tag_commit": "f02c025ddeae001b46e6214965bbfbec796d6b06"
+        },
+        {
+          "remote_ref": "refs/tags/source/dufmech-pr-235-candidate",
+          "tag_object": "4841dba1d6aef98d6f325eb1ecd705ebce690bc3",
+          "tag_commit": "79a54d2ea0c7454e400aa522caa7bcf36fa2e13f"
+        }
+      ]
+    },
+    {
+      "source": "79f43fbdfff30a7238dd84b70f734016bd4bb70a",
+      "retained_in_fetched_source_tags": true,
+      "retaining_tags": [
+        {
+          "remote_ref": "refs/tags/source/dufmech-pr-243-audit",
+          "tag_object": "aae07f5ee204cce507b87b9f856cc7f1b5ae1083",
+          "tag_commit": "cd7ae3fa48788f8a2f834ea3092531714f5eadea"
+        },
+        {
+          "remote_ref": "refs/tags/source/dufmech-pr-243-candidate",
+          "tag_object": "de09bd7fed61415f85a696a005b04fa7ad2a8a48",
+          "tag_commit": "79f43fbdfff30a7238dd84b70f734016bd4bb70a"
+        }
+      ]
+    },
+    {
+      "source": "80996c57e4721f284ceaae7829c3c78c3990833f",
+      "retained_in_fetched_source_tags": true,
+      "retaining_tags": [
+        {
+          "remote_ref": "refs/tags/source/dufmech-pr-185-release",
+          "tag_object": "be2ff79424f67471a253d496b7efb42e3a1a8ae0",
+          "tag_commit": "66256b0d2ac270915a867db4335d90b9780de93d"
+        }
+      ]
+    },
+    {
+      "source": "9053fcf725d527056db22c676ce84791f705ee6c",
+      "retained_in_fetched_source_tags": true,
+      "retaining_tags": [
+        {
+          "remote_ref": "refs/tags/source/dufmech-protein-examples-20261013",
+          "tag_object": "0552496120275e04721ffed0bc422106392ef6c2",
+          "tag_commit": "c8155abfcf881ad8662936343deb81e604e3a194"
+        }
+      ]
+    },
+    {
+      "source": "9d1b5c421b31df0f327dcce4d76f2f17307e6c9f",
+      "retained_in_fetched_source_tags": true,
+      "retaining_tags": [
+        {
+          "remote_ref": "refs/tags/source/dufmech-pr-256",
+          "tag_object": "8c7f7e669f5c459f7b7781da558187ae81320705",
+          "tag_commit": "33c9c152cb7766e402daff82183dde9f85ad1fac"
+        },
+        {
+          "remote_ref": "refs/tags/source/dufmech-pr-256-candidate",
+          "tag_object": "3cb49f90af0386f4685e6371c2d5334682ac3d02",
+          "tag_commit": "2698be1490ec651eeae2f5330a95e084355a0ce1"
+        }
+      ]
+    },
+    {
+      "source": "a68429163ce3e907977dbe1103a3c1b668731862",
+      "retained_in_fetched_source_tags": true,
+      "retaining_tags": [
+        {
+          "remote_ref": "refs/tags/source/dufmech-pr-223-candidate",
+          "tag_object": "4e92127e03d02257e5c2213c38d25fa7c4c6a835",
+          "tag_commit": "a68429163ce3e907977dbe1103a3c1b668731862"
+        },
+        {
+          "remote_ref": "refs/tags/source/dufmech-pr-223-reviewed",
+          "tag_object": "f2eca28ee897f6b412f2ea480fb435e1e673e393",
+          "tag_commit": "a68429163ce3e907977dbe1103a3c1b668731862"
+        },
+        {
+          "remote_ref": "refs/tags/source/dufmech-pr-223-reviewed-final",
+          "tag_object": "47077e2cef13014c9f6a8a070564605ef04b0c5c",
+          "tag_commit": "a52d481ccdb49e91bce6b6bc403a7d24a753a164"
+        }
+      ]
+    },
+    {
+      "source": "b6793ba2005e4429f0cef96a31a328825e655a00",
+      "retained_in_fetched_source_tags": true,
+      "retaining_tags": [
+        {
+          "remote_ref": "refs/tags/source/dufmech-pr-200-candidate",
+          "tag_object": "fbeebde4433673d979758772f47c7d9c04873d1e",
+          "tag_commit": "b6793ba2005e4429f0cef96a31a328825e655a00"
+        },
+        {
+          "remote_ref": "refs/tags/source/dufmech-pr-200-reviewed",
+          "tag_object": "3ab79f6c24a3e9062b88c7751a927236e32bc6df",
+          "tag_commit": "d3a00bee44e3e8ab57eac478eb998e795e12f41a"
+        }
+      ]
+    },
+    {
+      "source": "bf3279f826a5fbb982f962dba292a3f033f1a288",
+      "retained_in_fetched_source_tags": true,
+      "retaining_tags": [
+        {
+          "remote_ref": "refs/tags/source/dufmech-pr-202-candidate",
+          "tag_object": "2905c2c39422abc883555840823a6f8b4321f6cb",
+          "tag_commit": "bf3279f826a5fbb982f962dba292a3f033f1a288"
+        },
+        {
+          "remote_ref": "refs/tags/source/dufmech-pr-202-reviewed",
+          "tag_object": "644ff9f7df51b7cfd7903aa3d9eeb8be608d3ac2",
+          "tag_commit": "68d863d9aba76bb0bcefa1f7c7394d637e7713c2"
+        }
+      ]
+    },
+    {
+      "source": "d2b5963a60c497b0c5517ff16628e39e95b970d8",
+      "retained_in_fetched_source_tags": true,
+      "retaining_tags": [
+        {
+          "remote_ref": "refs/tags/source/dufmech-pr-245-audit",
+          "tag_object": "96ac0beb21c9f67a2592be418ebed2ac5974d798",
+          "tag_commit": "b0338c2778362772d86685adaf9090246ef50ddf"
+        },
+        {
+          "remote_ref": "refs/tags/source/dufmech-pr-245-candidate",
+          "tag_object": "3020e6bff0b3b17152060af088a3e72711c5357f",
+          "tag_commit": "d2b5963a60c497b0c5517ff16628e39e95b970d8"
+        }
+      ]
+    },
+    {
+      "source": "d719a3a748a2f26020bdeee06ea3a147eac3814a",
+      "retained_in_fetched_source_tags": true,
+      "retaining_tags": [
+        {
+          "remote_ref": "refs/tags/source/dufmech-pr-185-final",
+          "tag_object": "97780047e8471e78786f4bfa6a554e5e834c8890",
+          "tag_commit": "5f0bce3d349539563b98ebefd553d8d6be83e9b4"
+        },
+        {
+          "remote_ref": "refs/tags/source/dufmech-pr-185-release",
+          "tag_object": "be2ff79424f67471a253d496b7efb42e3a1a8ae0",
+          "tag_commit": "66256b0d2ac270915a867db4335d90b9780de93d"
+        }
+      ]
+    },
+    {
+      "source": "db34c187a42f7a37a04a7238e43ed5e02c84f530",
+      "retained_in_fetched_source_tags": true,
+      "retaining_tags": [
+        {
+          "remote_ref": "refs/tags/source/dufmech-pr-276",
+          "tag_object": "c51b8a097c1381dc3a8808f97ca669b16a092abd",
+          "tag_commit": "be0570db69ae805419315f687e295f92f4bc5be3"
+        }
+      ]
+    },
+    {
+      "source": "e3c273b3075de43cca97908e3d0b5a80f313a409",
+      "retained_in_fetched_source_tags": true,
+      "retaining_tags": [
+        {
+          "remote_ref": "refs/tags/source/dufmech-pr-233-audit",
+          "tag_object": "5a79be4d823a9b917f1c9f699c32f87874c88b4c",
+          "tag_commit": "df3e0f91cdce171e2ab9b9e0dea59002e5b06544"
+        },
+        {
+          "remote_ref": "refs/tags/source/dufmech-pr-233-candidate",
+          "tag_object": "526d2eda7f273070605453dd49824ab6721f2b2a",
+          "tag_commit": "e3c273b3075de43cca97908e3d0b5a80f313a409"
+        }
+      ]
+    },
+    {
+      "source": "f2b12dd9f59d877f0869f185c281f887471e63be",
+      "retained_in_fetched_source_tags": true,
+      "retaining_tags": [
+        {
+          "remote_ref": "refs/tags/source/dufmech-pr-220-candidate",
+          "tag_object": "ed27626702e0e1162fa1ee8a57ee738e677e25ff",
+          "tag_commit": "f2b12dd9f59d877f0869f185c281f887471e63be"
+        },
+        {
+          "remote_ref": "refs/tags/source/dufmech-pr-220-reviewed",
+          "tag_object": "a3e105ec7d93978c4af118878476da03591dbd52",
+          "tag_commit": "9ee0c536b4bf848ca3f9b90d5e50aae0070c0394"
+        }
+      ]
+    },
+    {
+      "source": "fd54481c6b74265e32499b429a124558ffa02bd2",
+      "retained_in_fetched_source_tags": true,
+      "retaining_tags": [
+        {
+          "remote_ref": "refs/tags/source/dufmech-pr-237-audit",
+          "tag_object": "0a3c4c50dbd5f64f1c886ba1ee6631ce79fbe64a",
+          "tag_commit": "883693c9a7ac10ea94a380f772edfb84f9415e69"
+        },
+        {
+          "remote_ref": "refs/tags/source/dufmech-pr-237-candidate",
+          "tag_object": "de8f8563e1a5c1e50e752d0db56688d9a5a96450",
+          "tag_commit": "38467c6685ee5df681c285d05313d06f804be60a"
+        }
+      ]
+    }
+  ],
+  "all_observed_tag_objects_match_verified_remote_snapshot": true,
+  "publication_note": "Local reference names are omitted; each public remote tag, exact tag object, peeled commit and source ancestry observation is retained."
+}

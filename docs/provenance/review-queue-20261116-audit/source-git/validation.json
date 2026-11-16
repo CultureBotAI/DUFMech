@@ -1,0 +1,15 @@
+{
+  "checked_at": "2026-11-16T20:08:30.461020+00:00",
+  "reviews": 1237,
+  "unique_source_revisions": 68,
+  "missing_commits": 0,
+  "parse_errors": 0,
+  "original_and_packaged_helper_results_equal": true,
+  "comparison_excludes_only": [
+    "generated_at",
+    "helper_sha256"
+  ],
+  "original_final_output_sha256": "ce6b33c8d173527468010d8986bfddf363b813db9fc85b7be97bd3a665816403",
+  "packaged_final_output_sha256": "0ff835a7ad956ee58ef928587c6845c3b66b3a7c9e35ec693748dd214530b7e6",
+  "ruff": "passed repository configuration; explicit check=False is the only source-byte packaging edit"
+}
