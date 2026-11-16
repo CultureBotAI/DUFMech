@@ -1,0 +1,74 @@
+{
+  "issue": 463,
+  "helper_sha256": "c04fd74bd4e2c16fad2b4b04c904c557f371d90f14738b44b41e8d7a05ccec45",
+  "input_hashes": {
+    "pyproject.toml": "bbefd2bc1abd3ec8b7ec2b13bcb51f844778ed2d90a9cc188cc2a9b72e421a74",
+    "conf/pages_budgets.json": "556c63122e6a4f6effa6cdcd5ae230393064a9f2fc56f117167cda39dd3608b8",
+    "tests/test_site_archive_budget.py": "dd8f4a49dbf7947e8b8b7b0af5b13225e6d2651c9cbf02580d26af82992035ba",
+    "tests/test_report.py": "a7bf8d461b98b88d5fde4cbfa0c5f755729300d3065ce8390b45d8e8075d21d4",
+    "tests/test_scoring_snapshot.py": "c276c37d1d4dd07150f6568498a582019ea48107ca1f347217c43da4a80a3020",
+    "scripts/duf_puf_report.py": "5e34881e40ce2f227ec2f8a8801dde946592e7e8a9558725293322e6a229e9ad",
+    "scripts/adhoc/audit_site_archive_growth.py": "c56c291e4c72bb3e17858d023fa8574a2855ee59a5d03fb244ea9c06988944b7",
+    "docs/provenance/review-queue-archive-budget-20261116.json.gz": "c0daa00ac15694f20463753204784ae46f25b150af073b37dd785b620f08b146",
+    "src/dufmech/site_contract.py": "559e400af91344062ccf67cc248871710879778642119154e0ce468f6a86cc0e"
+  },
+  "all_expected_results_observed": true,
+  "results": [
+    {
+      "case": "control",
+      "exit_code": 0,
+      "expected_result_observed": true,
+      "log_sha256": "2b097a827890edea87e568af0ca855016c4fd0a75fa0335018aaef97a93007d7",
+      "expected_failing_test": null
+    },
+    {
+      "case": "byte_boundary_rejected",
+      "exit_code": 1,
+      "expected_result_observed": true,
+      "log_sha256": "5afdad48cc2610403c50ac078adfee3846efc075b9026ed99453233c59cf4153",
+      "expected_failing_test": "test_archive_bytes_accept_boundary_and_reject_one_over"
+    },
+    {
+      "case": "byte_excess_ignored",
+      "exit_code": 1,
+      "expected_result_observed": true,
+      "log_sha256": "843f65a2b32a714bc835b8a9074d2d67d4e3bbc6af489b7b879eb8a2caa82cd9",
+      "expected_failing_test": "test_archive_bytes_accept_boundary_and_reject_one_over"
+    },
+    {
+      "case": "file_boundary_rejected",
+      "exit_code": 1,
+      "expected_result_observed": true,
+      "log_sha256": "3c56990835e012caadc713b1b7f8953415719389c6fa06e966283eb9f33a9ec2",
+      "expected_failing_test": "test_archive_files_accept_boundary_and_reject_one_over"
+    },
+    {
+      "case": "file_excess_ignored",
+      "exit_code": 1,
+      "expected_result_observed": true,
+      "log_sha256": "12ce74db588173c154b9b9e8fd6ecbdbff4925184eb0898e02a3cc128c5f135c",
+      "expected_failing_test": "test_archive_files_accept_boundary_and_reject_one_over"
+    },
+    {
+      "case": "old_caps_restored",
+      "exit_code": 1,
+      "expected_result_observed": true,
+      "log_sha256": "dd04d2ac730868478343e750c63015bdd993852c0869b1010905b4170691acc5",
+      "expected_failing_test": "test_measured_candidate_requires_archive_capacity_only"
+    },
+    {
+      "case": "modified_file_omitted",
+      "exit_code": 1,
+      "expected_result_observed": true,
+      "log_sha256": "fbcaa0e779aa14eab1020b54e897a2f044c1baefe4ea82fbdff42a193257627b",
+      "expected_failing_test": "test_accounting_covers_added_modified_deleted_and_unchanged_files"
+    },
+    {
+      "case": "nonblob_guard_removed",
+      "exit_code": 1,
+      "expected_result_observed": true,
+      "log_sha256": "1281b64a0e28defb40a6ef37161dc7753c86ede5ad8fc39f9885f28ab9edeff5",
+      "expected_failing_test": "test_accounting_refuses_nonblob_site_entries"
+    }
+  ]
+}

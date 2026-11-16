@@ -35,8 +35,16 @@ def build(out: Path) -> None:
         {"PF00003": observation("PF00003", empty=True), "PF00004": observation("PF00004")},
     )}
     examples = [direct.get(row["pfam_id"], row) for row in examples]
+    reviews = [{"label": f"Synthetic retained review {index:03d}",
+                "scope": f"Engineering fixture scope {index}; no scientific assessment",
+                "scientific_review": bool(index % 2),
+                "local_source": f"source/reports/yaml_record_review/browser-fixture-{index}.md"}
+               for index in range(101)]
+    review_sources = {ref["local_source"]: f"Synthetic retained review {index}.\n"
+                      for index, ref in enumerate(reviews)}
     render_site(rows, [], input_ids={"worklist": "synthetic-browser-fixture"}, out_dir=out,
-                protein_examples=examples)
+                protein_examples=examples, provenance={"retained_reviews": reviews},
+                extra_artifacts=review_sources)
 
 
 if __name__ == "__main__":

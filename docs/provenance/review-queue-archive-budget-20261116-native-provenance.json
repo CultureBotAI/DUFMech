@@ -1,0 +1,20 @@
+{
+  "date": "2026-11-16",
+  "issue": 463,
+  "finding": "The original native receipt generation logic was inline; the retained generator now binds executed native source and exact regular-file Git bytes/modes.",
+  "original_receipt_archive": "review-queue-archive-budget-20261116-native-original.json.gz",
+  "original_receipt_sha256": "19b53776ea0cc1e64c6e56eff07e429dbac544a1c0ad2aefcd2998b887edb9df",
+  "rerun_receipt": "review-queue-archive-budget-20261116-native.json",
+  "rerun_receipt_sha256": "291948619935627b31dfb6b0166f6033f55348ab344dd96789443631949b204f",
+  "helper": "scripts/adhoc/diagnose_site_archive_budget.py",
+  "helper_sha256": "2a87df57c20346a647b0bd4ea44260a745b37ae5ccd45b2dcada6e7c7edaf302",
+  "computed_fields_unchanged": true,
+  "comparison_excludes": [
+    "checked_at",
+    "helper_sha256",
+    "executed_contract_sha256",
+    "site_git_prefix"
+  ],
+  "reproduction": "uv run --no-sync python scripts/adhoc/diagnose_site_archive_budget.py --repo \"$REVIEW_ROOT\" --commit c7de1a2a1f4d552e196f7da5fe0d280682c3c5a1 --site \"$FROZEN_SITE\" --site-prefix pages/ --total-bytes 500000000 --file-count 37000 --output \"$DIAGNOSTIC_OUTPUT\"",
+  "input_note": "FROZEN_SITE contains exact Git-archive pages from c7de; all file paths, modes and bytes are verified before the native contract runs. No current output is rendered or changed."
+}
