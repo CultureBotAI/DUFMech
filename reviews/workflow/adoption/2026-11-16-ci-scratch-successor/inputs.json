@@ -1,0 +1,42 @@
+{
+  "schema_version": "1.0.0",
+  "record_type": "bounded_ci_successor",
+  "prepared_on": "2026-11-16",
+  "issues": [
+    "https://github.com/CultureBotAI/DUFMech/issues/466",
+    "https://github.com/CultureBotAI/DUFMech/issues/467"
+  ],
+  "historical_source": {
+    "repository": "CultureBotAI/DUFMech",
+    "revision": "a030cca0dae2771e961ae12474c24c47a32b1363"
+  },
+  "reviewed_source": {
+    "repository": "CultureBotAI/DUFMech",
+    "revision": "397a28bfd597a1142feb1cf23c0cf3c69bc1b323",
+    "retention": {
+      "ref": "refs/tags/source/dufmech-review-queue-ci-20261116",
+      "object": "0f567927303e5a69f2bb069986b4308c5a9b5a09",
+      "type": "tag",
+      "target": "397a28bfd597a1142feb1cf23c0cf3c69bc1b323",
+      "target_type": "commit"
+    }
+  },
+  "original_evidence": {
+    "reviews/workflow/adoption/2026-11-07-cycle-v2/inputs.json": "807ef730d156d06d96a019d1411f75aad70771b6dd92dd718972564cb0dfad36",
+    "reviews/workflow/adoption/2026-11-07-cycle-v2/migration-review.md": "ef8551648db871f6bbaa7e15dcffa60eca3525b788abf8d277c6ba7d3ad44f1a"
+  },
+  "changes": {
+    ".github/workflows/validate.yaml": {
+      "before_sha256": "2c014c50fc76025d6349db367d58df63c0ca85d38f692e5d045b36dfe7c51f15",
+      "after_sha256": "a34bd89df2b77d653a761ac9dc406b093d92117ce2163572de3b27d17bbded3e"
+    }
+  },
+  "runtime_activation": "NOT PERFORMED",
+  "runtime_change": "NONE",
+  "migration_hold": "UNCHANGED",
+  "adoption_issue": "https://github.com/CultureBotAI/DUFMech/issues/399",
+  "assessment": {
+    "path": "reviews/workflow/adoption/2026-11-16-ci-scratch-successor/review.md",
+    "sha256": "68c21f68203536047e51191277ea7e5a65277d5a8f7c52bd88437af47eea1e33"
+  }
+}

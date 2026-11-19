@@ -1,0 +1,32 @@
+{
+  "generated_at": "2026-11-16T19:54:02.452027+00:00",
+  "main": "a030cca0dae2771e961ae12474c24c47a32b1363",
+  "source_revision_ancestor_of_main": {
+    "6c5277fbd5ab0a7b7f0244f5c248758ac77b3530": true,
+    "59f8f2b8a93c2e6373e02dfe0fb289ecbd76feaa": true,
+    "c2b457694c12051ac717cd51ab98686d2d5decf5": true,
+    "5642a645349854802748ae387c0e2df121c5e83f": true,
+    "d658f73e7e618d3938704cdb9c86597bf47fc15e": true,
+    "35b9a13da0689d7e262b05791d5f1d8e763f38f7": true,
+    "3bf5c67a9a2d3fa2729dd55cb1fb6f494ca1904f": true
+  },
+  "working_tree_input_proofs": [
+    {
+      "pr": 289,
+      "review": "reviews/structured/20261019T073516Z-pf01986-seed-record-review-provenance-correction/review.yaml",
+      "source_state": "working_tree",
+      "input_path": "reviews/structured/20261019T073338Z-pf01986-seed-record-review/review.yaml",
+      "declared_sha256": "0a72480d392c3228f31aaee43c88307b3c5976d19551851271c47a94a0322109",
+      "retained_pr_head": "8ddd241669fc18d7bd85609877933ad131b5ea1b",
+      "retained_sha256": "0a72480d392c3228f31aaee43c88307b3c5976d19551851271c47a94a0322109",
+      "exact_match": true
+    }
+  ],
+  "review_changed_path_count": 1900,
+  "review_unique_path_count": 1900,
+  "path_collisions": [],
+  "main_mismatches_by_role": {
+    "context": 1882,
+    "prior_review": 1
+  }
+}

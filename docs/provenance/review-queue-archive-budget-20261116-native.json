@@ -1,0 +1,75 @@
+{
+  "checked_at": "2026-11-16T20:32:15.924025+00:00",
+  "measured_commit": "c7de1a2a1f4d552e196f7da5fe0d280682c3c5a1",
+  "helper_sha256": "2a87df57c20346a647b0bd4ea44260a745b37ae5ccd45b2dcada6e7c7edaf302",
+  "site_contract_sha256": "559e400af91344062ccf67cc248871710879778642119154e0ce468f6a86cc0e",
+  "executed_contract_sha256": "559e400af91344062ccf67cc248871710879778642119154e0ce468f6a86cc0e",
+  "site_git_prefix": "pages/",
+  "scope": "Archive-only capacity diagnostic before separate source-list pagination; remaining HTML failure is issue464.",
+  "old_budgets": {
+    "site_total_bytes": 450000000,
+    "generated_file_count": 36000,
+    "min_files": 10,
+    "groups": {
+      "index": {
+        "glob": "index.html",
+        "largest_bytes": 140000,
+        "min_files": 1
+      },
+      "html": {
+        "glob": "**/*.html",
+        "largest_bytes": 300000,
+        "min_files": 1
+      },
+      "catalogue": {
+        "glob": "catalogue.json",
+        "largest_bytes": 3000000,
+        "min_files": 1
+      }
+    }
+  },
+  "proposed_budgets": {
+    "site_total_bytes": 500000000,
+    "generated_file_count": 37000,
+    "min_files": 10,
+    "groups": {
+      "index": {
+        "glob": "index.html",
+        "largest_bytes": 140000,
+        "min_files": 1
+      },
+      "html": {
+        "glob": "**/*.html",
+        "largest_bytes": 300000,
+        "min_files": 1
+      },
+      "catalogue": {
+        "glob": "catalogue.json",
+        "largest_bytes": 3000000,
+        "min_files": 1
+      }
+    }
+  },
+  "measurements": {
+    "index_html_bytes": 45055,
+    "html_bytes": 640788,
+    "catalogue_gzip_bytes": 214163,
+    "initial_gzip_bytes": 233029,
+    "total_bytes": 493450196,
+    "families": 8296,
+    "html_pages": 8635
+  },
+  "generated_files": 36479,
+  "old_errors": [
+    "html_bytes: 640788 exceeds 300000",
+    "total_bytes: 493450196 exceeds 450000000",
+    "generated file count outside budget: 36479"
+  ],
+  "proposed_errors": [
+    "html_bytes: 640788 exceeds 300000"
+  ],
+  "headroom": {
+    "bytes": 6549804,
+    "files": 521
+  }
+}

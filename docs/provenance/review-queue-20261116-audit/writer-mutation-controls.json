@@ -1,0 +1,42 @@
+[
+  {
+    "name": "control",
+    "exit_code": 0,
+    "expected_exit_code": 0,
+    "passed_control": true,
+    "test": null,
+    "log_sha256": "ad42a2ab3afa6fc6ecbb7c0942cf2d35150abbe8069bddd5d9cf3e35e8f08d9f"
+  },
+  {
+    "name": "dryrun_writes",
+    "exit_code": 1,
+    "expected_exit_code": 1,
+    "passed_control": true,
+    "test": "test_dry_run_and_verify_do_not_create_missing_files",
+    "log_sha256": "e67464346bd5e58dcef335d369acd7466ac794966cf0bb5dd477b66882587222"
+  },
+  {
+    "name": "hash_guard_removed",
+    "exit_code": 1,
+    "expected_exit_code": 1,
+    "passed_control": true,
+    "test": "test_source_hash_mismatch_prevents_all_writes",
+    "log_sha256": "923fd12dc638f0d22e205162b34b65faa8d183b0cb62585a00fb4981418a65f7"
+  },
+  {
+    "name": "symlink_guard_removed",
+    "exit_code": 1,
+    "expected_exit_code": 1,
+    "passed_control": true,
+    "test": "test_symlink_parent_is_rejected_without_following_it",
+    "log_sha256": "99bf69b0028063014213709177b67e84232bb5504d964feb79373da48843102f"
+  },
+  {
+    "name": "existing_byte_guard_removed",
+    "exit_code": 1,
+    "expected_exit_code": 1,
+    "passed_control": true,
+    "test": "test_last_destination_conflict_prevents_every_write",
+    "log_sha256": "1174a473f27966bbb5f4562b583962621705ef39a6086bca6b1f35ccca883882"
+  }
+]

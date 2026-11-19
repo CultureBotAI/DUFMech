@@ -30,6 +30,15 @@ jobs:
         with:
           fetch-depth: 0
           persist-credentials: false
+      - name: Set up durable validation scratch
+        shell: bash
+        run: |
+          set -euo pipefail
+          ci_scratch="${HOME}/agent-work/DUFMech/ci-${GITHUB_RUN_ID}-${GITHUB_RUN_ATTEMPT}"
+          mkdir -p "$ci_scratch/tmp"
+          printf 'TMPDIR=%s\nTMP=%s\nTEMP=%s\n' \
+            "$ci_scratch/tmp" "$ci_scratch/tmp" "$ci_scratch/tmp" >> "$GITHUB_ENV"
+          printf 'PYTEST_ADDOPTS=--basetemp="%s"\n' "$ci_scratch/pytest" >> "$GITHUB_ENV"
       - name: Check out published shared adapter runtime
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
         with:

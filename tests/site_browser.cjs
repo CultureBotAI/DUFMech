@@ -444,3 +444,67 @@ test('causal graphs preserve scoped evidence alongside protein examples on deskt
     await context.close();
   }
 });
+
+test('retained review pagination preserves sources with keyboard and no JavaScript', async () => {
+  const fixturePayload = JSON.parse(fs.readFileSync(path.join(fixture, 'index.json'), 'utf8'));
+  const realPayload = JSON.parse(fs.readFileSync(path.join(realSite, 'index.json'), 'utf8'));
+  for (const width of [1280, 390]) {
+    for (const javaScriptEnabled of [true, false]) {
+      const context = await browser.newContext({viewport: {width, height: 900}, javaScriptEnabled});
+      const page = await context.newPage();
+      const errors = [];
+      page.on('pageerror', error => errors.push(error.message));
+      page.on('console', message => { if (message.type() === 'error') errors.push(message.text()); });
+      page.on('response', response => {
+        if (response.url().startsWith(origin) && response.status() >= 400)
+          errors.push(`${response.status()} ${response.url()}`);
+      });
+      for (const [prefix, payload] of [['/', fixturePayload], ['/real/', realPayload]]) {
+        const reviews = payload.provenance.retained_reviews;
+        assert.ok(reviews.length > 50, 'exercise a real page boundary');
+        await page.goto(origin + prefix + 'sources.html#retained-reviews');
+        assert.equal(await page.locator('#retained-review-list > li').count(), 50);
+        assert.match(await page.locator('#review-count').innerText(),
+          new RegExp(`of ${reviews.length.toLocaleString('en-US')}\\.`));
+        const next = page.getByRole('link', {name: 'Next reviews', exact: true});
+        await next.focus();
+        assert.equal(await next.evaluate(element => element === document.activeElement), true);
+        await page.keyboard.press('Enter');
+        await page.waitForURL(origin + prefix + 'sources/2.html#retained-reviews');
+        assert.equal(await page.locator('#retained-review-list > li').count(),
+          Math.min(50, reviews.length - 50));
+        const first = page.locator('#retained-review-list > li').first();
+        assert.equal(await first.locator('a').innerText(), reviews[50].label);
+        assert.equal(await first.locator('p').innerText(),
+          `Scope: ${reviews[50].scope}. Scientific review: ${reviews[50].scientific_review ? 'True' : 'False'}.`);
+        assert.equal(await page.locator('link[rel="stylesheet"]').getAttribute('href'), '../style.css');
+        await noOverflow(page);
+        await page.screenshot({path: path.join(screenshots,
+          `review-sources-${prefix === '/' ? 'fixture' : 'real'}-${width}-js-${javaScriptEnabled}.png`)});
+        if (prefix === '/') {
+          const source = first.locator('a');
+          assert.match(await source.getAttribute('href'), /^\.\.\/source\//);
+          await source.click();
+          assert.match(await page.locator('body').innerText(), /Synthetic retained review 50/);
+          await page.goBack();
+          await page.locator('#retained-review-list').waitFor();
+        } else {
+          assert.equal(await first.locator('a').getAttribute('href'), reviews[50].url);
+        }
+        await page.getByRole('link', {name: 'Previous reviews', exact: true}).click();
+        await page.waitForURL(origin + prefix + 'sources.html#retained-reviews');
+        assert.equal(await page.locator('#retained-review-list > li').first().locator('a').innerText(),
+          reviews[0].label);
+        const last = Math.ceil(reviews.length / 50);
+        await page.getByRole('link', {name: `Review page ${last}`, exact: true}).click();
+        await page.waitForURL(origin + prefix + `sources/${last}.html#retained-reviews`);
+        assert.equal(await page.getByRole('link', {name: 'Next reviews', exact: true}).count(), 0);
+        assert.equal(await page.locator('#retained-review-list > li').last().locator('a').innerText(),
+          reviews.at(-1).label);
+        await noOverflow(page);
+      }
+      assert.deepEqual(errors, []);
+      await context.close();
+    }
+  }
+});

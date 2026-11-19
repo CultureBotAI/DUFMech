@@ -85,6 +85,37 @@ def artifact_link(reference: dict, label: str, root: str = "../") -> str:
     return text(label)
 
 
+def retained_review_listing(
+    reviews: list[dict], *, page: int, paths: list[str], root: str = "",
+) -> str:
+    """Bound retained review rows while preserving every original reference and scope."""
+    selected = reviews[page * PAGE_SIZE:(page + 1) * PAGE_SIZE]
+    items = "".join(f'<li>{artifact_link(ref, ref["label"], root)}'
+                    f'<p>Scope: {text(ref["scope"])}. '
+                    f'Scientific review: {text(ref["scientific_review"])}.</p></li>'
+                    for ref in selected)
+    start = page * PAGE_SIZE + 1 if reviews else 0
+    end = page * PAGE_SIZE + len(selected)
+    links = []
+    if page:
+        links.append(f'<a rel="prev" href="{root}{paths[page - 1]}#retained-reviews">'
+                     'Previous reviews</a>')
+    for index, path in enumerate(paths):
+        current = ' aria-current="page"' if index == page else ""
+        links.append(f'<a href="{root}{path}#retained-reviews" '
+                     f'aria-label="Review page {index + 1}"{current}>{index + 1}</a>')
+    if page + 1 < len(paths):
+        links.append(f'<a rel="next" href="{root}{paths[page + 1]}#retained-reviews">'
+                     'Next reviews</a>')
+    navigation = ('<nav class="pagination" aria-label="Retained review pages">'
+                  + "".join(links) + "</nav>") if len(paths) > 1 else ""
+    listing = f'<ul id="retained-review-list">{items}</ul>' if items else (
+        '<p>No retained reviews supplied.</p>')
+    return ('<section id="retained-reviews"><h2>Retained reviews</h2>'
+            f'<p id="review-count">Reviews {start:,}–{end:,} of {len(reviews):,}. '
+            f'Page {page + 1} of {len(paths)}.</p>{listing}{navigation}</section>')
+
+
 def curated_assertions(record: dict) -> str:
     assertions = []
     for assertion in record.get("assertions", []):
@@ -868,17 +899,28 @@ def render_artifacts(
     source_items = "".join(f'<li>{text(key)}: {link(source_link(source.get("repository", REPOSITORY), source.get("commit", ""), source.get("path", "")), source.get("path", ""))}</li>'
                            for key, source in sorted(provenance.items())
                            if isinstance(source, dict) and source.get("path"))
-    review_items = "".join(f'<li>{artifact_link(ref, ref["label"], "")}'
-                           f'<p>Scope: {text(ref["scope"])}. '
-                           f'Scientific review: {text(ref["scientific_review"])}.</p></li>'
-                           for ref in provenance.get("retained_reviews", []))
-    artifacts["sources.html"] = page_shell("Sources and schema", f"""<h1>Sources and schema</h1>
+    reviews = provenance.get("retained_reviews", [])
+    review_paths = ["sources.html"] + [
+        f"sources/{page + 1}.html" for page in range(1, math.ceil(len(reviews) / PAGE_SIZE))
+    ]
+    for page, path in enumerate(review_paths):
+        root = "" if page == 0 else "../"
+        listing_html = retained_review_listing(reviews, page=page, paths=review_paths, root=root)
+        if page == 0:
+            body = f"""<h1>Sources and schema</h1>
 <p><a href="index.json" download>Complete family index, metadata and provenance (JSON)</a></p>
-<h2>Frozen inputs</h2><ul>{source_items}</ul>
+<h2 id="frozen-inputs">Frozen inputs</h2><ul>{source_items}</ul>
 {member_dataset(provenance)}
 {protein_example_dataset(provenance)}
 <p>Site build {provenance['build_id']}. Source links are pinned to the supplied or verified source commits.
 Input snapshot identifiers are listed in the footer. No live scientific data is fetched by these pages.</p>
-<h2>Retained reviews</h2>{f'<ul>{review_items}</ul>' if review_items else '<p>No retained reviews supplied.</p>'}
-<h2>Record schema</h2><p>{schema_html}</p>{GUIDE}""", provenance)
+{listing_html}
+<h2 id="record-schema">Record schema</h2><p>{schema_html}</p>{GUIDE}"""
+        else:
+            body = ('<h1>Retained review sources</h1>'
+                    '<p><a href="../sources.html">Sources and schema</a> · '
+                    '<a href="../sources.html#frozen-inputs">Frozen inputs and datasets</a> · '
+                    '<a href="../sources.html#record-schema">Record schema</a></p>'
+                    + listing_html + GUIDE)
+        artifacts[path] = page_shell("Sources and schema", body, provenance, root=root)
     return artifacts

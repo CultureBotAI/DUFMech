@@ -1,0 +1,34 @@
+{
+  "generated_at": "2026-11-16T19:57:06.211807+00:00",
+  "ruff": {
+    "exit_code": 0,
+    "stdout": "All checks passed!\n"
+  },
+  "rerun_comparisons": [
+    {
+      "file": "ledger.json",
+      "same_after_excluding_metadata": true,
+      "excluded_keys": [
+        "generated_at",
+        "inputs.helper_sha256"
+      ],
+      "original_sha256": "597ac17f4a46d575ee2afcf5bc963c536678b6957f519e76f2d49dfb51a122b5",
+      "rerun_sha256": "b10340215b8db9cf2859cbe34bd44f3cf6be1ddbc793f5ece68d0c5e5d661578"
+    },
+    {
+      "file": "review-sources.json",
+      "same_after_excluding_metadata": true,
+      "excluded_keys": [
+        "generated_at",
+        "helper_sha256"
+      ],
+      "original_sha256": "2a8507ac71d5a7323bdfbc1de80982e4ad4deaa3672968096c3426f646ecc89c",
+      "rerun_sha256": "cf0d16a45324e89311745d4386dc83d29d39fe077386a890d9005fb38eae8711"
+    }
+  ],
+  "markdown_report_byte_identical": true,
+  "source_inventory_input": "The original ledger.json is deliberately used for the source-inventory rerun to hold its checksum-bound input constant.",
+  "original_archives_verified": true,
+  "executable_modes_verified": true,
+  "scientific_source_changes": false
+}
